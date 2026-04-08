@@ -1,19 +1,5 @@
 import type { Metadata } from 'next'
-import { DM_Sans, Instrument_Serif } from 'next/font/google'
 import './globals.css'
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-dm-sans',
-})
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['normal', 'italic'],
-  variable: '--font-instrument-serif',
-})
 
 export const metadata: Metadata = {
   title: 'Lexalytic | Turn Your Data Into Decisions',
@@ -35,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
