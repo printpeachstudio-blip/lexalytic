@@ -16,8 +16,8 @@
   --white: #ffffff;
   --border: rgba(15,15,15,0.09);
   --border-dark: rgba(255,255,255,0.08);
-  --serif: 'Instrument Serif', Georgia, serif;
-  --sans: 'DM Sans', system-ui, sans-serif;
+--serif: var(--font-instrument-serif), Georgia, serif;
+--sans: var(--font-dm-sans), system-ui, sans-serif;
   --radius: 8px;
   --radius-lg: 12px;
 }
