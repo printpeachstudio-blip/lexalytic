@@ -94,3 +94,6 @@ img { max-width: 100%; }
   .desktop-nav { display: none !important; }
   .hamburger { display: flex !important; flex-direction: column; }
 }
+
+/* Anchor scroll offset for fixed navbar */
+section[id] { scroll-margin-top: 80px; }
