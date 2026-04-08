@@ -30,16 +30,16 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
         
         {/* Logo */}
-        <a href="#" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: 'var(--ink)', letterSpacing: '-0.03em' }}>
+        <a href="#" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: scrolled ? 'var(--ink)' : 'var(--white)', letterSpacing: '-0.03em' }}>
           Lex<span style={{ color: 'var(--amber)' }}>alytic</span>
         </a>
 
         {/* Desktop nav */}
         <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }} className="desktop-nav">
           {links.map(l => (
-            <a key={l.href} href={l.href} style={{ fontSize: '14px', color: 'var(--ink-3)', fontWeight: '400', transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--ink)'}
-              onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--ink-3)'}
+            <a key={l.href} href={l.href} style={{ fontSize: '14px', color: scrolled ? 'var(--ink-3)' : 'rgba(255,255,255,0.8)', fontWeight: '400', transition: 'color 0.2s' }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = scrolled ? 'var(--ink)' : 'var(--white)'}
+              onMouseLeave={e => (e.target as HTMLElement).style.color = scrolled ? 'var(--ink-3)' : 'rgba(255,255,255,0.8)'}
             >{l.label}</a>
           ))}
           <a href="#contact" className="btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>
@@ -48,43 +48,26 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setOpen(!open)} className="hamburger" style={{
-          display: 'none', flexDirection: 'column', gap: '5px',
-          background: 'none', border: 'none', cursor: 'pointer', padding: '4px',
-        }}>
-          <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--ink)', transition: 'all 0.2s',
-            transform: open ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
-          <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--ink)', transition: 'all 0.2s',
-            opacity: open ? 0 : 1 }} />
-          <span style={{ display: 'block', width: '24px', height: '2px', background: 'var(--ink)', transition: 'all 0.2s',
-            transform: open ? 'rotate(-45deg) translate(5px, -5px)' : 'none' }} />
+        <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }} className="hamburger">
+          <div style={{ width: '22px', height: '2px', background: scrolled ? 'var(--ink)' : 'var(--white)', marginBottom: '5px', transition: 'all 0.3s' }} />
+          <div style={{ width: '22px', height: '2px', background: scrolled ? 'var(--ink)' : 'var(--white)', marginBottom: '5px', transition: 'all 0.3s' }} />
+          <div style={{ width: '22px', height: '2px', background: scrolled ? 'var(--ink)' : 'var(--white)', transition: 'all 0.3s' }} />
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div style={{
-          background: 'var(--bg)', borderTop: '1px solid var(--border)',
-          padding: '20px 24px 28px',
-        }} className="mobile-menu">
+        <div style={{ background: 'rgba(250,250,248,0.98)', backdropFilter: 'blur(12px)', borderTop: '1px solid var(--border)', padding: '16px 24px 24px' }}>
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
-              display: 'block', padding: '12px 0', fontSize: '16px', color: 'var(--ink)',
-              borderBottom: '1px solid var(--border)',
-            }}>{l.label}</a>
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+              style={{ display: 'block', padding: '12px 0', fontSize: '16px', color: 'var(--ink-2)', borderBottom: '1px solid var(--border)' }}
+            >{l.label}</a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn-primary" style={{ marginTop: '20px', width: '100%', justifyContent: 'center' }}>
+          <a href="#contact" onClick={() => setOpen(false)} className="btn-primary" style={{ marginTop: '16px', width: '100%', justifyContent: 'center' }}>
             Book free call →
           </a>
         </div>
       )}
-
-      <style>{`
-        @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
-          .hamburger { display: flex !important; }
-        }
-      `}</style>
     </nav>
   )
 }
