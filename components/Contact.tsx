@@ -10,7 +10,7 @@ export default function Contact() {
     e.preventDefault()
     setLoading(true)
     try {
-      await fetch('https://formspree.io/f/xzzbnwpj', {
+      await fetch('https://formspree.io/f/xwvwjppa', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
