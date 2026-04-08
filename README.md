@@ -1,2 +1,1 @@
-# lexalytic
-Analytics Consultancy
+# Lexalytic
