@@ -89,3 +89,8 @@ img { max-width: 100%; }
 .fade-up-2 { animation: fadeUp 0.6s 0.15s ease forwards; opacity: 0; }
 .fade-up-3 { animation: fadeUp 0.6s 0.3s ease forwards; opacity: 0; }
 .fade-up-4 { animation: fadeUp 0.6s 0.45s ease forwards; opacity: 0; }
+
+@media (max-width: 768px) {
+  .desktop-nav { display: none !important; }
+  .hamburger { display: flex !important; flex-direction: column; }
+}
