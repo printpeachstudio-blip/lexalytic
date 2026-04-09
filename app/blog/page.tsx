@@ -1,0 +1,72 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
+  description: 'Practical guides on Power BI, Excel automation, Python, and business data. Written by UK data automation consultants with 10 years of experience.',
+}
+
+const posts = [
+  {
+    slug: 'power-bi-consultant-cost-uk',
+    title: 'How Much Does a Power BI Consultant Cost in the UK?',
+    excerpt: 'A straight answer — with real UK prices, what affects the cost, and how to make sure you\'re not overpaying for something simpler than you think.',
+    date: 'April 2026',
+    readTime: '8 min read',
+    tag: 'Power BI',
+  },
+]
+
+export default function BlogIndex() {
+  return (
+    <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
+          <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: 'var(--ink)', letterSpacing: '-0.03em' }}>
+            Lex<span style={{ color: 'var(--amber)' }}>alytic</span>
+          </Link>
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }} className="desktop-nav">
+            <Link href="/" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>← Home</Link>
+            <Link href="/#services" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>Services</Link>
+            <Link href="/#contact" className="btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>Book free call →</Link>
+          </div>
+        </div>
+      </nav>
+
+      <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
+        <div className="container" style={{ maxWidth: '780px' }}>
+          <span className="section-label">Blog</span>
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '16px', letterSpacing: '-0.02em' }}>Data automation insights</h1>
+          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting — written from 10 years of real project experience.</p>
+        </div>
+      </section>
+
+      <section style={{ padding: 'clamp(48px, 6vw, 80px) 0' }}>
+        <div className="container" style={{ maxWidth: '780px' }}>
+          {posts.map((post, i) => (
+            <Link key={i} href={`/blog/${post.slug}`} style={{ display: 'block', textDecoration: 'none' }}>
+              <div style={{ padding: '32px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', marginBottom: '20px', transition: 'all 0.2s' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--amber)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
+              >
+                <div style={{ display: 'flex', gap: '12px', marginBottom: '14px', alignItems: 'center' }}>
+                  <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+                  <span style={{ fontSize: '13px', color: 'var(--ink-4)' }}>{post.date} · {post.readTime}</span>
+                </div>
+                <h2 style={{ fontSize: '1.25rem', marginBottom: '10px', color: 'var(--ink)' }}>{post.title}</h2>
+                <p style={{ fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.7', margin: 0 }}>{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <footer style={{ background: 'var(--bg-dark-3)', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '32px 0' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+          <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '18px', color: 'var(--white)', letterSpacing: '-0.03em' }}>Lex<span style={{ color: 'var(--amber)' }}>alytic</span></Link>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>© 2026 Lexalytic. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  )
+}
