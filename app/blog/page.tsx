@@ -1,4 +1,3 @@
-'use client'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -45,11 +44,8 @@ export default function BlogIndex() {
       <section style={{ padding: 'clamp(48px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           {posts.map((post, i) => (
-            <Link key={i} href={`/blog/${post.slug}`} style={{ display: 'block', textDecoration: 'none' }}>
-              <div style={{ padding: '32px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', marginBottom: '20px', transition: 'all 0.2s' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--amber)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
-              >
+            <Link key={i} href={`/blog/${post.slug}`} style={{ display: 'block', textDecoration: 'none', marginBottom: '20px' }}>
+              <div style={{ padding: '32px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)' }}>
                 <div style={{ display: 'flex', gap: '12px', marginBottom: '14px', alignItems: 'center' }}>
                   <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
                   <span style={{ fontSize: '13px', color: 'var(--ink-4)' }}>{post.date} · {post.readTime}</span>
