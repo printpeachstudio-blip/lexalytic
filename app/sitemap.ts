@@ -9,5 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/services/power-automate', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/services/python-automation', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/services/google-sheets', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/blog/power-bi-consultant-cost-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
