@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   verification: {
     google: 'Vi1ffNWMta4hV-P-fVj5l8-6BrHpNWxEK1kAAAihSi4',
   },
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Lexalytic | Turn Your Data Into Decisions',
     description: 'Bespoke data automation and reporting solutions for businesses. Projects from £495.',
@@ -16,6 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',
+    images: [{ url: 'https://www.lexalytic.com/logo.svg', width: 400, height: 120 }],
   },
 }
 
@@ -30,10 +35,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FWP3KBJ211"
-          strategy="afterInteractive"
-        />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-FWP3KBJ211" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
