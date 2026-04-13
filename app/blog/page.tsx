@@ -3,14 +3,22 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
-  description: 'Practical guides on Power BI, Excel automation, Python, and business data. Written by UK data automation consultants with 10 years of experience.',
+  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting — written from 10 years of real project experience.',
 }
 
 const posts = [
   {
+    slug: 'how-to-automate-excel-reports',
+    title: 'How to Automate Excel Reports (Without Knowing How to Code)',
+    excerpt: 'If your team is still doing the export-to-report grind every week, this guide is for you. What actually works, what does not, and how to choose the right approach for your business.',
+    date: 'April 2026',
+    readTime: '9 min read',
+    tag: 'Excel Automation',
+  },
+  {
     slug: 'power-bi-consultant-cost-uk',
     title: 'How Much Does a Power BI Consultant Cost in the UK?',
-    excerpt: 'A straight answer — with real UK prices, what affects the cost, and how to make sure you\'re not overpaying for something simpler than you think.',
+    excerpt: 'A straight answer — with real UK prices, what affects the cost, and how to make sure you are not overpaying for something simpler than you think.',
     date: 'April 2026',
     readTime: '8 min read',
     tag: 'Power BI',
@@ -27,7 +35,6 @@ export default function BlogIndex() {
           </Link>
           <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }} className="desktop-nav">
             <Link href="/" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>← Home</Link>
-            <Link href="/#services" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>Services</Link>
             <Link href="/#contact" className="btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>Book free call →</Link>
           </div>
         </div>
