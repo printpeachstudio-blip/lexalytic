@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-automate-excel-reports' },
   title: 'How to Automate Excel Reports (Without Knowing How to Code) | Lexalytic',
   description: 'A practical guide to automating Excel reports for UK businesses in 2026. What options exist, which is right for your situation, and when to hire a consultant vs do it yourself.',
   keywords: 'automate Excel reports UK, Excel report automation, how to automate Excel, stop manual Excel reporting, automated Excel reports',
   openGraph: {
     title: 'How to Automate Excel Reports (Without Knowing How to Code)',
     description: 'Practical guide to Excel report automation for UK businesses. What works, what does not, and when to get help.',
-    url: 'https://lexalytic.com/blog/how-to-automate-excel-reports',
+    url: 'https://www.lexalytic.com/blog/how-to-automate-excel-reports',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'article',

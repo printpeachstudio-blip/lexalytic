@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/blog' },
   title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
   description: 'Practical guides on Power BI, Excel automation, Python, and business reporting — written from 10 years of real project experience.',
 }

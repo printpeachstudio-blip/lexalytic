@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/blog/power-bi-consultant-cost-uk' },
   title: 'How Much Does a Power BI Consultant Cost in the UK? (2026 Guide) | Lexalytic',
   description: 'Honest UK pricing for Power BI consultants in 2026. Fixed price projects from £750, what affects cost, and how to avoid overpaying. From a UK-based Power BI consultant.',
   keywords: 'Power BI consultant cost UK, Power BI consultant price UK, how much does Power BI cost UK, Power BI project cost, hire Power BI consultant UK',
   openGraph: {
     title: 'How Much Does a Power BI Consultant Cost in the UK? (2026 Guide)',
     description: 'Honest UK pricing for Power BI consultants in 2026. Fixed price projects from £750.',
-    url: 'https://lexalytic.com/blog/power-bi-consultant-cost-uk',
+    url: 'https://www.lexalytic.com/blog/power-bi-consultant-cost-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'article',
