@@ -87,7 +87,7 @@ export default function Tool() {
                 </div>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '16px' }}>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', marginBottom: '4px' }}>
-                    You could save <strong style={{ color: 'var(--white)' }}>£{saving.toLocaleString()}/year</strong> — and a Lexalytic Essential project pays for itself in <strong style={{ color: 'var(--amber)' }}>{roiMonths} months.</strong>
+                    You could save <strong style={{ color: 'var(--white)' }}>£{saving.toLocaleString()}/year</strong> — and automation typically pays for itself within months of delivery.</strong>
                   </div>
                   <a href="#contact" className="btn-amber" style={{ marginTop: '16px', width: '100%', justifyContent: 'center', fontSize: '14px' }}>
                     Let's fix this — book a free call →

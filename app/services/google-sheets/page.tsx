@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Google Sheets Automation Consultant UK | Lexalytic',
-  description: 'Google Sheets automation and dashboard development for UK businesses. Automated reporting and data workflows for Google Workspace teams. Fixed price from £495.',
+  description: 'Google Sheets automation and dashboard development for UK businesses. Automated reporting and data workflows for Google Workspace teams. Fixed price .',
   keywords: 'Google Sheets consultant UK, Google Sheets automation, Google Workspace automation, Apps Script developer UK, Google Sheets dashboard',
-  openGraph: { title: 'Google Sheets Automation Consultant UK | Lexalytic', description: 'Automated reporting and dashboards built in Google Sheets. Fixed price from £495.', url: 'https://lexalytic.com/services/google-sheets', siteName: 'Lexalytic', locale: 'en_GB', type: 'website' },
+  openGraph: { title: 'Google Sheets Automation Consultant UK | Lexalytic', description: 'Automated reporting and dashboards built in Google Sheets. Fixed price .', url: 'https://lexalytic.com/services/google-sheets', siteName: 'Lexalytic', locale: 'en_GB', type: 'website' },
 }
 
 const useCases = [
@@ -95,7 +95,7 @@ export default function GoogleSheetsPage() {
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Make Google Sheets work<br /><em style={{ color: 'var(--amber)' }}>properly for your business.</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute scoping call. Tell us what you're trying to do and we'll show you what's possible in Google Sheets.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £495 · Delivered in 3–5 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–5 days · Full documentation included</p>
         </div>
       </section>
       <footer style={{ background: 'var(--bg-dark-3)', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '32px 0' }}>

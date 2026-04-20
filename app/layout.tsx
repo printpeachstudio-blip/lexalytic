@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Lexalytic | Turn Your Data Into Decisions',
-    description: 'Bespoke data automation and reporting solutions for businesses. Projects from £495.',
+    description: 'Bespoke data automation and reporting solutions for businesses. Get a fixed quote within 48 hours.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',
     locale: 'en_GB',

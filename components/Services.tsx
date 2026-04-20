@@ -8,7 +8,7 @@ const services = [
     slug: 'excel-automation',
     desc: 'Turn hours of manual copy-paste into a one-click process. We automate your most time-consuming spreadsheet workflows so reports run themselves.',
     time: '3–5 days',
-    from: 'From £495',
+    from: 'Get a quote',
     tags: ['Reporting', 'Data processing', 'Reconciliation'],
   },
   {
@@ -17,7 +17,7 @@ const services = [
     slug: 'vba-development',
     desc: 'Custom macros and tools built around your exact business logic. Eliminate repetitive tasks and reduce human error with bespoke automation.',
     time: '3–7 days',
-    from: 'From £495',
+    from: 'Get a quote',
     tags: ['Custom tools', 'Macros', 'Workflows'],
   },
   {
@@ -26,7 +26,7 @@ const services = [
     slug: 'power-bi',
     desc: 'Live, interactive dashboards that give decision-makers instant visibility into KPIs — connected to your data, refreshed automatically.',
     time: '5–10 days',
-    from: 'From £750',
+    from: 'Get a quote',
     tags: ['KPI tracking', 'Live data', 'Visualisation'],
   },
   {
@@ -35,7 +35,7 @@ const services = [
     slug: 'power-automate',
     desc: 'Automate repetitive business workflows across Microsoft 365 — from approvals and notifications to data collection and system updates.',
     time: '3–7 days',
-    from: 'From £495',
+    from: 'Get a quote',
     tags: ['Microsoft 365', 'Workflows', 'Approvals'],
   },
   {
@@ -44,7 +44,7 @@ const services = [
     slug: 'python-automation',
     desc: 'For complex, large-scale data tasks that go beyond spreadsheets. We build reliable Python scripts that handle data processing at any volume.',
     time: '5–10 days',
-    from: 'From £750',
+    from: 'Get a quote',
     tags: ['Data pipelines', 'Large datasets', 'Scheduling'],
   },
   {
@@ -53,7 +53,7 @@ const services = [
     slug: 'google-sheets',
     desc: 'Automated reporting, dashboards, and data workflows built in Google Sheets — ideal for teams already working in Google Workspace.',
     time: '3–5 days',
-    from: 'From £495',
+    from: 'Get a quote',
     tags: ['Google Workspace', 'Automation', 'Dashboards'],
   },
 ]

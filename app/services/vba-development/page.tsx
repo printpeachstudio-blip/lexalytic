@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
-  description: 'Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic. Fixed price from £495. Free scoping call.',
+  description: 'Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic. Fixed price . Free scoping call.',
   keywords: 'VBA developer UK, Excel VBA consultant, custom VBA macros UK, Excel macro developer London, bespoke VBA automation',
   openGraph: {
     title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
-    description: 'Custom VBA macros and Excel tools built around your exact business logic. Fixed price from £495.',
+    description: 'Custom VBA macros and Excel tools built around your exact business logic. Fixed price .',
     url: 'https://lexalytic.com/services/vba-development',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -140,7 +140,7 @@ export default function VBAPage() {
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Ready for a tool that works<br /><em style={{ color: 'var(--amber)' }}>exactly the way you do?</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us your process and we'll tell you exactly what we can build — and what it'll cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £495 · Delivered in 3–7 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–7 days · Full documentation included</p>
         </div>
       </section>
 

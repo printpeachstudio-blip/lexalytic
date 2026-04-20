@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'Power Automate Consultant UK | Microsoft 365 Workflow Automation | Lexalytic',
-  description: 'Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365. Fixed price from £495. Free scoping call.',
+  description: 'Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365. Fixed price . Free scoping call.',
   keywords: 'Power Automate consultant UK, Microsoft 365 automation, Power Automate developer London, workflow automation UK, Microsoft Flow consultant UK',
   openGraph: {
     title: 'Power Automate Consultant UK | Microsoft 365 Workflow Automation | Lexalytic',
-    description: 'Automate your Microsoft 365 workflows with Power Automate. Fixed price from £495.',
+    description: 'Automate your Microsoft 365 workflows with Power Automate. Fixed price .',
     url: 'https://lexalytic.com/services/power-automate',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -112,7 +112,7 @@ export default function PowerAutomatePage() {
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Let Microsoft 365<br /><em style={{ color: 'var(--amber)' }}>do the repetitive work.</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what your team does manually every day and we'll show you what Power Automate can handle — and what it would cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £495 · Delivered in 3–7 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–7 days · Full documentation included</p>
         </div>
       </section>
 

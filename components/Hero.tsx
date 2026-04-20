@@ -66,7 +66,7 @@ export default function Hero() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}>
               {[
                 { num: '90%', label: 'Average time saved on reporting' },
-                { num: '£495', label: 'Projects start from' },
+                { num: "Fixed price", label: "Scoped within 48 hours" },
                 { num: '48h', label: 'Typical turnaround on scoping' },
               ].map((s, i) => (
                 <div key={i} style={{

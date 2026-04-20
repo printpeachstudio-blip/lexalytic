@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'Excel Automation Consultant UK | Spreadsheet Automation | Lexalytic',
-  description: 'Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price from £495. Free 30-minute scoping call.',
+  description: 'Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price . Free 30-minute scoping call.',
   keywords: 'Excel automation consultant UK, automate Excel spreadsheets, Excel automation service London, spreadsheet automation UK, Excel reporting automation',
   openGraph: {
     title: 'Excel Automation Consultant UK | Lexalytic',
-    description: 'Automate your Excel reporting and data processes. Fixed price from £495. Free scoping call.',
+    description: 'Automate your Excel reporting and data processes. Fixed price . Free scoping call.',
     url: 'https://lexalytic.com/services/excel-automation',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -140,7 +140,7 @@ export default function ExcelAutomationPage() {
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Stop doing manually what<br /><em style={{ color: 'var(--amber)' }}>Excel can do for you.</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us the process that's eating your team's time and we'll tell you exactly what automation would cost — and how long it would take.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £495 · Delivered in 3–5 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–5 days · Full documentation included</p>
         </div>
       </section>
 

@@ -2,8 +2,8 @@
 const tiers = [
   {
     name: 'Essential',
-    price: '£495',
-    description: 'Perfect for a single automation, report, or quick-win project.',
+    price: 'Quick win',
+    description: 'Perfect for a single automation, report, or process — scoped and priced before any work begins.',
     features: [
       'Single process or workflow',
       'Delivered within 5 working days',
@@ -11,12 +11,12 @@ const tiers = [
       '1 round of revisions',
       '2 weeks post-delivery support',
     ],
-    cta: 'Get started',
+    cta: 'Get a quote',
     highlight: false,
   },
   {
     name: 'Professional',
-    price: '£995–£1,495',
+    price: 'Full build',
     description: 'For more complex builds — full dashboards, multi-process automation, or integrated systems.',
     features: [
       'Multiple processes or full dashboard',
@@ -31,7 +31,7 @@ const tiers = [
   },
   {
     name: 'Retainer',
-    price: 'From £450/mo',
+    price: 'Ongoing',
     description: 'Ongoing support, updates, and new builds as your business evolves. A data partner, not just a one-off consultant.',
     features: [
       'Monthly hours for new builds & updates',
@@ -51,10 +51,10 @@ export default function Pricing() {
       <div className="container">
         <span className="section-label">Pricing</span>
         <div style={{ marginBottom: '16px' }}>
-          <h2>Transparent pricing.<br />No surprises.</h2>
+          <h2>Fixed price.<br />No surprises.</h2>
         </div>
         <p style={{ fontSize: '16px', color: 'var(--ink-3)', marginBottom: '48px', maxWidth: '520px' }}>
-          We don't hide our prices. Every project gets a fixed quote before work begins. Complex or enterprise projects are scoped individually — but you'll always know the number upfront.
+          Every project is scoped individually and priced upfront — before any work begins. Tell us your problem, and we'll tell you exactly what it will cost to fix it.
         </p>
 
         <div style={{
@@ -84,7 +84,7 @@ export default function Pricing() {
                 <span style={{ fontSize: '13px', fontWeight: '500', color: t.highlight ? 'var(--amber)' : 'var(--ink-3)', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{t.name}</span>
               </div>
 
-              <div style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: t.highlight ? 'var(--white)' : 'var(--ink)', marginBottom: '8px' }}>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', color: t.highlight ? 'var(--white)' : 'var(--ink)', marginBottom: '8px' }}>
                 {t.price}
               </div>
 
@@ -113,7 +113,7 @@ export default function Pricing() {
         }}>
           <span style={{ fontSize: '20px' }}>💡</span>
           <p style={{ fontSize: '14px', color: 'var(--ink-2)', flex: 1, minWidth: '200px' }}>
-            <strong style={{ color: 'var(--ink)' }}>Not sure which tier fits?</strong> Book a free 30-minute call and we'll tell you exactly what your project needs — and what it'll cost — before you commit to anything.
+            <strong style={{ color: 'var(--ink)' }}>Not sure where to start?</strong> Book a free 30-minute call and we'll scope your project and give you a clear fixed price — before you commit to anything.
           </p>
           <a href="#contact" className="btn-amber" style={{ flexShrink: 0, fontSize: '14px', padding: '11px 22px' }}>Book free call →</a>
         </div>

@@ -186,7 +186,7 @@ export default function BlogPost2() {
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 32px' }}>
               Book a free scoping call →
             </Link>
-            <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £495 · Delivered in 3–7 days · No commitment required</p>
+            <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–7 days · No commitment required</p>
           </div>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Summary</h2>
