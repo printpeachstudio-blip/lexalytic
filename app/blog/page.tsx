@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'power-bi-vs-excel',
+    title: 'Power BI vs Excel: Which Should Your Business Use in 2026?',
+    excerpt: 'The honest answer — when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.',
+    date: 'April 2026',
+    readTime: '9 min read',
+    tag: 'Power BI',
+  },
+  {
     slug: 'how-to-automate-excel-reports',
     title: 'How to Automate Excel Reports (Without Knowing How to Code)',
     excerpt: 'If your team is still doing the export-to-report grind every week, this guide is for you. What actually works, what does not, and how to choose the right approach for your business.',

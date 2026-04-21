@@ -23,13 +23,13 @@
       "static/chunks/231-79af95f00a2a104b.js",
       "static/chunks/app/page-34cb66bf4181b854.js"
     ],
-    "/blog/how-to-automate-excel-reports/page": [
+    "/blog/power-bi-vs-excel/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
       "static/chunks/fd9d1056-62aaf4b921c84028.js",
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/how-to-automate-excel-reports/page-f1aa723011e83c50.js"
+      "static/chunks/app/blog/power-bi-vs-excel/page-07aa4086b6642248.js"
     ],
     "/blog/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -37,15 +37,15 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/page-e100d9799b7c8a4a.js"
+      "static/chunks/app/blog/page-29ce57fb1c8cffcb.js"
     ],
-    "/services/excel-automation/page": [
+    "/blog/how-to-automate-excel-reports/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
       "static/chunks/fd9d1056-62aaf4b921c84028.js",
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/excel-automation/page-56bc3210b250460c.js"
+      "static/chunks/app/blog/how-to-automate-excel-reports/page-ec4b27a260450089.js"
     ],
     "/blog/power-bi-consultant-cost-uk/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -53,15 +53,7 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/power-bi-consultant-cost-uk/page-5c77f9ac1ce13e95.js"
-    ],
-    "/services/google-sheets/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/google-sheets/page-6fb8352cf852b633.js"
+      "static/chunks/app/blog/power-bi-consultant-cost-uk/page-636ba6667d28b39c.js"
     ],
     "/services/power-automate/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -69,7 +61,15 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/power-automate/page-e71952b8c5ffb37b.js"
+      "static/chunks/app/services/power-automate/page-7516eef47c7733a8.js"
+    ],
+    "/services/excel-automation/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/excel-automation/page-496d8d8b8ead5d20.js"
     ],
     "/services/power-bi/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -77,15 +77,15 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/power-bi/page-7152513fe237667d.js"
+      "static/chunks/app/services/power-bi/page-aae808954254b967.js"
     ],
-    "/services/vba-development/page": [
+    "/services/google-sheets/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
       "static/chunks/fd9d1056-62aaf4b921c84028.js",
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/vba-development/page-24b7cded1957e8c0.js"
+      "static/chunks/app/services/google-sheets/page-35eb7e73fb65e1e0.js"
     ],
     "/services/python-automation/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -93,7 +93,15 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/python-automation/page-8d8c910af74c1f98.js"
+      "static/chunks/app/services/python-automation/page-62bd97b2892c8722.js"
+    ],
+    "/services/vba-development/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/vba-development/page-088ff06a44bb98ef.js"
     ]
   }
 }
