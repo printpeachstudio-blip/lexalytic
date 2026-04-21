@@ -2,7 +2,7 @@
 
 const testimonials = [
   {
-    quote: "Without ExcelXLS's help, I was working on 3 excel spreadsheets to manage my bookings for trainings, registers, finance on the same project, but they managed to put it all on one database and most of the work is now done by pressing a button instead of copying and pasting. All work done within set deadlines and communication was great.",
+    quote: "Without Lexalytic's help, I was working on 3 excel spreadsheets to manage my bookings for trainings, registers, finance on the same project, but they managed to put it all on one database and most of the work is now done by pressing a button instead of copying and pasting. All work done within set deadlines and communication was great.",
     name: "Silvia Z",
     role: "Quality Assurance Officer",
     company: "Royal Borough of Kensington and Chelsea",
@@ -16,28 +16,28 @@ const testimonials = [
     initial: "S",
   },
   {
-    quote: "ExcelXLS immediately understood what we wanted via a brief phone call. Their personal attention and speed of turnaround was phenomenal. They not only delivered upon their promises, they were also a pleasure to work with. They have now become an additional outsourced member of our team.",
+    quote: "Lexalytic immediately understood what we wanted via a brief phone call. Their personal attention and speed of turnaround was phenomenal. They not only delivered upon their promises, they were also a pleasure to work with. They have now become an additional outsourced member of our team.",
     name: "David Nikolich",
     role: "Founder & MD",
     company: "Abstract",
     initial: "A",
   },
   {
-    quote: "Using ExcelXLS has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage — I also felt that I was properly listened to and my needs and requirements were met.",
+    quote: "Using Lexalytic has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage — I also felt that I was properly listened to and my needs and requirements were met.",
     name: "Kate Freethe",
     role: "Workshops Administrator",
     company: "Royal Shakespeare Company",
     initial: "R",
   },
   {
-    quote: "ExcelXLS has helped my business grow with custom reports, including aircraft technical reports through visual basic automation of data sources. I highly recommend this service for any Excel project.",
+    quote: "Lexalytic has helped my business grow with custom reports, including aircraft technical reports through visual basic automation of data sources. I highly recommend this service for any data automation project.",
     name: "Jeff Brandon",
     role: "Director",
     company: "White Cloud Aviation Services Ltd",
     initial: "W",
   },
   {
-    quote: "We had a challenging problem with our 5 year plan spreadsheet that we had tried and failed several times to fix ourselves. ExcelXLS came to our rescue and fixed it within a few hours.",
+    quote: "We had a challenging problem with our 5 year plan spreadsheet that we had tried and failed several times to fix ourselves. Lexalytic came to our rescue and fixed it within a few hours.",
     name: "Melvin Jay",
     role: "CEO & Founder",
     company: "Gunna Drinks",
@@ -52,8 +52,8 @@ export default function Testimonials() {
         <span className="section-label">Client testimonials</span>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '16px' }}>
           <h2 style={{ color: 'var(--white)', maxWidth: '480px' }}>Trusted by businesses across the UK.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', maxWidth: '280px', textAlign: 'right', lineHeight: '1.6' }}>
-            10 years of client work under ExcelXLS — now continuing under Lexalytic.
+          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', maxWidth: '320px', textAlign: 'right', lineHeight: '1.6' }}>
+            Lexalytic is the evolution of a 10-year data consultancy — same team, expanded capabilities.
           </p>
         </div>
 
@@ -68,14 +68,11 @@ export default function Testimonials() {
               flexDirection: 'column',
               gap: '20px',
             }}>
-              {/* Stars */}
               <div style={{ display: 'flex', gap: '3px' }}>
                 {[...Array(5)].map((_, s) => (
                   <span key={s} style={{ color: 'var(--amber)', fontSize: '14px' }}>★</span>
                 ))}
               </div>
-
-              {/* Quote */}
               <p style={{
                 fontSize: '14px', lineHeight: '1.8',
                 color: 'rgba(255,255,255,0.7)',
@@ -84,8 +81,6 @@ export default function Testimonials() {
               }}>
                 "{t.quote}"
               </p>
-
-              {/* Attribution */}
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '20px' }}>
                 <div style={{
                   width: '40px', height: '40px', borderRadius: '50%',
