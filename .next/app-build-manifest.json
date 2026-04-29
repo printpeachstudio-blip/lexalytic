@@ -23,77 +23,13 @@
       "static/chunks/231-79af95f00a2a104b.js",
       "static/chunks/app/page-2b46e8b4868bd767.js"
     ],
-    "/blog/how-to-automate-excel-reports/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/how-to-automate-excel-reports/page-572ff7c90aeabb97.js"
-    ],
     "/blog/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
       "static/chunks/fd9d1056-62aaf4b921c84028.js",
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/page-93320cf68dbaf061.js"
-    ],
-    "/services/google-sheets/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/google-sheets/page-5144db4ed9e57f73.js"
-    ],
-    "/blog/power-bi-vs-excel/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/power-bi-vs-excel/page-c55d44203771ca0e.js"
-    ],
-    "/services/power-automate/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/power-automate/page-271257124b95cb08.js"
-    ],
-    "/services/excel-automation/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/excel-automation/page-63a785117acb3327.js"
-    ],
-    "/services/power-bi/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/power-bi/page-a49693d0d2f44f42.js"
-    ],
-    "/services/python-automation/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/python-automation/page-9da2d7cd0dd2f871.js"
-    ],
-    "/services/vba-development/page": [
-      "static/chunks/webpack-6956dcac8326fe2b.js",
-      "static/chunks/fd9d1056-62aaf4b921c84028.js",
-      "static/chunks/23-6de92bf77c16c86b.js",
-      "static/chunks/main-app-b1657c1f85b9efa0.js",
-      "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/services/vba-development/page-4aced4a9b479c848.js"
+      "static/chunks/app/blog/page-c4c970850ee0f517.js"
     ],
     "/blog/power-bi-consultant-cost-uk/page": [
       "static/chunks/webpack-6956dcac8326fe2b.js",
@@ -101,7 +37,79 @@
       "static/chunks/23-6de92bf77c16c86b.js",
       "static/chunks/main-app-b1657c1f85b9efa0.js",
       "static/chunks/231-79af95f00a2a104b.js",
-      "static/chunks/app/blog/power-bi-consultant-cost-uk/page-299a58f25b4005e9.js"
+      "static/chunks/app/blog/power-bi-consultant-cost-uk/page-ee70d7e371e9f608.js"
+    ],
+    "/blog/how-to-automate-excel-reports/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/blog/how-to-automate-excel-reports/page-84223674061e8ab0.js"
+    ],
+    "/blog/5-signs-manual-reporting-is-costing-your-business/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/blog/5-signs-manual-reporting-is-costing-your-business/page-068fa3c86c08279e.js"
+    ],
+    "/services/excel-automation/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/excel-automation/page-87891af11c99391f.js"
+    ],
+    "/services/google-sheets/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/google-sheets/page-b86245e90e838352.js"
+    ],
+    "/services/power-automate/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/power-automate/page-3c796e9d330fec4a.js"
+    ],
+    "/blog/power-bi-vs-excel/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/blog/power-bi-vs-excel/page-840f01586ceb945c.js"
+    ],
+    "/services/vba-development/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/vba-development/page-7a7f2a4a5cf34fd2.js"
+    ],
+    "/services/python-automation/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/python-automation/page-1a58f7efb9620804.js"
+    ],
+    "/services/power-bi/page": [
+      "static/chunks/webpack-6956dcac8326fe2b.js",
+      "static/chunks/fd9d1056-62aaf4b921c84028.js",
+      "static/chunks/23-6de92bf77c16c86b.js",
+      "static/chunks/main-app-b1657c1f85b9efa0.js",
+      "static/chunks/231-79af95f00a2a104b.js",
+      "static/chunks/app/services/power-bi/page-b7b99fa934c3072c.js"
     ]
   }
 }

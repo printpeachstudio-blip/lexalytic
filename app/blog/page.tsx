@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: '5-signs-manual-reporting-is-costing-your-business',
+    title: '5 Signs Manual Reporting Is Costing Your Business Money',
+    excerpt: 'Most businesses know their reporting process is painful. What they do not realise is exactly how much it is costing them — in time, in errors, and in decisions made on data that is already out of date.',
+    date: 'April 2026',
+    readTime: '10 min read',
+    tag: 'Data Automation',
+  },
+  {
     slug: 'power-bi-vs-excel',
     title: 'Power BI vs Excel: Which Should Your Business Use in 2026?',
     excerpt: 'The honest answer — when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.',
