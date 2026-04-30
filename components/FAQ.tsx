@@ -64,11 +64,24 @@ export default function FAQ() {
                     {open === i ? '−' : '+'}
                   </span>
                 </button>
-                {open === i && (
-                  <p style={{ paddingBottom: '20px', fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.7', fontWeight: '300' }}>
-                    {f.a}
-                  </p>
-                )}
+                {/* Always render answer for SEO, hide visually when closed */}
+                <p style={{
+                  paddingBottom: open === i ? '20px' : '0',
+                  fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.7', fontWeight: '300',
+                  maxHeight: open === i ? '200px' : '0',
+                  overflow: 'hidden',
+                  transition: 'all 0.3s ease',
+                  margin: 0,
+                  visibility: open === i ? 'visible' : 'hidden',
+                  position: open === i ? 'relative' : 'absolute',
+                  opacity: open === i ? 1 : 0,
+                }}>
+                  {f.a}
+                </p>
+                {/* Hidden version always in DOM for Google */}
+                <p style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', fontSize: '1px', color: 'transparent', margin: 0 }}>
+                  {f.a}
+                </p>
               </div>
             ))}
           </div>

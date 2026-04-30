@@ -15,11 +15,13 @@ export default function Footer() {
 
           <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
             {[
-              { href: '#services', label: 'Services' },
-              { href: '#pricing', label: 'Pricing' },
-              { href: '#results', label: 'Results' },
-              { href: '#tool', label: 'Free tool' },
-              { href: '#contact', label: 'Contact' },
+              { href: '/#services', label: 'Services' },
+              { href: '/#pricing', label: 'Pricing' },
+              { href: '/#results', label: 'Results' },
+              { href: '/#tool', label: 'Free tool' },
+              { href: '/#contact', label: 'Contact' },
+              { href: '/about', label: 'About' },
+              { href: '/blog', label: 'Blog' },
             ].map(l => (
               <a key={l.href} href={l.href} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.8)'}
