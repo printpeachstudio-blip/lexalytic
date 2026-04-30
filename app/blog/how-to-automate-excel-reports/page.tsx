@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 
 export default function BlogPost2() {
   return (
+    <>
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
@@ -221,5 +222,6 @@ export default function BlogPost2() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

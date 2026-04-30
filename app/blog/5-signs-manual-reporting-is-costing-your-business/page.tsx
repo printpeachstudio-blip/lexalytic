@@ -25,7 +25,6 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-    <>
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
 
       {/* Nav */}

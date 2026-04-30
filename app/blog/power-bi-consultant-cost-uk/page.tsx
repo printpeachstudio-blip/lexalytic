@@ -257,5 +257,6 @@ export default function BlogPost() {
       </footer>
 
     </div>
+    </>
   )
 }
