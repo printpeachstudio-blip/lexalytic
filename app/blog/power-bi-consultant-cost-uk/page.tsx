@@ -42,7 +42,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
-            How Much Does a Power BI Consultant Cost in the UK?
+            Power BI Consultant Cost UK: Hourly Rate & Day Rate Guide (2026)
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
             A straight answer — with real UK prices, what affects the cost, and how to make sure you're not overpaying for something simpler than you think.

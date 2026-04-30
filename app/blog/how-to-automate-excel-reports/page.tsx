@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-automate-excel-reports' },
-  title: 'How to Automate Excel Reports (Without Knowing How to Code) | Lexalytic',
-  description: 'A practical guide to automating Excel reports for UK businesses in 2026. What options exist, which is right for your situation, and when to hire a consultant vs do it yourself.',
+  title: 'How to Automate Excel Reports in the UK (2026): Tools, Methods & When to Get Help | Lexalytic',
+  description: 'How to automate Excel reports for UK businesses in 2026. Power Query, VBA macros, Python and when to hire an Excel automation consultant. Practical guide with real examples.',
   keywords: 'automate Excel reports UK, Excel report automation, how to automate Excel, stop manual Excel reporting, automated Excel reports',
   openGraph: {
-    title: 'How to Automate Excel Reports (Without Knowing How to Code)',
-    description: 'Practical guide to Excel report automation for UK businesses. What works, what does not, and when to get help.',
+    title: 'How to Automate Excel Reports in the UK (2026): Tools, Methods & When to Get Help',
+    description: 'Automate Excel reports in 2026 — tools, methods, costs and when to hire an Excel automation consultant.',
     url: 'https://www.lexalytic.com/blog/how-to-automate-excel-reports',
     siteName: 'Lexalytic',
     locale: 'en_GB',
