@@ -16,8 +16,47 @@ export const metadata: Metadata = {
   },
 }
 
+
 export default function AboutPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mihir Hindocha",
+    "jobTitle": "Data Automation Consultant",
+    "description": "UK data automation consultant with 15 years experience across Shell, Citi Private Bank, NHS, Warner Brothers Discovery and Foster & Partners. Founder of Lexalytic.",
+    "url": "https://www.lexalytic.com/about",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Lexalytic",
+      "url": "https://www.lexalytic.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bushey",
+      "addressRegion": "Hertfordshire",
+      "addressCountry": "GB"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Financial Computing"
+    },
+    "knowsAbout": ["Power BI", "Excel Automation", "VBA", "Python", "SQL", "Power Automate", "Data Automation", "Business Intelligence"],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Data Automation Consultant",
+      "occupationLocation": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    }
+  }
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
 
       {/* Nav */}

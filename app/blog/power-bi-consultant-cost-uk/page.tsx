@@ -17,7 +17,14 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
+  const structuredData = {"@context": "https://schema.org", "@type": "Article", "headline": "Power BI Consultant Cost UK: Hourly Rate & Day Rate Guide (2026)", "description": "Power BI consultant hourly rates, day rates and project costs in the UK for 2026.", "datePublished": "2026-04-01", "dateModified": "2026-04-01", "url": "https://www.lexalytic.com/blog/power-bi-consultant-cost-uk", "author": {"@type": "Person", "name": "Mihir Hindocha", "url": "https://www.lexalytic.com/about"}, "publisher": {"@type": "Organization", "name": "Lexalytic", "url": "https://www.lexalytic.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.lexalytic.com/blog/power-bi-consultant-cost-uk"}}
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
 
       {/* Nav */}
