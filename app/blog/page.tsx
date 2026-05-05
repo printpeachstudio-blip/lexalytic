@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'excel-automation-cost-uk',
+    title: 'How Much Does Excel Automation Cost in the UK? (2026 Guide)',
+    excerpt: 'A straight answer — with real UK project costs, what drives the price up or down, and how to work out whether automation will pay for itself in your business.',
+    date: 'May 2026',
+    readTime: '9 min read',
+    tag: 'Excel Automation',
+  },
+  {
     slug: '5-signs-manual-reporting-is-costing-your-business',
     title: '5 Signs Manual Reporting Is Costing Your Business Money',
     excerpt: 'Most businesses know their reporting process is painful. What they do not realise is exactly how much it is costing them — in time, in errors, and in decisions made on data that is already out of date.',
