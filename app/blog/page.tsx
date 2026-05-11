@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'what-is-data-cleansing-uk',
+    title: 'What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?',
+    excerpt: 'Most businesses know their data is messy. Very few realise how much that messiness is actually costing them — in wasted time, wrong decisions, and automation projects that fail before they start.',
+    date: 'May 2026',
+    readTime: '10 min read',
+    tag: 'Data Quality',
+  },
+  {
     slug: 'excel-automation-cost-uk',
     title: 'How Much Does Excel Automation Cost in the UK? (2026 Guide)',
     excerpt: 'A straight answer — with real UK project costs, what drives the price up or down, and how to work out whether automation will pay for itself in your business.',
