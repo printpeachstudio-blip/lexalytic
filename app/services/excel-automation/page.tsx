@@ -89,6 +89,68 @@ export default function ExcelAutomationPage() {
         </div>
       </section>
 
+      <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg)' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '80px', alignItems: 'start' }}>
+            <div>
+              <span className="section-label">What this actually means</span>
+              <h2 style={{ marginBottom: '24px' }}>Most Excel problems are process problems, not spreadsheet problems</h2>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
+                After 15 years of working with UK businesses on their data, the pattern is almost always the same. Someone built a spreadsheet that worked perfectly for the business at the time. Then the business grew, the data got more complex, and the spreadsheet got patched and modified until it became something nobody fully understands — and everyone is slightly afraid to touch.
+              </p>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
+                The result is a manual process that takes far longer than it should, produces errors that are hard to catch, and depends entirely on one person knowing how it all fits together.
+              </p>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
+                Excel automation fixes this by removing the manual steps entirely. Instead of someone opening files, copying data, running formulas, and reformatting the output — the system does all of that automatically. The result is there when it needs to be, accurate, and consistent every time.
+              </p>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
+                We use Power Query, VBA, and Python depending on what the job actually requires — not because one tool is fashionable, but because the right tool for a simple weekly report is different from the right tool for a multi-source data pipeline. Most projects use a combination.
+              </p>
+            </div>
+            <div>
+              <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1rem', marginBottom: '16px', color: 'var(--ink)' }}>Who this works well for</h3>
+                {[
+                  'Finance teams spending days on month-end reporting that could run automatically',
+                  'Operations managers pulling data from multiple systems into one spreadsheet every week',
+                  'Small businesses where one person owns a critical spreadsheet nobody else understands',
+                  'Growing businesses whose data has outgrown the processes they built when they were smaller',
+                  'Anyone who has inherited broken macros from a previous consultant or employee',
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 4 ? '14px' : '0', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <span style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px' }}>
+                <h3 style={{ fontSize: '1rem', marginBottom: '16px', color: 'var(--ink)' }}>How the process works</h3>
+                {[
+                  { step: '1', text: 'You show us the current process — the files, the steps, the pain points.' },
+                  { step: '2', text: 'We scope it and come back with a fixed price and timeline within 48 hours.' },
+                  { step: '3', text: 'We build and test against your actual data, not dummy data.' },
+                  { step: '4', text: 'Full handover with documentation so your team can use it from day one.' },
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '16px', marginBottom: i < 3 ? '16px' : '0', alignItems: 'flex-start' }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'var(--amber)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', fontWeight: '600', color: 'white', flexShrink: 0 }}>{item.step}</div>
+                    <span style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6', paddingTop: '4px' }}>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .excel-detail-grid {
+              grid-template-columns: 1fr !important;
+              gap: 40px !important;
+            }
+          }
+        `}</style>
+      </section>
+
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
