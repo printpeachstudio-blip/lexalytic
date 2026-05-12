@@ -1,29 +1,29 @@
 'use client'
 const results = [
   {
-    industry: 'Manufacturing',
-    role: 'Operations Manager',
-    problem: 'Weekly production report took 4 hours to compile across 6 spreadsheets. Errors were common and the data was always a day old.',
-    solution: 'Automated Excel reporting system pulling from all source files, with a Power BI dashboard for live floor visibility.',
-    outcome: '4 hours → 8 minutes. Zero errors. Data visible in real time.',
-    metric: '97%',
-    metricLabel: 'time saved',
+    industry: 'Health & Beauty',
+    role: 'Hairdressing Group',
+    problem: 'The business had grown over the years but the data hadn\'t kept up. Financials were scattered across multiple spreadsheets with nothing linking together. They\'d inherited a set of macros from a previous consultant that either didn\'t work at all or took so long to run that nobody used them. The owner had no clear picture of how the business was actually performing.',
+    solution: 'Started with a full data cleanse — restructuring everything so it was consistent and connected. Then rebuilt all the macros from scratch. Faster, reliable, properly documented so the team could understand what everything did.',
+    outcome: 'For the first time, the owner could open one file and see accurate figures across the whole business. Macros that used to take minutes — or fail entirely — now run in seconds. The data finally reflects the business.',
+    metric: '100%',
+    metricLabel: 'macros rebuilt & working',
   },
   {
-    industry: 'Finance & Accounting',
-    role: 'Finance Director',
-    problem: 'Month-end reconciliation across 3 systems was a 2-day manual process every single month.',
-    solution: 'Python automation to pull, reconcile, and flag discrepancies across all three systems automatically.',
-    outcome: '2 days → 20 minutes. Discrepancies flagged automatically. Team redirected to analysis.',
-    metric: '2 days',
-    metricLabel: 'saved monthly',
+    industry: 'Healthcare',
+    role: 'Independent Pharmacy',
+    problem: 'Managing 20+ locum pharmacists meant keeping track of who was working when, what each person\'s rate was, and when payments were due. It was all spread across separate spreadsheets — which meant payments were frequently late or wrong, scheduling clashes went unnoticed, and the admin overhead was significant.',
+    solution: 'Built a fully automated locum tracker with a simple input form for logging shifts and rates. The system calculates pay automatically, highlights in red when a payment is coming due, flags any scheduling conflicts, and keeps a clean record of every shift worked and every payment made.',
+    outcome: 'The pharmacy team now spends minutes on locum admin instead of hours. Nothing gets missed. Payments go out on time. And if there\'s a conflict in the rota, the system catches it before it becomes a problem.',
+    metric: '0',
+    metricLabel: 'missed payments since launch',
   },
   {
     industry: 'Professional Services',
     role: 'Managing Director',
-    problem: 'No central view of project profitability. Directors were making resourcing decisions without reliable data.',
-    solution: 'Power BI dashboard connected to their project management and finance tools. Live P&L by project, client, and team.',
-    outcome: 'Full visibility within 48 hours of build. Board-ready reporting in one click.',
+    problem: 'No central view of project profitability. Directors were making resourcing decisions without reliable data — guessing which clients and projects were actually profitable and which were draining the business.',
+    solution: 'Power BI dashboard connected to their project management and finance systems. Live P&L by project, client, and team member — updated automatically, no manual input required.',
+    outcome: 'Full visibility within 48 hours of the build completing. The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.',
     metric: '48hrs',
     metricLabel: 'to full visibility',
   },
@@ -47,7 +47,6 @@ export default function Results() {
               background: 'var(--white)', border: '1px solid var(--border)',
               borderRadius: 'var(--radius-lg)', overflow: 'hidden',
             }}>
-              {/* Header */}
               <div style={{ padding: '20px 24px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                   <div style={{ fontSize: '13px', fontWeight: '500', color: 'var(--ink)' }}>{r.industry}</div>
@@ -59,22 +58,21 @@ export default function Results() {
                 </div>
               </div>
 
-              {/* Body */}
               <div style={{ padding: '24px' }}>
                 <div style={{ marginBottom: '16px' }}>
-                  <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>The problem</div>
-                  <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6' }}>{r.problem}</p>
+                  <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>The situation</div>
+                  <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7' }}>{r.problem}</p>
                 </div>
                 <div style={{ marginBottom: '16px' }}>
                   <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--ink-4)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>What we built</div>
-                  <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6' }}>{r.solution}</p>
+                  <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7' }}>{r.solution}</p>
                 </div>
                 <div style={{
                   background: 'var(--amber-bg)', border: '1px solid rgba(193,125,46,0.15)',
                   borderRadius: 'var(--radius)', padding: '14px 16px',
                 }}>
                   <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>Outcome</div>
-                  <p style={{ fontSize: '14px', color: 'var(--ink)', fontWeight: '400', lineHeight: '1.5' }}>{r.outcome}</p>
+                  <p style={{ fontSize: '14px', color: 'var(--ink)', fontWeight: '400', lineHeight: '1.6' }}>{r.outcome}</p>
                 </div>
               </div>
             </div>
