@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
-  description: 'Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic. Fixed price . Free scoping call.',
+  description: 'Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic. Free scoping call.',
   keywords: 'VBA developer UK, Excel VBA consultant, custom VBA macros UK, Excel macro developer London, bespoke VBA automation',
   openGraph: {
     title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
-    description: 'Custom VBA macros and Excel tools built around your exact business logic. Fixed price .',
+    description: 'Custom VBA macros and Excel tools built around your exact business logic.',
     url: 'https://lexalytic.com/services/vba-development',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -52,7 +52,7 @@ export default function VBAPage() {
               Custom VBA tools built<br /><em style={{ color: 'var(--amber)' }}>around how you actually work.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Generic Excel doesn't know your business processes. We build bespoke VBA tools that do — cutting out the repetitive manual steps, reducing errors, and giving your team something that actually fits the way they work.
+              Generic Excel does not know your business processes. We build bespoke VBA tools that do — cutting out the repetitive manual steps, reducing errors, and giving your team something that actually fits the way they work.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -74,8 +74,8 @@ export default function VBAPage() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span className="section-label">What we build</span>
-            <h2>VBA tools for every process that's slowing your team down</h2>
-            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>10 years of VBA development across finance, operations, logistics, professional services, and more.</p>
+            <h2>VBA tools for every process that is slowing your team down</h2>
+            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>15 years of VBA development across finance, operations, logistics, professional services, and more.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {useCases.map((item, i) => (
@@ -91,11 +91,62 @@ export default function VBAPage() {
 
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
         <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '80px', alignItems: 'start' }}>
+            <div>
+              <span className="section-label">Why VBA still matters</span>
+              <h2 style={{ marginBottom: '24px' }}>VBA gets a bad reputation. Most of the time, the code is fine — it just was not built properly</h2>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
+                I have inherited a lot of other people's VBA over the years. Macros that run for 20 minutes when they should take 20 seconds. Code that breaks whenever someone adds a new column. Tools that only the person who built them understands. The problem is rarely VBA itself — it is that the original code was written quickly, without documentation, and never properly tested.
+              </p>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
+                Built properly, VBA is still one of the most practical tools in business. It lives inside Excel, your team does not need to install anything, and it can do things that no formula can — complex multi-step logic, custom input forms, automated report generation, connections to other Office applications.
+              </p>
+              <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
+                The question of whether VBA or Python is right for a given job is one I answer honestly during the scoping call. For most Excel-based business processes, VBA is the right tool. For large data volumes, scheduled background tasks, or API connections, Python usually wins. We will tell you which is which for your situation.
+              </p>
+            </div>
+            <div>
+              <div style={{ background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1rem', marginBottom: '16px', color: 'var(--ink)' }}>Signs your current VBA needs rebuilding</h3>
+                {[
+                  'Macros that take minutes to run when they should take seconds',
+                  'Code that breaks when someone changes the spreadsheet structure',
+                  'Nobody on the team knows how it works or is afraid to touch it',
+                  'Tools built by someone who has since left the business',
+                  'Errors that appear intermittently and are impossible to diagnose',
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 4 ? '14px' : '0', alignItems: 'flex-start' }}>
+                    <span style={{ color: '#ef4444', flexShrink: 0, marginTop: '2px' }}>✗</span>
+                    <span style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px' }}>
+                <h3 style={{ fontSize: '1rem', marginBottom: '16px', color: 'var(--ink)' }}>What we deliver instead</h3>
+                {[
+                  'Clean, fast code with every step documented in plain English',
+                  'Tools tested against your actual data before handover',
+                  'Full walkthrough so your team understands what it does',
+                  'Code your team can maintain and modify independently',
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 3 ? '14px' : '0', alignItems: 'flex-start' }}>
+                    <span style={{ color: 'var(--amber)', flexShrink: 0, marginTop: '2px' }}>✓</span>
+                    <span style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg)' }}>
+        <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <span className="section-label">Client result</span>
             <h2 style={{ marginBottom: '8px' }}>Aircraft technical reports: manual process eliminated entirely</h2>
             <p style={{ color: 'var(--ink-3)', marginBottom: '36px', fontSize: '15px' }}>Aviation · Operations</p>
-            <div style={{ background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', overflow: 'hidden' }}>
+            <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', overflow: 'hidden' }}>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>The situation</h3>
                 <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>An aviation client needed custom aircraft technical reports generated from multiple data sources. The manual process was time-consuming, error-prone, and required significant Excel expertise every time a report was needed.</p>
@@ -117,7 +168,7 @@ export default function VBAPage() {
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg)' }}>
+      <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
         <div className="container">
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
@@ -125,7 +176,7 @@ export default function VBAPage() {
             <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
-                <div key={i} style={{ padding: '24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
+                <div key={i} style={{ padding: '24px', background: 'var(--bg)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
                   <h3 style={{ fontSize: '1rem', fontFamily: 'var(--sans)', fontWeight: '500', marginBottom: '10px' }}>{faq.q}</h3>
                   <p style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7' }}>{faq.a}</p>
                 </div>
@@ -138,9 +189,9 @@ export default function VBAPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Ready for a tool that works<br /><em style={{ color: 'var(--amber)' }}>exactly the way you do?</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us your process and we'll tell you exactly what we can build — and what it'll cost.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us your process and we will tell you exactly what we can build — and what it will cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–7 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Delivered in 3–7 days · Full documentation included</p>
         </div>
       </section>
 
