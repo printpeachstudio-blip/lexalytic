@@ -59,7 +59,7 @@ export default function VBAPage() {
               <Link href="/#pricing" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.65)', borderColor: 'rgba(255,255,255,0.15)' }}>See pricing →</Link>
             </div>
             <div style={{ marginTop: '60px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
-              {[{ num: '3–7', label: 'Days to delivery' }, { num: '£495', label: 'Starting price' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
+              {[{ num: '3–7', label: 'Days to delivery' }, { num: 'Free', label: 'Scoping call' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
                 <div key={i}>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: '2rem', color: 'var(--white)', lineHeight: '1' }}>{s.num}</div>
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', marginTop: '4px' }}>{s.label}</div>

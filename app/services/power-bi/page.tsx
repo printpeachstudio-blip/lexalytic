@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
-  description: 'Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence. Fixed price from £750. Free 30-minute scoping call.',
+  description: 'Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence. Free 30-minute scoping call.',
   keywords: 'Power BI consultant UK, Power BI dashboard service, Power BI developer London, business intelligence consultant UK, Power BI small business UK',
   openGraph: {
     title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
-    description: 'Bespoke Power BI dashboards built for your business. Live data, automated reporting, fixed price from £750.',
+    description: 'Bespoke Power BI dashboards built for your business. Live data, automated reporting, fixed price scoped before work begins.',
     url: 'https://lexalytic.com/services/power-bi',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -59,7 +59,7 @@ export default function PowerBIPage() {
               <Link href="/#pricing" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.65)', borderColor: 'rgba(255,255,255,0.15)' }}>See pricing →</Link>
             </div>
             <div style={{ marginTop: '60px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
-              {[{ num: '5–10', label: 'Days to delivery' }, { num: '£750', label: 'Starting price' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
+              {[{ num: '5–10', label: 'Days to delivery' }, { num: 'Free', label: 'Scoping call' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
                 <div key={i}>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: '2rem', color: 'var(--white)', lineHeight: '1' }}>{s.num}</div>
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', marginTop: '4px' }}>{s.label}</div>
@@ -193,7 +193,7 @@ export default function PowerBIPage() {
             Book a free 30-minute call. We'll look at your data, tell you exactly what's possible, and give you a fixed price before you commit to anything.
           </p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £750 · Delivered in 5–10 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Delivered in 5–10 days · Full documentation included</p>
         </div>
       </section>
 

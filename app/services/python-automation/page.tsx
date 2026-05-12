@@ -4,11 +4,11 @@ import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
   title: 'Python Automation Consultant UK | Data Pipelines & Processing | Lexalytic',
-  description: 'Expert Python automation for UK businesses. Data pipelines, scheduled scripts, API integrations, and large-scale data processing. Fixed price from £750. Free scoping call.',
+  description: 'Expert Python automation for UK businesses. Data pipelines, scheduled scripts, API integrations, and large-scale data processing. Free scoping call.',
   keywords: 'Python automation consultant UK, Python data pipeline UK, Python developer London, automate data processing UK, Python scripting service UK',
   openGraph: {
     title: 'Python Automation Consultant UK | Data Pipelines & Processing | Lexalytic',
-    description: 'Python automation for complex data tasks. Pipelines, scheduling, API integration. Fixed price from £750.',
+    description: 'Python automation for complex data tasks. Pipelines, scheduling, API integration.',
     url: 'https://lexalytic.com/services/python-automation',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -59,7 +59,7 @@ export default function PythonAutomationPage() {
               <Link href="/#pricing" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.65)', borderColor: 'rgba(255,255,255,0.15)' }}>See pricing →</Link>
             </div>
             <div style={{ marginTop: '60px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
-              {[{ num: '5–10', label: 'Days to delivery' }, { num: '£750', label: 'Starting price' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
+              {[{ num: '5–10', label: 'Days to delivery' }, { num: 'Free', label: 'Scoping call' }, { num: '48h', label: 'Quote turnaround' }].map((s, i) => (
                 <div key={i}>
                   <div style={{ fontFamily: 'var(--serif)', fontSize: '2rem', color: 'var(--white)', lineHeight: '1' }}>{s.num}</div>
                   <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', marginTop: '4px' }}>{s.label}</div>
@@ -140,7 +140,7 @@ export default function PythonAutomationPage() {
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Ready to process your data<br /><em style={{ color: 'var(--amber)' }}>without lifting a finger?</em></h2>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. We'll tell you whether Python is the right tool for your situation — and give you a fixed price before you commit to anything.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
-          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price from £750 · Delivered in 5–10 days · Full documentation included</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Delivered in 5–10 days · Full documentation included</p>
         </div>
       </section>
 
