@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog' },
   title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
-  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting — written from 10 years of real project experience.',
+  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting — written from 15 years of real project experience.',
 }
 
 const posts = [
@@ -77,7 +77,7 @@ export default function BlogIndex() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="section-label">Blog</span>
           <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '16px', letterSpacing: '-0.02em' }}>Data automation insights</h1>
-          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting — written from 10 years of real project experience.</p>
+          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting — written from 15 years of real project experience.</p>
         </div>
       </section>
 

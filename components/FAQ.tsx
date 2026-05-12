@@ -78,10 +78,7 @@ export default function FAQ() {
                 }}>
                   {f.a}
                 </p>
-                {/* Hidden version always in DOM for Google */}
-                <p style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', fontSize: '1px', color: 'transparent', margin: 0 }}>
-                  {f.a}
-                </p>
+
               </div>
             ))}
           </div>
