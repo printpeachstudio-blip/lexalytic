@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'when-your-business-has-outgrown-excel',
+    title: 'When Your Business Has Outgrown Excel — And What To Do Next',
+    excerpt: 'Excel is not the problem. Excel doing a job it was never designed to do — that is the problem. Here is how to tell the difference, and what actually needs to change.',
+    date: 'May 2026',
+    readTime: '10 min read',
+    tag: 'Excel Automation',
+  },
+  {
     slug: 'how-to-reduce-manual-data-entry-uk',
     title: 'How to Reduce Manual Data Entry in Your Business (UK Guide 2026)',
     excerpt: 'Manual data entry is one of the most expensive habits a business can have. Here is a practical guide to reducing it — without expensive software or a big IT project.',
