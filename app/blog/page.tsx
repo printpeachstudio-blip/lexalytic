@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'connect-xero-to-excel-automate-reports',
+    title: 'How to Connect Xero to Excel and Automate Your Reports (UK Guide 2026)',
+    excerpt: 'Most Xero users spend more time than they should manually exporting data and reformatting it in Excel. Here is how to connect them properly so the data flows automatically.',
+    date: 'June 2026',
+    readTime: '10 min read',
+    tag: 'Excel Automation',
+  },
+  {
     slug: 'when-your-business-has-outgrown-excel',
     title: 'When Your Business Has Outgrown Excel — And What To Do Next',
     excerpt: 'Excel is not the problem. Excel doing a job it was never designed to do — that is the problem. Here is how to tell the difference, and what actually needs to change.',
