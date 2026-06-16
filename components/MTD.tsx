@@ -11,17 +11,17 @@ export default function MTD() {
               borderRadius: '100px', padding: '5px 14px', marginBottom: '24px',
             }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#e05c2a', display: 'inline-block' }} />
-              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Regulatory Update · April 2026</span>
+              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Regulatory Update · June 2026</span>
             </div>
             <h2 style={{ color: 'var(--white)', marginBottom: '20px', lineHeight: '1.15' }}>
               Is your business ready for<br />
               <em style={{ color: 'var(--amber)' }}>Making Tax Digital?</em>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '28px', fontWeight: '300' }}>
-              From April 2026, quarterly digital filing is mandatory for UK businesses with income over £50,000. Businesses still relying on manual Excel processes are scrambling to get their data structured in time.
+              Making Tax Digital is now live for UK businesses with income over £50,000. The first quarterly deadline is 7 August 2026 — less than 8 weeks away. Businesses still relying on manual Excel processes are running out of time.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '36px', fontWeight: '300' }}>
-              We can audit your current reporting setup, identify what needs to change, and have you MTD-ready with automated, structured data — in days, not months.
+              We can audit your current reporting setup, identify what needs to change, and have you MTD-ready before the August deadline — in days, not months.
             </p>
             <a href="#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free MTD readiness call →
