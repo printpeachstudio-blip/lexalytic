@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'sage-vs-xero-automated-reporting',
+    title: 'Sage vs Xero: Which Is Better for Automated Reporting? (UK 2026)',
+    excerpt: 'Both Sage and Xero are excellent accounting tools. But when it comes to connecting your financial data to Excel and Power BI, they are not equal. An honest comparison.',
+    date: 'June 2026',
+    readTime: '10 min read',
+    tag: 'Reporting',
+  },
+  {
     slug: 'connect-xero-to-excel-automate-reports',
     title: 'How to Connect Xero to Excel and Automate Your Reports (UK Guide 2026)',
     excerpt: 'Most Xero users spend more time than they should manually exporting data and reformatting it in Excel. Here is how to connect them properly so the data flows automatically.',
