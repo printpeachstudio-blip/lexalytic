@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/5-signs-manual-reporting-is-costing-your-business' },
   title: '5 Signs Manual Reporting Is Costing Your Business (2026) | Lexalytic',
   description: 'Is your team spending too much time on manual Excel reports? Here are 5 clear signs your business needs data automation — and what to do about it. From a UK data consultant.',
-  keywords: 'manual reporting costing business, signs you need data automation UK, too much time on Excel reports, business reporting problems UK, automate business reports UK, data automation consultant UK',
+  keywords: 'too much manual reporting in business, manual reporting problems UK, signs you need data automation UK, reducing manual reporting costs, replace manual excel reports, business reporting problems UK, manual data entry costing business',
   openGraph: {
     title: '5 Signs Manual Reporting Is Costing Your Business Money in 2026',
     description: 'Is your team wasting hours on manual Excel reports? Here are 5 signs it\'s time to automate — and what to do about it.',

@@ -5,8 +5,8 @@ import Script from 'next/script'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
   title: 'Lexalytic | Turn Your Data Into Decisions',
-  description: 'Bespoke data automation, Power BI dashboards, and reporting solutions for businesses. Stop wasting time on manual processes. Start making faster, better decisions.',
-  keywords: 'data automation, Power BI, Excel automation, VBA, business intelligence, reporting, UK',
+  description: 'UK data automation consultancy based in Hertfordshire. Power BI dashboards, Excel automation, VBA development and data cleansing for UK businesses. Fixed price, free scoping call.',
+  keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, VBA developer UK, data cleansing UK, reduce manual data entry UK, Excel consultant Hertfordshire, automated reporting UK',
   alternates: {
     canonical: 'https://www.lexalytic.com',
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Lexalytic | Turn Your Data Into Decisions',
-    description: 'Bespoke data automation and reporting solutions for businesses. Get a fixed quote within 48 hours.',
+    description: 'UK data automation consultancy. Power BI dashboards, Excel automation and data cleansing for UK businesses. Fixed price, free scoping call.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',
     locale: 'en_GB',
