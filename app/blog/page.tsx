@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'finance-team-manual-reporting-fix',
+    title: 'My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?',
+    excerpt: 'If your finance team is rebuilding the same reports every month and spending days on work that should take minutes, here is what is causing it and how to fix it properly.',
+    date: 'July 2026',
+    readTime: '10 min read',
+    tag: 'Finance',
+  },
+  {
     slug: 'sage-vs-xero-automated-reporting',
     title: 'Sage vs Xero: Which Is Better for Automated Reporting? (UK 2026)',
     excerpt: 'Both Sage and Xero are excellent accounting tools. But when it comes to connecting your financial data to Excel and Power BI, they are not equal. An honest comparison.',
