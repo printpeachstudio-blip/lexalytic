@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'late-payments-uk-business-data-fix',
+    title: 'Why UK Businesses Lose £17,000 a Year to Late Payments — And How Better Data Fixes It',
+    excerpt: 'Late payments are pushing 38 UK businesses into closure every day. Most are making the problem worse by tracking invoices manually. Here is what better data actually looks like.',
+    date: 'August 2026',
+    readTime: '11 min read',
+    tag: 'Cash Flow',
+  },
+  {
     slug: 'finance-team-manual-reporting-fix',
     title: 'My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?',
     excerpt: 'If your finance team is rebuilding the same reports every month and spending days on work that should take minutes, here is what is causing it and how to fix it properly.',
