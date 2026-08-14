@@ -58,7 +58,7 @@ export default function BlogPost() {
             <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(193,125,46,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--serif)', fontSize: '18px', color: 'var(--amber)', flexShrink: 0 }}>M</div>
             <div>
               <a href="/about" style={{ fontSize: '14px', fontWeight: '500', color: 'var(--ink)', textDecoration: 'none' }}>Mihir Hindocha</a>
-              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>Power BI & Data Automation Consultant · Lexalytic · 10 years experience</div>
+              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>Power BI & Data Automation Consultant · Lexalytic · 15 years experience</div>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              A Power BI dashboard project in the UK typically costs <strong>£750–£5,000</strong> for SMEs, depending on complexity. Hourly rates for freelance consultants run <strong>£60–£150/hour</strong>. At Lexalytic, we charge a fixed price starting from <strong>£750</strong> — you know the total cost before we start.
+              A Power BI dashboard project in the UK typically costs <strong>£750–£5,000</strong> for SMEs, depending on complexity. Freelance Power BI consultant hourly rates in the UK run <strong>£60–£150/hour</strong>, with day rates of <strong>£400–£800</strong> for contractor work. At Lexalytic, we charge a fixed price — you know the total cost before we start.
             </p>
           </div>
 
