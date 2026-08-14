@@ -230,6 +230,7 @@ export default function BlogPost() {
             />
           </div>
 
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Worth noting:</strong> Whichever platform you connect, the automated reports will only be as accurate as the underlying data. Inconsistent customer names, mixed date formats, and duplicate entries in Sage or Xero will all show up in your outputs. Our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</a> covers what to check first.</p></div>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>Frequently asked questions</h2>
           {[
             {

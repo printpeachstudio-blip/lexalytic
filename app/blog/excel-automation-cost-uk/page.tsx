@@ -225,6 +225,7 @@ export default function BlogPost() {
             For most Excel automation projects, fixed pricing is better for the client. It removes cost uncertainty, prevents scope creep, and means the consultant has to be efficient with their time rather than extending the project unnecessarily. At Lexalytic, all projects are fixed price — scoped and agreed before any work begins.
           </p>
 
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Important:</strong> If your source data is messy — inconsistent formats, duplicates, blanks — the automation project will cost more and deliver less. Cleaning the data first is often the most cost-effective step. See our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing for UK businesses</a>.</p></div>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Does Excel automation actually pay for itself?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             In almost every case, yes — and usually faster than people expect. Here is a straightforward way to work it out for your situation.

@@ -153,6 +153,7 @@ export default function BlogPost() {
             For businesses that want live dashboards rather than Excel files, the same Xero connection can feed a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link> — giving leadership a browser-based view of the financials that updates automatically without anyone opening a file. We cover when to use Power BI versus Excel in our comparison guide <Link href="/blog/power-bi-vs-excel" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>here</Link>.
           </p>
 
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Before you build:</strong> If your Xero data has inconsistencies — customers named differently, dates in mixed formats, duplicate entries — the automated connection will reproduce those problems in your reports. Read our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</a> before connecting.</p></div>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What to consider before building the connection</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '48px' }}>
