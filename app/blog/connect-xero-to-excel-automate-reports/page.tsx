@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/connect-xero-to-excel-automate-reports' },
-  title: 'How to Connect Xero to Excel and Automate Your Reports (UK Guide 2026) | Lexalytic',
+  title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026) | Lexalytic',
   description: 'A practical guide to connecting Xero to Excel for UK businesses. How to pull your Xero data into Excel automatically, stop manual exports, and build reports that update themselves.',
   keywords: 'connect Xero to Excel UK, Xero Excel integration, automate Xero reports Excel, Xero Power Query UK, Xero reporting automation UK, export Xero to Excel automatically',
   openGraph: {
-    title: 'How to Connect Xero to Excel and Automate Your Reports (UK Guide 2026)',
+    title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026)',
     description: 'Stop manually exporting from Xero. Here is how to connect Xero to Excel and build reports that update themselves.',
     url: 'https://www.lexalytic.com/blog/connect-xero-to-excel-automate-reports',
     siteName: 'Lexalytic',
@@ -96,10 +96,10 @@ export default function BlogPost() {
             This process works fine when you are doing it occasionally. It becomes a significant time drain when it happens weekly or monthly, across multiple reports, with data that needs to be combined with information from other sources. And every manual step is a point where an error can enter — wrong date range selected, wrong category mapped, figures copied from the wrong column.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The businesses that have solved this problem have replaced the manual process with a direct connection. The data flows from Xero into Excel automatically, already formatted correctly, ready to feed into the report without anyone touching it.
+            The businesses that have solved this problem have replaced the manual process with a direct connection. Getting Xero data into Excel automatically — rather than exporting Xero reports to Excel by hand — means the data flows already formatted correctly, ready to feed into the report without anyone touching it.
           </p>
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>The three ways to connect Xero to Excel</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>The three ways to get Xero reports into Excel</h2>
 
           {[
             {
