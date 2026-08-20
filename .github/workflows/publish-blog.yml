@@ -1,0 +1,92 @@
+name: Scheduled Blog Publishing
+
+on:
+  schedule:
+    - cron: '0 9 25 8 *'   # Post 1: 25 Aug 2026 at 9am UTC
+    - cron: '0 9 1 9 *'    # Post 2: 1 Sep 2026 at 9am UTC
+    - cron: '0 9 8 9 *'    # Post 3: 8 Sep 2026 at 9am UTC
+    - cron: '0 9 15 9 *'   # Post 4: 15 Sep 2026 at 9am UTC
+  workflow_dispatch:
+    inputs:
+      post_slug:
+        description: 'Blog post slug to publish manually'
+        required: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine which post to publish
+        id: post
+        run: |
+          MONTH=$(date +%-m)
+          DAY=$(date +%-d)
+          if [ "$MONTH" = "8" ] && [ "$DAY" = "25" ]; then
+            echo "slug=automate-month-end-reporting-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Automate Your Month-End Reporting (UK Guide 2026)" >> $GITHUB_OUTPUT
+            echo "excerpt=Month-end reporting does not have to take days. Here is how UK finance teams are cutting their reporting time by 80% using automation — without changing their accounting software." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=August 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "9" ] && [ "$DAY" = "1" ]; then
+            echo "slug=excel-automation-construction-companies-uk" >> $GITHUB_OUTPUT
+            echo "title=Excel Automation for Construction Companies UK" >> $GITHUB_OUTPUT
+            echo "excerpt=Construction businesses run on spreadsheets — job costs, labour, materials, subcontractors. Here is how to automate the reporting so you can see project profitability without rebuilding the same spreadsheet every week." >> $GITHUB_OUTPUT
+            echo "tag=Excel Automation" >> $GITHUB_OUTPUT
+            echo "date=September 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "9" ] && [ "$DAY" = "8" ]; then
+            echo "slug=track-business-performance-without-data-team" >> $GITHUB_OUTPUT
+            echo "title=How to Track Business Performance Without a Data Team" >> $GITHUB_OUTPUT
+            echo "excerpt=You do not need a data analyst, a BI team, or expensive software to get a clear view of how your business is performing. Here is how small UK businesses are doing it." >> $GITHUB_OUTPUT
+            echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
+            echo "date=September 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "9" ] && [ "$DAY" = "15" ]; then
+            echo "slug=what-is-power-query-uk-business" >> $GITHUB_OUTPUT
+            echo "title=What Is Power Query — and How Can It Save Your Business Time?" >> $GITHUB_OUTPUT
+            echo "excerpt=Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does, why it matters, and how it eliminates hours of manual data work every month." >> $GITHUB_OUTPUT
+            echo "tag=Excel Automation" >> $GITHUB_OUTPUT
+            echo "date=September 2026" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Add post to blog index and sitemap
+        run: |
+          python3 << 'PYEOF'
+          import os, sys
+          slug = "${{ steps.post.outputs.slug }}"
+          title = "${{ steps.post.outputs.title }}"
+          excerpt = "${{ steps.post.outputs.excerpt }}"
+          tag = "${{ steps.post.outputs.tag }}"
+          date = "${{ steps.post.outputs.date }}"
+          if not slug:
+              print('No slug, skipping')
+              sys.exit(0)
+          with open('app/blog/page.tsx', 'r') as f:
+              content = f.read()
+          if slug in content:
+              print(f'Already in index: {slug}')
+          else:
+              new_post = f"  {{\n    slug: '{slug}',\n    title: '{title}',\n    excerpt: '{excerpt}',\n    date: '{date}',\n    readTime: '10 min read',\n    tag: '{tag}',\n  }},"
+              content = content.replace('const posts = [', 'const posts = [\n' + new_post)
+              with open('app/blog/page.tsx', 'w') as f:
+                  f.write(content)
+              print(f'Added to index: {slug}')
+          with open('app/sitemap.ts', 'r') as f:
+              sitemap = f.read()
+          if slug not in sitemap:
+              new_entry = f"    {{ url: 'https://www.lexalytic.com/blog/{slug}', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 }},\n"
+              sitemap = sitemap.replace('  ]', new_entry + '  ]')
+              with open('app/sitemap.ts', 'w') as f:
+                  f.write(sitemap)
+              print(f'Added to sitemap: {slug}')
+          PYEOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "auto-publish: ${{ steps.post.outputs.slug }}"
+          git push
