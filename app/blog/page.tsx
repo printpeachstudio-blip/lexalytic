@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'kpi-dashboard-small-business-uk',
+    title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026)',
+    excerpt: 'Most small business owners are making decisions based on instinct or a report someone compiled last week. A KPI dashboard gives you a live view of the numbers that actually matter.',
+    date: 'August 2026',
+    readTime: '11 min read',
+    tag: 'Power BI',
+  },
+  {
     slug: 'late-payments-uk-business-data-fix',
     title: 'Why UK Businesses Lose £17,000 a Year to Late Payments — And How Better Data Fixes It',
     excerpt: 'Late payments are pushing 38 UK businesses into closure every day. Most are making the problem worse by tracking invoices manually. Here is what better data actually looks like.',

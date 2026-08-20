@@ -1,4 +1,4 @@
-// File: /Users/mihirhindocha/Desktop/lexalytic/app/blog/power-bi-consultant-cost-uk/page.tsx
+// File: /Users/mhindocha/Desktop/lexalytic/app/blog/power-bi-consultant-cost-uk/page.tsx
 import * as entry from '../../../../../app/blog/power-bi-consultant-cost-uk/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

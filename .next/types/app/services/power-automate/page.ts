@@ -1,4 +1,4 @@
-// File: /Users/mihirhindocha/Desktop/lexalytic/app/services/power-automate/page.tsx
+// File: /Users/mhindocha/Desktop/lexalytic/app/services/power-automate/page.tsx
 import * as entry from '../../../../../app/services/power-automate/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
