@@ -53,7 +53,7 @@ export default function Testimonials() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '16px' }}>
           <h2 style={{ color: 'var(--white)', maxWidth: '480px' }}>Trusted by businesses across the UK.</h2>
           <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', maxWidth: '320px', textAlign: 'right', lineHeight: '1.6' }}>
-            Lexalytic is the evolution of a 10-year data consultancy — same team, expanded capabilities.
+            Lexalytic is the evolution of a 15-year data consultancy — same team, expanded capabilities.
           </p>
         </div>
 
