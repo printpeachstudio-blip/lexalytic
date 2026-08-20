@@ -54,7 +54,7 @@ export default function BlogPost() {
             Late payments are not just an inconvenience. They are the single biggest threat to cash flow for UK SMEs — and most businesses are making the problem worse by tracking invoices manually. Here is what better data actually looks like, and how to get there.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(193,125,46,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--serif)', fontSize: '18px', color: 'var(--amber)', flexShrink: 0 }}>M</div>
+            <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
               <a href="/about" style={{ fontSize: '14px', fontWeight: '500', color: 'var(--ink)', textDecoration: 'none' }}>Mihir Hindocha</a>
               <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>Data Automation Consultant · Lexalytic · 15 years experience</div>

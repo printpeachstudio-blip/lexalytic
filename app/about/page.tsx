@@ -79,16 +79,15 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '48px', alignItems: 'center' }}>
 
             {/* Photo placeholder */}
-            <div style={{
-              width: '160px', height: '160px', borderRadius: '50%',
-              background: 'rgba(193,125,46,0.15)',
-              border: '3px solid rgba(193,125,46,0.3)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontFamily: 'var(--serif)', fontSize: '56px', color: 'var(--amber)',
-              flexShrink: 0,
-            }}>
-              M
-            </div>
+            <img
+              src="/mihir.jpg"
+              alt="Mihir Hindocha - Data Automation Consultant and Founder of Lexalytic"
+              style={{
+                width: '160px', height: '160px', borderRadius: '50%',
+                border: '3px solid rgba(193,125,46,0.3)',
+                objectFit: 'cover', flexShrink: 0,
+              }}
+            />
 
             <div>
               <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', letterSpacing: '1px', textTransform: 'uppercase' }}>About</span>
