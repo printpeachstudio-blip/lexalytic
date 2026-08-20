@@ -21,6 +21,19 @@ on:
     - cron: '0 9 20 10 *'
     - cron: '0 9 22 10 *'
     - cron: '0 9 27 10 *'
+    - cron: '0 9 3 11 *'
+    - cron: '0 9 5 11 *'
+    - cron: '0 9 10 11 *'
+    - cron: '0 9 12 11 *'
+    - cron: '0 9 17 11 *'
+    - cron: '0 9 19 11 *'
+    - cron: '0 9 24 11 *'
+    - cron: '0 9 1 12 *'
+    - cron: '0 9 3 12 *'
+    - cron: '0 9 8 12 *'
+    - cron: '0 9 10 12 *'
+    - cron: '0 9 15 12 *'
+    - cron: '0 9 17 12 *'
   workflow_dispatch:
 
 jobs:
@@ -52,13 +65,13 @@ jobs:
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "1" ]; then
             echo "slug=excel-automation-construction-companies-uk" >> $GITHUB_OUTPUT
             echo "title=Excel Automation for Construction Companies UK" >> $GITHUB_OUTPUT
-            echo "excerpt=Construction businesses run on spreadsheets. Here is how to automate job cost tracking, subcontractor payments, and project reporting so you can see profitability without rebuilding spreadsheets every week." >> $GITHUB_OUTPUT
+            echo "excerpt=Construction businesses run on spreadsheets. Here is how to automate job cost tracking and project reporting so you can see profitability without rebuilding spreadsheets every week." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "3" ]; then
             echo "slug=staff-costs-eating-profit-how-to-track" >> $GITHUB_OUTPUT
             echo "title=Why Your Staff Costs Are Eating Your Profit — And How to Track It" >> $GITHUB_OUTPUT
-            echo "excerpt=Staff costs are typically the biggest expense in any service business. Most owners know roughly what they pay out but very few can see in real time how those costs relate to the revenue each person or team is generating." >> $GITHUB_OUTPUT
+            echo "excerpt=Staff costs are typically the biggest expense in any service business. Most owners know roughly what they pay out but very few can see how those costs relate to revenue each person generates." >> $GITHUB_OUTPUT
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "8" ]; then
@@ -70,25 +83,25 @@ jobs:
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "10" ]; then
             echo "slug=how-to-see-which-jobs-clients-are-profitable" >> $GITHUB_OUTPUT
             echo "title=How to See Which Jobs and Clients Are Actually Making You Money" >> $GITHUB_OUTPUT
-            echo "excerpt=Most UK service businesses know their total revenue and rough profit margin. Very few can tell you which specific clients, projects or jobs are actually profitable and which ones are quietly draining the business." >> $GITHUB_OUTPUT
+            echo "excerpt=Most UK service businesses know their total revenue. Very few can tell you which specific clients or jobs are actually profitable and which ones are quietly draining the business." >> $GITHUB_OUTPUT
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "15" ]; then
             echo "slug=what-is-power-query-uk-business" >> $GITHUB_OUTPUT
             echo "title=What Is Power Query — and How Can It Save Your Business Time?" >> $GITHUB_OUTPUT
-            echo "excerpt=Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does, why it matters, and how it eliminates hours of manual data work every month." >> $GITHUB_OUTPUT
+            echo "excerpt=Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does and how it eliminates hours of manual data work every month." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "17" ]; then
             echo "slug=cash-flow-vs-profit-how-to-track-both" >> $GITHUB_OUTPUT
             echo "title=Why Cash Flow and Profit Are Different — And How to Track Both" >> $GITHUB_OUTPUT
-            echo "excerpt=Your business can be profitable on paper and run out of cash at the same time. Most UK business owners discover this the hard way. Here is how to track both properly so you always know where you actually stand." >> $GITHUB_OUTPUT
+            echo "excerpt=Your business can be profitable on paper and run out of cash at the same time. Here is how to track both properly so you always know where you actually stand." >> $GITHUB_OUTPUT
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "22" ]; then
             echo "slug=automate-invoice-tracking-excel-uk" >> $GITHUB_OUTPUT
             echo "title=How to Automate Invoice Tracking in Excel (UK Guide 2026)" >> $GITHUB_OUTPUT
-            echo "excerpt=Chasing invoices manually costs UK businesses 86 hours a year on average. Here is how to build an automated invoice tracker in Excel that flags overdue payments automatically without expensive software." >> $GITHUB_OUTPUT
+            echo "excerpt=Chasing invoices manually costs UK businesses 86 hours a year on average. Here is how to build an automated invoice tracker in Excel that flags overdue payments automatically." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "24" ]; then
@@ -100,7 +113,7 @@ jobs:
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "29" ]; then
             echo "slug=excel-reporting-recruitment-agencies-uk" >> $GITHUB_OUTPUT
             echo "title=Excel Reporting for Recruitment Agencies UK (2026 Guide)" >> $GITHUB_OUTPUT
-            echo "excerpt=Recruitment agencies run on placements, margins, and consultant performance. Here is how to automate the reporting so you can see which consultants, clients and divisions are actually profitable without rebuilding spreadsheets every week." >> $GITHUB_OUTPUT
+            echo "excerpt=Recruitment agencies run on placements, margins, and consultant performance. Here is how to automate the reporting so you can see which consultants and clients are actually profitable." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "1" ]; then
@@ -112,25 +125,25 @@ jobs:
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "6" ]; then
             echo "slug=power-bi-small-business-uk-worth-it" >> $GITHUB_OUTPUT
             echo "title=Power BI for Small Business UK — Is It Worth It?" >> $GITHUB_OUTPUT
-            echo "excerpt=Power BI gets recommended for every business with a data problem. But is it actually worth it for a small UK business? Honest answer from a consultant who builds both Power BI dashboards and Excel automation." >> $GITHUB_OUTPUT
+            echo "excerpt=Power BI gets recommended for every business with a data problem. But is it actually worth it for a small UK business? Honest answer from a consultant who builds both Power BI and Excel automation." >> $GITHUB_OUTPUT
             echo "tag=Power BI" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "8" ]; then
             echo "slug=accountant-asking-for-spreadsheets-how-to-fix" >> $GITHUB_OUTPUT
             echo "title=My Accountant Keeps Asking for Spreadsheets — How to Fix It" >> $GITHUB_OUTPUT
-            echo "excerpt=If your accountant is constantly asking you to export reports, send spreadsheets, or pull data from your accounting software manually, there is a better way. Here is how to set up automatic data sharing that saves both of you time." >> $GITHUB_OUTPUT
+            echo "excerpt=If your accountant constantly asks you to export reports and send spreadsheets manually, there is a better way. Here is how to set up automatic data sharing that saves both of you time." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "13" ]; then
             echo "slug=sales-pipeline-dashboard-power-bi-excel" >> $GITHUB_OUTPUT
             echo "title=How to Build a Sales Pipeline Dashboard in Power BI or Excel" >> $GITHUB_OUTPUT
-            echo "excerpt=A sales pipeline dashboard shows you what is coming in, when it is expected, and where deals are getting stuck. Here is how to build one that updates automatically from your CRM or spreadsheet." >> $GITHUB_OUTPUT
+            echo "excerpt=A sales pipeline dashboard shows you what is coming in, when it is expected, and where deals are getting stuck. Here is how to build one that updates automatically." >> $GITHUB_OUTPUT
             echo "tag=Power BI" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "15" ]; then
             echo "slug=live-reports-from-xero-sage-quickbooks" >> $GITHUB_OUTPUT
-            echo "title=How to Get Live Reports from Xero, Sage or QuickBooks Automatically" >> $GITHUB_OUTPUT
-            echo "excerpt=If you are still manually exporting reports from your accounting software every month, you are spending time you do not need to. Here is how to get live financial reports that update automatically from Xero, Sage or QuickBooks." >> $GITHUB_OUTPUT
+            echo "title=How to Get Live Reports from Xero Sage or QuickBooks Automatically" >> $GITHUB_OUTPUT
+            echo "excerpt=If you are still manually exporting reports from your accounting software every month, you are spending time you do not need to. Here is how to get live financial reports that update automatically." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "20" ]; then
@@ -148,9 +161,87 @@ jobs:
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "27" ]; then
             echo "slug=data-automation-professional-services-uk" >> $GITHUB_OUTPUT
             echo "title=Data Automation for Professional Services UK — Where to Start" >> $GITHUB_OUTPUT
-            echo "excerpt=Law firms, accountancies, consultancies and agencies all share the same data problem. Here is where the biggest time savings are and how to automate the reporting that is currently eating your team's time." >> $GITHUB_OUTPUT
+            echo "excerpt=Law firms, accountancies, consultancies and agencies all share the same data problem. Here is where the biggest time savings are and how to automate the reporting eating your team's time." >> $GITHUB_OUTPUT
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "3" ]; then
+            echo "slug=prepare-business-data-self-assessment-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Prepare Your Business Data for Self Assessment (UK 2026)" >> $GITHUB_OUTPUT
+            echo "excerpt=The Self Assessment deadline is 31 January 2027. If your business data is still scattered across spreadsheets and accounting software exports, now is the time to get it organised. Here is how." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "5" ]; then
+            echo "slug=true-labour-cost-per-employee-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Know Your True Labour Cost Per Employee (UK Guide)" >> $GITHUB_OUTPUT
+            echo "excerpt=Most UK business owners know their salary bill. Very few know the true cost of each employee once you factor in National Insurance, pension, holiday pay, sick pay, and the management time they require." >> $GITHUB_OUTPUT
+            echo "tag=Business Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "10" ]; then
+            echo "slug=what-is-making-tax-digital-uk-business" >> $GITHUB_OUTPUT
+            echo "title=What Is Making Tax Digital and Is Your Business Ready?" >> $GITHUB_OUTPUT
+            echo "excerpt=Making Tax Digital is live for businesses with income over £50,000. The second quarterly deadline is 7 November 2026. Here is what MTD actually requires and how to make sure your data is ready." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "12" ]; then
+            echo "slug=excel-vs-accounting-software-what-lives-where" >> $GITHUB_OUTPUT
+            echo "title=Excel vs Accounting Software — What Should Live Where?" >> $GITHUB_OUTPUT
+            echo "excerpt=Most UK businesses use both Excel and accounting software but nobody has ever decided what goes where. The result is duplicated data, manual transfers, and reporting that nobody quite trusts." >> $GITHUB_OUTPUT
+            echo "tag=Excel Automation" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "17" ]; then
+            echo "slug=automate-vat-return-preparation-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Automate Your VAT Return Preparation (UK Guide)" >> $GITHUB_OUTPUT
+            echo "excerpt=VAT returns are quarterly. Most UK businesses still spend hours pulling together the figures manually each time. Here is how to automate the data preparation so the numbers are always ready when you need them." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "19" ]; then
+            echo "slug=budget-vs-actuals-report-automated-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Build a Budget vs Actuals Report That Updates Automatically" >> $GITHUB_OUTPUT
+            echo "excerpt=A budget vs actuals report is one of the most useful financial tools a business can have. It is also one of the most time-consuming to maintain manually. Here is how to automate it." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "11" ] && [ "$DAY" = "24" ]; then
+            echo "slug=year-end-reporting-uk-small-business" >> $GITHUB_OUTPUT
+            echo "title=Year-End Reporting for UK Small Businesses — How to Make It Less Painful" >> $GITHUB_OUTPUT
+            echo "excerpt=Year-end reporting is one of the most stressful periods for UK small business owners. Here is how to make it significantly less painful by keeping your data organised and automated throughout the year." >> $GITHUB_OUTPUT
+            echo "tag=Finance" >> $GITHUB_OUTPUT
+            echo "date=November 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "1" ]; then
+            echo "slug=set-up-business-reporting-new-year-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Set Up Your Business Reporting for the New Year" >> $GITHUB_OUTPUT
+            echo "excerpt=December is the best time to fix your business reporting before the new year starts. Here is a practical checklist for UK business owners to get their data and reporting in order before January." >> $GITHUB_OUTPUT
+            echo "tag=Data Automation" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "3" ]; then
+            echo "slug=business-performance-at-a-glance-uk" >> $GITHUB_OUTPUT
+            echo "title=How to See Your Business Performance at a Glance" >> $GITHUB_OUTPUT
+            echo "excerpt=Most business owners have to dig through multiple systems to get a picture of how their business is performing. Here is how to get everything on one screen, updated automatically." >> $GITHUB_OUTPUT
+            echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "8" ]; then
+            echo "slug=automate-weekly-management-report-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Automate Your Weekly Management Report" >> $GITHUB_OUTPUT
+            echo "excerpt=A weekly management report that builds itself — pulling from your live data, formatted and ready every Monday morning without anyone compiling it. Here is how to build one for your UK business." >> $GITHUB_OUTPUT
+            echo "tag=Data Automation" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "10" ]; then
+            echo "slug=what-data-does-your-business-need-to-grow-2027" >> $GITHUB_OUTPUT
+            echo "title=What Data Does Your Business Need to Grow in 2027?" >> $GITHUB_OUTPUT
+            echo "excerpt=Most UK businesses going into a new year are working with incomplete, unreliable, or manually compiled data. Here is what you actually need to make good decisions in 2027 — and how to get it." >> $GITHUB_OUTPUT
+            echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "15" ]; then
+            echo "slug=year-end-data-checklist-uk-small-business" >> $GITHUB_OUTPUT
+            echo "title=End of Year Data Checklist for UK Small Businesses" >> $GITHUB_OUTPUT
+            echo "excerpt=Before you close out 2026, here is the data checklist every UK small business should run through — to make sure your records are clean, your reporting is accurate, and you start 2027 in control." >> $GITHUB_OUTPUT
+            echo "tag=Data Automation" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
+          elif [ "$MONTH" = "12" ] && [ "$DAY" = "17" ]; then
+            echo "slug=start-new-year-clean-business-data-uk" >> $GITHUB_OUTPUT
+            echo "title=How to Start the New Year With Clean Business Data" >> $GITHUB_OUTPUT
+            echo "excerpt=January is the worst time to discover your data is a mess. Here is how to clean and organise your business data before the new year so you start 2027 with a clear, accurate picture." >> $GITHUB_OUTPUT
+            echo "tag=Data Quality" >> $GITHUB_OUTPUT
+            echo "date=December 2026" >> $GITHUB_OUTPUT
           fi
 
       - name: Add post to blog index and sitemap
