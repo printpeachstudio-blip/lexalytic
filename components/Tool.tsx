@@ -61,6 +61,7 @@ export default function Tool() {
                 </div>
                 <input type="range" min={field.min} max={field.max} step={field.step || 1}
                   value={field.value} onChange={e => { field.setter(Number(e.target.value)); setShowResult(false); }}
+                  aria-label={field.label}
                   style={{ width: '100%', accentColor: 'var(--amber)' }}
                 />
               </div>
