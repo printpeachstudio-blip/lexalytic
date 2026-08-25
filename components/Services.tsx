@@ -48,6 +48,15 @@ const services = [
     tags: ['Data pipelines', 'Large datasets', 'Scheduling'],
   },
   {
+    icon: '🧹',
+    title: 'Data Cleansing',
+    slug: 'data-cleansing',
+    desc: 'Bad data breaks reports and undermines automation. We clean, standardise and structure your data so everything built on top of it works reliably.',
+    time: '2–5 days',
+    from: 'Get a quote',
+    tags: ['Duplicates', 'Standardisation', 'Data quality'],
+  },
+  {
     icon: '📋',
     title: 'Google Sheets',
     slug: 'google-sheets',
