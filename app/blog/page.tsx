@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'automate-month-end-reporting-uk',
+    title: 'How to Automate Your Month-End Reporting (UK Guide 2026)',
+    excerpt: 'Month-end reporting does not have to take days. Here is how UK finance teams are cutting their reporting time by 80% using automation without changing their accounting software.',
+    date: 'August 2026',
+    readTime: '10 min read',
+    tag: 'Finance',
+  },
+  {
     slug: 'kpi-dashboard-small-business-uk',
     title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026)',
     excerpt: 'Most small business owners are making decisions based on instinct or a report someone compiled last week. A KPI dashboard gives you a live view of the numbers that actually matter.',

@@ -24,5 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/excel-automation-cost-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/5-signs-manual-reporting-is-costing-your-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/automate-month-end-reporting-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
