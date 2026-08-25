@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Script from 'next/script'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
@@ -39,15 +38,6 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-FWP3KBJ211" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FWP3KBJ211');
-          `}
-        </Script>
         {children}
       </body>
     </html>
