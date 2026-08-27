@@ -3,9 +3,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
-  title: 'Lexalytic | Turn Your Data Into Decisions',
-  description: 'UK data automation consultancy based in Hertfordshire. Power BI dashboards, Excel automation, VBA development and data cleansing for UK businesses. Fixed price, free scoping call.',
-  keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, VBA developer UK, data cleansing UK, reduce manual data entry UK, Excel consultant Hertfordshire, automated reporting UK',
+  title: 'Lexalytic | Data Automation & Custom Business Tools UK',
+  description: 'UK data automation consultancy based in Hertfordshire. Power BI dashboards, Excel automation, custom business tools, CRM development and data cleansing for UK businesses. Fixed price, free scoping call.',
+  keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, custom business tools UK, bespoke CRM UK, custom software small business UK, VBA developer UK, data cleansing UK, Excel consultant Hertfordshire',
   alternates: {
     canonical: 'https://www.lexalytic.com',
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Lexalytic | Turn Your Data Into Decisions',
+    title: 'Lexalytic | Data Automation & Custom Business Tools UK',
     description: 'UK data automation consultancy. Power BI dashboards, Excel automation and data cleansing for UK businesses. Fixed price, free scoping call.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',

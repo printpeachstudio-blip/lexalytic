@@ -37,18 +37,18 @@ export default function Hero() {
           }}>
             <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
             <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>
-              Data & Automation Consultancy · UK-Based · Fixed Price
+              Data, Automation & Custom Tools · UK-Based · Fixed Price
             </span>
           </div>
           <h1 className="fade-up-2" style={{ color: 'var(--white)', marginBottom: '28px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-            Stop the export-to-report<br />
-            <em style={{ color: 'var(--amber)', fontStyle: 'italic' }}>grind. For good.</em>
+            Stop doing manually what<br />
+            <em style={{ color: 'var(--amber)', fontStyle: 'italic' }}>a custom tool could do for you.</em>
           </h1>
           <p className="fade-up-3" style={{
             fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)',
             maxWidth: '580px', marginBottom: '44px', fontWeight: '300', lineHeight: '1.75',
           }}>
-            We build bespoke Power BI dashboards, Excel automation, and reporting systems that give your business one source of truth — updated automatically, no manual work required.
+            We build bespoke Power BI dashboards, Excel automation, custom business tools, and reporting systems that give your business one source of truth — updated automatically, no manual work required.
           </p>
           <div className="fade-up-4" style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
             <a href="#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>

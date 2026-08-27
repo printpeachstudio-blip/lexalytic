@@ -48,6 +48,15 @@ const services = [
     tags: ['Data pipelines', 'Large datasets', 'Scheduling'],
   },
   {
+    icon: '🛠️',
+    title: 'Custom Business Tools',
+    slug: 'custom-business-tools',
+    desc: 'Bespoke web-based tools built around your exact business processes — custom CRMs, staff rotas, job trackers, client portals, quoting systems and more. Built once, owned by you.',
+    time: 'Scoped individually',
+    from: 'Get a quote',
+    tags: ['Custom CRM', 'Business apps', 'Bespoke tools'],
+  },
+  {
     icon: '🧹',
     title: 'Data Cleansing',
     slug: 'data-cleansing',
