@@ -5,7 +5,7 @@ import ServiceNav from '@/components/ServiceNav'
 export const metadata: Metadata = {
   title: 'Custom Business Tools UK | Bespoke CRM & Business App Development | Lexalytic',
   description: 'Bespoke business tools built around your exact processes. Custom CRMs, staff rotas, job trackers, client portals and more. Built once, owned by you. Fixed price, UK-based.',
-  keywords: 'custom business tools UK, bespoke CRM UK, custom CRM small business UK, custom business software UK, bespoke business application UK, custom staff rota app UK, affordable custom software UK',
+  keywords: 'custom business tools UK, bespoke CRM UK, custom CRM small business UK, custom business software UK, bespoke business application UK, custom staff rota app UK, affordable custom software UK, spreadsheet consultant UK, excel spreadsheet services UK, excel specialists UK, excel spreadsheet for small business UK',
   openGraph: {
     title: 'Custom Business Tools UK | Bespoke CRM & Business App Development | Lexalytic',
     description: 'Bespoke business tools built around your exact processes — not adapted from generic software.',

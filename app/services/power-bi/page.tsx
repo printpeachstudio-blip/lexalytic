@@ -5,7 +5,7 @@ import ServiceNav from '@/components/ServiceNav'
 export const metadata: Metadata = {
   title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
   description: 'Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence. Free 30-minute scoping call.',
-  keywords: 'Power BI consultant UK, Power BI dashboard service, Power BI developer London, business intelligence consultant UK, Power BI small business UK',
+  keywords: 'Power BI consultant UK, Power BI dashboard service UK, Power BI developer UK, business intelligence consultant UK, Power BI small business UK, dashboard excel UK, excel reporting dashboard, create dashboard in excel, excel dashboard design UK, building dashboards in excel',
   openGraph: {
     title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
     description: 'Bespoke Power BI dashboards built for your business. Live data, automated reporting, fixed price scoped before work begins.',

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
   title: 'Lexalytic | Data Automation & Custom Business Tools UK',
   description: 'UK data automation consultancy based in Hertfordshire. Power BI dashboards, Excel automation, custom business tools, CRM development and data cleansing for UK businesses. Fixed price, free scoping call.',
-  keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, custom business tools UK, bespoke CRM UK, custom software small business UK, VBA developer UK, data cleansing UK, Excel consultant Hertfordshire',
+  keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, excel consultant UK, excel spreadsheet consultant, custom business tools UK, bespoke CRM UK, custom software small business UK, VBA developer UK, excel vba consultant, data cleansing UK, Excel consultant Hertfordshire, spreadsheet consultant UK, excel experts UK',
   alternates: {
     canonical: 'https://www.lexalytic.com',
   },
