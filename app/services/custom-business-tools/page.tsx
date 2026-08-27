@@ -38,7 +38,11 @@ const faqs = [
 ]
 
 export default function CustomBusinessToolsPage() {
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Custom Business Tools","description":"Bespoke business tools built around your exact processes. Custom CRMs, staff rotas, job trackers, client portals and more. Built once, owned by you.","url":"https://www.lexalytic.com/services/custom-business-tools","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
 
@@ -225,5 +229,6 @@ export default function CustomBusinessToolsPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

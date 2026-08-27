@@ -36,7 +36,11 @@ const faqs = [
 ]
 
 export default function PowerBIPage() {
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power BI Dashboard Development","description":"Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence.","url":"https://www.lexalytic.com/services/power-bi","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
 
@@ -241,5 +245,6 @@ export default function PowerBIPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

@@ -36,7 +36,11 @@ const faqs = [
 ]
 
 export default function ExcelAutomationPage() {
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Excel Automation","description":"Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price, free scoping call.","url":"https://www.lexalytic.com/services/excel-automation","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
 
@@ -219,5 +223,6 @@ export default function ExcelAutomationPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

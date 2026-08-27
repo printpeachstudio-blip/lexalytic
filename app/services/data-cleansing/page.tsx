@@ -36,7 +36,11 @@ const faqs = [
 ]
 
 export default function DataCleansingPage() {
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Data Cleansing","description":"Professional data cleansing for UK businesses. We clean, structure and standardise your data so your reports are accurate and your automation works.","url":"https://www.lexalytic.com/services/data-cleansing","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
 
@@ -225,5 +229,6 @@ export default function DataCleansingPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

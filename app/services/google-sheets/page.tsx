@@ -36,7 +36,11 @@ const faqs = [
 ]
 
 export default function GoogleSheetsPage() {
+  const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Google Sheets Automation","description":"Google Sheets automation and dashboard development for UK businesses. Automated reporting and data workflows for Google Workspace teams.","url":"https://www.lexalytic.com/services/google-sheets","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
 
@@ -169,5 +173,6 @@ export default function GoogleSheetsPage() {
         </div>
       </footer>
     </div>
+    </>
   )
 }

@@ -36,6 +36,8 @@ const faqs = [
 ]
 
 export default function PowerAutomatePage() {
+    const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power Automate Consultancy","description":"Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365.","url":"https://www.lexalytic.com/services/power-automate","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"};
+
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
