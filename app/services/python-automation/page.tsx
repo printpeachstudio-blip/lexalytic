@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/python-automation' },
   title: 'Python Automation Consultant UK | Data Pipelines & Processing | Lexalytic',
   description: 'Expert Python automation for UK businesses. Data pipelines, scheduled scripts, API integrations, and large-scale data processing. Free scoping call.',
   keywords: 'Python automation consultant UK, Python data pipeline UK, Python developer London, automate data processing UK, Python scripting service UK',
   openGraph: {
     title: 'Python Automation Consultant UK | Data Pipelines & Processing | Lexalytic',
     description: 'Python automation for complex data tasks. Pipelines, scheduling, API integration.',
-    url: 'https://lexalytic.com/services/python-automation',
+    url: 'https://www.lexalytic.com/services/python-automation',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

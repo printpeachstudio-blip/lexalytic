@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/power-bi' },
   title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
   description: 'Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence. Free 30-minute scoping call.',
   keywords: 'Power BI consultant UK, Power BI dashboard service UK, Power BI developer UK, business intelligence consultant UK, Power BI small business UK, dashboard excel UK, excel reporting dashboard, create dashboard in excel, excel dashboard design UK, building dashboards in excel',
   openGraph: {
     title: 'Power BI Dashboard Consultant UK | Fixed Price | Lexalytic',
     description: 'Bespoke Power BI dashboards built for your business. Live data, automated reporting, fixed price scoped before work begins.',
-    url: 'https://lexalytic.com/services/power-bi',
+    url: 'https://www.lexalytic.com/services/power-bi',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

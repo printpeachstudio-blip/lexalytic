@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/excel-automation' },
   title: 'Excel Automation Consultant UK | Spreadsheet Automation | Lexalytic',
-  description: 'Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price . Free 30-minute scoping call.',
+  description: 'Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price. Free 30-minute scoping call.',
   keywords: 'Excel automation consultant UK, excel consultant UK, excel spreadsheet consultant, excel consulting services UK, automate Excel spreadsheets, excel expert consultant UK, excel spreadsheet specialist, excel automation service, spreadsheet automation UK, excel reporting automation, excel vba consultant, automate excel reports',
   openGraph: {
     title: 'Excel Automation Consultant UK | Lexalytic',
-    description: 'Automate your Excel reporting and data processes. Fixed price . Free scoping call.',
-    url: 'https://lexalytic.com/services/excel-automation',
+    description: 'Automate your Excel reporting and data processes. Fixed price. Free scoping call.',
+    url: 'https://www.lexalytic.com/services/excel-automation',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

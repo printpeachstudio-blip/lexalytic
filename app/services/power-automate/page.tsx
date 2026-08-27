@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/power-automate' },
   title: 'Power Automate Consultant UK | Microsoft 365 Workflow Automation | Lexalytic',
   description: 'Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365. Free scoping call.',
   keywords: 'Power Automate consultant UK, Microsoft 365 automation, Power Automate developer London, workflow automation UK, Microsoft Flow consultant UK',
   openGraph: {
     title: 'Power Automate Consultant UK | Microsoft 365 Workflow Automation | Lexalytic',
     description: 'Automate your Microsoft 365 workflows with Power Automate.',
-    url: 'https://lexalytic.com/services/power-automate',
+    url: 'https://www.lexalytic.com/services/power-automate',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

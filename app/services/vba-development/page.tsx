@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/vba-development' },
   title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
   description: 'Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic. Free scoping call.',
   keywords: 'VBA developer UK, Excel VBA consultant, excel vba specialist, custom VBA macros UK, Excel macro developer, bespoke VBA automation, excel programmer UK, excel programming services UK, excel spreadsheet expert UK',
   openGraph: {
     title: 'VBA Developer UK | Custom Excel Macros & Tools | Lexalytic',
     description: 'Custom VBA macros and Excel tools built around your exact business logic.',
-    url: 'https://lexalytic.com/services/vba-development',
+    url: 'https://www.lexalytic.com/services/vba-development',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

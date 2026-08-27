@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/data-cleansing' },
   title: 'Data Cleansing Service UK | Fix Bad Data Fast | Lexalytic',
   description: 'Professional data cleansing for UK businesses. We clean, structure and standardise your data so your reports are accurate and your automation actually works. Fixed price, fast delivery.',
   keywords: 'data cleansing UK, data cleaning service UK, fix bad data UK, data quality UK, data cleansing consultant UK, Excel data cleaning UK, database cleansing UK',
   openGraph: {
     title: 'Data Cleansing Service UK | Fix Bad Data Fast | Lexalytic',
     description: 'Professional data cleansing for UK businesses. Fix bad data fast so your reports are accurate and your automation works.',
-    url: 'https://lexalytic.com/services/data-cleansing',
+    url: 'https://www.lexalytic.com/services/data-cleansing',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',

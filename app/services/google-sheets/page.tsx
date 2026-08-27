@@ -3,13 +3,14 @@ import Link from 'next/link'
 import ServiceNav from '@/components/ServiceNav'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.lexalytic.com/services/google-sheets' },
   title: 'Google Sheets Automation Consultant UK | Lexalytic',
   description: 'Google Sheets automation and dashboard development for UK businesses. Automated reporting and data workflows for Google Workspace teams. Free scoping call.',
   keywords: 'Google Sheets consultant UK, Google Sheets automation, Google Workspace automation, Apps Script developer UK, Google Sheets dashboard',
   openGraph: {
     title: 'Google Sheets Automation Consultant UK | Lexalytic',
     description: 'Automated reporting and dashboards built in Google Sheets.',
-    url: 'https://lexalytic.com/services/google-sheets',
+    url: 'https://www.lexalytic.com/services/google-sheets',
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',
