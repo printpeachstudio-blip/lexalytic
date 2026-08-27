@@ -191,7 +191,7 @@ export default function AboutPage() {
               <div style={{ fontSize: '15px', color: 'var(--ink-2)', marginBottom: '8px' }}>BSc Financial Computing</div>
               <div style={{ fontSize: '13px', color: 'var(--ink-4)', marginBottom: '20px' }}>Combining finance, mathematics and software development — the foundation for everything that followed.</div>
               <div style={{ fontSize: '15px', color: 'var(--ink-2)', marginBottom: '4px' }}>Using Excel & VBA professionally since 2011</div>
-              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>14 years of hands-on experience across some of the UK's most demanding data environments.</div>
+              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>15 years of hands-on experience across some of the UK's most demanding data environments.</div>
             </div>
             <div style={{ padding: '28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', color: 'var(--ink)', marginBottom: '16px' }}>Tools & technologies</h3>
@@ -211,7 +211,7 @@ export default function AboutPage() {
             In 2017 I started ExcelXLS as a side consultancy — taking on projects for businesses that needed the kind of Excel and VBA work I was doing in my day job. Over time it became clear that the businesses I was helping weren't just Excel problems — they were data problems. The tool was almost always fine. What was broken was the process around it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In 2026 I rebranded to Lexalytic to reflect what the work had become — a broader data automation consultancy covering Power BI, Python, SQL and Power Automate alongside Excel. The same ten years of client work, with a significantly expanded capability.
+            In 2026 I rebranded to Lexalytic to reflect what the work had become — a broader data automation consultancy covering Power BI, Python, SQL and Power Automate alongside Excel. The same years of client work, with a significantly expanded capability.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             I work with UK businesses directly — no account managers, no junior consultants handed your project. When you work with Lexalytic, you work with me. That is the point. The businesses I have built best results for are the ones where I understand the problem properly, not the ones where I execute a brief written by someone else.

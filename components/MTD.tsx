@@ -18,7 +18,7 @@ export default function MTD() {
               <em style={{ color: 'var(--amber)' }}>Making Tax Digital?</em>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '28px', fontWeight: '300' }}>
-              Making Tax Digital is now live for UK businesses with income over £50,000. The second quarterly deadline is 7 November 2026 — less than 12 weeks away. Businesses still relying on manual Excel processes are running out of time.
+              Making Tax Digital is now live for UK businesses with income over £50,000. The second quarterly deadline is 7 November 2026 — less than 10 weeks away. Businesses still relying on manual Excel processes are running out of time.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '36px', fontWeight: '300' }}>
               We can audit your current reporting setup, identify what needs to change, and have you MTD-ready before the November deadline — in days, not months.

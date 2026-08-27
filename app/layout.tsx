@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Lexalytic | Data Automation & Custom Business Tools UK',
-    description: 'UK data automation consultancy. Power BI dashboards, Excel automation and data cleansing for UK businesses. Fixed price, free scoping call.',
+    description: 'UK data automation consultancy. Power BI dashboards, Excel automation, custom business tools and data cleansing for UK businesses. Fixed price, free scoping call.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',
     locale: 'en_GB',
