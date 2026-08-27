@@ -62,5 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/one-report-every-uk-business-owner-needs-january', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/excel-automation-construction-companies-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/why-uk-businesses-building-custom-tools', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/replace-spreadsheet-with-business-tool', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

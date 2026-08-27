@@ -9,6 +9,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'replace-spreadsheet-with-business-tool',
+    title: 'How to Replace Your Spreadsheet with a Proper Business Tool',
+    excerpt: 'The spreadsheet doing a job it was never designed for is one of the most common sources of operational friction in UK small businesses. Here is how to know when to replace it and what to replace it with.',
+    date: 'August 2026',
+    readTime: '10 min read',
+    tag: 'Custom Business Tools',
+  },
+  {
+    slug: 'why-uk-businesses-building-custom-tools',
+    title: 'Why UK Small Businesses Are Building Custom Tools Instead of Buying Software',
+    excerpt: 'Monthly SaaS fees are climbing. Off-the-shelf software keeps drifting away from what businesses actually need. Here is why more UK businesses are choosing to build custom tools instead.',
+    date: 'August 2026',
+    readTime: '10 min read',
+    tag: 'Custom Business Tools',
+  },
+  {
     slug: 'what-is-power-query-uk-business',
     title: 'What Is Power Query — and How Can It Save Your Business Time?',
     excerpt: 'Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does and how it eliminates hours of manual data work every month.',
