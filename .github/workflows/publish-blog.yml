@@ -1,6 +1,7 @@
 name: Scheduled Blog Publishing
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 9 25 8 *'
     - cron: '0 9 27 8 *'
@@ -40,7 +41,6 @@ on:
     - cron: '0 9 24 12 *'
     - cron: '0 9 29 12 *'
     - cron: '0 9 31 12 *'
-  workflow_dispatch:
 
 jobs:
   publish:

@@ -9,6 +9,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'what-is-power-query-uk-business',
+    title: 'What Is Power Query — and How Can It Save Your Business Time?',
+    excerpt: 'Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does and how it eliminates hours of manual data work every month.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Excel Automation',
+  },
+  {
+    slug: 'track-business-performance-without-data-team',
+    title: 'How to Track Business Performance Without a Data Team',
+    excerpt: 'You do not need a data analyst or expensive software to get a clear view of how your business is performing. Here is how small UK businesses are doing it.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Business Intelligence',
+  },
+  {
+    slug: 'how-to-tell-if-your-business-is-profitable',
+    title: 'How to Tell If Your Business Is Actually Profitable (Not Just Busy)',
+    excerpt: 'Busy does not mean profitable. Many UK business owners discover too late that their busiest months were actually their least profitable. Here is how to see the real picture.',
+    date: 'August 2026',
+    readTime: '10 min read',
+    tag: 'Business Finance',
+  },
+  {
     slug: 'automate-month-end-reporting-uk',
     title: 'How to Automate Your Month-End Reporting (UK Guide 2026)',
     excerpt: 'Month-end reporting does not have to take days. Here is how UK finance teams are cutting their reporting time by 80% using automation without changing their accounting software.',
