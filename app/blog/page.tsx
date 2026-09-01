@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'excel-automation-construction-companies-uk',
+    title: 'Excel Automation for Construction Companies UK',
+    excerpt: 'Construction businesses run on spreadsheets. Here is how to automate job cost tracking and project reporting so you can see profitability without rebuilding spreadsheets every week.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Excel Automation',
+  },
+  {
     slug: 'replace-spreadsheet-with-business-tool',
     title: 'How to Replace Your Spreadsheet with a Proper Business Tool',
     excerpt: 'The spreadsheet doing a job it was never designed for is one of the most common sources of operational friction in UK small businesses. Here is how to know when to replace it and what to replace it with.',
