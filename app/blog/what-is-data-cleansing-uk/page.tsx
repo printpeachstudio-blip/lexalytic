@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk' },
   title: 'What Is Data Cleansing? UK Guide to Fixing Bad Data (2026) | Lexalytic',
-  description: 'What is data cleansing and why does bad data cost UK businesses so much? A practical guide to identifying, cleaning and preventing poor data quality. From a UK data consultant.',
+  description: 'Bad data costs UK businesses an average of 20% of annual revenue. Here is what data cleansing actually involves, what it costs, and how to know if your data needs it.',
   keywords: 'data cleansing UK, uk data cleansing, what is data cleansing, data cleanse UK, data cleaning UK business, bad data cost UK, data quality UK, cleansing data UK',
   openGraph: {
     title: 'What Is Data Cleansing? UK Guide to Fixing Bad Data (2026)',
-    description: 'What is data cleansing and why does it matter for UK businesses? A practical guide to fixing bad data quality.',
+    description: 'Bad data costs UK businesses an average of 20% of annual revenue. What data cleansing involves, what it costs, and how to know if your data needs it.',
     url: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
