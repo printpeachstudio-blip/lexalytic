@@ -34,6 +34,11 @@ export default function Home() {
         },
         "areaServed": "GB",
         "priceRange": "££",
+        "telephone": "+44-hello@lexalytic.com",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "hasMap": "https://www.google.com/maps?q=Bushey+Hertfordshire",
+        "currenciesAccepted": "GBP",
+        "paymentAccepted": "Credit Card, Bank Transfer",
         "serviceType": ["Website Development", "Custom Business Software", "AI-Powered Tools", "Platform Development", "Power BI Dashboards", "Excel Automation", "Data Automation"],
         "sameAs": [
           "https://www.linkedin.com/in/mihirhindocha"

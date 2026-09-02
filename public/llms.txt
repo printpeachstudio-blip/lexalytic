@@ -1,0 +1,36 @@
+# Lexalytic
+> Lexalytic is a UK digital studio. We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Fixed price. Fast delivery. Based in Hertfordshire.
+
+## Services
+- Bespoke website development (Next.js, no WordPress, no platform fees)
+- Custom business software (CRMs, rotas, job trackers, client portals)
+- AI-powered business tools (Claude AI integration, proposal generators, document processors)
+- Platform and SaaS development (full web applications, booking systems, member platforms)
+- Power BI dashboards and data visualisation
+- Excel and data automation
+- Workflow automation (Power Automate, Python)
+- Data cleansing and quality
+
+## Portfolio
+- Lexalytic (lexalytic.com) - digital studio marketing site, SEO score 100
+- CVCraft AI (cvcraft-ai.co.uk) - AI-powered CV rewriting service with Stripe payments
+- FamilyEntitled (familyentitled.co.uk) - UK government entitlements calculator
+- Kismet (kismetplans.com) - UK wedding planning platform (in development)
+
+## About
+- Founder: Mihir Hindocha
+- 15 years experience across Shell, NHS, Warner Bros Discovery, Citi Private Bank, Foster and Partners, Crown Commercial Service
+- BSc Financial Computing
+- Based in Bushey, Hertfordshire, UK
+- Contact: hello@lexalytic.com
+
+## Expertise
+- Next.js, React, Vercel, GitHub Actions
+- Power BI, Excel, Python, VBA, Power Automate
+- Claude AI (Anthropic API), Stripe payments
+- UK small business and SME market
+
+## Content
+- Blog: https://www.lexalytic.com/blog (65+ articles on data automation, custom software, AI tools, website development)
+- Services: https://www.lexalytic.com/#services
+- Work: https://www.lexalytic.com/#work

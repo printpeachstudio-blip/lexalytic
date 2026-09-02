@@ -23,6 +23,7 @@ export default function WebsiteDevelopmentPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do you build in Next.js instead of WordPress?","acceptedAnswer":{"@type":"Answer","text":"Next.js sites load 3-5 times faster than WordPress, score higher on Google SEO, are more secure with no database to attack, and have no ongoing platform fees. The Lexalytic site scores 100 on Google SEO and is a live example."}},{"@type":"Question","name":"How much does a bespoke website cost?","acceptedAnswer":{"@type":"Answer","text":"Every project is scoped individually and priced before any work begins. We do not publish fixed prices because the right scope depends on what your site needs to do. Book a free call and we will tell you exactly what we would build and what it would cost."}},{"@type":"Question","name":"How long does a website take to build?","acceptedAnswer":{"@type":"Answer","text":"Most bespoke websites are delivered in 1-3 weeks depending on scope and content readiness. You get a clear timeline before any work begins."}}]}' }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
       <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'var(--bg-dark)', position: 'relative', overflow: 'hidden' }}>
