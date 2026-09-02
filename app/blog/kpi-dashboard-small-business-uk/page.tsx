@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/kpi-dashboard-small-business-uk' },
   title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026) | Lexalytic',
-  description: 'A practical guide to building a KPI dashboard for UK small businesses. What to measure, which tools to use, and how to get a live view of your business without expensive software.',
+  description: 'What KPIs should your small business track? Which tool should you use? How much does it cost? A practical UK guide with sector-specific metrics and real examples.',
   keywords: 'KPI dashboard small business UK, business KPI dashboard UK, how to build KPI dashboard, small business dashboard UK, business performance dashboard UK, KPI tracking small business',
   openGraph: {
     title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026)',
-    description: 'What to measure, which tools to use, and how to get a live view of your business without expensive software.',
+    description: 'What to measure, which tool to use, and how much it costs. A practical UK guide with sector-specific metrics.',
     url: 'https://www.lexalytic.com/blog/kpi-dashboard-small-business-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',

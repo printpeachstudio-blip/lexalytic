@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/connect-xero-to-excel-automate-reports' },
   title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026) | Lexalytic',
-  description: 'A practical guide to connecting Xero to Excel for UK businesses. How to pull your Xero data into Excel automatically, stop manual exports, and build reports that update themselves.',
+  description: 'Stop manually exporting from Xero every week. Here is exactly how to connect Xero to Excel automatically — three methods, step by step, with real UK business examples.',
   keywords: 'connect Xero to Excel UK, Xero Excel integration, automate Xero reports Excel, Xero Power Query UK, Xero reporting automation UK, export Xero to Excel automatically',
   openGraph: {
     title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026)',
-    description: 'Stop manually exporting from Xero. Here is how to connect Xero to Excel and build reports that update themselves.',
+    description: 'Stop manually exporting from Xero every week. Three methods to connect Xero to Excel automatically so your reports update themselves.',
     url: 'https://www.lexalytic.com/blog/connect-xero-to-excel-automate-reports',
     siteName: 'Lexalytic',
     locale: 'en_GB',
