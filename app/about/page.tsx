@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/about' },
-  title: 'About Mihir Hindocha | Data Automation Consultant UK | Lexalytic',
-  description: 'Mihir Hindocha is a UK data automation consultant with 15 years experience across Shell, Citi Private Bank, NHS, Warner Brothers and Foster & Partners. Based in Hertfordshire.',
-  keywords: 'Mihir Hindocha, data automation consultant UK, Excel consultant Hertfordshire, Power BI consultant UK, about Lexalytic',
+  title: 'About Mihir Hindocha | UK Digital Studio Founder | Lexalytic',
+  description: 'Mihir Hindocha is the founder of Lexalytic, a UK digital studio. 15 years experience across Shell, Citi Private Bank, NHS, Warner Bros, and Foster & Partners. Based in Hertfordshire.',
+  keywords: 'Mihir Hindocha, UK digital studio founder, website developer Hertfordshire, custom software UK, data automation consultant UK, about Lexalytic',
   openGraph: {
     title: 'About Mihir Hindocha | Lexalytic',
-    description: 'Data automation consultant with 15 years experience across Shell, Citi Private Bank, NHS, Warner Brothers and Foster & Partners.',
+    description: 'Founder of Lexalytic, a UK digital studio. 15 years experience across Shell, Citi, NHS, Warner Bros, and Foster & Partners.',
     url: 'https://www.lexalytic.com/about',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -22,8 +22,8 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mihir Hindocha",
-    "jobTitle": "Data Automation Consultant",
-    "description": "UK data automation consultant with 15 years experience across Shell, Citi Private Bank, NHS, Warner Brothers Discovery and Foster & Partners. Founder of Lexalytic.",
+    "jobTitle": "Founder, Lexalytic Digital Studio",
+    "description": "Founder of Lexalytic, a UK digital studio building websites, custom software, AI-powered tools and data systems. 15 years experience across Shell, Citi, NHS, Warner Bros, and Foster & Partners.",
     "url": "https://www.lexalytic.com/about",
     "worksFor": {
       "@type": "Organization",
@@ -40,7 +40,7 @@ export default function AboutPage() {
       "@type": "CollegeOrUniversity",
       "name": "Financial Computing"
     },
-    "knowsAbout": ["Power BI", "Excel Automation", "VBA", "Python", "SQL", "Power Automate", "Data Automation", "Business Intelligence"],
+    "knowsAbout": ["Website Development", "Custom Software Development", "AI-Powered Tools", "Platform Development", "Power BI", "Excel Automation", "VBA", "Python", "Data Automation"],
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Data Automation Consultant",
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 Mihir Hindocha
               </h1>
               <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '16px', marginBottom: '20px', lineHeight: '1.6' }}>
-                Data Automation Consultant · Founder of Lexalytic · Based in Bushey, Hertfordshire
+                Founder of Lexalytic · Digital Studio · Based in Bushey, Hertfordshire
               </p>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 {['Financial Computing graduate', '15 years experience', 'UK-based'].map((tag, i) => (
