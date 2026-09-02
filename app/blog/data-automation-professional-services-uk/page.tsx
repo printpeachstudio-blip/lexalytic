@@ -84,6 +84,11 @@ export default function BlogPost() {
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginTop: '32px' }}>
+            <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
+              <strong style={{ color: 'var(--ink)' }}>Professional services firm?</strong> See our dedicated page for <Link href="/industries/professional-services" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>professional services digital tools</Link>.
+            </p>
+          </div>
         </div>
       </article>
 
