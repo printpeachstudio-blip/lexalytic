@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: 'digital studio Sheffield, bespoke website developer Sheffield, custom software Sheffield, AI tools Sheffield small business, website development Sheffield SME, web developer Sheffield UK',
   openGraph: {
     title: 'Digital Studio Sheffield | Websites, Software & AI Tools | Lexalytic',
-    description: 'Lexalytic is a UK digital studio serving Sheffield businesses. Bespoke websites, custom software, AI-powered tools and data systems. Fixed price.',
+    description: 'Lexalytic is a UK digital studio serving Sheffield businesses. Fixed price, delivered remotely.',
     url: 'https://www.lexalytic.com/locations/sheffield',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -16,12 +16,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function SheffieldNOSPACEPage() {
-  const structuredData = '{"@context":"https://schema.org","@type":"Service","name":"Digital Studio Sheffield","description":"UK digital studio serving Sheffield businesses.","url":"https://www.lexalytic.com/locations/sheffield","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":[{"@type":"City","name":"Sheffield"}],"serviceType":"Digital Studio"}'
-
+export default function SheffieldPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
@@ -50,17 +47,30 @@ export default function SheffieldNOSPACEPage() {
               Websites, custom business software, AI-powered tools, and data systems — built around how your business works. Fixed price. Fast delivery. One team, directly involved from first call to final handover.
             </p>
             <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.4)', maxWidth: '620px', marginBottom: '40px', lineHeight: '1.75' }}>
-              We work with businesses across the UK entirely remotely. Sheffield clients get the same quality and direct access to the founder as any other client.
+              We work with Sheffield businesses entirely remotely. Sheffield clients get the same quality and direct access to the founder as any other client — without a local agency markup.
             </p>
             <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
           </div>
         </div>
       </section>
 
+      <section style={{ padding: 'clamp(40px, 5vw, 60px) 0', background: 'var(--bg-dark-2)', borderTop: '1px solid rgba(255,255,255,0.06)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: '48px', alignItems: 'start' }}>
+            <div>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: '2.5rem', color: 'var(--amber)', lineHeight: '1', marginBottom: '6px' }}>£15B</div>
+              <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)' }}>Sheffield city economy</div>
+            </div>
+            <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.5)', lineHeight: '1.8' }}>Sheffield has reinvented itself from a manufacturing base into a diverse economy with strong digital, creative, and professional services sectors alongside advanced manufacturing. The city has a particularly active SME community.</p>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
         <div className="container">
-          <span className="section-label">What we build</span>
-          <h2 style={{ marginBottom: '48px', maxWidth: '560px' }}>Every service. Clear scope. Fixed price.</h2>
+          <span className="section-label">What we build for Sheffield businesses</span>
+          <h2 style={{ marginBottom: '16px', maxWidth: '560px' }}>Every service. Clear scope. Fixed price.</h2>
+          <p style={{ fontSize: '15px', color: 'var(--ink-3)', marginBottom: '40px', maxWidth: '560px' }}>We work with Sheffield businesses in advanced manufacturing, digital and tech, creative, professional services, healthcare.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
             <Link href="/services/website-development" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>🌐</div>
@@ -80,12 +90,6 @@ export default function SheffieldNOSPACEPage() {
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Business tools with Claude AI built in — proposal generators, document processors, intelligent workflows.</p>
               <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
             </Link>
-            <Link href="/services/platform-development" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
-              <div style={{ fontSize: '24px', marginBottom: '12px' }}>🚀</div>
-              <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Platform Development</h3>
-              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Full web applications, SaaS products, booking systems, and member platforms. From idea to live product.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
-            </Link>
             <Link href="/services/power-bi" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>📊</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Power BI Dashboards</h3>
@@ -96,6 +100,12 @@ export default function SheffieldNOSPACEPage() {
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>⚡</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Excel and Data Automation</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Turn hours of manual reporting into a one-click process. Power Query, VBA, Python.</p>
+              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+            </Link>
+            <Link href="/services/platform-development" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
+              <div style={{ fontSize: '24px', marginBottom: '12px' }}>🚀</div>
+              <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Platform Development</h3>
+              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Full web applications, SaaS products, booking systems, and member platforms. From idea to live product.</p>
               <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
             </Link>
           </div>
@@ -109,20 +119,20 @@ export default function SheffieldNOSPACEPage() {
             <h2 style={{ marginBottom: '32px' }}>Senior experience. Studio prices. Direct access.</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>You work directly with the founder</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Mihir has 15 years experience across Shell, NHS, Warner Bros, and Citi. Every project is handled directly — not passed to a junior.</p>
+                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>You work directly with the founder</h3>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Mihir has 15 years experience across Shell, NHS, Warner Bros, and Citi. Every project is handled directly — not passed to a junior or an account manager.</p>
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Fixed price before we start</h3>
+                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Fixed price before we start</h3>
                 <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Every project is scoped and priced in writing before any work begins. No day rates, no surprises, no scope creep.</p>
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Live products as proof</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>CVCraft AI, FamilyEntitled, Kismet — real products we built ourselves. You can see the quality before committing.</p>
+                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Live products as proof</h3>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>CVCraft AI, FamilyEntitled, Kismet — real products we built and operate ourselves. You can see the quality before committing to anything.</p>
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Delivered entirely remotely</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We work with Sheffield businesses entirely online. No commute costs, no office overhead — just the work.</p>
+                <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Delivered remotely, UK-wide</h3>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We work with Sheffield businesses entirely online. No commute costs, no office overhead — just the work, delivered to agreed timelines.</p>
               </div>
             </div>
           </div>

@@ -30,6 +30,18 @@ export default function Footer() {
             ))}
           </div>
 
+          <div>
+            <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Locations</div>
+            {[['London', '/locations/london'], ['Manchester', '/locations/manchester'], ['Birmingham', '/locations/birmingham'], ['Leeds', '/locations/leeds'], ['Bristol', '/locations/bristol'], ['Edinburgh', '/locations/edinburgh'], ['Hertfordshire', '/locations/hertfordshire']].map(([label, href]) => (
+              <a key={href} href={href} style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '6px', textDecoration: 'none' }}>{label}</a>
+            ))}
+          </div>
+          <div>
+            <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Industries</div>
+            {[['Construction', '/industries/construction'], ['Recruitment', '/industries/recruitment'], ['Professional Services', '/industries/professional-services'], ['Healthcare', '/industries/healthcare']].map(([label, href]) => (
+              <a key={href} href={href} style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '6px', textDecoration: 'none' }}>{label}</a>
+            ))}
+          </div>
           <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.25)' }}>
             © {new Date().getFullYear()} Lexalytic. All rights reserved.
           </div>
