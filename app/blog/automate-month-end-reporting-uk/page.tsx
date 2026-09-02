@@ -191,6 +191,11 @@ export default function BlogPost() {
             ))}
           </div>
 
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}>
+            <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
+              <strong style={{ color: 'var(--ink)' }}>Also worth reading:</strong> If manual data entry is part of the problem, read our guide on <Link href="/blog/how-to-reduce-manual-data-entry-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>how to reduce manual data entry</Link> — practical steps to eliminate the most common causes.
+            </p>
+          </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Ready to fix your month-end process?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. We will look at your current month-end process and tell you exactly what automation would look like — and what it would cost.</p>

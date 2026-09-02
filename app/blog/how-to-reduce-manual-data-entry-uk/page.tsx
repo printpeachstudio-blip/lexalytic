@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-reduce-manual-data-entry-uk' },
   title: 'How to Reduce Manual Data Entry in Your Business (UK Guide 2026) | Lexalytic',
-  description: 'Manual data entry is costing UK businesses more than they realise. Here is a practical guide to reducing it — without expensive software or a big IT project. From a UK data automation consultant.',
+  description: 'UK businesses waste an average of 12 hours per week on manual data entry. Here is exactly how to eliminate it — using tools you already have, no expensive software required.',
   keywords: 'reduce manual data entry UK, eliminate manual data entry UK, how to reduce manual data entry errors, manual data entry problems business UK, automate data entry UK, reducing and automating data entry, how can a business eliminate manual data entry',
   openGraph: {
     title: 'How to Reduce Manual Data Entry in Your Business (UK Guide 2026)',
-    description: 'Manual data entry is costing UK businesses more than they realise. A practical guide to reducing it without expensive software.',
+    description: 'UK businesses waste an average of 12 hours per week on manual data entry. Here is exactly how to eliminate it without expensive software.',
     url: 'https://www.lexalytic.com/blog/how-to-reduce-manual-data-entry-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
