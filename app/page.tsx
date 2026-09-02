@@ -10,6 +10,7 @@ import Tool from '@/components/Tool'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import Work from '@/components/Work'
 
 
 export default function Home() {
@@ -59,6 +60,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <Work />
         <HowItWorks />
         <Pricing />
         <Results />
