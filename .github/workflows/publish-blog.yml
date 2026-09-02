@@ -179,7 +179,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "3" ]; then
-            echo "slug=prepare-business-data-self-assessment-uk" >> $GITHUB_OUTPUT
+            echo "slug=how-to-know-when-your-business-needs-custom-software" >> $GITHUB_OUTPUT
             echo "title=How to Prepare Your Business Data for Self Assessment (UK 2026)" >> $GITHUB_OUTPUT
             echo "excerpt=The Self Assessment deadline is 31 January 2027. If your business data is still scattered across spreadsheets and accounting software exports, now is the time to get it organised." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -191,7 +191,7 @@ jobs:
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "10" ]; then
-            echo "slug=what-is-making-tax-digital-uk-business" >> $GITHUB_OUTPUT
+            echo "slug=what-to-look-for-in-a-uk-website-developer" >> $GITHUB_OUTPUT
             echo "title=What Is Making Tax Digital and Is Your Business Ready?" >> $GITHUB_OUTPUT
             echo "excerpt=Making Tax Digital is live for businesses with income over £50,000. Here is what MTD actually requires and how to make sure your data is compliant and ready." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -203,7 +203,7 @@ jobs:
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "17" ]; then
-            echo "slug=automate-vat-return-preparation-uk" >> $GITHUB_OUTPUT
+            echo "slug=how-we-built-cvcraft-ai-from-scratch" >> $GITHUB_OUTPUT
             echo "title=How to Automate Your VAT Return Preparation (UK Guide)" >> $GITHUB_OUTPUT
             echo "excerpt=VAT returns are quarterly. Most UK businesses still spend hours pulling together the figures manually each time. Here is how to automate the data preparation so the numbers are always ready." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -221,7 +221,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "26" ]; then
-            echo "slug=close-year-end-accounts-without-panic-uk" >> $GITHUB_OUTPUT
+            echo "slug=five-signs-your-business-has-outgrown-off-the-shelf-software" >> $GITHUB_OUTPUT
             echo "title=How to Close Your Year-End Accounts Without the Last-Minute Panic" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK businesses scramble at year-end because the data is not ready. Here is how to keep your books close-ready throughout the year so year-end becomes a review rather than a crisis." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -263,7 +263,7 @@ jobs:
             echo "tag=Data Quality" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "22" ]; then
-            echo "slug=fix-business-reporting-before-january-uk" >> $GITHUB_OUTPUT
+            echo "slug=how-to-brief-a-developer-uk-small-business" >> $GITHUB_OUTPUT
             echo "title=What to Fix in Your Business Reporting Before January" >> $GITHUB_OUTPUT
             echo "excerpt=If your business reporting is still manual, slow, or unreliable, December is your last chance to fix it before the new year starts. Here is what to tackle first." >> $GITHUB_OUTPUT
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
@@ -275,13 +275,13 @@ jobs:
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "29" ]; then
-            echo "slug=2027-business-data-resolution-how-to-keep-it" >> $GITHUB_OUTPUT
+            echo "slug=what-can-you-build-with-ai-in-2027-uk-business" >> $GITHUB_OUTPUT
             echo "title=Your 2027 Business Data Resolution — And How to Keep It" >> $GITHUB_OUTPUT
             echo "excerpt=Most business owners start the year resolving to get on top of their data. Most are back to manual spreadsheets by February. Here is how to make the resolution stick this time." >> $GITHUB_OUTPUT
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "31" ]; then
-            echo "slug=one-report-every-uk-business-owner-needs-january" >> $GITHUB_OUTPUT
+            echo "slug=how-to-plan-your-digital-tools-for-2027" >> $GITHUB_OUTPUT
             echo "title=The One Business Report Every UK Owner Should Have in January" >> $GITHUB_OUTPUT
             echo "excerpt=January is when business owners make decisions that shape the whole year. Here is the one report that gives you everything you need to start 2027 with clarity — and how to set it up automatically." >> $GITHUB_OUTPUT
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT

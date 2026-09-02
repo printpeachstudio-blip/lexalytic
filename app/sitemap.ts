@@ -71,5 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/custom-crm-vs-salesforce-hubspot-uk-small-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/what-is-an-ai-powered-business-tool-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/bespoke-software-vs-off-the-shelf-uk-small-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/how-to-know-when-your-business-needs-custom-software', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/what-to-look-for-in-a-uk-website-developer', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/how-we-built-cvcraft-ai-from-scratch', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/five-signs-your-business-has-outgrown-off-the-shelf-software', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/how-to-brief-a-developer-uk-small-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/what-can-you-build-with-ai-in-2027-uk-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/how-to-plan-your-digital-tools-for-2027', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
