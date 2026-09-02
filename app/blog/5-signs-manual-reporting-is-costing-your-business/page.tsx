@@ -275,6 +275,10 @@ export default function BlogPost() {
               q: 'Do we need to replace our existing software?',
               a: 'No. The whole point of data automation is to work with the systems you already have. We connect to your existing tools and build a reporting layer on top — so your team keeps working the way they always have, but the reporting happens automatically in the background.'
             },
+            {
+              q: 'What if the problem is bigger than just reporting?',
+              a: 'Sometimes manual reporting is a symptom of a deeper process problem — the underlying system does not fit the business, so everything downstream requires manual intervention. In those cases a custom business tool rather than a reporting fix is the right answer. We scope every project honestly and will tell you if that is what we think you need.',
+            },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '24px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '16px', color: 'var(--ink)', marginBottom: '12px', fontWeight: '600' }}>{item.q}</h3>

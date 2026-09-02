@@ -270,6 +270,10 @@ export default function BlogPost() {
               q: 'How long does it take to fix a spreadsheet problem?',
               a: 'Simple fixes — rebuilding broken macros, automating a single report, cleaning and restructuring a spreadsheet — are typically delivered in 3-5 working days. More complex builds involving multiple data sources take longer. We scope every project and give a fixed price before any work begins.',
             },
+            {
+              q: 'If we outgrow Excel, do we have to buy expensive software?',
+              a: 'Not necessarily. For many businesses a custom-built tool is a better answer than off-the-shelf software. A bespoke CRM, job tracker, or business application built around your exact processes costs once, fits perfectly, and has no monthly licence fees. We build these as well as Excel automation — the right answer depends on your specific situation.',
+            },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '16px', color: 'var(--ink)', marginBottom: '12px', fontWeight: '600' }}>{item.q}</h3>

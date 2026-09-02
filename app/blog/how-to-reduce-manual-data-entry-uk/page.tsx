@@ -273,6 +273,10 @@ export default function BlogPost() {
               q: 'How long does it take to automate a manual data entry process?',
               a: 'Simple single-process automations are typically delivered in 3-5 working days. More complex builds involving multiple systems or large data volumes take 7-14 days. You will get a clear timeline at the scoping stage.',
             },
+            {
+              q: 'Could a custom business tool eliminate manual data entry entirely?',
+              a: 'In many cases yes. A custom business tool built around your exact process — with proper data entry forms, validation rules, and automated workflows — removes the manual re-entry that comes from using systems that do not quite fit. If your manual data entry stems from processes that spreadsheets or generic software handle badly, a bespoke tool is often the most complete solution.',
+            },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '16px', color: 'var(--ink)', marginBottom: '12px', fontWeight: '600' }}>{item.q}</h3>

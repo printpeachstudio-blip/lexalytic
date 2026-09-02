@@ -311,6 +311,10 @@ export default function BlogPost() {
               q: 'Do I need Power BI Pro to share a KPI dashboard with my team?',
               a: 'Yes — to share a Power BI dashboard with others via the Power BI service, everyone who views it needs a Power BI Pro licence at £8.40 per user per month. There is also Power BI Premium Per User at a higher price point with additional features. For small teams sharing with two or three people, the Pro licence cost is usually negligible compared to the time saved.',
             },
+            {
+              q: 'Could a custom business tool replace our dashboard?',
+              a: 'A KPI dashboard and a custom business tool serve different purposes — a dashboard surfaces data for decisions, while a custom tool manages a process. Many businesses benefit from both: a custom tool to run the operation and a dashboard to track performance. We build both and can advise on which combination makes sense for your specific situation.',
+            },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '16px', color: 'var(--ink)', marginBottom: '12px', fontWeight: '600' }}>{item.q}</h3>
