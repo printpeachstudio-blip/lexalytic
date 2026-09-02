@@ -2,13 +2,13 @@
 const steps = [
   {
     num: '01',
-    title: 'Tell us your problem',
+    title: 'Tell us what you need',
     desc: 'Book a free 30-minute call or send us your spreadsheet. No forms to fill in, no lengthy questionnaires — just tell us what\'s slowing you down.',
   },
   {
     num: '02',
     title: 'We scope it in 48 hours',
-    desc: 'We review your process and come back within 48 hours with a clear scope, fixed price, and timeline. No vague estimates, no surprises.',
+    desc: 'We scope exactly what needs building and come back within 48 hours with a clear scope, fixed price, and timeline. No vague estimates, no surprises.',
   },
   {
     num: '03',
@@ -29,7 +29,7 @@ export default function HowItWorks() {
         <span className="section-label">How it works</span>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '16px' }}>
           <h2 style={{ color: 'var(--white)', maxWidth: '420px' }}>Simple, structured, no jargon.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '320px', fontSize: '15px' }}>From first call to live solution — most projects take less than two weeks.</p>
+          <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '320px', fontSize: '15px' }}>From first call to live product — delivered directly by the person you spoke to.</p>
         </div>
 
         <div style={{

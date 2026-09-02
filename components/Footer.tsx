@@ -9,7 +9,7 @@ export default function Footer() {
               Lex<span style={{ color: 'var(--amber)' }}>alytic</span>
             </div>
             <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', fontWeight: '300' }}>
-              Turn your data into decisions.
+              We build the tools your business actually needs.
             </p>
           </div>
 
