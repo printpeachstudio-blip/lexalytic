@@ -3,8 +3,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
-  title: 'Lexalytic | Data Automation & Custom Business Tools UK',
-  description: 'UK data automation consultancy based in Hertfordshire. Power BI dashboards, Excel automation, custom business tools, CRM development and data cleansing for UK businesses. Fixed price, free scoping call.',
+  title: 'Lexalytic | Digital Studio — Websites, Software & AI Tools UK',
+  description: 'Lexalytic is a UK digital studio. We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Fixed price. Fast delivery. Based in Hertfordshire.',
   keywords: 'data automation consultant UK, Power BI consultant UK, Excel automation consultant UK, excel consultant UK, excel spreadsheet consultant, custom business tools UK, bespoke CRM UK, custom software small business UK, VBA developer UK, excel vba consultant, data cleansing UK, Excel consultant Hertfordshire, spreadsheet consultant UK, excel experts UK',
   alternates: {
     canonical: 'https://www.lexalytic.com',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Lexalytic | Data Automation & Custom Business Tools UK',
-    description: 'UK data automation consultancy. Power BI dashboards, Excel automation, custom business tools and data cleansing for UK businesses. Fixed price, free scoping call.',
+    title: 'Lexalytic | Digital Studio — Websites, Software & AI Tools UK',
+    description: 'Lexalytic is a UK digital studio building websites, custom software, AI-powered tools and data systems. Fixed price. Based in Hertfordshire.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -43,4 +43,4 @@ export default function RootLayout({
     </html>
   )
 }
-// build Wed  2 Sep 2026 18:14:29 BST
+// Wed  2 Sep 2026 18:14:29 BST
