@@ -4,9 +4,7 @@ import Services from '@/components/Services'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import Results from '@/components/Results'
-import MTD from '@/components/MTD'
 import Testimonials from '@/components/Testimonials'
-import Tool from '@/components/Tool'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -21,7 +19,7 @@ export default function Home() {
         "@type": "LocalBusiness",
         "@id": "https://www.lexalytic.com/#business",
         "name": "Lexalytic",
-        "description": "UK data automation consultancy specialising in Power BI dashboards, Excel automation, Python and Power Automate for UK businesses.",
+        "description": "Lexalytic is a UK digital studio. We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Fixed price, fast delivery.",
         "url": "https://www.lexalytic.com",
         "email": "hello@lexalytic.com",
         "founder": {
@@ -36,7 +34,7 @@ export default function Home() {
         },
         "areaServed": "GB",
         "priceRange": "££",
-        "serviceType": ["Power BI Consulting", "Excel Automation", "VBA Development", "Python Automation", "Power Automate", "Data Automation"],
+        "serviceType": ["Website Development", "Custom Business Software", "AI-Powered Tools", "Platform Development", "Power BI Dashboards", "Excel Automation", "Data Automation"],
         "sameAs": [
           "https://www.linkedin.com/in/mihirhindocha"
         ]
@@ -45,7 +43,7 @@ export default function Home() {
         "@type": "WebSite",
         "url": "https://www.lexalytic.com",
         "name": "Lexalytic",
-        "description": "UK data automation consultancy"
+        "description": "UK digital studio building websites, software, AI tools and data systems"
       }
     ]
   }
@@ -64,9 +62,7 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <Results />
-        <MTD />
         <Testimonials />
-        <Tool />
         <FAQ />
         <Contact />
       </main>
