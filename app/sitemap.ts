@@ -67,5 +67,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/excel-automation-construction-companies-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/why-uk-businesses-building-custom-tools', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/replace-spreadsheet-with-business-tool', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/why-we-build-websites-in-nextjs-not-wordpress', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/custom-crm-vs-salesforce-hubspot-uk-small-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/what-is-an-ai-powered-business-tool-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/bespoke-software-vs-off-the-shelf-uk-small-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

@@ -9,6 +9,38 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'bespoke-software-vs-off-the-shelf-uk-small-business',
+    title: 'Bespoke Software vs Off-the-Shelf — The Honest UK Small Business Guide',
+    excerpt: 'Most UK small businesses default to off-the-shelf software. Sometimes that is right. Sometimes it costs more than building something custom. Here is the honest framework for deciding which.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Custom Business Tools',
+  },
+  {
+    slug: 'what-is-an-ai-powered-business-tool-uk',
+    title: 'What Is an AI-Powered Business Tool — And Does Your Business Need One?',
+    excerpt: 'An AI-powered business tool is not ChatGPT with a different interface. It is a custom application with AI built into a specific business workflow. Here is what that actually means and when it makes sense.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'AI-Powered Tools',
+  },
+  {
+    slug: 'custom-crm-vs-salesforce-hubspot-uk-small-business',
+    title: 'Custom CRM vs Salesforce vs HubSpot — Which Is Right for a Small UK Business?',
+    excerpt: 'Salesforce and HubSpot are powerful but built for much larger businesses. For UK SMEs, a custom CRM is often cheaper, simpler, and fits better. Here is an honest comparison of all three options.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Custom Business Tools',
+  },
+  {
+    slug: 'why-we-build-websites-in-nextjs-not-wordpress',
+    title: 'Why We Build Websites in Next.js Not WordPress (And Why It Matters)',
+    excerpt: 'Most UK web agencies build in WordPress. We build in Next.js. Here is why that decision affects your site speed, SEO rankings, security, and long-term cost — and when each approach makes sense.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Website Development',
+  },
+  {
     slug: 'excel-automation-construction-companies-uk',
     title: 'Excel Automation for Construction Companies UK',
     excerpt: 'Construction businesses run on spreadsheets. Here is how to automate job cost tracking and project reporting so you can see profitability without rebuilding spreadsheets every week.',
