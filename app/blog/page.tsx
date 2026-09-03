@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'staff-costs-eating-profit-how-to-track',
+    title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It',
+    excerpt: 'Staff costs are typically the biggest expense in any service business. Most owners know roughly what they pay out but very few can see how those costs relate to revenue each person generates.',
+    date: 'September 2026',
+    readTime: '10 min read',
+    tag: 'Business Finance',
+  },
+  {
     slug: 'how-to-plan-your-digital-tools-for-2027',
     title: 'How to Plan Your Digital Tools for 2027 — A UK Small Business Guide',
     excerpt: 'Most UK businesses drift into their software stack. Here is how to audit what you have, identify the gaps, and plan the tools your business actually needs for 2027.',
