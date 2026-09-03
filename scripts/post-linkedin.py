@@ -42,7 +42,7 @@ month_abbr = calendar.month_abbr[dt.month].lower()
 day = dt.strftime('%d')
 image_file = f'data/post-images/post-{month_abbr}{day}.png'
 
-LI_VERSION = '202506'
+LI_VERSION = '202504'
 
 def li_headers(extra={}):
     h = {
@@ -141,7 +141,8 @@ for k, v in li_headers().items():
 
 try:
     resp = urllib.request.urlopen(req)
-    result = json.loads(resp.read()) if resp.read() else {}
+    body = resp.read()
+    result = json.loads(body) if body else {}
     print(f'Posted successfully to {endpoint}')
 except urllib.error.HTTPError as e:
     error_body = e.read().decode()
