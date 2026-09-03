@@ -60,7 +60,7 @@ if os.path.exists(image_file):
         )
         req.add_header('Authorization', f'Bearer {token}')
         req.add_header('Content-Type', 'application/json')
-        req.add_header('LinkedIn-Version', '202401')
+        req.add_header('LinkedIn-Version', '202504')
         req.add_header('X-Restli-Protocol-Version', '2.0.0')
 
         resp = urllib.request.urlopen(req)
