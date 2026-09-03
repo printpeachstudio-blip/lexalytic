@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/business-performance-at-a-glance-uk' },
   title: 'How to See Your Business Performance at a Glance | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to See Your Business Performance at a Glance',
     description: 'Practical guide for UK businesses from Lexalytic.',

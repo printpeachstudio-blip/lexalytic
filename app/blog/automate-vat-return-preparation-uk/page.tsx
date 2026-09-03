@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-vat-return-preparation-uk' },
   title: 'How to Automate Your VAT Return Preparation (UK Guide) | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Automate Your VAT Return Preparation (UK Guide)',
     description: 'Practical guide for UK businesses from Lexalytic.',

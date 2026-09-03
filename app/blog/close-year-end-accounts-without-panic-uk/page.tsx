@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/close-year-end-accounts-without-panic-uk' },
   title: 'How to Close Your Year-End Accounts Without the Last-Minute Panic | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Close Your Year-End Accounts Without the Last-Minute Panic',
     description: 'Practical guide for UK businesses from Lexalytic.',

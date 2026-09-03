@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/make-business-run-itself-while-you-take-a-break' },
   title: 'How to Make Your Business Run Itself While You Take a Break | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Make Your Business Run Itself While You Take a Break',
     description: 'Practical guide for UK businesses from Lexalytic.',

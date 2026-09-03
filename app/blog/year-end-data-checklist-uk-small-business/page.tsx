@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/year-end-data-checklist-uk-small-business' },
   title: 'End of Year Data Checklist for UK Small Businesses | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'End of Year Data Checklist for UK Small Businesses',
     description: 'Practical guide for UK businesses from Lexalytic.',

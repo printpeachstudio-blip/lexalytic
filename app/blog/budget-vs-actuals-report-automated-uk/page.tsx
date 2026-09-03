@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/budget-vs-actuals-report-automated-uk' },
   title: 'How to Build a Budget vs Actuals Report That Updates Automatically | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Build a Budget vs Actuals Report That Updates Automatically',
     description: 'Practical guide for UK businesses from Lexalytic.',

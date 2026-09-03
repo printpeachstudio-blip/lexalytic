@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/one-report-every-uk-business-owner-needs-january' },
   title: 'The One Business Report Every UK Owner Should Have in January | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'The One Business Report Every UK Owner Should Have in January',
     description: 'Practical guide for UK businesses from Lexalytic.',

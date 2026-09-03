@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/fix-business-reporting-before-january-uk' },
   title: 'What to Fix in Your Business Reporting Before January | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'What to Fix in Your Business Reporting Before January',
     description: 'Practical guide for UK businesses from Lexalytic.',

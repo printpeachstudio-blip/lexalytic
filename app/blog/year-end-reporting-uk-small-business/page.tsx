@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/year-end-reporting-uk-small-business' },
   title: 'Year-End Reporting for UK Small Businesses — How to Make It Less Painful | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Year-End Reporting for UK Small Businesses — How to Make It Less Painful',
     description: 'Practical guide for UK businesses from Lexalytic.',

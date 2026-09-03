@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-weekly-management-report-uk' },
   title: 'How to Automate Your Weekly Management Report | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Automate Your Weekly Management Report',
     description: 'Practical guide for UK businesses from Lexalytic.',

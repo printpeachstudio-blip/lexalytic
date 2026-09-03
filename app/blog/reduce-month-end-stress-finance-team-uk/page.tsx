@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/reduce-month-end-stress-finance-team-uk' },
   title: 'How to Reduce Month-End Stress for Your Finance Team | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Reduce Month-End Stress for Your Finance Team',
     description: 'Practical guide for UK businesses from Lexalytic.',

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/start-new-year-clean-business-data-uk' },
   title: 'How to Start the New Year With Clean Business Data | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Start the New Year With Clean Business Data',
     description: 'Practical guide for UK businesses from Lexalytic.',

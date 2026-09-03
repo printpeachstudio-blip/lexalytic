@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-is-making-tax-digital-uk-business' },
   title: 'What Is Making Tax Digital and Is Your Business Ready? | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'What Is Making Tax Digital and Is Your Business Ready?',
     description: 'Practical guide for UK businesses from Lexalytic.',

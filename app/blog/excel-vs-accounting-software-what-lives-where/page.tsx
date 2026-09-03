@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/excel-vs-accounting-software-what-lives-where' },
   title: 'Excel vs Accounting Software — What Should Live Where? | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Excel vs Accounting Software — What Should Live Where?',
     description: 'Practical guide for UK businesses from Lexalytic.',

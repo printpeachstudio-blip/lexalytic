@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/true-labour-cost-per-employee-uk' },
   title: 'How to Know Your True Labour Cost Per Employee (UK Guide) | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Know Your True Labour Cost Per Employee (UK Guide)',
     description: 'Practical guide for UK businesses from Lexalytic.',

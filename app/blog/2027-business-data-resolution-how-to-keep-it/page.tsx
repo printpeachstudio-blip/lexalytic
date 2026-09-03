@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it' },
   title: 'Your 2027 Business Data Resolution — And How to Keep It | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Your 2027 Business Data Resolution — And How to Keep It',
     description: 'Practical guide for UK businesses from Lexalytic.',

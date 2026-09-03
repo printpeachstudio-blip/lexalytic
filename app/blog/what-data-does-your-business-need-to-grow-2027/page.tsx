@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-data-does-your-business-need-to-grow-2027' },
   title: 'What Data Does Your Business Need to Grow in 2027? | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'What Data Does Your Business Need to Grow in 2027?',
     description: 'Practical guide for UK businesses from Lexalytic.',

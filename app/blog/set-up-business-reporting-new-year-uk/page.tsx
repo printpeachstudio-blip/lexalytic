@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/set-up-business-reporting-new-year-uk' },
   title: 'How to Set Up Your Business Reporting for the New Year | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Set Up Your Business Reporting for the New Year',
     description: 'Practical guide for UK businesses from Lexalytic.',

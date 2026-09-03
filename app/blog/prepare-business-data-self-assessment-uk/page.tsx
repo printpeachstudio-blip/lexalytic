@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/prepare-business-data-self-assessment-uk' },
   title: 'How to Prepare Your Business Data for Self Assessment (UK 2026) | Lexalytic',
   description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Prepare Your Business Data for Self Assessment (UK 2026)',
     description: 'Practical guide for UK businesses from Lexalytic.',
