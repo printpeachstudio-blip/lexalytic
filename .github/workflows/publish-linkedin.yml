@@ -2,8 +2,9 @@ name: Publish LinkedIn Post
 
 on:
   schedule:
-    - cron: '0 9 * * 2'  # Every Tuesday 9am UTC
-    - cron: '0 9 * * 4'  # Every Thursday 9am UTC
+    - cron: '0 10 * * 2'  # Every Tuesday 10am UTC (11am UK summer)
+    - cron: '0 10 * * 3'  # Every Wednesday 10am UTC
+    - cron: '0 10 * * 4'  # Every Thursday 10am UTC
   workflow_dispatch:
 
 jobs:
@@ -30,25 +31,44 @@ jobs:
 
           # Read posts file
           with open('data/linkedin-posts.txt', 'r') as f:
-              lines = f.readlines()
+              content = f.read()
 
-          # Find today's post
-          post_text = None
-          post_line_idx = None
-          for i, line in enumerate(lines):
-              line = line.strip()
-              if line.startswith(today + ' |'):
-                  post_text = line[len(today) + 3:].strip()
-                  post_line_idx = i
-                  break
+          # Parse posts - each post starts with a date line
+          posts = {}
+          current_date = None
+          current_lines = []
+
+          for line in content.split('\n'):
+              stripped = line.strip()
+              if not stripped or stripped.startswith('#'):
+                  if current_date and current_lines:
+                      posts[current_date] = '\n'.join(current_lines).strip()
+                      current_date = None
+                      current_lines = []
+                  continue
+              # Check if line is a date (YYYY-MM-DD)
+              if len(stripped) == 10 and stripped[4] == '-' and stripped[7] == '-':
+                  if current_date and current_lines:
+                      posts[current_date] = '\n'.join(current_lines).strip()
+                  current_date = stripped
+                  current_lines = []
+              else:
+                  if current_date:
+                      current_lines.append(line)
+
+          if current_date and current_lines:
+              posts[current_date] = '\n'.join(current_lines).strip()
+
+          post_text = posts.get(today)
 
           if not post_text:
               print(f'No post scheduled for {today}')
               exit(0)
 
-          print(f'Posting: {post_text[:80]}...')
+          print(f'Posting for {today}:')
+          print(post_text[:100] + '...')
 
-          # Post to LinkedIn
+          # Post to LinkedIn via ugcPosts API
           payload = {
               "author": f"urn:li:person:{member_id}",
               "lifecycleState": "PUBLISHED",

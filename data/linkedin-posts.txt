@@ -1,95 +1,156 @@
 # LinkedIn Posts Schedule
-# Format: DATE | POST_CONTENT
-# Dates: YYYY-MM-DD
-# Posts publish at 9am UTC on the scheduled date
-# Write naturally - these go out as Mihir Hindocha, not as a company
+# Date on its own line (YYYY-MM-DD), post text below it
+# No links in post body - put links in first comment manually after posting
+# First line is the hook - make it stop the scroll
+# Research shows: text posts 2-3x better than single images in 2026
+# Best performing hook formats: bold claim, surprising stat, direct question, short statement
 
-2026-09-08 | Most businesses I talk to are running on a combination of Excel, a CRM that doesn't quite fit, and at least one process that depends entirely on one person knowing how it works.
+2026-09-09
+Most businesses I talk to are running on three things:
 
-That's not a technology problem. It's a systems problem.
+A spreadsheet someone built three years ago.
+A CRM that almost fits.
+One person who knows how everything actually works.
 
-The fix is rarely buying new software. It's usually building something small and specific that works the way the business actually works — not the other way round.
+That is not a technology problem. It is a systems problem.
 
-That's what we do at Lexalytic. Websites, custom tools, AI products, data systems. Fixed price. You talk to me directly.
+The fix is rarely buying new software. It is usually building something small and specific that works around how the business actually operates.
 
-If that sounds like what you need, drop me a message.
+That is what we do at Lexalytic. Websites, custom tools, AI products, data systems. Fixed price. You talk to me directly.
 
-2026-09-15 | We built CVCraft AI in a few weeks.
+If that sounds like what you need, send me a message.
 
-The idea was simple: most people applying for jobs know their CV isn't good enough. Professional CV writers charge £200 and take days. Generic templates don't address ATS systems.
+2026-09-16
+We built CVCraft AI in a few weeks.
 
-So we built an automated service. You submit your CV and target role. Claude rewrites it. Stripe takes payment. The finished document arrives in your inbox within 24 hours.
+The idea: most people applying for jobs know their CV is not good enough but professional rewrites cost £200 and take days.
 
-No human involvement between submission and delivery.
+So we built an automated service.
 
-That's what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific process, doing a specific job, reliably.
+You submit your CV and target role. Claude rewrites it for the specific job. Stripe takes payment. The finished document arrives in your inbox within 24 hours.
 
-The same architecture works for proposal generation, document processing, report automation — any task that's repetitive, well-defined, and currently requires human time for every instance.
+No human involved between submission and delivery.
 
-If you have a process that fits that description, it's worth a conversation.
+That is what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific workflow, doing a specific job, reliably, at scale.
 
-2026-09-22 | A question I hear often: "Should we build it or buy it?"
+The same pattern works for proposal generation, document processing, report automation, or any task that is repetitive, well-defined, and currently costs someone time for every single instance.
+
+If you have a process that fits that description, it is worth a 30-minute conversation.
+
+2026-09-23
+A question I get asked often: "Should we build it or buy it?"
 
 The honest answer depends on one thing: how specific is your process?
 
-If your sales pipeline looks like a standard pipeline, HubSpot will serve you well. If your scheduling works like standard scheduling, Calendly will handle it.
+If your sales pipeline looks like a standard pipeline, HubSpot handles it well. If your scheduling is standard, Calendly is fine.
 
-But if your process is specific — your terminology, your workflow, your data structure — every generic tool requires compromise. And compromise accumulates.
+But if your process is specific — your terminology, your workflow, your data — every generic tool requires compromise. And compromise accumulates quietly.
 
-The businesses that get the most from custom software are the ones that identified one process where the generic tool was costing more in friction than a custom build would cost to make.
+The businesses that benefit most from custom software are the ones that identified one process where the friction of a generic tool was costing more than a custom build would.
 
-That calculation is almost always closer than people expect.
+That calculation is almost always closer than people expect. Worth doing before renewing another SaaS subscription.
 
-2026-09-29 | 15 years across Shell, NHS, Warner Bros, Citi, Foster and Partners.
+2026-09-30
+15 years across Shell, NHS, Warner Bros, Citi, Foster and Partners.
 
 Then I went out on my own.
 
-Not because the work wasn't interesting. Because I wanted to work directly with businesses — not through layers of process, procurement, and project governance.
+Not because the work was not interesting. Because I wanted to work directly with businesses rather than through layers of procurement, process, and project governance.
 
-The businesses I work with now are smaller. The problems are just as real. And the work gets done faster because there's no committee deciding whether it should happen.
+The businesses I work with now are smaller. The problems are equally real. The work gets done faster because there is no committee deciding whether it should.
 
-If your business has a digital problem — a website that doesn't convert, a process that relies on spreadsheets, a tool you wish existed — I'd like to hear about it.
+If your business has a digital problem — a website that does not convert, a process running on spreadsheets, a tool you wish existed — I am happy to look at it.
 
-2026-10-06 | The most common misconception about Power BI:
+2026-10-07
+A small manufacturing business we worked with was spending 6 hours every Monday rebuilding the same report.
 
-"It's for big companies with data teams."
+Same data. Same format. Same person. Every week, for years.
 
-It's not. It's for anyone who is currently rebuilding the same report every week by hand.
+We connected Power BI directly to their systems. The report now refreshes automatically. They have not touched it since we built it.
 
-A small manufacturing business we worked with was spending 6 hours every Monday pulling numbers from three systems into a spreadsheet. Same process, every week, for years.
+Power BI costs £8.40 per user per month. The build took a week. The time saving paid for both in the first month.
 
-We connected Power BI directly to their systems. The report now updates automatically. Monday mornings look different.
+The report was never the bottleneck. The process was.
 
-The tool costs £8.40 per user per month. The build took a week. The time saving paid for it in the first month.
+2026-10-14
+Something that comes up in almost every first conversation:
 
-2026-10-13 | Something that comes up in almost every first conversation:
+"We have tried to fix this before and it did not work."
 
-"We've tried to fix this before and it didn't work."
+Usually what happened: they bought software that almost fit. Configured it until it sort of fit. Built workarounds for the parts that did not. Then hired someone to manage the workarounds.
 
-Usually what happened was: they bought software that almost fit. Then configured it until it sort of fit. Then built workarounds for the bits that didn't fit. Then hired someone to manage the workarounds.
+The process never changed. The software just added a layer on top of the problem.
 
-The underlying process never changed. The software just added a layer on top of the problem.
+Custom tools work differently. You start with the process. The software gets built around it — not the other way round.
 
-Custom tools work differently. The process comes first. The software is built around it — not the other way round.
+2026-10-21
+The FamilyEntitled calculator took a few weeks to build.
 
-2026-10-20 | The FamilyEntitled calculator took a few weeks to build.
+It tells UK families exactly what benefits and entitlements they are eligible for — across 8 government schemes — based on their specific situation. No data stored. No account required. Entirely private.
 
-It tells UK families exactly what benefits and entitlements they are eligible for — across 8 government schemes — based on their specific situation. No data stored. No account needed. Entirely client-side.
+The average family that uses it finds £4,700 in entitlements they did not know they were owed.
 
-The average family that uses it finds £4,700 in annual entitlements they didn't know about.
+It ranks on Google. It helps real people. It cost a fraction of what an agency would have charged.
 
-It ranks on Google. It helps people. It cost a fraction of what an agency would have charged.
+That is what a well-built tool looks like. Not a brochure. Something that does something genuinely useful for the person using it.
 
-That's what a well-built content tool looks like. Not a brochure site. A tool that does something useful for the person using it.
-
-2026-10-27 | Fixed price gets a lot of questions.
+2026-10-28
+Fixed price gets a lot of questions.
 
 "How do you know what it will cost before you start?"
 
-Because we scope carefully before we quote. We ask enough questions to understand exactly what needs building. We price based on that scope. We write it down.
+Because we scope carefully before we quote. We ask enough questions to understand exactly what needs building. We price based on that understanding. We write it down before any work begins.
 
-If the scope changes, we have a conversation before any additional work starts. Nothing hidden, nothing assumed.
+If the scope changes, we have a conversation before additional work starts. Nothing hidden. Nothing assumed.
 
-It's a different model to day rates. Day rates put the risk on the client. Fixed price puts it on us to scope accurately.
+It is a different model to day rates. Day rates put risk on the client. Fixed price puts it on us to scope accurately.
 
 We prefer it that way.
+
+2026-11-04
+Most business owners I speak to cannot answer three questions in real time:
+
+What is our gross margin this month?
+What does cash look like in 6 weeks?
+Which clients are actually profitable?
+
+Not because they do not care. Because the data is spread across four systems and nobody has connected them.
+
+A dashboard that answers those three questions automatically is not a luxury. It is the foundation of making good decisions.
+
+Most businesses can have it built and running in a week.
+
+2026-11-11
+The website you are on right now scores 100 on Google SEO.
+
+No WordPress. No templates. No monthly platform fees.
+
+Built in Next.js, deployed on Vercel, maintained in GitHub. Every page has canonical tags, structured data, and metadata. The blog publishes automatically via a GitHub Action twice a week.
+
+The site took a few weeks to build. It has generated more leads than any other channel we have tried.
+
+A website is not a brochure. It is a business asset. It should work as hard as the rest of your business does.
+
+2026-11-18
+There is a moment in most businesses where the spreadsheet stops working.
+
+Not technically — it still opens. But it is maintained by one person, takes hours to update, and nobody quite trusts the numbers it produces.
+
+That moment is the right time to build something properly.
+
+Not to buy software that is almost right. To build a tool that is exactly right for how your business works.
+
+The cost is usually lower than people expect. The time saving usually starts in the first week.
+
+2026-11-25
+Kismet is a wedding planning platform we are building.
+
+Guest management. Seating planner with conflict detection. Budget tracker. Vendor tools. AI vow and speech generator.
+
+The waitlist is live. The platform is in active development.
+
+Most people ask: why build it yourself rather than use existing tools?
+
+Because the existing tools are either too simple, too expensive, or built for wedding planners rather than couples. The gap in the market was obvious. The technology to fill it is straightforward.
+
+That is usually the answer to "why build it" for any business.
