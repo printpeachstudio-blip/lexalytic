@@ -45,7 +45,7 @@ export default function Work() {
       <div className="container">
         <span className="section-label" style={{ color: 'rgba(255,255,255,0.4)' }}>Our work</span>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px', flexWrap: 'wrap', gap: '16px' }}>
-          <h2 style={{ color: 'var(--white)', maxWidth: '560px' }}>Live products. Real businesses. Built by us.</h2>
+          <h2 style={{ color: 'var(--white)', maxWidth: '560px' }}>Things we have actually built.</h2>
           <a href="#contact" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.65)', borderColor: 'rgba(255,255,255,0.15)', flexShrink: 0 }}>Start your project →</a>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '24px' }}>

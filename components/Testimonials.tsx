@@ -49,12 +49,15 @@ export default function Testimonials() {
   return (
     <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
       <div className="container">
-        <span className="section-label">Client testimonials</span>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '16px' }}>
-          <h2 style={{ color: 'var(--white)', maxWidth: '480px' }}>Trusted by businesses across the UK.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', maxWidth: '320px', textAlign: 'right', lineHeight: '1.6' }}>
-            Senior experience across Shell, NHS, Warner Bros, and more — now working directly with UK businesses of all sizes.
-          </p>
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', marginBottom: '56px', flexWrap: 'wrap' }}>
+          <img src="/mihir.jpg" alt="Mihir Hindocha — Founder of Lexalytic" style={{ width: '72px', height: '72px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(193,125,46,0.4)', flexShrink: 0, marginTop: '4px' }} />
+          <div style={{ flex: 1 }}>
+            <span className="section-label">Client testimonials</span>
+            <h2 style={{ color: 'var(--white)', maxWidth: '480px', marginBottom: '12px' }}>What clients say about working with Mihir.</h2>
+            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', lineHeight: '1.7', maxWidth: '520px' }}>
+              15 years experience across Shell, NHS, Warner Bros, Citi, and Foster & Partners — now working directly with UK businesses of every size. Every project is handled personally.
+            </p>
+          </div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '20px' }}>

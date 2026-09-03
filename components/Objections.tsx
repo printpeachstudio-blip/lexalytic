@@ -23,30 +23,30 @@ const objections = [
 export default function Objections() {
   const [open, setOpen] = useState<number | null>(null)
   return (
-    <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
+    <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
       <div className="container">
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-          <span className="section-label" style={{ color: 'rgba(255,255,255,0.4)' }}>Common questions</span>
-          <h2 style={{ color: 'var(--white)', marginBottom: '12px' }}>What usually stops people.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '16px', marginBottom: '48px', lineHeight: '1.7' }}>
+          <span className="section-label" style={{ color: 'var(--ink-3)' }}>Common questions</span>
+          <h2 style={{ color: 'var(--ink)', marginBottom: '12px' }}>What usually stops people.</h2>
+          <p style={{ color: 'var(--ink-3)', fontSize: '16px', marginBottom: '48px', lineHeight: '1.7' }}>
             Honest answers to the things most people are thinking before they get in touch.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
             {objections.map((obj, i) => (
               <div key={i} style={{
-                background: open === i ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.02)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderTop: i > 0 ? 'none' : '1px solid rgba(255,255,255,0.08)',
+                background: open === i ? 'var(--bg)' : 'var(--white)',
+                border: '1px solid var(--border)',
+                borderTop: i > 0 ? 'none' : '1px solid var(--border)',
                 borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === objections.length - 1 ? '0 0 var(--radius) var(--radius)' : '0',
                 cursor: 'pointer',
                 transition: 'background 0.2s',
               }} onClick={() => setOpen(open === i ? null : i)}>
                 <div style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
-                  <h3 style={{ fontSize: '15px', fontWeight: '500', color: 'var(--white)', margin: 0, lineHeight: '1.5' }}>{obj.q}</h3>
+                  <h3 style={{ fontSize: '15px', fontWeight: '500', color: 'var(--ink)', margin: 0, lineHeight: '1.5' }}>{obj.q}</h3>
                   <span style={{ fontSize: '20px', color: 'var(--amber)', flexShrink: 0, lineHeight: '1' }}>{open === i ? '−' : '+'}</span>
                 </div>
                 {open === i && (
-                  <div style={{ padding: '0 24px 20px', fontSize: '14px', color: 'rgba(255,255,255,0.55)', lineHeight: '1.75' }}>
+                  <div style={{ padding: '0 24px 20px', fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.75' }}>
                     {obj.a}
                   </div>
                 )}
@@ -54,8 +54,8 @@ export default function Objections() {
             ))}
           </div>
           <div style={{ marginTop: '32px', textAlign: 'center' }}>
-            <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.3)', marginBottom: '16px' }}>Something else on your mind?</p>
-            <a href="#contact" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.6)', borderColor: 'rgba(255,255,255,0.15)', fontSize: '14px' }}>
+            <p style={{ fontSize: '14px', color: 'var(--ink-4)', marginBottom: '16px' }}>Something else on your mind?</p>
+            <a href="#contact" className="btn-secondary" style={{ color: 'var(--ink-3)', borderColor: 'var(--border)', fontSize: '14px' }}>
               Just ask us directly →
             </a>
           </div>
