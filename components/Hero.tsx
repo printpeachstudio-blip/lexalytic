@@ -37,7 +37,7 @@ export default function Hero() {
           }}>
             <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
             <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>
-              Digital Studio · UK-Based · Fixed Price
+              UK Digital Studio · Fixed Price · Now taking on new projects
             </span>
           </div>
           <h1 className="fade-up-2" style={{ color: 'var(--white)', marginBottom: '28px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
