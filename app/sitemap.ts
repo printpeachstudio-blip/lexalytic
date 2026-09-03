@@ -106,5 +106,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/google-sheets-automation-uk-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/what-makes-a-good-brief-for-a-developer', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/data-driven-decision-making-uk-sme', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/case-studies', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/case-studies/locum-management-tool-pharmacy', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/case-studies/power-bi-dashboard-professional-services', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/case-studies/cvcraft-ai-product', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/case-studies/data-automation-hairdressing-group', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

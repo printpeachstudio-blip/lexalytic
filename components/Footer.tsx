@@ -17,6 +17,7 @@ export default function Footer() {
             {[
               { href: '/#services', label: 'Services' },
               { href: '/#work', label: 'Work' },
+              { href: '/case-studies', label: 'Case Studies' },
               { href: '/#results', label: 'Results' },
               { href: '/blog', label: 'Blog' },
               { href: '/about', label: 'About' },
