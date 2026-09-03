@@ -2,9 +2,9 @@ name: Publish LinkedIn Post
 
 on:
   schedule:
-    - cron: '0 10 * * 2'  # Every Tuesday 10am UTC (11am UK summer)
-    - cron: '0 10 * * 3'  # Every Wednesday 10am UTC
-    - cron: '0 10 * * 4'  # Every Thursday 10am UTC
+    - cron: '0 10 * * 2'
+    - cron: '0 10 * * 3'
+    - cron: '0 10 * * 4'
   workflow_dispatch:
 
 jobs:
@@ -21,89 +21,4 @@ jobs:
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_MEMBER_ID: 7wmU65vVm_
-        run: |
-          python3 << 'PYEOF'
-          import os, json, urllib.request, urllib.parse, datetime
-
-          token = os.environ['LINKEDIN_ACCESS_TOKEN']
-          member_id = os.environ['LINKEDIN_MEMBER_ID']
-          today = datetime.date.today().isoformat()
-
-          # Read posts file
-          with open('data/linkedin-posts.txt', 'r') as f:
-              content = f.read()
-
-          # Parse posts - each post starts with a date line
-          posts = {}
-          current_date = None
-          current_lines = []
-
-          for line in content.split('\n'):
-              stripped = line.strip()
-              if not stripped or stripped.startswith('#'):
-                  if current_date and current_lines:
-                      posts[current_date] = '\n'.join(current_lines).strip()
-                      current_date = None
-                      current_lines = []
-                  continue
-              # Check if line is a date (YYYY-MM-DD)
-              if len(stripped) == 10 and stripped[4] == '-' and stripped[7] == '-':
-                  if current_date and current_lines:
-                      posts[current_date] = '\n'.join(current_lines).strip()
-                  current_date = stripped
-                  current_lines = []
-              else:
-                  if current_date:
-                      current_lines.append(line)
-
-          if current_date and current_lines:
-              posts[current_date] = '\n'.join(current_lines).strip()
-
-          post_text = posts.get(today)
-
-          if not post_text:
-              print(f'No post scheduled for {today}')
-              exit(0)
-
-          print(f'Posting for {today}:')
-          print(post_text[:100] + '...')
-
-          # Post to LinkedIn via ugcPosts API
-          payload = {
-              "author": f"urn:li:person:{member_id}",
-              "lifecycleState": "PUBLISHED",
-              "specificContent": {
-                  "com.linkedin.ugc.ShareContent": {
-                      "shareCommentary": {
-                          "text": post_text
-                      },
-                      "shareMediaCategory": "NONE"
-                  }
-              },
-              "visibility": {
-                  "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
-              }
-          }
-
-          data = json.dumps(payload).encode('utf-8')
-          req = urllib.request.Request(
-              'https://api.linkedin.com/v2/ugcPosts',
-              data=data
-          )
-          req.add_header('Authorization', f'Bearer {token}')
-          req.add_header('Content-Type', 'application/json')
-          req.add_header('X-Restli-Protocol-Version', '2.0.0')
-
-          try:
-              resp = urllib.request.urlopen(req)
-              result = json.loads(resp.read())
-              print(f'Posted successfully: {result}')
-          except urllib.error.HTTPError as e:
-              error_body = e.read().decode()
-              print(f'Error {e.code}: {error_body}')
-              if 'DUPLICATE_POST' in error_body:
-                  print('Duplicate post detected - skipping gracefully')
-                  exit(0)
-              exit(1)
-
-          PYEOF
+        run: python3 scripts/post-linkedin.py
