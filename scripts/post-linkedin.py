@@ -42,7 +42,7 @@ month_abbr = calendar.month_abbr[dt.month].lower()
 day = dt.strftime('%d')
 image_file = f'data/post-images/post-{month_abbr}{day}.png'
 
-LI_VERSION = '202504'
+LI_VERSION = '202508'
 
 def li_headers(extra={}):
     h = {
