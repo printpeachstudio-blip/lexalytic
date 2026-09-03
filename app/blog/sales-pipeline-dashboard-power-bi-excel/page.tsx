@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/sales-pipeline-dashboard-power-bi-excel' },
   title: 'How to Build a Sales Pipeline Dashboard in Power BI or Excel | Lexalytic',
   description: 'A sales pipeline dashboard shows you exactly where every deal stands and what is likely to close this month. Here is how to build one in Power BI or Excel that updates automatically.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Build a Sales Pipeline Dashboard in Power BI or Excel',
     description: 'A sales pipeline dashboard shows you exactly where every deal stands and what is likely to close this month. Here is how to build one in Power BI or Excel that updates automatically.',

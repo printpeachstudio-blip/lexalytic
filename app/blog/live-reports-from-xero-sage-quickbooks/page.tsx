@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/live-reports-from-xero-sage-quickbooks' },
   title: 'How to Get Live Reports from Xero Sage or QuickBooks Automatically | Lexalytic',
   description: 'Exporting from Xero, Sage, or QuickBooks into Excel every week is manual work that does not need to happen. Here is how to get live reports directly from your accounting software.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Get Live Reports from Xero Sage or QuickBooks Automatically',
     description: 'Exporting from Xero, Sage, or QuickBooks into Excel every week is manual work that does not need to happen. Here is how to get live reports directly from your accounting software.',

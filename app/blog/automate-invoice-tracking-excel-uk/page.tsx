@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-invoice-tracking-excel-uk' },
   title: 'How to Automate Invoice Tracking in Excel (UK Guide 2026) | Lexalytic',
   description: 'Manually tracking invoices in Excel is slow and error-prone. This guide shows UK businesses how to automate invoice tracking so nothing gets missed and payments arrive on time.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Automate Invoice Tracking in Excel (UK Guide 2026)',
     description: 'Manually tracking invoices in Excel is slow and error-prone. This guide shows UK businesses how to automate invoice tracking so nothing gets missed and payments arrive on time.',

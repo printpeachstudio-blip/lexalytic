@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-see-which-jobs-clients-are-profitable' },
   title: 'How to See Which Jobs and Clients Are Actually Making You Money | Lexalytic',
   description: 'Most UK service businesses do not know which jobs and clients are actually profitable until month-end — if then. Here is how to build a live view of margin by job and client.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to See Which Jobs and Clients Are Actually Making You Money',
     description: 'Most UK service businesses do not know which jobs and clients are actually profitable until month-end — if then. Here is how to build a live view of margin by job and client.',

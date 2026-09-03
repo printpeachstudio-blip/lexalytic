@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track' },
   title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It | Lexalytic',
   description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It',
     description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',

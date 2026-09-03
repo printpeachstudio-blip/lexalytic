@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/reduce-admin-time-small-business-uk' },
   title: 'How to Reduce Admin Time in Your Business (UK Guide 2026) | Lexalytic',
   description: 'Admin time is the hidden cost in most small businesses. Here is how UK business owners are cutting hours of weekly admin with automation — without expensive software or technical expertise.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Reduce Admin Time in Your Business (UK Guide 2026)',
     description: 'Admin time is the hidden cost in most small businesses. Here is how UK business owners are cutting hours of weekly admin with automation — without expensive software or technical expertise.',

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-track-project-profitability-uk' },
   title: 'How to Track Project Profitability in Real Time (UK Guide) | Lexalytic',
   description: 'Tracking project profitability in real time means knowing your margin before the project closes, not after. Here is how UK businesses can build a live project profitability view.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Track Project Profitability in Real Time (UK Guide)',
     description: 'Tracking project profitability in real time means knowing your margin before the project closes, not after. Here is how UK businesses can build a live project profitability view.',

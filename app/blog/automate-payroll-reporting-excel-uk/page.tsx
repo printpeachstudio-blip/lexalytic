@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-payroll-reporting-excel-uk' },
   title: 'How to Automate Payroll Reporting in Excel (UK Guide 2026) | Lexalytic',
   description: 'Building payroll reports manually every month costs hours and introduces errors. Here is how to automate payroll reporting in Excel so it runs itself — accurately, every time.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'How to Automate Payroll Reporting in Excel (UK Guide 2026)',
     description: 'Building payroll reports manually every month costs hours and introduces errors. Here is how to automate payroll reporting in Excel so it runs itself — accurately, every time.',

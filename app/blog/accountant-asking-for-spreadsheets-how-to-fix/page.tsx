@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/accountant-asking-for-spreadsheets-how-to-fix' },
   title: 'My Accountant Keeps Asking for Spreadsheets — How to Fix It | Lexalytic',
   description: 'Your accountant asking for spreadsheets every month is a sign your reporting setup needs fixing. Here is how to give them what they need automatically — without the manual work.',
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'My Accountant Keeps Asking for Spreadsheets — How to Fix It',
     description: 'Your accountant asking for spreadsheets every month is a sign your reporting setup needs fixing. Here is how to give them what they need automatically — without the manual work.',
