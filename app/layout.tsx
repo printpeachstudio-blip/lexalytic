@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'Vi1ffNWMta4hV-P-fVj5l8-6BrHpNWxEK1kAAAihSi4',
+    other: {
+      'msvalidate.01': 'EEF7BEAA590764D02138C925D7DC88F8',
+    },
   },
   icons: {
     icon: '/favicon.svg',
