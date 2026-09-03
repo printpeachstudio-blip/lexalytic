@@ -1,22 +1,22 @@
 'use client'
 const steps = [
   {
-    num: '01',
+    num: 'First',
     title: 'Tell us what you need',
-    desc: 'Book a free 30-minute call or send us your spreadsheet. No forms to fill in, no lengthy questionnaires — just tell us what\'s slowing you down.',
+    desc: 'Book a free 30-minute call. Tell us what you need built or fixed. No forms to fill in, no lengthy questionnaires — just tell us what\'s slowing you down.',
   },
   {
-    num: '02',
+    num: 'Then',
     title: 'We scope it in 48 hours',
     desc: 'We scope exactly what needs building and come back within 48 hours with a clear scope, fixed price, and timeline. No vague estimates, no surprises.',
   },
   {
-    num: '03',
+    num: 'We',
     title: 'We build it',
     desc: 'We get to work. You get progress updates. Most projects are delivered within a week. We test everything against your real data before handover.',
   },
   {
-    num: '04',
+    num: 'Done',
     title: 'You get the keys',
     desc: 'Full handover with documentation and a walkthrough so your team can use it confidently. Ongoing support available if you need it.',
   },

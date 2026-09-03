@@ -44,16 +44,15 @@ export default function Contact() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
               {[
-                { icon: '📞', label: 'Free 30-min scoping call', sub: 'We review your process and give you a clear scope' },
-                { icon: '💰', label: 'Fixed price quote in 48 hours', sub: 'Exact cost before any work begins' },
-                { icon: '⚡', label: 'Start within days', sub: 'Not weeks — we keep capacity available' },
+                { icon: '→', label: 'Free 30-min scoping call', sub: 'Tell us what you need and we will scope it clearly' },
+                { icon: '→', label: 'Fixed price quote in 48 hours', sub: 'Exact cost before any work begins' },
+                { icon: '→', label: 'Start within days', sub: 'Not weeks — we keep capacity available' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                   <div style={{
-                    width: '40px', height: '40px', borderRadius: '10px',
-                    background: 'rgba(193,125,46,0.1)', border: '1px solid rgba(193,125,46,0.2)',
+                    width: '28px', height: '28px',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '18px', flexShrink: 0,
+                    fontSize: '16px', color: 'var(--amber)', flexShrink: 0, marginTop: '2px',
                   }}>{item.icon}</div>
                   <div>
                     <div style={{ fontSize: '15px', fontWeight: '500', color: 'var(--white)', marginBottom: '3px' }}>{item.label}</div>

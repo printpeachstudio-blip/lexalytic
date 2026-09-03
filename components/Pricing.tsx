@@ -2,10 +2,10 @@
 const tiers = [
   {
     name: 'Essential',
-    price: 'Quick win',
-    description: 'Perfect for a single automation, report, or process — scoped and priced before any work begins.',
+    price: 'Focused build',
+    description: 'Perfect for a focused project — a tool, a website, an automation, or a dashboard. Scoped and priced before any work begins.',
     features: [
-      'Single process or workflow',
+      'Single project or focused scope',
       'Delivered within 5 working days',
       'Full documentation included',
       '1 round of revisions',
@@ -17,9 +17,9 @@ const tiers = [
   {
     name: 'Professional',
     price: 'Full build',
-    description: 'For more complex builds — full dashboards, multi-process automation, or integrated systems.',
+    description: 'For more complex builds — full platforms, multi-process tools, integrated systems, or websites with custom features.',
     features: [
-      'Multiple processes or full dashboard',
+      'Multiple processes or full build',
       'Delivered within 10 working days',
       'Full documentation + walkthrough',
       '2 rounds of revisions',
@@ -32,12 +32,12 @@ const tiers = [
   {
     name: 'Retainer',
     price: 'Ongoing',
-    description: 'Ongoing support, updates, and new builds as your business evolves. A data partner, not just a one-off consultant.',
+    description: 'Ongoing support, updates, and new builds as your business evolves. An ongoing digital studio partner, not just a one-off project.',
     features: [
       'Monthly hours for new builds & updates',
       'Priority turnaround on all requests',
       'Proactive improvement suggestions',
-      'Quarterly data process review',
+      'Quarterly digital tools review',
       'Direct line — no ticketing system',
     ],
     cta: 'Let\'s talk',
