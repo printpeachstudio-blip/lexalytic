@@ -40,7 +40,7 @@ export default function Contact() {
             <span className="section-label">Get in touch</span>
             <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Let's fix your business problem.</h2>
             <p style={{ color: 'rgba(255,255,255,0.45)', marginBottom: '48px', fontSize: '16px', lineHeight: '1.8', fontWeight: '300' }}>
-              Book a free 30-minute call and we'll tell you exactly what's possible — whether it's data automation, a custom business tool, or both. No commitment, no sales pressure.
+              Book a free 30-minute call. Tell us what you need built — a website, a custom tool, an AI product, or a data system. We'll tell you exactly what we'd build and what it would cost. No commitment, no sales pressure.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
               {[

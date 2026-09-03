@@ -43,7 +43,7 @@ export default function AboutPage() {
     "knowsAbout": ["Website Development", "Custom Software Development", "AI-Powered Tools", "Platform Development", "Power BI", "Excel Automation", "VBA", "Python", "Data Automation"],
     "hasOccupation": {
       "@type": "Occupation",
-      "name": "Data Automation Consultant",
+      "name": "Digital Studio Founder",
       "occupationLocation": {
         "@type": "Country",
         "name": "United Kingdom"
@@ -81,7 +81,7 @@ export default function AboutPage() {
             {/* Photo placeholder */}
             <img
               src="/mihir.jpg"
-              alt="Mihir Hindocha - Data Automation Consultant and Founder of Lexalytic"
+              alt="Mihir Hindocha - Digital Studio Founder and Founder of Lexalytic"
               style={{
                 width: '160px', height: '160px', borderRadius: '50%',
                 border: '3px solid rgba(193,125,46,0.3)',
