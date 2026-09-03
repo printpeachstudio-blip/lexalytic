@@ -19,8 +19,8 @@ const faqs = [
     a: 'Yes. We document everything clearly and walk your team through how it works. The goal is to give you something you can use independently — not create dependency on us.',
   },
   {
-    q: 'What industries do you work with?',
-    a: 'All of them. We\'ve built solutions for manufacturing, finance, logistics, professional services, healthcare, retail, and more. The tools differ but the problems are almost always the same.',
+    q: 'What kinds of businesses do you work with?',
+    a: 'All kinds. We have built websites, custom tools, AI products, and data systems for businesses in healthcare, recruitment, construction, professional services, retail, hospitality, and more. The technologies differ but the underlying needs are almost always the same.',
   },
   {
     q: 'Can you work with our existing systems?',
