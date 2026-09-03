@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-payroll-reporting-excel-uk' },
   title: 'How to Automate Payroll Reporting in Excel (UK Guide 2026) | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Building payroll reports manually every month costs hours and introduces errors. Here is how to automate payroll reporting in Excel so it runs itself — accurately, every time.',
   openGraph: {
     title: 'How to Automate Payroll Reporting in Excel (UK Guide 2026)',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Building payroll reports manually every month costs hours and introduces errors. Here is how to automate payroll reporting in Excel so it runs itself — accurately, every time.',
     url: 'https://www.lexalytic.com/blog/automate-payroll-reporting-excel-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',

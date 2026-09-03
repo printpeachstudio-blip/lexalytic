@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-see-which-jobs-clients-are-profitable' },
   title: 'How to See Which Jobs and Clients Are Actually Making You Money | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Most UK service businesses do not know which jobs and clients are actually profitable until month-end — if then. Here is how to build a live view of margin by job and client.',
   openGraph: {
     title: 'How to See Which Jobs and Clients Are Actually Making You Money',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Most UK service businesses do not know which jobs and clients are actually profitable until month-end — if then. Here is how to build a live view of margin by job and client.',
     url: 'https://www.lexalytic.com/blog/how-to-see-which-jobs-clients-are-profitable',
     siteName: 'Lexalytic',
     locale: 'en_GB',

@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/stop-business-running-on-gut-feeling' },
   title: 'How to Stop Your Business Running on Gut Feeling | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Most UK business owners make decisions on gut feel because the data takes too long to compile. Here is how to replace gut feel with a live dashboard that answers the questions that matter.',
   openGraph: {
     title: 'How to Stop Your Business Running on Gut Feeling',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Most UK business owners make decisions on gut feel because the data takes too long to compile. Here is how to replace gut feel with a live dashboard that answers the questions that matter.',
     url: 'https://www.lexalytic.com/blog/stop-business-running-on-gut-feeling',
     siteName: 'Lexalytic',
     locale: 'en_GB',

@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/live-reports-from-xero-sage-quickbooks' },
   title: 'How to Get Live Reports from Xero Sage or QuickBooks Automatically | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Exporting from Xero, Sage, or QuickBooks into Excel every week is manual work that does not need to happen. Here is how to get live reports directly from your accounting software.',
   openGraph: {
     title: 'How to Get Live Reports from Xero Sage or QuickBooks Automatically',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Exporting from Xero, Sage, or QuickBooks into Excel every week is manual work that does not need to happen. Here is how to get live reports directly from your accounting software.',
     url: 'https://www.lexalytic.com/blog/live-reports-from-xero-sage-quickbooks',
     siteName: 'Lexalytic',
     locale: 'en_GB',

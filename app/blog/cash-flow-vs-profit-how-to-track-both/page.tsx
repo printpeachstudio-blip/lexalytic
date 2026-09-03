@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both' },
   title: 'Why Cash Flow and Profit Are Different — And How to Track Both | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both — automatically — so you always know where you stand.',
   openGraph: {
     title: 'Why Cash Flow and Profit Are Different — And How to Track Both',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both — automatically — so you always know where you stand.',
     url: 'https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both',
     siteName: 'Lexalytic',
     locale: 'en_GB',

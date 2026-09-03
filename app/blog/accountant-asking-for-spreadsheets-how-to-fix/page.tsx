@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/accountant-asking-for-spreadsheets-how-to-fix' },
   title: 'My Accountant Keeps Asking for Spreadsheets — How to Fix It | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Your accountant asking for spreadsheets every month is a sign your reporting setup needs fixing. Here is how to give them what they need automatically — without the manual work.',
   openGraph: {
     title: 'My Accountant Keeps Asking for Spreadsheets — How to Fix It',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Your accountant asking for spreadsheets every month is a sign your reporting setup needs fixing. Here is how to give them what they need automatically — without the manual work.',
     url: 'https://www.lexalytic.com/blog/accountant-asking-for-spreadsheets-how-to-fix',
     siteName: 'Lexalytic',
     locale: 'en_GB',

@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/sales-pipeline-dashboard-power-bi-excel' },
   title: 'How to Build a Sales Pipeline Dashboard in Power BI or Excel | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'A sales pipeline dashboard shows you exactly where every deal stands and what is likely to close this month. Here is how to build one in Power BI or Excel that updates automatically.',
   openGraph: {
     title: 'How to Build a Sales Pipeline Dashboard in Power BI or Excel',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'A sales pipeline dashboard shows you exactly where every deal stands and what is likely to close this month. Here is how to build one in Power BI or Excel that updates automatically.',
     url: 'https://www.lexalytic.com/blog/sales-pipeline-dashboard-power-bi-excel',
     siteName: 'Lexalytic',
     locale: 'en_GB',

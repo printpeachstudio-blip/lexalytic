@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it' },
   title: 'Power BI for Small Business UK — Is It Worth It? | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Power BI costs £8.40 per user per month. For most UK small businesses, the question is whether the visibility it provides is worth that. Here is an honest answer.',
   openGraph: {
     title: 'Power BI for Small Business UK — Is It Worth It?',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Power BI costs £8.40 per user per month. For most UK small businesses, the question is whether the visibility it provides is worth that. Here is an honest answer.',
     url: 'https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it',
     siteName: 'Lexalytic',
     locale: 'en_GB',

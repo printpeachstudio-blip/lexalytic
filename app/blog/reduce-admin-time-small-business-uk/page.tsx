@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/reduce-admin-time-small-business-uk' },
   title: 'How to Reduce Admin Time in Your Business (UK Guide 2026) | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Admin time is the hidden cost in most small businesses. Here is how UK business owners are cutting hours of weekly admin with automation — without expensive software or technical expertise.',
   openGraph: {
     title: 'How to Reduce Admin Time in Your Business (UK Guide 2026)',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Admin time is the hidden cost in most small businesses. Here is how UK business owners are cutting hours of weekly admin with automation — without expensive software or technical expertise.',
     url: 'https://www.lexalytic.com/blog/reduce-admin-time-small-business-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',

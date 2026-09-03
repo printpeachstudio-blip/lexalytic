@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/excel-reporting-recruitment-agencies-uk' },
   title: 'Excel Reporting for Recruitment Agencies UK (2026 Guide) | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Recruitment agencies run on data — placements, margins, consultant performance — but most track it manually in Excel. Here is how to automate your reporting and get a live picture of your business.',
   openGraph: {
     title: 'Excel Reporting for Recruitment Agencies UK (2026 Guide)',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Recruitment agencies run on data — placements, margins, consultant performance — but most track it manually in Excel. Here is how to automate your reporting and get a live picture of your business.',
     url: 'https://www.lexalytic.com/blog/excel-reporting-recruitment-agencies-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',

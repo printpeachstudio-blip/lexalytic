@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/data-automation-professional-services-uk' },
   title: 'Data Automation for Professional Services UK — Where to Start | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Professional services firms lose hours every week to manual reporting and data admin. Here is where to start with data automation if you run a consultancy, agency, or similar business in the UK.',
   openGraph: {
     title: 'Data Automation for Professional Services UK — Where to Start',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Professional services firms lose hours every week to manual reporting and data admin. Here is where to start with data automation if you run a consultancy, agency, or similar business in the UK.',
     url: 'https://www.lexalytic.com/blog/data-automation-professional-services-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',

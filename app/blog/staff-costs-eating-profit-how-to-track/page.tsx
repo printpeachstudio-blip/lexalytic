@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track' },
   title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It | Lexalytic',
-  description: 'A practical guide for UK businesses. From a data automation consultant with 15 years experience.',
+  description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
   openGraph: {
     title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It',
-    description: 'A practical guide for UK businesses from Lexalytic.',
+    description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
     url: 'https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track',
     siteName: 'Lexalytic',
     locale: 'en_GB',
