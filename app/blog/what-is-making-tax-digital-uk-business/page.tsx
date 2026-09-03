@@ -4,10 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-is-making-tax-digital-uk-business' },
   title: 'What Is Making Tax Digital and Is Your Business Ready? | Lexalytic',
-  description: 'Making Tax Digital is HMRC's programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others ',
+  description: 'Making Tax Digital is HMRC&#x27;s programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others ',
   openGraph: {
     title: 'What Is Making Tax Digital and Is Your Business Ready?',
-    description: 'Making Tax Digital is HMRC's programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others ',
+    description: 'Making Tax Digital is HMRC&#x27;s programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others ',
     url: 'https://www.lexalytic.com/blog/what-is-making-tax-digital-uk-business',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -49,7 +49,7 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Making Tax Digital is HMRC's programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others the deadlines are approaching. Understanding what it requires and whether your current setup is compliant is worth doing before HMRC asks the question.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Making Tax Digital is HMRC&#x27;s programme to move UK tax administration to a fully digital system. For many UK businesses it is already mandatory; for others the deadlines are approaching. Understanding what it requires and whether your current setup is compliant is worth doing before HMRC asks the question.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What Making Tax Digital actually requires</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Making Tax Digital for VAT has been mandatory for VAT-registered businesses since 2019 for those above the VAT threshold, and since 2022 for all VAT-registered businesses. It requires keeping digital records and submitting VAT returns using MTD-compatible software. Most businesses using Xero, QuickBooks, Sage, or FreeAgent are already compliant without realising it — these platforms have had MTD functionality built in for years. The businesses most at risk are those still submitting VAT returns manually through the HMRC portal or using software that has not been updated.</p>
