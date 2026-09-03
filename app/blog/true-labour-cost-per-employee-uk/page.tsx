@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/true-labour-cost-per-employee-uk' },
   title: 'How to Know Your True Labour Cost Per Employee (UK Guide) | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
-  robots: { index: false, follow: false },
+  description: 'The salary on the contract is not what an employee costs. For most UK businesses the true cost of employment is 25-35% higher than gross pay once employer ',
   openGraph: {
     title: 'How to Know Your True Labour Cost Per Employee (UK Guide)',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'The salary on the contract is not what an employee costs. For most UK businesses the true cost of employment is 25-35% higher than gross pay once employer ',
     url: 'https://www.lexalytic.com/blog/true-labour-cost-per-employee-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Know Your True Labour Cost Per Employee (UK Guide)","description":"A practical guide for UK businesses.","datePublished":"2026-11-05","dateModified":"2026-11-05","url":"https://www.lexalytic.com/blog/true-labour-cost-per-employee-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Know Your True Labour Cost Per Employee (UK Guide)","description":"The salary on the contract is not what an employee costs. For most UK businesses the true cost of employment is 25-35% h","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/true-labour-cost-per-employee-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -37,7 +35,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Finance</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>November 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>November 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to Know Your True Labour Cost Per Employee (UK Guide)</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing November 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on November 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The salary on the contract is not what an employee costs. For most UK businesses the true cost of employment is 25-35% higher than gross pay once employer obligations are added in. Understanding this number changes how you think about hiring, pricing, and profitability.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The components of true employment cost</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Gross salary is the starting point. On top of it sits employer National Insurance — currently 13.8% on earnings above the secondary threshold of £9,100 per year. Auto-enrolment pension contributions add a minimum of 3% of qualifying earnings. Holiday pay represents approximately 12.07% of basic pay for employees on standard 28-day entitlement. Add statutory sick pay exposure, employer liability insurance, any death in service or private medical benefit, and the gap between what the contract says and what the employee actually costs widens further. For a £35,000 salary, the true employer cost typically sits between £43,000 and £47,000 before any overhead allocation.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why this matters for pricing and profitability</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Service businesses that price based on salary rather than true employment cost systematically underprice their work. If a consultant costs £45,000 to employ but you price their time based on a £35,000 salary assumption, every project they work on is priced at a margin that is lower than you think. Multiply that across a team of ten and the pricing error compounds significantly. The businesses that understand their true labour cost price more accurately, win the right work, and maintain better margins.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Building a true cost model in Excel</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The simplest approach is a one-page Excel model with a row per employee. Columns for gross salary, employer NI calculation, pension contribution, holiday accrual, and any additional benefits. The total gives you true cost per employee. Divide by annual working hours — typically 1,680 after holiday and bank holidays — and you have a true hourly cost that can inform project pricing, capacity planning, and profitability analysis. Updated once a year when salaries change, it takes less than an hour to maintain.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Connecting labour cost to revenue and margin</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most useful version of this analysis connects true labour cost to revenue attribution — showing not just what each person costs but what they generate. For service businesses this requires some form of time recording or revenue allocation by team member. The gap between cost and contribution is the metric that drives decisions about team structure, performance conversations, and hiring plans. A Power BI dashboard that shows this in real time, updated from payroll and billing data automatically, gives management the visibility that most businesses only get at year-end — when it is too late to act on it.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

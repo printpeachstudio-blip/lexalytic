@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it' },
   title: 'Your 2027 Business Data Resolution — And How to Keep It | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
-  robots: { index: false, follow: false },
+  description: 'Business resolutions about data are easy to make and hard to keep. Not because the intentions are wrong but because the systems are not set up to support t',
   openGraph: {
     title: 'Your 2027 Business Data Resolution — And How to Keep It',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'Business resolutions about data are easy to make and hard to keep. Not because the intentions are wrong but because the systems are not set up to support t',
     url: 'https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Your 2027 Business Data Resolution — And How to Keep It","description":"A practical guide for UK businesses.","datePublished":"2026-12-29","dateModified":"2026-12-29","url":"https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Your 2027 Business Data Resolution — And How to Keep It","description":"Business resolutions about data are easy to make and hard to keep. Not because the intentions are wrong but because the ","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/2027-business-data-resolution-how-to-keep-it","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -37,7 +35,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Automation</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Your 2027 Business Data Resolution — And How to Keep It</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing December 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on December 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Business resolutions about data are easy to make and hard to keep. Not because the intentions are wrong but because the systems are not set up to support them. A resolution to "get better at reporting" without a specific process change is not a resolution — it is a wish.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why data resolutions fail and what to do instead</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Most data resolutions fail because they are too vague and too dependent on willpower. "Keep better records" fails because it does not specify what records, how, or when. "Look at the numbers more often" fails because there is no trigger and no system that makes the numbers easy to look at. The resolutions that succeed are the ones attached to a specific behaviour change — a weekly habit, an automated process, a scheduled review. The intention is the same; the mechanism is different.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The one habit that changes everything</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>If there is a single data habit that improves business decision-making more than any other, it is a weekly 30-minute numbers review. Not a deep dive — a quick look at the three to five metrics that tell you whether the business is on track. Revenue versus target. Cash position. Pipeline. Whatever is most relevant to your business. Done consistently, this habit catches problems early, builds intuition about what normal looks like, and makes the monthly management meeting a discussion of context rather than a first look at figures that are already a month old.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Making the resolution structural rather than motivational</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The difference between a resolution that lasts and one that does not is whether it relies on motivation or structure. Motivation is unreliable — it peaks in January and fades by March. Structure is consistent — if the report is automatically in your inbox every Monday morning, you look at it regardless of motivation. If the dashboard is pinned as the first tab in your browser, you see it before anything else. If the weekly review is a recurring calendar appointment with an agenda, it happens even when you are busy. Build the structure first; the habit follows.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The specific changes worth making in January</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Three specific changes made in January tend to compound throughout the year. First, set up one automatic report — the weekly or monthly summary that currently requires manual work — so it delivers itself. Second, agree on definitions for the two or three metrics that are most often disputed in management discussions, document them, and tell everyone which system is authoritative. Third, block 30 minutes every Monday for a numbers review and protect it as seriously as a client meeting. These three changes, implemented properly, produce better business decisions for the rest of the year.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

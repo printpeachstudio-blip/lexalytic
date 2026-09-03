@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/reduce-month-end-stress-finance-team-uk' },
   title: 'How to Reduce Month-End Stress for Your Finance Team | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience.',
-  robots: { index: false, follow: false },
+  description: 'Month-end is stressful in most finance teams because the work is concentrated into a few days and the data is never quite ready. Transactions are still com',
   openGraph: {
     title: 'How to Reduce Month-End Stress for Your Finance Team',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'Month-end is stressful in most finance teams because the work is concentrated into a few days and the data is never quite ready. Transactions are still com',
     url: 'https://www.lexalytic.com/blog/reduce-month-end-stress-finance-team-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Reduce Month-End Stress for Your Finance Team","description":"A practical guide for UK businesses.","datePublished":"2026-10-29","dateModified":"2026-10-29","url":"https://www.lexalytic.com/blog/reduce-month-end-stress-finance-team-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Reduce Month-End Stress for Your Finance Team","description":"Month-end is stressful in most finance teams because the work is concentrated into a few days and the data is never quit","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/reduce-month-end-stress-finance-team-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -37,7 +35,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Finance</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>October 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>October 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to Reduce Month-End Stress for Your Finance Team</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing October 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on October 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Month-end is stressful in most finance teams because the work is concentrated into a few days and the data is never quite ready. Transactions are still coming in. Queries are still being resolved. The management pack is needed before everything has been reconciled. This does not have to be the pattern.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why month-end is stressful and where the stress actually comes from</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The stress of month-end is almost never about the accounting itself — it is about the data not being ready. Bank reconciliation that has been left for the last week of the month. Expense claims submitted on the last day. Purchase invoices that arrive after the period closes. Each of these is a known, recurring problem that could be addressed structurally rather than managed as a recurring crisis. The finance teams with the least stressful month-ends are the ones that have systematically eliminated the last-minute data problem.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The month-long habits that make month-end easy</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Bank reconciliation done weekly rather than monthly is the single highest-impact change most finance teams can make. A bank that is reconciled every Friday means month-end reconciliation takes 30 minutes rather than a day. Expense claim deadlines enforced at mid-month rather than month-end mean no last-minute submissions. Purchase invoice processing as a daily habit rather than a month-end batch means accruals are minimal. None of these changes require new systems — they require new habits and, occasionally, clearer policies about what the business expects from its team.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The automation that removes the mechanical work</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Once the data discipline is in place, automation removes the mechanical month-end tasks. Power Query can pull and consolidate data from multiple sources automatically. Management account templates that refresh from accounting software produce reports in minutes rather than hours. Variance commentary templates populated automatically from the data reduce the time spent writing narrative. The goal is a month-end close that takes two days rather than a week — with most of those two days spent on analysis and review rather than data gathering and formatting.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What finance teams can do with the time saved</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Finance teams that have streamlined month-end consistently say the same thing: the work they do in the freed time is more valuable than the work it replaced. Business partnering — sitting alongside operational teams and helping them understand what the numbers mean — is the work that creates the most value. Analysis of margin trends, cost behaviour, and cash flow patterns provides insights that improve decisions. This is the work that finance teams want to do. Automation makes it possible by removing the mechanical work that currently consumes the time.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

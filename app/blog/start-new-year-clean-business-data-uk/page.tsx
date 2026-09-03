@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/start-new-year-clean-business-data-uk' },
   title: 'How to Start the New Year With Clean Business Data | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
-  robots: { index: false, follow: false },
+  description: 'The start of a new year is the best time to address data problems that have accumulated. Not because January has any special properties, but because the ye',
   openGraph: {
     title: 'How to Start the New Year With Clean Business Data',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'The start of a new year is the best time to address data problems that have accumulated. Not because January has any special properties, but because the ye',
     url: 'https://www.lexalytic.com/blog/start-new-year-clean-business-data-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Start the New Year With Clean Business Data","description":"A practical guide for UK businesses.","datePublished":"2026-12-17","dateModified":"2026-12-17","url":"https://www.lexalytic.com/blog/start-new-year-clean-business-data-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Start the New Year With Clean Business Data","description":"The start of a new year is the best time to address data problems that have accumulated. Not because January has any spe","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/start-new-year-clean-business-data-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -36,8 +34,8 @@ export default function BlogPost() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Quality</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Automation</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to Start the New Year With Clean Business Data</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing December 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on December 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The start of a new year is the best time to address data problems that have accumulated. Not because January has any special properties, but because the year-end creates a natural boundary — a clean break between what was and what will be. Using that boundary intentionally makes a real difference.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The data audit that reveals what needs fixing</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Before fixing anything, it is worth understanding what is actually broken. A data audit for a small business is not a complex exercise — it is a structured review of the main systems. Is the accounting software reconciled and current? Are customer records in the CRM complete and up to date? Are any spreadsheets that the business depends on maintained by a single person whose departure would be a problem? Are there duplicate records across systems that cause confusion? Listing the problems before solving them prevents the common mistake of fixing the wrong thing first.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The quick wins that make an immediate difference</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Some data problems can be fixed in an afternoon. Duplicate customer records merged. Outdated contact details removed. Spreadsheets moved to shared drives where multiple people can access and maintain them. Accounting categories that were set up inconsistently standardised. These quick wins do not require a project — they require a few hours of focused attention. The value is immediate: reports become more reliable, searches return cleaner results, and the daily friction of working with messy data reduces.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The structural fixes that prevent problems recurring</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Quick wins address the symptoms; structural fixes address the causes. If accounting categories are inconsistently applied, a coding guide that everyone follows prevents the problem recurring. If CRM records are incomplete, a required field policy ensures future records are complete from the start. If spreadsheets are maintained by one person, a documented process and a backup owner address the single-point-of-failure risk. These structural fixes take longer to implement but deliver compounding returns — the data stays cleaner over time rather than degrading back to its previous state.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Setting up for the year ahead</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most useful data investment at the start of a new year is often the simplest: a regular data maintenance habit. Monthly bank reconciliation. Weekly CRM updates. A quarterly review of reports to check that the data still looks right. These habits take 30-60 minutes per week in total and prevent the year-end data problems that cause so much stress. The businesses with the cleanest data at year-end are almost never the ones that did a big clean-up in January — they are the ones that maintained things consistently throughout the year.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

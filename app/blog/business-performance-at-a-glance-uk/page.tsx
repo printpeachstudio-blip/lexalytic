@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/business-performance-at-a-glance-uk' },
   title: 'How to See Your Business Performance at a Glance | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
-  robots: { index: false, follow: false },
+  description: 'Most business owners do not have a single place to look to understand how their business is performing right now. Revenue is in the accounting software. Pi',
   openGraph: {
     title: 'How to See Your Business Performance at a Glance',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'Most business owners do not have a single place to look to understand how their business is performing right now. Revenue is in the accounting software. Pi',
     url: 'https://www.lexalytic.com/blog/business-performance-at-a-glance-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to See Your Business Performance at a Glance","description":"A practical guide for UK businesses.","datePublished":"2026-12-03","dateModified":"2026-12-03","url":"https://www.lexalytic.com/blog/business-performance-at-a-glance-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to See Your Business Performance at a Glance","description":"Most business owners do not have a single place to look to understand how their business is performing right now. Revenu","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/business-performance-at-a-glance-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -37,7 +35,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Intelligence</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to See Your Business Performance at a Glance</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing December 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on December 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Most business owners do not have a single place to look to understand how their business is performing right now. Revenue is in the accounting software. Pipeline is in the CRM. Operations are in spreadsheets or project management tools. Getting a complete picture requires opening four different systems and mentally assembling the information. It should not work like this.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What a business performance dashboard actually needs</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most useful business performance dashboards are deliberately narrow. Three to five metrics that the owner or MD looks at every day to know whether the business is on track. Revenue versus target. Gross margin. Cash in the bank. Active clients or jobs. Pipeline value. Everything else is operational detail that belongs in department-specific reports. The temptation is to build something comprehensive; the reality is that comprehensive dashboards get looked at once and then ignored because they require too much cognitive effort to interpret quickly.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The technical options for building it</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI is the strongest option for businesses pulling data from multiple systems — it connects directly to accounting software, CRMs, and databases, and updates automatically. For businesses working primarily in Microsoft 365, a Power BI dashboard published to Teams means the performance view is available in the same place the team communicates. For simpler setups — one accounting system and a spreadsheet — a well-designed Excel dashboard with Power Query refreshing the data automatically is often sufficient and faster to build.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Getting the data connections right</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most common reason performance dashboards fail is data quality. The accounting software figures do not match the spreadsheet figures. The CRM pipeline includes deals that have already been lost. The operational numbers are updated inconsistently. Before building a dashboard, it is worth spending time on the underlying data — making sure each source is maintained consistently and that the definitions used in each system match. A dashboard built on unreliable data produces unreliable conclusions that undermine confidence in the whole system.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Making it something people actually use</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The dashboards that get used are the ones that answer the questions people are already asking. Before building anything, list the three questions the MD asks most often. Build a dashboard that answers those three questions. Nothing more. If those questions change over time, update the dashboard. The discipline of answering a small number of questions well is harder than it sounds — there is always pressure to add more — but it is what separates dashboards that drive decisions from dashboards that gather dust.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

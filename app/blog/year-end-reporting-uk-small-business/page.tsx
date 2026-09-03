@@ -4,11 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/year-end-reporting-uk-small-business' },
   title: 'Year-End Reporting for UK Small Businesses — How to Make It Less Painful | Lexalytic',
-  description: 'A practical guide for UK businesses from a data automation consultant with 15 years experience across Shell, NHS, Warner Brothers and more.',
-  robots: { index: false, follow: false },
+  description: 'Year-end reporting is consistently cited as one of the most stressful periods for UK small business owners. The stress is almost always preventable — not b',
   openGraph: {
     title: 'Year-End Reporting for UK Small Businesses — How to Make It Less Painful',
-    description: 'Practical guide for UK businesses from Lexalytic.',
+    description: 'Year-end reporting is consistently cited as one of the most stressful periods for UK small business owners. The stress is almost always preventable — not b',
     url: 'https://www.lexalytic.com/blog/year-end-reporting-uk-small-business',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -17,8 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Year-End Reporting for UK Small Businesses — How to Make It Less Painful","description":"A practical guide for UK businesses.","datePublished":"2026-11-24","dateModified":"2026-11-24","url":"https://www.lexalytic.com/blog/year-end-reporting-uk-small-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
-
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Year-End Reporting for UK Small Businesses — How to Make It Less Painful","description":"Year-end reporting is consistently cited as one of the most stressful periods for UK small business owners. The stress i","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/year-end-reporting-uk-small-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -37,7 +35,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Finance</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>November 2026 · 10 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>November 2026 · 8 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Year-End Reporting for UK Small Businesses — How to Make It Less Painful</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -51,26 +49,19 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Publishing November 2026</p>
-            <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>This article publishes on November 2026. In the meantime, explore our related guides below or book a free call to discuss your specific situation directly.</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
-            {[
-              { title: 'How to Build a KPI Dashboard for Your Small Business', href: '/blog/kpi-dashboard-small-business-uk', tag: 'Power BI' },
-              { title: 'How to Track Business Performance Without a Data Team', href: '/blog/track-business-performance-without-data-team', tag: 'Business Intelligence' },
-              { title: 'My Finance Team Is Spending Hours on Manual Reporting', href: '/blog/finance-team-manual-reporting-fix', tag: 'Finance' },
-              { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-            ].map((post, i) => (
-              <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
-                <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
-              </Link>
-            ))}
-          </div>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Year-end reporting is consistently cited as one of the most stressful periods for UK small business owners. The stress is almost always preventable — not by doing less, but by distributing the work differently throughout the year.</p>
+          
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why year-end feels painful when it does not have to</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Year-end feels painful because it concentrates work that should have been spread across twelve months into a few weeks. Bank reconciliation that was left. Receipts that were not recorded. Invoices that were miscoded. The year-end pain is a symptom of process gaps throughout the year, not a property of year-end itself. Businesses that maintain clean books monthly find that year-end is a brief review rather than a major project.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The monthly habits that make year-end easy</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Four habits eliminate most year-end pain. First, monthly bank reconciliation — every account reconciled to the statement within the first week of the following month. Second, expense processing as it happens — receipts photographed and uploaded at the time of purchase, not collected in a pile for processing later. Third, invoicing promptly — all work invoiced within the week it was completed, not left to accumulate. Fourth, a monthly review of outstanding items — anything unusual, uncoded, or unexplained investigated when the memory is fresh rather than six months later when context is lost.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The reporting your accountant actually needs</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Most accountants need the same things from their clients at year-end: reconciled bank statements, a complete record of all income and expenses, documentation for any significant or unusual items, and clarity on any transactions that straddle the business and personal boundary. If your books are maintained in Xero, QuickBooks, or Sage and are kept current throughout the year, your accountant can access most of this directly. The conversation shifts from data gathering to the advisory questions — tax planning, structuring, and the decisions that actually require expertise.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Using year-end as a business review opportunity</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The year-end accounts, once produced, contain the most complete and accurate picture of your business that exists anywhere. Revenue by client or product line. Cost by category. Margin trends. Working capital position. Most businesses glance at the headline figures and file the accounts. The ones that use the year-end as a proper business review — comparing this year to last year, identifying where margin improved and where it did not, planning what to change in the coming year — get significantly more value from the exercise. The data is already there. Using it is a choice.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
-            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your situation now?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>
