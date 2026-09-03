@@ -8,6 +8,7 @@
 #   Week of Sep 15: what-we-actually-build.pdf
 #   Week of Sep 22: true-cost-of-manual-reporting.pdf
 #   Week of Sep 29: custom-crm-vs-saas.pdf
+# TOKEN RENEWAL REMINDER: Renew LINKEDIN_ACCESS_TOKEN before 2nd November 2026
 
 2026-09-03
 A business owner I spoke to last month was paying £340/month for a CRM.
@@ -29,26 +30,38 @@ Almost always more than building the right one.
 What does that calculation look like for your business?
 
 2026-09-08
-I spoke to a business owner last week who was spending 6 hours every Monday rebuilding the same report.
+A business owner was spending 6 hours every Monday rebuilding the same report.
 
 Same data. Same format. Same spreadsheet. Every single week. For three years.
 
 We connected Power BI directly to their systems. The report now refreshes automatically. They have not touched it since.
 
-6 hours a week is 312 hours a year. At any reasonable hourly cost, that pays for a proper system many times over.
+6 hours a week is 312 hours a year.
 
-What process in your business costs the most time every week?
+At £30 per hour fully loaded, that is £9,360 per year. On one report.
+
+The Power BI build cost less than that. It paid for itself in under 4 months.
+
+The report was never the bottleneck. The process was.
+
+What is the most time-consuming recurring task in your business right now?
 
 2026-09-10
-A question I get asked often: should we build it or buy it?
+Most businesses I speak to use both Excel and accounting software.
 
-The honest answer depends on one thing: how specific is your process?
+But nobody has decided what lives where.
 
-If your sales pipeline looks like a standard pipeline, HubSpot handles it well.
+The result: the same number in two places. Manual transfers between systems. Reports nobody quite trusts because it is unclear which source is authoritative.
 
-But if your process is specific — your terminology, your workflow, your data — every generic tool requires compromise. And compromise accumulates quietly until the workarounds become the process.
+The fix is simpler than people expect.
 
-The businesses that benefit most from custom software are the ones that did the 3-year cost calculation before renewing another SaaS subscription.
+Transaction data belongs in your accounting software. It is the authoritative record — what your accountant, HMRC, and any future acquirer will want to see.
+
+Analysis, forecasting, and operational modelling belongs in Excel — drawing on data exported from accounting software rather than duplicating it.
+
+One-way connection. Accounting software feeds Excel. Not the other way round.
+
+Once that division is clear, the reconciliation problems stop.
 
 2026-09-15
 We built CVCraft AI in a few weeks.
@@ -57,199 +70,271 @@ The idea: most people know their CV is not good enough but professional rewrites
 
 So we built an automated service.
 
-CV submitted → Claude rewrites it for the target role → Stripe takes payment → document delivered within 24 hours.
+CV submitted. Claude rewrites it for the target role. Stripe takes payment. Document delivered within 24 hours.
 
 No human involved between submission and delivery.
 
 That is what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific workflow, doing a specific job, reliably, at scale.
 
-If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance — it is worth a conversation.
+The businesses getting the most from AI in 2026 are not the most technically sophisticated. They are the most specific about which problem they are solving.
+
+If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance — that is the one to automate first.
 
 2026-09-17
-Most business owners I speak to cannot answer three questions in real time:
+I got asked recently what it costs to hire a Power BI consultant in the UK.
 
-What is our gross margin this month?
-What does cash look like in 6 weeks?
-Which clients are actually profitable?
+The honest answer: day rates typically run £400-£800. A full dashboard project from a consultancy usually lands between £5,000 and £25,000 depending on complexity and who you hire.
 
-Not because they do not care. Because the data lives across four systems and nobody has connected them.
+But the more useful question is: what does it cost you NOT to have the visibility?
 
-A dashboard that answers those three questions automatically is not a luxury. It is the foundation of making good decisions quickly.
+A business making decisions without reliable data is not saving the consultancy fee. It is spending it differently — on decisions made with incomplete information, reports produced manually every week, and opportunities missed because nobody could see them clearly enough.
 
-Most businesses can have it built and running in under two weeks.
+The payback on a good Power BI build is almost always under 12 months.
+
+After that it is pure return.
 
 2026-09-22
-15 years across Shell, NHS, Warner Bros, Citi, Foster and Partners.
+There is a specific type of website that ranks on Google and converts visitors into clients.
 
-Then I went out on my own.
+And there is a type that looks fine but does neither.
 
-Not because the work was not interesting. Because I wanted to work directly with businesses — not through layers of procurement, process, and project governance.
+The difference is not design. It is how it was built.
 
-The businesses I work with now are smaller. The problems are equally real. And the work gets done faster because there is no committee deciding whether it should.
+WordPress sites with page builders load slowly, score poorly on Core Web Vitals, and require constant plugin maintenance. The SEO ceiling is low.
 
-If your business has a digital problem — a website that does not convert, a process running on spreadsheets, a tool you wish existed — I would like to hear about it.
+This site is built in Next.js. No WordPress. No templates. No monthly platform fees. It scores 100 on Google SEO. It has 97 pages, structured data on every page, and a blog that publishes automatically twice a week.
+
+A website built properly is a business asset that compounds over time.
+
+A website built quickly is an expense that needs replacing in 18 months.
+
+If your current site is not generating enquiries consistently, the problem is almost certainly structural — not the content on it.
 
 2026-09-24
-Something that comes up in almost every first conversation:
+A question worth asking before signing another SaaS contract:
 
-"We have tried to fix this before and it did not work."
+What are we actually paying for?
 
-Usually what happened: they bought software that almost fit. Configured it until it sort of fit. Built workarounds for the bits that did not. Then hired someone to manage the workarounds.
+Most businesses use around 20% of the features in their software stack. The other 80% are configured, paid for, and ignored. Or worse — the business has adapted its processes to fit the software rather than the other way round.
 
-The process never changed. The software added a layer on top of the problem.
+The five signs you have outgrown your current software:
 
-Custom tools work differently. The process comes first. The software gets built around it — not the other way round.
+Your team has built workarounds everyone accepts as normal.
+You pay for features you never use while missing ones you need.
+New starters need training on the workarounds, not just the software.
+Data lives in multiple places and nobody is sure which is current.
+The monthly cost keeps rising but the value does not.
+
+If three or more of those are true, the 3-year cost calculation is worth doing before the next renewal.
 
 2026-09-29
-The FamilyEntitled calculator took a few weeks to build.
+FamilyEntitled took a few weeks to build.
 
 It tells UK families exactly what benefits and entitlements they are eligible for — across 8 government schemes — based on their specific situation. No data stored. No account required. Entirely private.
 
-The average family that uses it finds £4,700 in entitlements they did not know they were owed.
+The average family that uses it finds £4,700 in annual entitlements they did not know they were owed.
 
 It ranks on Google. It helps real people. It cost a fraction of what an agency would have charged.
 
-A well-built tool is not a brochure. It does something genuinely useful for the person using it.
+We built it because the gap was obvious: government entitlement information is scattered, confusing, and presented in a way that serves bureaucracy rather than families.
+
+A well-built tool does one thing well for the person using it. It does not try to be everything. It solves one specific, real problem.
+
+That principle applies whether you are building a public calculator or a private internal business tool.
 
 2026-10-01
-Fixed price gets a lot of questions.
+Fixed price is not a gimmick.
 
-"How do you know what it will cost before you start?"
+It is a statement about who carries the risk.
 
-Because we scope carefully before we quote. We ask enough questions to understand exactly what needs building. We price based on that understanding. We write it down before any work begins.
+Day rates put the risk entirely on the client. If scoping is poor, if requirements expand, if the build takes longer — the client pays more. Every time.
 
-If the scope changes, we have a conversation before additional work starts. Nothing hidden. Nothing assumed.
+Fixed price means we scope carefully before quoting. We ask enough questions to understand exactly what needs building. We write down what is included and what is not. We agree the price before any work begins.
 
-Day rates put the risk on the client. Fixed price puts it on us to scope accurately.
+If the scope changes, we have a conversation before any additional work starts. Nothing hidden. Nothing assumed. No invoice at the end that does not match the quote.
 
-We prefer it that way.
+The discipline of fixed price makes us better at scoping. It has to.
+
+Clients who have worked with day rate developers before consistently say the same thing: they never knew what the final cost would be until it was too late to change course.
+
+That is not how it should work.
 
 2026-10-06
-A recruitment agency we worked with was producing their weekly performance report by hand every Monday morning.
+A recruitment agency was producing their weekly performance report by hand every Monday morning.
 
 Placements, revenue, margin by consultant — all pulled from three systems, pasted into a spreadsheet, formatted, and emailed out.
 
-Two hours. Every week. For years.
+Two hours. Every single week. For years.
 
-We connected their ATS and accounting data to Power BI. The report now builds itself and lands in their inbox at 8am Monday.
+The problem was not that they lacked data. They had plenty of it. The problem was that it lived in three systems that did not talk to each other, and every week someone had to manually bridge the gap.
 
-The system paid for itself in under 3 months.
+We connected their ATS and accounting data to Power BI. The report now builds itself and lands in the MD's inbox at 8am every Monday.
+
+Build cost: under £3,000. Payback: under 3 months.
+
+The consultant who used to build the report now does something more valuable with those two hours.
 
 2026-10-08
-The website you are on right now scores 100 on Google SEO.
+What does a website that actually works look like?
 
-No WordPress. No templates. No monthly platform fees.
+Not beautiful. Not impressive. Working.
 
-Built in Next.js, deployed on Vercel, maintained in GitHub. Every page has canonical tags, structured data, and metadata. The blog publishes automatically twice a week via a GitHub Action.
+It loads in under 2 seconds. It scores 90+ on Google Core Web Vitals. Every page has a clear purpose and a clear next step. The blog publishes regularly and ranks for the questions your clients are already asking.
 
-This site generated more inbound enquiries in its first month than any other channel.
+Most business websites fail on all four.
 
-A website is not a brochure. It is a business asset. It should work as hard as the rest of your business.
+They were built in WordPress with a page builder, load slowly, have no structured data, and have not been updated since they went live.
+
+The result: they look fine when someone already knows your name and types it into Google. They do not exist for anyone who does not already know you.
+
+A website built properly brings in people who have never heard of you.
+
+That is the difference between a brochure and a business asset.
 
 2026-10-13
-There is a moment in most businesses where the spreadsheet stops working.
+Knowing when to build custom software and when to buy off-the-shelf is one of the most important decisions a growing business makes.
 
-Not technically — it still opens. But it takes hours to update, is maintained by one person, and nobody quite trusts the numbers it produces.
+Buy when: your process is standard. Your needs match what the software was built for. You want to be up and running in days, not weeks. The monthly cost is justified by the value.
 
-That moment is the right time to build something properly.
+Build when: your process is specific enough that generic tools require significant compromise. You have tried two or more off-the-shelf options and neither fits properly. The monthly licence cost over 3 years exceeds a custom build. You need something that integrates with systems the generic tools do not support.
 
-Not to buy software that is almost right. To build a tool that is exactly right for how your business works.
+The test is not "can we configure this tool to work?" Most tools can be configured to almost work.
 
-The cost is usually lower than people expect. The time saving starts in the first week.
+The test is: "after configuration, are we still working around the tool or is the tool working for us?"
+
+If the answer is still working around it — that is the signal.
 
 2026-10-15
 Kismet is a wedding planning platform we are building.
 
-Guest management. Seating planner with conflict detection. Budget tracker. Vendor tools. AI vow and speech generator.
+Guest management with dietary and seating conflict detection. Budget tracker connected to real vendor quotes. Vendor coordination tools. AI vow and speech generator trained on the couple's relationship story.
 
 The waitlist is live. The platform is in active development.
 
-Most people ask: why build it yourself rather than use existing tools?
+The question we get most often: why build it rather than adapt an existing tool?
 
-Because the existing tools are either too simple, too expensive, or built for wedding planners rather than couples.
+Because every existing tool is built for wedding planners, not couples. The planners get the features. The couples get a read-only view and a PDF.
 
-That gap is usually the answer to why build anything.
+We flipped that. Couples own their planning. Every decision, every vendor, every penny tracked in one place they control.
+
+The gap between what existed and what couples actually needed was obvious. The technology to fill it was not complicated.
+
+That is usually the answer to why build anything.
 
 2026-10-20
-The most common mistake businesses make when they decide to automate:
+Automation is not always the answer.
 
-They automate the wrong thing first.
+Automating a broken process makes the breakage happen faster.
 
-They spend time and money automating a process that is inefficient by design — rather than fixing the process and then automating it.
+The conversation we have before any automation project starts is not "how do we automate this?" It is "is this the right process, or just the current one?"
 
-Automation makes a good process faster. It makes a bad process fail faster.
+A business that reconciles its bank accounts manually every month end does not need automated bank reconciliation. It needs to reconcile weekly so month end takes 30 minutes rather than 3 days. Then automate.
 
-The conversation we have before any project starts: is this the right process, or just the current one?
+A business producing a weekly management report manually does not just need an automated report. It needs to ask whether the report answers the right questions, whether the data it pulls from is clean, and whether the people reading it are making decisions based on it.
+
+Fix the process. Then automate it.
+
+The technology is the easy part.
 
 2026-10-22
-We got asked recently: how do you compete with agencies that have 20 people?
+Agencies with 20 people have 20 people worth of overhead.
 
-We do not try to.
+That overhead is in your price.
 
-Agencies with 20 people have 20 people's worth of overhead. That overhead is in the price.
+Account managers who attend every call but build nothing. Project managers who create tickets but write no code. Senior partners who appear at the pitch and hand off to juniors.
 
-When you work with Lexalytic, you work with me directly. The person who does the scoping is the person who does the build. There is no account manager, no handoff, no briefing process.
+When you work with Lexalytic, you work with me directly.
+
+I do the scoping call. I write the proposal. I build the thing. I handle the handover.
+
+No account manager. No briefing process. No Chinese whispers between the person you spoke to and the person doing the work.
+
+15 years of experience across Shell, NHS, Warner Bros, Citi, Foster and Partners. Applied directly to your project. Not filtered through a team structure that adds cost without adding value.
 
 Senior experience. Studio prices. That is the point.
 
 2026-10-27
-I built the Lexalytic site as a live demonstration of what we build.
+A construction company I spoke to recently was tracking job costs across 14 separate spreadsheets.
 
-97 pages. SEO score 100. Automated blog publishing. Structured data on every page. 15 UK location pages. 4 industry pages. llms.txt for AI search visibility.
+One per active project. Different formats. Different people maintaining them. No consistent view of which jobs were profitable until they were finished.
 
-Built in Next.js. Deployed on Vercel. Published in GitHub Actions.
+By the time a project showed a margin problem, it was too late to do anything about it.
 
-The site itself is the portfolio. You can see the quality before committing to anything.
+We built them an automated job cost tracker. Costs logged against each project as they occur. Margin tracked in real time. Alerts when a project is trending over budget before it gets there.
 
-If your business needs a website that actually does something — book a call and we will show you what that looks like.
+They can now see across all 14 projects simultaneously from one dashboard.
+
+The decisions they make now — resourcing, pricing, which jobs to take — are based on data rather than instinct.
+
+That is the difference a properly built data system makes.
 
 2026-11-03
-A pharmacy we worked with was managing 20+ locum pharmacists across separate spreadsheets.
+A pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
 
-Payments were late. Scheduling clashes went unnoticed. The admin overhead was significant.
+Shifts booked in one place. Pay rates in another. Hours tracked in a third. Payments calculated manually each month.
 
-We built a custom locum management tool. Shifts logged, pay calculated automatically, payment due dates flagged in red, scheduling conflicts caught before they became problems.
+Payments were consistently late or wrong. Scheduling clashes went unnoticed until someone did not show up. The admin overhead was absorbing hours every week.
 
-The team now spends minutes on locum admin instead of hours. Zero missed payments since launch.
+We built a custom locum management tool. Single input form. Pay calculated automatically from hours and agreed rates. Payment due dates flagged before they pass. Scheduling conflicts caught at the point of booking.
 
-That is what custom software looks like in practice.
+Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
+
+That is what custom software looks like when it is built around a specific problem rather than adapted from a generic one.
 
 2026-11-05
-The businesses with the smoothest year-ends are not the ones that did a big clean-up in December.
+Most business owners do not have a clear answer to this question:
 
-They are the ones that maintained clean books consistently throughout the year.
+Which of your clients are actually profitable?
 
-Monthly bank reconciliation. Receipts uploaded at the time of purchase. Invoices raised within the week they were completed.
+Revenue by client is visible in most accounting systems. But cost by client — the actual time, resources, and overhead attributable to each client relationship — almost never is.
 
-These habits take 30-60 minutes a week. They prevent the January scramble that costs several times that in accountancy fees and management time.
+The result is decisions made on revenue, not margin.
+
+The client who generates the most revenue is not always the most profitable. Long-standing clients who receive loyalty discounts often generate margins 10-15 percentage points below newer clients who pay full rate.
+
+The businesses that build job or client profitability tracking consistently find the same thing: the data challenges assumptions that have built up over years.
+
+Not always comfortable. Always useful.
 
 2026-11-10
-AI is genuinely useful for business in 2026.
+The businesses getting the most from AI right now are not the ones with the biggest budgets.
 
-Not because everyone has a ChatGPT subscription. Because some businesses identified one specific high-volume task and automated it properly.
+They are the ones that identified one specific, high-volume, well-defined task — and automated exactly that.
 
-The calculation is simple: if a task currently takes X hours per week and an AI tool could handle 80% of cases automatically, the annual saving is significant.
+A CV rewriting service that delivers in 24 hours with no human in the loop.
+A proposal generator that produces a first draft from a client brief in minutes.
+A document processor that extracts and classifies data from PDFs automatically.
 
-The businesses getting the most from AI are not the most technically sophisticated. They are the most specific about which problem they are solving.
+None of these required a large AI budget. All of them required clarity about which problem was worth solving.
+
+The question is not "how do we use AI in our business?"
+
+The question is "which task, done at volume, would most benefit from being automated?"
+
+Start there. Build that one thing properly. The ROI is almost always immediate.
 
 2026-11-12
-Something I notice in almost every business I speak to:
-
-The most valuable person in the finance or operations team is the one who knows how everything connects.
+The most valuable person in most operations teams is the one who knows how everything connects.
 
 They are also the single point of failure.
 
-When they go on holiday, things slow down. When they leave, institutional knowledge walks out with them.
+When they go on holiday, things slow down. When they leave, institutional knowledge walks out with them. Processes that worked reliably for years suddenly require someone to reconstruct how they actually functioned.
 
-Documenting and automating the processes they own is not just an efficiency project. It is a risk management project.
+Documenting and automating the processes that person owns is not just an efficiency project. It is a risk management project.
+
+The businesses that handle transitions, growth, and absence best are the ones where the processes are written down and, where possible, automated. Not because they anticipated every scenario. Because they built systems that did not depend on any one person to function.
 
 2026-11-17
-A professional services firm we worked with had no central view of project profitability.
+A professional services firm had no central view of project profitability.
 
-Directors were making resourcing decisions without reliable data. Guessing which clients were profitable and which were quietly draining margin.
+Directors were making resourcing decisions without reliable data. Guessing which clients were profitable and which were quietly draining margin. Discovering problems at month end, when it was already too late to act on them.
 
-We built a Power BI dashboard connected to their project management and finance systems. Live P&L by project, client, and team member. Updated automatically.
+We built a Power BI dashboard connected to their project management and finance systems.
+
+Live P&L by project, client, and team member. Margin visible in real time, not reconstructed at month end. Updated automatically as time is logged and invoices are raised.
 
 Full visibility within 48 hours of the build completing.
 
-They now open one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.
+The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.
+
+The decisions they make now look different to the ones they were making six months ago.
