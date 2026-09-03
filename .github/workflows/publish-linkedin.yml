@@ -101,6 +101,9 @@ jobs:
           except urllib.error.HTTPError as e:
               error_body = e.read().decode()
               print(f'Error {e.code}: {error_body}')
+              if 'DUPLICATE_POST' in error_body:
+                  print('Duplicate post detected - skipping gracefully')
+                  exit(0)
               exit(1)
 
           PYEOF
