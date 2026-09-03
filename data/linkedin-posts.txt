@@ -10,13 +10,21 @@
 #   Week of Sep 29: custom-crm-vs-saas.pdf
 
 2026-09-03
-The businesses that get the most from custom software are the ones that identified one process where the friction of a generic tool was costing more than a custom build would.
+A business owner I spoke to last month was paying £340/month for a CRM.
 
-That calculation is almost always closer than people expect.
+They used 4 of its 60+ features.
 
-We build websites, custom tools, AI products and data systems for UK businesses. Fixed price. You talk directly to me.
+The 5 features they actually needed were not in it.
 
-If you have a process that fits, it is worth a 30-minute conversation.
+So they had built workarounds. Spreadsheets that fed into the CRM. Manual exports. One person who knew how everything connected.
+
+We built them a custom tool for their exact process. Fixed price. No monthly fees. No workarounds.
+
+It paid for itself in 8 months.
+
+The calculation most businesses never do: what does the friction of the wrong tool actually cost per year?
+
+Almost always more than building the right one.
 
 2026-09-08
 I spoke to a business owner last week who was spending 6 hours every Monday rebuilding the same report.
