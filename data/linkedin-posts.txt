@@ -1,3 +1,16 @@
+2026-09-03
+Most businesses I speak to are spending hours every week rebuilding the same reports.
+
+Same data. Same format. Same person doing it. Every single week.
+
+It does not have to work like that.
+
+At Lexalytic we build websites, custom software, AI tools and data systems for UK businesses. Fixed price. You work directly with me — not an account manager.
+
+15 years across Shell, NHS, Warner Bros and Citi. Now working with businesses of every size.
+
+If you have a process that is costing more time than it should, I would like to hear about it.
+
 # LinkedIn Posts Schedule
 # Date on its own line (YYYY-MM-DD), post text below it
 # No links in post body - put links in first comment manually after posting
@@ -5,7 +18,7 @@
 # Research shows: text posts 2-3x better than single images in 2026
 # Best performing hook formats: bold claim, surprising stat, direct question, short statement
 
-2026-09-09
+2026-09-08
 Most businesses I talk to are running on three things:
 
 A spreadsheet someone built three years ago.
