@@ -41,14 +41,20 @@ export default function Hero() {
             </span>
           </div>
           <h1 className="fade-up-2" style={{ color: 'var(--white)', marginBottom: '28px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-            We build the digital tools<br />
-            <em style={{ color: 'var(--amber)', fontStyle: 'italic' }}>your business actually needs.</em>
+            Your business deserves tools<br />
+            <em style={{ color: 'var(--amber)', fontStyle: 'italic' }}>built around how it actually works.</em>
           </h1>
           <p className="fade-up-3" style={{
             fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)',
             maxWidth: '620px', marginBottom: '44px', fontWeight: '300', lineHeight: '1.75',
           }}>
-            Websites, custom business software, AI-powered tools, and data systems — built around how your business works, not how generic software thinks it should. One team, directly involved from first call to final handover.
+            We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Fixed price. No account managers. You work directly with the person doing the work.
+          </p>
+          <p className="fade-up-3" style={{
+            fontSize: '15px', color: 'rgba(255,255,255,0.35)',
+            maxWidth: '560px', marginBottom: '44px', fontWeight: '300', lineHeight: '1.7',
+          }}>
+            15 years experience across Shell, NHS, Warner Bros, and Citi — now working directly with UK businesses of every size.
           </p>
           <div className="fade-up-4" style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
             <a href="#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
@@ -65,10 +71,10 @@ export default function Hero() {
             <div style={{ height: '1px', background: 'rgba(255,255,255,0.07)', marginBottom: '36px' }} />
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
               {[
-                { num: 'Websites', label: 'Bespoke, fast, no templates' },
-                { num: 'Software', label: 'Custom tools and CRMs' },
-                { num: 'AI Tools', label: 'Claude-powered products' },
-                { num: 'Data', label: 'Reporting and automation' },
+                { num: '15+', label: 'Years of experience' },
+                { num: '50+', label: 'Projects delivered' },
+                { num: '4', label: 'Live products built' },
+                { num: '★ 5.0', label: 'Client satisfaction' },
               ].map((s, i) => (
                 <div key={i} style={{
                   padding: '4px 0',
