@@ -42,13 +42,25 @@ month_abbr = calendar.month_abbr[dt.month].lower()
 day = dt.strftime('%d')
 image_file = f'data/post-images/post-{month_abbr}{day}.png'
 
+LI_VERSION = '202506'
+
+def li_headers(extra={}):
+    h = {
+        'Authorization': f'Bearer {token}',
+        'Content-Type': 'application/json',
+        'LinkedIn-Version': LI_VERSION,
+        'X-Restli-Protocol-Version': '2.0.0',
+    }
+    h.update(extra)
+    return h
+
 image_urn = None
 
 if os.path.exists(image_file):
     print(f'Found image: {image_file}')
     try:
-        # Step 1: Initialize image upload
-        init_payload = json.dumps({
+        # Step 1: Initialize upload
+        init_data = json.dumps({
             "initializeUploadRequest": {
                 "owner": f"urn:li:person:{member_id}"
             }
@@ -56,54 +68,59 @@ if os.path.exists(image_file):
 
         req = urllib.request.Request(
             'https://api.linkedin.com/rest/images?action=initializeUpload',
-            data=init_payload
+            data=init_data
         )
-        req.add_header('Authorization', f'Bearer {token}')
-        req.add_header('Content-Type', 'application/json')
-        req.add_header('LinkedIn-Version', '202406')
-        req.add_header('X-Restli-Protocol-Version', '2.0.0')
+        for k, v in li_headers().items():
+            req.add_header(k, v)
 
         resp = urllib.request.urlopen(req)
-        init_data = json.loads(resp.read())
-        upload_url = init_data['value']['uploadUrl']
-        image_urn = init_data['value']['image']
-        print(f'Upload URL received, URN: {image_urn}')
+        resp_data = json.loads(resp.read())
+        upload_url = resp_data['value']['uploadUrl']
+        image_urn = resp_data['value']['image']
+        print(f'Got upload URL. Image URN: {image_urn}')
 
-        # Step 2: Upload PNG
+        # Step 2: Upload binary - NO LinkedIn-Version header on this request
         with open(image_file, 'rb') as f:
-            img_data = f.read()
+            img_bytes = f.read()
 
-        upload_req = urllib.request.Request(upload_url, data=img_data, method='PUT')
+        upload_req = urllib.request.Request(upload_url, data=img_bytes, method='PUT')
         upload_req.add_header('Content-Type', 'image/png')
         urllib.request.urlopen(upload_req)
         print('Image uploaded successfully')
 
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        print(f'Image upload failed {e.code}: {body} - posting text only')
+        image_urn = None
     except Exception as e:
-        print(f'Image upload failed: {e} - posting text only')
+        print(f'Image error: {e} - posting text only')
         image_urn = None
 else:
-    print(f'No image found at {image_file} - posting text only')
+    print(f'No image at {image_file} - posting text only')
 
-# Build payload
+# Build post using newer /rest/posts endpoint
 if image_urn:
     payload = {
         "author": f"urn:li:person:{member_id}",
-        "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": post_text},
-                "shareMediaCategory": "IMAGE",
-                "media": [{
-                    "status": "READY",
-                    "description": {"text": "Lexalytic"},
-                    "media": image_urn,
-                    "title": {"text": "Lexalytic"}
-                }]
+        "commentary": post_text,
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": []
+        },
+        "content": {
+            "media": {
+                "title": "Lexalytic",
+                "id": image_urn
             }
         },
-        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
+        "lifecycleState": "PUBLISHED",
+        "isReshareDisabledByAuthor": False
     }
+    endpoint = 'https://api.linkedin.com/rest/posts'
 else:
+    # Fall back to ugcPosts for text-only (known working)
     payload = {
         "author": f"urn:li:person:{member_id}",
         "lifecycleState": "PUBLISHED",
@@ -115,17 +132,17 @@ else:
         },
         "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
     }
+    endpoint = 'https://api.linkedin.com/v2/ugcPosts'
 
 data = json.dumps(payload).encode('utf-8')
-req = urllib.request.Request('https://api.linkedin.com/v2/ugcPosts', data=data)
-req.add_header('Authorization', f'Bearer {token}')
-req.add_header('Content-Type', 'application/json')
-req.add_header('X-Restli-Protocol-Version', '2.0.0')
+req = urllib.request.Request(endpoint, data=data)
+for k, v in li_headers().items():
+    req.add_header(k, v)
 
 try:
     resp = urllib.request.urlopen(req)
-    result = json.loads(resp.read())
-    print(f'Posted successfully: {result}')
+    result = json.loads(resp.read()) if resp.read() else {}
+    print(f'Posted successfully to {endpoint}')
 except urllib.error.HTTPError as e:
     error_body = e.read().decode()
     print(f'Error {e.code}: {error_body}')
