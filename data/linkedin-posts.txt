@@ -338,3 +338,133 @@ Full visibility within 48 hours of the build completing.
 The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.
 
 The decisions they make now look different to the ones they were making six months ago.
+
+2026-11-19
+I got asked recently how we decide what to build next at Lexalytic.
+
+The honest answer: we look for the gap between what exists and what people actually need.
+
+FamilyEntitled exists because government entitlement information is scattered across dozens of pages and presented in a way that serves the system, not families. The average family using it finds £4,700 they were owed but did not know about.
+
+CVCraft AI exists because professional CV rewrites cost £200 and take days, while most job seekers need something faster and more affordable.
+
+Kismet exists because every wedding planning tool is built for wedding planners. Not for the couple trying to manage guests, budget, seating, and vendors in one place.
+
+The gap is usually obvious once you look for it. The technology to fill it is rarely the hard part.
+
+What gap have you noticed in your industry that nobody has filled properly yet?
+
+2026-11-24
+The hardest part of most software projects is not the code.
+
+It is the requirements.
+
+Specifically: the difference between what the client says they need and what they actually need once they start using it.
+
+The businesses that get the best results from custom software are the ones that spend significant time on the brief before the build starts. Not because they need to solve every edge case upfront, but because the discipline of writing down exactly what the system needs to do surfaces assumptions that would otherwise only become visible when they cause problems.
+
+We ask clients to brief us as if we know nothing about their business. Not because we are lazy. Because the exercise of writing it down for someone who knows nothing is how you discover what you actually need.
+
+2026-11-26
+A client came to us last year with a specific problem.
+
+Their hairdressing group had financials scattered across multiple spreadsheets. Inherited macros from a previous consultant that either failed entirely or took so long to run that nobody used them. No clear picture of how the business was actually performing.
+
+We did three things. Cleansed the data — restructuring everything so it was consistent and connected. Rebuilt all the macros from scratch, faster and properly documented. And created a single file where the owner could see accurate figures across the whole business for the first time.
+
+Macros that used to take minutes — or fail entirely — now run in seconds.
+
+The work was not glamorous. It was not AI. It was methodical, unglamorous data work. The kind that gets overlooked in favour of the shiny stuff but makes an immediate, tangible difference to how a business operates.
+
+2026-12-01
+A question I hear often from business owners considering a website rebuild:
+
+"Will it actually make a difference?"
+
+The honest answer: it depends entirely on what is currently stopping it from performing.
+
+If the site loads slowly — and most WordPress sites do — that is costing you search rankings and visitor patience. Google's Core Web Vitals are a direct ranking factor.
+
+If the site is not mobile optimised, you are losing half your visitors immediately.
+
+If there is no clear call to action on the main pages, visitors who might have become clients are leaving without doing anything.
+
+If the site has not been updated in two years and the content does not reflect what you actually do, you are losing the trust of anyone who looks you up before deciding to contact you.
+
+A website rebuild done properly addresses all of these. One done poorly addresses none of them and costs the same.
+
+2026-12-03
+The businesses I admire most are the ones that have built systems around how they actually work rather than adapting how they work to fit generic tools.
+
+It sounds obvious. Most businesses do the opposite.
+
+They buy software because it is what the industry uses. They configure it until it almost fits. They train their team on the workarounds. They accept the friction as the cost of doing business.
+
+The alternative — building something specific — feels expensive and risky. Until you do the maths on what the friction is actually costing.
+
+Most businesses that have switched from generic to custom tools say the same thing: they wish they had done it sooner. Not because the custom tool is more impressive. Because it just works the way the business works. And that turns out to be worth a lot.
+
+2026-12-08
+End of year is when most businesses finally look at the numbers properly.
+
+The annual accounts arrive. The MD reviews the year. And sometimes the picture is different to what everyone thought was happening.
+
+The businesses with the fewest surprises at year end are not the ones that got lucky. They are the ones that were looking at the right numbers consistently throughout the year.
+
+Revenue versus target. Gross margin. Cash position. Debtor days. Which clients are profitable and which are not.
+
+Not once a year. Every week.
+
+The technology to make this happen automatically is not expensive. A Power BI dashboard connected to your accounting software typically costs less than one month of accountancy fees and runs itself from that point forward.
+
+The businesses making the best decisions in 2027 will be the ones that built this visibility in 2026.
+
+2026-12-10
+We are building Kismet.
+
+A UK wedding planning platform that gives couples one place to manage everything — guests, seating with conflict detection, budget tracked against real quotes, vendor coordination, and an AI generator for vows and speeches trained on their relationship story.
+
+The waitlist is live. The platform is in active development.
+
+We build it alongside client work. Not as a side project we will get to eventually — as a live product we are building properly and shipping.
+
+Building your own products alongside client work is one of the best things a studio can do. It keeps you current, gives you live examples of your work, and creates assets that generate value independently.
+
+Kismet is our fourth live product. CVCraft AI, FamilyEntitled, and Lexalytic itself are the others.
+
+2026-12-15
+Most businesses do not have a clear answer to this question:
+
+What would it cost to replace the person who knows how everything works?
+
+Not their salary. The cost of the knowledge walking out the door.
+
+The processes that only exist in their head. The system connections only they understand. The institutional knowledge that took years to build and would take years to rebuild.
+
+Every business has at least one person like this. Usually in finance or operations. Often the person who has been there longest.
+
+Automating and documenting the processes they own is not a threat to their role. It is a protection of the business. And it frees them to do the work that actually requires their judgement rather than their memory.
+
+2026-12-17
+2026 in a sentence for Lexalytic:
+
+Rebuilt the consultancy as a proper digital studio. Launched CVCraft AI. Built FamilyEntitled. Started Kismet. Ranked the site on Google. Automated the blog. Set up this LinkedIn. Delivered custom software, Power BI dashboards, websites, and data systems for clients across the UK.
+
+Not a bad year.
+
+2027 plan: more of the same, better. More client projects. More products. More content. More reach.
+
+If your business needs a website, custom software, AI tools, or data systems built properly in 2027 — book a call. Fixed price. Fast delivery. You talk directly to the person doing the work.
+
+2026-12-22
+A thing I have noticed about the businesses that make the best use of technology:
+
+They are not the most technically sophisticated.
+
+They are the most specific about the problem they are trying to solve.
+
+The business that says "we need to use AI" rarely gets much from it. The business that says "we receive 200 identical customer enquiries a month and we want to automate the first response" gets an immediate and measurable return.
+
+The technology is always less important than the clarity about the problem.
+
+Start with the problem. Be specific. The solution almost always follows.
