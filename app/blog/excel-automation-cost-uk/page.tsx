@@ -254,7 +254,7 @@ export default function BlogPost() {
             In this example, a £600 automation project pays for itself in under four months — and then saves £160 every month indefinitely after that. That is £1,920 saved in the first year alone, for a £600 investment.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The calculation changes significantly when you factor in that manual processes also carry a cost in errors, delayed decisions, and the risk of a key person leaving. Our <Link href="/#tool" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>free reporting cost calculator</Link> lets you run the numbers for your specific situation in under a minute.
+            The calculation changes significantly when you factor in that manual processes also carry a cost in errors, delayed decisions, and the risk of a key person leaving. Book a free scoping call and we will run the numbers for your specific situation.
           </p>
 
           {/* Image 3 */}

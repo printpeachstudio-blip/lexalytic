@@ -59,7 +59,7 @@ export default function BlogPost() {
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
               <a href="/about" style={{ fontSize: '14px', fontWeight: '500', color: 'var(--ink)', textDecoration: 'none' }}>Mihir Hindocha</a>
-              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>Data Automation Consultant · Lexalytic · 10 years experience</div>
+              <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>Digital Studio Founder · Lexalytic · 15 years experience</div>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function BlogPost() {
               </p>
               <div style={{ padding: '20px 24px', background: 'var(--bg-2)', borderRadius: 'var(--radius)', border: '1px solid var(--border)', borderLeft: '3px solid var(--amber)' }}>
                 <p style={{ fontSize: '15px', color: 'var(--ink-2)', margin: 0, lineHeight: '1.7' }}>
-                  <strong>What to do about it:</strong> Before your next data or finance hire, run the numbers on what automation would cost versus what a headcount costs annually. In most cases, a one-off automation project pays for itself within the first few months of employment — and continues saving money indefinitely. Use our <Link href="/#tool" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>free reporting cost calculator</Link> to see the numbers for your business.
+                  <strong>What to do about it:</strong> Before your next data or finance hire, run the numbers on what automation would cost versus what a headcount costs annually. In most cases, a one-off automation project pays for itself within the first few months of employment — and continues saving money indefinitely. A one-off automation project typically pays for itself within the first few months — and continues saving money indefinitely.
                 </p>
               </div>
             </div>
