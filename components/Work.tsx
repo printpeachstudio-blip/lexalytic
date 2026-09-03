@@ -53,21 +53,21 @@ export default function Work() {
           <a href="#contact" className="btn-secondary" style={{ color: 'rgba(255,255,255,0.65)', borderColor: 'rgba(255,255,255,0.15)', flexShrink: 0 }}>Start your project →</a>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))', gap: '2px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))', gap: '16px' }}>
           {projects.map((p, i) => (
             <a key={i} href={p.url} target="_blank" rel="noopener noreferrer" style={{
               textDecoration: 'none',
               display: 'block',
               background: 'rgba(255,255,255,0.02)',
               border: '1px solid rgba(255,255,255,0.06)',
-              borderRadius: i === 0 ? 'var(--radius-lg) var(--radius-lg) 0 0' : i === projects.length - 1 ? '0 0 var(--radius-lg) var(--radius-lg)' : '0',
+              borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
               transition: 'all 0.25s',
             }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.02)'; }}
             >
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '220px' }}>
+              <div className="work-card-inner" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)', minHeight: '260px' }}>
                 <div style={{ padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
                     <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>{p.type}</div>

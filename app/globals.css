@@ -97,3 +97,14 @@ img { max-width: 100%; }
 
 /* Anchor scroll offset for fixed navbar */
 section[id] { scroll-margin-top: 80px; }
+
+@media (max-width: 640px) {
+  .work-card-inner {
+    grid-template-columns: 1fr !important;
+  }
+  .work-card-inner > div:last-child {
+    height: 180px;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+}
