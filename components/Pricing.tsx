@@ -111,7 +111,7 @@ export default function Pricing() {
           background: 'var(--amber-bg)', border: '1px solid rgba(193,125,46,0.2)',
           borderRadius: 'var(--radius-lg)', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap',
         }}>
-          <span style={{ fontSize: '20px' }}>💡</span>
+          
           <p style={{ fontSize: '14px', color: 'var(--ink-2)', flex: 1, minWidth: '200px' }}>
             <strong style={{ color: 'var(--ink)' }}>Not sure where to start?</strong> Book a free 30-minute call and we'll scope your project and give you a clear fixed price — before you commit to anything.
           </p>
