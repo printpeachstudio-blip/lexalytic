@@ -10,6 +10,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Work from '@/components/Work'
 import Objections from '@/components/Objections'
+import WhoWeWorkWith from '@/components/WhoWeWorkWith'
 
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <WhoWeWorkWith />
         <Work />
         <Services />
         <HowItWorks />
