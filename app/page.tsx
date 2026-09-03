@@ -9,6 +9,7 @@ import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Work from '@/components/Work'
+import Objections from '@/components/Objections'
 
 
 export default function Home() {
@@ -62,12 +63,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
         <Work />
+        <Services />
         <HowItWorks />
-        <Pricing />
         <Results />
         <Testimonials />
+        <Objections />
+        <Pricing />
         <FAQ />
         <Contact />
       </main>
