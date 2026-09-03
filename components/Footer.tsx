@@ -9,19 +9,18 @@ export default function Footer() {
               Lex<span style={{ color: 'var(--amber)' }}>alytic</span>
             </div>
             <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', fontWeight: '300' }}>
-              We build the tools your business actually needs.
+              Websites, software, AI tools, and data systems — built properly.
             </p>
           </div>
 
           <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
             {[
               { href: '/#services', label: 'Services' },
-              { href: '/#pricing', label: 'Pricing' },
+              { href: '/#work', label: 'Work' },
               { href: '/#results', label: 'Results' },
-              { href: '/#tool', label: 'Free tool' },
-              { href: '/#contact', label: 'Contact' },
-              { href: '/about', label: 'About' },
               { href: '/blog', label: 'Blog' },
+              { href: '/about', label: 'About' },
+              { href: '/#contact', label: 'Contact' },
             ].map(l => (
               <a key={l.href} href={l.href} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.8)'}
