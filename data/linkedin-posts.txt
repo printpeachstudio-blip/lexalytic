@@ -468,3 +468,25 @@ The business that says "we need to use AI" rarely gets much from it. The busines
 The technology is always less important than the clarity about the problem.
 
 Start with the problem. Be specific. The solution almost always follows.
+
+2026-12-29
+Case study: an independent pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
+
+Payments were frequently late or wrong. Scheduling clashes went unnoticed until someone did not show up. The admin overhead was several hours every week.
+
+We built a custom locum management tool. Single input form. Pay calculated automatically. Payment due dates flagged before they pass. Scheduling conflicts caught at the point of booking.
+
+Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
+
+The full case study is on the Lexalytic website — link in the comments.
+
+2026-12-31
+Case study: a professional services firm had no central view of project profitability.
+
+Directors were making resourcing decisions without reliable data. Guessing which clients were profitable and which were quietly draining margin. The management pack took a full day to compile each month and was already out of date by the time it was ready.
+
+We built a Power BI dashboard connected to their project management and finance systems. Live P&L by project, client, and team member. Updated automatically.
+
+Full visibility within 48 hours of launch. The monthly management pack was discontinued the first week. Six months later the firm identified two client relationships significantly less profitable than assumed — a discovery that changed their pricing.
+
+Full case study on the site — link in comments.
