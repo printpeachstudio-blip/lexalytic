@@ -47,7 +47,7 @@ export default function HertfordshirePage() {
               Websites, custom business software, AI-powered tools, and data systems - built around how your business works. Fixed price. Fast delivery. One team, directly involved from first call to final handover.
             </p>
             <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.4)', maxWidth: '620px', marginBottom: '40px', lineHeight: '1.75' }}>
-              Lexalytic is based in Bushey, Hertfordshire. We know the local business landscape - from Watford and St Albans to Hemel Hempstead and Stevenage - and work with Hertfordshire businesses as well as clients across the UK.
+              Lexalytic is based in Bushey, Hertfordshire. We know the local business environment - from Watford and St Albans to Hemel Hempstead and Stevenage - and work with Hertfordshire businesses as well as clients across the UK.
             </p>
             <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
           </div>
