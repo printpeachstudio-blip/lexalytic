@@ -129,5 +129,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/wedding-supplier-crm-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/wedding-photographer-client-communication-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/track-business-performance-without-data-team', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/services/client-portals', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/blog/client-portal-for-accountants-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/secure-client-portal-small-business-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/client-document-sharing-portal-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

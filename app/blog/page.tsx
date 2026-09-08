@@ -9,6 +9,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'client-document-sharing-portal-uk',
+    title: 'Client Document Sharing Portal UK - Moving Beyond Email and Shared Folders',
+    excerpt: 'Why UK professional services firms are replacing email and Dropbox with proper client document portals. What changes, what it costs, and how to make the switch.',
+    date: 'December 2026',
+    readTime: '8 min read',
+    tag: 'Client Portals',
+  },
+  {
+    slug: 'secure-client-portal-small-business-uk',
+    title: 'Secure Client Portal for UK Small Businesses - Do You Need One and What Should It Do',
+    excerpt: 'A practical guide for UK small businesses on whether a client portal is worth building, what it should include, and what the alternatives cost over time.',
+    date: 'November 2026',
+    readTime: '8 min read',
+    tag: 'Client Portals',
+  },
+  {
+    slug: 'client-portal-for-accountants-uk',
+    title: 'Client Portal for Accountants UK - What to Look For and What It Should Cost',
+    excerpt: 'A practical guide for UK accountants and bookkeepers on choosing or building a client portal. What the platforms cost, where they fall short, and when bespoke makes sense.',
+    date: 'October 2026',
+    readTime: '8 min read',
+    tag: 'Client Portals',
+  },
+  {
     slug: 'wedding-photographer-client-communication-uk',
     title: 'How Wedding Photographers Can Automate Client Communication Without Losing the Personal Touch',
     excerpt: 'A practical guide for UK wedding photographers on automating repetitive client communication.',

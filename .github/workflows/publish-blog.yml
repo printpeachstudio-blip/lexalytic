@@ -173,7 +173,7 @@ jobs:
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "29" ]; then
-            echo "slug=sports-club-membership-management-uk" >> $GITHUB_OUTPUT
+            echo "slug=client-portal-for-accountants-uk" >> $GITHUB_OUTPUT
             echo "title=How to Reduce Month-End Stress for Your Finance Team" >> $GITHUB_OUTPUT
             echo "excerpt=Month-end is the most stressful period in the finance calendar. Here is how UK finance teams are eliminating the stress by automating the data collection that causes it." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -221,7 +221,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "26" ]; then
-            echo "slug=five-signs-your-business-has-outgrown-off-the-shelf-software" >> $GITHUB_OUTPUT
+            echo "slug=secure-client-portal-small-business-uk" >> $GITHUB_OUTPUT
             echo "title=How to Close Your Year-End Accounts Without the Last-Minute Panic" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK businesses scramble at year-end because the data is not ready. Here is how to keep your books close-ready throughout the year so year-end becomes a review rather than a crisis." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -233,7 +233,7 @@ jobs:
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "3" ]; then
-            echo "slug=live-reports-from-xero-sage-quickbooks" >> $GITHUB_OUTPUT
+            echo "slug=client-document-sharing-portal-uk" >> $GITHUB_OUTPUT
             echo "title=How to See Your Business Performance at a Glance" >> $GITHUB_OUTPUT
             echo "excerpt=Most business owners have to dig through multiple systems to get a picture of how their business is performing. Here is how to get everything on one screen, updated automatically." >> $GITHUB_OUTPUT
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT

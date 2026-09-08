@@ -764,3 +764,42 @@ The cleanse is the means. The capability it unlocks is the point.
 If you know what you would do with clean data, the investment in getting there is straightforward to justify. If you are not sure what clean data would change, the investment is harder to scope and harder to commit to.
 
 Start with the use case. The data work follows from it.
+
+2026-10-29
+Most professional services firms manage client document exchange the same way.
+
+An email goes out requesting three documents. The client replies with one of them. A week later you send another email. They attach the second. The third arrives two weeks later in a different thread that nobody can find.
+
+Meanwhile someone on your team is maintaining a spreadsheet tracking which clients have sent what, because the email system has no concept of outstanding.
+
+A client portal solves this cleanly. Every document request has a status. Clients log in and see exactly what you need from them. They upload it directly. You get notified. The spreadsheet disappears.
+
+The businesses that resist building one usually say the same thing: our clients prefer email.
+
+What they usually mean is: our clients are used to email. Those are different things.
+
+2026-11-12
+The question I get asked about client portals:
+
+Is it worth building something bespoke or should we just use TaxDome or Karbon?
+
+The honest answer depends on one number: how many clients do you have and what do you pay per user per month on the platform.
+
+A five-person accountancy firm on a mid-tier TaxDome plan pays roughly £1,800 to £2,400 per year. Over three years that is between £5,400 and £7,200. A bespoke portal built to do exactly what the firm needs - document collection, e-signatures, invoicing, outstanding items tracker - typically costs £4,000 to £8,000 once, with no ongoing fee.
+
+The crossover point is usually somewhere between 18 and 30 months.
+
+After that the bespoke option is cheaper every year, fits the firm better because it was built around how they actually work, and carries the firm branding rather than the platform name.
+
+Worth doing the maths before signing another annual contract.
+
+2026-12-03
+There is a GDPR issue most professional services firms are quietly ignoring.
+
+Sending sensitive personal and financial documents by unencrypted email is not technically compliant with UK data protection requirements. Most firms do it because the alternative - encrypted email, secure file transfer tools - is inconvenient for both sides.
+
+A client portal solves it properly. Documents are uploaded and downloaded through an encrypted connection. Access is controlled by login. There is an audit log of every action. Each client only sees their own files.
+
+For firms in regulated sectors - financial advice, legal, accountancy - having a documented and auditable channel for sensitive client data is increasingly an expectation from the FCA, SRA, and ICAEW, not just a best practice.
+
+The firms that move to a proper portal almost always say the same thing: they wish they had done it sooner. Not because it changed their relationship with clients. Because it made a daily operational headache disappear.
