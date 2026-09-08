@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/data-automation-professional-services-uk' },
-  title: 'Data Automation for Professional Services UK — Where to Start | Lexalytic',
+  title: 'Data Automation for Professional Services UK - Where to Start | Lexalytic',
   description: 'Professional services firms lose hours every week to manual reporting and data admin. Here is where to start with data automation if you run a consultancy, agency, or similar business in the UK.',
   openGraph: {
-    title: 'Data Automation for Professional Services UK — Where to Start',
+    title: 'Data Automation for Professional Services UK - Where to Start',
     description: 'Professional services firms lose hours every week to manual reporting and data admin. Here is where to start with data automation if you run a consultancy, agency, or similar business in the UK.',
     url: 'https://www.lexalytic.com/blog/data-automation-professional-services-uk',
     siteName: 'Lexalytic',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Data Automation for Professional Services UK — Where to Start","description":"A practical guide for UK businesses.","datePublished":"2026-10-27","dateModified":"2026-10-27","url":"https://www.lexalytic.com/blog/data-automation-professional-services-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Data Automation for Professional Services UK - Where to Start","description":"A practical guide for UK businesses.","datePublished":"2026-10-27","dateModified":"2026-10-27","url":"https://www.lexalytic.com/blog/data-automation-professional-services-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Automation</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>October 2026 · 10 min read</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Data Automation for Professional Services UK — Where to Start</h1>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Data Automation for Professional Services UK - Where to Start</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
@@ -51,21 +51,21 @@ export default function BlogPost() {
 
             <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Professional services firms — consultancies, law firms, accountancies, agencies — share a common data challenge. The work is people-intensive, the billing is time-based, and the reporting requirements are significant. Most firms track utilisation, realisation, client profitability, and pipeline manually in spreadsheets that get rebuilt each month by people who should be doing billable work.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Professional services firms - consultancies, law firms, accountancies, agencies - share a common data challenge. The work is people-intensive, the billing is time-based, and the reporting requirements are significant. Most firms track utilisation, realisation, client profitability, and pipeline manually in spreadsheets that get rebuilt each month by people who should be doing billable work.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Where the time actually goes</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>In most professional services firms, the biggest manual reporting burden falls on finance or operations managers compiling utilisation reports, WIP schedules, project profitability summaries, and management accounts each month. The data exists across multiple systems — time recording, accounting packages, project management tools — but connecting it manually every month is a significant overhead that adds no value to clients.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>In most professional services firms, the biggest manual reporting burden falls on finance or operations managers compiling utilisation reports, WIP schedules, project profitability summaries, and management accounts each month. The data exists across multiple systems - time recording, accounting packages, project management tools - but connecting it manually every month is a significant overhead that adds no value to clients.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The highest-impact automations</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The automations that deliver the most immediate time saving in professional services are: automated utilisation reporting connected to time recording software; project profitability dashboards pulling from both time recording and accounting systems; automated WIP and billing reports; and pipeline reporting connected to the CRM. Each replaces a recurring manual process with a system that runs automatically.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The right approach for your firm</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The starting point is identifying which manual reporting process costs the most time and has the highest business value. For most professional services firms this is either utilisation reporting or project profitability. Getting one right first, then expanding, is more effective than trying to automate everything simultaneously.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The specific data challenges professional services firms face</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Professional services businesses — consultancies, agencies, law firms, accountancies — share a set of data challenges that are distinct from product businesses. Utilisation rates, realisation rates, and write-off percentages are metrics that matter enormously but require connecting time recording to billing to payroll to calculate. Project profitability requires allocating costs that are not naturally coded by project. Management accounts require consolidating data from multiple sources that do not talk to each other natively.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Professional services businesses - consultancies, agencies, law firms, accountancies - share a set of data challenges that are distinct from product businesses. Utilisation rates, realisation rates, and write-off percentages are metrics that matter enormously but require connecting time recording to billing to payroll to calculate. Project profitability requires allocating costs that are not naturally coded by project. Management accounts require consolidating data from multiple sources that do not talk to each other natively.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Where to start when everything feels urgent</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The right starting point is the metric that management asks about most often and currently requires the most manual work to answer. In most professional services firms this is either utilisation — what percentage of available hours are being billed — or project margin. Both require time recording data connected to billing data. Building that connection first gives you a foundation that makes every subsequent report easier to produce, because the underlying data model is already in place.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The right starting point is the metric that management asks about most often and currently requires the most manual work to answer. In most professional services firms this is either utilisation - what percentage of available hours are being billed - or project margin. Both require time recording data connected to billing data. Building that connection first gives you a foundation that makes every subsequent report easier to produce, because the underlying data model is already in place.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The automation that makes the biggest difference</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Management account automation is typically the highest-return project for professional services firms — replacing the 2-3 day monthly process of consolidating data, reconciling figures, and building the pack with a dashboard that updates automatically as transactions are posted. The initial build takes a week. The ongoing time saving is typically 20-30 hours per month across the finance team. At any reasonable cost rate, the payback period is under two months — and the quality of the information improves because it is no longer dependent on someone having the time to compile it accurately.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Management account automation is typically the highest-return project for professional services firms - replacing the 2-3 day monthly process of consolidating data, reconciling figures, and building the pack with a dashboard that updates automatically as transactions are posted. The initial build takes a week. The ongoing time saving is typically 20-30 hours per month across the finance team. At any reasonable cost rate, the payback period is under two months - and the quality of the information improves because it is no longer dependent on someone having the time to compile it accurately.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Related articles</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
               
@@ -88,7 +88,7 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to fix this in your business?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
           <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginTop: '32px' }}>

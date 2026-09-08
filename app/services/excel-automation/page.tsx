@@ -18,21 +18,21 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '📈', title: 'Automated Weekly & Monthly Reports', desc: 'Reports that compile themselves — pulling from multiple source files, applying your formatting, and producing the final output without anyone touching it.' },
+  { icon: '📈', title: 'Automated Weekly & Monthly Reports', desc: 'Reports that compile themselves - pulling from multiple source files, applying your formatting, and producing the final output without anyone touching it.' },
   { icon: '🔄', title: 'Data Processing & Transformation', desc: 'Raw exports from your systems turned into clean, structured data automatically. No more manual reformatting, no more copy-paste between sheets.' },
-  { icon: '✅', title: 'Reconciliation & Variance Checking', desc: 'Automatically compare two datasets, flag differences, and produce a reconciliation report — in seconds rather than hours.' },
+  { icon: '✅', title: 'Reconciliation & Variance Checking', desc: 'Automatically compare two datasets, flag differences, and produce a reconciliation report - in seconds rather than hours.' },
   { icon: '📊', title: 'Self-Updating Dashboards', desc: 'Excel dashboards that refresh when new data lands. No manual pivot table updates, no formula errors, no stale numbers.' },
-  { icon: '📧', title: 'Scheduled Report Distribution', desc: 'Reports that generate and email themselves to the right people on the right day — without anyone having to remember to run them.' },
-  { icon: '🔗', title: 'System & Data Source Integration', desc: 'Pull data from your ERP, CRM, or accounting software directly into Excel — removing manual re-entry and the errors that come with it.' },
+  { icon: '📧', title: 'Scheduled Report Distribution', desc: 'Reports that generate and email themselves to the right people on the right day - without anyone having to remember to run them.' },
+  { icon: '🔗', title: 'System & Data Source Integration', desc: 'Pull data from your ERP, CRM, or accounting software directly into Excel - removing manual re-entry and the errors that come with it.' },
 ]
 
 const faqs = [
-  { q: 'How long does Excel automation take to build?', a: 'Most projects are delivered in 3–5 working days. Simple single-process automations can be faster; more complex builds involving multiple data sources take a little longer. You\'ll get a clear timeline in your fixed-price quote — not a vague estimate.' },
+  { q: 'How long does Excel automation take to build?', a: 'Most projects are delivered in 3–5 working days. Simple single-process automations can be faster; more complex builds involving multiple data sources take a little longer. You\'ll get a clear timeline in your fixed-price quote - not a vague estimate.' },
   { q: 'Will it work with our existing spreadsheets?', a: 'Yes. We work with your existing files and processes wherever possible so your team doesn\'t have to change how they work. If we need to restructure anything, we\'ll tell you upfront and explain why.' },
   { q: 'What version of Excel do we need?', a: 'We work with Excel 2016 and above, including all Microsoft 365 plans. We\'ll confirm compatibility during the scoping call.' },
-  { q: 'Will we be able to maintain it ourselves?', a: 'Yes — that\'s a priority for us. We don\'t build things designed to create dependency. Every project includes full documentation and a handover walkthrough so your team can make minor changes independently.' },
+  { q: 'Will we be able to maintain it ourselves?', a: 'Yes - that\'s a priority for us. We don\'t build things designed to create dependency. Every project includes full documentation and a handover walkthrough so your team can make minor changes independently.' },
   { q: 'What if our requirements change after delivery?', a: 'Every project includes at least one round of revisions. For ongoing changes as your business evolves, our retainer plan gives you a monthly allocation of hours at a predictable cost.' },
-  { q: 'Do you work with businesses outside London?', a: 'Yes — all work is delivered remotely. We work with businesses across the UK and internationally. Most of our clients have never met us in person.' },
+  { q: 'Do you work with businesses outside London?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally. Most of our clients have never met us in person.' },
 ]
 
 export default function ExcelAutomationPage() {
@@ -57,7 +57,7 @@ export default function ExcelAutomationPage() {
               Your Excel reports should run<br /><em style={{ color: 'var(--amber)' }}>without your team running them.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              If someone on your team spends hours every week copying data, reformatting spreadsheets, or compiling reports — that's time and money leaving your business. We automate the process so the output is there when they need it, without the manual work.
+              If someone on your team spends hours every week copying data, reformatting spreadsheets, or compiling reports - that's time and money leaving your business. We automate the process so the output is there when they need it, without the manual work.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -80,7 +80,7 @@ export default function ExcelAutomationPage() {
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span className="section-label">What we automate</span>
             <h2>Every Excel process that's costing your team time</h2>
-            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>If it involves opening a spreadsheet, copying something, and reformatting it — we can almost certainly automate it.</p>
+            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>If it involves opening a spreadsheet, copying something, and reformatting it - we can almost certainly automate it.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {useCases.map((item, i) => (
@@ -101,16 +101,16 @@ export default function ExcelAutomationPage() {
               <span className="section-label">What this actually means</span>
               <h2 style={{ marginBottom: '24px' }}>Most Excel problems are process problems, not spreadsheet problems</h2>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                After 15 years of working with UK businesses on their data, the pattern is almost always the same. Someone built a spreadsheet that worked perfectly for the business at the time. Then the business grew, the data got more complex, and the spreadsheet got patched and modified until it became something nobody fully understands — and everyone is slightly afraid to touch.
+                After 15 years of working with UK businesses on their data, the pattern is almost always the same. Someone built a spreadsheet that worked perfectly for the business at the time. Then the business grew, the data got more complex, and the spreadsheet got patched and modified until it became something nobody fully understands - and everyone is slightly afraid to touch.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
                 The result is a manual process that takes far longer than it should, produces errors that are hard to catch, and depends entirely on one person knowing how it all fits together.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                Excel automation fixes this by removing the manual steps entirely. Instead of someone opening files, copying data, running formulas, and reformatting the output — the system does all of that automatically. The result is there when it needs to be, accurate, and consistent every time.
+                Excel automation fixes this by removing the manual steps entirely. Instead of someone opening files, copying data, running formulas, and reformatting the output - the system does all of that automatically. The result is there when it needs to be, accurate, and consistent every time.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
-                We use Power Query, VBA, and Python depending on what the job actually requires — not because one tool is fashionable, but because the right tool for a simple weekly report is different from the right tool for a multi-source data pipeline. Most projects use a combination.
+                We use Power Query, VBA, and Python depending on what the job actually requires - not because one tool is fashionable, but because the right tool for a simple weekly report is different from the right tool for a multi-source data pipeline. Most projects use a combination.
               </p>
             </div>
             <div>
@@ -132,7 +132,7 @@ export default function ExcelAutomationPage() {
               <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px' }}>
                 <h3 style={{ fontSize: '1rem', marginBottom: '16px', color: 'var(--ink)' }}>How the process works</h3>
                 {[
-                  { step: '1', text: 'You show us the current process — the files, the steps, the pain points.' },
+                  { step: '1', text: 'You show us the current process - the files, the steps, the pain points.' },
                   { step: '2', text: 'We scope it and come back with a fixed price and timeline within 48 hours.' },
                   { step: '3', text: 'We build and test against your actual data, not dummy data.' },
                   { step: '4', text: 'Full handover with documentation so your team can use it from day one.' },
@@ -169,7 +169,7 @@ export default function ExcelAutomationPage() {
               </div>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)', background: 'var(--amber-bg)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>What we built</h3>
-                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>An automated Excel system that pulls from all six source files, consolidates and formats the data, and produces the final report automatically — triggered by a single button press. The whole thing takes 8 minutes.</p>
+                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>An automated Excel system that pulls from all six source files, consolidates and formats the data, and produces the final report automatically - triggered by a single button press. The whole thing takes 8 minutes.</p>
               </div>
               <div style={{ padding: '36px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
                 {[{ num: '8 min', label: 'Down from 4 hours' }, { num: '0', label: 'Manual errors' }, { num: '97%', label: 'Time saved weekly' }].map((s, i) => (
@@ -189,7 +189,7 @@ export default function ExcelAutomationPage() {
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
             <h2 style={{ marginBottom: '8px' }}>Questions about Excel automation</h2>
-            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
+            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here - just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
@@ -205,7 +205,7 @@ export default function ExcelAutomationPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Stop doing manually what<br /><em style={{ color: 'var(--amber)' }}>Excel can do for you.</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us the process that's eating your team's time and we'll tell you exactly what automation would cost — and how long it would take.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us the process that's eating your team's time and we'll tell you exactly what automation would cost - and how long it would take.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–5 days · Full documentation included</p>
         </div>

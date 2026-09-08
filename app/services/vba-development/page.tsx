@@ -18,21 +18,21 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '🖱️', title: 'One-Click Business Tools', desc: 'Replace a 12-step manual process with a single button. We build tools that work exactly the way your business works — not a generic solution you have to adapt to.' },
-  { icon: '📤', title: 'Automated Report Generation', desc: 'Generate formatted reports, PDFs, or data exports at the click of a button — ready to send, no editing, no reformatting.' },
-  { icon: '🔍', title: 'Custom Data Validation', desc: 'Validation logic that checks your data against your actual business rules — not just Excel\'s built-in defaults. Catch errors at the point of entry, not weeks later.' },
-  { icon: '📋', title: 'UserForms & Data Entry Tools', desc: 'Custom input forms that make data entry faster, cleaner, and error-proof — even for team members who aren\'t confident in Excel.' },
-  { icon: '🔗', title: 'External Data Connections', desc: 'VBA tools that pull data automatically from databases, other Office applications, or external files — eliminating manual imports and the errors they bring.' },
+  { icon: '🖱️', title: 'One-Click Business Tools', desc: 'Replace a 12-step manual process with a single button. We build tools that work exactly the way your business works - not a generic solution you have to adapt to.' },
+  { icon: '📤', title: 'Automated Report Generation', desc: 'Generate formatted reports, PDFs, or data exports at the click of a button - ready to send, no editing, no reformatting.' },
+  { icon: '🔍', title: 'Custom Data Validation', desc: 'Validation logic that checks your data against your actual business rules - not just Excel\'s built-in defaults. Catch errors at the point of entry, not weeks later.' },
+  { icon: '📋', title: 'UserForms & Data Entry Tools', desc: 'Custom input forms that make data entry faster, cleaner, and error-proof - even for team members who aren\'t confident in Excel.' },
+  { icon: '🔗', title: 'External Data Connections', desc: 'VBA tools that pull data automatically from databases, other Office applications, or external files - eliminating manual imports and the errors they bring.' },
   { icon: '📦', title: 'Batch File Processing', desc: 'Process dozens or hundreds of files, sheets, or records in one run. What takes a person a full day takes a well-written macro a few minutes.' },
 ]
 
 const faqs = [
-  { q: 'What\'s the difference between VBA automation and general Excel automation?', a: 'VBA (Visual Basic for Applications) is the programming language inside Excel that makes genuinely custom automation possible — beyond what formulas can do. It\'s the right choice when you need multi-step logic, custom tools, or processes that need to work exactly your way.' },
-  { q: 'Will VBA work on Mac?', a: 'VBA works on Mac with some limitations compared to Windows — certain features aren\'t available, and performance can differ. We\'ll flag any compatibility issues during the scoping call and find the best approach for your setup.' },
+  { q: 'What\'s the difference between VBA automation and general Excel automation?', a: 'VBA (Visual Basic for Applications) is the programming language inside Excel that makes genuinely custom automation possible - beyond what formulas can do. It\'s the right choice when you need multi-step logic, custom tools, or processes that need to work exactly your way.' },
+  { q: 'Will VBA work on Mac?', a: 'VBA works on Mac with some limitations compared to Windows - certain features aren\'t available, and performance can differ. We\'ll flag any compatibility issues during the scoping call and find the best approach for your setup.' },
   { q: 'Is VBA still the right tool or should we be looking at Python?', a: 'VBA is the right choice when the work lives inside Excel, your team doesn\'t want external tooling, and you need something they can trigger themselves. For larger data volumes, cross-system automation, or scheduled tasks that run without anyone opening a file, Python is usually better. We\'ll give you an honest recommendation during scoping.' },
-  { q: 'Can we modify the code ourselves after delivery?', a: 'Yes. We write clean, well-commented VBA code with full documentation. If you\'d prefer certain logic to be protected, we can lock specific modules — just let us know during scoping.' },
-  { q: 'How long does VBA development take?', a: 'Most projects are delivered in 3–7 working days. Simple tools are faster; complex multi-step builds with external data connections take longer. You\'ll get a clear timeline — not a rough estimate — in your fixed-price quote.' },
-  { q: 'Do you work remotely?', a: 'Yes — everything is delivered remotely. We work with businesses across the UK and internationally, and have done for years.' },
+  { q: 'Can we modify the code ourselves after delivery?', a: 'Yes. We write clean, well-commented VBA code with full documentation. If you\'d prefer certain logic to be protected, we can lock specific modules - just let us know during scoping.' },
+  { q: 'How long does VBA development take?', a: 'Most projects are delivered in 3–7 working days. Simple tools are faster; complex multi-step builds with external data connections take longer. You\'ll get a clear timeline - not a rough estimate - in your fixed-price quote.' },
+  { q: 'Do you work remotely?', a: 'Yes - everything is delivered remotely. We work with businesses across the UK and internationally, and have done for years.' },
 ]
 
 export default function VBAPage() {
@@ -57,7 +57,7 @@ export default function VBAPage() {
               Custom VBA tools built<br /><em style={{ color: 'var(--amber)' }}>around how you actually work.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Generic Excel does not know your business processes. We build bespoke VBA tools that do — cutting out the repetitive manual steps, reducing errors, and giving your team something that actually fits the way they work.
+              Generic Excel does not know your business processes. We build bespoke VBA tools that do - cutting out the repetitive manual steps, reducing errors, and giving your team something that actually fits the way they work.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -99,12 +99,12 @@ export default function VBAPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '80px', alignItems: 'start' }}>
             <div>
               <span className="section-label">Why VBA still matters</span>
-              <h2 style={{ marginBottom: '24px' }}>VBA gets a bad reputation. Most of the time, the code is fine — it just was not built properly</h2>
+              <h2 style={{ marginBottom: '24px' }}>VBA gets a bad reputation. Most of the time, the code is fine - it just was not built properly</h2>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                I have inherited a lot of other people's VBA over the years. Macros that run for 20 minutes when they should take 20 seconds. Code that breaks whenever someone adds a new column. Tools that only the person who built them understands. The problem is rarely VBA itself — it is that the original code was written quickly, without documentation, and never properly tested.
+                I have inherited a lot of other people's VBA over the years. Macros that run for 20 minutes when they should take 20 seconds. Code that breaks whenever someone adds a new column. Tools that only the person who built them understands. The problem is rarely VBA itself - it is that the original code was written quickly, without documentation, and never properly tested.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                Built properly, VBA is still one of the most practical tools in business. It lives inside Excel, your team does not need to install anything, and it can do things that no formula can — complex multi-step logic, custom input forms, automated report generation, connections to other Office applications.
+                Built properly, VBA is still one of the most practical tools in business. It lives inside Excel, your team does not need to install anything, and it can do things that no formula can - complex multi-step logic, custom input forms, automated report generation, connections to other Office applications.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
                 The question of whether VBA or Python is right for a given job is one I answer honestly during the scoping call. For most Excel-based business processes, VBA is the right tool. For large data volumes, scheduled background tasks, or API connections, Python usually wins. We will tell you which is which for your situation.
@@ -158,7 +158,7 @@ export default function VBAPage() {
               </div>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)', background: 'var(--amber-bg)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>What we built</h3>
-                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>A VBA automation tool that pulls from the relevant data sources and generates fully formatted technical reports automatically — using Visual Basic to handle the logic and data assembly that previously required manual intervention.</p>
+                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>A VBA automation tool that pulls from the relevant data sources and generates fully formatted technical reports automatically - using Visual Basic to handle the logic and data assembly that previously required manual intervention.</p>
               </div>
               <div style={{ padding: '36px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
                 {[{ num: '1 click', label: 'To generate any report' }, { num: '0', label: 'Manual data assembly' }, { num: '100%', label: 'Process consistency' }].map((s, i) => (
@@ -178,7 +178,7 @@ export default function VBAPage() {
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
             <h2 style={{ marginBottom: '8px' }}>Questions about VBA development</h2>
-            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
+            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here - just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
@@ -194,7 +194,7 @@ export default function VBAPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Ready for a tool that works<br /><em style={{ color: 'var(--amber)' }}>exactly the way you do?</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us your process and we will tell you exactly what we can build — and what it will cost.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us your process and we will tell you exactly what we can build - and what it will cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Delivered in 3–7 days · Full documentation included</p>
         </div>

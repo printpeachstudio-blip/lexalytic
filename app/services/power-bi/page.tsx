@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '📊', title: 'Financial Reporting Dashboards', desc: 'Replace monthly manual reporting with a live P&L, cashflow, and budget vs actuals dashboard your Finance Director can open in one click — updated in real time, no spreadsheet required.' },
+  { icon: '📊', title: 'Financial Reporting Dashboards', desc: 'Replace monthly manual reporting with a live P&L, cashflow, and budget vs actuals dashboard your Finance Director can open in one click - updated in real time, no spreadsheet required.' },
   { icon: '⚙️', title: 'Operations & Production', desc: 'Real-time visibility into output, capacity, quality, and efficiency across one site or many. Stop waiting for yesterday\'s numbers.' },
   { icon: '🎯', title: 'Sales & Pipeline Tracking', desc: 'Connect your CRM and show revenue, conversion rates, pipeline health, and individual team performance in a single live view.' },
-  { icon: '👥', title: 'HR & Workforce Analytics', desc: 'Headcount, absence, turnover, and cost — presented clearly for board-level decisions without manual compilation.' },
+  { icon: '👥', title: 'HR & Workforce Analytics', desc: 'Headcount, absence, turnover, and cost - presented clearly for board-level decisions without manual compilation.' },
   { icon: '📦', title: 'Supply Chain & Inventory', desc: 'Track stock levels, supplier performance, and fulfilment in real time. No more manual spreadsheet updates before the morning meeting.' },
   { icon: '🏗️', title: 'Project Profitability', desc: 'See which projects, clients, and teams are actually profitable. Make resourcing decisions with real data, not instinct.' },
 ]
@@ -29,10 +29,10 @@ const useCases = [
 const faqs = [
   { q: 'How long does a Power BI dashboard take to build?', a: 'Most dashboards are delivered within 5-10 working days from the scoping call. Simple single-source dashboards can be faster; multi-system builds with complex data modelling take a little longer. You will always get a clear timeline before any work begins.' },
   { q: 'Do we need Power BI Pro licences?', a: 'To share dashboards across your organisation, you will need Power BI Pro licences at around £8.40 per user per month from Microsoft. We will advise on the most cost-effective setup for your team during the scoping call.' },
-  { q: 'Can you connect Power BI to our existing systems?', a: 'Yes. Power BI connects to hundreds of data sources — Excel, SQL, Salesforce, Xero, QuickBooks, SharePoint, Google Sheets, and many more. We confirm compatibility during the scoping call so there are no surprises.' },
+  { q: 'Can you connect Power BI to our existing systems?', a: 'Yes. Power BI connects to hundreds of data sources - Excel, SQL, Salesforce, Xero, QuickBooks, SharePoint, Google Sheets, and many more. We confirm compatibility during the scoping call so there are no surprises.' },
   { q: 'Will our team be able to use it without training?', a: 'That is the goal. We design dashboards for the people who will use them daily, not just the person who commissioned them. Every project includes a full handover walkthrough and documentation.' },
-  { q: 'What if our data is messy?', a: 'Most clients come to us with imperfect data — that is normal, not a blocker. Data cleaning and transformation is built into the process. We will flag any structural issues during scoping that need addressing first.' },
-  { q: 'Do you work with businesses outside London?', a: 'Yes — we work with businesses across the UK and internationally. Everything is delivered remotely. Location has never been an issue for any of our clients.' },
+  { q: 'What if our data is messy?', a: 'Most clients come to us with imperfect data - that is normal, not a blocker. Data cleaning and transformation is built into the process. We will flag any structural issues during scoping that need addressing first.' },
+  { q: 'Do you work with businesses outside London?', a: 'Yes - we work with businesses across the UK and internationally. Everything is delivered remotely. Location has never been an issue for any of our clients.' },
 ]
 
 export default function PowerBIPage() {
@@ -57,7 +57,7 @@ export default function PowerBIPage() {
               Power BI dashboards that show you<br /><em style={{ color: 'var(--amber)' }}>what is actually happening.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Most businesses are making decisions from data that is days old, manually compiled, and nobody fully trusts. We build live Power BI dashboards connected to your real data — so you see what is happening now, not what happened last Tuesday.
+              Most businesses are making decisions from data that is days old, manually compiled, and nobody fully trusts. We build live Power BI dashboards connected to your real data - so you see what is happening now, not what happened last Tuesday.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -81,7 +81,7 @@ export default function PowerBIPage() {
             <span className="section-label">The problem we solve</span>
             <h2 style={{ marginBottom: '20px' }}>Your data exists. You just cannot see it when you need it.</h2>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '48px' }}>
-              The data is there — in your accounting software, your CRM, your spreadsheets. The problem is that pulling it together takes hours, it is out of date by the time it is ready, and the numbers change depending on who runs the report. Power BI fixes all three.
+              The data is there - in your accounting software, your CRM, your spreadsheets. The problem is that pulling it together takes hours, it is out of date by the time it is ready, and the numbers change depending on who runs the report. Power BI fixes all three.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', textAlign: 'left' }}>
               {[
@@ -106,7 +106,7 @@ export default function PowerBIPage() {
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span className="section-label">What we build</span>
             <h2>Power BI dashboards for every part of your business</h2>
-            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '560px', margin: '16px auto 0' }}>Every dashboard is built to your data, your terminology, and your decisions — not a generic template.</p>
+            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '560px', margin: '16px auto 0' }}>Every dashboard is built to your data, your terminology, and your decisions - not a generic template.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {useCases.map((item, i) => (
@@ -132,13 +132,13 @@ export default function PowerBIPage() {
               Before writing a single line of DAX, the most important conversation is about what decisions the dashboard needs to support. Who opens it and what question are they trying to answer? What does a good week look like versus a bad one? What do they need to see to know whether to act?
             </p>
             <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '40px' }}>
-              That conversation shapes everything — what data we connect, how we model it, what we surface on the main view, and what we put behind a filter. The result is a dashboard your team actually opens because it tells them something useful, not one that gets forgotten after the first week.
+              That conversation shapes everything - what data we connect, how we model it, what we surface on the main view, and what we put behind a filter. The result is a dashboard your team actually opens because it tells them something useful, not one that gets forgotten after the first week.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '16px' }}>
               {[
-                { label: 'Built around your decisions', desc: 'We start with what you need to know, then work backwards to the data — not the other way round.' },
+                { label: 'Built around your decisions', desc: 'We start with what you need to know, then work backwards to the data - not the other way round.' },
                 { label: 'Designed for daily use', desc: 'Dashboards your team opens every morning because they are genuinely useful, not because someone said they should.' },
-                { label: 'Connected to live data', desc: 'Updated automatically from your actual systems — not a static screenshot of last month.' },
+                { label: 'Connected to live data', desc: 'Updated automatically from your actual systems - not a static screenshot of last month.' },
                 { label: 'Handed over properly', desc: 'With training, documentation, and the confidence to use it independently from day one.' },
               ].map((item, i) => (
                 <div key={i} style={{ padding: '20px 24px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
@@ -160,8 +160,8 @@ export default function PowerBIPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2px', background: 'rgba(255,255,255,0.06)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
             {[
               { num: '01', title: 'Free scoping call', desc: 'Tell us what decisions you need to make and what data you have. 30 minutes, no commitment, no sales pitch.' },
-              { num: '02', title: 'Fixed quote in 48 hours', desc: 'We come back with a clear scope, exact price, and delivery timeline. You decide whether to proceed — no pressure.' },
-              { num: '03', title: 'We build it', desc: 'We connect your data, build the model, and design the dashboard against your real data — not dummy data.' },
+              { num: '02', title: 'Fixed quote in 48 hours', desc: 'We come back with a clear scope, exact price, and delivery timeline. You decide whether to proceed - no pressure.' },
+              { num: '03', title: 'We build it', desc: 'We connect your data, build the model, and design the dashboard against your real data - not dummy data.' },
               { num: '04', title: 'Handover and training', desc: 'Full walkthrough so your team can use it from day one. Documentation included. Ongoing support available.' },
             ].map((step, i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.03)', padding: '36px 28px' }}>
@@ -187,7 +187,7 @@ export default function PowerBIPage() {
               </div>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)', background: 'var(--amber-bg)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>What we built</h3>
-                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>A Power BI dashboard connected to all three systems — pulling data automatically, reconciling it, and flagging any discrepancies. The Finance Director now opens one screen and sees everything, live.</p>
+                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>A Power BI dashboard connected to all three systems - pulling data automatically, reconciling it, and flagging any discrepancies. The Finance Director now opens one screen and sees everything, live.</p>
               </div>
               <div style={{ padding: '36px', display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
                 {[{ num: '20 min', label: 'Down from 2 full days' }, { num: '0', label: 'Manual data entry' }, { num: '100%', label: 'Discrepancies auto-flagged' }].map((s, i) => (
@@ -207,7 +207,7 @@ export default function PowerBIPage() {
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
             <h2 style={{ marginBottom: '8px' }}>Questions about our Power BI service</h2>
-            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
+            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here - just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>

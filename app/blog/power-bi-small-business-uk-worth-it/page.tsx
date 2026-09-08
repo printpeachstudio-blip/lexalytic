@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it' },
-  title: 'Power BI for Small Business UK — Is It Worth It? | Lexalytic',
+  title: 'Power BI for Small Business UK - Is It Worth It? | Lexalytic',
   description: 'Power BI costs £8.40 per user per month. For most UK small businesses, the question is whether the visibility it provides is worth that. Here is an honest answer.',
   openGraph: {
-    title: 'Power BI for Small Business UK — Is It Worth It?',
+    title: 'Power BI for Small Business UK - Is It Worth It?',
     description: 'Power BI costs £8.40 per user per month. For most UK small businesses, the question is whether the visibility it provides is worth that. Here is an honest answer.',
     url: 'https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it',
     siteName: 'Lexalytic',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Power BI for Small Business UK — Is It Worth It?","description":"A practical guide for UK businesses.","datePublished":"2026-10-06","dateModified":"2026-10-06","url":"https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Power BI for Small Business UK - Is It Worth It?","description":"A practical guide for UK businesses.","datePublished":"2026-10-06","dateModified":"2026-10-06","url":"https://www.lexalytic.com/blog/power-bi-small-business-uk-worth-it","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Power BI</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>October 2026 · 10 min read</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Power BI for Small Business UK — Is It Worth It?</h1>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Power BI for Small Business UK - Is It Worth It?</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
@@ -51,19 +51,19 @@ export default function BlogPost() {
 
             <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI gets recommended for almost every business intelligence problem. But is it actually worth it for a small UK business — one without a dedicated data team, a limited budget, and reporting needs that are real but not enterprise-scale? The honest answer is: sometimes yes, sometimes no. It depends on what you need it to do and whether the alternative is good enough.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI gets recommended for almost every business intelligence problem. But is it actually worth it for a small UK business - one without a dedicated data team, a limited budget, and reporting needs that are real but not enterprise-scale? The honest answer is: sometimes yes, sometimes no. It depends on what you need it to do and whether the alternative is good enough.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>When Power BI makes sense for a small business</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI is the right choice when you need multiple people to access the same live data simultaneously, when you need interactive filtering and drill-down across large datasets, or when your reporting spans multiple data sources that need to be connected and refreshed automatically. For a small business where the MD wants to filter the weekly report by region or salesperson without waiting for someone to rerun it — Power BI does this cleanly and Power BI Pro at £8.40 per user per month is a small cost relative to the time saved.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI is the right choice when you need multiple people to access the same live data simultaneously, when you need interactive filtering and drill-down across large datasets, or when your reporting spans multiple data sources that need to be connected and refreshed automatically. For a small business where the MD wants to filter the weekly report by region or salesperson without waiting for someone to rerun it - Power BI does this cleanly and Power BI Pro at £8.40 per user per month is a small cost relative to the time saved.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>When Excel automation is the better answer</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>If your reporting needs are well-defined — the same metrics, the same format, produced on a regular schedule — an automated Excel report connected to your data sources via Power Query is often the better choice. It costs less to build, requires no additional licences, and produces a formatted output that can be emailed automatically. If you just need the right numbers to appear in the right place without manual work, Excel automation does that without the overhead of Power BI.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>If your reporting needs are well-defined - the same metrics, the same format, produced on a regular schedule - an automated Excel report connected to your data sources via Power Query is often the better choice. It costs less to build, requires no additional licences, and produces a formatted output that can be emailed automatically. If you just need the right numbers to appear in the right place without manual work, Excel automation does that without the overhead of Power BI.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The honest recommendation</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>For most small UK businesses, start with Excel automation. It solves the immediate problem at lower cost and with no new software. If you outgrow it — because you need real-time interactivity, because multiple people need simultaneous access, or because your data complexity has grown — move to Power BI at that point. The data connections you build for Excel automation transfer directly to Power BI when you are ready.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>For most small UK businesses, start with Excel automation. It solves the immediate problem at lower cost and with no new software. If you outgrow it - because you need real-time interactivity, because multiple people need simultaneous access, or because your data complexity has grown - move to Power BI at that point. The data connections you build for Excel automation transfer directly to Power BI when you are ready.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What Power BI actually does that Excel cannot</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Excel is a calculation tool. Power BI is a visualisation and distribution tool. The difference matters in practice: Excel produces a report that someone has to open, navigate, and interpret. Power BI produces a dashboard that updates automatically, can be shared with anyone in the organisation without them needing to know how to use Excel, and surfaces the important information visually without requiring the reader to hunt for it. For businesses where multiple people need access to the same data, Power BI changes how information flows through the organisation.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The scenarios where Power BI is clearly worth it</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI makes most sense when data comes from multiple sources that need connecting, when the same report needs to be shared with multiple people regularly, or when the data updates frequently enough that manual refreshes become burdensome. A business pulling data from an accounting system, a CRM, and a time recording tool to produce a weekly management pack is a strong Power BI candidate. A business producing one simple monthly report from a single data source is not — Excel handles that more efficiently.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Power BI makes most sense when data comes from multiple sources that need connecting, when the same report needs to be shared with multiple people regularly, or when the data updates frequently enough that manual refreshes become burdensome. A business pulling data from an accounting system, a CRM, and a time recording tool to produce a weekly management pack is a strong Power BI candidate. A business producing one simple monthly report from a single data source is not - Excel handles that more efficiently.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The honest answer on cost versus value</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>At £8.40 per user per month for Power BI Pro, the cost is not the constraint. The constraint is the setup time and the learning curve for whoever builds the dashboards. A simple connected dashboard takes a day to build if the data is clean. A complex multi-source model takes a week. The return on that investment depends entirely on how much time the manual equivalent currently takes and how many people benefit from the automated version. For most businesses producing regular management reporting manually, the payback period is under three months.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Related articles</h2>
@@ -88,7 +88,7 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to fix this in your business?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

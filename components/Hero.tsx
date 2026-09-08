@@ -54,7 +54,7 @@ export default function Hero() {
             fontSize: '15px', color: 'rgba(255,255,255,0.35)',
             maxWidth: '560px', marginBottom: '44px', fontWeight: '300', lineHeight: '1.7',
           }}>
-            15 years experience across Shell, NHS, Warner Bros, and Citi — now working directly with UK businesses of every size.
+            15 years experience across Shell, NHS, Warner Bros, and Citi - now working directly with UK businesses of every size.
           </p>
           <div className="fade-up-4" style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
             <a href="#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>

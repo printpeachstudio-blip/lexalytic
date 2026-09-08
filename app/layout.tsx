@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lexalytic.com'),
-  title: 'Lexalytic | Digital Studio — Websites, Software & AI Tools UK',
+  title: 'Lexalytic | Digital Studio - Websites, Software & AI Tools UK',
   description: 'Lexalytic is a UK digital studio. We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Fixed price. Fast delivery. Based in Hertfordshire.',
   keywords: 'UK digital studio, bespoke website development UK, custom software UK small business, AI powered tools UK, website developer Hertfordshire, custom business software UK, bespoke CRM UK, Power BI consultant UK, data automation UK, fixed price web development UK',
   alternates: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Lexalytic | Digital Studio — Websites, Software & AI Tools UK',
+    title: 'Lexalytic | Digital Studio - Websites, Software & AI Tools UK',
     description: 'Lexalytic is a UK digital studio building websites, custom software, AI-powered tools and data systems. Fixed price. Based in Hertfordshire.',
     url: 'https://www.lexalytic.com',
     siteName: 'Lexalytic',

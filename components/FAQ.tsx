@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     q: 'What if the project turns out to be bigger than expected?',
-    a: 'We scope carefully before quoting — so this rarely happens. But if it does, we\'ll tell you immediately, explain why, and agree a revised price before continuing. No hidden extras.',
+    a: 'We scope carefully before quoting - so this rarely happens. But if it does, we\'ll tell you immediately, explain why, and agree a revised price before continuing. No hidden extras.',
   },
   {
     q: 'Will I be able to maintain it myself afterwards?',
-    a: 'Yes. We document everything clearly and walk your team through how it works. The goal is to give you something you can use independently — not create dependency on us.',
+    a: 'Yes. We document everything clearly and walk your team through how it works. The goal is to give you something you can use independently - not create dependency on us.',
   },
   {
     q: 'What kinds of businesses do you work with?',
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Can you work with our existing systems?',
-    a: 'Almost certainly yes. We\'re experienced in connecting to most common business systems — CRMs, ERPs, databases, cloud storage, and more. Tell us what you use and we\'ll confirm.',
+    a: 'Almost certainly yes. We\'re experienced in connecting to most common business systems - CRMs, ERPs, databases, cloud storage, and more. Tell us what you use and we\'ll confirm.',
   },
 ]
 

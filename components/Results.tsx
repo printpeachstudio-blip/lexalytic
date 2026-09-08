@@ -5,7 +5,7 @@ const results = [
     industry: 'Healthcare',
     type: 'Custom Business Tool',
     client: 'Independent Pharmacy',
-    problem: 'Managing 20+ locum pharmacists across shifting rotas with no central system. Payment dates, hours, and rates tracked across separate spreadsheets — payments frequently late or wrong, scheduling clashes went unnoticed, and the admin overhead was significant.',
+    problem: 'Managing 20+ locum pharmacists across shifting rotas with no central system. Payment dates, hours, and rates tracked across separate spreadsheets - payments frequently late or wrong, scheduling clashes went unnoticed, and the admin overhead was significant.',
     solution: 'A fully custom locum management tool with a simple input form. The system calculates pay automatically, highlights payment due dates in red, flags scheduling conflicts, and keeps a complete record of every shift and payment.',
     outcome: 'The pharmacy team now spends minutes on locum admin instead of hours. Nothing gets missed. Payments go out on time. Scheduling conflicts caught before they become problems.',
     metric: '0',
@@ -16,8 +16,8 @@ const results = [
     industry: 'Professional Services',
     type: 'Power BI Dashboard',
     client: 'Managing Director',
-    problem: 'No central view of project profitability. Directors making resourcing decisions without reliable data — guessing which clients and projects were actually profitable and which were quietly draining the business.',
-    solution: 'Power BI dashboard connected directly to their project management and finance systems. Live P&L by project, client, and team member — updated automatically, no manual input required.',
+    problem: 'No central view of project profitability. Directors making resourcing decisions without reliable data - guessing which clients and projects were actually profitable and which were quietly draining the business.',
+    solution: 'Power BI dashboard connected directly to their project management and finance systems. Live P&L by project, client, and team member - updated automatically, no manual input required.',
     outcome: 'Full visibility within 48 hours of the build completing. The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.',
     metric: '48hrs',
     metricLabel: 'From build to full visibility',
@@ -28,7 +28,7 @@ const results = [
     type: 'AI-Powered SaaS',
     client: 'CVCraft AI',
     problem: 'A gap in the market for fast, affordable, AI-powered CV rewriting that beats ATS systems. Professional CV services take days and cost hundreds. Generic templates do not address the specific requirements of modern hiring systems.',
-    solution: 'Built and launched CVCraft AI — a fully automated CV rewriting service. Claude rewrites the CV for the target role, Stripe handles payment, and the finished document is delivered to the customer within 24 hours. No human involvement between submission and delivery.',
+    solution: 'Built and launched CVCraft AI - a fully automated CV rewriting service. Claude rewrites the CV for the target role, Stripe handles payment, and the finished document is delivered to the customer within 24 hours. No human involvement between submission and delivery.',
     outcome: 'A live, operating AI product with automated end-to-end delivery. Every step from payment to finished document runs without manual intervention. The same architecture we use for client AI tool projects.',
     metric: '24hr',
     metricLabel: 'Automated delivery, zero manual steps',
@@ -39,8 +39,8 @@ const results = [
     type: 'Data Automation',
     client: 'Hairdressing Group',
     problem: 'Financials scattered across multiple spreadsheets with nothing linking together. Inherited macros from a previous consultant that either did not work at all or took so long to run that nobody used them. No clear picture of how the business was actually performing.',
-    solution: 'Full data cleanse — restructuring everything so it was consistent and connected. Rebuilt all macros from scratch: faster, reliable, properly documented so the team could understand what everything did.',
-    outcome: 'For the first time, the owner could open one file and see accurate figures across the whole business. Macros that used to take minutes — or fail entirely — now run in seconds.',
+    solution: 'Full data cleanse - restructuring everything so it was consistent and connected. Rebuilt all macros from scratch: faster, reliable, properly documented so the team could understand what everything did.',
+    outcome: 'For the first time, the owner could open one file and see accurate figures across the whole business. Macros that used to take minutes - or fail entirely - now run in seconds.',
     metric: '100%',
     metricLabel: 'Macros rebuilt and working',
     tag: 'Data Automation',
@@ -57,7 +57,7 @@ export default function Results() {
           <a href="#contact" className="btn-primary" style={{ flexShrink: 0 }}>Start your project →</a>
         </div>
         <p style={{ color: 'var(--ink-3)', fontSize: '15px', marginBottom: '48px', maxWidth: '560px' }}>
-          Websites, custom tools, AI products, data systems — a sample of what we have built and what changed as a result.
+          Websites, custom tools, AI products, data systems - a sample of what we have built and what changed as a result.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '20px' }}>
           {results.map((r, i) => (
@@ -105,7 +105,7 @@ export default function Results() {
             Every project starts with a free 30-minute call.
           </p>
           <p style={{ fontSize: '15px', color: 'var(--ink-3)', marginBottom: '28px', maxWidth: '480px', margin: '0 auto 28px' }}>
-            Tell us what you are trying to build or fix. We will tell you what makes sense — and what it would cost.
+            Tell us what you are trying to build or fix. We will tell you what makes sense - and what it would cost.
           </p>
           <a href="#contact" className="btn-primary">Book your free scoping call →</a>
         </div>

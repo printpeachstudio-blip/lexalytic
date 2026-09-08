@@ -18,21 +18,21 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '✅', title: 'Approval Workflows', desc: 'Automate sign-off processes across your organisation — purchase approvals, leave requests, document authorisation — with full audit trails and automatic escalation.' },
-  { icon: '🔔', title: 'Automated Alerts & Notifications', desc: 'Trigger emails, Teams messages, or SMS alerts based on real business events — missed deadlines, threshold breaches, status changes — without anyone monitoring manually.' },
-  { icon: '📥', title: 'Data Collection & Routing', desc: 'Automate the handling of form submissions, inbound emails, and documents — captured, categorised, and routed to the right place without manual intervention.' },
-  { icon: '🔄', title: 'Cross-App Synchronisation', desc: 'Keep data consistent across Microsoft 365 — SharePoint, Teams, Outlook, Excel, Dataverse — automatically, so nothing falls through the cracks between systems.' },
+  { icon: '✅', title: 'Approval Workflows', desc: 'Automate sign-off processes across your organisation - purchase approvals, leave requests, document authorisation - with full audit trails and automatic escalation.' },
+  { icon: '🔔', title: 'Automated Alerts & Notifications', desc: 'Trigger emails, Teams messages, or SMS alerts based on real business events - missed deadlines, threshold breaches, status changes - without anyone monitoring manually.' },
+  { icon: '📥', title: 'Data Collection & Routing', desc: 'Automate the handling of form submissions, inbound emails, and documents - captured, categorised, and routed to the right place without manual intervention.' },
+  { icon: '🔄', title: 'Cross-App Synchronisation', desc: 'Keep data consistent across Microsoft 365 - SharePoint, Teams, Outlook, Excel, Dataverse - automatically, so nothing falls through the cracks between systems.' },
   { icon: '📄', title: 'Document Generation & Filing', desc: 'Generate documents from templates, route them for signature, and file them automatically. No more manually creating, emailing, and chasing paperwork.' },
-  { icon: '📊', title: 'Scheduled Reporting', desc: 'Trigger report generation and distribution automatically on a schedule — the right data lands in the right inboxes without anyone having to run it.' },
+  { icon: '📊', title: 'Scheduled Reporting', desc: 'Trigger report generation and distribution automatically on a schedule - the right data lands in the right inboxes without anyone having to run it.' },
 ]
 
 const faqs = [
   { q: 'Do we need a specific Microsoft licence for Power Automate?', a: 'Basic Power Automate flows are included with most Microsoft 365 business plans. Flows that connect to non-Microsoft systems require a paid Power Automate licence at around £12 per user per month. We will confirm exactly what you need during the scoping call.' },
-  { q: 'Can Power Automate connect to systems outside Microsoft 365?', a: 'Yes. Power Automate has pre-built connectors for hundreds of third-party applications — Salesforce, Google Workspace, Slack, SAP, DocuSign, and many more. We will confirm compatibility with your specific systems during scoping.' },
+  { q: 'Can Power Automate connect to systems outside Microsoft 365?', a: 'Yes. Power Automate has pre-built connectors for hundreds of third-party applications - Salesforce, Google Workspace, Slack, SAP, DocuSign, and many more. We will confirm compatibility with your specific systems during scoping.' },
   { q: 'How long do Power Automate projects take?', a: 'Most flows are delivered in 3-7 working days. Simple single-trigger automations are faster; multi-step conditional workflows with approvals and error handling take longer. You will get a clear timeline in your quote.' },
-  { q: 'What happens if a workflow fails?', a: 'We build error handling and failure notifications into every workflow — so if something goes wrong, you are alerted immediately rather than finding out days later. Power Automate also has built-in run history so you can see exactly what happened.' },
+  { q: 'What happens if a workflow fails?', a: 'We build error handling and failure notifications into every workflow - so if something goes wrong, you are alerted immediately rather than finding out days later. Power Automate also has built-in run history so you can see exactly what happened.' },
   { q: 'Can we modify the workflows ourselves afterwards?', a: 'Yes. Power Automate has a visual, no-code interface that is genuinely manageable without technical knowledge. We will provide documentation and a walkthrough so your team can make straightforward changes independently.' },
-  { q: 'Do you work with businesses outside London?', a: 'Yes — all work is delivered remotely. We work with businesses across the UK and internationally.' },
+  { q: 'Do you work with businesses outside London?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
 export default function PowerAutomatePage() {
@@ -55,7 +55,7 @@ export default function PowerAutomatePage() {
               Stop doing manually what<br /><em style={{ color: 'var(--amber)' }}>Microsoft 365 can do itself.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              If your team is manually routing emails, chasing approvals, copying data between apps, or filing documents by hand — Power Automate can handle all of it. We build the workflows, test them against your real processes, and hand them over ready to run.
+              If your team is manually routing emails, chasing approvals, copying data between apps, or filing documents by hand - Power Automate can handle all of it. We build the workflows, test them against your real processes, and hand them over ready to run.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -78,7 +78,7 @@ export default function PowerAutomatePage() {
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span className="section-label">What we automate</span>
             <h2>Every repetitive Microsoft 365 task your team does by hand</h2>
-            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>If it involves clicking, copying, emailing, or filing inside Microsoft 365 — there is almost certainly a Power Automate flow that handles it.</p>
+            <p style={{ color: 'var(--ink-3)', marginTop: '16px', maxWidth: '520px', margin: '16px auto 0' }}>If it involves clicking, copying, emailing, or filing inside Microsoft 365 - there is almost certainly a Power Automate flow that handles it.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
             {useCases.map((item, i) => (
@@ -102,7 +102,7 @@ export default function PowerAutomatePage() {
                 The vast majority of businesses using Microsoft 365 are still doing things manually that the platform could handle automatically. Emails getting manually forwarded to the right person. Approval requests being chased by hand. Documents being saved to SharePoint by someone who has to remember to do it. Forms being processed by a person who re-enters the data somewhere else.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                Power Automate is built into Microsoft 365. It can trigger actions based on almost any event — an email arriving, a form being submitted, a deadline being missed, a value changing in a spreadsheet — and connect those triggers to actions across hundreds of applications.
+                Power Automate is built into Microsoft 365. It can trigger actions based on almost any event - an email arriving, a form being submitted, a deadline being missed, a value changing in a spreadsheet - and connect those triggers to actions across hundreds of applications.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
                 The reason most businesses have not set it up is that building reliable flows requires understanding both the technical side and the business process. Most people in IT do not know the process well enough, while the people who know the process do not know the technical side. We bridge that gap.
@@ -135,7 +135,7 @@ export default function PowerAutomatePage() {
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
             <h2 style={{ marginBottom: '8px' }}>Questions about Power Automate</h2>
-            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
+            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here - just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
@@ -151,7 +151,7 @@ export default function PowerAutomatePage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Let Microsoft 365<br /><em style={{ color: 'var(--amber)' }}>do the repetitive work.</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what your team does manually every day and we will show you what Power Automate can handle — and what it would cost.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what your team does manually every day and we will show you what Power Automate can handle - and what it would cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Delivered in 3-7 days · Full documentation included</p>
         </div>

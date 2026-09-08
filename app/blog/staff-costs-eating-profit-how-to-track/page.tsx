@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track' },
-  title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It | Lexalytic',
-  description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
+  title: 'Why Your Staff Costs Are Eating Your Profit - And How to Track It | Lexalytic',
+  description: 'Staff costs are the largest expense in most service businesses - and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
   openGraph: {
-    title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It',
-    description: 'Staff costs are the largest expense in most service businesses — and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
+    title: 'Why Your Staff Costs Are Eating Your Profit - And How to Track It',
+    description: 'Staff costs are the largest expense in most service businesses - and the hardest to see clearly. Here is how UK businesses can track the true cost of each employee against what they generate.',
     url: 'https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Why Your Staff Costs Are Eating Your Profit — And How to Track It","description":"A practical guide for UK businesses.","datePublished":"2026-09-03","dateModified":"2026-09-03","url":"https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Why Your Staff Costs Are Eating Your Profit - And How to Track It","description":"A practical guide for UK businesses.","datePublished":"2026-09-03","dateModified":"2026-09-03","url":"https://www.lexalytic.com/blog/staff-costs-eating-profit-how-to-track","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Finance</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 10 min read</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Why Your Staff Costs Are Eating Your Profit — And How to Track It</h1>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Why Your Staff Costs Are Eating Your Profit - And How to Track It</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
@@ -51,21 +51,21 @@ export default function BlogPost() {
 
             <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Staff costs are the largest expense in most service businesses — and the hardest to see clearly. The salary bill is visible. The employer NI, pension contributions, holiday pay, sick pay, training costs, and recruitment costs that sit on top of it are often invisible in routine reporting. And the relationship between what each person costs and what they generate for the business is almost never tracked in real time.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Staff costs are the largest expense in most service businesses - and the hardest to see clearly. The salary bill is visible. The employer NI, pension contributions, holiday pay, sick pay, training costs, and recruitment costs that sit on top of it are often invisible in routine reporting. And the relationship between what each person costs and what they generate for the business is almost never tracked in real time.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The true cost of an employee</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The gross salary is just the starting point. Employer National Insurance adds 13.8% above the secondary threshold. Auto-enrolment pension contributions add a minimum of 3%. Holiday pay represents roughly 12.07% of salary for employees on standard leave entitlement. Add recruitment costs, training, and management time — and the true annual cost of a £30,000 employee is typically £38,000-£42,000 before any overhead allocation.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The gross salary is just the starting point. Employer National Insurance adds 13.8% above the secondary threshold. Auto-enrolment pension contributions add a minimum of 3%. Holiday pay represents roughly 12.07% of salary for employees on standard leave entitlement. Add recruitment costs, training, and management time - and the true annual cost of a £30,000 employee is typically £38,000-£42,000 before any overhead allocation.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The revenue side of the equation</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Knowing what each person costs is only useful when set against what they generate. For a service business, this means tracking billable output, utilisation rates, or revenue attributable to each team member. The gap between cost and contribution is the metric that matters — and it varies significantly across teams and individuals in almost every business.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Knowing what each person costs is only useful when set against what they generate. For a service business, this means tracking billable output, utilisation rates, or revenue attributable to each team member. The gap between cost and contribution is the metric that matters - and it varies significantly across teams and individuals in almost every business.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How to build the visibility</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Staff cost tracking that connects payroll data to revenue data requires connecting two systems most businesses keep entirely separate. Power BI or an automated Excel model can bridge this — pulling payroll costs from the HR or payroll system and revenue data from the accounting or CRM system, then producing a cost-per-head and revenue-per-head view by team member, updated automatically.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Staff cost tracking that connects payroll data to revenue data requires connecting two systems most businesses keep entirely separate. Power BI or an automated Excel model can bridge this - pulling payroll costs from the HR or payroll system and revenue data from the accounting or CRM system, then producing a cost-per-head and revenue-per-head view by team member, updated automatically.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What the numbers usually reveal</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>When businesses first build a cost-per-head model, the results are almost always surprising. The highest-paid team members are not always the highest contributors. Long-tenured employees who have received annual pay rises without corresponding increases in output often sit at the worst cost-to-revenue ratios. High performers who were hired at below-market rates often sit at exceptional ratios that are invisible without this analysis. The visibility changes decisions — around pay reviews, team structure, hiring plans, and which clients to prioritise.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>When businesses first build a cost-per-head model, the results are almost always surprising. The highest-paid team members are not always the highest contributors. Long-tenured employees who have received annual pay rises without corresponding increases in output often sit at the worst cost-to-revenue ratios. High performers who were hired at below-market rates often sit at exceptional ratios that are invisible without this analysis. The visibility changes decisions - around pay reviews, team structure, hiring plans, and which clients to prioritise.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>The practical starting point</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The fastest way to build initial visibility is in Excel. Take your payroll export, add the employer cost uplift (NI, pension, holiday), and set it against a revenue attribution from your CRM or billing system. Even a rough cut — total team cost divided by total revenue, broken down by department — gives you more than most businesses have. From there, Power BI can automate the update so the numbers are live every week without anyone rebuilding the model.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The fastest way to build initial visibility is in Excel. Take your payroll export, add the employer cost uplift (NI, pension, holiday), and set it against a revenue attribution from your CRM or billing system. Even a rough cut - total team cost divided by total revenue, broken down by department - gives you more than most businesses have. From there, Power BI can automate the update so the numbers are live every week without anyone rebuilding the model.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>When to invest in a proper system</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A manual Excel model works until the team grows beyond 15-20 people or the data starts coming from too many sources to manage manually. At that point, an automated dashboard connected directly to your payroll and revenue systems is worth building. The time saving alone — typically 3-4 hours per month of manual reconciliation — pays for the build within a few months. The better decisions it enables pay for it many times over.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A manual Excel model works until the team grows beyond 15-20 people or the data starts coming from too many sources to manage manually. At that point, an automated dashboard connected directly to your payroll and revenue systems is worth building. The time saving alone - typically 3-4 hours per month of manual reconciliation - pays for the build within a few months. The better decisions it enables pay for it many times over.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Related articles</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
               
@@ -88,7 +88,7 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to fix this in your business?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

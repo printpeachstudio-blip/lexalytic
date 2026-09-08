@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/excel-automation-construction-companies-uk' },
   title: 'Excel Automation for Construction Companies UK (2026 Guide) | Lexalytic',
-  description: 'Construction businesses run on spreadsheets — job costs, labour, materials, subcontractors. Here is how to automate the reporting so you can see project profitability without rebuilding the same spreadsheet every week.',
+  description: 'Construction businesses run on spreadsheets - job costs, labour, materials, subcontractors. Here is how to automate the reporting so you can see project profitability without rebuilding the same spreadsheet every week.',
   keywords: 'Excel automation construction UK, construction reporting automation, job cost reporting Excel UK, construction project tracking automation, automate construction reports UK',
   openGraph: {
     title: 'Excel Automation for Construction Companies UK (2026 Guide)',
@@ -43,7 +43,7 @@ export default function BlogPost() {
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Excel Automation for Construction Companies</h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Construction businesses run on spreadsheets. Job costs, labour, materials, variations, subcontractor payments — most of it tracked in Excel, most of it rebuilt manually every week. Here is how to automate the parts that are eating your time.
+            Construction businesses run on spreadsheets. Job costs, labour, materials, variations, subcontractor payments - most of it tracked in Excel, most of it rebuilt manually every week. Here is how to automate the parts that are eating your time.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -61,15 +61,15 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              The most time-consuming Excel work in construction businesses — job cost tracking, labour allocation, subcontractor payment calculations, project profitability reporting — can almost always be automated. The data already exists in your systems. The manual work is in moving it, formatting it, and rebuilding the same views every week.
+              The most time-consuming Excel work in construction businesses - job cost tracking, labour allocation, subcontractor payment calculations, project profitability reporting - can almost always be automated. The data already exists in your systems. The manual work is in moving it, formatting it, and rebuilding the same views every week.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            Construction is one of the most data-intensive sectors in the UK economy. Every project generates a constant stream of figures — labour hours, material costs, subcontractor invoices, variations, retention, valuations. Keeping track of all of it, across multiple projects simultaneously, while also understanding which jobs are actually profitable — that is a genuinely complex data challenge.
+            Construction is one of the most data-intensive sectors in the UK economy. Every project generates a constant stream of figures - labour hours, material costs, subcontractor invoices, variations, retention, valuations. Keeping track of all of it, across multiple projects simultaneously, while also understanding which jobs are actually profitable - that is a genuinely complex data challenge.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            Most construction businesses address this challenge the same way: spreadsheets. Lots of them. And the problem is not the spreadsheets themselves — it is that the same data is being entered and re-entered across multiple files, by multiple people, with no automated connection between them.
+            Most construction businesses address this challenge the same way: spreadsheets. Lots of them. And the problem is not the spreadsheets themselves - it is that the same data is being entered and re-entered across multiple files, by multiple people, with no automated connection between them.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -81,8 +81,8 @@ export default function BlogPost() {
           {[
             { title: 'Job cost tracking done manually each week', body: 'Someone collects time sheets, materials receipts, and subcontractor invoices. Someone enters them into a spreadsheet. Someone allocates them to the right job codes. Someone compares them to the budget. This process runs every week, for every active project, and takes significant time that could be spent running jobs rather than tracking them.' },
             { title: 'No live view of project profitability', body: 'Most construction businesses can tell you what a job cost in total once it is finished. Very few can tell you, right now, whether a job currently in progress is tracking to margin or running over budget. By the time the post-project review happens, there is nothing that can be done about the overrun. A live job cost view changes this entirely.' },
-            { title: 'Subcontractor payment calculations rebuilt every month', body: 'Calculating what each subcontractor is owed — accounting for retention, CIS deductions, any variations, and the payment schedule — is a process that gets rebuilt from scratch every payment run. The logic is the same every time. The inputs change. This is exactly the kind of repeating calculation that VBA or Excel automation handles cleanly.' },
-            { title: 'Variation tracking in a separate spreadsheet nobody trusts', body: 'Variations — changes to the original contract scope — are often tracked in a separate file that does not connect to the main job cost tracker. Nobody is quite sure which version is current. Approved variations that should increase the contract value do not always make it into the cost vs value comparison. This is a data architecture problem with a straightforward fix.' },
+            { title: 'Subcontractor payment calculations rebuilt every month', body: 'Calculating what each subcontractor is owed - accounting for retention, CIS deductions, any variations, and the payment schedule - is a process that gets rebuilt from scratch every payment run. The logic is the same every time. The inputs change. This is exactly the kind of repeating calculation that VBA or Excel automation handles cleanly.' },
+            { title: 'Variation tracking in a separate spreadsheet nobody trusts', body: 'Variations - changes to the original contract scope - are often tracked in a separate file that does not connect to the main job cost tracker. Nobody is quite sure which version is current. Approved variations that should increase the contract value do not always make it into the cost vs value comparison. This is a data architecture problem with a straightforward fix.' },
           ].map((item, i) => (
             <div key={i} style={{ padding: '24px 28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '16px' }}>
               <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'var(--ink)', marginBottom: '12px' }}>{item.title}</h3>
@@ -100,9 +100,9 @@ export default function BlogPost() {
           </p>
 
           {[
-            { num: '01', title: 'Automated job cost tracker', body: 'A single Excel file connected to your accounting software and timesheet system that pulls all costs for each job automatically. Labour hours, material purchases, subcontractor invoices — all allocated to the right job code without manual entry. The tracker updates when you refresh, showing current spend vs budget for every active project.' },
-            { num: '02', title: 'Project profitability dashboard', body: 'A Power BI or Excel dashboard that shows gross margin by project, by client, and by project manager — updated automatically from your live data. Which jobs are tracking to margin. Which are running over. Which clients are most profitable. All visible without anyone building a report.' },
-            { num: '03', title: 'Subcontractor payment calculator', body: 'A VBA tool that takes your subcontractor data — agreed rates, hours worked, materials supplied, retention percentage, CIS rate — and calculates the correct payment for each subcontractor automatically. No rebuild each month, no manual calculation errors, outputs formatted ready for approval.' },
+            { num: '01', title: 'Automated job cost tracker', body: 'A single Excel file connected to your accounting software and timesheet system that pulls all costs for each job automatically. Labour hours, material purchases, subcontractor invoices - all allocated to the right job code without manual entry. The tracker updates when you refresh, showing current spend vs budget for every active project.' },
+            { num: '02', title: 'Project profitability dashboard', body: 'A Power BI or Excel dashboard that shows gross margin by project, by client, and by project manager - updated automatically from your live data. Which jobs are tracking to margin. Which are running over. Which clients are most profitable. All visible without anyone building a report.' },
+            { num: '03', title: 'Subcontractor payment calculator', body: 'A VBA tool that takes your subcontractor data - agreed rates, hours worked, materials supplied, retention percentage, CIS rate - and calculates the correct payment for each subcontractor automatically. No rebuild each month, no manual calculation errors, outputs formatted ready for approval.' },
             { num: '04', title: 'Variation tracking integrated with job costs', body: 'A structured variations log connected to the main job cost tracker so approved variations automatically update the contract value and the budget. The cost vs value comparison is always current without anyone manually updating two separate spreadsheets.' },
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '24px', marginBottom: '32px', alignItems: 'flex-start' }}>
@@ -116,16 +116,16 @@ export default function BlogPost() {
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
-              <strong style={{ color: 'var(--ink)' }}>Worth noting:</strong> If your job cost data is inconsistent — costs coded to the wrong jobs, subcontractor names entered differently across invoices, dates in mixed formats — the automation will reproduce those problems. Our guide to <Link href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</Link> covers what to sort out before building the automation.
+              <strong style={{ color: 'var(--ink)' }}>Worth noting:</strong> If your job cost data is inconsistent - costs coded to the wrong jobs, subcontractor names entered differently across invoices, dates in mixed formats - the automation will reproduce those problems. Our guide to <Link href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</Link> covers what to sort out before building the automation.
             </p>
           </div>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>Frequently asked questions</h2>
           {[
-            { q: 'Does Excel automation work with construction industry software like Buildxact or Xero Projects?', a: 'Yes. Power Query can connect to most construction project management tools that have an export or API capability, and directly to accounting software like Xero via the API. The specific connection method depends on the software, but the outcome — data flowing automatically into your Excel tracker — is achievable with most tools used in UK construction.' },
+            { q: 'Does Excel automation work with construction industry software like Buildxact or Xero Projects?', a: 'Yes. Power Query can connect to most construction project management tools that have an export or API capability, and directly to accounting software like Xero via the API. The specific connection method depends on the software, but the outcome - data flowing automatically into your Excel tracker - is achievable with most tools used in UK construction.' },
             { q: 'How long does it take to build an automated job cost tracker?', a: 'A straightforward automated job cost tracker connecting your accounting software to a formatted Excel template is typically delivered in 3-7 working days depending on the number of data sources and the complexity of the cost allocation logic. We scope every project and give a fixed price before any work begins.' },
-            { q: 'Can VBA handle CIS calculations automatically?', a: 'Yes. CIS deduction calculations — determining the correct deduction rate based on subcontractor verification status and applying it to the gross payment — follow consistent rules that VBA handles reliably. A CIS payment calculator built in VBA applies the correct rates automatically, produces the correct payment figures, and formats the output ready for approval.' },
-            { q: 'Can you build a custom job tracking or CRM tool for a construction business?', a: 'Yes. If Excel automation is not the right fit — for example if you need multiple people entering data simultaneously, or if the process has grown too complex for a spreadsheet — we can build a bespoke job tracking tool, custom CRM, or project management application built around exactly how your construction business works. No monthly licence fees, owned by you outright.' },
+            { q: 'Can VBA handle CIS calculations automatically?', a: 'Yes. CIS deduction calculations - determining the correct deduction rate based on subcontractor verification status and applying it to the gross payment - follow consistent rules that VBA handles reliably. A CIS payment calculator built in VBA applies the correct rates automatically, produces the correct payment figures, and formats the output ready for approval.' },
+            { q: 'Can you build a custom job tracking or CRM tool for a construction business?', a: 'Yes. If Excel automation is not the right fit - for example if you need multiple people entering data simultaneously, or if the process has grown too complex for a spreadsheet - we can build a bespoke job tracking tool, custom CRM, or project management application built around exactly how your construction business works. No monthly licence fees, owned by you outright.' },
             { q: 'What if we use a mix of Excel and job management software?', a: 'This is the most common setup in UK construction businesses and it is exactly the situation automation is designed to address. Power Query can pull data from both sources simultaneously and combine them in a single tracking view. The manual data transfer between the job management system and your Excel files is removed entirely.' },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
@@ -140,7 +140,7 @@ export default function BlogPost() {
               { title: 'How to Automate Excel Reports (Without Knowing How to Code)', href: '/blog/how-to-automate-excel-reports', tag: 'Excel Automation' },
               { title: 'How Much Does Excel Automation Cost in the UK?', href: '/blog/excel-automation-cost-uk', tag: 'Excel Automation' },
               { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-              { title: 'What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?', href: '/blog/what-is-data-cleansing-uk', tag: 'Data Quality' },
+              { title: 'What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?', href: '/blog/what-is-data-cleansing-uk', tag: 'Data Quality' },
             ].map((post, i) => (
               <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
                 <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>

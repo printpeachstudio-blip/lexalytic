@@ -40,13 +40,13 @@ export default function Contact() {
             <span className="section-label">Get in touch</span>
             <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Let's fix your business problem.</h2>
             <p style={{ color: 'rgba(255,255,255,0.45)', marginBottom: '48px', fontSize: '16px', lineHeight: '1.8', fontWeight: '300' }}>
-              Book a free 30-minute call. Tell us what you need built — a website, a custom tool, an AI product, or a data system. We'll tell you exactly what we'd build and what it would cost. No commitment, no sales pressure.
+              Book a free 30-minute call. Tell us what you need built - a website, a custom tool, an AI product, or a data system. We'll tell you exactly what we'd build and what it would cost. No commitment, no sales pressure.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
               {[
                 { icon: '→', label: 'Free 30-min scoping call', sub: 'Tell us what you need and we will scope it clearly' },
                 { icon: '→', label: 'Fixed price quote in 48 hours', sub: 'Exact cost before any work begins' },
-                { icon: '→', label: 'Start within days', sub: 'Not weeks — we keep capacity available' },
+                { icon: '→', label: 'Start within days', sub: 'Not weeks - we keep capacity available' },
               ].map((item, i) => (
                 <div key={i} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                   <div style={{

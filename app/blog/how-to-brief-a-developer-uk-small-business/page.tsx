@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-brief-a-developer-uk-small-business' },
-  title: 'How to Brief a Developer — A UK Small Business Guide | Lexalytic',
+  title: 'How to Brief a Developer - A UK Small Business Guide | Lexalytic',
   description: 'Most development projects go wrong because the brief was not clear enough. Here is how to write a brief that gets you what you actually need, without paying for what you do not.',
   keywords: 'how to brief a developer UK, website brief template UK, software development brief UK small business, how to write a tech brief UK, brief for custom software UK',
   openGraph: {
-    title: 'How to Brief a Developer — A UK Small Business Guide',
+    title: 'How to Brief a Developer - A UK Small Business Guide',
     description: 'Most development projects go wrong because the brief was not clear enough. Here is how to write a brief that gets you what you actually need, without paying for what you do not.',
     url: 'https://www.lexalytic.com/blog/how-to-brief-a-developer-uk-small-business',
     siteName: 'Lexalytic',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Brief a Developer — A UK Small Business Guide","description":"Most development projects go wrong because the brief was not clear enough. Here is how to write a brief that gets you what you actually need, without paying for what you do not.","datePublished":"2026-12-22","dateModified":"2026-12-22","url":"https://www.lexalytic.com/blog/how-to-brief-a-developer-uk-small-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Brief a Developer - A UK Small Business Guide","description":"Most development projects go wrong because the brief was not clear enough. Here is how to write a brief that gets you what you actually need, without paying for what you do not.","datePublished":"2026-12-22","dateModified":"2026-12-22","url":"https://www.lexalytic.com/blog/how-to-brief-a-developer-uk-small-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -38,7 +38,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Custom Business Tools</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>December 2026 · 10 min read</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to Brief a Developer — A UK Small Business Guide</h1>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>How to Brief a Developer - A UK Small Business Guide</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
@@ -50,14 +50,14 @@ export default function BlogPost() {
       </section>
       <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most common cause of failed or overbudget development projects is not technical — it is a brief that was not specific enough. A vague brief produces a quote that the developer interprets in their favour, a scope that expands during the project, and a final product that does not quite match what you had in mind. Here is how to write a brief that prevents all three.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most common cause of failed or overbudget development projects is not technical - it is a brief that was not specific enough. A vague brief produces a quote that the developer interprets in their favour, a scope that expands during the project, and a final product that does not quite match what you had in mind. Here is how to write a brief that prevents all three.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Start with the problem, not the solution</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Most briefs describe the solution the client wants rather than the problem they are trying to solve. "We need a CRM with a pipeline view and automated follow-up emails" is a solution description. "We lose track of where each prospect is in our sales process and follow-ups happen inconsistently" is a problem description. Starting with the problem gives the developer room to suggest a solution that might be better than the one you had in mind — and ensures the solution actually addresses the underlying issue rather than just building what was described.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Most briefs describe the solution the client wants rather than the problem they are trying to solve. "We need a CRM with a pipeline view and automated follow-up emails" is a solution description. "We lose track of where each prospect is in our sales process and follow-ups happen inconsistently" is a problem description. Starting with the problem gives the developer room to suggest a solution that might be better than the one you had in mind - and ensures the solution actually addresses the underlying issue rather than just building what was described.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Describe who will use it and how</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Every good development brief describes the users — not abstractly, but specifically. Who are they? How technical are they? What device will they primarily use? What do they currently do instead of using this tool? What does success look like for them? A brief that answers these questions produces a design that fits the actual users rather than a theoretical average user. This is especially important for internal tools, where the temptation is to assume developers understand the business context — they rarely do without being told.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Every good development brief describes the users - not abstractly, but specifically. Who are they? How technical are they? What device will they primarily use? What do they currently do instead of using this tool? What does success look like for them? A brief that answers these questions produces a design that fits the actual users rather than a theoretical average user. This is especially important for internal tools, where the temptation is to assume developers understand the business context - they rarely do without being told.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Define what must work on day one vs what can come later</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>One of the most effective ways to control cost and timeline is to be explicit about what is essential for launch and what can be added later. A brief that tries to specify everything leads to a large, expensive, slow project. A brief that identifies the minimum viable set of features — the things without which the tool does not solve the problem — leads to a faster, cheaper first version that you can improve based on real use. Be honest with yourself about what is genuinely essential.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>One of the most effective ways to control cost and timeline is to be explicit about what is essential for launch and what can be added later. A brief that tries to specify everything leads to a large, expensive, slow project. A brief that identifies the minimum viable set of features - the things without which the tool does not solve the problem - leads to a faster, cheaper first version that you can improve based on real use. Be honest with yourself about what is genuinely essential.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Specify what you do not want as clearly as what you do</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Negative requirements are as important as positive ones. If you do not want the developer to host your data on servers outside the UK, say so. If you do not want a WordPress site, say so. If you do not want ongoing licence fees for third-party tools embedded in the build, say so. If you do not want to be locked into a proprietary system you cannot move away from, say so. These constraints shape the solution significantly and are far better addressed before the project starts than after.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Related articles</h2>
@@ -69,7 +69,7 @@ export default function BlogPost() {
             </Link>
             <Link key={1} href="/blog/bespoke-software-vs-off-the-shelf-uk-small-business" style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
               <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Custom Business Tools</span>
-              <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>Bespoke Software vs Off-the-Shelf — The Honest UK Guide</p>
+              <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>Bespoke Software vs Off-the-Shelf - The Honest UK Guide</p>
             </Link>
             <Link key={2} href="/blog/how-to-know-when-your-business-needs-custom-software" style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
               <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Custom Business Tools</span>
@@ -78,7 +78,7 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach — and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

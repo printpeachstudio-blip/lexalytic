@@ -21,13 +21,13 @@ export default function Tool() {
         <span className="section-label">Free tool</span>
         <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '60px', alignItems: 'start' }}>
 
-          {/* Left — intro */}
+          {/* Left - intro */}
           <div>
             <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>
               What is your manual reporting <em style={{ color: 'var(--amber)' }}>actually costing you?</em>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '24px', fontSize: '15px', lineHeight: '1.7' }}>
-              Most businesses don't realise how much manual data work costs in real terms. Use this calculator to find out — and see how quickly automation pays for itself.
+              Most businesses don't realise how much manual data work costs in real terms. Use this calculator to find out - and see how quickly automation pays for itself.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
@@ -43,7 +43,7 @@ export default function Tool() {
             </div>
           </div>
 
-          {/* Right — calculator */}
+          {/* Right - calculator */}
           <div style={{
             background: 'var(--bg-dark-2)', border: '1px solid rgba(255,255,255,0.08)',
             borderRadius: 'var(--radius-lg)', padding: 'clamp(24px, 4vw, 36px)',
@@ -88,10 +88,10 @@ export default function Tool() {
                 </div>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '16px' }}>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)', marginBottom: '4px' }}>
-                    You could save <strong style={{ color: 'var(--white)' }}>£{saving.toLocaleString()}/year</strong> — and automation typically pays for itself within months of delivery.
+                    You could save <strong style={{ color: 'var(--white)' }}>£{saving.toLocaleString()}/year</strong> - and automation typically pays for itself within months of delivery.
                   </div>
                   <a href="#contact" className="btn-amber" style={{ marginTop: '16px', width: '100%', justifyContent: 'center', fontSize: '14px' }}>
-                    Let's fix this — book a free call →
+                    Let's fix this - book a free call →
                   </a>
                 </div>
               </div>

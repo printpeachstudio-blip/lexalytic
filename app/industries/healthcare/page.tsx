@@ -42,7 +42,7 @@ export default function HealthcarePage() {
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>Digital tools built for UK healthcare businesses.</h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '620px', marginBottom: '24px', fontWeight: '300', lineHeight: '1.75' }}>SUBDigital tools built for UK healthcare businesses.</p>
-            <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.4)', maxWidth: '620px', marginBottom: '40px', lineHeight: '1.75' }}>Healthcare businesses have specific operational challenges — complex staff scheduling, locum management, compliance tracking, and regulatory reporting. We have built tools for healthcare clients and understand what the sector needs.</p>
+            <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.4)', maxWidth: '620px', marginBottom: '40px', lineHeight: '1.75' }}>Healthcare businesses have specific operational challenges - complex staff scheduling, locum management, compliance tracking, and regulatory reporting. We have built tools for healthcare clients and understand what the sector needs.</p>
             <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function HealthcarePage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         <div style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Staff rota and scheduling tools</h3>
-              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Custom scheduling applications that handle your specific staffing rules — covering requirements, availability, conflicts, and compliance — with visibility across the whole team.</p>
+              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Custom scheduling applications that handle your specific staffing rules - covering requirements, availability, conflicts, and compliance - with visibility across the whole team.</p>
             </div>
             <div style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Locum management systems</h3>
@@ -63,11 +63,11 @@ export default function HealthcarePage() {
             </div>
             <div style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Compliance and certification tracking</h3>
-              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Automated trackers that flag expiring certifications, DBS checks, and mandatory training before they become issues — for staff, locums, and contractors.</p>
+              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Automated trackers that flag expiring certifications, DBS checks, and mandatory training before they become issues - for staff, locums, and contractors.</p>
             </div>
             <div style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Reporting and audit dashboards</h3>
-              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Management dashboards connected to your operational data — staffing levels, costs, compliance status, and KPIs — updated automatically without manual compilation.</p>
+              <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Management dashboards connected to your operational data - staffing levels, costs, compliance status, and KPIs - updated automatically without manual compilation.</p>
             </div>
             <div style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Healthcare business websites</h3>
@@ -86,7 +86,7 @@ export default function HealthcarePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                 <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>You work directly with the founder</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Mihir has 15 years experience across Shell, NHS, Warner Bros, and Citi. Every project is handled directly — not passed to a junior.</p>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>Mihir has 15 years experience across Shell, NHS, Warner Bros, and Citi. Every project is handled directly - not passed to a junior.</p>
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                 <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Fixed price before we start</h3>
@@ -94,11 +94,11 @@ export default function HealthcarePage() {
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                 <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Sector understanding</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We have built tools for Healthcare businesses and understand the specific operational challenges of the sector — not just the technology.</p>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We have built tools for Healthcare businesses and understand the specific operational challenges of the sector - not just the technology.</p>
               </div>
               <div style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                 <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px' }}>Delivered entirely remotely</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We work with UK businesses entirely online. No commute costs, no office overhead — just the work, delivered to agreed timelines.</p>
+                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6' }}>We work with UK businesses entirely online. No commute costs, no office overhead - just the work, delivered to agreed timelines.</p>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function HealthcarePage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Have a problem that needs<br /><em style={{ color: 'var(--amber)' }}>a proper digital solution?</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what you need and we will tell you exactly what we would build — and what it would cost.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what you need and we will tell you exactly what we would build - and what it would cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
         </div>
       </section>

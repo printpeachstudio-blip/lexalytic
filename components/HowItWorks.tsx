@@ -3,7 +3,7 @@ const steps = [
   {
     num: 'First',
     title: 'Tell us what you need',
-    desc: 'Book a free 30-minute call. Tell us what you need built or fixed. No forms to fill in, no lengthy questionnaires — just tell us what\'s slowing you down.',
+    desc: 'Book a free 30-minute call. Tell us what you need built or fixed. No forms to fill in, no lengthy questionnaires - just tell us what\'s slowing you down.',
   },
   {
     num: 'Then',
@@ -29,7 +29,7 @@ export default function HowItWorks() {
         <span className="section-label">How it works</span>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '16px' }}>
           <h2 style={{ color: 'var(--white)', maxWidth: '420px' }}>Simple, structured, no jargon.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '320px', fontSize: '15px' }}>From first call to live product — delivered directly by the person you spoke to.</p>
+          <p style={{ color: 'rgba(255,255,255,0.4)', maxWidth: '320px', fontSize: '15px' }}>From first call to live product - delivered directly by the person you spoke to.</p>
         </div>
 
         <div style={{

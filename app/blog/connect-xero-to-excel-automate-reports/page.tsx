@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/connect-xero-to-excel-automate-reports' },
   title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026) | Lexalytic',
-  description: 'Stop manually exporting from Xero every week. Here is exactly how to connect Xero to Excel automatically — three methods, step by step, with real UK business examples.',
+  description: 'Stop manually exporting from Xero every week. Here is exactly how to connect Xero to Excel automatically - three methods, step by step, with real UK business examples.',
   keywords: 'connect Xero to Excel UK, Xero Excel integration, automate Xero reports Excel, Xero Power Query UK, Xero reporting automation UK, export Xero to Excel automatically',
   openGraph: {
     title: 'How to Get Xero Reports into Excel Automatically (UK Guide 2026)',
@@ -51,7 +51,7 @@ export default function BlogPost() {
             How to Connect Xero to Excel and Automate Your Reports
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Most Xero users spend more time than they should manually exporting data and reformatting it in Excel. Here is how to connect them properly — so the data flows automatically and your reports build themselves.
+            Most Xero users spend more time than they should manually exporting data and reformatting it in Excel. Here is how to connect them properly - so the data flows automatically and your reports build themselves.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -69,12 +69,12 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              There are three main ways to connect Xero to Excel: the Xero native export (manual, limited), the Xero API via Power Query (automatic, flexible), and third-party connectors. For most UK businesses, Power Query is the right approach — it pulls your Xero data directly into Excel on a schedule, with no manual steps required.
+              There are three main ways to connect Xero to Excel: the Xero native export (manual, limited), the Xero API via Power Query (automatic, flexible), and third-party connectors. For most UK businesses, Power Query is the right approach - it pulls your Xero data directly into Excel on a schedule, with no manual steps required.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            Xero is excellent accounting software. Excel is excellent for analysis and reporting. The problem is the gap between them — the manual export, the reformatting, the copy-paste into a template, the cleaning of dates and categories before the numbers make sense. For most businesses using both tools, this gap exists because nobody has ever set up a proper connection between them.
+            Xero is excellent accounting software. Excel is excellent for analysis and reporting. The problem is the gap between them - the manual export, the reformatting, the copy-paste into a template, the cleaning of dates and categories before the numbers make sense. For most businesses using both tools, this gap exists because nobody has ever set up a proper connection between them.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             This guide covers how to close that gap. By the end you will understand the options available, which approach suits your situation, and what automated Xero reporting actually looks like in practice.
@@ -93,10 +93,10 @@ export default function BlogPost() {
             The standard Xero to Excel workflow for most businesses goes something like this. Log into Xero. Navigate to the report you need. Export to Excel or CSV. Open the file. Reformat the dates because Xero exports them in a format Excel does not automatically recognise. Clean the category names. Copy the data into your reporting template. Update the charts. Send the report.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            This process works fine when you are doing it occasionally. It becomes a significant time drain when it happens weekly or monthly, across multiple reports, with data that needs to be combined with information from other sources. And every manual step is a point where an error can enter — wrong date range selected, wrong category mapped, figures copied from the wrong column.
+            This process works fine when you are doing it occasionally. It becomes a significant time drain when it happens weekly or monthly, across multiple reports, with data that needs to be combined with information from other sources. And every manual step is a point where an error can enter - wrong date range selected, wrong category mapped, figures copied from the wrong column.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The businesses that have solved this problem have replaced the manual process with a direct connection. Getting Xero data into Excel automatically — rather than exporting Xero reports to Excel by hand — means the data flows already formatted correctly, ready to feed into the report without anyone touching it.
+            The businesses that have solved this problem have replaced the manual process with a direct connection. Getting Xero data into Excel automatically - rather than exporting Xero reports to Excel by hand - means the data flows already formatted correctly, ready to feed into the report without anyone touching it.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>The three ways to get Xero reports into Excel</h2>
@@ -104,22 +104,22 @@ export default function BlogPost() {
           {[
             {
               num: '01',
-              title: 'Xero native export — simple but manual',
-              body: 'Xero allows you to export most reports directly to Excel or CSV from within the platform. This is the most straightforward option and requires no technical setup. The limitation is that it is entirely manual — someone has to log in, navigate to the right report, select the right date range, and export. There is no way to schedule this automatically or have it feed directly into a live Excel template. For occasional one-off reporting, this is fine. For regular automated reporting, it is not a real solution.',
+              title: 'Xero native export - simple but manual',
+              body: 'Xero allows you to export most reports directly to Excel or CSV from within the platform. This is the most straightforward option and requires no technical setup. The limitation is that it is entirely manual - someone has to log in, navigate to the right report, select the right date range, and export. There is no way to schedule this automatically or have it feed directly into a live Excel template. For occasional one-off reporting, this is fine. For regular automated reporting, it is not a real solution.',
               verdict: 'Best for: occasional exports where automation is not needed',
               verdictColor: 'var(--ink-3)',
             },
             {
               num: '02',
-              title: 'Power Query via the Xero API — the recommended approach',
-              body: 'Power Query, built into Excel, can connect directly to the Xero API and pull your financial data automatically. Once set up, the connection refreshes with a single click or on a schedule — pulling the latest data from Xero directly into your Excel model, already formatted and ready to use. This approach gives you full control over exactly which data you pull, how it is structured, and how often it updates. It works for P&L data, balance sheet data, cash flow, invoices, contacts, and more. The setup requires some technical knowledge — you need to create a Xero API connection, handle authentication, and build the Power Query transformation steps. For businesses without that capability in-house, this is where a consultant adds real value.',
+              title: 'Power Query via the Xero API - the recommended approach',
+              body: 'Power Query, built into Excel, can connect directly to the Xero API and pull your financial data automatically. Once set up, the connection refreshes with a single click or on a schedule - pulling the latest data from Xero directly into your Excel model, already formatted and ready to use. This approach gives you full control over exactly which data you pull, how it is structured, and how often it updates. It works for P&L data, balance sheet data, cash flow, invoices, contacts, and more. The setup requires some technical knowledge - you need to create a Xero API connection, handle authentication, and build the Power Query transformation steps. For businesses without that capability in-house, this is where a consultant adds real value.',
               verdict: 'Best for: businesses that want automated, flexible Xero reporting in Excel',
               verdictColor: 'var(--amber)',
             },
             {
               num: '03',
-              title: 'Third-party connectors — paid but faster to set up',
-              body: 'Several third-party tools — including Acterys, Syft Analytics, and various Power BI connectors — offer pre-built Xero integrations that do not require API configuration from scratch. These tools typically cost between £20 and £100 per month and provide a more polished connection with less technical setup. They are worth considering if you want to move quickly and the monthly cost is manageable. The downside is the ongoing cost and the fact that you are dependent on a third party maintaining their Xero integration as the API changes.',
+              title: 'Third-party connectors - paid but faster to set up',
+              body: 'Several third-party tools - including Acterys, Syft Analytics, and various Power BI connectors - offer pre-built Xero integrations that do not require API configuration from scratch. These tools typically cost between £20 and £100 per month and provide a more polished connection with less technical setup. They are worth considering if you want to move quickly and the monthly cost is manageable. The downside is the ongoing cost and the fact that you are dependent on a third party maintaining their Xero integration as the API changes.',
               verdict: 'Best for: businesses that want a faster setup and are comfortable with a monthly tool cost',
               verdictColor: 'var(--ink-3)',
             },
@@ -144,31 +144,31 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What automated Xero reporting actually looks like</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            When a Xero to Excel connection is built properly, the experience for the user is straightforward. Open Excel. Click refresh. The data pulls directly from Xero — P&L for the current period, prior period, and year to date. Cash position. Outstanding invoices. Aged debtors. Whatever the business needs. The report builds itself from that data. Charts update. Variances calculate automatically. The whole thing is ready in under a minute.
+            When a Xero to Excel connection is built properly, the experience for the user is straightforward. Open Excel. Click refresh. The data pulls directly from Xero - P&L for the current period, prior period, and year to date. Cash position. Outstanding invoices. Aged debtors. Whatever the business needs. The report builds itself from that data. Charts update. Variances calculate automatically. The whole thing is ready in under a minute.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            For businesses that want to go further, the Xero data can be combined in the same Excel model with data from other sources — a CRM, an operations spreadsheet, a payroll export — to give a complete picture of the business that no single system provides on its own.
+            For businesses that want to go further, the Xero data can be combined in the same Excel model with data from other sources - a CRM, an operations spreadsheet, a payroll export - to give a complete picture of the business that no single system provides on its own.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            For businesses that want live dashboards rather than Excel files, the same Xero connection can feed a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link> — giving leadership a browser-based view of the financials that updates automatically without anyone opening a file. We cover when to use Power BI versus Excel in our comparison guide <Link href="/blog/power-bi-vs-excel" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>here</Link>.
+            For businesses that want live dashboards rather than Excel files, the same Xero connection can feed a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link> - giving leadership a browser-based view of the financials that updates automatically without anyone opening a file. We cover when to use Power BI versus Excel in our comparison guide <Link href="/blog/power-bi-vs-excel" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>here</Link>.
           </p>
 
-          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Before you build:</strong> If your Xero data has inconsistencies — customers named differently, dates in mixed formats, duplicate entries — the automated connection will reproduce those problems in your reports. Read our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</a> before connecting.</p></div>
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Before you build:</strong> If your Xero data has inconsistencies - customers named differently, dates in mixed formats, duplicate entries - the automated connection will reproduce those problems in your reports. Read our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing</a> before connecting.</p></div>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What to consider before building the connection</h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '48px' }}>
             {[
               {
                 title: 'Xero API authentication',
-                body: 'Connecting to Xero via the API requires setting up OAuth authentication — you register an application in the Xero developer portal, obtain credentials, and handle token refresh. This is manageable but requires technical knowledge. It is not something most accountants or finance managers would set up themselves without guidance.',
+                body: 'Connecting to Xero via the API requires setting up OAuth authentication - you register an application in the Xero developer portal, obtain credentials, and handle token refresh. This is manageable but requires technical knowledge. It is not something most accountants or finance managers would set up themselves without guidance.',
               },
               {
                 title: 'Data structure and transformation',
-                body: 'Xero returns data in JSON format via the API. Power Query can handle this, but the transformation steps — unpacking nested data, handling null values, formatting dates, categorising transaction types — require experience to build correctly. A poorly built transformation will produce data that looks right but contains errors.',
+                body: 'Xero returns data in JSON format via the API. Power Query can handle this, but the transformation steps - unpacking nested data, handling null values, formatting dates, categorising transaction types - require experience to build correctly. A poorly built transformation will produce data that looks right but contains errors.',
               },
               {
                 title: 'Handling chart of accounts differences',
-                body: 'Every Xero account has a different chart of accounts structure. The connection needs to be mapped to your specific account codes and categories — which means a generic template will not work without customisation. This is one of the main reasons businesses end up coming to a consultant rather than using an off-the-shelf tool.',
+                body: 'Every Xero account has a different chart of accounts structure. The connection needs to be mapped to your specific account codes and categories - which means a generic template will not work without customisation. This is one of the main reasons businesses end up coming to a consultant rather than using an off-the-shelf tool.',
               },
               {
                 title: 'Refresh scheduling',
@@ -190,9 +190,9 @@ export default function BlogPost() {
             {[
               'Xero API connection configured and authenticated',
               'Power Query transformation built to your specific chart of accounts',
-              'Data pulled for the reports your business actually needs — P&L, cash flow, aged debtors, invoices',
+              'Data pulled for the reports your business actually needs - P&L, cash flow, aged debtors, invoices',
               'Excel reporting template built on top of the live data connection',
-              'Refresh configured — either on-demand or scheduled automatically',
+              'Refresh configured - either on-demand or scheduled automatically',
               'Full documentation and handover so your team can use it independently',
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 5 ? '12px' : '0', alignItems: 'flex-start' }}>
@@ -214,23 +214,23 @@ export default function BlogPost() {
           {[
             {
               q: 'Can I connect Xero to Excel without any technical knowledge?',
-              a: 'The native Xero export to CSV or Excel requires no technical knowledge at all — but it is manual. Automating the connection via Power Query or the Xero API requires technical knowledge to set up correctly. Once built, however, the system is simple for anyone to use — typically a single click to refresh.',
+              a: 'The native Xero export to CSV or Excel requires no technical knowledge at all - but it is manual. Automating the connection via Power Query or the Xero API requires technical knowledge to set up correctly. Once built, however, the system is simple for anyone to use - typically a single click to refresh.',
             },
             {
               q: 'Does Xero have a built-in Excel integration?',
-              a: 'Xero does not have a direct built-in Power Query connector in the same way that some tools do. You can export reports manually from Xero to Excel or CSV, and you can connect to the Xero API via Power Query — but this requires setting up the API connection yourself or having someone build it for you.',
+              a: 'Xero does not have a direct built-in Power Query connector in the same way that some tools do. You can export reports manually from Xero to Excel or CSV, and you can connect to the Xero API via Power Query - but this requires setting up the API connection yourself or having someone build it for you.',
             },
             {
               q: 'How often can the data refresh from Xero?',
-              a: 'With a Power Query connection, you can refresh on demand (a single click) or configure it to refresh automatically when the file opens. For fully scheduled refreshes — for example, every morning at 7am without anyone opening the file — you need Power Automate or a Python script to trigger the refresh on a schedule.',
+              a: 'With a Power Query connection, you can refresh on demand (a single click) or configure it to refresh automatically when the file opens. For fully scheduled refreshes - for example, every morning at 7am without anyone opening the file - you need Power Automate or a Python script to trigger the refresh on a schedule.',
             },
             {
               q: 'Can I combine Xero data with data from other sources in the same Excel report?',
-              a: 'Yes — this is one of the most valuable things a properly built connection enables. You can pull Xero financial data alongside data from a CRM, operations spreadsheets, payroll exports, or any other source that Power Query can connect to. The result is a single report that gives a complete picture of the business that no individual system provides.',
+              a: 'Yes - this is one of the most valuable things a properly built connection enables. You can pull Xero financial data alongside data from a CRM, operations spreadsheets, payroll exports, or any other source that Power Query can connect to. The result is a single report that gives a complete picture of the business that no individual system provides.',
             },
             {
               q: 'What if I use Sage or QuickBooks instead of Xero?',
-              a: 'The same approach applies. Sage and QuickBooks both have APIs that Power Query or Python can connect to, and the process for building an automated reporting connection is similar. The specific technical steps differ but the outcome — data flowing automatically into Excel without manual exports — is the same.',
+              a: 'The same approach applies. Sage and QuickBooks both have APIs that Power Query or Python can connect to, and the process for building an automated reporting connection is similar. The specific technical steps differ but the outcome - data flowing automatically into Excel without manual exports - is the same.',
             },
             {
               q: 'How long does it take to build a Xero to Excel automation?',
@@ -246,9 +246,9 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'Xero — API documentation for developers', url: 'https://developer.xero.com/documentation/getting-started-guide/' },
-              { label: 'Microsoft — Introduction to Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
-              { label: 'HMRC — Making Tax Digital: using compatible software', url: 'https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax' },
+              { label: 'Xero - API documentation for developers', url: 'https://developer.xero.com/documentation/getting-started-guide/' },
+              { label: 'Microsoft - Introduction to Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
+              { label: 'HMRC - Making Tax Digital: using compatible software', url: 'https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',
@@ -283,7 +283,7 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Still manually exporting from Xero every month?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current Xero reporting process and tell you exactly what an automated connection would look like — and what it would cost to build it.
+              Book a free 30-minute call. We will look at your current Xero reporting process and tell you exactly what an automated connection would look like - and what it would cost to build it.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →

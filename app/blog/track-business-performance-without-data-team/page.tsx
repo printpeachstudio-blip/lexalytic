@@ -65,10 +65,10 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            The assumption that business performance tracking requires specialist staff or expensive software is one of the most persistent and damaging myths in small business. It keeps business owners making decisions from instinct, memory, or a report someone compiled last week — when the data they need is already sitting in their accounting software, their CRM, and their spreadsheets, just waiting to be connected.
+            The assumption that business performance tracking requires specialist staff or expensive software is one of the most persistent and damaging myths in small business. It keeps business owners making decisions from instinct, memory, or a report someone compiled last week - when the data they need is already sitting in their accounting software, their CRM, and their spreadsheets, just waiting to be connected.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The businesses that track performance well are not the ones with the biggest data budgets. They are the ones that decided what they actually needed to know — and then built the simplest possible system to show it automatically.
+            The businesses that track performance well are not the ones with the biggest data budgets. They are the ones that decided what they actually needed to know - and then built the simplest possible system to show it automatically.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -83,18 +83,18 @@ export default function BlogPost() {
             The right question is: what are the five numbers that, together, tell me whether this business is healthy right now? Not all the numbers that would be interesting. Not everything the accounting software can produce. The five that actually drive decisions.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            For most small UK businesses, a complete performance picture comes from three categories: financial health (revenue, margin, cash), operational performance (whatever metric matters in your sector — utilisation, throughput, job completion), and leading indicators (pipeline, quotes outstanding, renewal dates coming up). Five to eight numbers across those three categories is usually enough.
+            For most small UK businesses, a complete performance picture comes from three categories: financial health (revenue, margin, cash), operational performance (whatever metric matters in your sector - utilisation, throughput, job completion), and leading indicators (pipeline, quotes outstanding, renewal dates coming up). Five to eight numbers across those three categories is usually enough.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Step 2: Connect to where the data already lives</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            The data you need already exists. Revenue is in your accounting software. Pipeline is in your CRM or a spreadsheet. Operational metrics are in a job management tool or another spreadsheet. The problem is not that the data does not exist — it is that nobody has connected it.
+            The data you need already exists. Revenue is in your accounting software. Pipeline is in your CRM or a spreadsheet. Operational metrics are in a job management tool or another spreadsheet. The problem is not that the data does not exist - it is that nobody has connected it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Power Query, built into Excel and Power BI, can connect directly to Xero, Sage, QuickBooks, and most other data sources without any additional software. Once the connection is built, the data refreshes automatically — either when you open the file, when you click refresh, or on a schedule you set. The manual export and reformat step disappears entirely.
+            Power Query, built into Excel and Power BI, can connect directly to Xero, Sage, QuickBooks, and most other data sources without any additional software. Once the connection is built, the data refreshes automatically - either when you open the file, when you click refresh, or on a schedule you set. The manual export and reformat step disappears entirely.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            For data that lives in spreadsheets, Power Query can connect to those too — pulling from a shared Google Sheet or a SharePoint Excel file automatically, so when someone updates the source the dashboard reflects it without anyone doing anything.
+            For data that lives in spreadsheets, Power Query can connect to those too - pulling from a shared Google Sheet or a SharePoint Excel file automatically, so when someone updates the source the dashboard reflects it without anyone doing anything.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -107,8 +107,8 @@ export default function BlogPost() {
           </p>
 
           {[
-            { format: 'An automated Excel report', desc: 'If you prefer a formatted document — something printable, emailable, or structured in a specific layout — an automated Excel report connected to your data sources via Power Query is the right choice. It refreshes with a click and looks exactly the way you want it to. No new software required.', best: 'Best for: businesses where the owner wants a weekly or monthly document rather than an always-on dashboard' },
-            { format: 'A Power BI dashboard', desc: 'If you want a live, interactive view that you can filter by date, region, team, or any other dimension — and that updates automatically without anyone refreshing it — Power BI is better. Free to build on the desktop app, and shareable with your team via a Pro licence.', best: 'Best for: businesses where multiple people need live access to the same data' },
+            { format: 'An automated Excel report', desc: 'If you prefer a formatted document - something printable, emailable, or structured in a specific layout - an automated Excel report connected to your data sources via Power Query is the right choice. It refreshes with a click and looks exactly the way you want it to. No new software required.', best: 'Best for: businesses where the owner wants a weekly or monthly document rather than an always-on dashboard' },
+            { format: 'A Power BI dashboard', desc: 'If you want a live, interactive view that you can filter by date, region, team, or any other dimension - and that updates automatically without anyone refreshing it - Power BI is better. Free to build on the desktop app, and shareable with your team via a Pro licence.', best: 'Best for: businesses where multiple people need live access to the same data' },
             { format: 'A Google Looker Studio dashboard', desc: 'If your business runs on Google Workspace and your data is in Google Sheets, Looker Studio is a free, live dashboard tool that connects natively. Less powerful than Power BI for complex data modelling, but free and straightforward for Google-first businesses.', best: 'Best for: Google Workspace businesses with simple data needs' },
           ].map((item, i) => (
             <div key={i} style={{ padding: '22px 24px', background: 'var(--bg-2)', borderRadius: 'var(--radius)', border: '1px solid var(--border)', marginBottom: '16px' }}>
@@ -130,9 +130,9 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '28px', letterSpacing: '-0.02em' }}>Frequently asked questions</h2>
           {[
-            { q: 'How much does it cost to set up business performance tracking?', a: 'For most small UK businesses, a properly connected performance tracking setup — automated data connections, a clean reporting view, documentation — costs between £500 and £2,000 depending on the number of data sources and the complexity of the metrics. The ongoing cost after that is zero — the tools you are using are already in your Microsoft 365 or Google Workspace subscription.' },
+            { q: 'How much does it cost to set up business performance tracking?', a: 'For most small UK businesses, a properly connected performance tracking setup - automated data connections, a clean reporting view, documentation - costs between £500 and £2,000 depending on the number of data sources and the complexity of the metrics. The ongoing cost after that is zero - the tools you are using are already in your Microsoft 365 or Google Workspace subscription.' },
             { q: 'Do I need Power BI Pro to track business performance?', a: 'You need Power BI Pro only if you want to share dashboards with other people via the Power BI service. Building dashboards in Power BI Desktop is free. For a business owner who just wants a personal performance view, the free desktop version is sufficient. Pro licences are needed when you want multiple team members accessing the same live dashboard.' },
-            { q: 'What if my data is all in spreadsheets rather than accounting software?', a: 'That is fine — Power Query connects to Excel and Google Sheets just as easily as it connects to accounting software. If your data is in spreadsheets, the approach is the same: connect to the source, build the reporting view on top, refresh automatically. The result is the same live performance picture.' },
+            { q: 'What if my data is all in spreadsheets rather than accounting software?', a: 'That is fine - Power Query connects to Excel and Google Sheets just as easily as it connects to accounting software. If your data is in spreadsheets, the approach is the same: connect to the source, build the reporting view on top, refresh automatically. The result is the same live performance picture.' },
             { q: 'How long does it take to set up automated performance tracking?', a: 'A simple setup connecting one or two data sources to a performance dashboard is typically delivered in 3-5 working days. More complex setups involving multiple systems, custom metrics, and automated distribution take longer. You get a fixed price and timeline before work begins.' },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>

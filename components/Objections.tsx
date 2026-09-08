@@ -4,7 +4,7 @@ import { useState } from 'react'
 const objections = [
   {
     q: "I don't know exactly what I need yet.",
-    a: "That's the most common starting point and it's fine. The scoping call is designed for exactly this — you tell us the problem you are trying to solve, and we tell you what makes sense to build and what it would cost. You don't need a spec to start a conversation.",
+    a: "That's the most common starting point and it's fine. The scoping call is designed for exactly this - you tell us the problem you are trying to solve, and we tell you what makes sense to build and what it would cost. You don't need a spec to start a conversation.",
   },
   {
     q: "I've been let down by a developer before.",
@@ -12,11 +12,11 @@ const objections = [
   },
   {
     q: "I'm not sure I can justify the cost right now.",
-    a: "Every project is scoped individually — there is no minimum spend and no retainer required. Some projects are completed in days, others take months. The scoping call is free and comes with no obligation. You will know the exact cost before deciding whether to proceed.",
+    a: "Every project is scoped individually - there is no minimum spend and no retainer required. Some projects are completed in days, others take months. The scoping call is free and comes with no obligation. You will know the exact cost before deciding whether to proceed.",
   },
   {
-    q: "We're a small business — is this aimed at bigger companies?",
-    a: "Most of our clients are small and medium UK businesses. The whole point is to give smaller businesses access to senior-level digital work at prices that make sense — not enterprise prices, not agency overhead. Shell, NHS, and Warner Bros are in the background. Your business gets the benefit of that experience.",
+    q: "We're a small business - is this aimed at bigger companies?",
+    a: "Most of our clients are small and medium UK businesses. The whole point is to give smaller businesses access to senior-level digital work at prices that make sense - not enterprise prices, not agency overhead. Shell, NHS, and Warner Bros are in the background. Your business gets the benefit of that experience.",
   },
 ]
 

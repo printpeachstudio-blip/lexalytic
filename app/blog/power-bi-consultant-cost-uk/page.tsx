@@ -52,7 +52,7 @@ export default function BlogPost() {
             Power BI Consultant Cost UK: Hourly Rate & Day Rate Guide (2026)
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            A straight answer — with real UK prices, what affects the cost, and how to make sure you're not overpaying for something simpler than you think.
+            A straight answer - with real UK prices, what affects the cost, and how to make sure you're not overpaying for something simpler than you think.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -72,7 +72,7 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              A Power BI dashboard project in the UK typically costs <strong>£750–£5,000</strong> for SMEs, depending on complexity. Freelance Power BI consultant hourly rates in the UK run <strong>£60–£150/hour</strong>, with day rates of <strong>£400–£800</strong> for contractor work. At Lexalytic, we charge a fixed price — you know the total cost before we start.
+              A Power BI dashboard project in the UK typically costs <strong>£750–£5,000</strong> for SMEs, depending on complexity. Freelance Power BI consultant hourly rates in the UK run <strong>£60–£150/hour</strong>, with day rates of <strong>£400–£800</strong> for contractor work. At Lexalytic, we charge a fixed price - you know the total cost before we start.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>UK Power BI consultant pricing in 2026</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '28px' }}>
-            There are three main ways UK Power BI consultants charge for their work — and the pricing model matters as much as the headline rate.
+            There are three main ways UK Power BI consultants charge for their work - and the pricing model matters as much as the headline rate.
           </p>
 
           {/* Pricing table */}
@@ -114,7 +114,7 @@ export default function BlogPost() {
               title: 'Simple dashboard (one data source)',
               cost: '£750–£1,500',
               time: '5–7 days',
-              desc: 'A single-source dashboard — Excel, SQL, or a cloud tool like Xero. Typically 3–6 pages with key KPIs, charts, and filters. Good for teams who already have clean data and know what they want to track.',
+              desc: 'A single-source dashboard - Excel, SQL, or a cloud tool like Xero. Typically 3–6 pages with key KPIs, charts, and filters. Good for teams who already have clean data and know what they want to track.',
               example: 'A sales manager who wants a weekly revenue dashboard pulling from Salesforce.',
             },
             {
@@ -129,7 +129,7 @@ export default function BlogPost() {
               cost: '£3,000–£6,000',
               time: '2–4 weeks',
               desc: 'Multi-system integrations, significant data modelling, custom measures, and complex business logic. Often includes data warehouse design or automated refresh pipelines alongside the dashboard itself.',
-              example: 'A management team needing a board-level reporting suite across finance, operations, and HR — all updated automatically.',
+              example: 'A management team needing a board-level reporting suite across finance, operations, and HR - all updated automatically.',
             },
           ].map((tier, i) => (
             <div key={i} style={{ padding: '28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '20px' }}>
@@ -153,7 +153,7 @@ export default function BlogPost() {
           {[
             { factor: 'Messy or inconsistent data', detail: 'If your source data is poorly structured, duplicated, or lives in incompatible formats, a consultant has to clean it before building anything. This can double the project length. The cleaner your data, the lower the cost.' },
             { factor: 'Unclear requirements', detail: 'Scope creep is the biggest budget killer. If you start with "a few charts" and expand to a full reporting suite mid-project, costs rise accordingly. Coming in with a clear list of what decisions you need to make saves significant time.' },
-            { factor: 'Non-standard data sources', detail: 'Power BI connects natively to hundreds of systems. If your data lives somewhere without a built-in connector — a custom internal system, for example — building the connection takes extra time.' },
+            { factor: 'Non-standard data sources', detail: 'Power BI connects natively to hundreds of systems. If your data lives somewhere without a built-in connector - a custom internal system, for example - building the connection takes extra time.' },
             { factor: 'Power BI licence requirements', detail: 'The dashboard build is separate from licensing. To share reports across your organisation, you\'ll need Power BI Pro (around £8.40/user/month from Microsoft). This isn\'t a consultant cost, but it\'s part of the total investment.' },
             { factor: 'Number of stakeholders', detail: 'The more people who need to review and sign off, the longer the project takes. A single decision-maker gets faster, cheaper delivery than a committee.' },
           ].map((item, i) => (
@@ -166,15 +166,15 @@ export default function BlogPost() {
             </div>
           ))}
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', marginTop: '48px', letterSpacing: '-0.02em' }}>Hourly vs fixed price — which is better for you?</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', marginTop: '48px', letterSpacing: '-0.02em' }}>Hourly vs fixed price - which is better for you?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Hourly billing is transparent in theory but unpredictable in practice. If the project takes longer than estimated — because of data issues, changing requirements, or extra revisions — you absorb the cost.
+            Hourly billing is transparent in theory but unpredictable in practice. If the project takes longer than estimated - because of data issues, changing requirements, or extra revisions - you absorb the cost.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             Fixed price projects put the risk on the consultant. You know the total cost before any work begins, which makes budgeting straightforward. The tradeoff is that the scope needs to be clearly defined upfront.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            At Lexalytic, we use fixed pricing for all projects. After a free 30-minute scoping call, we come back with a clear scope, exact price, and timeline. If the project evolves, we discuss it — but the original quote doesn't quietly expand.
+            At Lexalytic, we use fixed pricing for all projects. After a free 30-minute scoping call, we come back with a clear scope, exact price, and timeline. If the project evolves, we discuss it - but the original quote doesn't quietly expand.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Is it worth it? What's the return?</h2>
@@ -182,24 +182,24 @@ export default function BlogPost() {
             The honest answer is: it depends on what manual process you're replacing.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            A Finance Director spending two days every month on manual reconciliation is costing their business roughly £2,000–£4,000 per month in senior salary time — before you account for the opportunity cost of delayed decisions. A £2,000 Power BI project that eliminates that process pays for itself in the first month.
+            A Finance Director spending two days every month on manual reconciliation is costing their business roughly £2,000–£4,000 per month in senior salary time - before you account for the opportunity cost of delayed decisions. A £2,000 Power BI project that eliminates that process pays for itself in the first month.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             An operations team spending four hours a week compiling reports is losing around 200 hours a year. At any reasonable salary, that's a significant annual cost for a process that a well-built dashboard can reduce to minutes.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            Most Power BI projects for SMEs have a payback period of one to three months. The ones that don't are usually the ones where the requirement wasn't clearly defined — which is exactly why we spend 30 minutes scoping before quoting anything.
+            Most Power BI projects for SMEs have a payback period of one to three months. The ones that don't are usually the ones where the requirement wasn't clearly defined - which is exactly why we spend 30 minutes scoping before quoting anything.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How to get an accurate quote for your project</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Before speaking to any consultant — including us — it helps to have a rough answer to these questions:
+            Before speaking to any consultant - including us - it helps to have a rough answer to these questions:
           </p>
           {[
             'What decision are you trying to make more easily?',
             'Where does the relevant data currently live?',
             'How many people need to access the final dashboard?',
-            'How often does the data need to refresh — daily, weekly, real-time?',
+            'How often does the data need to refresh - daily, weekly, real-time?',
             'Do you have a rough budget in mind?',
           ].map((q, i) => (
             <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: '12px', alignItems: 'flex-start' }}>
@@ -208,14 +208,14 @@ export default function BlogPost() {
             </div>
           ))}
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginTop: '24px', marginBottom: '48px' }}>
-            You don't need precise answers — a rough picture is enough for a consultant to give you a realistic cost estimate within 48 hours.
+            You don't need precise answers - a rough picture is enough for a consultant to give you a realistic cost estimate within 48 hours.
           </p>
 
           {/* CTA box */}
           <div style={{ padding: '36px', background: 'var(--bg-dark)', borderRadius: 'var(--radius-lg)', textAlign: 'center', marginBottom: '48px' }}>
             <h3 style={{ color: 'var(--white)', marginBottom: '12px', fontSize: '1.4rem' }}>Want a fixed price for your Power BI project?</h3>
             <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '28px', fontSize: '15px', lineHeight: '1.7' }}>
-              Book a free 30-minute scoping call. We'll tell you exactly what's possible, what it would cost, and how long it would take — before you commit to anything.
+              Book a free 30-minute scoping call. We'll tell you exactly what's possible, what it would cost, and how long it would take - before you commit to anything.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 32px' }}>
               Book a free scoping call →
@@ -228,7 +228,7 @@ export default function BlogPost() {
             {[
               'Power BI dashboard projects for UK SMEs typically cost £750–£5,000 depending on complexity',
               'Freelance hourly rates run £60–£150/hour; day rates £400–£900',
-              'Fixed price projects give you cost certainty — you know the total before work begins',
+              'Fixed price projects give you cost certainty - you know the total before work begins',
               'The main cost drivers are data quality, scope clarity, and number of data sources',
               'Most SME Power BI projects pay back within one to three months',
               'A free scoping call is the fastest way to get an accurate quote for your specific situation',

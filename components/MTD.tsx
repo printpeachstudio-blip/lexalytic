@@ -18,10 +18,10 @@ export default function MTD() {
               <em style={{ color: 'var(--amber)' }}>Making Tax Digital?</em>
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '28px', fontWeight: '300' }}>
-              Making Tax Digital is now live for UK businesses with income over £50,000. The second quarterly deadline is 7 November 2026 — less than 10 weeks away. Businesses still relying on manual Excel processes are running out of time.
+              Making Tax Digital is now live for UK businesses with income over £50,000. The second quarterly deadline is 7 November 2026 - less than 10 weeks away. Businesses still relying on manual Excel processes are running out of time.
             </p>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '17px', lineHeight: '1.8', marginBottom: '36px', fontWeight: '300' }}>
-              We can audit your current reporting setup, identify what needs to change, and have you MTD-ready before the November deadline — in days, not months.
+              We can audit your current reporting setup, identify what needs to change, and have you MTD-ready before the November deadline - in days, not months.
             </p>
             <a href="#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free MTD readiness call →
@@ -29,10 +29,10 @@ export default function MTD() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
-              { issue: 'Still exporting from Xero or Sage into Excel manually?', risk: 'High risk — manual exports are not MTD-compliant' },
-              { issue: 'Monthly reporting cycle taking days?', risk: 'MTD requires quarterly submissions — monthly is too slow' },
+              { issue: 'Still exporting from Xero or Sage into Excel manually?', risk: 'High risk - manual exports are not MTD-compliant' },
+              { issue: 'Monthly reporting cycle taking days?', risk: 'MTD requires quarterly submissions - monthly is too slow' },
               { issue: 'No single source of truth for your financial data?', risk: 'HMRC requires consistent, structured digital records' },
-              { issue: 'Reporting locked in one person\'s spreadsheet?', risk: 'Business continuity risk — what if they leave?' },
+              { issue: 'Reporting locked in one person\'s spreadsheet?', risk: 'Business continuity risk - what if they leave?' },
             ].map((item, i) => (
               <div key={i} style={{
                 padding: '20px 24px',

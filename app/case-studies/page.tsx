@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/case-studies' },
-  title: 'Case Studies | Lexalytic — UK Digital Studio',
+  title: 'Case Studies | Lexalytic - UK Digital Studio',
   description: 'Real projects, specific outcomes. How Lexalytic has built websites, custom software, AI tools and data systems for UK businesses.',
 }
 
@@ -32,7 +32,7 @@ const cases = [
     slug: 'cvcraft-ai-product',
     tag: 'AI Tool',
     industry: 'Technology',
-    title: 'CVCraft AI — Fully Automated CV Rewriting Service',
+    title: 'CVCraft AI - Fully Automated CV Rewriting Service',
     summary: 'We identified a gap in the market and built CVCraft AI from scratch. CV submitted, Claude rewrites it, Stripe takes payment, document delivered in 24 hours. No human in the loop.',
     metric: '24hr',
     metricLabel: 'Automated delivery, zero manual steps',

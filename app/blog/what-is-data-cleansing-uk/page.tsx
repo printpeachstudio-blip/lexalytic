@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?","description":"Bad data costs UK businesses more than most realise. Learn what data cleansing is, what causes poor data quality, and how to fix it.","datePublished":"2026-05-12","dateModified":"2026-05-12","url":"https://www.lexalytic.com/blog/what-is-data-cleansing-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lexalytic.com/blog/what-is-data-cleansing-uk"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?","description":"Bad data costs UK businesses more than most realise. Learn what data cleansing is, what causes poor data quality, and how to fix it.","datePublished":"2026-05-12","dateModified":"2026-05-12","url":"https://www.lexalytic.com/blog/what-is-data-cleansing-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lexalytic.com/blog/what-is-data-cleansing-uk"}}
 
   return (
     <>
@@ -50,10 +50,10 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>May 2026 · 10 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
-            What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?
+            What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Most businesses know their data is messy. Very few realise how much that messiness is actually costing them — in wasted time, wrong decisions, and automation projects that fail before they start.
+            Most businesses know their data is messy. Very few realise how much that messiness is actually costing them - in wasted time, wrong decisions, and automation projects that fail before they start.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -73,12 +73,12 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              Data cleansing is the process of identifying and fixing errors, inconsistencies and gaps in your business data. Bad data costs UK businesses an estimated <strong>20% of their annual revenue</strong> in wasted time, poor decisions and failed automation. Most businesses can fix the majority of their data quality problems without expensive software — but it requires a structured approach.
+              Data cleansing is the process of identifying and fixing errors, inconsistencies and gaps in your business data. Bad data costs UK businesses an estimated <strong>20% of their annual revenue</strong> in wasted time, poor decisions and failed automation. Most businesses can fix the majority of their data quality problems without expensive software - but it requires a structured approach.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            In 15 years of working with UK businesses on data and reporting systems, the single most common reason a project takes longer than expected — or fails entirely — is bad data. Not bad software. Not wrong tools. Bad data.
+            In 15 years of working with UK businesses on data and reporting systems, the single most common reason a project takes longer than expected - or fails entirely - is bad data. Not bad software. Not wrong tools. Bad data.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The business has spent months planning an automated reporting system. The tool is ready. The process is designed. Then someone opens the source data and finds dates in four different formats, customer names entered six different ways, blank rows scattered throughout, and figures that simply do not add up. The project stalls. The team loses confidence. The automation never gets built.
@@ -95,15 +95,15 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What is data cleansing?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Data cleansing — also called data cleaning or data scrubbing — is the process of identifying and correcting problems in a dataset so it can be used reliably. This includes fixing errors, resolving inconsistencies, removing duplicates, filling gaps, and standardising formats so that the data behaves predictably when used in reports, automation, or analysis.
+            Data cleansing - also called data cleaning or data scrubbing - is the process of identifying and correcting problems in a dataset so it can be used reliably. This includes fixing errors, resolving inconsistencies, removing duplicates, filling gaps, and standardising formats so that the data behaves predictably when used in reports, automation, or analysis.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            It is not glamorous work. But it is foundational. Every automated report, every Power BI dashboard, every data pipeline is only as reliable as the data feeding into it. Garbage in, garbage out — as the saying goes — is not a cliché. It is a description of what actually happens when businesses try to build on top of unclean data.
+            It is not glamorous work. But it is foundational. Every automated report, every Power BI dashboard, every data pipeline is only as reliable as the data feeding into it. Garbage in, garbage out - as the saying goes - is not a cliché. It is a description of what actually happens when businesses try to build on top of unclean data.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How much does bad data actually cost?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            The numbers are sobering. Research from The Software Bureau estimates that dirty data costs the UK economy <a href="https://www.thesoftwarebureau.com/cost-of-dirty-data-the-900-billion-annual-burden-on-uk-business/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>£900 billion annually</a> — representing around 20% of revenue for affected organisations. Experian's research found that <a href="https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>30% of UK businesses suspect their customer data is inaccurate</a>. And Gartner predicts that through 2026, organisations will abandon 60% of AI and automation projects due to data that is not ready to support them.
+            The numbers are sobering. Research from The Software Bureau estimates that dirty data costs the UK economy <a href="https://www.thesoftwarebureau.com/cost-of-dirty-data-the-900-billion-annual-burden-on-uk-business/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>£900 billion annually</a> - representing around 20% of revenue for affected organisations. Experian's research found that <a href="https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>30% of UK businesses suspect their customer data is inaccurate</a>. And Gartner predicts that through 2026, organisations will abandon 60% of AI and automation projects due to data that is not ready to support them.
           </p>
 
           {/* Stats box */}
@@ -126,7 +126,7 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            For most SMEs, the cost of bad data is not a dramatic figure on a finance report — it is a hidden, ongoing drain. Staff spending time correcting errors. Reports that have to be rebuilt because the source data changed format. Decisions made on figures that were wrong to begin with. It accumulates quietly, and most businesses do not realise how much it is costing until they try to automate something and the whole thing breaks.
+            For most SMEs, the cost of bad data is not a dramatic figure on a finance report - it is a hidden, ongoing drain. Staff spending time correcting errors. Reports that have to be rebuilt because the source data changed format. Decisions made on figures that were wrong to begin with. It accumulates quietly, and most businesses do not realise how much it is costing until they try to automate something and the whole thing breaks.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What causes bad data in the first place?</h2>
@@ -137,15 +137,15 @@ export default function BlogPost() {
           {[
             {
               title: 'Manual data entry',
-              body: 'The most common source of data problems. When people type data into spreadsheets or systems manually, they make mistakes. Names get spelled differently. Dates get entered in different formats. Figures get transposed. One person writes "United Kingdom", another writes "UK", another writes "England". None of these are wrong in isolation — but they are incompatible when you try to aggregate the data.',
+              body: 'The most common source of data problems. When people type data into spreadsheets or systems manually, they make mistakes. Names get spelled differently. Dates get entered in different formats. Figures get transposed. One person writes "United Kingdom", another writes "UK", another writes "England". None of these are wrong in isolation - but they are incompatible when you try to aggregate the data.',
             },
             {
               title: 'Multiple systems not talking to each other',
-              body: 'Most businesses use several systems — an accounting package, a CRM, an operations spreadsheet, an HR system. When these do not integrate, data gets copied between them manually. Every manual copy is an opportunity for inconsistency. Over time, the same customer, product, or employee can exist in three different systems with three slightly different records.',
+              body: 'Most businesses use several systems - an accounting package, a CRM, an operations spreadsheet, an HR system. When these do not integrate, data gets copied between them manually. Every manual copy is an opportunity for inconsistency. Over time, the same customer, product, or employee can exist in three different systems with three slightly different records.',
             },
             {
               title: 'No data standards or conventions',
-              body: 'Without agreed standards for how data should be entered — date formats, naming conventions, required fields — different people enter data differently. This is not carelessness, it is the natural result of not having a clear standard. The fix is not to discipline people; it is to enforce standards at the point of entry through validation rules and structured input forms.',
+              body: 'Without agreed standards for how data should be entered - date formats, naming conventions, required fields - different people enter data differently. This is not carelessness, it is the natural result of not having a clear standard. The fix is not to discipline people; it is to enforce standards at the point of entry through validation rules and structured input forms.',
             },
             {
               title: 'Legacy systems and old data',
@@ -179,10 +179,10 @@ export default function BlogPost() {
           {[
             { num: '01', title: 'Audit and profile the data', body: 'Before fixing anything, understand what you have. How many records? How many blanks? How many duplicates? What formats are being used? A data audit reveals the scale of the problem and prioritises where to focus.' },
             { num: '02', title: 'Remove duplicates', body: 'Duplicate records are one of the most common data quality problems. The same customer entered twice with slightly different spellings. The same product with two different codes. Duplicates inflate counts, skew analysis, and cause double-reporting. They need to be identified and merged or removed.' },
-            { num: '03', title: 'Standardise formats', body: 'Dates, phone numbers, postcodes, currency values — all of these need consistent formatting to be usable. This stage converts everything to a standard format so the data behaves predictably. In Excel, Power Query is extremely effective at this step.' },
+            { num: '03', title: 'Standardise formats', body: 'Dates, phone numbers, postcodes, currency values - all of these need consistent formatting to be usable. This stage converts everything to a standard format so the data behaves predictably. In Excel, Power Query is extremely effective at this step.' },
             { num: '04', title: 'Fix errors and inconsistencies', body: 'Typos, wrong values, impossible dates, negative quantities where only positives are valid. This stage identifies and corrects values that are factually wrong or logically impossible. Some can be fixed automatically; others require human review.' },
             { num: '05', title: 'Handle missing data', body: 'Blank fields are a universal problem. Some blanks can be filled from other sources. Some can be inferred from context. Some need to be flagged as genuinely unknown. The right approach depends on what the field is and how critical it is.' },
-            { num: '06', title: 'Validate and document', body: 'Once cleaned, the data should be validated against expected ranges and business rules. And the cleaning process itself should be documented so it can be repeated — because data quality is not a one-time fix, it is an ongoing process.' },
+            { num: '06', title: 'Validate and document', body: 'Once cleaned, the data should be validated against expected ranges and business rules. And the cleaning process itself should be documented so it can be repeated - because data quality is not a one-time fix, it is an ongoing process.' },
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '24px', marginBottom: '28px', alignItems: 'flex-start' }}>
               <div style={{ fontFamily: 'var(--serif)', fontSize: '32px', color: 'rgba(193,125,46,0.3)', flexShrink: 0, lineHeight: '1', marginTop: '4px' }}>{item.num}</div>
@@ -195,14 +195,14 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '20px' }}>What tools are used for data cleansing?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '28px' }}>
-            For most UK SMEs, the right tools for data cleansing are already available — they just need to be used correctly:
+            For most UK SMEs, the right tools for data cleansing are already available - they just need to be used correctly:
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '48px' }}>
             {[
               {
                 tool: 'Power Query (Excel & Power BI)',
-                desc: 'The most powerful built-in tool for data cleansing in Microsoft\'s ecosystem. It can standardise formats, remove duplicates, fill blanks, split columns, and apply complex transformations — all without writing a single formula. The steps are recorded and can be reapplied automatically every time the data is refreshed.',
+                desc: 'The most powerful built-in tool for data cleansing in Microsoft\'s ecosystem. It can standardise formats, remove duplicates, fill blanks, split columns, and apply complex transformations - all without writing a single formula. The steps are recorded and can be reapplied automatically every time the data is refreshed.',
                 best: 'Best for: regular automated cleansing of Excel and Power BI data sources',
               },
               {
@@ -212,7 +212,7 @@ export default function BlogPost() {
               },
               {
                 tool: 'Excel (formulas and VBA)',
-                desc: 'For smaller datasets, Excel\'s built-in functions — TRIM, CLEAN, PROPER, IFERROR — combined with VBA macros can handle many common cleansing tasks. Less powerful than Power Query but widely understood and often already in use.',
+                desc: 'For smaller datasets, Excel\'s built-in functions - TRIM, CLEAN, PROPER, IFERROR - combined with VBA macros can handle many common cleansing tasks. Less powerful than Power Query but widely understood and often already in use.',
                 best: 'Best for: smaller datasets where the team already works in Excel',
               },
               {
@@ -238,15 +238,15 @@ export default function BlogPost() {
             />
           </div>
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Data cleansing and automation — why one depends on the other</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Data cleansing and automation - why one depends on the other</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            One of the most important things to understand about data cleansing is that it is not separate from automation — it is a prerequisite for it.
+            One of the most important things to understand about data cleansing is that it is not separate from automation - it is a prerequisite for it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             When businesses come to us wanting to <Link href="/blog/how-to-automate-excel-reports" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>automate their Excel reports</Link> or build a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link>, the first thing we do is assess the quality of the underlying data. In around half of all projects, data cleansing is required before any automation can be built reliably.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            This is not a problem — it is just part of the process. And in most cases, the cleansing work itself delivers immediate value. Once the data is clean and structured, the automation is faster to build, more reliable in operation, and far less likely to produce outputs that people do not trust.
+            This is not a problem - it is just part of the process. And in most cases, the cleansing work itself delivers immediate value. Once the data is clean and structured, the automation is faster to build, more reliable in operation, and far less likely to produce outputs that people do not trust.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The businesses that struggle are the ones that skip the cleansing step and try to build automation on top of messy data. The system runs, but the outputs are wrong. Trust in the data collapses. The automation gets abandoned. The team goes back to doing it manually.
@@ -264,7 +264,7 @@ export default function BlogPost() {
           {[
             {
               q: 'What is the difference between data cleansing and data transformation?',
-              a: 'Data cleansing fixes problems in the data — errors, duplicates, inconsistencies, blanks. Data transformation changes the structure or format of the data to make it usable in a different context — for example, converting rows into columns, combining two datasets, or calculating new fields. In practice, most data projects involve both.',
+              a: 'Data cleansing fixes problems in the data - errors, duplicates, inconsistencies, blanks. Data transformation changes the structure or format of the data to make it usable in a different context - for example, converting rows into columns, combining two datasets, or calculating new fields. In practice, most data projects involve both.',
             },
             {
               q: 'How long does data cleansing take?',
@@ -272,11 +272,11 @@ export default function BlogPost() {
             },
             {
               q: 'Can data cleansing be automated?',
-              a: 'Yes — and it should be wherever possible. Tools like Power Query and Python can apply cleansing rules automatically every time new data is loaded. This means the data is always clean at the point it enters your reports or dashboards, without anyone having to manually check and fix it each time.',
+              a: 'Yes - and it should be wherever possible. Tools like Power Query and Python can apply cleansing rules automatically every time new data is loaded. This means the data is always clean at the point it enters your reports or dashboards, without anyone having to manually check and fix it each time.',
             },
             {
               q: 'What is unstructured data and how is it different from bad data?',
-              a: 'Unstructured data is data that does not have a predefined format or organisation — for example, emails, PDFs, free-text notes, or scanned documents. Bad data is data that should be structured but contains errors or inconsistencies. Unstructured data needs to be extracted and structured before it can be cleaned and used. Both are common problems in UK businesses, and both can be addressed with the right tools and approach.',
+              a: 'Unstructured data is data that does not have a predefined format or organisation - for example, emails, PDFs, free-text notes, or scanned documents. Bad data is data that should be structured but contains errors or inconsistencies. Unstructured data needs to be extracted and structured before it can be cleaned and used. Both are common problems in UK businesses, and both can be addressed with the right tools and approach.',
             },
             {
               q: 'Do I need specialist software for data cleansing?',
@@ -284,7 +284,7 @@ export default function BlogPost() {
             },
             {
               q: 'How do I prevent bad data from building up again after cleansing?',
-              a: 'The only permanent fix for bad data is fixing it at the source — implementing validation rules at the point of entry, standardising how data is captured, and ensuring systems are integrated so data does not have to be copied manually. A one-time clean without process changes will gradually accumulate problems again. The cleansing and the process improvement need to happen together.',
+              a: 'The only permanent fix for bad data is fixing it at the source - implementing validation rules at the point of entry, standardising how data is captured, and ensuring systems are integrated so data does not have to be copied manually. A one-time clean without process changes will gradually accumulate problems again. The cleansing and the process improvement need to happen together.',
             },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
@@ -297,10 +297,10 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'Experian — Data cleansing: 3 easy steps to maximise your ROI', url: 'https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/' },
-              { label: 'UK Government — Data quality action plan', url: 'https://www.gov.uk/government/publications/data-quality-action-plan' },
-              { label: 'Microsoft — Getting started with Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
-              { label: 'ONS — UK Data Quality Framework', url: 'https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/qualityinofficialstatistics/qualitytools' },
+              { label: 'Experian - Data cleansing: 3 easy steps to maximise your ROI', url: 'https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/' },
+              { label: 'UK Government - Data quality action plan', url: 'https://www.gov.uk/government/publications/data-quality-action-plan' },
+              { label: 'Microsoft - Getting started with Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
+              { label: 'ONS - UK Data Quality Framework', url: 'https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/qualityinofficialstatistics/qualitytools' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',

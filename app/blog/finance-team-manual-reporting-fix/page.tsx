@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/finance-team-manual-reporting-fix' },
-  title: 'My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It? | Lexalytic',
+  title: 'My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It? | Lexalytic',
   description: 'If your finance team is losing days every month to manual data entry and reporting, there is a better way. A practical guide to fixing the problem without expensive software.',
   keywords: 'finance team manual reporting UK, too much manual reporting business, finance team spending hours on data entry, reduce manual reporting finance UK, automate finance reporting UK, manual data entry finance team fix',
   openGraph: {
-    title: 'My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?',
+    title: 'My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It?',
     description: 'If your finance team is losing days every month to manual data entry and reporting, here is how to fix it.',
     url: 'https://www.lexalytic.com/blog/finance-team-manual-reporting-fix',
     siteName: 'Lexalytic',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?","description":"If your finance team is losing days every month to manual data entry and reporting, there is a better way.","datePublished":"2026-07-07","dateModified":"2026-07-07","url":"https://www.lexalytic.com/blog/finance-team-manual-reporting-fix","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It?","description":"If your finance team is losing days every month to manual data entry and reporting, there is a better way.","datePublished":"2026-07-07","dateModified":"2026-07-07","url":"https://www.lexalytic.com/blog/finance-team-manual-reporting-fix","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
@@ -48,10 +48,10 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>July 2026 · 10 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
-            My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?
+            My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It?
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            If your finance team is rebuilding the same reports every month, copying figures from one system to another, and spending days on work that should take minutes — this guide is for you. Here is what is actually causing the problem and how to fix it properly.
+            If your finance team is rebuilding the same reports every month, copying figures from one system to another, and spending days on work that should take minutes - this guide is for you. Here is what is actually causing the problem and how to fix it properly.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -69,7 +69,7 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              Finance teams spend too much time on manual reporting because the data they need lives in multiple systems that do not talk to each other. The fix is not a new hire or a new system — it is connecting what you already have and removing the manual steps in between. Most businesses can cut their finance reporting time by 80-90% without changing their core software.
+              Finance teams spend too much time on manual reporting because the data they need lives in multiple systems that do not talk to each other. The fix is not a new hire or a new system - it is connecting what you already have and removing the manual steps in between. Most businesses can cut their finance reporting time by 80-90% without changing their core software.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function BlogPost() {
             I hear some version of this every week. A Managing Director notices that their Finance Manager is working late again at month-end. A Finance Director is frustrated that half their team's time goes on compiling reports rather than analysing them. A business owner cannot get a clear picture of their financial position without waiting for someone to pull it together manually.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The problem is almost always the same at its root — and so is the solution. Here is how to diagnose what is actually happening and fix it.
+            The problem is almost always the same at its root - and so is the solution. Here is how to diagnose what is actually happening and fix it.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -96,11 +96,11 @@ export default function BlogPost() {
           {[
             {
               title: 'Exporting from accounting software and reformatting in Excel',
-              body: 'The most common one. Xero, Sage, or QuickBooks produces a report that is almost what is needed — but the format is wrong, the columns need reordering, the dates need cleaning, and the categories need mapping to the internal naming convention. So someone exports to CSV, opens it in Excel, and spends an hour reformatting before it is usable. This happens every month, for every report.',
+              body: 'The most common one. Xero, Sage, or QuickBooks produces a report that is almost what is needed - but the format is wrong, the columns need reordering, the dates need cleaning, and the categories need mapping to the internal naming convention. So someone exports to CSV, opens it in Excel, and spends an hour reformatting before it is usable. This happens every month, for every report.',
             },
             {
               title: 'Pulling data from multiple systems into one place',
-              body: 'Financial data rarely lives in one place. The P&L is in the accounting software. The sales pipeline is in the CRM. The operational costs are in a project management tool or a separate spreadsheet. Someone has to be the human bridge — extracting from each system, combining in Excel, and reconciling the differences. This is the job that takes two days and produces one report.',
+              body: 'Financial data rarely lives in one place. The P&L is in the accounting software. The sales pipeline is in the CRM. The operational costs are in a project management tool or a separate spreadsheet. Someone has to be the human bridge - extracting from each system, combining in Excel, and reconciling the differences. This is the job that takes two days and produces one report.',
             },
             {
               title: 'Rebuilding the same report template every period',
@@ -134,7 +134,7 @@ export default function BlogPost() {
             {
               num: '01',
               title: 'Connect your accounting software directly to your reporting tool',
-              body: 'Whether you are on Xero, Sage, or QuickBooks, the data can be pulled automatically into Excel or Power BI without manual exports. A properly built Power Query connection refreshes with a single click — pulling the latest data, already formatted correctly, ready to feed into your report. The export-reformat-paste cycle disappears entirely. We covered the Xero to Excel connection specifically in a separate guide if you want the technical detail.',
+              body: 'Whether you are on Xero, Sage, or QuickBooks, the data can be pulled automatically into Excel or Power BI without manual exports. A properly built Power Query connection refreshes with a single click - pulling the latest data, already formatted correctly, ready to feed into your report. The export-reformat-paste cycle disappears entirely. We covered the Xero to Excel connection specifically in a separate guide if you want the technical detail.',
               link: { text: 'Read: How to Connect Xero to Excel and Automate Your Reports', href: '/blog/connect-xero-to-excel-automate-reports' },
             },
             {
@@ -146,7 +146,7 @@ export default function BlogPost() {
             {
               num: '03',
               title: 'Consolidate data from multiple sources automatically',
-              body: 'If the reporting problem involves pulling data from several systems — accounting software, CRM, operations tools — Power Query or Python can connect to all of them simultaneously and combine the data according to rules defined once. The finance team stops being a data collection service and starts being what it should be: a financial analysis function.',
+              body: 'If the reporting problem involves pulling data from several systems - accounting software, CRM, operations tools - Power Query or Python can connect to all of them simultaneously and combine the data according to rules defined once. The finance team stops being a data collection service and starts being what it should be: a financial analysis function.',
               link: { text: 'Read: How to Reduce Manual Data Entry in Your Business', href: '/blog/how-to-reduce-manual-data-entry-uk' },
             },
             {
@@ -158,8 +158,8 @@ export default function BlogPost() {
             {
               num: '05',
               title: 'Build a live dashboard for leadership',
-              body: 'For businesses where the MD or board needs regular visibility of financial performance, a Power BI dashboard connected to the accounting software gives them a live view without anyone having to produce a report. The numbers update automatically. Leadership stops waiting for finance to compile the monthly pack — the information is always current.',
-              link: { text: 'Read: Power BI vs Excel — which does your business need?', href: '/blog/power-bi-vs-excel' },
+              body: 'For businesses where the MD or board needs regular visibility of financial performance, a Power BI dashboard connected to the accounting software gives them a live view without anyone having to produce a report. The numbers update automatically. Leadership stops waiting for finance to compile the monthly pack - the information is always current.',
+              link: { text: 'Read: Power BI vs Excel - which does your business need?', href: '/blog/power-bi-vs-excel' },
             },
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '24px', marginBottom: '36px', alignItems: 'flex-start' }}>
@@ -195,10 +195,10 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>A real example from a finance team we worked with</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            A business we worked with had a Finance Director spending two full days every month on a reconciliation process across three separate systems. The data was correct in each system individually — the problem was getting it together in one place, in the right format, with discrepancies identified and explained.
+            A business we worked with had a Finance Director spending two full days every month on a reconciliation process across three separate systems. The data was correct in each system individually - the problem was getting it together in one place, in the right format, with discrepancies identified and explained.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            We built a connection to all three systems, automated the reconciliation logic, and set it up to flag any discrepancies automatically with a red highlight and a description of the difference. The Finance Director now runs the reconciliation in under 20 minutes — clicking one button, reviewing the flagged items, and signing off the report.
+            We built a connection to all three systems, automated the reconciliation logic, and set it up to flag any discrepancies automatically with a red highlight and a description of the difference. The Finance Director now runs the reconciliation in under 20 minutes - clicking one button, reviewing the flagged items, and signing off the report.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The two days became 20 minutes. The same Finance Director now uses that recovered time for the analysis and forecasting work that actually moves the business forward.
@@ -206,7 +206,7 @@ export default function BlogPost() {
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
-              <strong style={{ color: 'var(--ink)' }}>Also worth reading:</strong> If part of the problem is bad data quality — inconsistent formats, duplicate entries, figures that do not reconcile because the underlying data is wrong — fixing the automation without addressing the data will not fully solve the problem. Read our guide to{' '}
+              <strong style={{ color: 'var(--ink)' }}>Also worth reading:</strong> If part of the problem is bad data quality - inconsistent formats, duplicate entries, figures that do not reconcile because the underlying data is wrong - fixing the automation without addressing the data will not fully solve the problem. Read our guide to{' '}
               <Link href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing for UK businesses</Link>{' '}
               before building the connection.
             </p>
@@ -228,11 +228,11 @@ export default function BlogPost() {
             },
             {
               q: 'Will our accountant be able to use the automated system?',
-              a: 'Yes — we design the output for the people who will use it, not just the people who commissioned it. Every project includes a full handover walkthrough and documentation. If your accountant currently works with your Excel reports, the automated version will look and work in a way they recognise.',
+              a: 'Yes - we design the output for the people who will use it, not just the people who commissioned it. Every project includes a full handover walkthrough and documentation. If your accountant currently works with your Excel reports, the automated version will look and work in a way they recognise.',
             },
             {
               q: 'What if our data comes from multiple different systems?',
-              a: 'That is exactly the situation most of our projects address. Power Query and Python can connect to multiple data sources simultaneously — accounting software, CRMs, operations tools, spreadsheets — and combine them into a single automated report. The more fragmented your data is currently, the bigger the time saving from automation.',
+              a: 'That is exactly the situation most of our projects address. Power Query and Python can connect to multiple data sources simultaneously - accounting software, CRMs, operations tools, spreadsheets - and combine them into a single automated report. The more fragmented your data is currently, the bigger the time saving from automation.',
             },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
@@ -244,9 +244,9 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'ICAEW — Finance function transformation: practical guidance', url: 'https://www.icaew.com/technical/technology/finance-function' },
-              { label: 'Microsoft — Getting started with Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
-              { label: 'HMRC — Making Tax Digital: digital record keeping requirements', url: 'https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax' },
+              { label: 'ICAEW - Finance function transformation: practical guidance', url: 'https://www.icaew.com/technical/technology/finance-function' },
+              { label: 'Microsoft - Getting started with Power Query', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
+              { label: 'HMRC - Making Tax Digital: digital record keeping requirements', url: 'https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',
@@ -265,7 +265,7 @@ export default function BlogPost() {
               { title: 'How to Connect Xero to Excel and Automate Your Reports', href: '/blog/connect-xero-to-excel-automate-reports', tag: 'Excel Automation' },
               { title: 'How to Reduce Manual Data Entry in Your Business', href: '/blog/how-to-reduce-manual-data-entry-uk', tag: 'Data Automation' },
               { title: '5 Signs Manual Reporting Is Costing Your Business Money', href: '/blog/5-signs-manual-reporting-is-costing-your-business', tag: 'Data Automation' },
-              { title: 'What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?', href: '/blog/what-is-data-cleansing-uk', tag: 'Data Quality' },
+              { title: 'What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?', href: '/blog/what-is-data-cleansing-uk', tag: 'Data Quality' },
             ].map((post, i) => (
               <Link key={i} href={post.href} style={{
                 display: 'block', padding: '20px 24px',
@@ -281,7 +281,7 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Is your finance team spending too much time on reporting?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current finance reporting process and tell you exactly what automation would look like — and what it would cost to build it.
+              Book a free 30-minute call. We will look at your current finance reporting process and tell you exactly what automation would look like - and what it would cost to build it.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →

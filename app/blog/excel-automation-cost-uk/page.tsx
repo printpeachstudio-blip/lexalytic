@@ -52,7 +52,7 @@ export default function BlogPost() {
             How Much Does Excel Automation Cost in the UK?
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            A straight answer — with real UK project costs, what drives the price up or down, and how to work out whether automation will actually pay for itself in your business.
+            A straight answer - with real UK project costs, what drives the price up or down, and how to work out whether automation will actually pay for itself in your business.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -77,7 +77,7 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            The first question almost every business asks before automating their Excel processes is: what is this going to cost? It is a completely reasonable question — and one that most consultants are frustratingly vague about.
+            The first question almost every business asks before automating their Excel processes is: what is this going to cost? It is a completely reasonable question - and one that most consultants are frustratingly vague about.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             This guide gives you honest UK market pricing for Excel automation in 2026, a clear breakdown of what drives costs up or down, and a straightforward way to work out whether the investment makes financial sense for your specific situation.
@@ -95,7 +95,7 @@ export default function BlogPost() {
           {/* Pricing table */}
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>UK Excel automation pricing in 2026</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '28px' }}>
-            Excel automation projects vary enormously in scope — which is why most consultants refuse to give a straight answer on price. Here is a breakdown of typical UK project costs by type of work:
+            Excel automation projects vary enormously in scope - which is why most consultants refuse to give a straight answer on price. Here is a breakdown of typical UK project costs by type of work:
           </p>
 
           <div style={{ overflowX: 'auto', marginBottom: '48px' }}>
@@ -127,7 +127,7 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            These are fixed-price ranges — not hourly rates. The advantage of fixed pricing is that you know exactly what you are committing to before any work begins. If a consultant quotes you an hourly rate for Excel automation without scoping the project first, that is a red flag. Good consultants scope first, then price.
+            These are fixed-price ranges - not hourly rates. The advantage of fixed pricing is that you know exactly what you are committing to before any work begins. If a consultant quotes you an hourly rate for Excel automation without scoping the project first, that is a red flag. Good consultants scope first, then price.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What affects the cost of Excel automation?</h2>
@@ -138,11 +138,11 @@ export default function BlogPost() {
           {[
             {
               title: '1. Number of data sources',
-              body: 'The single biggest cost driver. An automated report that pulls from one clean Excel file is straightforward. A system that pulls from three different sources — say, an accounting package, a CRM export, and a manual spreadsheet — requires significantly more work to build reliable connections, handle inconsistencies, and ensure the data merges correctly every time.',
+              body: 'The single biggest cost driver. An automated report that pulls from one clean Excel file is straightforward. A system that pulls from three different sources - say, an accounting package, a CRM export, and a manual spreadsheet - requires significantly more work to build reliable connections, handle inconsistencies, and ensure the data merges correctly every time.',
             },
             {
               title: '2. Data quality and consistency',
-              body: 'If your source data is clean, structured, and consistent, automation is straightforward. If it contains irregular formatting, merged cells, inconsistent date formats, or data entered differently by different people, significant cleaning logic needs to be built before the automation can work reliably. This is not unusual — it is simply a cost driver worth being aware of.',
+              body: 'If your source data is clean, structured, and consistent, automation is straightforward. If it contains irregular formatting, merged cells, inconsistent date formats, or data entered differently by different people, significant cleaning logic needs to be built before the automation can work reliably. This is not unusual - it is simply a cost driver worth being aware of.',
             },
             {
               title: '3. Complexity of the output',
@@ -150,11 +150,11 @@ export default function BlogPost() {
             },
             {
               title: '4. Frequency of changes',
-              body: 'A report that runs on a fixed schedule with consistent data is simpler than one that needs to handle new product lines, new team members, or changing business logic. If your underlying data structure changes regularly, the automation needs to be built with more flexibility — which adds cost upfront but saves far more over time.',
+              body: 'A report that runs on a fixed schedule with consistent data is simpler than one that needs to handle new product lines, new team members, or changing business logic. If your underlying data structure changes regularly, the automation needs to be built with more flexibility - which adds cost upfront but saves far more over time.',
             },
             {
               title: '5. Level of documentation and handover',
-              body: 'A fully documented system with a walkthrough for your team costs more than one delivered without explanation. However, the documentation is almost always worth paying for — without it, you are dependent on the consultant every time something needs adjusting.',
+              body: 'A fully documented system with a walkthrough for your team costs more than one delivered without explanation. However, the documentation is almost always worth paying for - without it, you are dependent on the consultant every time something needs adjusting.',
             },
           ].map((item, i) => (
             <div key={i} style={{ padding: '24px 28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '16px' }}>
@@ -172,7 +172,7 @@ export default function BlogPost() {
             />
           </div>
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Hourly rates vs fixed price — which is better?</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Hourly rates vs fixed price - which is better?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             Most Excel automation consultants in the UK charge either an hourly or day rate, or a fixed project price. Here is how the two approaches compare:
           </p>
@@ -222,13 +222,13 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            For most Excel automation projects, fixed pricing is better for the client. It removes cost uncertainty, prevents scope creep, and means the consultant has to be efficient with their time rather than extending the project unnecessarily. At Lexalytic, all projects are fixed price — scoped and agreed before any work begins.
+            For most Excel automation projects, fixed pricing is better for the client. It removes cost uncertainty, prevents scope creep, and means the consultant has to be efficient with their time rather than extending the project unnecessarily. At Lexalytic, all projects are fixed price - scoped and agreed before any work begins.
           </p>
 
-          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Important:</strong> If your source data is messy — inconsistent formats, duplicates, blanks — the automation project will cost more and deliver less. Cleaning the data first is often the most cost-effective step. See our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing for UK businesses</a>.</p></div>
+          <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}><p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}><strong style={{ color: 'var(--ink)' }}>Important:</strong> If your source data is messy - inconsistent formats, duplicates, blanks - the automation project will cost more and deliver less. Cleaning the data first is often the most cost-effective step. See our guide to <a href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing for UK businesses</a>.</p></div>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Does Excel automation actually pay for itself?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In almost every case, yes — and usually faster than people expect. Here is a straightforward way to work it out for your situation.
+            In almost every case, yes - and usually faster than people expect. Here is a straightforward way to work it out for your situation.
           </p>
 
           <div style={{ padding: '32px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '32px' }}>
@@ -251,7 +251,7 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In this example, a £600 automation project pays for itself in under four months — and then saves £160 every month indefinitely after that. That is £1,920 saved in the first year alone, for a £600 investment.
+            In this example, a £600 automation project pays for itself in under four months - and then saves £160 every month indefinitely after that. That is £1,920 saved in the first year alone, for a £600 investment.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The calculation changes significantly when you factor in that manual processes also carry a cost in errors, delayed decisions, and the risk of a key person leaving. Book a free scoping call and we will run the numbers for your specific situation.
@@ -268,14 +268,14 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What does a typical Excel automation project include?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '28px' }}>
-            A well-scoped Excel automation project should include all of the following — not just the code:
+            A well-scoped Excel automation project should include all of the following - not just the code:
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
               { title: 'Scoping call', desc: 'A free conversation to understand your current process, what needs to change, and what the automated version will do. No obligation.' },
               { title: 'Fixed price quote', desc: 'A clear total cost agreed before any work begins. No surprises, no scope creep without your approval.' },
-              { title: 'Build and testing', desc: 'The automation is built and tested against your actual data — not dummy data — before handover.' },
+              { title: 'Build and testing', desc: 'The automation is built and tested against your actual data - not dummy data - before handover.' },
               { title: 'Documentation', desc: 'Written instructions explaining how the system works, what each part does, and how to use it.' },
               { title: 'Walkthrough', desc: 'A live session walking your team through the system so they can use it confidently without needing to call anyone.' },
               { title: 'Post-delivery support', desc: 'A support window after delivery for questions, minor adjustments, and anything that needs tweaking once it is in use.' },
@@ -290,12 +290,12 @@ export default function BlogPost() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Excel automation vs Power BI — which do you need?</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Excel automation vs Power BI - which do you need?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             A common question when businesses start looking at automation is whether they need Excel automation or a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link>. The answer depends on what the output needs to do.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Excel automation is the right choice when the output needs to remain in Excel — for example, a formatted report that gets emailed to clients, a financial model that people need to interact with directly, or a process that involves data entry as well as output.
+            Excel automation is the right choice when the output needs to remain in Excel - for example, a formatted report that gets emailed to clients, a financial model that people need to interact with directly, or a process that involves data entry as well as output.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             Power BI is better when multiple people need to access the same live data, leadership wants interactive dashboards, or data is coming from several different systems. See our full guide to <Link href="/blog/power-bi-vs-excel" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI vs Excel</Link> for a detailed comparison.
@@ -306,7 +306,7 @@ export default function BlogPost() {
           {[
             {
               q: 'How much does a simple Excel macro cost in the UK?',
-              a: 'A simple macro — for example, a button that reformats a spreadsheet, moves data between sheets, or runs a standard process — typically costs £150–£400 in the UK. The exact price depends on the complexity of the logic and how much testing is required with your actual data.',
+              a: 'A simple macro - for example, a button that reformats a spreadsheet, moves data between sheets, or runs a standard process - typically costs £150–£400 in the UK. The exact price depends on the complexity of the logic and how much testing is required with your actual data.',
             },
             {
               q: 'How long does Excel automation take to build?',
@@ -318,15 +318,15 @@ export default function BlogPost() {
             },
             {
               q: 'Do I need to know VBA to use an automated Excel system?',
-              a: 'No. A well-built automation system is designed to be used by anyone on your team — no technical knowledge required. The system runs when you need it, produces the output you need, and requires no understanding of the code underneath.',
+              a: 'No. A well-built automation system is designed to be used by anyone on your team - no technical knowledge required. The system runs when you need it, produces the output you need, and requires no understanding of the code underneath.',
             },
             {
               q: 'What is the difference between Excel automation and a Power BI dashboard?',
-              a: 'Excel automation keeps your output in Excel — useful when you need to edit the output, share a formatted file, or maintain a financial model. Power BI creates interactive dashboards in a browser that update automatically from live data. Most businesses benefit from both — automated Excel for detailed analysis and Power BI for high-level visibility.',
+              a: 'Excel automation keeps your output in Excel - useful when you need to edit the output, share a formatted file, or maintain a financial model. Power BI creates interactive dashboards in a browser that update automatically from live data. Most businesses benefit from both - automated Excel for detailed analysis and Power BI for high-level visibility.',
             },
             {
               q: 'Is Excel automation worth it for a small business?',
-              a: 'Yes — often more so than for larger businesses. Small businesses typically have fewer people, which means manual reporting takes up a higher proportion of the team\'s time. Automating even a few hours of manual work per week can free up meaningful capacity in a small team. The return on investment is usually fast and significant.',
+              a: 'Yes - often more so than for larger businesses. Small businesses typically have fewer people, which means manual reporting takes up a higher proportion of the team\'s time. Automating even a few hours of manual work per week can free up meaningful capacity in a small team. The return on investment is usually fast and significant.',
             },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
@@ -339,9 +339,9 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'Microsoft — Introduction to Power Query for Excel', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
-              { label: 'Microsoft — Getting started with VBA in Excel', url: 'https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office' },
-              { label: 'ONS — Business Insights and Conditions Survey May 2026', url: 'https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/latest' },
+              { label: 'Microsoft - Introduction to Power Query for Excel', url: 'https://support.microsoft.com/en-us/office/introduction-to-power-query-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a' },
+              { label: 'Microsoft - Getting started with VBA in Excel', url: 'https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office' },
+              { label: 'ONS - Business Insights and Conditions Survey May 2026', url: 'https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/latest' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',

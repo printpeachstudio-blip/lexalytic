@@ -51,7 +51,7 @@ export default function BlogPost() {
             How to Build a KPI Dashboard for Your Small Business
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Most small business owners are making decisions based on instinct, memory, or a report someone compiled last week. A KPI dashboard gives you a live view of the numbers that actually matter — without expensive software or a data team.
+            Most small business owners are making decisions based on instinct, memory, or a report someone compiled last week. A KPI dashboard gives you a live view of the numbers that actually matter - without expensive software or a data team.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -69,12 +69,12 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              A KPI dashboard for a small business does not need to be complicated. It needs to show the five to ten numbers that tell you whether the business is healthy right now — revenue, margin, cash position, outstanding invoices, and whatever operational metric matters most in your sector. Built in Power BI or Excel, connected to your existing systems, it can be ready in days.
+              A KPI dashboard for a small business does not need to be complicated. It needs to show the five to ten numbers that tell you whether the business is healthy right now - revenue, margin, cash position, outstanding invoices, and whatever operational metric matters most in your sector. Built in Power BI or Excel, connected to your existing systems, it can be ready in days.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            I have built dashboards for businesses across a wide range of sectors — construction, recruitment, professional services, retail, healthcare — and the starting question is always the same. What do you actually need to know to run this business well? Not what data do you have. Not what your accounting software can export. What do you need to know, right now, to make good decisions?
+            I have built dashboards for businesses across a wide range of sectors - construction, recruitment, professional services, retail, healthcare - and the starting question is always the same. What do you actually need to know to run this business well? Not what data do you have. Not what your accounting software can export. What do you need to know, right now, to make good decisions?
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The answer to that question is your KPI dashboard. Everything else is a report.
@@ -90,18 +90,18 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What is a KPI dashboard and why does your business need one?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            A KPI dashboard is a single screen that shows your most important business metrics, updated automatically from your actual data. KPI stands for Key Performance Indicator — the specific numbers that tell you whether your business is moving in the right direction.
+            A KPI dashboard is a single screen that shows your most important business metrics, updated automatically from your actual data. KPI stands for Key Performance Indicator - the specific numbers that tell you whether your business is moving in the right direction.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            The difference between a KPI dashboard and a report is that a dashboard is live. It updates automatically when new data arrives — from your accounting software, your CRM, your operations systems — without anyone exporting, formatting, or compiling anything. You open it, you see the current picture, you act on it.
+            The difference between a KPI dashboard and a report is that a dashboard is live. It updates automatically when new data arrives - from your accounting software, your CRM, your operations systems - without anyone exporting, formatting, or compiling anything. You open it, you see the current picture, you act on it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            Most small businesses do not have this. They have reports — produced weekly or monthly by someone who spends hours pulling the data together. By the time the report lands, it is already out of date. A dashboard fixes that problem permanently.
+            Most small businesses do not have this. They have reports - produced weekly or monthly by someone who spends hours pulling the data together. By the time the report lands, it is already out of date. A dashboard fixes that problem permanently.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Step 1: Decide what to measure</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            This is the most important step and the one most businesses get wrong. They try to put everything on the dashboard, end up with 40 metrics, and nobody knows what to look at. A good KPI dashboard for a small business has between five and ten metrics — no more.
+            This is the most important step and the one most businesses get wrong. They try to put everything on the dashboard, end up with 40 metrics, and nobody knows what to look at. A good KPI dashboard for a small business has between five and ten metrics - no more.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '28px' }}>
             Here is a framework for choosing. Ask yourself: if I could only look at one number to know whether this business is healthy right now, what would it be? Then ask the same question again. And again. Stop when you have five to ten numbers that together give a complete picture of financial health, operational performance, and leading indicators of future performance.
@@ -143,7 +143,7 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Step 2: Identify where your data lives</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Once you know what you want to measure, the next question is where that data actually lives. For most small businesses, the answer involves at least two or three systems — and that is where the challenge begins.
+            Once you know what you want to measure, the next question is where that data actually lives. For most small businesses, the answer involves at least two or three systems - and that is where the challenge begins.
           </p>
 
           {[
@@ -184,7 +184,7 @@ export default function BlogPost() {
                 tool: 'Power BI',
                 cost: 'Free desktop app · £8.40/user/month to share',
                 best: 'Best for: businesses that want a professional live dashboard accessible to multiple people',
-                pros: ['Connects to almost any data source', 'Live refresh from Xero, Sage, SQL, Excel and more', 'Interactive — filter by date, region, team', 'Shareable via browser without sending files'],
+                pros: ['Connects to almost any data source', 'Live refresh from Xero, Sage, SQL, Excel and more', 'Interactive - filter by date, region, team', 'Shareable via browser without sending files'],
                 cons: ['Requires technical knowledge to build properly', 'Requires Pro licence to share (£8.40/user/month)'],
                 highlight: true,
               },
@@ -193,7 +193,7 @@ export default function BlogPost() {
                 cost: 'Included in Microsoft 365',
                 best: 'Best for: businesses already in Excel that want automated data without a new platform',
                 pros: ['No new software required', 'Team already knows how to use it', 'Connects to Xero, Sage, databases', 'Refreshes automatically on open or on demand'],
-                cons: ['Not truly live — requires someone to open and refresh', 'Version control issues if multiple people use it'],
+                cons: ['Not truly live - requires someone to open and refresh', 'Version control issues if multiple people use it'],
                 highlight: false,
               },
               {
@@ -230,7 +230,7 @@ export default function BlogPost() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Step 4: Build it — or have someone build it for you</h2>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Step 4: Build it - or have someone build it for you</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             If you are technically confident and have the time, Power BI and Excel with Power Query can both be learned to a functional level. Microsoft has extensive free training resources, and for straightforward single-source dashboards the learning curve is manageable.
           </p>
@@ -238,7 +238,7 @@ export default function BlogPost() {
             The point at which most business owners find it worth bringing in help is when the data comes from more than one source, when the data needs significant transformation before it makes sense in a dashboard, or when they have tried to build it themselves and hit a wall.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            A properly built KPI dashboard — connected to your real data, designed around the decisions you actually need to make, with documentation so your team can use it independently — typically costs less than one month of the time currently being spent on manual reporting. And unlike the manual reporting, it keeps running indefinitely without anyone rebuilding it.
+            A properly built KPI dashboard - connected to your real data, designed around the decisions you actually need to make, with documentation so your team can use it independently - typically costs less than one month of the time currently being spent on manual reporting. And unlike the manual reporting, it keeps running indefinitely without anyone rebuilding it.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -254,7 +254,7 @@ export default function BlogPost() {
           {[
             {
               mistake: 'Measuring too many things',
-              fix: 'A dashboard with 40 metrics is not a dashboard — it is a spreadsheet with a different name. If everything is a priority, nothing is. Start with five metrics and add more only when you have genuinely outgrown them.',
+              fix: 'A dashboard with 40 metrics is not a dashboard - it is a spreadsheet with a different name. If everything is a priority, nothing is. Start with five metrics and add more only when you have genuinely outgrown them.',
             },
             {
               mistake: 'Measuring outputs instead of leading indicators',
@@ -266,7 +266,7 @@ export default function BlogPost() {
             },
             {
               mistake: 'Not connecting it to live data',
-              fix: 'A dashboard that someone has to manually update is not a dashboard — it is a formatted report with extra steps. The whole point is that it updates automatically. If yours requires manual data entry, fix the connection.',
+              fix: 'A dashboard that someone has to manually update is not a dashboard - it is a formatted report with extra steps. The whole point is that it updates automatically. If yours requires manual data entry, fix the connection.',
             },
             {
               mistake: 'Building it for the person who asked, not the person who will use it',
@@ -283,7 +283,7 @@ export default function BlogPost() {
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px', marginTop: '32px' }}>
             <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
-              <strong style={{ color: 'var(--ink)' }}>Related:</strong> If your source data has quality issues — inconsistent formats, duplicates, blanks — fix those before building a dashboard. A KPI dashboard built on bad data produces wrong numbers with high confidence. Read our guide to{' '}
+              <strong style={{ color: 'var(--ink)' }}>Related:</strong> If your source data has quality issues - inconsistent formats, duplicates, blanks - fix those before building a dashboard. A KPI dashboard built on bad data produces wrong numbers with high confidence. Read our guide to{' '}
               <Link href="/blog/what-is-data-cleansing-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>data cleansing for UK businesses</Link>{' '}
               before you start.
             </p>
@@ -293,11 +293,11 @@ export default function BlogPost() {
           {[
             {
               q: 'How much does it cost to build a KPI dashboard for a small business?',
-              a: 'A properly built KPI dashboard for a UK small business — connected to your actual data, designed around your specific metrics, with documentation — typically costs between £750 and £2,500 depending on the number of data sources and the complexity of the metrics. We scope every project and give a fixed price before any work begins.',
+              a: 'A properly built KPI dashboard for a UK small business - connected to your actual data, designed around your specific metrics, with documentation - typically costs between £750 and £2,500 depending on the number of data sources and the complexity of the metrics. We scope every project and give a fixed price before any work begins.',
             },
             {
               q: 'Can I build a KPI dashboard myself without technical knowledge?',
-              a: 'For simple single-source dashboards, yes — Microsoft Power BI desktop is free and has extensive training resources. The difficulty increases significantly when you need to connect multiple data sources, handle data that needs cleaning or transformation, or build custom calculations. Most business owners find it more cost-effective to have a consultant build it correctly the first time.',
+              a: 'For simple single-source dashboards, yes - Microsoft Power BI desktop is free and has extensive training resources. The difficulty increases significantly when you need to connect multiple data sources, handle data that needs cleaning or transformation, or build custom calculations. Most business owners find it more cost-effective to have a consultant build it correctly the first time.',
             },
             {
               q: 'How long does it take to build a KPI dashboard?',
@@ -305,15 +305,15 @@ export default function BlogPost() {
             },
             {
               q: 'What is the difference between a KPI dashboard and a report?',
-              a: 'A report is produced periodically by someone pulling data together — it is a snapshot of a moment in time, produced after that moment has passed. A KPI dashboard is live — it updates automatically from your data sources and always shows the current picture. Reports look backwards. Dashboards show you where you are right now.',
+              a: 'A report is produced periodically by someone pulling data together - it is a snapshot of a moment in time, produced after that moment has passed. A KPI dashboard is live - it updates automatically from your data sources and always shows the current picture. Reports look backwards. Dashboards show you where you are right now.',
             },
             {
               q: 'Do I need Power BI Pro to share a KPI dashboard with my team?',
-              a: 'Yes — to share a Power BI dashboard with others via the Power BI service, everyone who views it needs a Power BI Pro licence at £8.40 per user per month. There is also Power BI Premium Per User at a higher price point with additional features. For small teams sharing with two or three people, the Pro licence cost is usually negligible compared to the time saved.',
+              a: 'Yes - to share a Power BI dashboard with others via the Power BI service, everyone who views it needs a Power BI Pro licence at £8.40 per user per month. There is also Power BI Premium Per User at a higher price point with additional features. For small teams sharing with two or three people, the Pro licence cost is usually negligible compared to the time saved.',
             },
             {
               q: 'Could a custom business tool replace our dashboard?',
-              a: 'A KPI dashboard and a custom business tool serve different purposes — a dashboard surfaces data for decisions, while a custom tool manages a process. Many businesses benefit from both: a custom tool to run the operation and a dashboard to track performance. We build both and can advise on which combination makes sense for your specific situation.',
+              a: 'A KPI dashboard and a custom business tool serve different purposes - a dashboard surfaces data for decisions, while a custom tool manages a process. Many businesses benefit from both: a custom tool to run the operation and a dashboard to track performance. We build both and can advise on which combination makes sense for your specific situation.',
             },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
@@ -325,9 +325,9 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'Microsoft — Getting started with Power BI', url: 'https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview' },
-              { label: 'Microsoft — Power BI pricing for UK businesses', url: 'https://powerbi.microsoft.com/en-gb/pricing/' },
-              { label: 'Google — Looker Studio overview', url: 'https://lookerstudio.google.com/' },
+              { label: 'Microsoft - Getting started with Power BI', url: 'https://learn.microsoft.com/en-us/power-bi/fundamentals/power-bi-overview' },
+              { label: 'Microsoft - Power BI pricing for UK businesses', url: 'https://powerbi.microsoft.com/en-gb/pricing/' },
+              { label: 'Google - Looker Studio overview', url: 'https://lookerstudio.google.com/' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',

@@ -5,7 +5,7 @@ const services = [
   {
     title: 'AI-Powered Tools',
     slug: 'ai-tools',
-    desc: 'Business tools with Claude AI built in. Proposal generators, document processors, intelligent workflows — AI that works inside your processes, not just alongside them. CVCraft AI is a live example we built and operate.',
+    desc: 'Business tools with Claude AI built in. Proposal generators, document processors, intelligent workflows - AI that works inside your processes, not just alongside them. CVCraft AI is a live example we built and operate.',
     time: 'Scoped individually',
     tags: ['Claude AI', 'Automation', 'Intelligent tools'],
     highlight: true,
@@ -21,7 +21,7 @@ const services = [
   {
     title: 'Website Development',
     slug: 'website-development',
-    desc: 'Fast, bespoke websites built in Next.js. No WordPress, no templates, no monthly platform fees. Built to rank on Google and built to convert — the site you are on right now is a live example.',
+    desc: 'Fast, bespoke websites built in Next.js. No WordPress, no templates, no monthly platform fees. Built to rank on Google and built to convert - the site you are on right now is a live example.',
     time: '1–3 weeks',
     tags: ['Next.js', 'SEO 100', 'No platform fees'],
     highlight: true,
@@ -29,7 +29,7 @@ const services = [
   {
     title: 'Platform Development',
     slug: 'platform-development',
-    desc: 'Full web applications, SaaS products, booking systems, and member platforms. From idea to live product. We are building Kismet — a UK wedding planning platform — right now, as a live example of what this looks like in practice.',
+    desc: 'Full web applications, SaaS products, booking systems, and member platforms. From idea to live product. We are building Kismet - a UK wedding planning platform - right now, as a live example of what this looks like in practice.',
     time: 'Scoped individually',
     tags: ['SaaS', 'Full-stack', 'From idea to launch'],
     highlight: false,
@@ -45,7 +45,7 @@ const services = [
   {
     title: 'Excel & Data Automation',
     slug: 'excel-automation',
-    desc: 'Turn hours of manual copy-paste into a one-click process. Power Query, VBA, Python — whatever gets the job done cleanly. If you are rebuilding the same spreadsheet every week, that stops here.',
+    desc: 'Turn hours of manual copy-paste into a one-click process. Power Query, VBA, Python - whatever gets the job done cleanly. If you are rebuilding the same spreadsheet every week, that stops here.',
     time: '3–7 days',
     tags: ['Power Query', 'VBA', 'Python'],
     highlight: false,
@@ -53,7 +53,7 @@ const services = [
   {
     title: 'Workflow Automation',
     slug: 'power-automate',
-    desc: 'Automate the repetitive work that should not require a human. Approvals, notifications, data flows, system updates — across Microsoft 365, Google Workspace, or custom systems.',
+    desc: 'Automate the repetitive work that should not require a human. Approvals, notifications, data flows, system updates - across Microsoft 365, Google Workspace, or custom systems.',
     time: '3–7 days',
     tags: ['Power Automate', 'Microsoft 365', 'Workflows'],
     highlight: false,
@@ -75,12 +75,12 @@ export default function Services() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '16px', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <span className="section-label">What we build</span>
-            <h2 style={{ maxWidth: '600px', marginBottom: 0 }}>Whatever your business needs built — we build it properly.</h2>
+            <h2 style={{ maxWidth: '600px', marginBottom: 0 }}>Whatever your business needs built - we build it properly.</h2>
           </div>
           <a href="#contact" className="btn-primary" style={{ flexShrink: 0 }}>Talk to us →</a>
         </div>
         <p style={{ fontSize: '15px', color: 'var(--ink-3)', marginBottom: '48px', maxWidth: '620px' }}>
-          Every project is scoped individually — you get a clear fixed price before any work begins. No day rates, no account managers, no minimum spend.
+          Every project is scoped individually - you get a clear fixed price before any work begins. No day rates, no account managers, no minimum spend.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '20px' }}>
           {services.map((s, i) => (

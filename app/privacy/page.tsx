@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/privacy' },
   title: 'Privacy Policy | Lexalytic',
-  description: 'Privacy policy for Lexalytic — UK digital studio.',
+  description: 'Privacy policy for Lexalytic - UK digital studio.',
   robots: { index: true, follow: true },
 }
 
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
         <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '24px' }}>Lexalytic is a UK digital studio operated by Mihir Hindocha, based in Bushey, Hertfordshire. We build websites, custom business software, AI-powered tools, and data systems for UK businesses. Our website is lexalytic.com and you can contact us at hello@lexalytic.com.</p>
 
         <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', marginTop: '40px' }}>What data we collect</h2>
-        <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '24px' }}>We collect information you provide directly when you contact us through the website form — specifically your name, email address, company name, and the message you send. We do not collect any data automatically beyond standard server logs, and we do not use cookies for tracking or advertising.</p>
+        <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '24px' }}>We collect information you provide directly when you contact us through the website form - specifically your name, email address, company name, and the message you send. We do not collect any data automatically beyond standard server logs, and we do not use cookies for tracking or advertising.</p>
 
         <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', marginTop: '40px' }}>How we use your data</h2>
         <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '24px' }}>We use the information you send us solely to respond to your enquiry and, where relevant, to provide the services you have requested. We do not sell your data to third parties. We do not add you to marketing lists without your explicit consent.</p>

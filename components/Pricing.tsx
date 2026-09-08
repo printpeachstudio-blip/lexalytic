@@ -3,7 +3,7 @@ const tiers = [
   {
     name: 'Essential',
     price: 'Focused build',
-    description: 'Perfect for a focused project — a tool, a website, an automation, or a dashboard. Scoped and priced before any work begins.',
+    description: 'Perfect for a focused project - a tool, a website, an automation, or a dashboard. Scoped and priced before any work begins.',
     features: [
       'Single project or focused scope',
       'Delivered within 5 working days',
@@ -17,7 +17,7 @@ const tiers = [
   {
     name: 'Professional',
     price: 'Full build',
-    description: 'For more complex builds — full platforms, multi-process tools, integrated systems, or websites with custom features.',
+    description: 'For more complex builds - full platforms, multi-process tools, integrated systems, or websites with custom features.',
     features: [
       'Multiple processes or full build',
       'Delivered within 10 working days',
@@ -38,7 +38,7 @@ const tiers = [
       'Priority turnaround on all requests',
       'Proactive improvement suggestions',
       'Quarterly digital tools review',
-      'Direct line — no ticketing system',
+      'Direct line - no ticketing system',
     ],
     cta: 'Let\'s talk',
     highlight: false,
@@ -54,7 +54,7 @@ export default function Pricing() {
           <h2>Fixed price.<br />No surprises.</h2>
         </div>
         <p style={{ fontSize: '16px', color: 'var(--ink-3)', marginBottom: '48px', maxWidth: '520px' }}>
-          Every project is scoped individually and priced upfront — before any work begins. Tell us your problem, and we'll tell you exactly what it will cost to fix it.
+          Every project is scoped individually and priced upfront - before any work begins. Tell us your problem, and we'll tell you exactly what it will cost to fix it.
         </p>
 
         <div style={{
@@ -113,7 +113,7 @@ export default function Pricing() {
         }}>
           
           <p style={{ fontSize: '14px', color: 'var(--ink-2)', flex: 1, minWidth: '200px' }}>
-            <strong style={{ color: 'var(--ink)' }}>Not sure where to start?</strong> Book a free 30-minute call and we'll scope your project and give you a clear fixed price — before you commit to anything.
+            <strong style={{ color: 'var(--ink)' }}>Not sure where to start?</strong> Book a free 30-minute call and we'll scope your project and give you a clear fixed price - before you commit to anything.
           </p>
           <a href="#contact" className="btn-amber" style={{ flexShrink: 0, fontSize: '14px', padding: '11px 22px' }}>Book free call →</a>
         </div>

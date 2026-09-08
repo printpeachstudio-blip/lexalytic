@@ -4,13 +4,13 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog' },
   title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
-  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting — written from 15 years of real project experience.',
+  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting - written from 15 years of real project experience.',
 }
 
 const posts = [
   {
     slug: 'data-driven-decision-making-uk-sme',
-    title: 'Data-Driven Decision Making for UK Small Businesses — Where to Start',
+    title: 'Data-Driven Decision Making for UK Small Businesses - Where to Start',
     excerpt: 'Data-driven decision making is not just for large businesses. Here is a practical starting point for UK SMEs that want better information without a data team.',
     date: 'January 2027',
     readTime: '8 min read',
@@ -26,7 +26,7 @@ const posts = [
   },
   {
     slug: 'google-sheets-automation-uk-business',
-    title: 'Google Sheets Automation for UK Businesses — What Is Possible in 2027',
+    title: 'Google Sheets Automation for UK Businesses - What Is Possible in 2027',
     excerpt: 'Google Sheets is more powerful than most businesses realise. Here is what is possible with automation, Apps Script, and API connections for UK businesses.',
     date: 'January 2027',
     readTime: '8 min read',
@@ -34,7 +34,7 @@ const posts = [
   },
   {
     slug: 'power-automate-vs-zapier-uk-business',
-    title: 'Power Automate vs Zapier for UK Businesses — Which Should You Use?',
+    title: 'Power Automate vs Zapier for UK Businesses - Which Should You Use?',
     excerpt: 'Power Automate and Zapier both automate workflows but they suit different businesses. Here is an honest comparison for UK business owners.',
     date: 'January 2027',
     readTime: '8 min read',
@@ -43,7 +43,7 @@ const posts = [
   {
     slug: 'custom-software-cost-uk-small-business',
     title: 'What Does Custom Software Actually Cost for a UK Small Business?',
-    excerpt: 'Transparent guide to UK custom software costs in 2027 — what drives the price, what to expect at different budget levels, and how to get a fair quote.',
+    excerpt: 'Transparent guide to UK custom software costs in 2027 - what drives the price, what to expect at different budget levels, and how to get a fair quote.',
     date: 'January 2027',
     readTime: '8 min read',
     tag: 'Custom Software',
@@ -51,15 +51,15 @@ const posts = [
   {
     slug: 'how-long-does-a-website-take-to-build-uk',
     title: 'How Long Does It Take to Build a Website in the UK? (Honest Answer)',
-    excerpt: 'From briefing to launch — realistic timelines for UK website projects, why they often take longer than expected, and how to keep yours on track.',
+    excerpt: 'From briefing to launch - realistic timelines for UK website projects, why they often take longer than expected, and how to keep yours on track.',
     date: 'January 2027',
     readTime: '8 min read',
     tag: 'Website Development',
   },
   {
     slug: 'ai-tools-for-uk-small-business-2027',
-    title: 'AI Tools for UK Small Businesses in 2027 — What Actually Works',
-    excerpt: 'Beyond ChatGPT — the AI tools UK small businesses are actually using in 2027 to save time, reduce costs, and automate repetitive work.',
+    title: 'AI Tools for UK Small Businesses in 2027 - What Actually Works',
+    excerpt: 'Beyond ChatGPT - the AI tools UK small businesses are actually using in 2027 to save time, reduce costs, and automate repetitive work.',
     date: 'January 2027',
     readTime: '8 min read',
     tag: 'AI Tools',
@@ -82,7 +82,7 @@ const posts = [
   },
   {
     slug: 'staff-costs-eating-profit-how-to-track',
-    title: 'Why Your Staff Costs Are Eating Your Profit — And How to Track It',
+    title: 'Why Your Staff Costs Are Eating Your Profit - And How to Track It',
     excerpt: 'Staff costs are typically the biggest expense in any service business. Most owners know roughly what they pay out but very few can see how those costs relate to revenue each person generates.',
     date: 'September 2026',
     readTime: '10 min read',
@@ -90,7 +90,7 @@ const posts = [
   },
   {
     slug: 'how-to-plan-your-digital-tools-for-2027',
-    title: 'How to Plan Your Digital Tools for 2027 — A UK Small Business Guide',
+    title: 'How to Plan Your Digital Tools for 2027 - A UK Small Business Guide',
     excerpt: 'Most UK businesses drift into their software stack. Here is how to audit what you have, identify the gaps, and plan the tools your business actually needs for 2027.',
     date: 'December 2026',
     readTime: '10 min read',
@@ -98,15 +98,15 @@ const posts = [
   },
   {
     slug: 'what-can-you-build-with-ai-in-2027-uk-business',
-    title: 'What Can You Actually Build With AI in 2027 — A UK Business Guide',
-    excerpt: 'AI capabilities have expanded significantly. Here is a practical guide to what UK businesses can actually build with AI in 2027 — and what is still hype.',
+    title: 'What Can You Actually Build With AI in 2027 - A UK Business Guide',
+    excerpt: 'AI capabilities have expanded significantly. Here is a practical guide to what UK businesses can actually build with AI in 2027 - and what is still hype.',
     date: 'December 2026',
     readTime: '10 min read',
     tag: 'AI-Powered Tools',
   },
   {
     slug: 'how-to-brief-a-developer-uk-small-business',
-    title: 'How to Brief a Developer — A UK Small Business Guide',
+    title: 'How to Brief a Developer - A UK Small Business Guide',
     excerpt: 'Most development projects go wrong because the brief was not clear enough. Here is how to write a brief that gets you what you actually need, without paying for what you do not.',
     date: 'December 2026',
     readTime: '10 min read',
@@ -122,8 +122,8 @@ const posts = [
   },
   {
     slug: 'how-we-built-cvcraft-ai-from-scratch',
-    title: 'How We Built CVCraft AI — An AI Product From Idea to Launch',
-    excerpt: 'CVCraft AI is an AI-powered CV rewriting service we built and operate. Here is exactly how we built it — the decisions, the tools, the process, and what it cost.',
+    title: 'How We Built CVCraft AI - An AI Product From Idea to Launch',
+    excerpt: 'CVCraft AI is an AI-powered CV rewriting service we built and operate. Here is exactly how we built it - the decisions, the tools, the process, and what it cost.',
     date: 'November 2026',
     readTime: '10 min read',
     tag: 'AI-Powered Tools',
@@ -146,7 +146,7 @@ const posts = [
   },
   {
     slug: 'bespoke-software-vs-off-the-shelf-uk-small-business',
-    title: 'Bespoke Software vs Off-the-Shelf — The Honest UK Small Business Guide',
+    title: 'Bespoke Software vs Off-the-Shelf - The Honest UK Small Business Guide',
     excerpt: 'Most UK small businesses default to off-the-shelf software. Sometimes that is right. Sometimes it costs more than building something custom. Here is the honest framework for deciding which.',
     date: 'September 2026',
     readTime: '10 min read',
@@ -154,7 +154,7 @@ const posts = [
   },
   {
     slug: 'what-is-an-ai-powered-business-tool-uk',
-    title: 'What Is an AI-Powered Business Tool — And Does Your Business Need One?',
+    title: 'What Is an AI-Powered Business Tool - And Does Your Business Need One?',
     excerpt: 'An AI-powered business tool is not ChatGPT with a different interface. It is a custom application with AI built into a specific business workflow. Here is what that actually means and when it makes sense.',
     date: 'September 2026',
     readTime: '10 min read',
@@ -162,7 +162,7 @@ const posts = [
   },
   {
     slug: 'custom-crm-vs-salesforce-hubspot-uk-small-business',
-    title: 'Custom CRM vs Salesforce vs HubSpot — Which Is Right for a Small UK Business?',
+    title: 'Custom CRM vs Salesforce vs HubSpot - Which Is Right for a Small UK Business?',
     excerpt: 'Salesforce and HubSpot are powerful but built for much larger businesses. For UK SMEs, a custom CRM is often cheaper, simpler, and fits better. Here is an honest comparison of all three options.',
     date: 'September 2026',
     readTime: '10 min read',
@@ -171,7 +171,7 @@ const posts = [
   {
     slug: 'why-we-build-websites-in-nextjs-not-wordpress',
     title: 'Why We Build Websites in Next.js Not WordPress (And Why It Matters)',
-    excerpt: 'Most UK web agencies build in WordPress. We build in Next.js. Here is why that decision affects your site speed, SEO rankings, security, and long-term cost — and when each approach makes sense.',
+    excerpt: 'Most UK web agencies build in WordPress. We build in Next.js. Here is why that decision affects your site speed, SEO rankings, security, and long-term cost - and when each approach makes sense.',
     date: 'September 2026',
     readTime: '10 min read',
     tag: 'Website Development',
@@ -202,7 +202,7 @@ const posts = [
   },
   {
     slug: 'what-is-power-query-uk-business',
-    title: 'What Is Power Query — and How Can It Save Your Business Time?',
+    title: 'What Is Power Query - and How Can It Save Your Business Time?',
     excerpt: 'Power Query is built into Excel and Power BI and most UK businesses have never used it. Here is what it does and how it eliminates hours of manual data work every month.',
     date: 'September 2026',
     readTime: '10 min read',
@@ -242,7 +242,7 @@ const posts = [
   },
   {
     slug: 'late-payments-uk-business-data-fix',
-    title: 'Why UK Businesses Lose £17,000 a Year to Late Payments — And How Better Data Fixes It',
+    title: 'Why UK Businesses Lose £17,000 a Year to Late Payments - And How Better Data Fixes It',
     excerpt: 'Late payments are pushing 38 UK businesses into closure every day. Most are making the problem worse by tracking invoices manually. Here is what better data actually looks like.',
     date: 'August 2026',
     readTime: '11 min read',
@@ -250,7 +250,7 @@ const posts = [
   },
   {
     slug: 'finance-team-manual-reporting-fix',
-    title: 'My Finance Team Is Spending Hours on Manual Reporting — How Do I Fix It?',
+    title: 'My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It?',
     excerpt: 'If your finance team is rebuilding the same reports every month and spending days on work that should take minutes, here is what is causing it and how to fix it properly.',
     date: 'July 2026',
     readTime: '10 min read',
@@ -274,8 +274,8 @@ const posts = [
   },
   {
     slug: 'when-your-business-has-outgrown-excel',
-    title: 'When Your Business Has Outgrown Excel — And What To Do Next',
-    excerpt: 'Excel is not the problem. Excel doing a job it was never designed to do — that is the problem. Here is how to tell the difference, and what actually needs to change.',
+    title: 'When Your Business Has Outgrown Excel - And What To Do Next',
+    excerpt: 'Excel is not the problem. Excel doing a job it was never designed to do - that is the problem. Here is how to tell the difference, and what actually needs to change.',
     date: 'May 2026',
     readTime: '10 min read',
     tag: 'Excel Automation',
@@ -283,15 +283,15 @@ const posts = [
   {
     slug: 'how-to-reduce-manual-data-entry-uk',
     title: 'How to Reduce Manual Data Entry in Your Business (UK Guide 2026)',
-    excerpt: 'Manual data entry is one of the most expensive habits a business can have. Here is a practical guide to reducing it — without expensive software or a big IT project.',
+    excerpt: 'Manual data entry is one of the most expensive habits a business can have. Here is a practical guide to reducing it - without expensive software or a big IT project.',
     date: 'May 2026',
     readTime: '11 min read',
     tag: 'Data Automation',
   },
   {
     slug: 'what-is-data-cleansing-uk',
-    title: 'What Is Data Cleansing — and Why Does Bad Data Cost UK Businesses So Much?',
-    excerpt: 'Most businesses know their data is messy. Very few realise how much that messiness is actually costing them — in wasted time, wrong decisions, and automation projects that fail before they start.',
+    title: 'What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?',
+    excerpt: 'Most businesses know their data is messy. Very few realise how much that messiness is actually costing them - in wasted time, wrong decisions, and automation projects that fail before they start.',
     date: 'May 2026',
     readTime: '10 min read',
     tag: 'Data Quality',
@@ -299,7 +299,7 @@ const posts = [
   {
     slug: 'excel-automation-cost-uk',
     title: 'How Much Does Excel Automation Cost in the UK? (2026 Guide)',
-    excerpt: 'A straight answer — with real UK project costs, what drives the price up or down, and how to work out whether automation will pay for itself in your business.',
+    excerpt: 'A straight answer - with real UK project costs, what drives the price up or down, and how to work out whether automation will pay for itself in your business.',
     date: 'May 2026',
     readTime: '9 min read',
     tag: 'Excel Automation',
@@ -307,7 +307,7 @@ const posts = [
   {
     slug: '5-signs-manual-reporting-is-costing-your-business',
     title: '5 Signs Manual Reporting Is Costing Your Business Money',
-    excerpt: 'Most businesses know their reporting process is painful. What they do not realise is exactly how much it is costing them — in time, in errors, and in decisions made on data that is already out of date.',
+    excerpt: 'Most businesses know their reporting process is painful. What they do not realise is exactly how much it is costing them - in time, in errors, and in decisions made on data that is already out of date.',
     date: 'April 2026',
     readTime: '10 min read',
     tag: 'Data Automation',
@@ -315,7 +315,7 @@ const posts = [
   {
     slug: 'power-bi-vs-excel',
     title: 'Power BI vs Excel: Which Should Your Business Use in 2026?',
-    excerpt: 'The honest answer — when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.',
+    excerpt: 'The honest answer - when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.',
     date: 'April 2026',
     readTime: '9 min read',
     tag: 'Power BI',
@@ -331,7 +331,7 @@ const posts = [
   {
     slug: 'power-bi-consultant-cost-uk',
     title: 'How Much Does a Power BI Consultant Cost in the UK?',
-    excerpt: 'A straight answer — with real UK prices, what affects the cost, and how to make sure you are not overpaying for something simpler than you think.',
+    excerpt: 'A straight answer - with real UK prices, what affects the cost, and how to make sure you are not overpaying for something simpler than you think.',
     date: 'April 2026',
     readTime: '8 min read',
     tag: 'Power BI',
@@ -362,7 +362,7 @@ export default function BlogIndex() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="section-label">Blog</span>
           <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '16px', letterSpacing: '-0.02em' }}>Data automation insights</h1>
-          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting — written from 15 years of real project experience.</p>
+          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting - written from 15 years of real project experience.</p>
         </div>
       </section>
 

@@ -39,7 +39,7 @@ export default function WebsiteDevelopmentPage() {
               A website that actually<br /><em style={{ color: 'var(--amber)' }}>works hard for your business.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '620px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              No WordPress. No templates. No monthly platform fees. We build fast, bespoke websites in Next.js — designed around what you need your site to do, built to rank on Google, and delivered as something you own outright. The site you are on right now is a live example.
+              No WordPress. No templates. No monthly platform fees. We build fast, bespoke websites in Next.js - designed around what you need your site to do, built to rank on Google, and delivered as something you own outright. The site you are on right now is a live example.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -60,11 +60,11 @@ export default function WebsiteDevelopmentPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px', textAlign: 'left' }}>
               {[
                 { icon: '⚡', title: 'Significantly faster', desc: 'Next.js generates static pages that load in milliseconds. No database queries, no plugin overhead. Google rewards fast sites with higher rankings.' },
-                { icon: '🎯', title: 'Built for your specific goal', desc: 'A lead generation site, a portfolio, a tool, a content site — each needs different structure. We build for the specific outcome you need.' },
+                { icon: '🎯', title: 'Built for your specific goal', desc: 'A lead generation site, a portfolio, a tool, a content site - each needs different structure. We build for the specific outcome you need.' },
                 { icon: '💰', title: 'No ongoing platform fees', desc: 'No WordPress hosting, theme licences, or plugin subscriptions. A bespoke site has none of those ongoing costs. You own it outright.' },
-                { icon: '🔍', title: 'SEO from the ground up', desc: 'Structured data, canonical URLs, metadata, sitemap, Core Web Vitals — all built in from the start. The Lexalytic site scores 100 on Google SEO.' },
+                { icon: '🔍', title: 'SEO from the ground up', desc: 'Structured data, canonical URLs, metadata, sitemap, Core Web Vitals - all built in from the start. The Lexalytic site scores 100 on Google SEO.' },
                 { icon: '🛡️', title: 'More secure', desc: 'Static sites have no database to attack, no login page to brute-force, and no plugin vulnerabilities. Inherently more secure than WordPress.' },
-                { icon: '📱', title: 'Mobile-first', desc: 'Built responsive from the first line of code — designed for the device most of your visitors are using.' },
+                { icon: '📱', title: 'Mobile-first', desc: 'Built responsive from the first line of code - designed for the device most of your visitors are using.' },
               ].map((item, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                   <div style={{ fontSize: '24px', marginBottom: '12px' }}>{item.icon}</div>
@@ -84,7 +84,7 @@ export default function WebsiteDevelopmentPage() {
             <h2 style={{ marginBottom: '32px' }}>Live websites we have built</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
-                { name: 'Lexalytic', url: 'https://www.lexalytic.com', desc: 'This site. Digital studio marketing site with automated blog publishing, GitHub Actions scheduling, structured data, and full SEO — scoring 100 on Google SEO.', tags: ['Next.js', 'SEO 100', 'Blog automation'] },
+                { name: 'Lexalytic', url: 'https://www.lexalytic.com', desc: 'This site. Digital studio marketing site with automated blog publishing, GitHub Actions scheduling, structured data, and full SEO - scoring 100 on Google SEO.', tags: ['Next.js', 'SEO 100', 'Blog automation'] },
                 { name: 'FamilyEntitled', url: 'https://www.familyentitled.co.uk', desc: 'UK government entitlements calculator. Complex eligibility logic, privacy-first architecture, content strategy targeting high-value financial search terms.', tags: ['Next.js', 'Calculator tool', 'SEO content'] },
                 { name: 'CVCraft AI', url: 'https://cvcraft-ai.co.uk', desc: 'AI-powered CV rewriting service. Stripe payments, order processing, AI delivery pipeline, and full marketing site.', tags: ['Next.js', 'Stripe', 'AI integration'] },
               ].map((site, i) => (
@@ -108,7 +108,7 @@ export default function WebsiteDevelopmentPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Ready for a website that<br /><em style={{ color: 'var(--amber)' }}>actually works for your business?</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what your site needs to do and we will tell you exactly what we would build — and what it would cost.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Tell us what your site needs to do and we will tell you exactly what we would build - and what it would cost.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
         </div>
       </section>

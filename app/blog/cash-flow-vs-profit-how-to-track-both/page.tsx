@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both' },
-  title: 'Why Cash Flow and Profit Are Different — And How to Track Both | Lexalytic',
-  description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both — automatically — so you always know where you stand.',
+  title: 'Why Cash Flow and Profit Are Different - And How to Track Both | Lexalytic',
+  description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both - automatically - so you always know where you stand.',
   openGraph: {
-    title: 'Why Cash Flow and Profit Are Different — And How to Track Both',
-    description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both — automatically — so you always know where you stand.',
+    title: 'Why Cash Flow and Profit Are Different - And How to Track Both',
+    description: 'Profit and cash flow are different numbers that tell different stories. Most UK businesses only track one. Here is how to track both - automatically - so you always know where you stand.',
     url: 'https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Why Cash Flow and Profit Are Different — And How to Track Both","description":"A practical guide for UK businesses.","datePublished":"2026-09-17","dateModified":"2026-09-17","url":"https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Why Cash Flow and Profit Are Different - And How to Track Both","description":"A practical guide for UK businesses.","datePublished":"2026-09-17","dateModified":"2026-09-17","url":"https://www.lexalytic.com/blog/cash-flow-vs-profit-how-to-track-both","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
@@ -38,7 +38,7 @@ export default function BlogPost() {
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Finance</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 10 min read</span>
           </div>
-          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Why Cash Flow and Profit Are Different — And How to Track Both</h1>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Why Cash Flow and Profit Are Different - And How to Track Both</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
             <div>
@@ -51,21 +51,21 @@ export default function BlogPost() {
 
             <article style={{ padding: 'clamp(40px, 6vw, 80px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Profit and cash flow are not the same thing — and confusing the two is one of the most common financial mistakes UK small business owners make. A business can be highly profitable on paper while running out of cash in practice. Understanding the difference, and having visibility of both, is fundamental to making good decisions about your business.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Profit and cash flow are not the same thing - and confusing the two is one of the most common financial mistakes UK small business owners make. A business can be highly profitable on paper while running out of cash in practice. Understanding the difference, and having visibility of both, is fundamental to making good decisions about your business.</p>
           
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why profit and cash flow diverge</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Profit is recorded when you invoice — cash arrives when your client pays. If your clients pay in 60 days and your suppliers expect payment in 30, you can be profitable and cash-poor simultaneously. This timing gap is the core of most cash flow problems in UK service businesses. It is not a profitability problem — it is a visibility and management problem.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Profit is recorded when you invoice - cash arrives when your client pays. If your clients pay in 60 days and your suppliers expect payment in 30, you can be profitable and cash-poor simultaneously. This timing gap is the core of most cash flow problems in UK service businesses. It is not a profitability problem - it is a visibility and management problem.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What good visibility looks like</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A business with proper financial visibility can see, at any moment: current cash position and projected cash for the next 30, 60, and 90 days; gross margin by client or service line; outstanding invoices and their expected payment dates; and actual vs budgeted performance for the month. Most UK small businesses have access to some of this data — very few have it all connected in one place that updates automatically.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A business with proper financial visibility can see, at any moment: current cash position and projected cash for the next 30, 60, and 90 days; gross margin by client or service line; outstanding invoices and their expected payment dates; and actual vs budgeted performance for the month. Most UK small businesses have access to some of this data - very few have it all connected in one place that updates automatically.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How to build it</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The data you need already exists in your accounting software. A Power BI dashboard or automated Excel report connected to Xero, Sage, or QuickBooks can surface both your profitability picture and your cash flow position in real time. The challenge is not collecting the data — it is connecting it in a way that makes both pictures visible without manual work every time you need to check.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The data you need already exists in your accounting software. A Power BI dashboard or automated Excel report connected to Xero, Sage, or QuickBooks can surface both your profitability picture and your cash flow position in real time. The challenge is not collecting the data - it is connecting it in a way that makes both pictures visible without manual work every time you need to check.</p>
           
-          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why profit and cash flow diverge — and why it matters</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A profitable business can run out of cash. It happens constantly to growing businesses: revenue is growing, the P&L looks healthy, but the bank account is tight because customers pay slowly, suppliers require payment upfront, or investment in stock and equipment is running ahead of collections. Understanding the difference between profit (an accounting concept) and cash (actual money in the bank) is the foundation of sound financial management — and tracking both separately is the only way to anticipate problems before they become crises.</p>
+          <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why profit and cash flow diverge - and why it matters</h2>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>A profitable business can run out of cash. It happens constantly to growing businesses: revenue is growing, the P&L looks healthy, but the bank account is tight because customers pay slowly, suppliers require payment upfront, or investment in stock and equipment is running ahead of collections. Understanding the difference between profit (an accounting concept) and cash (actual money in the bank) is the foundation of sound financial management - and tracking both separately is the only way to anticipate problems before they become crises.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Building a 13-week cash flow forecast</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most practical cash flow tool for most small businesses is a 13-week rolling forecast — detailed enough to be meaningful, short enough to be accurate. It lists expected cash inflows (invoice collections based on payment terms and debtor history) and outflows (supplier payments, payroll, rent, tax) week by week. The difference between inflows and outflows each week, accumulated from the opening bank balance, shows exactly when the cash position will be tight — and how tight. Built in Excel with a weekly refresh, it takes about an hour to maintain once the initial model is set up.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most practical cash flow tool for most small businesses is a 13-week rolling forecast - detailed enough to be meaningful, short enough to be accurate. It lists expected cash inflows (invoice collections based on payment terms and debtor history) and outflows (supplier payments, payroll, rent, tax) week by week. The difference between inflows and outflows each week, accumulated from the opening bank balance, shows exactly when the cash position will be tight - and how tight. Built in Excel with a weekly refresh, it takes about an hour to maintain once the initial model is set up.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Connecting profit reporting to cash reporting</h2>
-          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most powerful financial dashboard for a small business shows both views side by side: the P&L (profit view) and the cash flow statement (cash view) updated from the same accounting software data source. When the two diverge significantly — when profit is strong but cash is tight, or when cash is flush but profit is thin — it flags something worth investigating. Power BI can pull both from Xero or QuickBooks and display them together, updated automatically, giving management a complete financial picture without any manual work.</p>
+          <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most powerful financial dashboard for a small business shows both views side by side: the P&L (profit view) and the cash flow statement (cash view) updated from the same accounting software data source. When the two diverge significantly - when profit is strong but cash is tight, or when cash is flush but profit is thin - it flags something worth investigating. Power BI can pull both from Xero or QuickBooks and display them together, updated automatically, giving management a complete financial picture without any manual work.</p>
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Related articles</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '16px', marginBottom: '56px' }}>
               
@@ -88,12 +88,12 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '20px 24px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}>
             <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', margin: 0 }}>
-              <strong style={{ color: 'var(--ink)' }}>Also worth reading:</strong> If manual data entry is part of the problem, read our guide on <Link href="/blog/how-to-reduce-manual-data-entry-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>how to reduce manual data entry</Link> — practical steps to eliminate the most common causes.
+              <strong style={{ color: 'var(--ink)' }}>Also worth reading:</strong> If manual data entry is part of the problem, read our guide on <Link href="/blog/how-to-reduce-manual-data-entry-uk" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>how to reduce manual data entry</Link> - practical steps to eliminate the most common causes.
             </p>
           </div>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to fix this in your business?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business — fixed price, no commitment.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.</p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

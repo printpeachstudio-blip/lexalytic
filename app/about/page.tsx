@@ -117,10 +117,10 @@ export default function AboutPage() {
 
           {/* Intro */}
           <p style={{ fontSize: '19px', color: 'var(--ink)', lineHeight: '1.85', marginBottom: '32px', fontWeight: '400' }}>
-            I started Lexalytic because I spent 15 years inside some of the UK's most complex organisations watching the same problem play out over and over again — talented people spending hours every week on manual data work that nobody had ever got round to automating.
+            I started Lexalytic because I spent 15 years inside some of the UK's most complex organisations watching the same problem play out over and over again - talented people spending hours every week on manual data work that nobody had ever got round to automating.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            At Shell, at Citi Private Bank, at the NHS, at Warner Brothers Discovery — the tools were different, the industries were different, but the problem was always the same. Reports being rebuilt manually every month. Data copied between systems by hand. Decisions being made on information that was already out of date. I built a consultancy around fixing exactly that.
+            At Shell, at Citi Private Bank, at the NHS, at Warner Brothers Discovery - the tools were different, the industries were different, but the problem was always the same. Reports being rebuilt manually every month. Data copied between systems by hand. Decisions being made on information that was already out of date. I built a consultancy around fixing exactly that.
           </p>
 
           {/* Career section */}
@@ -189,7 +189,7 @@ export default function AboutPage() {
             <div style={{ padding: '28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
               <h3 style={{ fontSize: '15px', fontWeight: '600', color: 'var(--ink)', marginBottom: '16px' }}>Education</h3>
               <div style={{ fontSize: '15px', color: 'var(--ink-2)', marginBottom: '8px' }}>BSc Financial Computing</div>
-              <div style={{ fontSize: '13px', color: 'var(--ink-4)', marginBottom: '20px' }}>Combining finance, mathematics and software development — the foundation for everything that followed.</div>
+              <div style={{ fontSize: '13px', color: 'var(--ink-4)', marginBottom: '20px' }}>Combining finance, mathematics and software development - the foundation for everything that followed.</div>
               <div style={{ fontSize: '15px', color: 'var(--ink-2)', marginBottom: '4px' }}>Using Excel & VBA professionally since 2011</div>
               <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>15 years of hands-on experience across some of the UK's most demanding data environments.</div>
             </div>
@@ -208,13 +208,13 @@ export default function AboutPage() {
           {/* Why Lexalytic */}
           <h2 style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why I started Lexalytic</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In 2017 I started ExcelXLS as a side consultancy — taking on projects for businesses that needed the kind of Excel and VBA work I was doing in my day job. Over time it became clear that the businesses I was helping weren't just Excel problems — they were data problems. The tool was almost always fine. What was broken was the process around it.
+            In 2017 I started ExcelXLS as a side consultancy - taking on projects for businesses that needed the kind of Excel and VBA work I was doing in my day job. Over time it became clear that the businesses I was helping weren't just Excel problems - they were data problems. The tool was almost always fine. What was broken was the process around it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In 2026 I rebranded to Lexalytic to reflect what the work had become — a broader data automation consultancy covering Power BI, Python, SQL and Power Automate alongside Excel. The same years of client work, with a significantly expanded capability.
+            In 2026 I rebranded to Lexalytic to reflect what the work had become - a broader data automation consultancy covering Power BI, Python, SQL and Power Automate alongside Excel. The same years of client work, with a significantly expanded capability.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            I work with UK businesses directly — no account managers, no junior consultants handed your project. When you work with Lexalytic, you work with me. That is the point. The businesses I have built best results for are the ones where I understand the problem properly, not the ones where I execute a brief written by someone else.
+            I work with UK businesses directly - no account managers, no junior consultants handed your project. When you work with Lexalytic, you work with me. That is the point. The businesses I have built best results for are the ones where I understand the problem properly, not the ones where I execute a brief written by someone else.
           </p>
 
           {/* Clients */}
@@ -239,7 +239,7 @@ export default function AboutPage() {
           <div style={{ padding: '32px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '56px' }}>
             <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'var(--ink)', marginBottom: '16px' }}>Outside of work</h3>
             <p style={{ fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.8', margin: 0 }}>
-              I am based in Bushey, Hertfordshire, and part-owner of Blue Ginger and Blue Zenzer restaurants. Running a hospitality business alongside a data consultancy keeps me grounded in what actually matters to business owners — reliable systems, accurate numbers, and time back in your day to focus on the work only you can do.
+              I am based in Bushey, Hertfordshire, and part-owner of Blue Ginger and Blue Zenzer restaurants. Running a hospitality business alongside a data consultancy keeps me grounded in what actually matters to business owners - reliable systems, accurate numbers, and time back in your day to focus on the work only you can do.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ export default function AboutPage() {
                 role: "Quality Assurance Officer, Royal Borough of Kensington and Chelsea",
               },
               {
-                quote: "Using Lexalytic has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage — I also felt that I was properly listened to and my needs and requirements were met.",
+                quote: "Using Lexalytic has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage - I also felt that I was properly listened to and my needs and requirements were met.",
                 name: "Kate Freethe",
                 role: "Workshops Administrator, Royal Shakespeare Company",
               },
@@ -278,7 +278,7 @@ export default function AboutPage() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to work together?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. I will look at your current reporting process and tell you exactly what needs to change — and what it will cost to fix it.
+              Book a free 30-minute call. I will look at your current reporting process and tell you exactly what needs to change - and what it will cost to fix it.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →

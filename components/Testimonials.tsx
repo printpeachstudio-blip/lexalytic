@@ -23,7 +23,7 @@ const testimonials = [
     initial: "A",
   },
   {
-    quote: "Using Lexalytic has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage — I also felt that I was properly listened to and my needs and requirements were met.",
+    quote: "Using Lexalytic has saved me a massive amount of work, time and headaches. I was provided with a professional and efficient service at each stage - I also felt that I was properly listened to and my needs and requirements were met.",
     name: "Kate Freethe",
     role: "Workshops Administrator",
     company: "Royal Shakespeare Company",
@@ -50,12 +50,12 @@ export default function Testimonials() {
     <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
       <div className="container">
         <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', marginBottom: '56px', flexWrap: 'wrap' }}>
-          <img src="/mihir.jpg" alt="Mihir Hindocha — Founder of Lexalytic" style={{ width: '72px', height: '72px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(193,125,46,0.4)', flexShrink: 0, marginTop: '4px' }} />
+          <img src="/mihir.jpg" alt="Mihir Hindocha - Founder of Lexalytic" style={{ width: '72px', height: '72px', borderRadius: '50%', objectFit: 'cover', border: '2px solid rgba(193,125,46,0.4)', flexShrink: 0, marginTop: '4px' }} />
           <div style={{ flex: 1 }}>
             <span className="section-label">Client testimonials</span>
             <h2 style={{ color: 'var(--white)', maxWidth: '480px', marginBottom: '12px' }}>What clients say about working with Mihir.</h2>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '14px', lineHeight: '1.7', maxWidth: '520px' }}>
-              15 years experience across Shell, NHS, Warner Bros, Citi, and Foster & Partners — now working directly with UK businesses of every size. Every project is handled personally.
+              15 years experience across Shell, NHS, Warner Bros, Citi, and Foster & Partners - now working directly with UK businesses of every size. Every project is handled personally.
             </p>
           </div>
         </div>

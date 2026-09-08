@@ -53,7 +53,7 @@ export default function BlogPost() {
             Power BI vs Excel: Which Should Your Business Use in 2026?
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            The honest answer — when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.
+            The honest answer - when Excel is still the right tool, when Power BI is genuinely worth it, and what most UK businesses actually need.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -73,7 +73,7 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              Excel is still the right tool for financial modelling, data entry, and ad-hoc analysis. Power BI is better when multiple people need the same data, reports need to update automatically, or leadership wants interactive dashboards rather than static spreadsheets. Most businesses need <strong>both</strong> — not one or the other.
+              Excel is still the right tool for financial modelling, data entry, and ad-hoc analysis. Power BI is better when multiple people need the same data, reports need to update automatically, or leadership wants interactive dashboards rather than static spreadsheets. Most businesses need <strong>both</strong> - not one or the other.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function BlogPost() {
             I get asked this question almost every week. A Finance Manager is spending hours every month rebuilding the same report in Excel, someone mentions Power BI, and suddenly the business is wondering whether to make a switch.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The answer is almost never "replace Excel with Power BI." It is almost always "use both — but use each one for what it is actually good at." Here is how to work out which is which for your business.
+            The answer is almost never "replace Excel with Power BI." It is almost always "use both - but use each one for what it is actually good at." Here is how to work out which is which for your business.
           </p>
 
           {/* Image 1 */}
@@ -105,7 +105,7 @@ export default function BlogPost() {
           <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', padding: '28px', marginBottom: '40px', border: '1px solid var(--border)' }}>
             {[
               { icon: '✓', text: 'You are building financial models that require precise cell referencing and formula logic' },
-              { icon: '✓', text: 'Data entry is part of the workflow — Power BI is read-only by design' },
+              { icon: '✓', text: 'Data entry is part of the workflow - Power BI is read-only by design' },
               { icon: '✓', text: 'Your dataset is under 100,000 rows and only one or two people need it' },
               { icon: '✓', text: 'You need a quick answer to a specific question without building a full data model' },
               { icon: '✓', text: 'Your audience wants a formatted, printable spreadsheet rather than an interactive dashboard' },
@@ -118,12 +118,12 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The problem is not Excel. The problem is when businesses use Excel for things it was never designed to do — specifically, as a shared reporting platform that multiple people update, distribute by email, and try to maintain version control on. That is where things break down.
+            The problem is not Excel. The problem is when businesses use Excel for things it was never designed to do - specifically, as a shared reporting platform that multiple people update, distribute by email, and try to maintain version control on. That is where things break down.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>What Power BI is actually for</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Power BI is a business intelligence platform, not a spreadsheet. It is designed to connect to your data sources — whether that is an Excel file, a SQL database, a CRM, or an accounting system — and turn that data into interactive dashboards that update automatically on a schedule you set.
+            Power BI is a business intelligence platform, not a spreadsheet. It is designed to connect to your data sources - whether that is an Excel file, a SQL database, a CRM, or an accounting system - and turn that data into interactive dashboards that update automatically on a schedule you set.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             The key difference is that Power BI reports live in the cloud. Everyone accesses the same version of the truth through a browser or the mobile app. When the data updates, the dashboard updates. No one needs to email a file. No one needs to rebuild anything.
@@ -148,7 +148,7 @@ export default function BlogPost() {
               { icon: '✓', text: 'Multiple people need access to the same data without creating conflicting versions' },
               { icon: '✓', text: 'You need reports to refresh automatically from live data sources rather than being rebuilt manually' },
               { icon: '✓', text: 'Leadership wants interactive dashboards they can filter and explore, not static spreadsheets' },
-              { icon: '✓', text: 'Your data spans multiple systems — accounting, CRM, operations — and you want it in one place' },
+              { icon: '✓', text: 'Your data spans multiple systems - accounting, CRM, operations - and you want it in one place' },
               { icon: '✓', text: 'You need to control who sees which data without creating separate files for different audiences' },
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start', marginBottom: i < 4 ? '14px' : '0' }}>
@@ -179,7 +179,7 @@ export default function BlogPost() {
                   { factor: 'Financial modelling', excel: '✓ Best in class', bi: 'Limited' },
                   { factor: 'Interactive dashboards', excel: 'Basic only', bi: '✓ Purpose-built' },
                   { factor: 'Cost', excel: 'Included in M365', bi: '£8/user/month (Pro)' },
-                  { factor: 'Learning curve', excel: 'Low — widely known', bi: 'Medium — DAX required' },
+                  { factor: 'Learning curve', excel: 'Low - widely known', bi: 'Medium - DAX required' },
                 ].map((row, i) => (
                   <tr key={i} style={{ borderBottom: '1px solid var(--border)', background: i % 2 === 0 ? 'var(--bg)' : 'var(--bg-2)' }}>
                     <td style={{ padding: '12px 16px', fontWeight: '500', color: 'var(--ink)' }}>{row.factor}</td>
@@ -199,15 +199,15 @@ export default function BlogPost() {
           {/* Scenario box */}
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '32px' }}>
             <p style={{ fontSize: '15px', color: 'var(--ink-2)', lineHeight: '1.85', margin: 0, fontStyle: 'italic' }}>
-              A Finance Manager is pulling data from three or four different systems every month — the accounting package, the CRM, maybe an operations spreadsheet — copying it into a master Excel file, cleaning it up, rebuilding the charts, and sending a report to the MD. It takes two days. The MD then asks a question the report does not answer, and the whole process starts again.
+              A Finance Manager is pulling data from three or four different systems every month - the accounting package, the CRM, maybe an operations spreadsheet - copying it into a master Excel file, cleaning it up, rebuilding the charts, and sending a report to the MD. It takes two days. The MD then asks a question the report does not answer, and the whole process starts again.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            This is not an Excel problem. It is a process problem. The fix is not necessarily Power BI — it might be automating the Excel process so the data pulls and cleans itself automatically. Or it might be a Power BI dashboard that connects directly to the source systems. Or both.
+            This is not an Excel problem. It is a process problem. The fix is not necessarily Power BI - it might be automating the Excel process so the data pulls and cleans itself automatically. Or it might be a Power BI dashboard that connects directly to the source systems. Or both.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The right answer depends on what your team actually needs, what systems you are working with, and how many people need access to the output. There is no universal answer — but there is a right answer for your specific situation.
+            The right answer depends on what your team actually needs, what systems you are working with, and how many people need access to the output. There is no universal answer - but there is a right answer for your specific situation.
           </p>
 
           {/* Image 3 */}
@@ -240,11 +240,11 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>5 signs Excel is still the right tool</h2>
 
           {[
-            { num: '01', title: 'You are building financial models', body: 'Budgets, forecasts, three-way financial models — Excel is still the best tool for this. The cell-level control and formula logic in Excel cannot be replicated in Power BI.' },
+            { num: '01', title: 'You are building financial models', body: 'Budgets, forecasts, three-way financial models - Excel is still the best tool for this. The cell-level control and formula logic in Excel cannot be replicated in Power BI.' },
             { num: '02', title: 'You need to enter and edit data directly', body: 'Power BI is read-only. If the workflow involves people typing data into the tool, Excel is the only option.' },
             { num: '03', title: 'Only one or two people use the output', body: 'If a single analyst produces a report for one person, the overhead of building a Power BI solution probably outweighs the benefit. Automate the Excel process instead.' },
             { num: '04', title: 'Your dataset is small and rarely changes', body: 'Power BI adds most value when data is live, large, or coming from multiple sources. For a small, stable dataset, a well-built Excel model is perfectly adequate.' },
-            { num: '05', title: 'Your team knows Excel and not much else', body: 'Power BI requires learning DAX — Microsoft\'s formula language — to get real value out of it. If your team has no appetite for that, automating your existing Excel processes is a better first step.' },
+            { num: '05', title: 'Your team knows Excel and not much else', body: 'Power BI requires learning DAX - Microsoft\'s formula language - to get real value out of it. If your team has no appetite for that, automating your existing Excel processes is a better first step.' },
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '24px', marginBottom: '36px', alignItems: 'flex-start' }}>
               <div style={{ fontFamily: 'var(--serif)', fontSize: '32px', color: 'rgba(193,125,46,0.3)', flexShrink: 0, lineHeight: '1', marginTop: '4px' }}>{item.num}</div>
@@ -259,9 +259,9 @@ export default function BlogPost() {
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em', marginTop: '16px' }}>Further reading</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '48px' }}>
             {[
-              { label: 'Microsoft — Power BI vs Excel official comparison', url: 'https://powerbi.microsoft.com/en-gb/excel-vs-power-bi/' },
-              { label: 'Microsoft — Power BI pricing for UK businesses', url: 'https://powerbi.microsoft.com/en-gb/pricing/' },
-              { label: 'HMRC — Making Tax Digital for Income Tax', url: 'https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax' },
+              { label: 'Microsoft - Power BI vs Excel official comparison', url: 'https://powerbi.microsoft.com/en-gb/excel-vs-power-bi/' },
+              { label: 'Microsoft - Power BI pricing for UK businesses', url: 'https://powerbi.microsoft.com/en-gb/pricing/' },
+              { label: 'HMRC - Making Tax Digital for Income Tax', url: 'https://www.gov.uk/guidance/sign-up-your-business-for-making-tax-digital-for-income-tax' },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" style={{
                 display: 'flex', alignItems: 'center', gap: '12px', padding: '16px 20px',
@@ -304,7 +304,7 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Not sure which is right for your business?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', marginBottom: '28px', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call and we will look at your current reporting process and tell you exactly what needs to change — whether that is automating your Excel, building a Power BI dashboard, or something in between.
+              Book a free 30-minute call and we will look at your current reporting process and tell you exactly what needs to change - whether that is automating your Excel, building a Power BI dashboard, or something in between.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →

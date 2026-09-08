@@ -18,21 +18,21 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '📊', title: 'Automated Dashboards', desc: 'Live dashboards built in Google Sheets that update automatically — connected to your data sources, no manual refresh needed.' },
-  { icon: '🔄', title: 'Workflow Automation', desc: 'Google Apps Script automation that handles repetitive tasks — data processing, report generation, email sending — automatically.' },
-  { icon: '📧', title: 'Automated Reporting', desc: 'Reports that generate and distribute themselves on a schedule — the right data to the right people, without anyone having to run them.' },
-  { icon: '🔗', title: 'Data Integration', desc: 'Connect Google Sheets to other tools in your stack — CRMs, databases, other Google Workspace apps — and keep data in sync.' },
+  { icon: '📊', title: 'Automated Dashboards', desc: 'Live dashboards built in Google Sheets that update automatically - connected to your data sources, no manual refresh needed.' },
+  { icon: '🔄', title: 'Workflow Automation', desc: 'Google Apps Script automation that handles repetitive tasks - data processing, report generation, email sending - automatically.' },
+  { icon: '📧', title: 'Automated Reporting', desc: 'Reports that generate and distribute themselves on a schedule - the right data to the right people, without anyone having to run them.' },
+  { icon: '🔗', title: 'Data Integration', desc: 'Connect Google Sheets to other tools in your stack - CRMs, databases, other Google Workspace apps - and keep data in sync.' },
   { icon: '✅', title: 'Data Validation', desc: 'Custom validation rules and input forms that ensure data quality from the moment it is entered.' },
-  { icon: '👥', title: 'Collaborative Tools', desc: 'Shared tools your whole team can use — from data entry forms to project trackers — built to work the way your team works.' },
+  { icon: '👥', title: 'Collaborative Tools', desc: 'Shared tools your whole team can use - from data entry forms to project trackers - built to work the way your team works.' },
 ]
 
 const faqs = [
-  { q: 'What is Google Apps Script and do we need it?', a: 'Apps Script is the programming layer built into Google Workspace that enables complex automation beyond formulas. Most advanced Google Sheets projects use it. You do not need to know it — we handle all the code.' },
+  { q: 'What is Google Apps Script and do we need it?', a: 'Apps Script is the programming layer built into Google Workspace that enables complex automation beyond formulas. Most advanced Google Sheets projects use it. You do not need to know it - we handle all the code.' },
   { q: 'Can Google Sheets connect to our other tools?', a: 'Yes. Google Sheets connects natively to other Google Workspace apps and, via Apps Script or Zapier, to hundreds of third-party tools. We will confirm what is possible with your setup during scoping.' },
   { q: 'Is Google Sheets suitable for business use or should we use Excel?', a: 'Google Sheets is ideal for collaborative, cloud-first teams. For complex data modelling, large datasets, or deep Microsoft 365 integration, Excel may be better. We will advise on the right choice for your situation.' },
   { q: 'How long do Google Sheets projects take?', a: 'Most projects are delivered in 3-5 working days. Complex automations with multiple integrations take longer.' },
   { q: 'Will we be able to maintain it ourselves?', a: 'Yes. Google Sheets is designed to be accessible, and we will document everything clearly. For the Apps Script elements, we provide full documentation and a walkthrough.' },
-  { q: 'Do you work remotely?', a: 'Yes — all work is delivered remotely. We work with businesses across the UK and internationally.' },
+  { q: 'Do you work remotely?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
 export default function GoogleSheetsPage() {
@@ -57,7 +57,7 @@ export default function GoogleSheetsPage() {
               Google Sheets that work<br /><em style={{ color: 'var(--amber)' }}>as hard as you do.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '580px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Already working in Google Workspace? We build automated reporting, live dashboards, and custom tools directly in Google Sheets — so your team gets powerful automation without leaving the tools they already use.
+              Already working in Google Workspace? We build automated reporting, live dashboards, and custom tools directly in Google Sheets - so your team gets powerful automation without leaving the tools they already use.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -100,10 +100,10 @@ export default function GoogleSheetsPage() {
               <span className="section-label">Google Sheets done properly</span>
               <h2 style={{ marginBottom: '24px' }}>Most Google Sheets are being used at about 10% of what they are capable of</h2>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                Google Sheets gets underestimated because most people only ever use it for basic spreadsheet work — data entry, simple formulas, shared tracking. What it is actually capable of, with Apps Script and proper configuration, is significantly more powerful than most teams realise.
+                Google Sheets gets underestimated because most people only ever use it for basic spreadsheet work - data entry, simple formulas, shared tracking. What it is actually capable of, with Apps Script and proper configuration, is significantly more powerful than most teams realise.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                It can connect to external data sources, run automated processes on a schedule, send emails, update other systems, and produce formatted reports — all from within a tool your team already uses every day. For businesses running on Google Workspace, it is often the fastest path to automation because there is no new platform to learn and no additional software to install.
+                It can connect to external data sources, run automated processes on a schedule, send emails, update other systems, and produce formatted reports - all from within a tool your team already uses every day. For businesses running on Google Workspace, it is often the fastest path to automation because there is no new platform to learn and no additional software to install.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
                 The honest comparison with Excel: Google Sheets is better for collaboration and cloud-first teams. Excel is better for complex financial modelling and large data volumes. If your team already lives in Google Workspace and the data fits, Google Sheets is almost always the right choice.

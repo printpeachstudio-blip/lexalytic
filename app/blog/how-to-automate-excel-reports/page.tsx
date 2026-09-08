@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: 'automate Excel reports UK, Excel report automation, how to automate Excel, stop manual Excel reporting, automated Excel reports',
   openGraph: {
     title: 'How to Automate Excel Reports in the UK (2026): Tools, Methods & When to Get Help',
-    description: 'Automate Excel reports in 2026 — tools, methods, costs and when to hire an Excel automation consultant.',
+    description: 'Automate Excel reports in 2026 - tools, methods, costs and when to hire an Excel automation consultant.',
     url: 'https://www.lexalytic.com/blog/how-to-automate-excel-reports',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -45,7 +45,7 @@ return (
             How to Automate Excel Reports (Without Knowing How to Code)
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            If your team is still doing the export-to-report grind every week — pulling data, pasting it in, fixing formulas, formatting, emailing — this guide is for you. Here is what actually works, and what does not.
+            If your team is still doing the export-to-report grind every week - pulling data, pasting it in, fixing formulas, formatting, emailing - this guide is for you. Here is what actually works, and what does not.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -63,20 +63,20 @@ return (
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              Most Excel reports can be automated using Power Query (built into Excel, no coding needed), VBA macros, or Python scripts — depending on complexity. The right choice depends on what your data looks like and how technical your team is. For most UK SMEs, <strong>Power Query handles 80% of cases</strong> and requires no coding at all.
+              Most Excel reports can be automated using Power Query (built into Excel, no coding needed), VBA macros, or Python scripts - depending on complexity. The right choice depends on what your data looks like and how technical your team is. For most UK SMEs, <strong>Power Query handles 80% of cases</strong> and requires no coding at all.
             </p>
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            The average UK finance team spends around 8 hours per week on manual spreadsheet work. That is one full working day, every week, doing something a computer could do in seconds. Over a year, that is roughly 400 hours — or about £15,000 in salary time, depending on who is doing it.
+            The average UK finance team spends around 8 hours per week on manual spreadsheet work. That is one full working day, every week, doing something a computer could do in seconds. Over a year, that is roughly 400 hours - or about £15,000 in salary time, depending on who is doing it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            The frustrating part is that most of this is genuinely automatable. The export-to-report cycle — pulling data from your accounting software, pasting it into Excel, adjusting formulas, formatting it, emailing it out — does not need a human. It needs a well-built system. Here is how to build one.
+            The frustrating part is that most of this is genuinely automatable. The export-to-report cycle - pulling data from your accounting software, pasting it into Excel, adjusting formulas, formatting it, emailing it out - does not need a human. It needs a well-built system. Here is how to build one.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>Why most Excel reports are still manual</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            Excel was designed in 1987 as a tool for small amounts of data. It was never meant to be the backbone of a business reporting system. But because it is familiar and flexible, it ends up being used for everything — and over time, reports get built manually, month after month, because that is how it has always been done.
+            Excel was designed in 1987 as a tool for small amounts of data. It was never meant to be the backbone of a business reporting system. But because it is familiar and flexible, it ends up being used for everything - and over time, reports get built manually, month after month, because that is how it has always been done.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The result is what finance teams call Excel hell: version conflicts, broken formulas, reports that only one person knows how to run, and decisions made on data that is already three weeks old. Sound familiar?
@@ -86,37 +86,37 @@ return (
 
           {[
             {
-              title: '1. Power Query — the no-code option',
+              title: '1. Power Query - the no-code option',
               tag: 'Best for most businesses',
               color: 'var(--amber)',
-              body: 'Power Query is built into Excel and has been available since 2016. Most businesses have never heard of it. It connects directly to your data sources — other Excel files, CSV exports, Xero, SharePoint, SQL databases, and hundreds more — and transforms that data automatically every time you refresh.',
+              body: 'Power Query is built into Excel and has been available since 2016. Most businesses have never heard of it. It connects directly to your data sources - other Excel files, CSV exports, Xero, SharePoint, SQL databases, and hundreds more - and transforms that data automatically every time you refresh.',
               body2: 'You set it up once by recording what you want it to do: pull the data, clean it, reshape it, combine it. After that, refreshing the report takes one click. No formulas to break, no copy-paste, no formatting from scratch.',
               good: 'No coding required, built into Excel, handles most SME reporting needs, easy for non-technical staff to refresh',
               bad: 'Requires initial setup time, limited for very complex logic, refresh is manual unless combined with Power Automate',
             },
             {
-              title: '2. VBA Macros — the automation workhorse',
+              title: '2. VBA Macros - the automation workhorse',
               tag: 'Best for repetitive complex tasks',
               color: '#6b7280',
-              body: 'VBA (Visual Basic for Applications) is Excel\'s built-in scripting language. A VBA macro can automate almost anything you can do manually in Excel — formatting, calculations, emailing reports, saving PDFs, combining files — and run it all with one button press or on a schedule.',
+              body: 'VBA (Visual Basic for Applications) is Excel\'s built-in scripting language. A VBA macro can automate almost anything you can do manually in Excel - formatting, calculations, emailing reports, saving PDFs, combining files - and run it all with one button press or on a schedule.',
               body2: 'You do not need to write VBA from scratch. A consultant can build the macro once, and your team just runs it. The code lives inside the Excel file itself, so there is nothing extra to install.',
               good: 'Extremely powerful, can automate the entire reporting process end-to-end, runs inside Excel with no additional software',
               bad: 'Requires someone to write it initially, some IT departments block macros for security reasons, harder to maintain if the original developer leaves',
             },
             {
-              title: '3. Python — for serious data volumes',
+              title: '3. Python - for serious data volumes',
               tag: 'Best for large or complex data',
               color: '#3b82f6',
               body: 'Python is the tool of choice when your data is too large for Excel to handle comfortably, comes from multiple systems that do not connect easily, or requires complex processing logic. A Python script can pull data from APIs, databases, and files, process thousands of rows in seconds, and output a clean Excel report automatically.',
-              body2: 'Python automation typically runs on a schedule — daily, weekly, or monthly — so the report is simply there when you need it, with no human involvement at all.',
+              body2: 'Python automation typically runs on a schedule - daily, weekly, or monthly - so the report is simply there when you need it, with no human involvement at all.',
               good: 'Handles any data volume, connects to virtually any source, can run fully automatically on a schedule',
               bad: 'Requires a developer to set up, needs somewhere to run (a server or cloud service), more complex to maintain',
             },
             {
-              title: '4. Power Automate — for scheduled delivery',
+              title: '4. Power Automate - for scheduled delivery',
               tag: 'Best combined with the above',
               color: '#8b5cf6',
-              body: 'Power Automate (part of Microsoft 365) does not process data itself, but it orchestrates everything else. It can trigger a Power Query refresh at 7am every Monday, email the updated report to the right people, and save a copy to SharePoint — all without anyone touching a computer.',
+              body: 'Power Automate (part of Microsoft 365) does not process data itself, but it orchestrates everything else. It can trigger a Power Query refresh at 7am every Monday, email the updated report to the right people, and save a copy to SharePoint - all without anyone touching a computer.',
               body2: 'Used alongside Power Query or VBA, Power Automate turns a one-click report into a zero-click report.',
               good: 'Works with your existing Microsoft 365 tools, no coding needed for basic flows, handles scheduling and distribution automatically',
               bad: 'Requires Microsoft 365 subscription, limited for complex data transformation on its own',
@@ -148,7 +148,7 @@ return (
           </p>
           {[
             { scenario: 'You export a CSV from your accounting software every month and paste it into Excel', answer: 'Power Query. This is exactly what it is built for. One-time setup, then one-click refresh forever.' },
-            { scenario: 'You have a complex report that involves lots of formatting, multiple tabs, and gets emailed to 10 people', answer: 'VBA macro. Automates the whole process — formatting, saving, emailing — in one button press.' },
+            { scenario: 'You have a complex report that involves lots of formatting, multiple tabs, and gets emailed to 10 people', answer: 'VBA macro. Automates the whole process - formatting, saving, emailing - in one button press.' },
             { scenario: 'Your data comes from multiple systems and takes hours to compile', answer: 'Python or a combination of Power Query and Power Automate, depending on volume and complexity.' },
             { scenario: 'You want the report to just appear in your inbox every Monday without anyone doing anything', answer: 'Power Automate combined with Power Query or VBA.' },
             { scenario: 'You have no idea where to start and just want the problem solved', answer: 'Book a free scoping call. We will look at your specific setup and tell you exactly what will work.' },
@@ -168,7 +168,7 @@ return (
             There is a risk in manual reporting that most businesses ignore until it becomes a crisis: what happens when the person who runs the reports leaves?
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            In most SMEs, the monthly report lives in one person's head. They know which cells to update, which formulas to check, which data to pull from where. When they go on holiday, reporting stops. When they hand in their notice, there is a scramble to document everything before they leave — usually unsuccessfully.
+            In most SMEs, the monthly report lives in one person's head. They know which cells to update, which formulas to check, which data to pull from where. When they go on holiday, reporting stops. When they hand in their notice, there is a scramble to document everything before they leave - usually unsuccessfully.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             Automated reporting solves this completely. When the process is built into a system rather than a person, it runs regardless of who is in the office. The report arrives on Monday morning whether or not the person who used to build it is still with the company.
@@ -179,13 +179,13 @@ return (
             At Lexalytic, a typical Excel automation project costs between £495 and £1,500 depending on complexity. Most projects are delivered within 3 to 7 days.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            Compare that to the cost of manual reporting: if one person spends 8 hours a week on spreadsheets at a salary of £35,000 a year, that is roughly £6,700 per year in salary time. A £750 automation project pays for itself in about six weeks — and keeps paying back every week after that.
+            Compare that to the cost of manual reporting: if one person spends 8 hours a week on spreadsheets at a salary of £35,000 a year, that is roughly £6,700 per year in salary time. A £750 automation project pays for itself in about six weeks - and keeps paying back every week after that.
           </p>
 
           <div style={{ padding: '36px', background: 'var(--bg-dark)', borderRadius: 'var(--radius-lg)', textAlign: 'center', marginBottom: '48px' }}>
             <h3 style={{ color: 'var(--white)', marginBottom: '12px', fontSize: '1.4rem' }}>Want your Excel reports to run themselves?</h3>
             <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '28px', fontSize: '15px', lineHeight: '1.7' }}>
-              Book a free 30-minute scoping call. Show us your current process and we will tell you exactly what can be automated, how long it will take, and what it will cost — before you commit to anything.
+              Book a free 30-minute scoping call. Show us your current process and we will tell you exactly what can be automated, how long it will take, and what it will cost - before you commit to anything.
             </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 32px' }}>
               Book a free scoping call →
@@ -199,8 +199,8 @@ return (
               'Power Query is built into Excel and handles most SME automation needs with no coding required',
               'VBA macros automate complex end-to-end reporting including formatting, saving, and emailing',
               'Python is best for large data volumes or complex multi-source processing',
-              'Power Automate handles scheduling and distribution — combine it with the above for zero-touch reporting',
-              'The business continuity risk of manual reporting is real — automated systems run regardless of who is in the office',
+              'Power Automate handles scheduling and distribution - combine it with the above for zero-touch reporting',
+              'The business continuity risk of manual reporting is real - automated systems run regardless of who is in the office',
               'Most Excel automation projects cost £495–£1,500 and pay for themselves within weeks',
             ].map((point, i) => (
               <div key={i} style={{ display: 'flex', gap: '12px', marginBottom: i < 5 ? '12px' : '0', alignItems: 'flex-start' }}>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: 'custom business tools UK, bespoke CRM UK, custom CRM small business UK, custom business software UK, bespoke business application UK, custom staff rota app UK, affordable custom software UK, spreadsheet consultant UK, excel spreadsheet services UK, excel specialists UK, excel spreadsheet for small business UK',
   openGraph: {
     title: 'Custom Business Tools UK | Bespoke CRM & Business App Development | Lexalytic',
-    description: 'Bespoke business tools built around your exact processes — not adapted from generic software.',
+    description: 'Bespoke business tools built around your exact processes - not adapted from generic software.',
     url: 'https://www.lexalytic.com/services/custom-business-tools',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -18,21 +18,21 @@ export const metadata: Metadata = {
 }
 
 const useCases = [
-  { icon: '👥', title: 'Custom CRM Systems', desc: 'A CRM built around how your sales team actually works — not how Salesforce thinks they should work. Track clients, jobs, follow-ups, and revenue your way, with no monthly licence fees.' },
-  { icon: '📅', title: 'Staff Rota & Scheduling Tools', desc: 'Custom shift rota applications that handle your specific staffing rules — covering requirements, availability tracking, automatic conflict detection, and instant visibility across the whole team.' },
-  { icon: '📋', title: 'Job & Project Trackers', desc: 'Track every job from enquiry to completion — costs, milestones, documents, communications, and profitability — in a single tool built around your workflow.' },
-  { icon: '🤝', title: 'Client Portals', desc: 'Give your clients a branded portal to view their projects, submit requests, access documents, and communicate with your team — without the complexity of enterprise software.' },
-  { icon: '💰', title: 'Quoting & Estimating Tools', desc: 'Custom quoting systems that calculate correctly every time — applying your pricing logic, margin rules, and discount structures automatically, producing formatted quotes ready to send.' },
-  { icon: '📦', title: 'Inventory & Stock Management', desc: 'Track stock levels, supplier orders, and fulfilment in a tool built around your product range and processes — not a generic inventory system you have to adapt to.' },
-  { icon: '📊', title: 'Internal Dashboards & Reporting', desc: 'Management dashboards that show exactly the metrics your business needs — connected to your live data, updated automatically, accessible to the right people.' },
-  { icon: '⚙️', title: 'Process Automation Tools', desc: 'Custom tools that automate your specific business processes — onboarding workflows, approval systems, document generation, notification triggers, and more.' },
+  { icon: '👥', title: 'Custom CRM Systems', desc: 'A CRM built around how your sales team actually works - not how Salesforce thinks they should work. Track clients, jobs, follow-ups, and revenue your way, with no monthly licence fees.' },
+  { icon: '📅', title: 'Staff Rota & Scheduling Tools', desc: 'Custom shift rota applications that handle your specific staffing rules - covering requirements, availability tracking, automatic conflict detection, and instant visibility across the whole team.' },
+  { icon: '📋', title: 'Job & Project Trackers', desc: 'Track every job from enquiry to completion - costs, milestones, documents, communications, and profitability - in a single tool built around your workflow.' },
+  { icon: '🤝', title: 'Client Portals', desc: 'Give your clients a branded portal to view their projects, submit requests, access documents, and communicate with your team - without the complexity of enterprise software.' },
+  { icon: '💰', title: 'Quoting & Estimating Tools', desc: 'Custom quoting systems that calculate correctly every time - applying your pricing logic, margin rules, and discount structures automatically, producing formatted quotes ready to send.' },
+  { icon: '📦', title: 'Inventory & Stock Management', desc: 'Track stock levels, supplier orders, and fulfilment in a tool built around your product range and processes - not a generic inventory system you have to adapt to.' },
+  { icon: '📊', title: 'Internal Dashboards & Reporting', desc: 'Management dashboards that show exactly the metrics your business needs - connected to your live data, updated automatically, accessible to the right people.' },
+  { icon: '⚙️', title: 'Process Automation Tools', desc: 'Custom tools that automate your specific business processes - onboarding workflows, approval systems, document generation, notification triggers, and more.' },
 ]
 
 const faqs = [
   { q: 'What kind of businesses do you build custom tools for?', a: 'Any UK business that has outgrown generic software or is managing critical processes in spreadsheets. We have built tools for businesses in healthcare, recruitment, construction, professional services, hospitality, and retail. If you have a process that needs a better system, we can build it.' },
-  { q: 'How is this different from buying off-the-shelf software?', a: 'Off-the-shelf software is built for every business in your sector — which means it fits nobody perfectly. You pay ongoing licence fees, adapt your processes to fit the software, and live with features you do not need and missing features you do. A custom tool is built around exactly how your business works, costs once, and you own it outright.' },
-  { q: 'How long does a custom business tool take to build?', a: 'It depends on the complexity. A straightforward single-process tool — a custom rota app, a simple CRM, a quoting system — can be delivered in 2-4 weeks. More complex multi-process applications take longer. Every project is scoped individually and you get a clear timeline and fixed price before any work begins.' },
-  { q: 'Do we need any technical knowledge to use the tool?', a: 'No. We design every tool for the people who will use it daily — not for technical users. The interface is built around your team\'s existing workflow and language. Every tool comes with full documentation and a walkthrough so your team can use it confidently from day one.' },
+  { q: 'How is this different from buying off-the-shelf software?', a: 'Off-the-shelf software is built for every business in your sector - which means it fits nobody perfectly. You pay ongoing licence fees, adapt your processes to fit the software, and live with features you do not need and missing features you do. A custom tool is built around exactly how your business works, costs once, and you own it outright.' },
+  { q: 'How long does a custom business tool take to build?', a: 'It depends on the complexity. A straightforward single-process tool - a custom rota app, a simple CRM, a quoting system - can be delivered in 2-4 weeks. More complex multi-process applications take longer. Every project is scoped individually and you get a clear timeline and fixed price before any work begins.' },
+  { q: 'Do we need any technical knowledge to use the tool?', a: 'No. We design every tool for the people who will use it daily - not for technical users. The interface is built around your team\'s existing workflow and language. Every tool comes with full documentation and a walkthrough so your team can use it confidently from day one.' },
   { q: 'What happens if we need changes after delivery?', a: 'We include a post-delivery support period with every project. For ongoing changes as your business evolves, our retainer plan gives you a monthly allocation of hours at a predictable cost. Because we built the tool, changes are faster and cheaper than they would be with a third party.' },
   { q: 'Can the tool connect to our existing systems?', a: 'In most cases yes. Custom tools can connect to your accounting software, CRM, existing spreadsheets, or other business systems via APIs. We confirm integration possibilities during the scoping call so there are no surprises.' },
 ]
@@ -60,7 +60,7 @@ export default function CustomBusinessToolsPage() {
               Generic software does not fit your business.<br /><em style={{ color: 'var(--amber)' }}>A custom tool does.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '620px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Every business has processes that do not quite fit the software available. Instead of adapting your business to generic tools — or running everything in spreadsheets — we build bespoke tools that work exactly the way you do. Built once. Owned by you. No monthly licence fees.
+              Every business has processes that do not quite fit the software available. Instead of adapting your business to generic tools - or running everything in spreadsheets - we build bespoke tools that work exactly the way you do. Built once. Owned by you. No monthly licence fees.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
@@ -84,7 +84,7 @@ export default function CustomBusinessToolsPage() {
             <span className="section-label">Why custom?</span>
             <h2 style={{ marginBottom: '20px' }}>Off-the-shelf software is built for everyone. That means it fits nobody perfectly.</h2>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '40px' }}>
-              Every generic CRM, rota tool, or job management system was built for the average business in your sector — not your specific business. You end up paying monthly fees, adapting your processes to fit the software, and working around the features it does not have. A custom tool flips this entirely. Your processes. Your terminology. Your rules. Built once and owned outright.
+              Every generic CRM, rota tool, or job management system was built for the average business in your sector - not your specific business. You end up paying monthly fees, adapting your processes to fit the software, and working around the features it does not have. A custom tool flips this entirely. Your processes. Your terminology. Your rules. Built once and owned outright.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', textAlign: 'left' }}>
               {[
@@ -132,22 +132,22 @@ export default function CustomBusinessToolsPage() {
               <span className="section-label">How it works</span>
               <h2 style={{ marginBottom: '24px' }}>You describe the process. We build the tool.</h2>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                The starting point is always the same — a conversation about how your business actually works. Not what software you use today, but what process you are trying to run, what information you need to track, and what the output needs to look like.
+                The starting point is always the same - a conversation about how your business actually works. Not what software you use today, but what process you are trying to run, what information you need to track, and what the output needs to look like.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '20px' }}>
-                From that conversation we scope exactly what needs to be built — the data structure, the user interface, the logic, the inputs and outputs — and give you a fixed price and timeline before any work begins.
+                From that conversation we scope exactly what needs to be built - the data structure, the user interface, the logic, the inputs and outputs - and give you a fixed price and timeline before any work begins.
               </p>
               <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85' }}>
-                The build happens iteratively — you see progress as it develops and can give feedback before the final handover. Every tool comes with full documentation and a walkthrough so your team can use it from day one without needing us to be involved.
+                The build happens iteratively - you see progress as it develops and can give feedback before the final handover. Every tool comes with full documentation and a walkthrough so your team can use it from day one without needing us to be involved.
               </p>
             </div>
             <div>
               <div style={{ background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '36px' }}>
                 <h3 style={{ fontSize: '1rem', marginBottom: '20px', color: 'var(--ink)' }}>Our process</h3>
                 {[
-                  { step: '1', title: 'Free scoping call', desc: 'Tell us your process — what you track, what decisions you make, what the output needs to look like. 30 minutes, no commitment.' },
+                  { step: '1', title: 'Free scoping call', desc: 'Tell us your process - what you track, what decisions you make, what the output needs to look like. 30 minutes, no commitment.' },
                   { step: '2', title: 'Scope and fixed price', desc: 'We come back with a clear scope, exact price, and delivery timeline. You decide whether to proceed.' },
-                  { step: '3', title: 'Build and review', desc: 'We build iteratively — you see progress and give feedback before final delivery.' },
+                  { step: '3', title: 'Build and review', desc: 'We build iteratively - you see progress and give feedback before final delivery.' },
                   { step: '4', title: 'Handover and training', desc: 'Full handover with documentation. Your team can use it independently from day one.' },
                 ].map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: '16px', marginBottom: i < 3 ? '20px' : '0', alignItems: 'flex-start' }}>
@@ -173,7 +173,7 @@ export default function CustomBusinessToolsPage() {
             <div style={{ background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', overflow: 'hidden' }}>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>The situation</h3>
-                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>Managing 20+ locum pharmacists across shifting rotas with no central system. Payment dates, hours worked, and rates were tracked across separate spreadsheets — payments were frequently late or incorrect, and scheduling clashes went unnoticed.</p>
+                <p style={{ color: 'var(--ink-2)', lineHeight: '1.8' }}>Managing 20+ locum pharmacists across shifting rotas with no central system. Payment dates, hours worked, and rates were tracked across separate spreadsheets - payments were frequently late or incorrect, and scheduling clashes went unnoticed.</p>
               </div>
               <div style={{ padding: '36px', borderBottom: '1px solid var(--border)', background: 'rgba(193,125,46,0.04)' }}>
                 <h3 style={{ marginBottom: '12px', fontSize: '1.1rem' }}>What we built</h3>
@@ -197,7 +197,7 @@ export default function CustomBusinessToolsPage() {
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span className="section-label">FAQ</span>
             <h2 style={{ marginBottom: '8px' }}>Questions about custom business tools</h2>
-            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here — just ask us directly.</p>
+            <p style={{ color: 'var(--ink-3)', marginBottom: '40px', fontSize: '15px' }}>Anything not covered here - just ask us directly.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {faqs.map((faq, i) => (
                 <div key={i} style={{ padding: '24px', background: 'var(--bg)', border: '1px solid var(--border)', borderTop: i === 0 ? '1px solid var(--border)' : 'none', borderRadius: i === 0 ? 'var(--radius) var(--radius) 0 0' : i === faqs.length - 1 ? '0 0 var(--radius) var(--radius)' : '0' }}>
@@ -213,7 +213,7 @@ export default function CustomBusinessToolsPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Have a process that needs<br /><em style={{ color: 'var(--amber)' }}>a proper tool?</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Describe your process and we will tell you exactly what a custom tool would look like — and what it would cost to build it.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Describe your process and we will tell you exactly what a custom tool would look like - and what it would cost to build it.</p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
         </div>
       </section>
