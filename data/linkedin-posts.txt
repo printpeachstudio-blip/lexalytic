@@ -164,19 +164,17 @@ Clients who have worked with day rate developers before consistently say the sam
 That is not how it should work.
 
 2026-10-06
-A recruitment agency was producing their weekly performance report by hand every Monday morning.
+Most HMO landlords I speak to are managing their properties across a combination of things that were never designed to work together.
 
-Placements, revenue, margin by consultant - all pulled from three systems, pasted into a spreadsheet, formatted, and emailed out.
+A spreadsheet for rent. A different spreadsheet for compliance certificates. A WhatsApp group for maintenance. Emails as the record of any agreements with tenants.
 
-Two hours. Every single week. For years.
+It works until something goes wrong. A missed gas safety certificate renewal. A deposit dispute where the payment history lives across three sources. A licensing inspection where the documentation is not in one place.
 
-The problem was not that they lacked data. They had plenty of it. The problem was that it lived in three systems that did not talk to each other, and every week someone had to manually bridge the gap.
+The software built for landlords was almost entirely designed for single-let properties. The HMO features were added as an afterthought.
 
-We connected their ATS and accounting data to Power BI. The report now builds itself and lands in the MD's inbox at 8am every Monday.
+The landlords managing HMOs well either have a system they built themselves out of several tools stitched together, or they commissioned something built around how an HMO actually works.
 
-Build cost: under £3,000. Payback: under 3 months.
-
-The consultant who used to build the report now does something more valuable with those two hours.
+If you manage HMO properties and the admin is absorbing more time than it should, the problem is almost certainly the tools.
 
 2026-10-08
 What does a website that actually works look like?
@@ -226,19 +224,19 @@ The gap between what existed and what couples actually needed was obvious. The t
 That is usually the answer to why build anything.
 
 2026-10-20
-Automation is not always the answer.
+Personal trainers lose more revenue to payment friction than almost any other small business I speak to.
 
-Automating a broken process makes the breakage happen faster.
+Not because clients do not want to pay. Because the current system requires them to remember to do something, and life gets in the way.
 
-The conversation we have before any automation project starts is not "how do we automate this?" It is "is this the right process, or just the current one?"
+Bank transfer on request has a collection rate of around 70-80% on time. The other 20-30% requires a follow-up message, an awkward conversation, or both.
 
-A business that reconciles its bank accounts manually every month end does not need automated bank reconciliation. It needs to reconcile weekly so month end takes 30 minutes rather than 3 days. Then automate.
+Direct debit via GoCardless collects on the agreed date automatically. The PT does not have to ask. The client does not have to remember. Collection rate goes to close to 100%.
 
-A business producing a weekly management report manually does not just need an automated report. It needs to ask whether the report answers the right questions, whether the data it pulls from is clean, and whether the people reading it are making decisions based on it.
+The setup cost is 1% per transaction capped at £2. For a monthly retainer of £150 that is £1.50.
 
-Fix the process. Then automate it.
+The time saved on payment chasing in the first month alone pays for years of transaction fees.
 
-The technology is the easy part.
+If you are a PT spending any meaningful time chasing payments, this is the one change that has the highest return for the least effort.
 
 2026-10-22
 Agencies with 20 people have 20 people worth of overhead.
@@ -258,19 +256,17 @@ No account manager. No briefing process. No Chinese whispers between the person 
 Senior experience. Studio prices. That is the point.
 
 2026-10-27
-A construction company I spoke to recently was tracking job costs across 14 separate spreadsheets.
+The volunteer treasurer of a grassroots sports club has one of the harder admin jobs in small organisations.
 
-One per active project. Different formats. Different people maintaining them. No consistent view of which jobs were profitable until they were finished.
+Collecting membership fees from families who pay in dribs and drabs. Chasing match fees from players who forgot their wallet. Tracking kit that leaves the storage and does not come back. Preparing end of year accounts from a spreadsheet that three different people have edited over the past four years.
 
-By the time a project showed a margin problem, it was too late to do anything about it.
+And doing all of it in their spare time, for free, because they care about the club.
 
-We built them an automated job cost tracker. Costs logged against each project as they occur. Margin tracked in real time. Alerts when a project is trending over budget before it gets there.
+The tools that exist for sports clubs - Pitchero, Spond, ClubSpark - are not complicated. The barrier to adoption is almost never the software. It is the data. Clubs with clean, complete member records migrate well. Clubs with years of partial records in different formats struggle.
 
-They can now see across all 14 projects simultaneously from one dashboard.
+The clubs that run smoothly are the ones that set up properly once and then maintain it consistently. Not the ones with the most sophisticated tools.
 
-The decisions they make now - resourcing, pricing, which jobs to take - are based on data rather than instinct.
-
-That is the difference a properly built data system makes.
+If you run or volunteer for a grassroots sports club and the admin feels heavier than it should, the answer is almost always a one-time cleanup and a single platform, consistently used.
 
 2026-11-03
 A pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
@@ -286,19 +282,17 @@ Zero missed payments since launch. The team now spends minutes on locum admin in
 That is what custom software looks like when it is built around a specific problem rather than adapted from a generic one.
 
 2026-11-05
-Most business owners do not have a clear answer to this question:
+Wedding suppliers manage client relationships over longer timelines than almost any other small business.
 
-Which of your clients are actually profitable?
+A couple books a florist or photographer 12 to 18 months before the wedding. Over that time there are consultations, design decisions, payment milestones, final confirmations, and day-of logistics. All of it needs to be accurate and accessible on the day that matters most.
 
-Revenue by client is visible in most accounting systems. But cost by client - the actual time, resources, and overhead attributable to each client relationship - almost never is.
+The tool most wedding suppliers use to track all of this is email.
 
-The result is decisions made on revenue, not margin.
+Email is fine for communication. It is a poor system for tracking the state of a relationship across 18 months and multiple conversations. Things get buried. Earlier decisions get forgotten. The answer to what colour scheme was agreed is somewhere in a thread from eleven months ago.
 
-The client who generates the most revenue is not always the most profitable. Long-standing clients who receive loyalty discounts often generate margins 10-15 percentage points below newer clients who pay full rate.
+A simple client record that captures every key decision and every payment milestone, in one place, does not need to be complicated. A well-structured Airtable base costs £10 a month and does most of what a wedding business needs.
 
-The businesses that build job or client profitability tracking consistently find the same thing: the data challenges assumptions that have built up over years.
-
-Not always comfortable. Always useful.
+For suppliers doing 40 or more events a year, something built around your specific workflow - your consultation questions, your payment stages, your automated reminders - is worth the investment. The alternative is discovering on the day that something important was missed.
 
 2026-11-10
 The businesses getting the most from AI right now are not the ones with the biggest budgets.
