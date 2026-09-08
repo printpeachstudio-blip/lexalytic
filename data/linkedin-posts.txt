@@ -494,3 +494,279 @@ We built a Power BI dashboard connected to their project management and finance 
 Full visibility within 48 hours of launch. The monthly management pack was discontinued the first week. Six months later the firm identified two client relationships significantly less profitable than assumed - a discovery that changed their pricing.
 
 Full case study on the site - link in comments.
+
+2027-01-05
+A question I get asked a lot: how do you know when a website is actually working?
+
+Not loading. Not looking professional. Working.
+
+The answer is surprisingly simple. A website that works brings in people who have never heard of you before. They searched for something, found you, read enough to be interested, and got in touch.
+
+A website that does not work only gets visited by people who already know your name and typed it directly.
+
+Most business websites fall into the second category. They are confirmation tools, not discovery tools.
+
+The difference between the two is almost never design. It is technical performance, search optimisation, and whether the content answers the questions people are actually asking.
+
+What is your website doing for people who have never heard of you?
+
+2027-01-07
+Most businesses that have outgrown their website know it.
+
+The signs are usually the same. The site was built three or four years ago. It loads slowly on mobile. The content does not reflect what the business actually does anymore. Nobody is sure who has access to update it or how.
+
+The conversation about rebuilding it keeps getting pushed back because it feels like a big project.
+
+The rebuild itself is usually less disruptive than expected. A well-scoped project has a fixed price, a clear timeline, and a defined handover. The disruption is the decision to start, not the build itself.
+
+If your website is holding your business back, the cost of that is probably larger than the cost of fixing it.
+
+2027-01-12
+A lot of businesses are using AI in 2027.
+
+Very few of them are using it well.
+
+The ones using it well did not ask: how can we use AI? They asked: which specific task, done at volume, is costing us the most time and producing the most inconsistent results?
+
+Then they built a tool that handles exactly that task. One task. Built properly. Running reliably.
+
+CVCraft AI rewrites CVs and delivers them in 24 hours with no human involvement. One task. Built properly.
+
+That is what AI in business actually looks like. Not a subscription to a general-purpose tool. A specific solution to a specific problem.
+
+What is the one task in your business that fits that description?
+
+2027-01-14
+The businesses that get the best results from a website rebuild are almost always the ones that did the most preparation before the build started.
+
+Not design preparation. Content preparation.
+
+They had all their copy written before the developer started. They knew what they wanted to say on every page. They had images ready. They had a clear brief about what the site needed to do for the business.
+
+The developer started building on day one and finished on time.
+
+The businesses that take longest and pay the most are the ones that start the build and then spend six weeks gathering content. Every delay in content delivery delays the launch and costs money.
+
+If you are planning a website, write your content before you brief a developer.
+
+2027-01-19
+We built FamilyEntitled because the gap was obvious.
+
+UK government entitlement information is scattered across dozens of pages, written in language designed for administrators rather than families, and almost impossible to navigate without knowing what you are looking for.
+
+The average family that uses FamilyEntitled finds £4,700 in annual entitlements they did not know they were owed. Child benefit, council tax reduction, free school meals, energy grants. All based on their specific situation. No data stored. No account required.
+
+We built it in a few weeks. It ranks on Google. It helps real people.
+
+The gap between what exists and what people actually need is usually obvious once you look for it. The technology to fill it is almost never as complicated as people assume.
+
+2027-01-21
+Something I have noticed about the best software projects I have worked on:
+
+The client always knew exactly what problem they were trying to solve.
+
+Not what feature they wanted. Not what the software should look like. What problem they were trying to solve.
+
+The clients who came with a problem got better software than the clients who came with a specification. Because the specification was usually a solution to the problem as they understood it in month one. By month three, when you understood the problem properly, the specification was wrong.
+
+Start with the problem. Be specific. The solution follows.
+
+2027-01-26
+HMO landlords manage more complexity per property than almost any other landlord type.
+
+Multiple tenancies per property. Room-by-room rent tracking. Shared utility splitting. Licence conditions with specific compliance obligations. A maintenance history that needs attributing to the right room and the right tenant.
+
+Most property management software was built for single-let properties. The HMO features were added as an afterthought and it shows.
+
+The landlords managing HMOs well are either using a combination of tools and spreadsheets that they have stitched together themselves, or they have invested in something built around how an HMO actually works.
+
+If you manage HMO properties and the admin is taking more time than it should, the problem is almost certainly the tools, not you.
+
+2027-01-28
+The reason most proposals take too long to write is not that the work is hard.
+
+It is that the same structural problem gets solved from scratch every time.
+
+Every proposal has an executive summary, a situation summary, a proposed approach, credentials, timeline, and commercial terms. The structure is identical. Only the content changes.
+
+An AI tool given a proper brief - client name, situation, proposed approach, team, timeline, fee - produces a first draft of the structural sections in minutes. The account manager edits and adds the specific observations that show you were listening. The result goes out the same day as the discovery call instead of three days later.
+
+Speed of proposal is one of the most underrated competitive advantages in professional services.
+
+2027-02-02
+Most personal trainers in the UK are running their businesses on a combination of WhatsApp, a notes app, and a spreadsheet.
+
+It works until it does not.
+
+The moment it stops working is usually the same: a client disputes a session, or asks about their payment history, or you take on two more clients and realise you cannot keep track of where everyone is in their programme without checking four different places.
+
+The tools built for PTs range from genuinely useful to unnecessarily complex and expensive. The right one depends on whether your priority is programme delivery, payment automation, or client communication.
+
+What is the one thing in your PT business that takes the most time that it should not?
+
+2027-02-04
+HMO rent tracking is one of those things that sounds simple and is not.
+
+Six rooms. Six tenants. Six rent amounts. Six payment dates.
+
+Then someone moves in mid-month and needs a pro-rata calculation. Then a room sits empty for three weeks. Then one tenant pays weekly and another monthly. Then housing benefit pays directly to you on a different schedule to the tenant contribution.
+
+Most landlord tools track rent at property level. For a single-let property that is fine. For an HMO you need to know which room is in arrears, not that the property total is short by a certain amount.
+
+The tracking model that works for HMOs is per payment row, not per tenant. One row per expected payment. Match it when the money arrives. Everything overdue stays visible.
+
+Simple in principle. Almost nobody sets it up this way from the start.
+
+2027-02-09
+The data cleansing work nobody talks about:
+
+Most businesses know their data is not clean. What they do not know is what clean actually looks like for their specific dataset.
+
+A contact database might have duplicate records for the same company under slightly different names. Date formats that changed when someone exported from a different system. Phone numbers in four different formats. Email addresses that have not been validated since the contact was added two years ago.
+
+The diagnostic - pulling 100 records and reviewing them manually - takes an afternoon and tells you more about the state of your data than any automated tool.
+
+That afternoon is almost always worth it before commissioning any cleansing work.
+
+2027-02-11
+What does a KPI dashboard actually need to do?
+
+Not impress people. Not show everything that is available. Answer the three or four questions that drive decisions in your business, automatically, every week.
+
+Revenue versus target. Gross margin. Cash position. Debtor days. For most small businesses, these four answer 80% of the questions that matter.
+
+The dashboard that gets checked weekly is the one that answers those questions at a glance, updates itself, and takes thirty seconds to interpret.
+
+The dashboard with 40 metrics gets opened once a month if people remember.
+
+What are the three questions you wish you could answer automatically every Monday morning?
+
+2027-02-16
+HMO licence compliance is not complicated. It is just easy to lose track of.
+
+Annual gas safety certificate. Five-year electrical inspection. Annual fire alarm service. Monthly emergency lighting tests. Specific conditions in your licence schedule that are unique to your property.
+
+Each has a different expiry date and a different consequence for missing it. A lapsed gas safety certificate is a criminal offence. A breach of a licence condition can result in a penalty of up to £30,000.
+
+The landlords who stay compliant without stress have one thing in common: a tracker that shows everything due in the next 90 days and sends reminders before things expire, not after.
+
+A spreadsheet with conditional formatting does this. A purpose-built tool does it automatically. Either way, the cost of the system is trivially small compared to the cost of getting it wrong.
+
+2027-02-18
+Something that comes up in almost every first conversation with a new client:
+
+They have tried to fix the problem before.
+
+Usually they bought software that almost fitted. Configured it until it sort of fitted. Built workarounds for the bits that did not. Hired someone to manage the workarounds.
+
+The process never changed. The software added a layer on top of the problem.
+
+The businesses that get the best results from custom software are the ones that fix the process first, then automate it. Not the other way around.
+
+2027-03-02
+Personal trainers lose more time to payment chasing than almost any other business I speak to.
+
+The problem is not that clients do not want to pay. It is that the payment requires them to remember to do something, and life gets in the way.
+
+Direct debit via GoCardless eliminates the problem entirely. Payment goes out automatically on the agreed date. The trainer does not have to ask. The client does not have to remember.
+
+The setup cost is 1% per transaction capped at £2. For a monthly retainer of £150 that is £1.50.
+
+Almost certainly less than the time spent on a single late payment conversation.
+
+2027-03-04
+Connecting Xero to Excel automatically is one of those things that sounds technical and is not.
+
+Power Query in Excel has a Xero connector. You authenticate once, choose the data you want to pull - trial balance, invoices, bank transactions - and it retrieves it. Every time you click Refresh, it pulls the latest data from Xero. No export. No copy-paste. No reformatting.
+
+Your weekly management report goes from an hour of manual work to one click.
+
+Most finance teams that do this say the same thing: they wish they had done it three years ago.
+
+2027-03-09
+The AI proposal generator is not a replacement for thinking.
+
+It is a replacement for the mechanical first-draft work that does not require thinking.
+
+You know the structure of every proposal you write. Executive summary. Situation. Approach. Credentials. Timeline. Commercial terms. You have written that structure fifty times.
+
+Given a proper brief - client name, their situation, your proposed approach, the team, the timeline, the fee - an AI tool drafts those sections in minutes. You add the specific observations that show you were listening. The proposal goes out the same day.
+
+The competitive advantage is not the AI. It is the speed and consistency.
+
+2027-03-11
+One thing that comes up with almost every custom software project:
+
+The requirements change between the first conversation and the point when you understand the problem properly.
+
+This is normal. It happens on every project. The businesses that handle it well are the ones that expected it and built a process around it.
+
+Agree the scope clearly before any work begins. Agree what happens when scope changes before it happens. Build in a structured review point midway through where both sides check whether the original requirements still reflect what is needed.
+
+The projects that go wrong are the ones where scope changes happen informally, without agreement, and the cost and timeline implications are never discussed until the invoice arrives.
+
+2027-04-01
+Most sports clubs in the UK manage their membership the same way they did fifteen years ago.
+
+Excel spreadsheet. Cash at the gate. One person who knows where everything is.
+
+The person changes every few years. The spreadsheet gets harder to trust each time. By season five, nobody is quite sure whether the member count is right.
+
+The tools that exist - Pitchero, Spond, ClubSpark - are not complicated. The barrier is almost never the software. It is the data. Clubs with clean, complete member records that migrate well. Clubs with four years of partial records in three different formats that do not.
+
+The migration is worth doing once. After that the admin is genuinely easier.
+
+2027-04-03
+The custom CRM question I get asked most often:
+
+How do you know when to build instead of buy?
+
+The answer is usually in the workarounds. If your team has built significant workarounds to make the existing CRM fit your workflow - custom spreadsheets running alongside it, manual steps that exist because the CRM cannot handle them, data that lives outside the CRM because it does not fit the data model - you are already paying for a custom solution. You are just paying for it in time rather than money.
+
+At that point the comparison is not off-the-shelf versus bespoke. It is bespoke done properly versus bespoke done badly.
+
+2027-04-08
+A grassroots football club committee member asked me recently how to get match fees collected reliably.
+
+The answer is not a better reminder system. It is a different mental model.
+
+Match fees collected in cash on the day, or requested via bank transfer after the match, are optional in the mind of the payer. They can be forgotten. They can be deprioritised. They often are.
+
+Match fees confirmed via bank transfer before the match, as a condition of being in the squad, have a collection rate close to 100%. Not because people are more committed. Because the social pressure of not being selected is real.
+
+The system is not the solution. The framing is.
+
+2027-05-04
+Wedding suppliers manage one of the more complex client relationships in any small business.
+
+The couple books 12 to 18 months in advance. Over that time there are multiple consultations, design decisions, final confirmations, payment milestones, and day-of logistics. All of it needs to be accessible and accurate on the day when it matters most.
+
+The tool most small wedding suppliers use for this is email.
+
+Email is fine for communication. It is a terrible system for tracking the state of a relationship over 18 months. Things get lost. Versions get confused. The answer to what was agreed for the centerpiece colour is somewhere in a thread from eleven months ago.
+
+A simple client record that captures every decision and every payment milestone, in one place, accessible on the day, is not a luxury. For a business where the day-of execution determines whether you get referred or reviewed badly, it is infrastructure.
+
+2027-05-06
+Wedding photographers ask the same questions of every client at the same points in the timeline.
+
+What happens if it rains? How many photos will we receive? When will the gallery be ready? Can we have a pre-wedding shoot?
+
+These are not bad questions. They are completely understandable. The problem is answering them individually for every client, every year, takes hours that compound across a full booking calendar.
+
+An email sequence tied to the event date handles the predictable questions automatically. Booking confirmation with the contract. Gallery information six months out. Day-of logistics one week out. Gallery delivery instructions and review request two weeks after.
+
+Every email written once. Sent automatically. The photographer is available for the questions that actually require a personal response.
+
+2027-06-01
+The businesses that find most value in data cleansing are rarely the ones with the worst data.
+
+They are the ones that understand what clean data would enable them to do that they cannot do now.
+
+Accurate client profitability reporting. Reliable marketing segmentation. Trustworthy management accounts. A CRM that reflects the actual state of client relationships rather than the state of data entry three years ago.
+
+The cleanse is the means. The capability it unlocks is the point.
+
+If you know what you would do with clean data, the investment in getting there is straightforward to justify. If you are not sure what clean data would change, the investment is harder to scope and harder to commit to.
+
+Start with the use case. The data work follows from it.
