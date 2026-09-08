@@ -243,7 +243,7 @@ export default function BlogPost() {
             },
             {
               q: 'How long does it take to set up automated cash flow reporting?',
-              a: 'A basic aged debtor dashboard connected to your accounting software is typically delivered in 3-5 working days. A more comprehensive setup including cash flow forecasting, payment pattern analysis, and automated overdue alerts takes 5-10 days. You get a fixed price and clear timeline before any work begins.',
+              a: 'A basic aged debtor dashboard connected to your accounting software is typically delivered in 3-5 working days. A more full setup including cash flow forecasting, payment pattern analysis, and automated overdue alerts takes 5-10 days. You get a fixed price and clear timeline before any work begins.',
             },
           ].map((item, i) => (
             <div key={i} style={{ marginBottom: '16px', padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
