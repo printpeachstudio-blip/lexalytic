@@ -30,21 +30,21 @@ Almost always more than building the right one.
 What does that calculation look like for your business?
 
 2026-09-08
-A business owner was spending 6 hours every Monday rebuilding the same report.
+Most business websites do one thing well.
 
-Same data. Same format. Same spreadsheet. Every single week. For three years.
+They confirm you exist.
 
-We connected Power BI directly to their systems. The report now refreshes automatically. They have not touched it since.
+That is not enough.
 
-6 hours a week is 312 hours a year.
+A website that actually works for your business loads in under 2 seconds, ranks for the terms your clients are searching for, has a clear next step on every page, and gets updated regularly enough that Google keeps coming back.
 
-At £30 per hour fully loaded, that is £9,360 per year. On one report.
+Most WordPress sites fail on all four. They were fast when they launched, then slowed down as plugins accumulated. They looked good at sign-off and have not been touched since. They rank for the business name and nothing else.
 
-The Power BI build cost less than that. It paid for itself in under 4 months.
+This site - the one you are on right now - scores 100 on Google SEO. No WordPress. No templates. No monthly platform fees. Built in Next.js, deployed on Vercel, blog publishing automated via GitHub Actions.
 
-The report was never the bottleneck. The process was.
+It generates more inbound enquiries than any other channel we use.
 
-What is the most time-consuming recurring task in your business right now?
+A website is not a brochure. It is either working for your business or it is not.
 
 2026-09-10
 When someone books a call with Lexalytic, here is what happens.
