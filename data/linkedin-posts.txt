@@ -55,9 +55,9 @@ The result: the same number in two places. Manual transfers between systems. Rep
 
 The fix is simpler than people expect.
 
-Transaction data belongs in your accounting software. It is the authoritative record — what your accountant, HMRC, and any future acquirer will want to see.
+Transaction data belongs in your accounting software. It is the authoritative record - what your accountant, HMRC, and any future acquirer will want to see.
 
-Analysis, forecasting, and operational modelling belongs in Excel — drawing on data exported from accounting software rather than duplicating it.
+Analysis, forecasting, and operational modelling belongs in Excel - drawing on data exported from accounting software rather than duplicating it.
 
 One-way connection. Accounting software feeds Excel. Not the other way round.
 
@@ -78,7 +78,7 @@ That is what an AI-powered business tool actually looks like. Not ChatGPT in a t
 
 The businesses getting the most from AI in 2026 are not the most technically sophisticated. They are the most specific about which problem they are solving.
 
-If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance — that is the one to automate first.
+If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
 
 2026-09-17
 I got asked recently what it costs to hire a Power BI consultant in the UK.
@@ -87,7 +87,7 @@ The honest answer: day rates typically run £400-£800. A full dashboard project
 
 But the more useful question is: what does it cost you NOT to have the visibility?
 
-A business making decisions without reliable data is not saving the consultancy fee. It is spending it differently — on decisions made with incomplete information, reports produced manually every week, and opportunities missed because nobody could see them clearly enough.
+A business making decisions without reliable data is not saving the consultancy fee. It is spending it differently - on decisions made with incomplete information, reports produced manually every week, and opportunities missed because nobody could see them clearly enough.
 
 The payback on a good Power BI build is almost always under 12 months.
 
@@ -108,14 +108,14 @@ A website built properly is a business asset that compounds over time.
 
 A website built quickly is an expense that needs replacing in 18 months.
 
-If your current site is not generating enquiries consistently, the problem is almost certainly structural — not the content on it.
+If your current site is not generating enquiries consistently, the problem is almost certainly structural - not the content on it.
 
 2026-09-24
 A question worth asking before signing another SaaS contract:
 
 What are we actually paying for?
 
-Most businesses use around 20% of the features in their software stack. The other 80% are configured, paid for, and ignored. Or worse — the business has adapted its processes to fit the software rather than the other way round.
+Most businesses use around 20% of the features in their software stack. The other 80% are configured, paid for, and ignored. Or worse - the business has adapted its processes to fit the software rather than the other way round.
 
 The five signs you have outgrown your current software:
 
@@ -130,7 +130,7 @@ If three or more of those are true, the 3-year cost calculation is worth doing b
 2026-09-29
 FamilyEntitled took a few weeks to build.
 
-It tells UK families exactly what benefits and entitlements they are eligible for — across 8 government schemes — based on their specific situation. No data stored. No account required. Entirely private.
+It tells UK families exactly what benefits and entitlements they are eligible for - across 8 government schemes - based on their specific situation. No data stored. No account required. Entirely private.
 
 The average family that uses it finds £4,700 in annual entitlements they did not know they were owed.
 
@@ -147,7 +147,7 @@ Fixed price is not a gimmick.
 
 It is a statement about who carries the risk.
 
-Day rates put the risk entirely on the client. If scoping is poor, if requirements expand, if the build takes longer — the client pays more. Every time.
+Day rates put the risk entirely on the client. If scoping is poor, if requirements expand, if the build takes longer - the client pays more. Every time.
 
 Fixed price means we scope carefully before quoting. We ask enough questions to understand exactly what needs building. We write down what is included and what is not. We agree the price before any work begins.
 
@@ -162,7 +162,7 @@ That is not how it should work.
 2026-10-06
 A recruitment agency was producing their weekly performance report by hand every Monday morning.
 
-Placements, revenue, margin by consultant — all pulled from three systems, pasted into a spreadsheet, formatted, and emailed out.
+Placements, revenue, margin by consultant - all pulled from three systems, pasted into a spreadsheet, formatted, and emailed out.
 
 Two hours. Every single week. For years.
 
@@ -202,7 +202,7 @@ The test is not "can we configure this tool to work?" Most tools can be configur
 
 The test is: "after configuration, are we still working around the tool or is the tool working for us?"
 
-If the answer is still working around it — that is the signal.
+If the answer is still working around it - that is the signal.
 
 2026-10-15
 Kismet is a wedding planning platform we are building.
@@ -264,7 +264,7 @@ We built them an automated job cost tracker. Costs logged against each project a
 
 They can now see across all 14 projects simultaneously from one dashboard.
 
-The decisions they make now — resourcing, pricing, which jobs to take — are based on data rather than instinct.
+The decisions they make now - resourcing, pricing, which jobs to take - are based on data rather than instinct.
 
 That is the difference a properly built data system makes.
 
@@ -286,7 +286,7 @@ Most business owners do not have a clear answer to this question:
 
 Which of your clients are actually profitable?
 
-Revenue by client is visible in most accounting systems. But cost by client — the actual time, resources, and overhead attributable to each client relationship — almost never is.
+Revenue by client is visible in most accounting systems. But cost by client - the actual time, resources, and overhead attributable to each client relationship - almost never is.
 
 The result is decisions made on revenue, not margin.
 
@@ -299,7 +299,7 @@ Not always comfortable. Always useful.
 2026-11-10
 The businesses getting the most from AI right now are not the ones with the biggest budgets.
 
-They are the ones that identified one specific, high-volume, well-defined task — and automated exactly that.
+They are the ones that identified one specific, high-volume, well-defined task - and automated exactly that.
 
 A CV rewriting service that delivers in 24 hours with no human in the loop.
 A proposal generator that produces a first draft from a client brief in minutes.
@@ -370,9 +370,9 @@ A client came to us last year with a specific problem.
 
 Their hairdressing group had financials scattered across multiple spreadsheets. Inherited macros from a previous consultant that either failed entirely or took so long to run that nobody used them. No clear picture of how the business was actually performing.
 
-We did three things. Cleansed the data — restructuring everything so it was consistent and connected. Rebuilt all the macros from scratch, faster and properly documented. And created a single file where the owner could see accurate figures across the whole business for the first time.
+We did three things. Cleansed the data - restructuring everything so it was consistent and connected. Rebuilt all the macros from scratch, faster and properly documented. And created a single file where the owner could see accurate figures across the whole business for the first time.
 
-Macros that used to take minutes — or fail entirely — now run in seconds.
+Macros that used to take minutes - or fail entirely - now run in seconds.
 
 The work was not glamorous. It was not AI. It was methodical, unglamorous data work. The kind that gets overlooked in favour of the shiny stuff but makes an immediate, tangible difference to how a business operates.
 
@@ -383,7 +383,7 @@ A question I hear often from business owners considering a website rebuild:
 
 The honest answer: it depends entirely on what is currently stopping it from performing.
 
-If the site loads slowly — and most WordPress sites do — that is costing you search rankings and visitor patience. Google's Core Web Vitals are a direct ranking factor.
+If the site loads slowly - and most WordPress sites do - that is costing you search rankings and visitor patience. Google's Core Web Vitals are a direct ranking factor.
 
 If the site is not mobile optimised, you are losing half your visitors immediately.
 
@@ -400,7 +400,7 @@ It sounds obvious. Most businesses do the opposite.
 
 They buy software because it is what the industry uses. They configure it until it almost fits. They train their team on the workarounds. They accept the friction as the cost of doing business.
 
-The alternative — building something specific — feels expensive and risky. Until you do the maths on what the friction is actually costing.
+The alternative - building something specific - feels expensive and risky. Until you do the maths on what the friction is actually costing.
 
 Most businesses that have switched from generic to custom tools say the same thing: they wish they had done it sooner. Not because the custom tool is more impressive. Because it just works the way the business works. And that turns out to be worth a lot.
 
@@ -422,11 +422,11 @@ The businesses making the best decisions in 2027 will be the ones that built thi
 2026-12-10
 We are building Kismet.
 
-A UK wedding planning platform that gives couples one place to manage everything — guests, seating with conflict detection, budget tracked against real quotes, vendor coordination, and an AI generator for vows and speeches trained on their relationship story.
+A UK wedding planning platform that gives couples one place to manage everything - guests, seating with conflict detection, budget tracked against real quotes, vendor coordination, and an AI generator for vows and speeches trained on their relationship story.
 
 The waitlist is live. The platform is in active development.
 
-We build it alongside client work. Not as a side project we will get to eventually — as a live product we are building properly and shipping.
+We build it alongside client work. Not as a side project we will get to eventually - as a live product we are building properly and shipping.
 
 Building your own products alongside client work is one of the best things a studio can do. It keeps you current, gives you live examples of your work, and creates assets that generate value independently.
 
@@ -454,7 +454,7 @@ Not a bad year.
 
 2027 plan: more of the same, better. More client projects. More products. More content. More reach.
 
-If your business needs a website, custom software, AI tools, or data systems built properly in 2027 — book a call. Fixed price. Fast delivery. You talk directly to the person doing the work.
+If your business needs a website, custom software, AI tools, or data systems built properly in 2027 - book a call. Fixed price. Fast delivery. You talk directly to the person doing the work.
 
 2026-12-22
 A thing I have noticed about the businesses that make the best use of technology:
@@ -478,7 +478,7 @@ We built a custom locum management tool. Single input form. Pay calculated autom
 
 Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
 
-The full case study is on the Lexalytic website — link in the comments.
+The full case study is on the Lexalytic website - link in the comments.
 
 2026-12-31
 Case study: a professional services firm had no central view of project profitability.
@@ -487,6 +487,6 @@ Directors were making resourcing decisions without reliable data. Guessing which
 
 We built a Power BI dashboard connected to their project management and finance systems. Live P&L by project, client, and team member. Updated automatically.
 
-Full visibility within 48 hours of launch. The monthly management pack was discontinued the first week. Six months later the firm identified two client relationships significantly less profitable than assumed — a discovery that changed their pricing.
+Full visibility within 48 hours of launch. The monthly management pack was discontinued the first week. Six months later the firm identified two client relationships significantly less profitable than assumed - a discovery that changed their pricing.
 
-Full case study on the site — link in comments.
+Full case study on the site - link in comments.
