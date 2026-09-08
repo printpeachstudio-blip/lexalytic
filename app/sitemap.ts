@@ -128,5 +128,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/grassroots-football-club-admin-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/wedding-supplier-crm-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/wedding-photographer-client-communication-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/track-business-performance-without-data-team', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
