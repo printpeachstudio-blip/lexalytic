@@ -47,21 +47,23 @@ The report was never the bottleneck. The process was.
 What is the most time-consuming recurring task in your business right now?
 
 2026-09-10
-Most businesses I speak to use both Excel and accounting software.
+When someone books a call with Lexalytic, here is what happens.
 
-But nobody has decided what lives where.
+I am on the call. I do the scoping. I write the proposal. I do the build. I handle the handover.
 
-The result: the same number in two places. Manual transfers between systems. Reports nobody quite trusts because it is unclear which source is authoritative.
+No account manager between us. No briefing process where your requirements get filtered through someone who was not on the original call. No junior developer picking up the work after the senior made the pitch.
 
-The fix is simpler than people expect.
+You talk to me. I build it.
 
-Transaction data belongs in your accounting software. It is the authoritative record - what your accountant, HMRC, and any future acquirer will want to see.
+That sounds obvious. It is not how most agencies work.
 
-Analysis, forecasting, and operational modelling belongs in Excel - drawing on data exported from accounting software rather than duplicating it.
+At a 20-person agency, the person who wins your business is almost never the person who builds it. The pitch is polished. The delivery is variable. The gap between what was promised and what was delivered is where most bad experiences live.
 
-One-way connection. Accounting software feeds Excel. Not the other way round.
+15 years across Shell, NHS, Warner Bros, Citi and Foster and Partners. Applied directly to your project. Not filtered through a team structure that adds cost without adding value.
 
-Once that division is clear, the reconciliation problems stop.
+Fixed price. Senior experience. Direct access.
+
+That is the point.
 
 2026-09-15
 We built CVCraft AI in a few weeks.
@@ -81,17 +83,19 @@ The businesses getting the most from AI in 2026 are not the most technically sop
 If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
 
 2026-09-17
-I got asked recently what it costs to hire a Power BI consultant in the UK.
+Three things we have built and operate ourselves:
 
-The honest answer: day rates typically run £400-£800. A full dashboard project from a consultancy usually lands between £5,000 and £25,000 depending on complexity and who you hire.
+CVCraft AI - a fully automated CV rewriting service. Customer submits their CV and target role. Claude rewrites it. Stripe takes payment. Document delivered in 24 hours. No human in the loop between submission and delivery.
 
-But the more useful question is: what does it cost you NOT to have the visibility?
+FamilyEntitled - a UK government entitlements calculator. Tells families exactly what benefits they are eligible for across 8 schemes. No data stored. No account required. The average family using it finds £4,700 in entitlements they did not know about.
 
-A business making decisions without reliable data is not saving the consultancy fee. It is spending it differently - on decisions made with incomplete information, reports produced manually every week, and opportunities missed because nobody could see them clearly enough.
+Kismet - a UK wedding planning platform. Guest management, seating planner with conflict detection, budget tracker, vendor tools, AI vow and speech generator. Waitlist live. Platform in active development.
 
-The payback on a good Power BI build is almost always under 12 months.
+We build these alongside client work. Not as side projects we will get to eventually. As live products we are building properly and shipping.
 
-After that it is pure return.
+When we say we can build your idea, we are not guessing. We have done it for ourselves. Three times.
+
+What would you build if you had the technical capability to do it properly?
 
 2026-09-22
 There is a specific type of website that ranks on Google and converts visitors into clients.
