@@ -302,6 +302,10 @@ export default function HmoTracker() {
           renewal date and shows you what is overdue, what is due within 30 days, and what is
           coming in the next quarter.
         </p>
+        <p style={{ fontSize: 14, lineHeight: 1.7, color: '#8A8279', maxWidth: 590, margin: '0 0 10px' }}>
+          Not sure whether your property needs a licence in the first place?{' '}
+          <a href="/tools/hmo-licence-checker" style={{ color: '#C17D2E' }}>Check that first</a>.
+        </p>
         <p style={{ fontSize: 14, lineHeight: 1.7, color: '#8A8279', maxWidth: 590, margin: '0 0 32px' }}>
           Everything is saved in this browser only. Nothing is uploaded and we cannot see it —
           which also means clearing your browser data will erase it, and it will not appear on

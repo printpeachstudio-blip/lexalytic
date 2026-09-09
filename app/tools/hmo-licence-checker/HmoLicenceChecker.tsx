@@ -2,9 +2,6 @@
 
 import React, { useState, useMemo } from 'react'
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwjppa'
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
-
 type Nation = 'england' | 'wales' | 'scotland' | 'ni' | ''
 
 interface Room {
@@ -72,13 +69,6 @@ export default function HmoLicenceChecker() {
   const [showRooms, setShowRooms] = useState(false)
   const [rooms, setRooms] = useState<Room[]>([{ id: 1, size: '', occupants: '1' }])
 
-  const [showForm, setShowForm] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [sent, setSent] = useState(false)
-  const [sendError, setSendError] = useState('')
-  const [email, setEmail] = useState('')
-  const [propCount, setPropCount] = useState('')
-
   const rules = nationRules(nation)
   const occ = parseInt(occupants, 10)
   const hh = parseInt(households, 10)
@@ -143,40 +133,9 @@ export default function HmoLicenceChecker() {
   const updateRoom = (id: number, size: string) =>
     setRooms(r => r.map(x => (x.id === id ? { ...x, size } : x)))
 
-  const submitInterest = async () => {
-    if (!EMAIL_RE.test(email.trim())) {
-      setSendError('Enter an email address we can reach you on.')
-      return
-    }
-    setSending(true)
-    setSendError('')
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          email: email.trim(),
-          properties: propCount,
-          _subject: 'HMO compliance tracker - register interest',
-          source: 'HMO licence checker',
-          checker_result: verdict
-            ? `${verdict.headline} | ${rules?.label} | ${occupants} occupants, ${households} households`
-            : 'not completed',
-        }),
-      })
-      if (!res.ok) throw new Error()
-      setSent(true)
-    } catch {
-      setSendError('That did not send. Email hello@lexalytic.com and we will add you.')
-    } finally {
-      setSending(false)
-    }
-  }
-
   const reset = () => {
     setNation(''); setOccupants(''); setHouseholds(''); setShared('')
     setShowRooms(false); setRooms([{ id: 1, size: '', occupants: '1' }])
-    setShowForm(false); setSent(false); setSendError(''); setEmail(''); setPropCount('')
   }
 
   return (
@@ -448,74 +407,31 @@ export default function HmoLicenceChecker() {
             </div>
 
             <div style={{ marginTop: 36, padding: 32, borderRadius: 10, background: INK, color: '#fff' }}>
-              {sent ? (
-                <>
-                  <div className="hmo-serif" style={{ fontSize: 21, marginBottom: 10 }}>You are on the list.</div>
-                  <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 520 }}>
-                    We will email you when the compliance tracker is ready. If you would rather talk about
-                    something built around your specific portfolio, reply to that email and say so.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <div className="hmo-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
-                    Knowing you need a licence is the easy part.
-                  </div>
-                  <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
-                    Keeping it is the work. Gas certificate every year. EICR every five. Fire alarm
-                    service annually, emergency lighting monthly, licence renewal on a five-year cycle,
-                    plus whatever conditions your specific licence schedule adds.
-                  </p>
-                  <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 22px', maxWidth: 540 }}>
-                    Miss the gas certificate and it is a criminal offence, not a fine. We are building a
-                    tracker that holds every date across a portfolio and warns you at 90, 30 and 7 days.
-                  </p>
-
-                  {!showForm ? (
-                    <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                      <button className="hmo-btn hmo-primary" onClick={() => setShowForm(true)}>
-                        Tell me when it is ready
-                      </button>
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
-                        No cost to register interest.
-                      </span>
-                    </div>
-                  ) : (
-                    <div>
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 12, marginBottom: 14 }}>
-                        <input
-                          className="hmo-input" type="email" placeholder="Email address" autoComplete="email"
-                          value={email} onChange={e => setEmail(e.target.value)}
-                          onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
-                        />
-                        <input
-                          className="hmo-input" type="text" placeholder="How many properties?"
-                          value={propCount} onChange={e => setPropCount(e.target.value)}
-                          onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
-                        />
-                      </div>
-                      {sendError && (
-                        <div style={{
-                          fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',
-                          borderRadius: 6, background: 'rgba(161,59,42,0.2)',
-                        }}>{sendError}</div>
-                      )}
-                      <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                        <button className="hmo-btn hmo-primary" onClick={submitInterest} disabled={sending}>
-                          {sending ? 'Sending…' : 'Register interest'}
-                        </button>
-                        <button
-                          onClick={() => setShowForm(false)}
-                          style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
-                            color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </>
-              )}
+              <div className="hmo-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+                Knowing you need a licence is the easy part.
+              </div>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
+                Keeping it is the work. Gas certificate every year. EICR every five. Fire alarm
+                service annually, emergency lighting monthly, licence renewal on a five-year cycle,
+                plus whatever conditions your specific licence schedule adds.
+              </p>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 22px', maxWidth: 540 }}>
+                Miss the gas certificate and it is a criminal offence, not a fine. Our free tracker
+                works out every renewal date across your properties and exports them to your calendar
+                with reminders at 90, 30 and 7 days.
+              </p>
+              <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                <a
+                  href="/tools/hmo-compliance-tracker"
+                  className="hmo-btn hmo-primary"
+                  style={{ textDecoration: 'none', display: 'inline-block' }}
+                >
+                  Open the compliance tracker
+                </a>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+                  Free. No signup. Managing ten or more? We build portfolio systems too.
+                </span>
+              </div>
             </div>
 
             <div style={{ marginTop: 28, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
