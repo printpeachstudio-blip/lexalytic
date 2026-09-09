@@ -142,6 +142,12 @@ export default function AuthForm({ mode }: { mode: 'signin' | 'signup' }) {
         {busy ? 'One moment…' : mode === 'signup' ? 'Create account' : 'Sign in'}
       </button>
 
+      {mode === 'signin' && (
+        <p style={{ fontSize: 14, marginTop: 16, textAlign: 'center' }}>
+          <Link href="/forgot-password" style={{ color: '#8A8279' }}>Forgotten your password?</Link>
+        </p>
+      )}
+
       <p style={{ fontSize: 14, color: '#8A8279', marginTop: 22 }}>
         {mode === 'signup' ? (
           <>Already have an account? <Link href="/signin" style={{ color: AMBER }}>Sign in</Link></>
