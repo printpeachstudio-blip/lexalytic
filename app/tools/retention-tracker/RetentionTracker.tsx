@@ -305,6 +305,37 @@ export default function RetentionTracker() {
       ;(byContractor[k] = byContractor[k] || []).push(i)
     })
 
+    // Portfolio level analysis for the covering page
+    const totalOverdue = overdueItems.reduce((a, i) => a + Math.round(i.amount * 100) / 100, 0)
+    const totalInterest = overdueItems.reduce((a, i) => a + Math.round(i.interest * 100) / 100, 0)
+    const oldest = overdueItems[0]
+    const contractorTotals = Object.entries(byContractor)
+      .map(([name, items]) => [name, items.reduce((a, i) => a + i.amount, 0), items.length] as [string, number, number])
+      .sort((a, b) => b[1] - a[1])
+    const worstContractor = contractorTotals[0]
+    const worstShare = worstContractor && totalOverdue > 0 ? Math.round((worstContractor[1] / totalOverdue) * 100) : 0
+    const finalStageCount = overdueItems.filter(i => i.stage.startsWith('Final')).length
+    const stillHeld = computed.reduce((a, c) => a + c.outstanding, 0)
+    const capIssues = computed.filter(c => c.overDeducted > 0)
+    const overDeductedTotal = capIssues.reduce((a, c) => a + c.overDeducted, 0)
+
+    const analysisHtml = overdueItems.length > 1 ? `
+      <section class="analysis">
+        <h2>Where the money is</h2>
+        <div class="headline">
+          <div class="big">${money(totalOverdue + totalInterest)}</div>
+          <div class="biglabel">Past its release date across ${contractorTotals.length} paying part${contractorTotals.length === 1 ? 'y' : 'ies'}, including ${money(totalInterest)} of statutory interest</div>
+        </div>
+        <ul class="read">
+          ${worstContractor && contractorTotals.length > 1 ? `<li><strong>${worstContractor[0]} holds ${worstShare}% of it</strong>, ${money(worstContractor[1])} across ${worstContractor[2]} release${worstContractor[2] === 1 ? '' : 's'}. If you chase one, chase that one.</li>` : ''}
+          ${oldest ? `<li><strong>The oldest is ${oldest.days} days past due</strong> on ${oldest.c.job.ref}. Interest on that one alone stands at ${money(oldest.interest)} and is still running.</li>` : ''}
+          ${finalStageCount > 0 ? `<li>${finalStageCount} of these ${finalStageCount === 1 ? 'is' : 'are'} the final release at the end of the defects period. That is the tranche most often written off, because by then the job is closed and nobody is watching the contract.</li>` : ''}
+          ${overDeductedTotal > 0 ? `<li><strong>${money(overDeductedTotal)} has been deducted beyond the contractual cap</strong> across ${capIssues.length} job${capIssues.length === 1 ? '' : 's'}. That was never due at all and is recoverable now, separately from anything below.</li>` : ''}
+          ${stillHeld > totalOverdue ? `<li>A further ${money(stillHeld - totalOverdue)} is held but has not yet reached its release date. It is not chaseable today, but it is on the same book.</li>` : ''}
+        </ul>
+        <p class="small">The applications that follow are one per paying party. Send each to the relevant contractor.</p>
+      </section>` : ''
+
     const sections = Object.entries(byContractor).map(([contractor, items]) => {
       const r2 = (n: number) => Math.round(n * 100) / 100
       const total = items.reduce((s, i) => s + r2(i.amount), 0)
@@ -364,6 +395,13 @@ export default function RetentionTracker() {
   th { border-bottom: 2px solid #333; font-weight: 600; }
   .r { text-align: right; }
   tfoot td { border-bottom: 0; border-top: 2px solid #333; }
+  .analysis { page-break-after: always; }
+  .headline { border: 2px solid #111; padding: 18px 22px; margin: 16px 0 20px; }
+  .big { font-size: 32px; line-height: 1.1; }
+  .biglabel { color: #555; font-size: 13px; margin-top: 6px; }
+  ul.read { padding-left: 20px; margin: 14px 0 16px; }
+  ul.read li { margin-bottom: 10px; line-height: 1.6; }
+  .small { font-size: 12.5px; color: #666; }
   .letter { page-break-after: always; }
   .letter:last-of-type { page-break-after: auto; }
   .sign { margin-top: 34px; }
@@ -375,7 +413,8 @@ export default function RetentionTracker() {
     Use your browser print dialogue and choose Save as PDF. Check the figures and the contractor details before sending.
   </div>
   <h1>Retention recovery pack</h1>
-  <p class="sub">Prepared ${today}. One application per paying party.</p>
+  <p class="sub">${sender.company} · Prepared ${today}</p>
+  ${analysisHtml}
   ${sections}
   <p class="note">Prepared using the Lexalytic retention tracker. Figures are calculated from the contract values, certified sums and dates you entered. This is a template application based on the statutory framework and is not legal advice. Check your contract particulars, which may vary the release mechanism, before sending.</p>
 </body></html>`
