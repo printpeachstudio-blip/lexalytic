@@ -120,6 +120,25 @@ export default function DataCleansingPage() {
         </div>
       </section>
 
+      <section style={{ padding: 'clamp(50px, 6vw, 72px) 0', background: 'var(--bg)', borderTop: '1px solid var(--border)' }}>
+        <div className="container">
+          <div style={{ maxWidth: '720px' }}>
+            <span className="section-label">Before you commission anything</span>
+            <h2 style={{ marginBottom: '20px' }}>Find out what is actually wrong with yours</h2>
+            <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '16px' }}>
+              Most businesses know their data is messy without knowing what specifically is broken, which makes it hard to scope the work or judge a quote. Our free data health check reads a CSV in your browser and tells you exactly what it finds.
+            </p>
+            <p style={{ fontSize: '16px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '16px' }}>
+              Duplicate records and missing fields, but also the UK specific problems that break systems quietly: VAT numbers that pass a format check but fail the HMRC mod-97 checksum, company numbers where Excel has stripped the leading zero, postcodes in a format no lookup will match, and columns holding both day-first and month-first dates.
+            </p>
+            <p style={{ fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.75', marginBottom: '26px' }}>
+              Nothing is uploaded and there is no signup. It takes about a minute, and it gives you a far better brief for any cleansing work that follows.
+            </p>
+            <a href="/tools/data-health-check" className="btn-primary" style={{ fontSize: '15px' }}>Run a free data health check</a>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-2)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '80px', alignItems: 'start' }}>

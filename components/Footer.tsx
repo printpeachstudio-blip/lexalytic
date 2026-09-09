@@ -19,6 +19,7 @@ export default function Footer() {
               { href: '/#work', label: 'Work' },
               { href: '/case-studies', label: 'Case Studies' },
               { href: '/#results', label: 'Results' },
+              { href: '/tools', label: 'Free Tools' },
               { href: '/blog', label: 'Blog' },
               { href: '/about', label: 'About' },
               { href: '/#contact', label: 'Contact' },
