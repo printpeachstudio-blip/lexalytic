@@ -844,3 +844,42 @@ If a room fails, it does not count toward your licensed occupancy. The licence g
 The other reliable failure is fire doors. Self-closers that have been wedged open or unscrewed, and intumescent strips buried under enough coats of paint that they will not do anything.
 
 Neither of these is difficult to fix. Both are considerably cheaper to fix before the inspection than after it.
+
+2026-10-07
+Retention is the one construction debt nobody argues about.
+
+The main contractor is not saying the work was defective. They are not disputing the valuation. The date passed, nobody applied for it, and the money stayed where it was.
+
+The second half falls due twelve months after practical completion. By then the job is closed, the file is archived, and the person who would have chased it has moved on to three other sites.
+
+Two things most subcontractors do not know.
+
+The first is that pay when paid does not apply. Section 113 of the Construction Act makes those clauses ineffective unless a third party has actually gone insolvent. "The client has not released it to us yet" is not a defence.
+
+The second is that you can charge interest at eight points over base, currently 11.75%, on retention that has passed its release date. On five thousand pounds held a year late that is around five hundred and eighty quid.
+
+Almost nobody claims it. Which is exactly why releasing retention late costs a main contractor nothing.
+
+2026-10-14
+Most contracts cap total retention at five percent of the contract price.
+
+Deductions come off each interim certificate and accumulate until they hit that ceiling. At which point no more should be taken.
+
+In practice deduction often carries on past the cap, because it is a running total against a limit and nobody is checking it.
+
+That money was never contractually due. It is recoverable now, not at practical completion, and not at the end of the defects period.
+
+Worth adding up every deduction across all your certificates on your current jobs and comparing the total against the cap in your contract.
+
+It takes twenty minutes and on a decent sized job it is not a small number.
+
+2026-10-21
+Construction adjudication gets a decision in 28 days.
+
+Adjudicator appointed within seven days of the notice. Decision within twenty eight, extendable by fourteen with your consent. Binding on an interim basis, so it has to be complied with while anything further runs.
+
+For an unpaid notified sum, where no payment notice and no pay less notice were served, that is a strong position to be in.
+
+The barrier is almost never the merits of the claim. It is that most subcontractors do not know the route exists, or assume it means solicitors and months of cost.
+
+Often the referral itself is enough. Payment arrives before the adjudicator reaches a view.

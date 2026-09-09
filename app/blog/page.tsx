@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'main-contractor-not-released-retention',
+    title: 'The Main Contractor Has Not Released Your Retention. What You Can Actually Do.',
+    excerpt: 'Retention that has passed its release date is a debt, not a favour. Your rights under the Construction Act, the interest you can charge, and the adjudication route that gets a decision in 28 days.',
+    date: 'October 2026',
+    readTime: '8 min read',
+    tag: 'Construction',
+  },
+  {
     slug: 'hmo-licence-inspection-what-to-expect',
     title: 'What Actually Happens at an HMO Licence Inspection',
     excerpt: 'What a council officer checks during an HMO licence inspection, the failures that come up most often, and how to prepare so the visit does not produce a schedule of works.',

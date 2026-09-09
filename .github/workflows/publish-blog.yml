@@ -149,7 +149,7 @@ jobs:
             echo "tag=Power BI" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "15" ]; then
-            echo "slug=cash-flow-vs-profit-how-to-track-both" >> $GITHUB_OUTPUT
+            echo "slug=main-contractor-not-released-retention" >> $GITHUB_OUTPUT
             echo "title=How to Get Live Reports from Xero Sage or QuickBooks Automatically" >> $GITHUB_OUTPUT
             echo "excerpt=If you are still manually exporting reports from your accounting software every month, you are spending time you do not need to. Here is how to get live financial reports that update automatically." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -221,7 +221,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "26" ]; then
-            echo "slug=secure-client-portal-small-business-uk" >> $GITHUB_OUTPUT
+            echo "slug=cash-flow-vs-profit-how-to-track-both" >> $GITHUB_OUTPUT
             echo "title=How to Close Your Year-End Accounts Without the Last-Minute Panic" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK businesses scramble at year-end because the data is not ready. Here is how to keep your books close-ready throughout the year so year-end becomes a review rather than a crisis." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
