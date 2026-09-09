@@ -2,14 +2,16 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
-// Replace with your Stripe Payment Link. Set its success URL to:
-// https://www.lexalytic.com/tools/retention-tracker?paid=1
-const STRIPE_LINK = 'https://buy.stripe.com/aFabIUdkZbiG8rO3xy3AY03'
+// Stripe Payment Link. Its success URL must match UNLOCK_PARAM below:
+// https://www.lexalytic.com/tools/retention-tracker?ref=rrp-8k2vq9
+const STRIPE_LINK = 'https://buy.stripe.com/YOUR_PAYMENT_LINK'
 const PACK_PRICE = '£19'
+const UNLOCK_PARAM = 'rrp-8k2vq9'
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwjppa'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const STORAGE_KEY = 'lexalytic.retention.v1'
+const SENDER_KEY = 'lexalytic.retention.sender'
 const PAID_KEY = 'lexalytic.retention.paid'
 
 // Statutory interest = Bank of England base rate + 8%
@@ -18,6 +20,14 @@ const STAT_RATE = BOE_BASE + 8
 
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
+
+interface Sender {
+  company: string
+  address: string
+  contact: string
+  email: string
+  phone: string
+}
 
 interface Job {
   id: string
@@ -126,6 +136,8 @@ export default function RetentionTracker() {
   const [adding, setAdding] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [paid, setPaid] = useState(false)
+  const [sender, setSender] = useState<Sender>({ company: '', address: '', contact: '', email: '', phone: '' })
+  const [editingSender, setEditingSender] = useState(false)
 
   const [draft, setDraft] = useState<Partial<Job>>({
     ref: '', contractor: '', contractValue: '', certified: '',
@@ -143,12 +155,14 @@ export default function RetentionTracker() {
       const raw = localStorage.getItem(STORAGE_KEY)
       if (raw) setJobs(JSON.parse(raw))
       if (localStorage.getItem(PAID_KEY) === '1') setPaid(true)
+      const sraw = localStorage.getItem(SENDER_KEY)
+      if (sraw) setSender(JSON.parse(sraw))
     } catch {
       // storage blocked, continue clean
     }
     try {
       const params = new URLSearchParams(window.location.search)
-      if (params.get('paid') === '1') {
+      if (params.get('ref') === UNLOCK_PARAM) {
         localStorage.setItem(PAID_KEY, '1')
         setPaid(true)
         window.history.replaceState({}, '', window.location.pathname)
@@ -167,6 +181,17 @@ export default function RetentionTracker() {
       // ignore
     }
   }, [jobs, loaded])
+
+  useEffect(() => {
+    if (!loaded) return
+    try {
+      localStorage.setItem(SENDER_KEY, JSON.stringify(sender))
+    } catch {
+      // ignore
+    }
+  }, [sender, loaded])
+
+  const senderComplete = Boolean(sender.company.trim() && sender.address.trim())
 
   const computed = useMemo(() => jobs.map(compute), [jobs])
 
@@ -276,8 +301,9 @@ export default function RetentionTracker() {
     })
 
     const sections = Object.entries(byContractor).map(([contractor, items]) => {
-      const total = items.reduce((s, i) => s + i.amount, 0)
-      const interest = items.reduce((s, i) => s + i.interest, 0)
+      const r2 = (n: number) => Math.round(n * 100) / 100
+      const total = items.reduce((s, i) => s + r2(i.amount), 0)
+      const interest = items.reduce((s, i) => s + r2(i.interest), 0)
       const rows = items.map(i => `
         <tr>
           <td>${i.c.job.ref}</td>
@@ -290,6 +316,7 @@ export default function RetentionTracker() {
 
       return `
       <section class="letter">
+        <p class="from">${sender.company}${sender.address ? '<br/>' + sender.address.replace(/\n/g, '<br/>') : ''}${sender.email ? '<br/>' + sender.email : ''}${sender.phone ? '<br/>' + sender.phone : ''}</p>
         <h2>Application for release of retention</h2>
         <p class="meta">To: ${contractor}<br/>Date: ${today}</p>
 
@@ -312,7 +339,7 @@ export default function RetentionTracker() {
         <p>We request payment of ${money(total + interest)} within 14 days of the date of this letter. If a pay less notice is to be served, please provide it within the period allowed under the contract, stating the basis of any deduction.</p>
         <p>In the absence of payment or a valid notice, we reserve the right to refer the matter to adjudication under section 108 of the Act. An adjudicator is appointed within seven days of a notice of adjudication and reaches a decision within twenty eight days, binding on an interim basis. We also reserve the right to suspend performance on any live contract following the required notice period.</p>
 
-        <p class="sign">Signed<br/><br/><br/>_______________________<br/>For and on behalf of the payee</p>
+        <p class="sign">Yours faithfully<br/><br/><br/>_______________________<br/>${sender.contact || ''}${sender.contact ? '<br/>' : ''}For and on behalf of ${sender.company}</p>
       </section>`
     }).join('')
 
@@ -326,6 +353,7 @@ export default function RetentionTracker() {
   h3 { font-size: 15px; margin: 22px 0 8px; }
   .sub { color: #666; font-size: 13px; margin: 0 0 32px; }
   .meta { color: #444; margin-bottom: 22px; }
+  .from { text-align: right; color: #444; margin: 0 0 26px; white-space: normal; }
   table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 13px; }
   th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #ddd; }
   th { border-bottom: 2px solid #333; font-weight: 600; }
@@ -627,12 +655,53 @@ export default function RetentionTracker() {
             </ul>
 
             {paid ? (
-              <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <button className="r-btn r-primary" onClick={openPack}>Generate recovery pack</button>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
-                  Opens in a new tab. Print or save as PDF from there.
-                </span>
-              </div>
+              <>
+                {(!senderComplete || editingSender) ? (
+                  <div style={{ padding: '20px 22px', borderRadius: 8, background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.12)', marginBottom: 16 }}>
+                    <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>Your details</div>
+                    <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', margin: '0 0 16px', lineHeight: 1.6 }}>
+                      These go at the top of the letter so the contractor knows who is applying and where
+                      to send payment. Saved on this device for next time.
+                    </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
+                      <input className="r-dark-in" placeholder="Your company name" value={sender.company}
+                        onChange={e => setSender({ ...sender, company: e.target.value })} />
+                      <input className="r-dark-in" placeholder="Your name" value={sender.contact}
+                        onChange={e => setSender({ ...sender, contact: e.target.value })} />
+                    </div>
+                    <textarea className="r-dark-in" rows={3} placeholder="Your address" style={{ marginBottom: 12, resize: 'vertical' }}
+                      value={sender.address} onChange={e => setSender({ ...sender, address: e.target.value })} />
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 16 }}>
+                      <input className="r-dark-in" placeholder="Email" value={sender.email}
+                        onChange={e => setSender({ ...sender, email: e.target.value })} />
+                      <input className="r-dark-in" placeholder="Phone" value={sender.phone}
+                        onChange={e => setSender({ ...sender, phone: e.target.value })} />
+                    </div>
+                    <button className="r-btn r-primary" disabled={!senderComplete}
+                      onClick={() => { setEditingSender(false); if (senderComplete) openPack() }}>
+                      Save and generate pack
+                    </button>
+                    {!senderComplete && (
+                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', marginLeft: 14 }}>
+                        Company name and address are needed.
+                      </span>
+                    )}
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <button className="r-btn r-primary" onClick={openPack}>Generate recovery pack</button>
+                    <button onClick={() => setEditingSender(true)}
+                      style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
+                        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}>
+                      Edit your details
+                    </button>
+                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+                      Opens in a new tab. Print or save as PDF from there.
+                    </span>
+                  </div>
+                )}
+              </>
             ) : (
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
                 <a href={STRIPE_LINK} className="r-btn r-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
