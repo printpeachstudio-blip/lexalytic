@@ -140,5 +140,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/excel-strips-leading-zeros-company-numbers', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/rent-repayment-orders-doubled-2026', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/hmo-licence-inspection-what-to-expect', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/tools/retention-tracker', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   ]
 }
