@@ -221,7 +221,7 @@ export default function RebateExposure() {
     return Object.entries(buckets)
   }, [rows])
 
-  const agencyComplete = Boolean(agency.name.trim())
+  const agencyComplete = agency.name.trim().length >= 2
 
   const addPlacement = () => {
     if (!draft.candidate?.trim() || !draft.salary) return
@@ -262,7 +262,36 @@ export default function RebateExposure() {
         <td>${r.safeOn ? fmt(r.safeOn) : '—'}</td>
       </tr>`).join('')
 
-    const runoffHtml = runoff.map(([k, v]) => `<tr><td>${k}</td><td class="r">${money2(v)}</td></tr>`).join('')
+    // Sort runoff chronologically rather than by insertion
+    const runoffSorted = [...runoff].sort((a, b) => {
+      const pa = new Date(a[0] + ' 1'), pb = new Date(b[0] + ' 1')
+      return pa.getTime() - pb.getTime()
+    })
+    const peak = runoffSorted.reduce<[string, number] | null>((best, cur) => (!best || cur[1] > best[1] ? cur : best), null)
+    const peakShare = peak && totals.atRisk > 0 ? Math.round((peak[1] / totals.atRisk) * 100) : 0
+    const runoffHtml = runoffSorted.map(([k, v]) => {
+      const share = totals.atRisk > 0 ? Math.round((v / totals.atRisk) * 100) : 0
+      const isPeak = peak && k === peak[0] && runoffSorted.length > 1
+      return `<tr${isPeak ? ' class="peak"' : ''}><td>${k}${isPeak ? ' <span class="tag">largest</span>' : ''}</td><td class="r">${money2(v)}</td><td class="r">${share}%</td></tr>`
+    }).join('')
+
+    const biggest = live.length ? live[0] : null
+    const biggestShare = biggest && totals.atRisk > 0 ? Math.round((biggest.atRisk / totals.atRisk) * 100) : 0
+    const avgWeeks = live.length ? Math.round(live.reduce((a, r) => a + (r.weeks ?? 0), 0) / live.length) : 0
+    const clientCounts: Record<string, number> = {}
+    live.forEach(r => { const c = r.p.client || 'Unattributed'; clientCounts[c] = (clientCounts[c] || 0) + 1 })
+    const topClient = Object.entries(clientCounts).sort((a, b) => b[1] - a[1])[0]
+    const concentrated = topClient && topClient[1] > 1 && live.length > 1
+
+    const readHtml = live.length > 1 ? `
+      <h2>What this says</h2>
+      <ul class="read">
+        ${peak && runoffSorted.length > 1 ? `<li><strong>${peak[0]} is the month that matters.</strong> ${money2(peak[1])} of exposure ends then, ${peakShare}% of the total. Until that date passes, that is the concentration to watch.</li>` : ''}
+        ${biggest ? `<li><strong>${biggest.p.candidate} carries ${biggestShare}% of the exposure on their own</strong> at ${money2(biggest.atRisk)}. ${biggestShare >= 40 ? 'That is a single point of failure rather than a spread risk.' : 'The book is reasonably spread across placements.'}</li>` : ''}
+        ${concentrated ? `<li><strong>${topClient[1]} live placements sit with ${topClient[0]}.</strong> Placements into the same client correlate. A restructure or a change of hiring manager can put several into the window at once rather than one at a time.</li>` : ''}
+        <li>Average age across live placements is ${avgWeeks} week${avgWeeks === 1 ? '' : 's'}. ${avgWeeks < 4 ? 'The book is young, so exposure is near its peak and will fall steadily from here.' : 'The book is maturing, so exposure is already well below its peak.'}</li>
+        ${totals.unpaidInvoiceRisk > 0 ? `<li>${money2(totals.unpaidInvoiceRisk)} of the above sits behind an unpaid invoice, so the entitlement to a rebate may not have arisen at all.</li>` : ''}
+      </ul>` : ''
 
     const unpaidHtml = totals.unpaidInvoiceRisk > 0 ? `
       <div class="warn">
@@ -288,6 +317,10 @@ export default function RebateExposure() {
   th { border-bottom: 2px solid #333; font-weight: 600; }
   .r { text-align: right; }
   .warn { border-left: 3px solid #A13B2A; padding: 12px 16px; margin: 18px 0; background: #faf4f3; }
+  .peak td { background: #fdf6ec; font-weight: 600; }
+  .tag { font-size: 10.5px; font-weight: 600; color: #8F6318; background: #f5e9d4; padding: 2px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+  ul.read { padding-left: 20px; margin: 12px 0 18px; }
+  ul.read li { margin-bottom: 10px; line-height: 1.6; }
   .note { font-size: 11.5px; color: #666; border-top: 1px solid #ddd; padding-top: 13px; margin-top: 28px; }
   @media print { .noprint { display: none; } }
 </style></head>
@@ -317,10 +350,12 @@ export default function RebateExposure() {
 
   <h2>When exposure falls away</h2>
   <table>
-    <thead><tr><th>Month</th><th class="r">Exposure ending</th></tr></thead>
-    <tbody>${runoffHtml || '<tr><td colspan="2">Nothing scheduled.</td></tr>'}</tbody>
+    <thead><tr><th>Month</th><th class="r">Exposure ending</th><th class="r">Share</th></tr></thead>
+    <tbody>${runoffHtml || '<tr><td colspan="3">Nothing scheduled.</td></tr>'}</tbody>
   </table>
   <p>Each figure is the amount that stops being refundable in that month, assuming the placement holds.</p>
+
+  ${readHtml}
 
   <p class="note">Prepared using the Lexalytic rebate exposure tracker from the placements, fees, start dates
   and rebate structures entered. Rebate terms vary by agreement and some contracts offer replacement rather
