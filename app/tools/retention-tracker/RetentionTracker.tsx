@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
 // Replace with your Stripe Payment Link. Set its success URL to:
 // https://www.lexalytic.com/tools/retention-tracker?paid=1
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_PAYMENT_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/aFabIUdkZbiG8rO3xy3AY03'
 const PACK_PRICE = '£19'
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwjppa'
