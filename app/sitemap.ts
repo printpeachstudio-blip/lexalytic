@@ -135,5 +135,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/client-document-sharing-portal-uk', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/tools/data-health-check', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/tools/hmo-licence-checker', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/hmo-compliance-tracker', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   ]
 }
