@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
 // Stripe Payment Link. Its success URL must match UNLOCK_PARAM below:
 // https://www.lexalytic.com/tools/retention-tracker?ref=rrp-8k2vq9
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_PAYMENT_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/14AdR2gxb72q0Zm3xy3AY04'
 const PACK_PRICE = '£19'
 const UNLOCK_PARAM = 'rrp-8k2vq9'
 
