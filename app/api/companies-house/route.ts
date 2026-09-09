@@ -50,8 +50,7 @@ export async function POST(req: NextRequest) {
           return { original, normalised: number, status: 'rate_limited' as const }
         }
         if (!res.ok) {
-          const detail = await res.text()
-          return { original, normalised: number, status: 'error' as const, httpStatus: res.status, detail: detail.slice(0, 200) }
+          return { original, normalised: number, status: 'error' as const }
         }
         const data = await res.json()
         return {
@@ -64,8 +63,8 @@ export async function POST(req: NextRequest) {
           incorporatedOn: data.date_of_creation ?? null,
           dissolvedOn: data.date_of_cessation ?? null,
         }
-      } catch (e) {
-        return { original, normalised: number, status: 'error' as const, detail: String(e).slice(0, 200) }
+      } catch {
+        return { original, normalised: number, status: 'error' as const }
       }
     })
   )
