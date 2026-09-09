@@ -18,6 +18,13 @@ export default async function SettingsPage({ searchParams }: { searchParams: Pro
   const { data: profile } = await supabase
     .from('profiles').select('*').eq('id', user.id).single()
 
+  const { data: m } = await supabase
+    .from('organisation_members').select('org_id').eq('user_id', user.id).limit(1).single()
+
+  const { data: org } = m
+    ? await supabase.from('organisations').select('name, reminder_email, reminders_enabled').eq('id', m.org_id).single()
+    : { data: null }
+
   return (
     <div style={{ background: '#FDFCFA', minHeight: '100vh', color: '#1A1815', paddingBottom: 70,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
@@ -75,6 +82,30 @@ export default async function SettingsPage({ searchParams }: { searchParams: Pro
             <label className="s-label" htmlFor="phone">Phone</label>
             <input id="phone" name="phone" className="s-in" defaultValue={profile?.phone || ''} />
           </div>
+          <div style={{ marginTop: 34, paddingTop: 26, borderTop: '1px solid #E8E2D8' }}>
+            <h2 style={{ fontFamily: 'Georgia, serif', fontSize: 20, fontWeight: 400,
+              letterSpacing: '-0.01em', margin: '0 0 8px' }}>Reminders</h2>
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 18px' }}>
+              We email at 90, 30 and 7 days before each release falls due, then again at 7 and 30 days
+              overdue. One email covering everything, not one per job.
+            </p>
+
+            <div className="s-field">
+              <label className="s-label" htmlFor="reminder_email">Send reminders to</label>
+              <input id="reminder_email" name="reminder_email" type="email" className="s-in"
+                defaultValue={org?.reminder_email || user.email || ''} />
+              <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
+                Often better going to whoever chases payments rather than to you.
+              </div>
+            </div>
+
+            <label style={{ fontSize: 15, display: 'flex', gap: 10, alignItems: 'center',
+              cursor: 'pointer', marginBottom: 24 }}>
+              <input type="checkbox" name="reminders_enabled" defaultChecked={org?.reminders_enabled !== false} />
+              Send me reminders
+            </label>
+          </div>
+
           <button className="s-btn" type="submit">Save details</button>
         </form>
 

@@ -1,20 +1,63 @@
 'use client'
 
-import React, { useState, useTransition } from 'react'
+import React, { useState, useTransition, useCallback } from 'react'
 import JobForm from './JobForm'
-import { setReleased, archiveJob } from '@/app/app/actions'
-import { type JobRow, stagesFor, totals, money, money2, fmtDate, STAT_RATE } from '@/lib/retention'
+import Receipts from './Receipts'
+import ActionPanel from './ActionPanel'
+import { setReleased, archiveJob, logApplication } from '@/app/app/actions'
+import { buildLetterHtml, type LetterItem } from '@/lib/letter'
+import {
+  type JobRow, type Receipt, type Profile,
+  stagesFor, totals, actionsFor, money, money2, fmtDate, STAT_RATE,
+} from '@/lib/retention'
 
 const AMBER = '#C17D2E'
-const INK = '#1A1815'
 
-export default function JobsList({ jobs }: { jobs: JobRow[] }) {
+export default function JobsList({
+  jobs, receipts, profile, lastApplications,
+}: {
+  jobs: JobRow[]
+  receipts: Receipt[]
+  profile: Profile
+  lastApplications: Record<string, { sent_on: string | null; total_claimed: number }>
+}) {
   const [adding, setAdding] = useState(false)
   const [editing, setEditing] = useState<string | null>(null)
   const [open, setOpen] = useState<string | null>(null)
   const [, start] = useTransition()
 
   const t = totals(jobs)
+  const actions = actionsFor(jobs)
+
+  const profileReady = Boolean(profile?.company_name && profile?.address)
+
+  // Group everything chaseable by contractor
+  const byContractor = jobs.reduce<Record<string, LetterItem[]>>((acc, j) => {
+    stagesFor(j).forEach(s => {
+      if (s.released || s.outstanding <= 0) return
+      if (s.days === null || s.days > 0) return
+      const key = j.contractor || 'Unnamed contractor'
+      ;(acc[key] = acc[key] || []).push({ job: j, stage: s })
+    })
+    return acc
+  }, {})
+
+  const openLetter = useCallback((contractor: string, items: LetterItem[]) => {
+    const html = buildLetterHtml(contractor, items, profile, lastApplications[contractor])
+    const w = window.open('', '_blank')
+    if (w) { w.document.write(html); w.document.close() }
+
+    const claimed = items.reduce((s, i) => s + i.stage.outstanding, 0)
+    const interest = items.reduce((s, i) => s + i.stage.interest, 0)
+    start(() => {
+      logApplication({
+        contractor,
+        jobIds: Array.from(new Set(items.map(i => i.job.id))),
+        totalClaimed: claimed,
+        totalInterest: interest,
+      })
+    })
+  }, [profile, lastApplications])
 
   return (
     <div>
@@ -29,41 +72,75 @@ export default function JobsList({ jobs }: { jobs: JobRow[] }) {
         .j-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
           color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
         .j-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .j-stage { display: grid; grid-template-columns: 1fr 130px 150px 120px; gap: 14px;
+        .j-stage { display: grid; grid-template-columns: 1fr 160px 150px 120px; gap: 14px;
           align-items: center; padding: 14px 0; border-bottom: 1px solid #F4F0E8; }
-        @media (max-width: 700px) { .j-stage { grid-template-columns: 1fr; gap: 4px; } }
+        @media (max-width: 720px) { .j-stage { grid-template-columns: 1fr; gap: 4px; } }
       `}</style>
 
       {jobs.length > 0 && (
-        <div className="j-card" style={{ padding: '24px 26px', marginBottom: 22,
-          background: t.overdue > 0 ? 'rgba(161,59,42,0.04)' : '#fff',
-          borderColor: t.overdue > 0 ? 'rgba(161,59,42,0.22)' : '#E8E2D8' }}>
-          <div style={{ display: 'flex', gap: 34, flexWrap: 'wrap', alignItems: 'flex-end' }}>
-            {([
-              ['Retention held', money(t.held), '#57514A'],
-              ['Still outstanding', money(t.outstanding), '#57514A'],
-              ['Releasable now', money(t.releasable), t.releasable > 0 ? '#3F6B4C' : '#C4BDB2'],
-              ['Overdue', money(t.overdue), t.overdue > 0 ? '#A13B2A' : '#C4BDB2'],
-            ] as [string, string, string][]).map(([l, v, c]) => (
-              <div key={l}>
-                <div className="j-serif" style={{ fontSize: 26, lineHeight: 1.1, color: c }}>{v}</div>
-                <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>{l}</div>
+        <>
+          <div className="j-card" style={{ padding: '24px 26px', marginBottom: 22,
+            background: t.overdue > 0 ? 'rgba(161,59,42,0.04)' : '#fff',
+            borderColor: t.overdue > 0 ? 'rgba(161,59,42,0.22)' : '#E8E2D8' }}>
+            <div style={{ display: 'flex', gap: 34, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+              {([
+                ['Retention held', money(t.held), '#57514A'],
+                ['Still outstanding', money(t.outstanding), '#57514A'],
+                ['Releasable now', money(t.releasable), t.releasable > 0 ? '#3F6B4C' : '#C4BDB2'],
+                ['Overdue', money(t.overdue), t.overdue > 0 ? '#A13B2A' : '#C4BDB2'],
+                ...(t.received > 0 ? [['Received', money(t.received), '#3F6B4C'] as [string,string,string]] : []),
+              ] as [string, string, string][]).map(([l, v, c]) => (
+                <div key={l}>
+                  <div className="j-serif" style={{ fontSize: 26, lineHeight: 1.1, color: c }}>{v}</div>
+                  <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>{l}</div>
+                </div>
+              ))}
+            </div>
+            {t.overdueInterest > 0 && (
+              <div style={{ marginTop: 16, paddingTop: 14, borderTop: '1px solid rgba(0,0,0,0.07)',
+                fontSize: 14, color: '#57514A', lineHeight: 1.65 }}>
+                Statutory interest at {STAT_RATE.toFixed(2)}% stands at{' '}
+                <strong style={{ color: '#A13B2A' }}>{money2(t.overdueInterest)}</strong>, recoverable on top.
               </div>
-            ))}
+            )}
           </div>
-          {t.overdueInterest > 0 && (
-            <div style={{ marginTop: 16, paddingTop: 14, borderTop: '1px solid rgba(0,0,0,0.07)',
-              fontSize: 14, color: '#57514A', lineHeight: 1.65 }}>
-              Statutory interest on the overdue amount is running at {STAT_RATE.toFixed(2)}% and stands at{' '}
-              <strong style={{ color: '#A13B2A' }}>{money2(t.overdueInterest)}</strong>, recoverable on top of the retention.
+
+          <ActionPanel actions={actions} onOpen={id => setOpen(id)} />
+
+          {Object.keys(byContractor).length > 0 && (
+            <div className="j-card" style={{ padding: '22px 26px', marginBottom: 26 }}>
+              <div className="j-serif" style={{ fontSize: 18, marginBottom: 6 }}>Applications to send</div>
+              <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.65, margin: '0 0 16px' }}>
+                One letter per contractor, with the sums, dates, statutory interest and the basis under
+                the Construction Act. {profileReady
+                  ? 'Sending is logged, so the next one refers back to it.'
+                  : 'Add your company name and address in settings first, or the letter has no sender.'}
+              </p>
+              {Object.entries(byContractor).map(([contractor, items]) => {
+                const claimed = items.reduce((s, i) => s + i.stage.outstanding, 0)
+                const interest = items.reduce((s, i) => s + i.stage.interest, 0)
+                const prev = lastApplications[contractor]
+                return (
+                  <div key={contractor} style={{ display: 'flex', gap: 16, alignItems: 'center',
+                    flexWrap: 'wrap', padding: '12px 0', borderTop: '1px solid #F4F0E8' }}>
+                    <div style={{ flex: '1 1 220px' }}>
+                      <div style={{ fontSize: 15, fontWeight: 500 }}>{contractor}</div>
+                      <div style={{ fontSize: 13, color: '#8A8279', marginTop: 2 }}>
+                        {money2(claimed + interest)} across {items.length} release{items.length === 1 ? '' : 's'}
+                        {prev?.sent_on ? ` · last applied ${fmtDate(prev.sent_on)}` : ''}
+                      </div>
+                    </div>
+                    <button className="j-btn j-primary" style={{ fontSize: 14, padding: '9px 18px' }}
+                      disabled={!profileReady}
+                      onClick={() => openLetter(contractor, items)}>
+                      {prev?.sent_on ? 'Generate follow up' : 'Generate application'}
+                    </button>
+                  </div>
+                )
+              })}
             </div>
           )}
-          {t.overDeducted > 0 && (
-            <div style={{ marginTop: 12, fontSize: 14, color: '#8F6318', lineHeight: 1.65 }}>
-              <strong>{money2(t.overDeducted)}</strong> has been deducted beyond the contractual cap. That was never due.
-            </div>
-          )}
-        </div>
+        </>
       )}
 
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 16, flexWrap: 'wrap' }}>
@@ -79,19 +156,14 @@ export default function JobsList({ jobs }: { jobs: JobRow[] }) {
         const stages = stagesFor(j)
         const anyOverdue = stages.some(s => s.overdue)
         const isOpen = open === j.id
-        const isEditing = editing === j.id
-
-        if (isEditing) {
-          return <JobForm key={j.id} job={j} onDone={() => setEditing(null)} />
-        }
+        if (editing === j.id) return <JobForm key={j.id} job={j} onDone={() => setEditing(null)} />
 
         return (
           <div key={j.id} className="j-card" style={{ marginBottom: 14, overflow: 'hidden',
             borderColor: anyOverdue ? 'rgba(161,59,42,0.25)' : '#E8E2D8' }}>
             <button onClick={() => setOpen(isOpen ? null : j.id)} aria-expanded={isOpen}
               style={{ width: '100%', textAlign: 'left', background: 'none', border: 0, font: 'inherit',
-                padding: '18px 24px', cursor: 'pointer', display: 'flex', alignItems: 'center',
-                gap: 16, flexWrap: 'wrap' }}>
+                padding: '18px 24px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
               <div style={{ flex: '1 1 200px' }}>
                 <div style={{ fontSize: 16, fontWeight: 600 }}>{j.ref}</div>
                 <div style={{ fontSize: 13, color: '#8A8279', marginTop: 2 }}>
@@ -109,12 +181,13 @@ export default function JobsList({ jobs }: { jobs: JobRow[] }) {
 
             {isOpen && (
               <div style={{ padding: '4px 24px 22px', borderTop: '1px solid #F0EBE2' }}>
-                {Number(j.over_deducted) > 0 && (
+                {Number(j.over_deducted) - Number(j.received_cap) > 0 && (
                   <div style={{ marginTop: 16, marginBottom: 8, padding: '14px 16px', borderRadius: 6,
                     background: 'rgba(176,122,30,0.07)', border: '1px solid rgba(176,122,30,0.22)',
                     fontSize: 14, lineHeight: 1.65, color: '#8F6318' }}>
-                    Retention has passed the {j.cap_pct}% cap. <strong>{money2(Number(j.over_deducted))}</strong>{' '}
-                    has been deducted beyond it and is recoverable now, separately from the releases below.
+                    Retention has passed the {j.cap_pct}% cap.{' '}
+                    <strong>{money2(Number(j.over_deducted) - Number(j.received_cap))}</strong>{' '}
+                    was deducted beyond it and is recoverable now.
                   </div>
                 )}
 
@@ -124,12 +197,19 @@ export default function JobsList({ jobs }: { jobs: JobRow[] }) {
                       <div style={{ fontSize: 15, fontWeight: 500 }}>{s.label}</div>
                       <div style={{ fontSize: 13, color: '#8A8279', marginTop: 2 }}>{s.sub}</div>
                     </div>
-                    <div style={{ fontSize: 15 }}>{money2(s.amount)}</div>
+                    <div style={{ fontSize: 15 }}>
+                      {money2(s.outstanding)}
+                      {s.received > 0 && (
+                        <div style={{ fontSize: 12, color: '#3F6B4C' }}>
+                          {money2(s.received)} of {money2(s.expected)} received
+                        </div>
+                      )}
+                    </div>
                     <div style={{ fontSize: 13, color: '#57514A' }}>
                       {s.due ? fmtDate(s.due) : 'Set completion date'}
                     </div>
                     <div style={{ fontSize: 13 }}>
-                      {s.released ? <span style={{ color: '#3F6B4C' }}>Received</span>
+                      {s.released ? <span style={{ color: '#3F6B4C' }}>Settled</span>
                         : s.overdue ? <span style={{ color: '#A13B2A', fontWeight: 600 }}>{Math.abs(s.days!)}d overdue</span>
                         : s.days !== null ? <span style={{ color: '#8A8279' }}>{s.days} days</span>
                         : <span style={{ color: '#C4BDB2' }}>—</span>}
@@ -142,15 +222,15 @@ export default function JobsList({ jobs }: { jobs: JobRow[] }) {
                     <label key={s.key} style={{ fontSize: 14, display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer' }}>
                       <input type="checkbox" checked={s.released}
                         onChange={e => start(() => { setReleased(j.id, s.key, e.target.checked) })} />
-                      {s.key === 'first' ? 'First half received' : 'Final half received'}
+                      {s.key === 'first' ? 'First half settled' : 'Final half settled'}
                     </label>
                   ))}
                   <button className="j-link" onClick={() => setEditing(j.id)} style={{ marginLeft: 'auto' }}>Edit</button>
                   <button className="j-link" style={{ color: '#8A8279' }}
-                    onClick={() => { if (confirm(`Archive ${j.ref}?`)) start(() => { archiveJob(j.id) }) }}>
-                    Archive
-                  </button>
+                    onClick={() => { if (confirm(`Archive ${j.ref}?`)) start(() => { archiveJob(j.id) }) }}>Archive</button>
                 </div>
+
+                <Receipts jobId={j.id} receipts={receipts.filter(r => r.job_id === j.id)} />
 
                 {j.notes && (
                   <div style={{ marginTop: 16, paddingTop: 14, borderTop: '1px solid #F4F0E8',
