@@ -5,9 +5,9 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools' },
-  title: 'Free Tools for UK Businesses | Data, Construction, Recruitment & Property | Lexalytic',
+  title: 'Free Tools for UK Businesses | Data, Construction, Recruitment, Property | Lexalytic',
   description: 'Free browser based tools for UK businesses. Check a spreadsheet for the errors that break UK systems, track construction retention across every job, see how much placement revenue is still refundable, and work out whether a property needs an HMO licence. No signup, nothing uploaded.',
-  keywords: 'free business tools UK, free data quality checker, spreadsheet error checker UK, construction retention tracker, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
+  keywords: 'free business tools UK, free data quality checker, spreadsheet error checker UK, construction retention tracker, lock-up days calculator, WIP days, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
   openGraph: {
     title: 'Free Tools for UK Businesses | Lexalytic',
     description: 'Spreadsheet data quality, construction retention, recruitment rebate exposure, HMO licensing and certificates. Free, no signup, nothing uploaded.',
@@ -49,6 +49,23 @@ const groups = [
         detail:
           'A paid recovery pack turns anything overdue into a formal application for release, with the schedule, the interest calculation and the basis under the Construction Act.',
         related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+    ],
+  },
+  {
+    heading: 'Professional services',
+    intro:
+      'The gap between doing the work and having the money, and which jobs are causing most of it.',
+    tools: [
+      {
+        href: '/tools/lockup-tracker',
+        name: 'Lock-up and cash release tracker',
+        forWho: 'Agencies, consultancies, accountancy and law firms',
+        summary:
+          'Lock-up is work delivered but not billed, plus work billed but not collected. Most firms measure the second half and never the first, because unbilled time sits in a time recording system rather than on a balance sheet. This builds both from job level, so you get the number without having to find a work in progress figure that does not exist anywhere. It then names the jobs to bill and the invoices to chase, ranked by what each releases.',
+        detail:
+          'A paid cash release plan turns that into something you can put in front of partners, with the priority order and what ten days off your lock-up would be worth.',
+        related: { label: 'Power BI', href: '/services/power-bi' },
       },
     ],
   },
