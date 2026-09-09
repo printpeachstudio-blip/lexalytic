@@ -873,6 +873,12 @@ export default function DataHealthChecker() {
               <button className="dhc-btn dhc-btn-quiet" onClick={reset}>Check another file</button>
             </div>
 
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 620 }}>
+              Built by <a href="/" style={{ color: '#C17D2E' }}>Lexalytic</a>, a UK studio that builds
+              websites, custom software and data systems for small businesses. These tools are free
+              because the work we are paid for is the bespoke version.
+            </p>
+
             {/* What this cannot check */}
             <div style={{ marginTop: 44, paddingTop: 28, borderTop: '1px solid #E8E2D8' }}>
               <h2 className="dhc-serif" style={{ fontSize: 19, fontWeight: 400, margin: '0 0 4px' }}>

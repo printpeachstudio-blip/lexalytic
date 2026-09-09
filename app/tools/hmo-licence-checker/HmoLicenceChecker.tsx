@@ -438,7 +438,13 @@ export default function HmoLicenceChecker() {
               <button className="hmo-btn hmo-quiet" onClick={reset}>Check another property</button>
             </div>
 
-            <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 32, maxWidth: 620 }}>
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 30, maxWidth: 620 }}>
+              Built by <a href="/" style={{ color: '#C17D2E' }}>Lexalytic</a>, a UK studio that builds
+              websites, custom software and data systems for small businesses. These tools are free
+              because the work we are paid for is the bespoke version.
+            </p>
+
+            <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 20, maxWidth: 620 }}>
               This tool covers the national mandatory licensing rules. Additional and selective licensing
               schemes are set locally and change regularly, so always confirm with your own council before
               relying on this. It is guidance, not legal advice.

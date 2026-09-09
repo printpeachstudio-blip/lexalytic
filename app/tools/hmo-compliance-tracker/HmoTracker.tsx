@@ -87,7 +87,9 @@ export default function HmoTracker() {
   const [expanded, setExpanded] = useState<string | null>(null)
 
   const [showForm, setShowForm] = useState(false)
+  const [enquiryType, setEnquiryType] = useState<'sync' | 'portfolio'>('sync')
   const [email, setEmail] = useState('')
+  const [notes, setNotes] = useState('')
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [sendError, setSendError] = useState('')
@@ -231,10 +233,15 @@ export default function HmoTracker() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           email: email.trim(),
-          _subject: 'HMO tracker - wants sync and email reminders',
+          notes: notes.trim(),
+          _subject: enquiryType === 'portfolio'
+            ? `HMO portfolio system enquiry - ${properties.length} properties`
+            : 'HMO tracker - wants sync and email reminders',
           source: 'HMO compliance tracker',
+          enquiry_type: enquiryType,
           properties_tracked: properties.length,
           dates_tracked: allDue.length,
+          property_names: properties.map(p => p.name).join(', '),
         }),
       })
       if (!res.ok) throw new Error()
@@ -492,11 +499,74 @@ export default function HmoTracker() {
         <div style={{ marginTop: 36, padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
           {sent ? (
             <>
-              <div className="t-serif" style={{ fontSize: 20, marginBottom: 10 }}>You are on the list.</div>
+              <div className="t-serif" style={{ fontSize: 20, marginBottom: 10 }}>
+                {enquiryType === 'portfolio' ? 'Thanks, we will be in touch.' : 'You are on the list.'}
+              </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 520 }}>
-                We will let you know when sync and email reminders are ready. Your existing dates will
-                carry over, so nothing you have entered here is wasted.
+                {enquiryType === 'portfolio'
+                  ? 'We will come back within a working day with some questions about how you currently manage the portfolio, and a fixed price if it looks like something we should build.'
+                  : 'We will let you know when sync and email reminders are ready. Your existing dates will carry over, so nothing you have entered here is wasted.'}
               </p>
+            </>
+          ) : properties.length >= 5 ? (
+            <>
+              <div className="t-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
+                {properties.length} properties is past what a browser tab should be holding.
+              </div>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
+                At this size the compliance dates are only part of it. Room-level rent tracking,
+                arrears by room rather than by property, licence conditions per council, tenant
+                records, and a maintenance history that attributes cost to the right room.
+              </p>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 22px', maxWidth: 540 }}>
+                We build that as a single system, priced once and owned by you, rather than a
+                monthly licence for software written for single-let landlords.
+              </p>
+              {!showForm ? (
+                <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <button className="t-btn t-primary" onClick={() => { setEnquiryType('portfolio'); setShowForm(true) }}>
+                    Talk about a portfolio system
+                  </button>
+                  <button
+                    onClick={() => { setEnquiryType('sync'); setShowForm(true) }}
+                    style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
+                      color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}
+                  >
+                    Just tell me when sync is ready
+                  </button>
+                </div>
+              ) : (
+                <div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
+                    <input
+                      className="t-dark-in" type="email" placeholder="Email address" autoComplete="email"
+                      value={email} onChange={e => setEmail(e.target.value)}
+                      onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
+                    />
+                  </div>
+                  {enquiryType === 'portfolio' && (
+                    <textarea
+                      className="t-dark-in" rows={3} placeholder="What is the most painful part right now? (optional)"
+                      style={{ marginBottom: 12, resize: 'vertical' }}
+                      value={notes} onChange={e => setNotes(e.target.value)}
+                    />
+                  )}
+                  {sendError && (
+                    <div style={{ fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',
+                      borderRadius: 6, background: 'rgba(161,59,42,0.2)', maxWidth: 420 }}>{sendError}</div>
+                  )}
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <button className="t-btn t-primary" onClick={submitInterest} disabled={sending}>
+                      {sending ? 'Sending…' : 'Send'}
+                    </button>
+                    <button
+                      onClick={() => setShowForm(false)}
+                      style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
+                        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}
+                    >Cancel</button>
+                  </div>
+                </div>
+              )}
             </>
           ) : (
             <>
@@ -510,11 +580,11 @@ export default function HmoTracker() {
               </p>
               {!showForm ? (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <button className="t-btn t-primary" onClick={() => setShowForm(true)}>
+                  <button className="t-btn t-primary" onClick={() => { setEnquiryType('sync'); setShowForm(true) }}>
                     Tell me when that is ready
                   </button>
                   <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
-                    Managing ten or more? We build portfolio systems too.
+                    Managing five or more? Add them above and we will show you something different.
                   </span>
                 </div>
               ) : (
@@ -526,10 +596,8 @@ export default function HmoTracker() {
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
                   />
                   {sendError && (
-                    <div style={{
-                      fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',
-                      borderRadius: 6, background: 'rgba(161,59,42,0.2)', maxWidth: 420,
-                    }}>{sendError}</div>
+                    <div style={{ fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',
+                      borderRadius: 6, background: 'rgba(161,59,42,0.2)', maxWidth: 420 }}>{sendError}</div>
                   )}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
                     <button className="t-btn t-primary" onClick={submitInterest} disabled={sending}>
@@ -537,10 +605,8 @@ export default function HmoTracker() {
                     </button>
                     <button
                       onClick={() => setShowForm(false)}
-                      style={{
-                        background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
-                        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline',
-                      }}
+                      style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
+                        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}
                     >Cancel</button>
                   </div>
                 </div>
@@ -548,6 +614,12 @@ export default function HmoTracker() {
             </>
           )}
         </div>
+
+        <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 620 }}>
+          Built by <a href="/" style={{ color: '#C17D2E' }}>Lexalytic</a>, a UK studio that builds
+          websites, custom software and data systems for small businesses. These tools are free
+          because the work we are paid for is the bespoke version.
+        </p>
 
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 30, maxWidth: 620 }}>
           Renewal intervals are the national defaults. Your licence conditions may impose shorter
