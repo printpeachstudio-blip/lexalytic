@@ -70,6 +70,11 @@ function uid() {
   return Math.random().toString(36).slice(2, 10)
 }
 
+function todayStr(): string {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
 function icsDate(d: Date): string {
   return `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, '0')}${String(d.getUTCDate()).padStart(2, '0')}`
 }
@@ -536,8 +541,9 @@ export default function RetentionTracker() {
             </div>
             <div className="r-field" style={{ maxWidth: 260 }}>
               <label className="r-label">Practical completion date</label>
-              <input className="r-in" type="date" value={draft.pcDate || ''} onChange={e => setDraft({ ...draft, pcDate: e.target.value })} />
-              <div className="r-hint">Leave blank if the job is still live. Both release dates run from this.</div>
+              <input className="r-in" type="date" max={todayStr()} value={draft.pcDate || ''}
+                onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, pcDate: v }) }} />
+              <div className="r-hint">The date works were actually completed, not a future target. Leave blank if the job is still live. Both release dates run from this.</div>
             </div>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginTop: 8 }}>
               <button className="r-btn r-primary" onClick={addJob} disabled={!draft.ref?.trim() || !draft.contractValue}>Add job</button>

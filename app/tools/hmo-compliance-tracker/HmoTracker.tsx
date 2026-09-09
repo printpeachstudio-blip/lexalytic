@@ -71,6 +71,11 @@ function uid() {
   return Math.random().toString(36).slice(2, 10)
 }
 
+function todayStr(): string {
+  const d = new Date()
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
 function icsDate(d: Date): string {
   const y = d.getUTCFullYear()
   const m = String(d.getUTCMonth() + 1).padStart(2, '0')
@@ -446,7 +451,8 @@ export default function HmoTracker() {
               {open && (
                 <div style={{ padding: '4px 24px 22px', borderTop: '1px solid #F0EBE2' }}>
                   <p style={{ fontSize: 13, color: '#8A8279', margin: '14px 0 6px', lineHeight: 1.6 }}>
-                    Enter the date each was last completed. Leave blank if it does not apply to this property.
+                    Enter the date each certificate was <strong>last completed</strong>, not when it expires.
+                    The renewal date is worked out for you. Leave blank if it does not apply to this property.
                   </p>
                   {CERT_TYPES.map(ct => {
                     const cert = p.certs.find(c => c.type === ct.key)
@@ -468,12 +474,20 @@ export default function HmoTracker() {
                           </div>
                           <div style={{ fontSize: 13, color: '#8A8279', marginTop: 3, lineHeight: 1.55 }}>{ct.note}</div>
                         </div>
-                        <input
-                          className="t-in" type="date" style={{ width: '100%' }}
-                          value={cert?.lastDone || ''}
-                          onChange={e => setCert(p.id, ct.key, e.target.value)}
-                          aria-label={`${ct.label} last completed`}
-                        />
+                        <div>
+                          <input
+                            className="t-in" type="date" style={{ width: '100%' }}
+                            max={todayStr()}
+                            value={cert?.lastDone || ''}
+                            onChange={e => {
+                              const v = e.target.value
+                              if (v && v > todayStr()) return
+                              setCert(p.id, ct.key, v)
+                            }}
+                            aria-label={`${ct.label} last completed`}
+                          />
+                          <div style={{ fontSize: 11, color: '#A39C92', marginTop: 4 }}>Last completed</div>
+                        </div>
                         <div style={{ fontSize: 13, color: st2 ? st2.color : '#C4BDB2' }}>
                           {due && days !== null
                             ? <>Due {fmt(due)}<br /><span style={{ fontWeight: 600 }}>
