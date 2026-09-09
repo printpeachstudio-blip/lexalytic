@@ -60,7 +60,7 @@ const faqData = {
       name: 'What happens if I operate an HMO without a licence?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Operating an unlicensed HMO is a criminal offence. Councils can issue a civil penalty of up to £30,000 or prosecute for an unlimited fine. Tenants can apply for a rent repayment order covering up to 12 months of rent, and any section 21 notice served while unlicensed is invalid.',
+        text: 'Operating an unlicensed HMO is a criminal offence. Councils can issue a civil penalty of up to £30,000 or prosecute for an unlimited fine. Tenants or the local authority can apply for a rent repayment order covering up to 24 months of rent. The Renters Rights Act doubled this from 12 months for offences committed on or after 1 May 2026, and extended the window for bringing a claim from 12 months to two years.',
       },
     },
   ],

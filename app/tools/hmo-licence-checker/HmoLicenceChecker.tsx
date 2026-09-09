@@ -212,8 +212,9 @@ export default function HmoLicenceChecker() {
           Not on how many floors the building has.
         </p>
         <p style={{ fontSize: 14, lineHeight: 1.7, color: '#8A8279', maxWidth: 580, margin: '0 0 32px' }}>
-          Operating an unlicensed HMO carries a civil penalty of up to £30,000, a rent repayment
-          order of up to 12 months, and makes any section 21 notice invalid.
+          Operating an unlicensed HMO carries a civil penalty of up to £30,000 and a rent repayment
+          order of up to 24 months&rsquo; rent. The Renters&rsquo; Rights Act doubled that from 12 months
+          for offences committed on or after 1 May 2026, and gave tenants two years to bring a claim.
         </p>
 
         <div style={{ background: '#fff', border: '1px solid #E8E2D8', borderRadius: 10, padding: '4px 28px' }}>
@@ -292,7 +293,7 @@ export default function HmoLicenceChecker() {
                     ['Per property', 'One licence per property. A portfolio of six HMOs needs six licences, each with its own renewal date.'],
                     ['Documents needed', 'Gas safety certificate, EICR, floor plan with room measurements, fire risk assessment, EPC, and evidence of management arrangements.'],
                     ['Timeline', 'Councils typically inspect within six weeks and decide within twelve. Apply well before you intend to let.'],
-                    ['If you do not', 'Civil penalty up to £30,000, or unlimited fine on prosecution. Tenants can claim a rent repayment order of up to 12 months. Any section 21 notice you serve is invalid.'],
+                    ['If you do not', 'Civil penalty up to £30,000, or an unlimited fine on prosecution. Tenants or the council can claim a rent repayment order of up to 24 months of rent, doubled by the Renters\u2019 Rights Act for offences on or after 1 May 2026. Repeat offenders must be ordered to pay the maximum.'],
                   ].map(([k, v]) => (
                     <div key={k} className="hmo-fact">
                       <div className="hmo-factkey">{k}</div>
