@@ -803,3 +803,44 @@ A client portal solves it properly. Documents are uploaded and downloaded throug
 For firms in regulated sectors - financial advice, legal, accountancy - having a documented and auditable channel for sensitive client data is increasingly an expectation from the FCA, SRA, and ICAEW, not just a best practice.
 
 The firms that move to a proper portal almost always say the same thing: they wish they had done it sooner. Not because it changed their relationship with clients. Because it made a daily operational headache disappear.
+
+2026-09-16
+A UK company registration number is eight digits.
+
+Open a supplier list in Excel and a good number of them will be seven.
+
+Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
+
+Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
+
+The same thing happens to sort codes, which matters considerably more when you are building a payment file.
+
+What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
+
+We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
+
+2026-09-23
+For offences committed on or after 1 May 2026, the maximum rent repayment order is two years of rent rather than one.
+
+The window for bringing a claim doubled too, from twelve months to two years. Six new offences were added to the list that triggers one.
+
+For a landlord letting five rooms at 700 a month, the theoretical maximum went from around 42,000 to around 84,000. That sits alongside a council civil penalty of up to 30,000, not instead of it.
+
+The change that catches most people is the extension to superior landlords. Before the Act, following Rakusen v Jepsen, an order could only be made against the immediate landlord. In a rent-to-rent arrangement the operating company was liable and the property owner was not. That is now reversed.
+
+The licensing rules themselves have not changed. Five or more people from two or more households sharing facilities, no minimum number of storeys since 2018.
+
+What changed is the cost of not realising you were caught by them.
+
+2026-09-30
+Most councils inspect an HMO within six weeks of a licence application.
+
+The officer measures the rooms. Not estimates, measures.
+
+Any room slept in by one adult must be at least 6.51 square metres. Two adults sharing needs 10.22. Below 4.64 and it cannot be used for sleeping at all. Space under a ceiling lower than 1.5 metres does not count toward the total, which is what catches out attic rooms that look fine on a floor plan.
+
+If a room fails, it does not count toward your licensed occupancy. The licence gets issued for fewer people than you are currently housing, and the rent the property can lawfully produce drops accordingly.
+
+The other reliable failure is fire doors. Self-closers that have been wedged open or unscrewed, and intumescent strips buried under enough coats of paint that they will not do anything.
+
+Neither of these is difficult to fix. Both are considerably cheaper to fix before the inspection than after it.

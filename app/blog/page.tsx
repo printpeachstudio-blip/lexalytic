@@ -9,6 +9,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'hmo-licence-inspection-what-to-expect',
+    title: 'What Actually Happens at an HMO Licence Inspection',
+    excerpt: 'What a council officer checks during an HMO licence inspection, the failures that come up most often, and how to prepare so the visit does not produce a schedule of works.',
+    date: 'October 2026',
+    readTime: '7 min read',
+    tag: 'Property',
+  },
+  {
+    slug: 'rent-repayment-orders-doubled-2026',
+    title: 'Rent Repayment Orders Doubled in May 2026. What Landlords Need to Know',
+    excerpt: 'The Renters Rights Act doubled the maximum rent repayment order from 12 to 24 months. What changed, who is newly exposed, and what the combined penalty looks like.',
+    date: 'September 2026',
+    readTime: '7 min read',
+    tag: 'Property',
+  },
+  {
+    slug: 'excel-strips-leading-zeros-company-numbers',
+    title: 'Why Excel Deletes the First Digit of Your Company Numbers',
+    excerpt: 'Excel strips leading zeros from anything it reads as a number, quietly corrupting UK company registration numbers, sort codes and phone numbers. Why it happens and how to stop it.',
+    date: 'September 2026',
+    readTime: '7 min read',
+    tag: 'Data Quality',
+  },
+  {
     slug: 'client-document-sharing-portal-uk',
     title: 'Client Document Sharing Portal UK - Moving Beyond Email and Shared Folders',
     excerpt: 'Why UK professional services firms are replacing email and Dropbox with proper client document portals. What changes, what it costs, and how to make the switch.',

@@ -89,7 +89,7 @@ jobs:
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "10" ]; then
-            echo "slug=how-to-see-which-jobs-clients-are-profitable" >> $GITHUB_OUTPUT
+            echo "slug=excel-strips-leading-zeros-company-numbers" >> $GITHUB_OUTPUT
             echo "title=How to See Which Jobs and Clients Are Actually Making You Money" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK service businesses know their total revenue. Very few can tell you which specific clients or jobs are actually profitable and which ones are quietly draining the business." >> $GITHUB_OUTPUT
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
@@ -113,7 +113,7 @@ jobs:
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
             echo "date=September 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "9" ] && [ "$DAY" = "24" ]; then
-            echo "slug=personal-trainer-client-management-uk" >> $GITHUB_OUTPUT
+            echo "slug=rent-repayment-orders-doubled-2026" >> $GITHUB_OUTPUT
             echo "title=How to Stop Your Business Running on Gut Feeling" >> $GITHUB_OUTPUT
             echo "excerpt=Most small business decisions are made on instinct because the data is not available quickly enough to be useful. Here is how to change that without a data team or expensive software." >> $GITHUB_OUTPUT
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
@@ -137,7 +137,7 @@ jobs:
             echo "tag=Power BI" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "8" ]; then
-            echo "slug=what-is-power-query-uk-business" >> $GITHUB_OUTPUT
+            echo "slug=hmo-licence-inspection-what-to-expect" >> $GITHUB_OUTPUT
             echo "title=My Accountant Keeps Asking for Spreadsheets — How to Fix It" >> $GITHUB_OUTPUT
             echo "excerpt=If your accountant constantly asks you to export reports and send spreadsheets manually, there is a better way. Here is how to set up automatic data sharing that saves both of you time." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
@@ -185,7 +185,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "5" ]; then
-            echo "slug=custom-crm-for-uk-small-business" >> $GITHUB_OUTPUT
+            echo "slug=how-to-see-which-jobs-clients-are-profitable" >> $GITHUB_OUTPUT
             echo "title=How to Know Your True Labour Cost Per Employee (UK Guide)" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK business owners know their salary bill. Very few know the true cost of each employee once you factor in National Insurance, pension, holiday pay, sick pay, and management time." >> $GITHUB_OUTPUT
             echo "tag=Business Finance" >> $GITHUB_OUTPUT
@@ -197,7 +197,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "12" ]; then
-            echo "slug=sales-pipeline-dashboard-power-bi-excel" >> $GITHUB_OUTPUT
+            echo "slug=personal-trainer-client-management-uk" >> $GITHUB_OUTPUT
             echo "title=Excel vs Accounting Software — What Should Live Where?" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK businesses use both Excel and accounting software but nobody has decided what goes where. The result is duplicated data, manual transfers, and reporting nobody quite trusts." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
@@ -209,7 +209,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "19" ]; then
-            echo "slug=wedding-supplier-crm-uk" >> $GITHUB_OUTPUT
+            echo "slug=what-is-power-query-uk-business" >> $GITHUB_OUTPUT
             echo "title=How to Build a Budget vs Actuals Report That Updates Automatically" >> $GITHUB_OUTPUT
             echo "excerpt=A budget vs actuals report is one of the most useful financial tools a business can have. It is also one of the most time-consuming to maintain manually. Here is how to automate it." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
