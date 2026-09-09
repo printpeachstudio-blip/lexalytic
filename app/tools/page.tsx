@@ -5,12 +5,12 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools' },
-  title: 'Free Tools for UK Businesses | Data, Construction & Property | Lexalytic',
-  description: 'Free browser based tools for UK businesses. Check a spreadsheet for the errors that break UK systems, track construction retention across every job, and work out whether a property needs an HMO licence. No signup, nothing uploaded.',
-  keywords: 'free business tools UK, free data quality checker, spreadsheet error checker UK, construction retention tracker, retention release dates, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
+  title: 'Free Tools for UK Businesses | Data, Construction, Recruitment & Property | Lexalytic',
+  description: 'Free browser based tools for UK businesses. Check a spreadsheet for the errors that break UK systems, track construction retention across every job, see how much placement revenue is still refundable, and work out whether a property needs an HMO licence. No signup, nothing uploaded.',
+  keywords: 'free business tools UK, free data quality checker, spreadsheet error checker UK, construction retention tracker, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
   openGraph: {
     title: 'Free Tools for UK Businesses | Lexalytic',
-    description: 'Spreadsheet error checking, construction retention tracking, HMO licensing and certificates. Free, no signup, nothing uploaded.',
+    description: 'Spreadsheet data quality, construction retention, recruitment rebate exposure, HMO licensing and certificates. Free, no signup, nothing uploaded.',
     url: 'https://www.lexalytic.com/tools',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -53,6 +53,23 @@ const groups = [
     ],
   },
   {
+    heading: 'Recruitment',
+    intro:
+      'Revenue you have already billed, and the part of it a client can still ask for back.',
+    tools: [
+      {
+        href: '/tools/rebate-exposure',
+        name: 'Rebate exposure tracker',
+        forWho: 'Perm desks and agency owners',
+        summary:
+          'Every permanent placement inside its rebate window is a contingent liability, and individually nobody worries about it. Across a desk carrying fifteen live placements it becomes a number worth knowing, particularly if three go in the same month. This tracks what each placement is worth on its sliding scale today, when it falls out of the window, and where an unpaid invoice complicates the position.',
+        detail:
+          'A paid desk exposure report puts the figure into something you can take to a board meeting or an invoice finance provider.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+    ],
+  },
+  {
     heading: 'Property and lettings',
     intro:
       'The licensing rules did not change in 2026. What it costs to get them wrong did.',
@@ -87,7 +104,7 @@ const structuredData = {
   '@type': 'CollectionPage',
   name: 'Free Tools for UK Businesses',
   description:
-    'A set of free browser based tools for UK businesses covering spreadsheet data quality, construction retention tracking, HMO licensing and certificate renewal.',
+    'A set of free browser based tools for UK businesses covering spreadsheet data quality, construction retention, recruitment rebate exposure, HMO licensing and certificate renewal.',
   url: 'https://www.lexalytic.com/tools',
   isPartOf: { '@type': 'WebSite', name: 'Lexalytic', url: 'https://www.lexalytic.com' },
   mainEntity: {

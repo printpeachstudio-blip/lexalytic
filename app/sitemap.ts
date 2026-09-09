@@ -142,5 +142,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/hmo-licence-inspection-what-to-expect', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/tools/retention-tracker', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/blog/main-contractor-not-released-retention', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/tools/rebate-exposure', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   ]
 }
