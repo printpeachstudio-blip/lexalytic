@@ -197,7 +197,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "12" ]; then
-            echo "slug=personal-trainer-client-management-uk" >> $GITHUB_OUTPUT
+            echo "slug=recruitment-rebate-liability-nobody-measures" >> $GITHUB_OUTPUT
             echo "title=Excel vs Accounting Software — What Should Live Where?" >> $GITHUB_OUTPUT
             echo "excerpt=Most UK businesses use both Excel and accounting software but nobody has decided what goes where. The result is duplicated data, manual transfers, and reporting nobody quite trusts." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
@@ -251,7 +251,7 @@ jobs:
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "15" ]; then
-            echo "slug=automate-payroll-reporting-excel-uk" >> $GITHUB_OUTPUT
+            echo "slug=personal-trainer-client-management-uk" >> $GITHUB_OUTPUT
             echo "title=End of Year Data Checklist for UK Small Businesses" >> $GITHUB_OUTPUT
             echo "excerpt=Before you close out 2026, here is the data checklist every UK small business should run through to make sure your records are clean, your reporting is accurate, and you start 2027 in control." >> $GITHUB_OUTPUT
             echo "tag=Data Automation" >> $GITHUB_OUTPUT
