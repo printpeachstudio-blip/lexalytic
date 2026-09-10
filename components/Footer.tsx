@@ -20,9 +20,12 @@ export default function Footer() {
               { href: '/case-studies', label: 'Case Studies' },
               { href: '/#results', label: 'Results' },
               { href: '/tools', label: 'Free Tools' },
+              { href: '/retention-manager', label: 'Retention Manager' },
               { href: '/blog', label: 'Blog' },
               { href: '/about', label: 'About' },
               { href: '/#contact', label: 'Contact' },
+              { href: '/terms', label: 'Terms' },
+              { href: '/privacy', label: 'Privacy' },
             ].map(l => (
               <a key={l.href} href={l.href} style={{ fontSize: '13px', color: 'rgba(255,255,255,0.4)', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.8)'}

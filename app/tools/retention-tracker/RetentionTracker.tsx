@@ -762,6 +762,28 @@ export default function RetentionTracker() {
 
         {/* Portfolio / sync */}
         <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
+          <div className="r-serif" style={{ fontSize: 19, marginBottom: 10 }}>
+            Want it to remember for you?
+          </div>
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: '0 0 8px', maxWidth: 570 }}>
+            This page forgets everything if you clear your browser, and it cannot email you. Retention
+            Manager is the same thing with an account behind it: reminders at 90, 30 and 7 days before
+            each release, application letters generated from your data, part payments logged, and
+            everything on any device.
+          </p>
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: '0 0 18px', maxWidth: 570 }}>
+            From £19 a month. Fourteen days free and no card needed.
+          </p>
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+            <a href="/retention-manager" className="r-btn r-primary"
+              style={{ textDecoration: 'none', display: 'inline-block' }}>
+              See what it does
+            </a>
+            <a href="/signup" style={{ fontSize: 14, color: '#8A8279' }}>Or start a trial now</a>
+          </div>
+        </div>
+
+        <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
           {sent ? (
             <>
               <div className="r-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>

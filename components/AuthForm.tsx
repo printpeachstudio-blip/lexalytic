@@ -142,6 +142,15 @@ export default function AuthForm({ mode }: { mode: 'signin' | 'signup' }) {
         {busy ? 'One moment…' : mode === 'signup' ? 'Create account' : 'Sign in'}
       </button>
 
+      {mode === 'signup' && (
+        <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.65, marginTop: 14 }}>
+          Creating an account means you accept our{' '}
+          <Link href="/terms" style={{ color: '#8A8279', textDecoration: 'underline' }}>terms of service</Link>{' '}
+          and{' '}
+          <Link href="/privacy" style={{ color: '#8A8279', textDecoration: 'underline' }}>privacy policy</Link>.
+        </p>
+      )}
+
       {mode === 'signin' && (
         <p style={{ fontSize: 14, marginTop: 16, textAlign: 'center' }}>
           <Link href="/forgot-password" style={{ color: '#8A8279' }}>Forgotten your password?</Link>

@@ -64,8 +64,8 @@ const groups = [
         summary:
           'Retention is rarely disputed. It is forgotten, because the second half falls due twelve months after practical completion when nobody is watching the contract any more. Add your jobs and this works out what is held, whether deduction has passed the cap it should have stopped at, and the date each half falls due. Overdue releases are flagged with the statutory interest accruing on them at eight points over base.',
         detail:
-          'A paid recovery pack turns anything overdue into a formal application for release, with the schedule, the interest calculation and the basis under the Construction Act.',
-        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+          'There is also Retention Manager, a subscription version with an account behind it, email reminders before each release falls due, and application letters generated from your data. From £19 a month.',
+        related: { label: 'Retention Manager', href: '/retention-manager' },
       },
     ],
   },
