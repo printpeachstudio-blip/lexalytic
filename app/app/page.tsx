@@ -4,6 +4,9 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import JobsList from '@/components/app/JobsList'
 import AppNav from '@/components/app/AppNav'
+import Paywall from '@/components/app/Paywall'
+import TrialBanner from '@/components/app/TrialBanner'
+import { accessFor, type SubscriptionRow } from '@/lib/billing'
 import type { JobRow, Receipt, Profile } from '@/lib/retention'
 
 export const metadata: Metadata = {
@@ -15,6 +18,20 @@ export default async function AppPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/signin')
+
+  const { data: mem } = await supabase
+    .from('organisation_members').select('org_id').eq('user_id', user.id).limit(1).single()
+
+  const { data: orgRow } = mem
+    ? await supabase.from('organisations').select('created_at').eq('id', mem.org_id).single()
+    : { data: null }
+
+  const { data: subRow } = mem
+    ? await supabase.from('subscriptions').select('*').eq('org_id', mem.org_id).single()
+    : { data: null }
+
+  const access = accessFor(subRow as SubscriptionRow | null, orgRow?.created_at ?? new Date().toISOString())
+  if (!access.allowed) return <Paywall access={access} />
 
   const [{ data: jobsData }, { data: profileData }, { data: appsData }] = await Promise.all([
     supabase.from('job_positions').select('*').order('created_at', { ascending: false }),
@@ -47,6 +64,7 @@ export default async function AppPage() {
     <div style={{ background: '#FDFCFA', minHeight: '100vh', color: '#1A1815', paddingBottom: 70,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
       <AppNav current="/app" />
+      <TrialBanner access={access} />
 
       <div style={{ maxWidth: 980, margin: '0 auto', padding: '36px 20px' }}>
         {needsProfile && jobs.length > 0 && (

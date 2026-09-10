@@ -6,6 +6,7 @@ export default function AppNav({ current }: { current?: string }) {
     { href: '/app/applications', label: 'Applications' },
     { href: '/app/archive', label: 'Archive' },
     { href: '/app/team', label: 'Team' },
+    { href: '/app/billing', label: 'Billing' },
     { href: '/app/settings', label: 'Settings' },
   ]
   return (
