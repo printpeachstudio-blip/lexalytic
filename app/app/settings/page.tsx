@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { saveProfile } from '../actions'
+import AppNav from '@/components/app/AppNav'
 
 export const metadata: Metadata = {
   title: 'Settings | Lexalytic',
@@ -38,16 +39,7 @@ export default async function SettingsPage({ searchParams }: { searchParams: Pro
           padding: 11px 22px; border: 0; background: #C17D2E; color: #fff; }
       `}</style>
 
-      <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div style={{ maxWidth: 940, margin: '0 auto', padding: 20, display: 'flex',
-          alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-          <Link href="/app" style={{ fontFamily: 'Georgia, serif', fontSize: 20,
-            letterSpacing: '-0.02em', color: '#1A1815', textDecoration: 'none' }}>
-            Lex<span style={{ color: '#C17D2E' }}>alytic</span>
-          </Link>
-          <Link href="/app" style={{ fontSize: 14, color: '#8A8279' }}>Back to jobs</Link>
-        </div>
-      </div>
+      <AppNav current="/app/settings" />
 
       <div style={{ maxWidth: 620, margin: '0 auto', padding: '48px 20px' }}>
         <h1 style={{ fontFamily: 'Georgia, serif', fontSize: 26, fontWeight: 400,

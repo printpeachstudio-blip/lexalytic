@@ -3,6 +3,7 @@
 import React, { useState, useTransition, useCallback } from 'react'
 import JobForm from './JobForm'
 import Receipts from './Receipts'
+import Certifications from './Certifications'
 import ActionPanel from './ActionPanel'
 import { setReleased, archiveJob, logApplication } from '@/app/app/actions'
 import { buildLetterHtml, type LetterItem } from '@/lib/letter'
@@ -14,10 +15,11 @@ import {
 const AMBER = '#C17D2E'
 
 export default function JobsList({
-  jobs, receipts, profile, lastApplications,
+  jobs, receipts, certifications, profile, lastApplications,
 }: {
   jobs: JobRow[]
   receipts: Receipt[]
+  certifications: any[]
   profile: Profile
   lastApplications: Record<string, { sent_on: string | null; total_claimed: number }>
 }) {
@@ -148,6 +150,11 @@ export default function JobsList({
           {jobs.length ? `Jobs (${jobs.length})` : 'Add your first job'}
         </h2>
         {!adding && jobs.length > 0 && <button className="j-link" onClick={() => setAdding(true)}>Add another</button>}
+        {jobs.length > 0 && (
+          <a href="/api/export/retention" style={{ marginLeft: 'auto', fontSize: 14, color: '#8A8279' }}>
+            Export to CSV
+          </a>
+        )}
       </div>
 
       {(adding || jobs.length === 0) && <JobForm onDone={() => setAdding(false)} />}
@@ -231,6 +238,8 @@ export default function JobsList({
                 </div>
 
                 <Receipts jobId={j.id} receipts={receipts.filter(r => r.job_id === j.id)} />
+
+                <Certifications jobId={j.id} entries={certifications.filter(c => c.job_id === j.id)} />
 
                 {j.notes && (
                   <div style={{ marginTop: 16, paddingTop: 14, borderTop: '1px solid #F4F0E8',
