@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
+import Tools from '@/components/Tools'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import Results from '@/components/Results'
@@ -67,6 +68,7 @@ export default function Home() {
         <WhoWeWorkWith />
         <Work />
         <Services />
+        <Tools />
         <HowItWorks />
         <Results />
         <Testimonials />
