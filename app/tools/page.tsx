@@ -42,6 +42,16 @@ const groups = [
       'Most business data problems are invisible until something downstream fails. These find them first.',
     tools: [
       {
+        href: '/tools/reporting-cost',
+        name: 'Manual reporting cost calculator',
+        forWho: 'Anyone rebuilding the same report every month',
+        summary:
+          'Works out what manual reporting actually costs, by role, using true employment cost rather than salary. Most calculators multiply hours by salary and understate it by roughly a third, because an hour of someone\u2019s time costs their salary plus employer National Insurance plus pension, spread across the weeks they actually work rather than all fifty two.',
+        detail:
+          'It also shows the hours in working weeks, flags where an expensive person is doing cheap work, and calculates how quickly automating it would pay for itself.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+      {
         href: '/tools/data-health-check',
         name: 'Data health check',
         forWho: 'Anyone importing a customer or supplier list',

@@ -20,10 +20,10 @@ const tools = [
     who: 'Weighing up a build',
   },
   {
-    href: '/tools/hmo-licence-checker',
-    name: 'HMO licence checker',
-    line: 'Four questions and you know whether a property needs a mandatory licence, what it costs, and what the penalty is without one.',
-    who: 'Landlords',
+    href: '/tools/reporting-cost',
+    name: 'Reporting cost calculator',
+    line: 'What manual reporting actually costs, by role, using true employment cost rather than salary. Then how quickly automating it would pay for itself.',
+    who: 'Every business',
   },
 ]
 
@@ -57,7 +57,7 @@ export default function Tools() {
             margin: 0,
             maxWidth: '460px',
           }}>
-            Six tools we needed and could not find a decent UK version of, so we built them. No signup,
+            Seven tools we needed and could not find a decent UK version of, so we built them. No signup,
             no email wall, and nothing you enter is sent anywhere. They are also a fair test of whether
             we know what we are doing.
           </p>
@@ -116,7 +116,7 @@ export default function Tools() {
 
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Link href="/tools" className="btn-primary" style={{ fontSize: '15px' }}>
-            See all six tools
+            See all seven tools
           </Link>
           <span style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7' }}>
             One of them grew into a product.{' '}
