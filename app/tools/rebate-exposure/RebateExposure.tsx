@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
 // Stripe Payment Link for the desk exposure report.
 // Success URL must be: https://www.lexalytic.com/tools/rebate-exposure?ref=der-4m7xp2
-const STRIPE_LINK = 'https://buy.stripe.com/4gM3coa8N72q9vS9VW3AY05'
+const STRIPE_LINK = 'https://buy.stripe.com/5kQ5kwep3aeC5fCgkk3AY08'
 const REPORT_PRICE = '£29'
 const UNLOCK_PARAM = 'der-4m7xp2'
 

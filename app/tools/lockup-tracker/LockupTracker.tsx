@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
 // Stripe Payment Link for the cash release plan.
 // Success URL: https://www.lexalytic.com/tools/lockup-tracker?ref=crp-9j4tn6
-const STRIPE_LINK = 'https://buy.stripe.com/14AbIUcgVcmK4by3xy3AY06'
+const STRIPE_LINK = 'https://buy.stripe.com/9B66oA5Sx1I65fCfgg3AY09'
 const PLAN_PRICE = '£29'
 const UNLOCK_PARAM = 'crp-9j4tn6'
 
