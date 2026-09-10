@@ -15,9 +15,57 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Personal Trainer Client Management Software UK - What Actually Works in 2027",
+  "description": "The honest guide to client management software for UK personal trainers. What the tools do well, where they fall short, and when a bespoke solution makes more sense.",
+  "datePublished": "2027-04-15",
+  "dateModified": "2027-04-15",
+  "author": {
+    "@type": "Person",
+    "name": "Mihir Hindocha",
+    "url": "https://www.lexalytic.com/about",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Lexalytic",
+      "url": "https://www.lexalytic.com"
+    },
+    "knowsAbout": [
+      "Business intelligence",
+      "Data automation",
+      "Custom software development",
+      "Power BI",
+      "Web development"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "BSc Financial Computing"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lexalytic",
+    "url": "https://www.lexalytic.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.lexalytic.com/linkedin-banner.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.lexalytic.com/blog/personal-trainer-client-management-uk"
+  },
+  "inLanguage": "en-GB",
+  "wordCount": 1163,
+  "articleSection": "Fitness Business"
+}
+
 export default function BlogPost() {
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
           <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: 'var(--ink)', letterSpacing: '-0.03em' }}>Lex<span style={{ color: 'var(--amber)' }}>alytic</span></Link>
@@ -32,7 +80,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Fitness Business</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2027 · 8 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2027 · 5 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Personal Trainer Client Management Software UK - What Actually Works in 2027</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

@@ -15,9 +15,57 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Main Contractor Has Not Released Your Retention. What You Can Actually Do.",
+  "description": "Retention that has passed its release date is a debt, not a favour. Your rights under the Construction Act, the interest you can charge, and the adjudication route that gets a decision in 28 days.",
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15",
+  "author": {
+    "@type": "Person",
+    "name": "Mihir Hindocha",
+    "url": "https://www.lexalytic.com/about",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Lexalytic",
+      "url": "https://www.lexalytic.com"
+    },
+    "knowsAbout": [
+      "Business intelligence",
+      "Data automation",
+      "Custom software development",
+      "Power BI",
+      "Web development"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "BSc Financial Computing"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lexalytic",
+    "url": "https://www.lexalytic.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.lexalytic.com/linkedin-banner.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.lexalytic.com/blog/main-contractor-not-released-retention"
+  },
+  "inLanguage": "en-GB",
+  "wordCount": 1872,
+  "articleSection": "Construction"
+}
+
 export default function BlogPost() {
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
           <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: 'var(--ink)', letterSpacing: '-0.03em' }}>Lex<span style={{ color: 'var(--amber)' }}>alytic</span></Link>
