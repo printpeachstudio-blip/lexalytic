@@ -9,6 +9,7 @@ export default function MarginNav({ current, siteName }: { current?: string; sit
     { href: '/margin/sessions', label: 'Sessions' },
     { href: '/margin/events', label: 'Log' },
     { href: '/margin/stock', label: 'Stock' },
+    { href: '/margin/billing', label: 'Billing' },
     { href: '/margin/settings', label: 'Settings' },
   ]
   return (

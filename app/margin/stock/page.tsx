@@ -26,7 +26,7 @@ export default async function StockPage() {
     : { data: null }
 
   const access = accessFor(subRow as SubscriptionRow | null, orgRow?.created_at ?? new Date().toISOString(), 'margin')
-  if (!access.allowed) return <Paywall access={access} />
+  if (!access.allowed) return <Paywall access={access} product="margin" />
 
   const { data: sites } = await supabase
     .from('sites').select('*').eq('archived', false).order('created_at')
