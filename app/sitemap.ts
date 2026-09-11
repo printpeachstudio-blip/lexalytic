@@ -151,5 +151,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/tools/reporting-cost', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/industries', lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
     { url: 'https://www.lexalytic.com/industries/property', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/restaurant-benchmark-check', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/industries/hospitality', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/delivery-margin', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/pub-gp-calculator', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/labour-by-session', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   ]
 }
