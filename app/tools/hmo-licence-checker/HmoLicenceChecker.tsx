@@ -409,7 +409,7 @@ export default function HmoLicenceChecker() {
 
             <div style={{ marginTop: 36, padding: 32, borderRadius: 10, background: INK, color: '#fff' }}>
               <div className="hmo-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
-                Knowing you need a licence is the easy part.
+                Knowing this looks like it needs a licence is the easy part.
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
                 Keeping it is the work. Gas certificate every year. EICR every five. Fire alarm

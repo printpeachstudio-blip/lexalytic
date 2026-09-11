@@ -195,6 +195,11 @@ export default function InvoicesClient({
         <div style={{ fontSize: 13.5, color: '#8A8279', lineHeight: 1.6 }}>
           A photo taken on a phone is usually fine. PDF works too. Up to 10MB.
         </div>
+        <div style={{ fontSize: 12.5, color: '#8A8279', lineHeight: 1.6, marginTop: 8,
+          maxWidth: 520, marginLeft: 'auto', marginRight: 'auto' }}>
+          The file is stored in your account and sent to Anthropic, whose model reads it. They do not
+          use it to train anything. Deleting the invoice deletes the file.
+        </div>
       </div>
 
       {invoices.length === 0 && (

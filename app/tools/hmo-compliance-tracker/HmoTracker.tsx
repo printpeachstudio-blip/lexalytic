@@ -635,6 +635,10 @@ export default function HmoTracker() {
           because the work we are paid for is the bespoke version.
         </p>
 
+        <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 660 }}>
+          Renewal intervals here are the common ones, but your licence conditions may impose shorter periods and they take precedence over anything shown. A gas safety certificate must be renewed annually and letting without a valid one is a criminal offence rather than a licence breach, so that date is worth confirming against the certificate itself rather than relying on a reminder. This is a tracker, not legal advice, and the obligation to hold current certificates remains yours. If you are unsure what your licence requires, ask the issuing council, since the conditions vary between them.
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 30, maxWidth: 620 }}>
           Renewal intervals are the national defaults. Your licence conditions may impose shorter
           intervals or additional requirements, so check your own licence schedule. This is a
