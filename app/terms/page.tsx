@@ -93,6 +93,13 @@ const sections: [string, string[]][] = [
   ['15. Law', [
     'These terms are governed by the law of England and Wales, and the courts of England and Wales have exclusive jurisdiction.',
   ]],
+
+  ['13. The free tools and one-off reports', [
+    'The calculators on this site run in your browser and apply general rules to the numbers you enter. They do not know your contract, your council, your accounting policies or anything else particular to you, and a general rule is not a substitute for the document that actually governs your position.',
+    'Several of them touch things with legal or financial consequences. Treat the output as a prompt to check rather than an answer to rely on, and where a decision matters take advice from someone who can see the whole picture.',
+    'Some tools produce a report for a one-off payment. The report sets out the figures you entered and what our model makes of them, with the working shown. We do not check the figures you gave us, and the report is a management document rather than professional advice.',
+    'If a report is not what you expected, tell us within fourteen days and we will refund it without asking why. Digital content supplied immediately can lose the automatic cancellation right, and we would rather give the money back than rely on that.',
+  ]],
 ]
 
 export default function TermsPage() {

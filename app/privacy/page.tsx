@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/privacy' },
   title: 'Privacy Policy | Lexalytic',
-  description: 'What data Lexalytic collects, why, how long it is kept, and how to get it deleted. Covers the website, the free tools and Retention Manager.',
+  description: 'What data Lexalytic collects, why, how long it is kept, and how to get it deleted. Covers the website, the free tools, Retention Manager and Margin Manager.',
   robots: { index: true, follow: true },
 }
 
@@ -176,6 +176,36 @@ export default function PrivacyPage() {
             No system is perfectly secure. If a breach occurs that is likely to affect your rights we
             will tell you and the ICO within seventy two hours.
           </P>
+        <H>Where your data goes when you use a tool</H>
+        <P>
+          Most of the free calculators run entirely in your browser. Nothing you type reaches us,
+          which is the point of building them that way: they work on a client list you would not be
+          comfortable emailing.
+        </P>
+        <P>
+          Two things are different and worth naming plainly. The Companies House check in the data
+          health tool sends only the company numbers to our server and on to the Companies House
+          public API. Names, emails, addresses and phone numbers stay in your browser and are never
+          transmitted. A company number is public register data rather than personal data.
+        </P>
+        <P>
+          Invoices uploaded to Margin Manager are stored in our database and sent to Anthropic, whose
+          model reads them and returns the line items. They process the file to give that answer and
+          do not use it to train their models. The file stays in your account until you delete it,
+          and deleting the invoice deletes the file.
+        </P>
+
+        <H>Who else handles your data</H>
+        <P>
+          Supabase for the database and file storage, hosted in London. Vercel for hosting. Stripe
+          for payments, who hold card details so that we do not. Resend for the emails the software
+          sends. Anthropic for reading uploaded invoices. Each acts on our instructions and none of
+          them sells your data.
+        </P>
+        <P>
+          Where you pay us, Stripe also collect what they need for their own legal obligations, and
+          their privacy notice governs that part.
+        </P>
 
           <H>Changes</H>
           <P>
