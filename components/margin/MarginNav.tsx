@@ -5,6 +5,7 @@ export default function MarginNav({ current, siteName }: { current?: string; sit
     { href: '/margin', label: 'Overview' },
     { href: '/margin/dishes', label: 'Dishes' },
     { href: '/margin/ingredients', label: 'Ingredients' },
+    { href: '/margin/invoices', label: 'Invoices' },
     { href: '/margin/sessions', label: 'Sessions' },
     { href: '/margin/events', label: 'Log' },
     { href: '/margin/stock', label: 'Stock' },
