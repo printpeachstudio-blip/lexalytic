@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState, useCallback, useRef } from 'react'
+import React, { useState, useCallback, useRef, useEffect } from 'react'
 import Papa from 'papaparse'
+import { FIXES, applyFixes, toCsv, extractCompanyNumbers, type FixId } from '@/lib/data-fixes'
 
 // ---------- UK validation rules ----------
 
@@ -418,7 +419,29 @@ export default function DataHealthChecker() {
   const [sent, setSent] = useState(false);
   const [sendError, setSendError] = useState('');
   const [form, setForm] = useState({ name: '', email: '', company: '', notes: '' });
+
+  // Kept so the file can actually be fixed rather than only reported on
+  const [rows, setRows] = useState<Record<string, string>[]>([]);
+  const [headers, setHeaders] = useState<string[]>([]);
+  const [paid, setPaid] = useState(false);
+  const [selectedFixes, setSelectedFixes] = useState<Set<FixId>>(new Set());
+  const [fixResult, setFixResult] = useState<any>(null);
+  const [chResult, setChResult] = useState<any>(null);
+  const [chBusy, setChBusy] = useState(false);
+  const [chError, setChError] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('lexalytic.dhc.paid.v1') === '1') setPaid(true);
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('ref') === 'dfx-7n2rk4') {
+        localStorage.setItem('lexalytic.dhc.paid.v1', '1');
+        setPaid(true);
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    } catch { /* storage unavailable */ }
+  }, []);
 
   const run = useCallback((text: string, name: string) => {
     setState('working');
@@ -439,6 +462,9 @@ export default function DataHealthChecker() {
             setState('error');
             return;
           }
+          const clean = (res.data as any[]).filter(r => r && typeof r === 'object');
+          setRows(clean);
+          setHeaders(headers);
           const analysis = analyse(res.data, headers);
           setResult(analysis);
           const groups: Record<string, boolean> = {};
@@ -471,6 +497,8 @@ export default function DataHealthChecker() {
     setState('idle'); setResult(null); setFileName(''); setErrorMsg('');
     setShowForm(false); setSent(false); setSendError('');
     setForm({ name: '', email: '', company: '', notes: '' });
+    setRows([]); setHeaders([]); setFixResult(null); setChResult(null);
+    setSelectedFixes(new Set()); setChError('');
   };
 
   const buildSummary = () => {
@@ -533,6 +561,48 @@ export default function DataHealthChecker() {
 
   const groupOrder = ['UK checks', 'Structure', 'Contact data', 'Completeness', 'Formatting'];
   const orderedGroups = groupOrder.filter((k: any) => grouped[k]);
+
+
+  const runFixes = useCallback(() => {
+    if (!rows.length || !selectedFixes.size) return;
+    const out = applyFixes(rows, headers, selectedFixes);
+    setFixResult(out);
+  }, [rows, headers, selectedFixes]);
+
+  const downloadFixed = useCallback(() => {
+    if (!fixResult) return;
+    const csv = toCsv(fixResult.rows, headers);
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName.replace(/\.csv$/i, '') + '-cleaned.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [fixResult, headers, fileName]);
+
+  const runCompaniesHouse = useCallback(async () => {
+    const found = extractCompanyNumbers(rows, headers);
+    if (!found) {
+      setChError('No column of company numbers was found in this file.');
+      return;
+    }
+    setChBusy(true); setChError(''); setChResult(null);
+    try {
+      const res = await fetch('/api/companies-house/check', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ numbers: found.numbers }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'The lookup failed.');
+      setChResult({ ...data, column: found.column });
+    } catch (e: any) {
+      setChError(e?.message || 'The lookup failed. Try again shortly.');
+    } finally {
+      setChBusy(false);
+    }
+  }, [rows, headers]);
 
   return (
     <div style={{
@@ -920,6 +990,262 @@ export default function DataHealthChecker() {
             </div>
 
             {/* Offer */}
+
+            {/* Fix the file */}
+            <div className="dhc-fixpanel" style={{
+              marginTop: 40, padding: '30px 32px', borderRadius: 12,
+              background: '#fff', border: '1px solid #E8E2D8'
+            }}>
+              <div className="dhc-serif" style={{ fontSize: 22, marginBottom: 8, letterSpacing: '-0.01em' }}>
+                Fix it rather than just knowing about it
+              </div>
+              <p style={{ fontSize: 15, color: '#57514A', lineHeight: 1.75, margin: '0 0 6px', maxWidth: 620 }}>
+                Some of these have exactly one right answer. A company number missing its leading zero
+                is eight characters, not seven. A postcode has one space before the last three
+                characters. Those can be corrected without anyone deciding anything.
+              </p>
+              <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 22px', maxWidth: 620 }}>
+                The rest need judgement, and are marked as such. Everything runs in your browser and
+                nothing is uploaded.
+              </p>
+
+              {!paid ? (
+                <div style={{ padding: '22px 24px', borderRadius: 10, background: '#1A1815' }}>
+                  <div className="dhc-serif" style={{ fontSize: 18, color: '#fff', marginBottom: 10 }}>
+                    Clean the file and download it
+                  </div>
+                  <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7,
+                    margin: '0 0 18px', maxWidth: 540 }}>
+                    Applies the corrections you choose, shows what changed, and gives you a cleaned CSV
+                    back. Includes a Companies House check against every company number in the file, so
+                    you find out which of your customers are dissolved or in liquidation.
+                  </p>
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <a href="https://buy.stripe.com/YOUR_FIX_LINK" style={{
+                      font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6,
+                      padding: '12px 22px', background: '#C17D2E', color: '#fff',
+                      textDecoration: 'none', display: 'inline-block'
+                    }}>Unlock for £29</a>
+                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+                      One payment. Use it on as many files as you like.
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div style={{ display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                    gap: 14, marginBottom: 20 }}>
+                    {FIXES.map((f: any) => (
+                      <label key={f.id} style={{
+                        display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer',
+                        padding: '14px 16px', borderRadius: 8,
+                        border: '1px solid ' + (selectedFixes.has(f.id) ? '#C17D2E' : '#E8E2D8'),
+                        background: selectedFixes.has(f.id) ? 'rgba(193,125,46,0.04)' : '#fff'
+                      }}>
+                        <input type="checkbox" checked={selectedFixes.has(f.id)}
+                          style={{ marginTop: 3 }}
+                          onChange={e => {
+                            const next = new Set(selectedFixes);
+                            if (e.target.checked) next.add(f.id); else next.delete(f.id);
+                            setSelectedFixes(next);
+                            setFixResult(null);
+                          }} />
+                        <span>
+                          <span style={{ display: 'block', fontSize: 14.5, fontWeight: 500 }}>
+                            {f.label}
+                            {!f.safe && (
+                              <span style={{ fontSize: 11, fontWeight: 600, color: '#8F6318',
+                                background: 'rgba(176,122,30,0.1)', border: '1px solid rgba(176,122,30,0.22)',
+                                borderRadius: 3, padding: '2px 7px', marginLeft: 8 }}>
+                                Needs judgement
+                              </span>
+                            )}
+                          </span>
+                          <span style={{ display: 'block', fontSize: 13, color: '#8A8279',
+                            lineHeight: 1.6, marginTop: 4 }}>{f.detail}</span>
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+                    marginBottom: fixResult ? 22 : 0 }}>
+                    <button onClick={runFixes} disabled={!selectedFixes.size}
+                      style={{
+                        font: 'inherit', fontSize: 15, fontWeight: 500, cursor: 'pointer',
+                        borderRadius: 6, padding: '11px 20px', border: 0,
+                        background: '#C17D2E', color: '#fff',
+                        opacity: selectedFixes.size ? 1 : 0.5
+                      }}>
+                      Apply {selectedFixes.size || ''} fix{selectedFixes.size === 1 ? '' : 'es'}
+                    </button>
+                    <button onClick={() => setSelectedFixes(new Set(FIXES.filter((f: any) => f.safe).map((f: any) => f.id)))}
+                      style={{ background: 'none', border: 0, padding: 0, font: 'inherit',
+                        fontSize: 14, color: '#C17D2E', cursor: 'pointer', textDecoration: 'underline' }}>
+                      Select the safe ones
+                    </button>
+                  </div>
+
+                  {fixResult && (
+                    <div style={{ padding: '20px 22px', borderRadius: 8,
+                      background: 'rgba(63,107,76,0.05)', border: '1px solid rgba(63,107,76,0.2)' }}>
+                      <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>
+                        What changed
+                      </div>
+                      {Object.entries(fixResult.applied).length === 0 ? (
+                        <div style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.7 }}>
+                          Nothing needed changing for the fixes you picked.
+                        </div>
+                      ) : (
+                        <div style={{ marginBottom: 14 }}>
+                          {Object.entries(fixResult.applied).map(([id, count]: any) => {
+                            const def = FIXES.find((f: any) => f.id === id);
+                            return (
+                              <div key={id} style={{ fontSize: 14, color: '#57514A',
+                                padding: '4px 0' }}>
+                                <strong>{count}</strong> {def ? def.label.toLowerCase() : id}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {fixResult.unfixable.length > 0 && (
+                        <div style={{ marginBottom: 14, paddingTop: 12,
+                          borderTop: '1px solid rgba(63,107,76,0.15)' }}>
+                          <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+                            Left alone
+                          </div>
+                          {fixResult.unfixable.map((u: any, i: number) => (
+                            <div key={i} style={{ fontSize: 13.5, color: '#8A8279',
+                              lineHeight: 1.65, padding: '3px 0' }}>{u.reason}</div>
+                          ))}
+                        </div>
+                      )}
+
+                      <button onClick={downloadFixed} style={{
+                        font: 'inherit', fontSize: 15, fontWeight: 500, cursor: 'pointer',
+                        borderRadius: 6, padding: '11px 20px', border: 0,
+                        background: '#1A1815', color: '#fff'
+                      }}>Download the cleaned file</button>
+                      <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 10, lineHeight: 1.6 }}>
+                        Saved with a byte order mark so Excel opens it correctly rather than mangling
+                        accented characters.
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Companies House */}
+                  <div style={{ marginTop: 26, paddingTop: 22, borderTop: '1px solid #F0EBE2' }}>
+                    <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
+                      Check the companies are still trading
+                    </div>
+                    <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
+                      margin: '0 0 6px', maxWidth: 620 }}>
+                      Looks every company number up on the Companies House register and tells you which
+                      are dissolved, in liquidation, in administration, or facing a strike off notice.
+                    </p>
+                    <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7,
+                      margin: '0 0 16px', maxWidth: 620 }}>
+                      This is the one check that is not local. Only the company numbers are sent, which
+                      are public register data. Names, emails, addresses and phone numbers stay in your
+                      browser.
+                    </p>
+
+                    <button onClick={runCompaniesHouse} disabled={chBusy}
+                      style={{ font: 'inherit', fontSize: 15, fontWeight: 500, cursor: 'pointer',
+                        borderRadius: 6, padding: '11px 20px', border: '1px solid #DDD6CC',
+                        background: '#fff', color: '#4A453F', opacity: chBusy ? 0.6 : 1 }}>
+                      {chBusy ? 'Checking the register…' : 'Check Companies House'}
+                    </button>
+
+                    {chError && (
+                      <div style={{ fontSize: 14, color: '#A13B2A', marginTop: 12 }}>{chError}</div>
+                    )}
+
+                    {chResult && (
+                      <div style={{ marginTop: 18 }}>
+                        <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap',
+                          marginBottom: chResult.summary.concerns ? 18 : 0 }}>
+                          <div>
+                            <div className="dhc-serif" style={{ fontSize: 24, color: '#3F6B4C' }}>
+                              {chResult.summary.active}
+                            </div>
+                            <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Active</div>
+                          </div>
+                          {chResult.summary.dissolved > 0 && (
+                            <div>
+                              <div className="dhc-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
+                                {chResult.summary.dissolved}
+                              </div>
+                              <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Dissolved</div>
+                            </div>
+                          )}
+                          {chResult.summary.liquidation > 0 && (
+                            <div>
+                              <div className="dhc-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
+                                {chResult.summary.liquidation}
+                              </div>
+                              <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>In liquidation</div>
+                            </div>
+                          )}
+                          {chResult.summary.strikeOff > 0 && (
+                            <div>
+                              <div className="dhc-serif" style={{ fontSize: 24, color: '#8F6318' }}>
+                                {chResult.summary.strikeOff}
+                              </div>
+                              <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Strike off proposed</div>
+                            </div>
+                          )}
+                          {chResult.summary.notFound > 0 && (
+                            <div>
+                              <div className="dhc-serif" style={{ fontSize: 24, color: '#8F6318' }}>
+                                {chResult.summary.notFound}
+                              </div>
+                              <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Not on the register</div>
+                            </div>
+                          )}
+                        </div>
+
+                        {chResult.results.filter((r: any) => r.concern).length > 0 && (
+                          <div style={{ border: '1px solid #E8E2D8', borderRadius: 8,
+                            overflow: 'hidden' }}>
+                            {chResult.results.filter((r: any) => r.concern).map((r: any, i: number) => (
+                              <div key={r.number} style={{ padding: '12px 18px',
+                                background: i % 2 ? '#FDFCFA' : '#fff',
+                                display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 140px 150px',
+                                gap: 14, fontSize: 14, alignItems: 'baseline' }}>
+                                <div>{r.name || 'Not found'}</div>
+                                <div className="dhc-mono" style={{ fontSize: 13, color: '#8A8279' }}>
+                                  {r.number}
+                                </div>
+                                <div style={{ color: '#A13B2A', fontWeight: 500 }}>
+                                  {r.status || 'Not on the register'}
+                                  {r.dissolved && (
+                                    <div style={{ fontSize: 12, fontWeight: 400, color: '#8A8279' }}>
+                                      {r.dissolved}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {chResult.summary.concerns === 0 && (
+                          <div style={{ fontSize: 14.5, color: '#3F6B4C', lineHeight: 1.7 }}>
+                            Every company in the file is active on the register with nothing flagged
+                            against it.
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
+            </div>
+
             <div id="dhc-offer" style={{
               marginTop: 32, padding: 32, borderRadius: 10,
               background: '#1A1815', color: '#fff', scrollMarginTop: 24
