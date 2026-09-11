@@ -38,6 +38,8 @@ interface Job {
   certified: string
   retentionPct: string
   capPct: string
+  // Optional stepped retention. Empty means the flat rate applies.
+  tiers?: { upTo: string; pct: string }[]
   pcDate: string
   defectsMonths: string
   firstReleased: boolean
@@ -99,6 +101,44 @@ interface Computed {
   outstanding: number
 }
 
+
+/**
+ * Retention under a stepped structure. Each tier applies its rate only to
+ * the slice of certified value inside it, the way tax bands work. A blank
+ * threshold on the last tier means it runs to the top.
+ */
+function tieredRetention(
+  certified: number,
+  tiers: { upTo: string; pct: string }[]
+): { held: number; breakdown: { from: number; to: number; pct: number; amount: number }[] } {
+  const clean = tiers
+    .map(t => ({
+      upTo: String(t.upTo).trim() === '' ? Infinity : (parseFloat(t.upTo) || 0),
+      pct: Math.min(100, Math.max(0, parseFloat(t.pct) || 0)),
+    }))
+    .sort((a, b) => a.upTo - b.upTo)
+
+  let held = 0
+  let floor = 0
+  const breakdown: { from: number; to: number; pct: number; amount: number }[] = []
+
+  for (const tier of clean) {
+    if (certified <= floor) break
+    const ceiling = Math.min(certified, tier.upTo)
+    const slice = Math.max(0, ceiling - floor)
+    if (slice > 0) {
+      const amount = slice * (tier.pct / 100)
+      held += amount
+      breakdown.push({ from: floor, to: ceiling, pct: tier.pct, amount })
+    }
+    if (tier.upTo === Infinity) break
+    floor = tier.upTo
+  }
+
+  return { held, breakdown }
+}
+
+
 function compute(job: Job): Computed {
   const contract = parseFloat(job.contractValue) || 0
   const certified = parseFloat(job.certified) || 0
@@ -106,7 +146,10 @@ function compute(job: Job): Computed {
   const capPct = Math.min(100, Math.max(0, parseFloat(job.capPct) || 0))
   const defects = parseInt(job.defectsMonths, 10) || 12
 
-  const rawHeld = certified * (retPct / 100)
+  const activeTiers = (job.tiers || []).filter(t => String(t.pct).trim() !== '')
+  const rawHeld = activeTiers.length
+    ? tieredRetention(certified, activeTiers).held
+    : certified * (retPct / 100)
   const capAmount = capPct > 0 ? contract * (capPct / 100) : Infinity
   const held = Math.min(rawHeld, capAmount)
   const capReached = capPct > 0 && rawHeld >= capAmount
@@ -147,7 +190,7 @@ export default function RetentionTracker() {
 
   const [draft, setDraft] = useState<Partial<Job>>({
     ref: '', contractor: '', contractValue: '', certified: '',
-    retentionPct: '5', capPct: '5', pcDate: '', defectsMonths: '12',
+    retentionPct: '5', capPct: '5', tiers: [], pcDate: '', defectsMonths: '12',
   })
 
   const [showForm, setShowForm] = useState(false)
@@ -247,6 +290,7 @@ export default function RetentionTracker() {
       certified: draft.certified || '0',
       retentionPct: draft.retentionPct || '5',
       capPct: draft.capPct || '5',
+      tiers: draft.tiers && draft.tiers.length ? draft.tiers : [],
       pcDate: draft.pcDate || '',
       defectsMonths: draft.defectsMonths || '12',
       firstReleased: false,
@@ -254,7 +298,7 @@ export default function RetentionTracker() {
     }
     setJobs(p => [...p, j])
     setExpanded(j.id)
-    setDraft({ ref: '', contractor: '', contractValue: '', certified: '', retentionPct: '5', capPct: '5', pcDate: '', defectsMonths: '12' })
+    setDraft({ ref: '', contractor: '', contractValue: '', certified: '', retentionPct: '5', capPct: '5', tiers: [], pcDate: '', defectsMonths: '12' })
     setAdding(false)
   }
 
@@ -579,6 +623,84 @@ export default function RetentionTracker() {
                 <div className="r-hint">Months. Usually 12.</div>
               </div>
             </div>
+            <div style={{ marginTop: 4, marginBottom: 16, padding: '16px 18px',
+              borderRadius: 8, border: '1px solid #E8E2D8', background: '#FDFCFA' }}>
+              <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                <div style={{ flex: '1 1 320px' }}>
+                  <div style={{ fontSize: 14, fontWeight: 600 }}>Stepped retention</div>
+                  <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 3, lineHeight: 1.6 }}>
+                    Only if your contract steps the rate down as certified value rises. Leave it empty
+                    and the flat rate above applies.
+                  </div>
+                </div>
+                <button className="r-link"
+                  onClick={() => setDraft({ ...draft,
+                    tiers: [...(draft.tiers || []), { upTo: '', pct: '' }] })}>
+                  Add a tier
+                </button>
+              </div>
+
+              {(draft.tiers || []).map((t: any, i: number) => (
+                <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-end',
+                  flexWrap: 'wrap', marginTop: 12, paddingTop: 12,
+                  borderTop: '1px solid #F0EBE2' }}>
+                  <div className="r-field" style={{ width: 150 }}>
+                    <label className="r-label">Up to</label>
+                    <input className="r-in" type="number" min={0} inputMode="decimal"
+                      value={t.upTo} placeholder="No limit"
+                      onChange={e => {
+                        const next = [...(draft.tiers || [])]
+                        next[i] = { ...next[i], upTo: e.target.value }
+                        setDraft({ ...draft, tiers: next })
+                      }} />
+                  </div>
+                  <div className="r-field" style={{ width: 110 }}>
+                    <label className="r-label">At</label>
+                    <input className="r-in" type="number" min={0} step="0.1"
+                      value={t.pct} placeholder="%"
+                      onChange={e => {
+                        const next = [...(draft.tiers || [])]
+                        next[i] = { ...next[i], pct: e.target.value }
+                        setDraft({ ...draft, tiers: next })
+                      }} />
+                  </div>
+                  <button className="r-link" style={{ color: '#8A8279', paddingBottom: 12 }}
+                    onClick={() => setDraft({ ...draft,
+                      tiers: (draft.tiers || []).filter((_: any, j: number) => j !== i) })}>
+                    Remove
+                  </button>
+                </div>
+              ))}
+
+              {(draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '').length > 0 &&
+                parseFloat(draft.certified || '0') > 0 && (
+                <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid #F0EBE2' }}>
+                  <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                    On {money(parseFloat(draft.certified || '0'))} certified, that holds
+                  </div>
+                  {tieredRetention(
+                    parseFloat(draft.certified || '0'),
+                    (draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '')
+                  ).breakdown.map((b: any, i: number) => (
+                    <div key={i} style={{ fontSize: 13, color: '#57514A', padding: '2px 0' }}>
+                      {money(b.from)} to {money(b.to)} at {b.pct}% is {money(b.amount)}
+                    </div>
+                  ))}
+                  <div style={{ fontSize: 14, fontWeight: 600, marginTop: 8, paddingTop: 8,
+                    borderTop: '1px solid #F0EBE2' }}>
+                    {money(tieredRetention(
+                      parseFloat(draft.certified || '0'),
+                      (draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '')
+                    ).held)} in total
+                  </div>
+                  <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 8, lineHeight: 1.6 }}>
+                    Each rate applies only to the slice inside its tier, the way tax bands work. Leave
+                    the last threshold blank so it runs to the top.
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="r-field" style={{ maxWidth: 260 }}>
               <label className="r-label">Practical completion date</label>
               <input className="r-in" type="date" max={todayStr()} value={draft.pcDate || ''}
