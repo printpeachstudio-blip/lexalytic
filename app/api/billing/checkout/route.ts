@@ -37,7 +37,8 @@ export async function POST(request: Request) {
     const customer = await getStripe().customers.create({
       email: user.email ?? undefined,
       name: org?.name ?? undefined,
-      metadata: { org_id: m.org_id, user_id: user.id },
+      metadata: {
+        product: plan.product, org_id: m.org_id, user_id: user.id },
     })
     customerId = customer.id
   }

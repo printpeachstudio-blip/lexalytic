@@ -22,8 +22,12 @@ async function upsertSubscription(sub: Stripe.Subscription) {
   const plan = planFromPriceId(priceId) ?? (sub.metadata?.plan as PlanKey | undefined) ?? null
   const periodEnd = (sub as any).current_period_end as number | undefined
 
+  // The plan already tells us which product this is
+  const product = plan ? PLANS[plan].product : 'retention'
+
   await supabase.from('subscriptions').upsert({
     org_id: orgId,
+    product,
     stripe_customer_id: typeof sub.customer === 'string' ? sub.customer : sub.customer.id,
     stripe_subscription_id: sub.id,
     plan,
@@ -31,7 +35,7 @@ async function upsertSubscription(sub: Stripe.Subscription) {
     seats: plan ? PLANS[plan].seats : 1,
     current_period_end: periodEnd ? new Date(periodEnd * 1000).toISOString() : null,
     cancel_at_period_end: sub.cancel_at_period_end ?? false,
-  }, { onConflict: 'org_id' })
+  }, { onConflict: 'org_id,product' })
 }
 
 export async function POST(request: Request) {

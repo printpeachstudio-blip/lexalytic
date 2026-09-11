@@ -22,10 +22,10 @@ export default async function IngredientsPage() {
     ? await supabase.from('organisations').select('created_at').eq('id', mem.org_id).single()
     : { data: null }
   const { data: subRow } = mem
-    ? await supabase.from('subscriptions').select('*').eq('org_id', mem.org_id).single()
+    ? await supabase.from('subscriptions').select('*').eq('org_id', mem.org_id).eq('product', 'margin').maybeSingle()
     : { data: null }
 
-  const access = accessFor(subRow as SubscriptionRow | null, orgRow?.created_at ?? new Date().toISOString())
+  const access = accessFor(subRow as SubscriptionRow | null, orgRow?.created_at ?? new Date().toISOString(), 'margin')
   if (!access.allowed) return <Paywall access={access} />
 
   const { data: sites } = await supabase

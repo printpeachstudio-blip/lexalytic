@@ -27,7 +27,7 @@ export default async function AppPage() {
     : { data: null }
 
   const { data: subRow } = mem
-    ? await supabase.from('subscriptions').select('*').eq('org_id', mem.org_id).single()
+    ? await supabase.from('subscriptions').select('*').eq('org_id', mem.org_id).eq('product', 'retention').maybeSingle()
     : { data: null }
 
   const access = accessFor(subRow as SubscriptionRow | null, orgRow?.created_at ?? new Date().toISOString())

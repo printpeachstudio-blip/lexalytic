@@ -26,7 +26,7 @@ export default async function BillingPage({
     : { data: null }
 
   const { data: sub } = m
-    ? await supabase.from('subscriptions').select('*').eq('org_id', m.org_id).single()
+    ? await supabase.from('subscriptions').select('*').eq('org_id', m.org_id).eq('product', 'retention').maybeSingle()
     : { data: null }
 
   const access = accessFor(sub as SubscriptionRow | null, org?.created_at ?? new Date().toISOString())
