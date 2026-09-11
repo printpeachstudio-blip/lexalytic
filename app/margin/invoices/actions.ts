@@ -45,6 +45,33 @@ export async function setLineMatch(
   return { ok: true }
 }
 
+/** Correct what the extraction read. The price is what matters most. */
+export async function updateLine(
+  lineId: string,
+  patch: {
+    raw_description?: string
+    quantity?: number | null
+    pack_size?: string | null
+    unit_price?: number | null
+  }
+) {
+  const { supabase } = await ctx()
+
+  const update: Record<string, unknown> = { ...patch }
+
+  // If the price changed, the implied price follows it, since that is
+  // the figure that actually gets written to the ingredient.
+  if (patch.unit_price !== undefined) {
+    update.implied_price = patch.unit_price
+  }
+
+  const { error } = await supabase.from('invoice_lines').update(update).eq('id', lineId)
+  if (error) return { error: error.message }
+
+  revalidatePath('/margin/invoices')
+  return { ok: true }
+}
+
 export async function setLineDecision(lineId: string, decision: 'apply' | 'skip') {
   const { supabase } = await ctx()
   const { error } = await supabase.from('invoice_lines').update({

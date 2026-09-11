@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import { money2, pct, fmtDate } from '@/lib/margin'
 import { MARGIN_STYLES } from '@/lib/margin-styles'
 import {
-  registerInvoice, setLineMatch, setLineDecision,
+  registerInvoice, setLineMatch, setLineDecision, updateLine,
   applyInvoice, ingredientFromLine, deleteInvoice,
 } from '@/app/margin/invoices/actions'
 
@@ -157,6 +157,16 @@ export default function InvoicesClient({
         means, so the next one is mostly a glance.
       </p>
 
+      {ingredients.length === 0 && invoices.length > 0 && (
+        <div style={{ fontSize: 14.5, color: '#8F6318', background: 'rgba(176,122,30,0.07)',
+          border: '1px solid rgba(176,122,30,0.22)', borderRadius: 8,
+          padding: '14px 18px', marginBottom: 16, lineHeight: 1.7 }}>
+          You have no ingredients yet, so nothing can match automatically. Use the New button on each
+          line to create one from the invoice, or add them first on the{' '}
+          <a href="/margin/ingredients" style={{ color: '#8F6318', fontWeight: 600 }}>ingredients page</a>.
+        </div>
+      )}
+
       {error && (
         <div style={{ fontSize: 14, color: '#A13B2A', background: 'rgba(161,59,42,0.07)',
           border: '1px solid rgba(161,59,42,0.2)', borderRadius: 6,
@@ -257,8 +267,10 @@ export default function InvoicesClient({
                     <div style={{ fontSize: 14, fontWeight: 600, margin: '18px 0 4px' }}>
                       Lines read from the document
                     </div>
-                    <div style={{ fontSize: 12.5, color: '#8A8279', marginBottom: 12 }}>
-                      Anything marked not sure needs confirming before it will change a price.
+                    <div style={{ fontSize: 12.5, color: '#8A8279', marginBottom: 12, lineHeight: 1.6 }}>
+                      Anything marked not sure needs confirming before it will change a price. Every
+                      figure here is editable, so if a number was misread you can correct it rather than
+                      rejecting the line. A price outlined in amber was not readable and needs filling in.
                     </div>
 
                     {iLines.map(l => {
@@ -268,26 +280,64 @@ export default function InvoicesClient({
                         <div key={l.id}>
                           <div className="iv-line">
                             <div>
-                              <div style={{ fontSize: 14 }}>{l.raw_description}</div>
-                              <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 2 }}>
-                                {l.pack_size ? `${l.pack_size} · ` : ''}
-                                {l.quantity ? `qty ${l.quantity} · ` : ''}
-                                {l.unit_price != null ? money2(Number(l.unit_price)) : 'no price read'}
+                              {inv.status === 'applied' ? (
+                                <div style={{ fontSize: 14 }}>{l.raw_description}</div>
+                              ) : (
+                                <input className="m-in" defaultValue={l.raw_description}
+                                  style={{ fontSize: 14, padding: '6px 9px' }}
+                                  onBlur={e => {
+                                    const v = e.target.value.trim()
+                                    if (v && v !== l.raw_description) {
+                                      run(() => updateLine(l.id, { raw_description: v }))
+                                    }
+                                  }} />
+                              )}
+                              <div style={{ display: 'flex', gap: 7, alignItems: 'center',
+                                marginTop: 5, flexWrap: 'wrap' }}>
+                                <span style={{ fontSize: 12, color: '#8A8279' }}>qty</span>
+                                <input className="m-in" type="number" step="0.01"
+                                  defaultValue={l.quantity ?? ''} placeholder="?"
+                                  disabled={inv.status === 'applied'}
+                                  style={{ width: 62, fontSize: 12.5, padding: '4px 6px' }}
+                                  onBlur={e => {
+                                    const v = e.target.value === '' ? null : parseFloat(e.target.value)
+                                    if (v !== l.quantity) run(() => updateLine(l.id, { quantity: v }))
+                                  }} />
+                                <span style={{ fontSize: 12, color: '#8A8279' }}>at £</span>
+                                <input className="m-in" type="number" step="0.0001"
+                                  defaultValue={l.unit_price ?? ''} placeholder="?"
+                                  disabled={inv.status === 'applied'}
+                                  style={{ width: 84, fontSize: 12.5, padding: '4px 6px',
+                                    borderColor: l.unit_price == null ? '#C17D2E' : '#DDD6CC' }}
+                                  onBlur={e => {
+                                    const v = e.target.value === '' ? null : parseFloat(e.target.value)
+                                    if (v !== l.unit_price) run(() => updateLine(l.id, { unit_price: v }))
+                                  }} />
+                                {l.pack_size && (
+                                  <span style={{ fontSize: 12, color: '#8A8279' }}>{l.pack_size}</span>
+                                )}
                               </div>
                             </div>
 
                             <div>
-                              <select className="m-sel" style={{ fontSize: 13.5, padding: '7px 9px' }}
-                                value={l.ingredient_id || ''}
-                                onChange={e => {
-                                  const v = e.target.value || null
-                                  run(() => setLineMatch(l.id, v, l.unit_price))
-                                }}>
-                                <option value="">Not matched</option>
-                                {ingredients.map(i => (
-                                  <option key={i.id} value={i.id}>{i.name}</option>
-                                ))}
-                              </select>
+                              {ingredients.length === 0 ? (
+                                <div style={{ fontSize: 12.5, color: '#8A8279', lineHeight: 1.5 }}>
+                                  No ingredients yet. Use New to create one from this line.
+                                </div>
+                              ) : (
+                                <select className="m-sel" style={{ fontSize: 13.5, padding: '7px 9px' }}
+                                  value={l.ingredient_id || ''}
+                                  disabled={inv.status === 'applied'}
+                                  onChange={e => {
+                                    const v = e.target.value || null
+                                    run(() => setLineMatch(l.id, v, l.unit_price))
+                                  }}>
+                                  <option value="">Not matched</option>
+                                  {ingredients.map(i => (
+                                    <option key={i.id} value={i.id}>{i.name}</option>
+                                  ))}
+                                </select>
+                              )}
                             </div>
 
                             <div style={{ fontSize: 13, color: conf.c, fontWeight: 500 }}>
@@ -322,24 +372,37 @@ export default function InvoicesClient({
                               )}
                             </div>
 
-                            <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                              {inv.status !== 'applied' && (
+                            <div style={{ display: 'flex', gap: 10, alignItems: 'center',
+                              flexWrap: 'wrap' }}>
+                              {inv.status === 'applied' ? (
+                                <span style={{ fontSize: 13,
+                                  color: l.decision === 'apply' ? '#3F6B4C' : '#8A8279' }}>
+                                  {l.decision === 'apply' ? 'Applied' : 'Skipped'}
+                                </span>
+                              ) : !l.ingredient_id ? (
                                 <>
-                                  <label style={{ fontSize: 13, display: 'flex', gap: 6,
-                                    alignItems: 'center', cursor: 'pointer' }}>
-                                    <input type="checkbox" checked={l.decision === 'apply'}
-                                      disabled={!l.ingredient_id}
-                                      onChange={e => run(() =>
-                                        setLineDecision(l.id, e.target.checked ? 'apply' : 'skip'))} />
-                                    Apply
-                                  </label>
-                                  {!l.ingredient_id && (
-                                    <button className="m-link" style={{ fontSize: 12.5 }}
-                                      onClick={() => setNewFor(newFor === l.id ? null : l.id)}>
-                                      New
-                                    </button>
-                                  )}
+                                  <button className="m-btn m-quiet"
+                                    style={{ fontSize: 13, padding: '6px 12px' }}
+                                    onClick={() => setNewFor(newFor === l.id ? null : l.id)}>
+                                    {newFor === l.id ? 'Cancel' : 'Create ingredient'}
+                                  </button>
+                                  <span style={{ fontSize: 12, color: '#8A8279', lineHeight: 1.4,
+                                    flexBasis: '100%' }}>
+                                    Match it above first, or create it here.
+                                  </span>
                                 </>
+                              ) : l.unit_price == null ? (
+                                <span style={{ fontSize: 12.5, color: '#8F6318', lineHeight: 1.5 }}>
+                                  Enter a price before this can be applied.
+                                </span>
+                              ) : (
+                                <label style={{ fontSize: 13, display: 'flex', gap: 6,
+                                  alignItems: 'center', cursor: 'pointer' }}>
+                                  <input type="checkbox" checked={l.decision === 'apply'}
+                                    onChange={e => run(() =>
+                                      setLineDecision(l.id, e.target.checked ? 'apply' : 'skip'))} />
+                                  Apply
+                                </label>
                               )}
                             </div>
                           </div>
@@ -406,10 +469,11 @@ export default function InvoicesClient({
                           }}>
                           Apply {toApply} line{toApply === 1 ? '' : 's'}
                         </button>
-                        <span style={{ fontSize: 13, color: '#8A8279' }}>
+                        <span style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.6,
+                          maxWidth: 460 }}>
                           {toApply === 0
-                            ? 'Tick the lines you want to apply.'
-                            : 'Confirmed matches are remembered for next time.'}
+                            ? 'Nothing ticked yet. A line can only be applied once it is matched to an ingredient and has a price.'
+                            : 'Each ticked line overwrites that ingredient price, records a dated entry in its history, and recosts every dish containing it. The match is remembered for next time.'}
                         </span>
                       </div>
                     )}
