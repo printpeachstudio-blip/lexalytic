@@ -102,8 +102,8 @@ interface Computed {
 function compute(job: Job): Computed {
   const contract = parseFloat(job.contractValue) || 0
   const certified = parseFloat(job.certified) || 0
-  const retPct = parseFloat(job.retentionPct) || 0
-  const capPct = parseFloat(job.capPct) || 0
+  const retPct = Math.min(100, Math.max(0, parseFloat(job.retentionPct) || 0))
+  const capPct = Math.min(100, Math.max(0, parseFloat(job.capPct) || 0))
   const defects = parseInt(job.defectsMonths, 10) || 12
 
   const rawHeld = certified * (retPct / 100)
@@ -554,28 +554,28 @@ export default function RetentionTracker() {
             <div className="r-grid2">
               <div className="r-field">
                 <label className="r-label">Contract value</label>
-                <input className="r-in" type="number" inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
+                <input className="r-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
               </div>
               <div className="r-field">
                 <label className="r-label">Value certified to date</label>
-                <input className="r-in" type="number" inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
+                <input className="r-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
                 <div className="r-hint">Gross value certified across all interim applications.</div>
               </div>
             </div>
             <div className="r-grid3">
               <div className="r-field">
                 <label className="r-label">Retention rate</label>
-                <input className="r-in" type="number" step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
+                <input className="r-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
                 <div className="r-hint">Usually 5%.</div>
               </div>
               <div className="r-field">
                 <label className="r-label">Cap on retention</label>
-                <input className="r-in" type="number" step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
+                <input className="r-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
                 <div className="r-hint">% of contract value. Deduction should stop here.</div>
               </div>
               <div className="r-field">
                 <label className="r-label">Defects period</label>
-                <input className="r-in" type="number" value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
+                <input className="r-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
                 <div className="r-hint">Months. Usually 12.</div>
               </div>
             </div>

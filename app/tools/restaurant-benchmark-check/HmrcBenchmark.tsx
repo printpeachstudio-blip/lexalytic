@@ -206,7 +206,7 @@ export default function HmrcBenchmark() {
 
     applied.sort((a, b) => (b.gp + b.net) - (a.gp + a.net))
 
-    const cashPct = parseFloat(cash) || 0
+    const cashPct = Math.min(100, Math.max(0, parseFloat(cash) || 0))
 
     const flags: Flag[] = []
 
@@ -422,7 +422,7 @@ export default function HmrcBenchmark() {
     { label: string; value: string; onChange: (v: string) => void; hint?: string }) => (
     <div>
       <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>{label}</label>
-      <input className="hb-in" type="number" value={value} onChange={e => onChange(e.target.value)} />
+      <input className="hb-in" type="number" min={0} value={value} onChange={e => onChange(e.target.value)} />
       {hint && <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4, lineHeight: 1.5 }}>{hint}</div>}
     </div>
   )

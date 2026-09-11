@@ -66,7 +66,7 @@ export default function LabourDaypart() {
     { id: uid(), day: 'Sun', name: 'Lunch', sales: '2200', hours: '32', avgRate: '13.50', covers: '110' },
   ])
 
-  const gpPct = (parseFloat(gp) || 0) / 100
+  const gpPct = Math.min(100, Math.max(0, parseFloat(gp) || 0)) / 100
   const fixed = parseFloat(fixedWeekly) || 0
 
   const add = () => setSessions(s => [...s,
@@ -179,7 +179,7 @@ export default function LabourDaypart() {
                 Your gross profit
               </label>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <input className="ld-in" type="number" style={{ width: 90 }} value={gp}
+                <input className="ld-in" type="number" min={0} style={{ width: 90 }} value={gp}
                   onChange={e => setGp(e.target.value)} />
                 <span style={{ fontSize: 14, color: '#8A8279' }}>%</span>
               </div>
@@ -191,7 +191,7 @@ export default function LabourDaypart() {
               <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                 Fixed costs a week
               </label>
-              <input className="ld-in" type="number" style={{ width: 130 }} value={fixedWeekly}
+              <input className="ld-in" type="number" min={0} style={{ width: 130 }} value={fixedWeekly}
                 onChange={e => setFixedWeekly(e.target.value)} />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 Rent, rates, utilities, salaried staff
@@ -231,22 +231,22 @@ export default function LabourDaypart() {
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Sales</label>
-                <input className="ld-in" type="number" value={s.sales}
+                <input className="ld-in" type="number" min={0} value={s.sales}
                   onChange={e => update(s.id, { sales: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Hours</label>
-                <input className="ld-in" type="number" step="0.5" value={s.hours}
+                <input className="ld-in" type="number" min={0} step="0.5" value={s.hours}
                   onChange={e => update(s.id, { hours: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Rate</label>
-                <input className="ld-in" type="number" step="0.01" value={s.avgRate}
+                <input className="ld-in" type="number" min={0} step="0.01" value={s.avgRate}
                   onChange={e => update(s.id, { avgRate: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Covers</label>
-                <input className="ld-in" type="number" value={s.covers}
+                <input className="ld-in" type="number" min={0} value={s.covers}
                   onChange={e => update(s.id, { covers: e.target.value })} />
               </div>
               <div style={{ paddingBottom: 10 }}>

@@ -114,7 +114,7 @@ interface Row {
 
 function build(p: Placement): Row {
   const salary = parseFloat(p.salary) || 0
-  const pct = parseFloat(p.feePct) || 0
+  const pct = Math.min(100, Math.max(0, parseFloat(p.feePct) || 0))
   const fee = salary * (pct / 100)
   const scale = SCALES.find(s => s.key === p.scale) || SCALES[0]
   const windowWeeks = parseInt(p.windowWeeks, 10) || scale.weeks
@@ -518,11 +518,11 @@ export default function RebateExposure() {
             <div className="e-g3">
               <div className="e-field">
                 <label className="e-label">Salary</label>
-                <input className="e-in" type="number" inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
+                <input className="e-in" type="number" min={0} inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
               </div>
               <div className="e-field">
                 <label className="e-label">Fee</label>
-                <input className="e-in" type="number" step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
+                <input className="e-in" type="number" min={0} step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
                 <div className="e-hint">% of first year base.</div>
               </div>
               <div className="e-field">
@@ -547,7 +547,7 @@ export default function RebateExposure() {
               </div>
               <div className="e-field">
                 <label className="e-label">Window length</label>
-                <input className="e-in" type="number" value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
+                <input className="e-in" type="number" min={0} value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
                 <div className="e-hint">Weeks. Check your terms of business.</div>
               </div>
             </div>

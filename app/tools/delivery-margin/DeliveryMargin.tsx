@@ -203,7 +203,7 @@ export default function DeliveryMargin() {
                 Commission
               </label>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <input className="dm-in" type="number" style={{ width: 90 }}
+                <input className="dm-in" type="number" min={0} style={{ width: 90 }}
                   value={platform === 'custom' ? customRate : String(p.commission)}
                   onChange={e => { setPlatform('custom'); setCustomRate(e.target.value) }} />
                 <span style={{ fontSize: 14, color: '#8A8279' }}>%</span>
@@ -213,7 +213,7 @@ export default function DeliveryMargin() {
               <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                 Packaging per order
               </label>
-              <input className="dm-in" type="number" step="0.01" style={{ width: 110 }}
+              <input className="dm-in" type="number" min={0} step="0.01" style={{ width: 110 }}
                 value={packaging} onChange={e => setPackaging(e.target.value)} />
             </div>
             <label style={{ fontSize: 14, display: 'flex', gap: 8, alignItems: 'center',
@@ -245,23 +245,23 @@ export default function DeliveryMargin() {
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Dine-in</label>
-                <input className="dm-in" type="number" step="0.01" value={d.dineInPrice}
+                <input className="dm-in" type="number" min={0} step="0.01" value={d.dineInPrice}
                   onChange={e => update(d.id, { dineInPrice: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Food cost</label>
-                <input className="dm-in" type="number" step="0.01" value={d.foodCost}
+                <input className="dm-in" type="number" min={0} step="0.01" value={d.foodCost}
                   onChange={e => update(d.id, { foodCost: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Delivery</label>
-                <input className="dm-in" type="number" step="0.01" value={d.deliveryPrice}
+                <input className="dm-in" type="number" min={0} step="0.01" value={d.deliveryPrice}
                   placeholder={d.dineInPrice || ''}
                   onChange={e => update(d.id, { deliveryPrice: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Orders</label>
-                <input className="dm-in" type="number" value={d.weeklyOrders}
+                <input className="dm-in" type="number" min={0} value={d.weeklyOrders}
                   onChange={e => update(d.id, { weeklyOrders: e.target.value })} />
               </div>
               <div style={{ paddingBottom: 10 }}>

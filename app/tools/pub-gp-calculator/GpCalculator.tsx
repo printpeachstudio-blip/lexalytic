@@ -231,22 +231,22 @@ export default function GpCalculator() {
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Cost</label>
-                  <input className="gp-in" type="number" step="0.01" value={l.cost}
+                  <input className="gp-in" type="number" min={0} step="0.01" value={l.cost}
                     onChange={e => update(l.id, { cost: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Price</label>
-                  <input className="gp-in" type="number" step="0.01" value={l.price}
+                  <input className="gp-in" type="number" min={0} step="0.01" value={l.price}
                     onChange={e => update(l.id, { price: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Weekly</label>
-                  <input className="gp-in" type="number" value={l.volume}
+                  <input className="gp-in" type="number" min={0} value={l.volume}
                     onChange={e => update(l.id, { volume: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Waste %</label>
-                  <input className="gp-in" type="number" step="0.5" value={l.wastage}
+                  <input className="gp-in" type="number" min={0} step="0.5" value={l.wastage}
                     onChange={e => update(l.id, { wastage: e.target.value })} />
                 </div>
                 <div style={{ paddingBottom: 10 }}>

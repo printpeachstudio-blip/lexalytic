@@ -362,7 +362,7 @@ export default function LockupTracker() {
             </div>
             <div className="l-field" style={{ margin: 0 }}>
               <label className="l-label">Annual fee income</label>
-              <input className="l-in" type="number" inputMode="decimal" value={firm.revenue}
+              <input className="l-in" type="number" min={0} inputMode="decimal" value={firm.revenue}
                 onChange={e => setFirm({ ...firm, revenue: e.target.value })} placeholder="£" />
               <div className="l-hint">Last twelve months. Needed to convert amounts into days.</div>
             </div>
@@ -440,16 +440,16 @@ export default function LockupTracker() {
             <div className="l-g3">
               <div className="l-field">
                 <label className="l-label">Work delivered to date</label>
-                <input className="l-in" type="number" inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
+                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
                 <div className="l-hint">Value of work done, whether billed or not.</div>
               </div>
               <div className="l-field">
                 <label className="l-label">Invoiced to date</label>
-                <input className="l-in" type="number" inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
+                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
               </div>
               <div className="l-field">
                 <label className="l-label">Collected to date</label>
-                <input className="l-in" type="number" inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
+                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
               </div>
             </div>
             <div className="l-g3">
@@ -465,7 +465,7 @@ export default function LockupTracker() {
               </div>
               <div className="l-field">
                 <label className="l-label">Payment terms</label>
-                <input className="l-in" type="number" value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
+                <input className="l-in" type="number" min={0} value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
                 <div className="l-hint">Days.</div>
               </div>
             </div>
@@ -514,15 +514,15 @@ export default function LockupTracker() {
                       <div className="l-g3">
                         <div className="l-field">
                           <label className="l-label">Work delivered</label>
-                          <input className="l-in" type="number" value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
+                          <input className="l-in" type="number" min={0} value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
                         </div>
                         <div className="l-field">
                           <label className="l-label">Invoiced</label>
-                          <input className="l-in" type="number" value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
+                          <input className="l-in" type="number" min={0} value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
                         </div>
                         <div className="l-field">
                           <label className="l-label">Collected</label>
-                          <input className="l-in" type="number" value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
+                          <input className="l-in" type="number" min={0} value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
                         </div>
                       </div>
                       <button className="l-link" style={{ color: '#8A8279' }}
@@ -627,6 +627,10 @@ export default function LockupTracker() {
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>, a UK studio that builds websites,
           custom software and data systems for small businesses. See our other{' '}
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
+        </p>
+
+        <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 650 }}>
+          Lock-up here is work in progress plus debtors divided by daily fee income. It is a management measure and will not tie exactly to a statutory work in progress valuation, which applies different recognition rules. Benchmark ranges vary by firm type and billing model. Figures produced here are for internal use and are not a substitute for management accounts prepared by your accountant.
         </p>
 
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 640 }}>

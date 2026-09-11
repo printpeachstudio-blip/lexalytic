@@ -173,22 +173,22 @@ export default function ReportingCost() {
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Salary</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" value={r.salary}
+                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} value={r.salary}
                   onChange={e => update(r.id, { salary: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>People</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" value={r.people}
+                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} value={r.people}
                   onChange={e => update(r.id, { people: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Hours</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" step="0.5" value={r.hours}
+                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.hours}
                   onChange={e => update(r.id, { hours: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Per month</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" step="0.5" value={r.perMonth}
+                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.perMonth}
                   onChange={e => update(r.id, { perMonth: e.target.value })} />
               </div>
               <div>
@@ -311,7 +311,7 @@ export default function ReportingCost() {
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>
                     Cost to build it
                   </label>
-                  <input className="rc-in" type="number" value={buildCost}
+                  <input className="rc-in" type="number" min={0} value={buildCost}
                     onChange={e => setBuildCost(e.target.value)} style={{ width: 130 }} />
                 </div>
               </div>
