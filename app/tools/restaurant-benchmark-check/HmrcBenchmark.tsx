@@ -4,6 +4,10 @@ import React, { useState, useMemo, useEffect, useCallback } from 'react'
 
 // Stripe Payment Link for the position report.
 // Success URL must be: https://www.lexalytic.com/tools/restaurant-benchmark-check?ref=bpr-6q3wz8
+// The paid report is off while the AML tax adviser question is unresolved.
+// Set this to true to bring it back. The report code below is untouched.
+const REPORT_ENABLED = false
+
 const STRIPE_LINK = 'https://buy.stripe.com/5kQ7sEdkZ2Ma37u6JK3AY0a'
 const REPORT_PRICE = '£49'
 const UNLOCK_PARAM = 'bpr-6q3wz8'
@@ -721,7 +725,8 @@ export default function HmrcBenchmark() {
               </div>
             )}
 
-            {/* Paid report */}
+            {/* Paid report, currently off */}
+            {REPORT_ENABLED && (
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff', marginBottom: 20 }}>
               <div className="hb-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Put it on the record, dated
@@ -787,6 +792,8 @@ export default function HmrcBenchmark() {
                 </div>
               )}
             </div>
+
+            )}
 
             {/* What is coming */}
             <div className="hb-card" style={{ padding: '24px 30px' }}>
