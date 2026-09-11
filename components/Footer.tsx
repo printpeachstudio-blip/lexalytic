@@ -21,6 +21,7 @@ export default function Footer() {
               { href: '/#results', label: 'Results' },
               { href: '/tools', label: 'Free Tools' },
               { href: '/retention-manager', label: 'Retention Manager' },
+              { href: '/margin-manager', label: 'Margin Manager' },
               { href: '/blog', label: 'Blog' },
               { href: '/about', label: 'About' },
               { href: '/#contact', label: 'Contact' },
