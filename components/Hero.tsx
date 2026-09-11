@@ -30,16 +30,7 @@ export default function Hero() {
       }} />
       <div className="container" style={{ position: 'relative', zIndex: 1, padding: '80px 24px' }}>
         <div style={{ maxWidth: '900px' }}>
-          <div className="fade-up" style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: 'rgba(193,125,46,0.12)', border: '1px solid rgba(193,125,46,0.25)',
-            borderRadius: '100px', padding: '6px 16px', marginBottom: '36px',
-          }}>
-            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
-            <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>
-              UK Digital Studio · Fixed Price · Now taking on new projects
-            </span>
-          </div>
+          
           <h1 className="fade-up-2" style={{ color: 'var(--white)', marginBottom: '28px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
             Your business deserves tools<br />
             <em style={{ color: 'var(--amber)', fontStyle: 'italic' }}>built around how it actually works.</em>

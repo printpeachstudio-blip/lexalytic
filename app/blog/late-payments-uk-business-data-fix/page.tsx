@@ -51,7 +51,7 @@ export default function BlogPost() {
             Why UK Businesses Lose £17,000 a Year to Late Payments - And How Better Data Fixes It
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Late payments are not just an inconvenience. They are the single biggest threat to cash flow for UK SMEs - and most businesses are making the problem worse by tracking invoices manually. Here is what better data actually looks like, and how to get there.
+            Late payments are the single biggest threat to cash flow for UK SMEs - and most businesses are making the problem worse by tracking invoices manually. Here is what better data actually looks like, and how to get there.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -231,7 +231,7 @@ export default function BlogPost() {
             },
             {
               q: 'How much does it cost to build an automated invoice tracking dashboard?',
-              a: 'Most invoice tracking and cash flow visibility projects are delivered at a fixed price, scoped before any work begins. A single aged debtor dashboard connected to one accounting system is typically a 3-5 day project. A more comprehensive cash flow reporting system combining invoice data, payment forecasting, and automated alerts takes longer. We scope every project and give a clear price before any work starts.',
+              a: 'Most invoice tracking and cash flow visibility projects are delivered at a fixed price, scoped before any work begins. A single aged debtor dashboard connected to one accounting system is typically a 3-5 day project. A fuller cash flow reporting system combining invoice data, payment forecasting, and automated alerts takes longer. We scope every project and give a clear price before any work starts.',
             },
             {
               q: 'Can Power Automate send automatic payment reminders to customers?',
@@ -293,8 +293,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Do you know exactly what your business is owed right now?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current invoice tracking setup and show you what live cash flow visibility would look like for your business - and what it would cost to build it.
-            </p>
+            This is the sort of problem our <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> work exists for. Book a free 30-minute call. We will look at your current invoice tracking setup and show you what live cash flow visibility would look like for your business - and what it would cost to build it.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

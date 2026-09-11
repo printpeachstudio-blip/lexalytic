@@ -151,7 +151,9 @@ export default function BlogPost() {
 
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to automate your construction reporting?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us how your job cost tracking currently works and we will tell you exactly what automation would look like for your business.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            This is the sort of thing our <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> handles. Book a free 30-minute call. Tell us how your job cost tracking currently works and we will tell you exactly what automation would look like for your business. We do this kind of work regularly.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
 

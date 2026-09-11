@@ -63,7 +63,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The choice between Google Sheets and Excel is primarily a collaboration question. Google Sheets is better for real-time multi-user collaboration and when your team is already on Google Workspace. Excel is better for complex calculations, large datasets, and when Power Query and Power BI are part of your data stack. Many UK businesses use both: Google Sheets for collaborative data collection and operational tracking, Excel for analysis and reporting. The two can be connected so data flows between them automatically.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            When it outgrows a spreadsheet entirely, that is our <Link href="/services/python-automation" style={{ color: 'var(--amber)' }}>automation work</Link>. Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

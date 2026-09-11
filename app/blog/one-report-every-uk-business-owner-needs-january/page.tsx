@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The January business review is most valuable when it is easy to produce - when the underlying data is clean, the template is already set up, and the review itself is a matter of hours rather than days. Building this once, properly, means it is available every January without the scramble of pulling together data from multiple sources. A Power BI dashboard connected to accounting software and updated automatically produces the core numbers without any manual work. The analysis and context - the parts that require human judgment - are then the focus of the time spent, not the data gathering.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            If nothing off the shelf fits, that is what <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> are for. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

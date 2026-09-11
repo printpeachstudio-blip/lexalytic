@@ -321,8 +321,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Recognise any of these problems in your business?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current setup, identify exactly what is causing the problem, and tell you what a fix would look like - and what it would cost.
-            </p>
+            If the spreadsheet has outgrown itself, that is what our <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> is for. Book a free 30-minute call. We will look at your current setup, identify exactly what is causing the problem, and tell you what a fix would look like - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

@@ -191,7 +191,9 @@ export default function BlogPost() {
 
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want Power Query set up for your business?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what data you are currently processing manually and we will tell you exactly what Power Query can automate - and what it would cost to build it.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            We have done a fair few of these. There is more on the <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> page. Book a free 30-minute call. Tell us what data you are currently processing manually and we will tell you exactly what Power Query can automate - and what it would cost to build it.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
 

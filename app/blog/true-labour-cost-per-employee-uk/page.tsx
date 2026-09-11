@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most useful version of this analysis connects true labour cost to revenue attribution - showing not just what each person costs but what they generate. For service businesses this requires some form of time recording or revenue allocation by team member. The gap between cost and contribution is the metric that drives decisions about team structure, performance conversations, and hiring plans. A Power BI dashboard that shows this in real time, updated from payroll and billing data automatically, gives management the visibility that most businesses only get at year-end - when it is too late to act on it.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Our <Link href="/tools/reporting-cost" style={{ color: 'var(--amber)' }}>free reporting cost calculator</Link> works out what this costs by role, using true employment cost rather than salary. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

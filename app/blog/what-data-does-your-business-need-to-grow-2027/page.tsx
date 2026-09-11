@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The most practical approach to data for growth is not a complete data strategy - it is identifying the one question that, if answered reliably, would most improve the quality of growth decisions. Is it customer acquisition cost by channel? Is it margin by product line? Is it customer lifetime value? Pick one, build the smallest possible system that answers it accurately, and use that answer to make better decisions for six months. Then pick the next question. This approach delivers value immediately rather than after a long implementation, and builds data capability in a way that matches the business&#x27;s ability to act on what it learns.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Where the off the shelf option nearly works but not quite, that is usually a <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> job. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

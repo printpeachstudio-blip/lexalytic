@@ -281,8 +281,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Is your finance team spending too much time on reporting?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current finance reporting process and tell you exactly what automation would look like - and what it would cost to build it.
-            </p>
+            The <Link href="/tools/reporting-cost" style={{ color: 'var(--amber)' }}>free reporting cost calculator</Link> does this arithmetic and shows how quickly automating it would pay back. Book a free 30-minute call. We will look at your current finance reporting process and tell you exactly what automation would look like - and what it would cost to build it.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

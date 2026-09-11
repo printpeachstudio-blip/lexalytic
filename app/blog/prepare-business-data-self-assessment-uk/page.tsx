@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The businesses with the smoothest self assessment process are the ones that treat their records as a live document rather than a year-end task. Receipts photographed and uploaded immediately rather than accumulated in a drawer. Invoices raised and recorded at the time of sale rather than reconstructed quarterly. Bank reconciliation done monthly rather than annually. These habits individually take minutes to maintain. Collectively they mean self assessment is a review of organised data rather than a forensic reconstruction of a year of activity.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Most of our <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> starts with a spreadsheet somebody built years ago that nobody wants to touch. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

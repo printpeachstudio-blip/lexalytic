@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The accountants who produce year-end accounts fastest are the ones whose clients provide clean, organised data. Every query raised - every transaction that needs explanation, every document that needs locating - adds time to the process and, usually, cost. The investment in keeping clean records throughout the year reduces the accountancy bill and speeds up the process. More importantly, it shifts the accountant&#x27;s time from data gathering to the advisory work that actually benefits the business - tax planning, structuring decisions, and forward-looking financial advice.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            We build <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> for exactly this kind of gap. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

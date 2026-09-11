@@ -158,7 +158,9 @@ export default function BlogPost() {
 
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want a clear view of your business performance?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what decisions you need to make and what data you have. We will tell you exactly what performance tracking would look like for your business.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Most of our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link> starts with somebody rebuilding this by hand every month. Book a free 30-minute call. Tell us what decisions you need to make and what data you have. We will tell you exactly what performance tracking would look like for your business. We build exactly this sort of reporting.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
 

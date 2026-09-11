@@ -63,7 +63,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Relationship-critical communications, complex negotiations, anything where a wrong output has significant consequences without easy correction, and any task where the cost of building and maintaining the tool exceeds the value of the time saved. AI is most valuable on high-volume, well-defined, lower-stakes tasks. It is least valuable on low-volume, highly contextual, high-stakes ones. Being clear about which category a task falls into before investing in automation saves significant time and money.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            This is the sort of thing our <Link href="/services/ai-tools" style={{ color: 'var(--amber)' }}>AI tools work</Link> work covers. Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost. We build tools with AI inside them rather than beside them.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

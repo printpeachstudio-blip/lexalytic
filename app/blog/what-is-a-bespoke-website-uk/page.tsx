@@ -63,7 +63,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Template sites appear cheaper upfront but have ongoing costs: hosting (£10-50/month), premium themes (£50-200/year), page builder plugins (£50-200/year), security plugins, backup plugins, and the time or cost of maintenance when things break. A bespoke Next.js site hosted on Vercel has zero ongoing platform costs. The upfront investment is higher. The 3-year total cost is often comparable - and the performance difference is significant.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            If you are weighing this up for your own site, there is more on our <Link href="/services/website-development" style={{ color: 'var(--amber)' }}>website development</Link> page. Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost. We build sites this way.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

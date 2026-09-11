@@ -51,7 +51,7 @@ export default function BlogPost() {
             Sage vs Xero: Which Is Better for Automated Reporting?
           </h1>
           <p style={{ fontSize: '18px', color: 'var(--ink-2)', lineHeight: '1.75', marginBottom: '32px', fontWeight: '300' }}>
-            Both Sage and Xero are excellent accounting tools. But when it comes to connecting your financial data to Excel, Power BI, and automated reporting systems, they are not equal. Here is an honest comparison from the perspective of someone who builds those connections for a living.
+            Both Sage and Xero are excellent accounting tools. But for connecting your financial data to Excel, Power BI, and automated reporting systems, they are not equal. Here is an honest comparison from the perspective of someone who builds those connections for a living.
           </p>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
             <img src="/mihir.jpg" alt="Mihir Hindocha" style={{ width: '44px', height: '44px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
@@ -77,7 +77,7 @@ export default function BlogPost() {
             This question comes up regularly when I am working with UK businesses on their reporting. They are either choosing between the two for the first time, or they are already on one and wondering whether the other would make their data life easier. The honest answer is that the choice of accounting software matters less than most people think - and what matters far more is how well the connection to your reporting tools is built.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            That said, Xero and Sage are genuinely different when it comes to data accessibility. Here is what those differences look like in practice.
+            That said, Xero and Sage are genuinely different on data accessibility. Here is what those differences look like in practice.
           </p>
 
           <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: '48px', border: '1px solid var(--border)' }}>
@@ -301,8 +301,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Using Sage or Xero and still exporting manually?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. We will look at your current setup and tell you exactly how to get your accounting data flowing automatically into your reporting tools - whichever platform you are on.
-            </p>
+            If you would rather not build it yourself, that is what our <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> covers. Book a free 30-minute call. We will look at your current setup and tell you exactly how to get your accounting data flowing automatically into your reporting tools - whichever platform you are on.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

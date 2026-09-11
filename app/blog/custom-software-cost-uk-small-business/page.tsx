@@ -63,7 +63,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Write down exactly what the system needs to do before speaking to any developer. List every feature, every user type, every system it needs to connect to. The more specific your brief, the more accurate the quote. A developer who quotes from a vague brief is guessing - and the guess will almost always be wrong in one direction or the other. Ask for the quote to be broken down by feature or phase so you can understand where the cost sits and make informed decisions about what to include.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            If you want a number before you speak to anyone, the <Link href="/tools/build-estimator" style={{ color: 'var(--amber)' }}>free build cost estimator</Link> shows what each part of a build adds and why. Book a free 30-minute call. Tell us what you need and we will tell you the best approach and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

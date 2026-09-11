@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>Business owners who struggle to take breaks often describe the same feeling: anxiety about what they might be missing. The cure is not willpower - it is visibility. A dashboard that shows the key indicators of business health, updated automatically, accessible from anywhere, means that checking in takes five minutes rather than requiring a string of messages and calls. Revenue versus target. Cash position. Open client issues. Anything flagged as urgent. With this visibility in place, a proper break becomes possible - not because the owner stops caring, but because they can see at a glance that things are fine.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Where the off the shelf option nearly works but not quite, that is usually a <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> job. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

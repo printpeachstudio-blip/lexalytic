@@ -36,7 +36,7 @@ export default function AIToolsPage() {
               <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>AI-Powered Business Tools UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-              AI that works inside<br /><em style={{ color: 'var(--amber)' }}>your business - not just alongside it.</em>
+              AI that works inside<br /><em style={{ color: 'var(--amber)' }}>your business, not bolted on beside it.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '620px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
               We build business tools with Claude AI built in - so the intelligence is part of the workflow, not a separate tab someone has to remember to open. Proposal generators, document processors, intelligent data tools, internal assistants - built around exactly what your business needs.

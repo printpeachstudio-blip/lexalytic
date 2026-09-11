@@ -61,7 +61,9 @@ export default function BlogPost() {
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>The dashboards that get used are the ones that answer the questions people are already asking. Before building anything, list the three questions the MD asks most often. Build a dashboard that answers those three questions. Nothing more. If those questions change over time, update the dashboard. The discipline of answering a small number of questions well is harder than it sounds - there is always pressure to add more - but it is what separates dashboards that drive decisions from dashboards that gather dust.</p>
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to talk through your specific situation?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            Most of our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link> starts with somebody rebuilding this by hand every month. Book a free 30-minute call. Tell us what you are trying to build and we will tell you the best approach - and what it would cost. We build exactly this sort of reporting.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
         </div>

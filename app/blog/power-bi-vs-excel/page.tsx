@@ -304,8 +304,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Not sure which is right for your business?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', marginBottom: '28px', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call and we will look at your current reporting process and tell you exactly what needs to change - whether that is automating your Excel, building a Power BI dashboard, or something in between.
-            </p>
+            If the reporting is the problem rather than the data, that is our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link>. Book a free 30-minute call and we will look at your current reporting process and tell you exactly what needs to change - whether that is automating your Excel, building a Power BI dashboard, or something in between.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

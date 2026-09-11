@@ -475,7 +475,7 @@ const posts = [
   {
     slug: 'sage-vs-xero-automated-reporting',
     title: 'Sage vs Xero: Which Is Better for Automated Reporting? (UK 2026)',
-    excerpt: 'Both Sage and Xero are excellent accounting tools. But when it comes to connecting your financial data to Excel and Power BI, they are not equal. An honest comparison.',
+    excerpt: 'Both Sage and Xero are excellent accounting tools. But for connecting your financial data to Excel and Power BI, they are not equal. An honest comparison.',
     date: 'June 2026',
     readTime: '10 min read',
     tag: 'Reporting',

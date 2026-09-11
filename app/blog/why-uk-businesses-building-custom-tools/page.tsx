@@ -212,7 +212,9 @@ export default function BlogPost() {
 
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Have a process that needs a proper tool?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>Book a free 30-minute call. Describe your process and we will tell you whether a custom tool makes sense - and what it would cost to build it.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
+            If nothing off the shelf fits, that is what <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> are for. Book a free 30-minute call. Describe your process and we will tell you whether a custom tool makes sense - and what it would cost to build it.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>
 

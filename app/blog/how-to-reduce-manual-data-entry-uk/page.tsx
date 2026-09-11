@@ -324,8 +324,8 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Ready to stop re-entering the same data?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-              Book a free 30-minute call. Tell us where your team spends the most time on manual data work and we will tell you exactly what automation would look like - and what it would cost.
-            </p>
+            The <Link href="/tools/data-health-check" style={{ color: 'var(--amber)' }}>free data health check</Link> catches these before they get into anything. Book a free 30-minute call. Tell us where your team spends the most time on manual data work and we will tell you exactly what automation would look like - and what it would cost.
+          </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>
               Book a free scoping call →
             </Link>

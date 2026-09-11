@@ -32,7 +32,7 @@ const tiers = [
   {
     name: 'Retainer',
     price: 'Ongoing',
-    description: 'Ongoing support, updates, and new builds as your business evolves. An ongoing digital studio partner, not just a one-off project.',
+    description: 'Ongoing support, updates, and new builds as your business evolves. An ongoing digital studio partner rather than a one-off project.',
     features: [
       'Monthly hours for new builds & updates',
       'Priority turnaround on all requests',

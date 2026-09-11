@@ -158,5 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/tools/labour-by-session', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/blog/what-deliveroo-commission-really-costs', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/restaurant-below-benchmark-gross-profit', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/privacy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://www.lexalytic.com/blog/what-is-power-query-uk-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
