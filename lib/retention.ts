@@ -37,7 +37,9 @@ export interface Profile {
   phone: string | null
 }
 
-export const BOE_BASE = 3.75
+import { BOE_BASE as RATE } from './rates'
+
+export const BOE_BASE = RATE
 export const STAT_RATE = BOE_BASE + 8
 
 export function money(n: number): string {

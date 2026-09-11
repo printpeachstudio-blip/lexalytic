@@ -623,6 +623,23 @@ Every business has at least one person like this. Usually in finance or operatio
 
 Automating and documenting the processes they own is not a threat to their role. It is a protection of the business. And it frees them to do the work that actually requires their judgement rather than their memory.
 
+2026-12-16
+The question every agency answers with "it depends".
+
+Which is true, and useless.
+
+What it actually depends on is: how many separate groups of people need to see different things, what it has to connect to, and where your data is now. That is most of it.
+
+The first one is the big driver and the least obvious. A second type of user is not a second set of screens. It is the permissions logic that decides who sees what, and every feature you add afterwards has to be checked against both. That is where the cost sits.
+
+The second is where estimates go wrong. A modern API with decent documentation is a day. A system with no API where you are scraping an export is a fortnight, and you often do not know which you have until you look.
+
+The third is the one nobody budgets for. Moving four inconsistent spreadsheets costs more than starting from scratch, because the cleaning is the job and the loading takes an afternoon.
+
+We built a calculator that asks those questions and shows an itemised range with a reason against every line. It also produces a written brief you can take to three other developers if you want. Most people will not, but it seemed a strange thing to be precious about.
+
+lexalytic.com/tools/build-estimator
+
 2026-12-17
 2026 in a sentence for Lexalytic:
 
@@ -647,6 +664,40 @@ The technology is always less important than the clarity about the problem.
 
 Start with the problem. Be specific. The solution almost always follows.
 
+2026-12-23
+An hour of someone on £13.20 costs the business £16.68.
+
+Holiday accrual at 12.07 per cent, employer National Insurance at 15 above the threshold, pension at 3. Roughly 26 per cent on top of the rate, before anyone has done anything.
+
+Which matters because almost every calculation about manual work uses the wrong number.
+
+Take two people spending five hours a month each on a report. At the hourly rate that looks like about £1,600 a year. At what it actually costs the business it is closer to £2,000, and that is before you count that they are salaried so the real figure divides across 46 working weeks rather than 52.
+
+The other half nobody does is asking who is doing it. A partner on £60,000 rebuilding a spreadsheet costs three times what the same work costs further down the office. Most firms have the wrong person doing the reporting and have never calculated it, because the time is not billed to anything.
+
+Our reporting cost calculator does both. True employment cost, broken down by role, and how quickly automating it would pay back.
+
+The number that usually changes the conversation is not the annual cost. It is the working weeks.
+
+lexalytic.com/tools/reporting-cost
+
+2026-12-24
+Every lock-up calculator asks for your work in progress figure.
+
+Which is the one number a small firm cannot produce.
+
+It exists as unbilled hours in a time recording system, not as a balance you can look up. So the calculation that would tell you how much cash is tied up needs an input that only exists if you already did the work.
+
+That is why most firms measure debtor days and stop there. Debtors are visible. WIP is not, so it gets left out, and the half of lock-up that sits before the invoice goes out never gets managed at all.
+
+The consequence is that firms reach for credit control when the problem is billing. Chasing clients harder does nothing if the work has not been invoiced yet.
+
+We built it the other way round. Enter your live jobs, work delivered, invoiced, collected. It derives WIP, debtors and lock-up days from that, so you get the number without needing the number.
+
+Then it tells you which jobs to bill this week and which invoices to chase, ranked by what each releases. Because the useful output is not how many days your lock-up is. It is which three things to do on Monday.
+
+lexalytic.com/tools/lockup-tracker
+
 2026-12-29
 Case study: an independent pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
 
@@ -657,6 +708,23 @@ We built a custom locum management tool. Single input form. Pay calculated autom
 Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
 
 The full case study is on the Lexalytic website - link in the comments.
+
+2026-12-30
+A pint costing £1.42 does not cost £1.42.
+
+Line cleaning, ullage, the first pull of the session, the one that went over the bar. Five to six per cent of draught never gets sold, which means you are buying more than you are selling and the real cost per pint is closer to £1.50.
+
+Every GP calculator I could find ignores that. They take the price, take the cost, give you a percentage that looks fine.
+
+Do it properly and a line you thought was running at 71 per cent is at 67. Across a range that is the difference between a good month and a flat one.
+
+The other thing most of them get wrong is VAT. If you are registered, a £5.60 pint is £4.67 to you. Using the till price inflates the reported margin by about 17 per cent, which makes a business that is struggling look healthy on paper.
+
+So we built one that does the whole range at once, applies wastage by product type, and shows both figures side by side. The gap between them is the point.
+
+Duty went up 3.66 per cent on 1 February. Most sites recost weeks late, if at all.
+
+lexalytic.com/tools/pub-gp-calculator
 
 2026-12-31
 Case study: a professional services firm had no central view of project profitability.
@@ -684,6 +752,23 @@ The difference between the two is almost never design. It is technical performan
 
 What is your website doing for people who have never heard of you?
 
+2027-01-06
+A publican worked out, six months in, that his afternoon shift covered its costs and contributed nothing.
+
+He had never put labour spend next to till sales for that one session. The week was profitable, so nobody looked.
+
+That is the normal state of things. You know the month made money. You do not know that Friday night is carrying Tuesday lunch and Sunday is carrying both.
+
+The arithmetic is not hard, it is just never done at the right level. Take the session's sales, apply your gross profit, subtract what the labour actually cost. What is left is what that session contributed toward rent and everything else.
+
+Two things people get wrong when they do it.
+
+They use the hourly rate rather than the real cost, which understates labour by about 26 per cent once holiday accrual, employer National Insurance and pension are in.
+
+And they conclude they should close the session. Usually wrong. Rent runs whether you open or not, so a session making any contribution beats being shut. Most weak sessions are overstaffed at the edges rather than fundamentally unviable, and starting one person an hour later is worth more than it sounds.
+
+lexalytic.com/tools/labour-by-session
+
 2027-01-07
 Most businesses that have outgrown their website know it.
 
@@ -709,6 +794,25 @@ CVCraft AI rewrites CVs and delivers them in 24 hours with no human involvement.
 That is what AI in business actually looks like. Not a subscription to a general-purpose tool. A specific solution to a specific problem.
 
 What is the one task in your business that fits that description?
+
+2027-01-13
+An accountant posted about a client whose restaurant filed at 56 per cent gross profit.
+
+The inspector said it should be at least 60, based on other restaurants.
+
+The client was not doing anything wrong. Proving that, after the year had closed and without the records to hand, turned out to be the hard part.
+
+HMRC compares filed returns against expected profit figures automatically. It is not an inspector deciding to look, it is a system flagging a number that sits outside the band for your format.
+
+The things that legitimately pull a restaurant below benchmark are almost all invisible in a set of accounts. Delivery commission at 25 to 35 per cent does not appear in cost of sales at all. Discounting, waste, staff meals, a tie if you are a pub tenant. Each one takes points off and none of them shows up as a line.
+
+Here is the part that decides how the conversation goes.
+
+Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
+
+That difference is determined entirely by what you kept at the time. A waste log written as it happened is worth a great deal. The same figures estimated eighteen months later are worth very little, however honest they are, because there is no way to tell them apart from numbers chosen to fit.
+
+lexalytic.com/tools/restaurant-benchmark-check
 
 2027-01-14
 The businesses that get the best results from a website rebuild are almost always the ones that did the most preparation before the build started.

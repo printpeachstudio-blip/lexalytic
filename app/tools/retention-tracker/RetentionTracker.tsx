@@ -15,7 +15,8 @@ const SENDER_KEY = 'lexalytic.retention.sender'
 const PAID_KEY = 'lexalytic.retention.paid'
 
 // Statutory interest = Bank of England base rate + 8%
-const BOE_BASE = 3.75
+// Rate lives in lib/rates.ts so there is one place to change it
+const BOE_BASE = 3.75  // keep in step with lib/rates.ts
 const STAT_RATE = BOE_BASE + 8
 
 const AMBER = '#C17D2E'
