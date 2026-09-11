@@ -82,6 +82,21 @@ The businesses getting the most from AI in 2026 are not the most technically sop
 
 If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
 
+2026-09-16
+A UK company registration number is eight digits.
+
+Open a supplier list in Excel and a good number of them will be seven.
+
+Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
+
+Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
+
+The same thing happens to sort codes, which matters considerably more when you are building a payment file.
+
+What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
+
+We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
+
 2026-09-17
 Three things we have built and operate ourselves:
 
@@ -113,6 +128,19 @@ A website built properly is a business asset that compounds over time.
 A website built quickly is an expense that needs replacing in 18 months.
 
 If your current site is not generating enquiries consistently, the problem is almost certainly structural - not the content on it.
+
+2026-09-23
+For offences committed on or after 1 May 2026, the maximum rent repayment order is two years of rent rather than one.
+
+The window for bringing a claim doubled too, from twelve months to two years. Six new offences were added to the list that triggers one.
+
+For a landlord letting five rooms at 700 a month, the theoretical maximum went from around 42,000 to around 84,000. That sits alongside a council civil penalty of up to 30,000, not instead of it.
+
+The change that catches most people is the extension to superior landlords. Before the Act, following Rakusen v Jepsen, an order could only be made against the immediate landlord. In a rent-to-rent arrangement the operating company was liable and the property owner was not. That is now reversed.
+
+The licensing rules themselves have not changed. Five or more people from two or more households sharing facilities, no minimum number of storeys since 2018.
+
+What changed is the cost of not realising you were caught by them.
 
 2026-09-24
 A question worth asking before signing another SaaS contract:
@@ -146,6 +174,19 @@ A well-built tool does one thing well for the person using it. It does not try t
 
 That principle applies whether you are building a public calculator or a private internal business tool.
 
+2026-09-30
+Most councils inspect an HMO within six weeks of a licence application.
+
+The officer measures the rooms. Not estimates, measures.
+
+Any room slept in by one adult must be at least 6.51 square metres. Two adults sharing needs 10.22. Below 4.64 and it cannot be used for sleeping at all. Space under a ceiling lower than 1.5 metres does not count toward the total, which is what catches out attic rooms that look fine on a floor plan.
+
+If a room fails, it does not count toward your licensed occupancy. The licence gets issued for fewer people than you are currently housing, and the rent the property can lawfully produce drops accordingly.
+
+The other reliable failure is fire doors. Self-closers that have been wedged open or unscrewed, and intumescent strips buried under enough coats of paint that they will not do anything.
+
+Neither of these is difficult to fix. Both are considerably cheaper to fix before the inspection than after it.
+
 2026-10-01
 Fixed price is not a gimmick.
 
@@ -176,6 +217,21 @@ The landlords managing HMOs well either have a system they built themselves out 
 
 If you manage HMO properties and the admin is absorbing more time than it should, the problem is almost certainly the tools.
 
+2026-10-07
+Retention is the one construction debt nobody argues about.
+
+The main contractor is not saying the work was defective. They are not disputing the valuation. The date passed, nobody applied for it, and the money stayed where it was.
+
+The second half falls due twelve months after practical completion. By then the job is closed, the file is archived, and the person who would have chased it has moved on to three other sites.
+
+Two things most subcontractors do not know.
+
+The first is that pay when paid does not apply. Section 113 of the Construction Act makes those clauses ineffective unless a third party has actually gone insolvent. "The client has not released it to us yet" is not a defence.
+
+The second is that you can charge interest at eight points over base, currently 11.75%, on retention that has passed its release date. On five thousand pounds held a year late that is around five hundred and eighty quid.
+
+Almost nobody claims it. Which is exactly why releasing retention late costs a main contractor nothing.
+
 2026-10-08
 What does a website that actually works look like?
 
@@ -205,6 +261,19 @@ The test is not "can we configure this tool to work?" Most tools can be configur
 The test is: "after configuration, are we still working around the tool or is the tool working for us?"
 
 If the answer is still working around it - that is the signal.
+
+2026-10-14
+Most contracts cap total retention at five percent of the contract price.
+
+Deductions come off each interim certificate and accumulate until they hit that ceiling. At which point no more should be taken.
+
+In practice deduction often carries on past the cap, because it is a running total against a limit and nobody is checking it.
+
+That money was never contractually due. It is recoverable now, not at practical completion, and not at the end of the defects period.
+
+Worth adding up every deduction across all your certificates on your current jobs and comparing the total against the cap in your contract.
+
+It takes twenty minutes and on a decent sized job it is not a small number.
 
 2026-10-15
 Kismet is a wedding planning platform we are building.
@@ -238,6 +307,17 @@ The time saved on payment chasing in the first month alone pays for years of tra
 
 If you are a PT spending any meaningful time chasing payments, this is the one change that has the highest return for the least effort.
 
+2026-10-21
+Construction adjudication gets a decision in 28 days.
+
+Adjudicator appointed within seven days of the notice. Decision within twenty eight, extendable by fourteen with your consent. Binding on an interim basis, so it has to be complied with while anything further runs.
+
+For an unpaid notified sum, where no payment notice and no pay less notice were served, that is a strong position to be in.
+
+The barrier is almost never the merits of the claim. It is that most subcontractors do not know the route exists, or assume it means solicitors and months of cost.
+
+Often the referral itself is enough. Payment arrives before the adjudicator reaches a view.
+
 2026-10-22
 Agencies with 20 people have 20 people worth of overhead.
 
@@ -266,6 +346,34 @@ The clubs that run smoothly are the ones that set up properly once and then main
 
 If you run or volunteer for a grassroots sports club and the admin feels heavier than it should, the answer is almost always a one-time cleanup and a single platform, consistently used.
 
+2026-10-28
+A twelve pound dish on Deliveroo returns about eight pounds forty.
+
+That is before the VAT comes off, before the box, and before anyone has cooked it.
+
+Most independents price the delivery menu identically to the restaurant menu, which means the whole commission comes out of margin that was already thin.
+
+The bit that catches people is the order the maths happens in. The customer pays twelve pounds including VAT, so two of those were never yours. You are working from ten. The platform then takes thirty per cent of that, so you see seven. Food cost and packaging come out of the seven.
+
+Work it the other way round and you will convince yourself you are making nearly double what you actually are.
+
+Delivery menus generally need eight to twelve points more margin than dine-in to end up in the same place. Every platform allows it and the chains all do it.
+
+The dishes to worry about are the cheap popular ones, because the volume is concentrated exactly where the margin is thinnest. Selling more of those is not growth.
+
+2026-10-29
+Most professional services firms manage client document exchange the same way.
+
+An email goes out requesting three documents. The client replies with one of them. A week later you send another email. They attach the second. The third arrives two weeks later in a different thread that nobody can find.
+
+Meanwhile someone on your team is maintaining a spreadsheet tracking which clients have sent what, because the email system has no concept of outstanding.
+
+A client portal solves this cleanly. Every document request has a status. Clients log in and see exactly what you need from them. They upload it directly. You get notified. The spreadsheet disappears.
+
+The businesses that resist building one usually say the same thing: our clients prefer email.
+
+What they usually mean is: our clients are used to email. Those are different things.
+
 2026-11-03
 A pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
 
@@ -278,6 +386,17 @@ We built a custom locum management tool. Single input form. Pay calculated autom
 Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
 
 That is what custom software looks like when it is built around a specific problem rather than adapted from a generic one.
+
+2026-11-04
+Ask a recruitment agency owner what they billed last month and you get an answer straight away.
+
+Ask how much of it is still refundable and you usually get a pause.
+
+Every perm placement inside its rebate window is money you have invoiced and could still be asked to give back. Individually nobody worries about it. A desk carrying twelve live placements at an average nine thousand pound fee, spread through their windows, is sitting on something like forty three thousand pounds of billed revenue that a client could still claim against.
+
+The bit that makes it worth modelling is that it clusters. A strong month produces a batch of start dates, and that batch moves through the window together. Six placements into the same client, placed the same fortnight, reach week four on the same day.
+
+One candidate leaving is absorbed. Six is a month.
 
 2026-11-05
 Wedding suppliers manage client relationships over longer timelines than almost any other small business.
@@ -309,6 +428,17 @@ The question is "which task, done at volume, would most benefit from being autom
 
 Start there. Build that one thing properly. The ROI is almost always immediate.
 
+2026-11-11
+Something a lot of agencies do not use, and it is in their own terms of business.
+
+Rebate clauses are almost always conditional on the placement invoice being settled within the agreed payment terms.
+
+A client who paid sixty days late on thirty day terms may have no contractual entitlement to a rebate at all.
+
+Most agencies process the refund without ever checking the payment date against the terms. It is not deliberate, it is just that the person handling the rebate claim is not the person who chased the invoice, and nobody joins the two up.
+
+Worth checking before you agree the next one.
+
 2026-11-12
 The most valuable person in most operations teams is the one who knows how everything connects.
 
@@ -335,6 +465,21 @@ The MD now opens one dashboard for the weekly leadership meeting instead of wait
 
 The decisions they make now look different to the ones they were making six months ago.
 
+2026-11-18
+The question I get asked about client portals:
+
+Is it worth building something bespoke or should we just use TaxDome or Karbon?
+
+The honest answer depends on one number: how many clients do you have and what do you pay per user per month on the platform.
+
+A five-person accountancy firm on a mid-tier TaxDome plan pays roughly £1,800 to £2,400 per year. Over three years that is between £5,400 and £7,200. A bespoke portal built to do exactly what the firm needs - document collection, e-signatures, invoicing, outstanding items tracker - typically costs £4,000 to £8,000 once, with no ongoing fee.
+
+The crossover point is usually somewhere between 18 and 30 months.
+
+After that the bespoke option is cheaper every year, fits the firm better because it was built around how they actually work, and carries the firm branding rather than the platform name.
+
+Worth doing the maths before signing another annual contract.
+
 2026-11-19
 I got asked recently how we decide what to build next at Lexalytic.
 
@@ -360,6 +505,17 @@ Specifically: the difference between what the client says they need and what the
 The businesses that get the best results from custom software are the ones that spend significant time on the brief before the build starts. Not because they need to solve every edge case upfront, but because the discipline of writing down exactly what the system needs to do surfaces assumptions that would otherwise only become visible when they cause problems.
 
 We ask clients to brief us as if we know nothing about their business. Not because we are lazy. Because the exercise of writing it down for someone who knows nothing is how you discover what you actually need.
+
+2026-11-25
+Two clauses that look similar in a terms of business negotiation and are not.
+
+A refund clause means cash goes back out of the door.
+
+A replacement clause means you fill the role again and the cost is resourcing time.
+
+Agencies concede these interchangeably to win a client, and they are priced completely differently. An agency with a replacement right and a decent candidate pool carries a fraction of the real exposure that the headline number suggests. An agency that agreed a straight refund to get on the PSL carries all of it.
+
+Worth knowing which one you actually signed before you find out the hard way.
 
 2026-11-26
 A client came to us last year with a specific problem.
@@ -389,6 +545,21 @@ If the site has not been updated in two years and the content does not reflect w
 
 A website rebuild done properly addresses all of these. One done poorly addresses none of them and costs the same.
 
+2026-12-02
+An accountant posted about a client whose restaurant filed accounts at fifty six per cent gross profit.
+
+The inspector said it should be at least sixty, based on other restaurants.
+
+The client was not doing anything wrong. Explaining that, after the year had closed and without the records to hand, was the hard part.
+
+HMRC compares filed returns against expected profit figures automatically through Connect. Sitting below the band for your format is one of the most common triggers for a compliance check, because from the outside it looks the same as sales that were not recorded.
+
+The things that legitimately pull a restaurant below benchmark are delivery commission, discounting, waste, staff meals and a tie if you are a pub tenant. None of them appear anywhere obvious in a set of accounts.
+
+Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
+
+That difference is decided entirely by what you kept at the time, and a waste log written eighteen months later is worth almost nothing however honest it is.
+
 2026-12-03
 The businesses I admire most are the ones that have built systems around how they actually work rather than adapting how they work to fit generic tools.
 
@@ -414,6 +585,17 @@ Not once a year. Every week.
 The technology to make this happen automatically is not expensive. A Power BI dashboard connected to your accounting software typically costs less than one month of accountancy fees and runs itself from that point forward.
 
 The businesses making the best decisions in 2027 will be the ones that built this visibility in 2026.
+
+2026-12-09
+There is a GDPR issue most professional services firms are quietly ignoring.
+
+Sending sensitive personal and financial documents by unencrypted email is not technically compliant with UK data protection requirements. Most firms do it because the alternative - encrypted email, secure file transfer tools - is inconvenient for both sides.
+
+A client portal solves it properly. Documents are uploaded and downloaded through an encrypted connection. Access is controlled by login. There is an audit log of every action. Each client only sees their own files.
+
+For firms in regulated sectors - financial advice, legal, accountancy - having a documented and auditable channel for sensitive client data is increasingly an expectation from the FCA, SRA, and ICAEW, not just a best practice.
+
+The firms that move to a proper portal almost always say the same thing: they wish they had done it sooner. Not because it changed their relationship with clients. Because it made a daily operational headache disappear.
 
 2026-12-10
 We are building Kismet.
@@ -708,7 +890,7 @@ The tools that exist - Pitchero, Spond, ClubSpark - are not complicated. The bar
 
 The migration is worth doing once. After that the admin is genuinely easier.
 
-2027-04-03
+2027-04-06
 The custom CRM question I get asked most often:
 
 How do you know when to build instead of buy?
@@ -763,184 +945,3 @@ If you know what you would do with clean data, the investment in getting there i
 
 Start with the use case. The data work follows from it.
 
-2026-10-29
-Most professional services firms manage client document exchange the same way.
-
-An email goes out requesting three documents. The client replies with one of them. A week later you send another email. They attach the second. The third arrives two weeks later in a different thread that nobody can find.
-
-Meanwhile someone on your team is maintaining a spreadsheet tracking which clients have sent what, because the email system has no concept of outstanding.
-
-A client portal solves this cleanly. Every document request has a status. Clients log in and see exactly what you need from them. They upload it directly. You get notified. The spreadsheet disappears.
-
-The businesses that resist building one usually say the same thing: our clients prefer email.
-
-What they usually mean is: our clients are used to email. Those are different things.
-
-2026-11-12
-The question I get asked about client portals:
-
-Is it worth building something bespoke or should we just use TaxDome or Karbon?
-
-The honest answer depends on one number: how many clients do you have and what do you pay per user per month on the platform.
-
-A five-person accountancy firm on a mid-tier TaxDome plan pays roughly £1,800 to £2,400 per year. Over three years that is between £5,400 and £7,200. A bespoke portal built to do exactly what the firm needs - document collection, e-signatures, invoicing, outstanding items tracker - typically costs £4,000 to £8,000 once, with no ongoing fee.
-
-The crossover point is usually somewhere between 18 and 30 months.
-
-After that the bespoke option is cheaper every year, fits the firm better because it was built around how they actually work, and carries the firm branding rather than the platform name.
-
-Worth doing the maths before signing another annual contract.
-
-2026-12-03
-There is a GDPR issue most professional services firms are quietly ignoring.
-
-Sending sensitive personal and financial documents by unencrypted email is not technically compliant with UK data protection requirements. Most firms do it because the alternative - encrypted email, secure file transfer tools - is inconvenient for both sides.
-
-A client portal solves it properly. Documents are uploaded and downloaded through an encrypted connection. Access is controlled by login. There is an audit log of every action. Each client only sees their own files.
-
-For firms in regulated sectors - financial advice, legal, accountancy - having a documented and auditable channel for sensitive client data is increasingly an expectation from the FCA, SRA, and ICAEW, not just a best practice.
-
-The firms that move to a proper portal almost always say the same thing: they wish they had done it sooner. Not because it changed their relationship with clients. Because it made a daily operational headache disappear.
-
-2026-09-16
-A UK company registration number is eight digits.
-
-Open a supplier list in Excel and a good number of them will be seven.
-
-Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
-
-Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
-
-The same thing happens to sort codes, which matters considerably more when you are building a payment file.
-
-What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
-
-We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
-
-2026-09-23
-For offences committed on or after 1 May 2026, the maximum rent repayment order is two years of rent rather than one.
-
-The window for bringing a claim doubled too, from twelve months to two years. Six new offences were added to the list that triggers one.
-
-For a landlord letting five rooms at 700 a month, the theoretical maximum went from around 42,000 to around 84,000. That sits alongside a council civil penalty of up to 30,000, not instead of it.
-
-The change that catches most people is the extension to superior landlords. Before the Act, following Rakusen v Jepsen, an order could only be made against the immediate landlord. In a rent-to-rent arrangement the operating company was liable and the property owner was not. That is now reversed.
-
-The licensing rules themselves have not changed. Five or more people from two or more households sharing facilities, no minimum number of storeys since 2018.
-
-What changed is the cost of not realising you were caught by them.
-
-2026-09-30
-Most councils inspect an HMO within six weeks of a licence application.
-
-The officer measures the rooms. Not estimates, measures.
-
-Any room slept in by one adult must be at least 6.51 square metres. Two adults sharing needs 10.22. Below 4.64 and it cannot be used for sleeping at all. Space under a ceiling lower than 1.5 metres does not count toward the total, which is what catches out attic rooms that look fine on a floor plan.
-
-If a room fails, it does not count toward your licensed occupancy. The licence gets issued for fewer people than you are currently housing, and the rent the property can lawfully produce drops accordingly.
-
-The other reliable failure is fire doors. Self-closers that have been wedged open or unscrewed, and intumescent strips buried under enough coats of paint that they will not do anything.
-
-Neither of these is difficult to fix. Both are considerably cheaper to fix before the inspection than after it.
-
-2026-10-07
-Retention is the one construction debt nobody argues about.
-
-The main contractor is not saying the work was defective. They are not disputing the valuation. The date passed, nobody applied for it, and the money stayed where it was.
-
-The second half falls due twelve months after practical completion. By then the job is closed, the file is archived, and the person who would have chased it has moved on to three other sites.
-
-Two things most subcontractors do not know.
-
-The first is that pay when paid does not apply. Section 113 of the Construction Act makes those clauses ineffective unless a third party has actually gone insolvent. "The client has not released it to us yet" is not a defence.
-
-The second is that you can charge interest at eight points over base, currently 11.75%, on retention that has passed its release date. On five thousand pounds held a year late that is around five hundred and eighty quid.
-
-Almost nobody claims it. Which is exactly why releasing retention late costs a main contractor nothing.
-
-2026-10-14
-Most contracts cap total retention at five percent of the contract price.
-
-Deductions come off each interim certificate and accumulate until they hit that ceiling. At which point no more should be taken.
-
-In practice deduction often carries on past the cap, because it is a running total against a limit and nobody is checking it.
-
-That money was never contractually due. It is recoverable now, not at practical completion, and not at the end of the defects period.
-
-Worth adding up every deduction across all your certificates on your current jobs and comparing the total against the cap in your contract.
-
-It takes twenty minutes and on a decent sized job it is not a small number.
-
-2026-10-21
-Construction adjudication gets a decision in 28 days.
-
-Adjudicator appointed within seven days of the notice. Decision within twenty eight, extendable by fourteen with your consent. Binding on an interim basis, so it has to be complied with while anything further runs.
-
-For an unpaid notified sum, where no payment notice and no pay less notice were served, that is a strong position to be in.
-
-The barrier is almost never the merits of the claim. It is that most subcontractors do not know the route exists, or assume it means solicitors and months of cost.
-
-Often the referral itself is enough. Payment arrives before the adjudicator reaches a view.
-
-2026-11-04
-Ask a recruitment agency owner what they billed last month and you get an answer straight away.
-
-Ask how much of it is still refundable and you usually get a pause.
-
-Every perm placement inside its rebate window is money you have invoiced and could still be asked to give back. Individually nobody worries about it. A desk carrying twelve live placements at an average nine thousand pound fee, spread through their windows, is sitting on something like forty three thousand pounds of billed revenue that a client could still claim against.
-
-The bit that makes it worth modelling is that it clusters. A strong month produces a batch of start dates, and that batch moves through the window together. Six placements into the same client, placed the same fortnight, reach week four on the same day.
-
-One candidate leaving is absorbed. Six is a month.
-
-2026-11-11
-Something a lot of agencies do not use, and it is in their own terms of business.
-
-Rebate clauses are almost always conditional on the placement invoice being settled within the agreed payment terms.
-
-A client who paid sixty days late on thirty day terms may have no contractual entitlement to a rebate at all.
-
-Most agencies process the refund without ever checking the payment date against the terms. It is not deliberate, it is just that the person handling the rebate claim is not the person who chased the invoice, and nobody joins the two up.
-
-Worth checking before you agree the next one.
-
-2026-11-18
-Two clauses that look similar in a terms of business negotiation and are not.
-
-A refund clause means cash goes back out of the door.
-
-A replacement clause means you fill the role again and the cost is resourcing time.
-
-Agencies concede these interchangeably to win a client, and they are priced completely differently. An agency with a replacement right and a decent candidate pool carries a fraction of the real exposure that the headline number suggests. An agency that agreed a straight refund to get on the PSL carries all of it.
-
-Worth knowing which one you actually signed before you find out the hard way.
-
-2026-10-28
-A twelve pound dish on Deliveroo returns about eight pounds forty.
-
-That is before the VAT comes off, before the box, and before anyone has cooked it.
-
-Most independents price the delivery menu identically to the restaurant menu, which means the whole commission comes out of margin that was already thin.
-
-The bit that catches people is the order the maths happens in. The customer pays twelve pounds including VAT, so two of those were never yours. You are working from ten. The platform then takes thirty per cent of that, so you see seven. Food cost and packaging come out of the seven.
-
-Work it the other way round and you will convince yourself you are making nearly double what you actually are.
-
-Delivery menus generally need eight to twelve points more margin than dine-in to end up in the same place. Every platform allows it and the chains all do it.
-
-The dishes to worry about are the cheap popular ones, because the volume is concentrated exactly where the margin is thinnest. Selling more of those is not growth.
-
-2026-11-11
-An accountant posted about a client whose restaurant filed accounts at fifty six per cent gross profit.
-
-The inspector said it should be at least sixty, based on other restaurants.
-
-The client was not doing anything wrong. Explaining that, after the year had closed and without the records to hand, was the hard part.
-
-HMRC compares filed returns against expected profit figures automatically through Connect. Sitting below the band for your format is one of the most common triggers for a compliance check, because from the outside it looks the same as sales that were not recorded.
-
-The things that legitimately pull a restaurant below benchmark are delivery commission, discounting, waste, staff meals and a tie if you are a pub tenant. None of them appear anywhere obvious in a set of accounts.
-
-Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
-
-That difference is decided entirely by what you kept at the time, and a waste log written eighteen months later is worth almost nothing however honest it is.
