@@ -53,6 +53,29 @@ function daysSince(dateStr: string): number | null {
   return Math.max(0, Math.round((t.getTime() - d.getTime()) / 86400000))
 }
 
+
+const AGE_BANDS: {
+  id: string; label: string; note: string; color: string
+  test: (overdueBy: number, debt: number) => boolean
+}[] = [
+  { id: 'current', label: 'Within terms', color: '#3F6B4C',
+    note: 'Nothing to do yet',
+    test: (o, d) => d > 0 && o <= 0 },
+  { id: '30', label: '1 to 30 days over', color: '#5A6B57',
+    note: 'Usually an oversight at their end. A polite reminder clears most of it.',
+    test: (o) => o > 0 && o <= 30 },
+  { id: '60', label: '31 to 60 days over', color: '#8F6318',
+    note: 'Past the point an email fixes. This is a phone call.',
+    test: (o) => o > 30 && o <= 60 },
+  { id: '90', label: '61 to 90 days over', color: '#A8632A',
+    note: 'Statutory interest and compensation are worth claiming at this stage.',
+    test: (o) => o > 60 && o <= 90 },
+  { id: '90plus', label: 'Over 90 days', color: '#A13B2A',
+    note: 'Recovery rates fall sharply past this point. Decide whether to escalate or write off.',
+    test: (o) => o > 90 },
+]
+
+
 interface Row {
   job: Job
   wip: number           // delivered but not invoiced
@@ -149,6 +172,30 @@ export default function LockupTracker() {
   }, [rows, firm])
 
   // What a week of focused billing and chasing would release
+
+  // Group debt into the buckets a finance person expects to see
+  const aged = useMemo(() => {
+    const withDebt = rows.filter(r => r.debt > 0)
+    const buckets = AGE_BANDS.map(band => {
+      const items = withDebt.filter(r => band.test(r.overdueBy, r.debt))
+      return {
+        band,
+        count: items.length,
+        value: items.reduce((sum, r) => sum + r.debt, 0),
+        items,
+      }
+    }).filter(b => b.count > 0)
+
+    const total = withDebt.reduce((sum, r) => sum + r.debt, 0)
+    const overdue = withDebt.filter(r => r.overdueBy > 0)
+      .reduce((sum, r) => sum + r.debt, 0)
+    const beyond90 = withDebt.filter(r => r.overdueBy > 90)
+      .reduce((sum, r) => sum + r.debt, 0)
+    const noDate = withDebt.filter(r => r.debtAge === null).length
+
+    return { buckets, total, overdue, beyond90, noDate, count: withDebt.length }
+  }, [rows])
+
   const quickWins = useMemo(() => {
     const toBill = rows.filter(r => r.wip > 0 && (r.wipAge ?? 0) > 14).sort((a, b) => b.wip - a.wip)
     const toChase = rows.filter(r => r.overdueBy > 0).sort((a, b) => b.debt - a.debt)
@@ -196,6 +243,15 @@ export default function LockupTracker() {
     const billRows = quickWins.toBill.map(r => `
       <tr><td>${r.job.ref}</td><td>${r.job.client || '—'}</td><td class="r">${money2(r.wip)}</td>
       <td>${r.wipAge ?? 0} days unbilled</td></tr>`).join('')
+    const agedRows = aged.buckets.map(b => `
+      <tr>
+        <td><strong style="color:${b.band.color}">${b.band.label}</strong><br/>
+          <span style="font-size:11.5px;color:#666">${b.band.note}</span></td>
+        <td class="r">${b.count}</td>
+        <td class="r">${money2(b.value)}</td>
+        <td class="r">${aged.total > 0 ? Math.round((b.value / aged.total) * 100) : 0}%</td>
+      </tr>`).join('')
+
     const chaseRows = quickWins.toChase.map(r => `
       <tr><td>${r.job.ref}</td><td>${r.job.client || '—'}</td><td class="r">${money2(r.debt)}</td>
       <td>${r.overdueBy} days past terms</td></tr>`).join('')
@@ -254,6 +310,11 @@ export default function LockupTracker() {
     <li>At ${money(totals.dailyRevenue)} of fee income a day, cutting lock-up by ten days would release ${money(totals.dailyRevenue * 10)} of cash on a permanent basis.</li>
   </ul>
 
+  <h2>How the debt is aged</h2>
+  ${agedRows ? `<table><thead><tr><th>Band</th><th class="r">Invoices</th><th class="r">Value</th><th class="r">Share</th></tr></thead><tbody>${agedRows}</tbody></table>
+  <p>Counted from the due date rather than the invoice date, using the terms recorded against each job. ${money2(aged.overdue)} of the ${money2(aged.total)} owed is past terms.</p>`
+  : '<p>Nothing is currently invoiced and unpaid.</p>'}
+
   <h2>Bill these first</h2>
   ${billRows ? `<table><thead><tr><th>Job</th><th>Client</th><th class="r">Value</th><th>Age</th></tr></thead><tbody>${billRows}</tbody></table>
   <p>Delivered work more than a fortnight old. Total ${money2(quickWins.billValue)}. Invoicing these does not require anyone to agree to anything.</p>`
@@ -274,7 +335,7 @@ export default function LockupTracker() {
 </body></html>`
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }
-  }, [rows, totals, quickWins, firm])
+  }, [rows, totals, quickWins, aged, firm])
 
   const submitInterest = async () => {
     if (!EMAIL_RE.test(email.trim())) { setSendError('Enter an email address we can reach you on.'); return }
