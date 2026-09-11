@@ -19,9 +19,6 @@ export default function Footer() {
               { href: '/#work', label: 'Work' },
               { href: '/case-studies', label: 'Case Studies' },
               { href: '/#results', label: 'Results' },
-              { href: '/tools', label: 'Free Tools' },
-              { href: '/retention-manager', label: 'Retention Manager' },
-              { href: '/margin-manager', label: 'Margin Manager' },
               { href: '/blog', label: 'Blog' },
               { href: '/about', label: 'About' },
               { href: '/#contact', label: 'Contact' },
@@ -42,8 +39,14 @@ export default function Footer() {
             ))}
           </div>
           <div>
+            <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Products</div>
+            {[['Retention Manager', '/retention-manager'], ['Margin Manager', '/margin-manager'], ['Free tools', '/tools']].map(([label, href]) => (
+              <a key={href} href={href} style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '6px', textDecoration: 'none' }}>{label}</a>
+            ))}
+          </div>
+          <div>
             <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Industries</div>
-            {[['Construction', '/industries/construction'], ['Recruitment', '/industries/recruitment'], ['Professional Services', '/industries/professional-services'], ['Healthcare', '/industries/healthcare']].map(([label, href]) => (
+            {[['Construction', '/industries/construction'], ['Hospitality', '/industries/hospitality'], ['Property', '/industries/property'], ['Recruitment', '/industries/recruitment'], ['Professional Services', '/industries/professional-services'], ['Healthcare', '/industries/healthcare']].map(([label, href]) => (
               <a key={href} href={href} style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '6px', textDecoration: 'none' }}>{label}</a>
             ))}
           </div>
