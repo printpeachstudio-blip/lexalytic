@@ -5,9 +5,9 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools' },
-  title: 'Free Tools for UK Businesses | Data, Construction, Recruitment, Property | Lexalytic',
+  title: 'Free Tools for UK Businesses | Data, Construction, Hospitality, Property | Lexalytic',
   description: 'Free browser based tools for UK businesses. Check a spreadsheet for the errors that break UK systems, track construction retention across every job, see how much placement revenue is still refundable, and work out whether a property needs an HMO licence. No signup, nothing uploaded.',
-  keywords: 'free business tools UK, custom software cost UK, bespoke software price, free data quality checker, spreadsheet error checker UK, construction retention tracker, lock-up days calculator, WIP days, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
+  keywords: 'free business tools UK, custom software cost UK, bespoke software price, free data quality checker, spreadsheet error checker UK, construction retention tracker, pub GP calculator, delivery margin calculator, restaurant profit benchmark, lock-up days calculator, WIP days, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
   openGraph: {
     title: 'Free Tools for UK Businesses | Lexalytic',
     description: 'Spreadsheet data quality, construction retention, recruitment rebate exposure, HMO licensing and certificates. Free, no signup, nothing uploaded.',
@@ -92,6 +92,53 @@ const groups = [
           'Lock-up is work delivered but not billed, plus work billed but not collected. Most firms measure the second half and never the first, because unbilled time sits in a time recording system rather than on a balance sheet. This builds both from job level, so you get the number without having to find a work in progress figure that does not exist anywhere. It then names the jobs to bill and the invoices to chase, ranked by what each releases.',
         detail:
           'A paid cash release plan turns that into something you can put in front of partners, with the priority order and what ten days off your lock-up would be worth.',
+        related: { label: 'Power BI', href: '/services/power-bi' },
+      },
+    ],
+  },
+  {
+    heading: 'Hospitality',
+    intro:
+      'Margins in single digits, a third of a delivery order gone before you start, and benchmarks you get judged against.',
+    tools: [
+      {
+        href: '/tools/restaurant-benchmark-check',
+        name: 'Restaurant benchmark check',
+        forWho: 'Restaurants, takeaways and pubs',
+        summary:
+          'HMRC publishes expected profit figures for restaurants and compares filed returns against them automatically. A business can be entirely straight and still sit below the range, because delivery commission, discounting and waste all depress margin without appearing anywhere obvious. This shows where you sit, how much of any gap your own circumstances account for, and what records would evidence it.',
+        detail:
+          'It also flags that Deliveroo, Uber Eats and Just Eat report your income to HMRC directly, which a lot of independents do not know.',
+        related: { label: 'Power BI', href: '/services/power-bi' },
+      },
+      {
+        href: '/tools/delivery-margin',
+        name: 'Delivery margin calculator',
+        forWho: 'Anyone on a delivery platform',
+        summary:
+          'A twelve pound dish returns about eight pounds forty after commission, before the VAT comes off or the box is paid for. Most kitchens price delivery identically to dine-in, which means the thinnest dishes lose money on every single order. This works out the real margin per dish, what you would need to charge to break even, and what to charge to earn the same margin you make in the restaurant.',
+        detail:
+          'Handles VAT in the right order, which is the bit most people get wrong. Commission comes off the net price, not the menu price.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+      {
+        href: '/tools/pub-gp-calculator',
+        name: 'GP calculator with wastage',
+        forWho: 'Pubs, bars and kitchens',
+        summary:
+          'Most GP calculators do one product at a time and ignore wastage, which makes every number flattering. Line cleaning, ullage and over-pouring mean you buy more than you sell, so a pint costing a pound forty really costs a pound fifty. This does the whole range at once with wastage applied by category and shows both figures side by side.',
+        detail:
+          'Puts an annual cash figure on wastage, which is usually the thing that prompts someone to tighten cellar discipline.',
+        related: { label: 'Excel automation', href: '/services/excel-automation' },
+      },
+      {
+        href: '/tools/labour-by-session',
+        name: 'Labour by session',
+        forWho: 'Anyone writing a rota',
+        summary:
+          'The week looks profitable while two sessions carry the rest. This works out contribution per session using what an hour actually costs, which is around 26 per cent above the rate once holiday accrual, employer National Insurance and pension are added. An hour at thirteen pounds twenty costs sixteen pounds sixty eight.',
+        detail:
+          'It also argues against the obvious conclusion, since rent runs whether you open or not and most weak sessions are overstaffed at the edges rather than unviable.',
         related: { label: 'Power BI', href: '/services/power-bi' },
       },
     ],

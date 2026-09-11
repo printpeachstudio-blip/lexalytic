@@ -2,30 +2,31 @@ import Link from 'next/link'
 
 const tools = [
   {
-    href: '/tools/data-health-check',
-    name: 'Data health check',
-    line: 'Finds the errors that break UK business systems. VAT numbers that fail the HMRC checksum, company numbers Excel has stripped the leading zero from, columns holding two different date formats.',
-    who: 'Anyone importing a list',
-  },
-  {
-    href: '/tools/retention-tracker',
-    name: 'Retention tracker',
-    line: 'Works out what is held across every job, whether deduction has passed the cap, and when each half falls due.',
-    who: 'Construction',
-  },
-  {
     href: '/tools/build-estimator',
     name: 'Build cost estimator',
-    line: 'What a custom system would cost, itemised, with a reason against every line. Download the brief and take it anywhere.',
+    line: 'What a custom system would cost, itemised, with a reason against every line. Download the brief and take it to anyone.',
     who: 'Weighing up a build',
   },
   {
     href: '/tools/reporting-cost',
     name: 'Reporting cost calculator',
-    line: 'What manual reporting actually costs, by role, using true employment cost rather than salary. Then how quickly automating it would pay for itself.',
+    line: 'What manual reporting actually costs, by role, using true employment cost rather than salary. Then how fast automating it pays back.',
     who: 'Every business',
   },
+  {
+    href: '/tools/delivery-margin',
+    name: 'Delivery margin calculator',
+    line: 'Which dishes lose money once the platform has taken its third, and what you would need to charge to stop that.',
+    who: 'Hospitality',
+  },
+  {
+    href: '/tools/retention-tracker',
+    name: 'Retention tracker',
+    line: 'What is held across every job, whether deduction has passed the cap, and when each half falls due.',
+    who: 'Construction',
+  },
 ]
+
 
 export default function Tools() {
   return (
@@ -57,7 +58,7 @@ export default function Tools() {
             margin: 0,
             maxWidth: '460px',
           }}>
-            Seven tools we needed and could not find a decent UK version of, so we built them. No signup,
+            Eleven tools we needed and could not find a decent UK version of, so we built them. No signup,
             no email wall, and nothing you enter is sent anywhere. They are also a fair test of whether
             we know what we are doing.
           </p>
@@ -116,7 +117,7 @@ export default function Tools() {
 
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Link href="/tools" className="btn-primary" style={{ fontSize: '15px' }}>
-            See all seven tools
+            See all eleven tools
           </Link>
           <span style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7' }}>
             One of them grew into a product.{' '}
