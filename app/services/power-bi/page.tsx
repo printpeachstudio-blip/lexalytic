@@ -35,11 +35,51 @@ const faqs = [
   { q: 'Do you work with businesses outside London?', a: 'Yes - we work with businesses across the UK and internationally. Everything is delivered remotely. Location has never been an issue for any of our clients.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a Power BI dashboard cost in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single dashboard built on data you already have in a system such as Xero or a CRM typically costs between two and four thousand pounds. Reporting across several sources with a data model behind it usually runs four to nine thousand. The cost is driven by how many systems have to be joined and how clean the data is when it arrives, not by the number of charts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need Power BI licences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Power BI Desktop is free to build in. Sharing a report with colleagues needs Power BI Pro, which is around ten pounds per user per month. For a small team that is usually the whole licensing cost. If the report only needs to be seen by two or three people, it is a modest overhead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it connect to Xero, Sage or QuickBooks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All three can feed Power BI, either through their APIs or through a scheduled export. Xero is the most straightforward because its API is well documented. Sage varies considerably depending on which Sage product you run."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single dashboard on clean data is usually two to three weeks from brief to live. Most of that is agreeing what the numbers mean rather than building the report, which is the part people underestimate."
+      }
+    }
+  ]
+}
+
 export default function PowerBIPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power BI Dashboard Development","description":"Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence.","url":"https://www.lexalytic.com/services/power-bi","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

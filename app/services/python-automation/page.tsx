@@ -35,11 +35,43 @@ const faqs = [
   { q: 'Do you work with businesses outside London?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When is Python the right choice over Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the data is too large for a spreadsheet to handle comfortably, when the logic is complex enough that formulas become unreadable, or when it needs to run on a schedule without anyone opening a file. Below that, Excel is usually the pragmatic answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a Python automation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A defined script replacing a recurring manual task is typically one to three thousand pounds. Something that runs on a schedule, handles failures and reports its own errors is closer to three to six thousand, because the reliability work is most of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does it run once it is built?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually on a scheduled cloud function, so nothing depends on a particular machine being switched on. You own the code and the hosting account, and monthly running costs are typically under ten pounds."
+      }
+    }
+  ]
+}
+
 export default function PythonAutomationPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Python Automation","description":"Expert Python automation for UK businesses. Data pipelines, scheduled scripts, API integrations, and large-scale data processing.","url":"https://www.lexalytic.com/services/python-automation","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

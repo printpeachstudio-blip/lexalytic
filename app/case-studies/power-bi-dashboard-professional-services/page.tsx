@@ -26,7 +26,9 @@ export default function CaseStudy() {
             <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>Professional Services</span>
           </div>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', lineHeight: '1.15', marginBottom: '20px', letterSpacing: '-0.02em' }}>Live P&L Dashboard for a Professional Services Firm</h1>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>Full visibility within 48 hours of launch. The manual management pack was discontinued the first week.</p>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>
+            This is representative of our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link>. For professional services firms specifically, our <Link href="/tools/lockup-tracker" style={{ color: 'var(--amber)' }}>free lock-up tracker</Link> builds the figure from job level, so you get it without needing a work in progress balance you probably do not have. Full visibility within 48 hours of launch. The manual management pack was discontinued the first week.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {[['48hrs', 'From build to full visibility'], ['Live', 'P&L by project and client'], ['0', 'Manual reports compiled']].map(([m, l], i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: '24px' }}>

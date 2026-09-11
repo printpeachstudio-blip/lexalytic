@@ -35,11 +35,43 @@ const faqs = [
   { q: 'Do you work remotely?', a: 'Yes - everything is delivered remotely. We work with businesses across the UK and internationally, and have done for years.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is VBA still worth using in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For automating actions inside Excel, yes. It remains the only way to build a genuine interface inside a workbook, and it runs anywhere Excel runs with no additional licensing. For importing and reshaping data, Power Query has largely replaced it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does VBA development cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single macro automating a defined task is usually eight hundred to two thousand pounds. A full workbook application with forms and validation typically runs three to seven thousand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will macros be blocked by security settings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Files from the internet are blocked by default in current versions of Office, which is a reasonable precaution. Files stored on a trusted network location or signed with a certificate run normally. We set this up as part of handover so it works without anyone having to lower their security settings."
+      }
+    }
+  ]
+}
+
 export default function VBAPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"VBA Development","description":"Bespoke VBA development for UK businesses. Custom Excel macros, automation tools, and UserForms built around your exact business logic.","url":"https://www.lexalytic.com/services/vba-development","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

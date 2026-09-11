@@ -26,7 +26,9 @@ export default function CaseStudy() {
             <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>Health & Beauty</span>
           </div>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', lineHeight: '1.15', marginBottom: '20px', letterSpacing: '-0.02em' }}>Data Cleanse and Macro Rebuild for a Hairdressing Group</h1>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>From broken spreadsheets and unusable macros to a single accurate view of the whole business.</p>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>
+            Most of our <Link href="/services/excel-automation" style={{ color: 'var(--amber)' }}>Excel automation work</Link> starts here, with a spreadsheet that grew past what it was built for. If you want to test a file for the errors that break systems, the <Link href="/tools/data-health-check" style={{ color: 'var(--amber)' }}>free data health check</Link> runs in your browser and nothing is uploaded. From broken spreadsheets and unusable macros to a single accurate view of the whole business.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {[['100%', 'Macros rebuilt and working'], ['Seconds', 'vs minutes before'], ['1 file', 'Full business picture']].map(([m, l], i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: '24px' }}>

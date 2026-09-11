@@ -35,11 +35,35 @@ const faqs = [
   { q: 'Do you work remotely?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Google Sheets do what Excel does?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most small business purposes, yes, and it does collaboration considerably better. Where it struggles is large volumes of data and heavy calculation, because it is slower than Excel once a sheet gets big. Apps Script handles the automation side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Google Sheets automation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically eight hundred to three thousand pounds depending on how many steps are involved and whether it needs to talk to other systems. Connecting Sheets to something like Xero or a CRM adds to that because the integration work is separate."
+      }
+    }
+  ]
+}
+
 export default function GoogleSheetsPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Google Sheets Automation","description":"Google Sheets automation and dashboard development for UK businesses. Automated reporting and data workflows for Google Workspace teams.","url":"https://www.lexalytic.com/services/google-sheets","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

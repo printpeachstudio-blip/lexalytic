@@ -35,11 +35,35 @@ const faqs = [
   { q: 'Do you work with businesses outside London?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Power Automate or Zapier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your business already runs on Microsoft 365, Power Automate is usually included in what you are paying and integrates more deeply with Excel, SharePoint and Teams. Zapier connects to more third party services and is easier to set up. The deciding factor is normally which systems you need to join rather than the tools themselves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a Power Automate build cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single flow automating a defined process is usually six hundred to two thousand pounds. A set of connected flows handling a whole workflow, with error handling and notifications, typically runs two to five thousand."
+      }
+    }
+  ]
+}
+
 export default function PowerAutomatePage() {
     const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power Automate Consultancy","description":"Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365.","url":"https://www.lexalytic.com/services/power-automate","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"};
 
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <ServiceNav />
 
       <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'var(--bg-dark)', position: 'relative', overflow: 'hidden' }}>

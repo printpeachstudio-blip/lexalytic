@@ -35,11 +35,43 @@ const faqs = [
   { q: 'Do you work remotely?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does data cleansing actually involve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Finding and fixing the errors that break systems downstream. Duplicate records, invalid VAT numbers, company numbers that have lost their leading zero, mixed date formats, invalid postcodes, dead email addresses. The work is usually more about deciding the rules than applying them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to clean a customer list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a single file, typically between ninety nine and three hundred pounds depending on size and how many distinct problems it has. An ongoing process that cleans data as it arrives is a build rather than a one-off, and usually runs two to four thousand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we not just do it ourselves in Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a few hundred rows, yes. The difficulty comes with the checks that are not obvious, such as validating a VAT number against the HMRC checksum rather than just its length, or spotting a company number where Excel has silently stripped the leading zero."
+      }
+    }
+  ]
+}
+
 export default function DataCleansingPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Data Cleansing","description":"Professional data cleansing for UK businesses. We clean, structure and standardise your data so your reports are accurate and your automation works.","url":"https://www.lexalytic.com/services/data-cleansing","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

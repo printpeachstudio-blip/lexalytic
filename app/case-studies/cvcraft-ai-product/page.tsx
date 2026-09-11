@@ -26,7 +26,9 @@ export default function CaseStudy() {
             <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>Technology · AI Product</span>
           </div>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', lineHeight: '1.15', marginBottom: '20px', letterSpacing: '-0.02em' }}>CVCraft AI - Fully Automated CV Rewriting Service</h1>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>Built from scratch and operating. 24-hour delivery, zero human involvement between submission and delivery.</p>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>
+            We build this sort of thing for clients as well as ourselves, which is our <Link href="/services/ai-tools" style={{ color: 'var(--amber)' }}>AI tools work</Link>. If you are weighing up something similar, the <Link href="/tools/build-estimator" style={{ color: 'var(--amber)' }}>free build cost estimator</Link> gives an itemised range with a reason against every line. Built from scratch and operating. 24-hour delivery, zero human involvement between submission and delivery.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {[['24hr', 'Automated delivery'], ['0', 'Human steps in process'], ['Live', 'Operating product']].map(([m, l], i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: '24px' }}>

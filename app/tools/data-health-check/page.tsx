@@ -39,9 +39,41 @@ const structuredData = {
   ],
 }
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the data health check look for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VAT numbers that fail the HMRC mod-97 checksum, company numbers where the leading zero has been stripped, mixed date formats in the same column, invalid UK postcodes, duplicate records, duplicate and disposable email addresses, stray whitespace and inconsistent phone formats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my file uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The entire check runs in your browser using JavaScript. The file never leaves your machine and we never see it, which is also why it works on a client list you would not be comfortable emailing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Excel remove leading zeros from company numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a UK company number like 01234567 looks like a number to Excel, so it drops the leading zero and stores 1234567. That fails validation against Companies House and breaks any lookup relying on an exact match. It happens silently on import and is one of the most common causes of a failed data migration."
+      }
+    }
+  ]
+}
+
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

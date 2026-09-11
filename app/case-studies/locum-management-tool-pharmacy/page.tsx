@@ -26,7 +26,9 @@ export default function CaseStudy() {
             <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>Healthcare · Independent Pharmacy</span>
           </div>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', lineHeight: '1.15', marginBottom: '20px', letterSpacing: '-0.02em' }}>Custom Locum Management Tool for an Independent Pharmacy</h1>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>Zero missed payments since launch.</p>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>
+            Rota and locum management is one of the things our <Link href="/services/custom-business-tools" style={{ color: 'var(--amber)' }}>custom business tools</Link> work covers. If you want to put a figure on what the manual version is costing, the <Link href="/tools/reporting-cost" style={{ color: 'var(--amber)' }}>free reporting cost calculator</Link> works it out by role using true employment cost rather than salary. Zero missed payments since launch.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {[['0', 'Missed payments since launch'], ['20+', 'Locums managed'], ['Hours → Minutes', 'Weekly admin time']].map(([m, l], i) => (
               <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 'var(--radius-lg)', padding: '24px' }}>

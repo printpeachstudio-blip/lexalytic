@@ -35,11 +35,51 @@ const faqs = [
   { q: 'Do you work with businesses outside London?', a: 'Yes - all work is delivered remotely. We work with businesses across the UK and internationally. Most of our clients have never met us in person.' },
 ]
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does Excel automation cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Automating a single recurring report is typically between one and three thousand pounds. A larger piece covering several linked processes usually runs three to six thousand. The main driver is how consistent the source data is, because cleaning inconsistent inputs takes longer than writing the automation itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it still work if the spreadsheet changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That depends on how it is built. Power Query handles a changing data structure far better than formulas, which is why we use it where the source is likely to move. We also document what the automation expects, so a change that would break it is obvious rather than silent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Power Query better than VBA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For anything involving importing, cleaning and reshaping data on a schedule, Power Query is almost always the better choice. It does not break when the source structure changes and it does not need macros enabled. VBA still has a place for interface work and for automating actions inside Excel itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if we need changes later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You own the file and the documentation, so any competent developer can pick it up. We quote changes separately rather than requiring a retainer, and small adjustments are often quick enough that we do not charge for them."
+      }
+    }
+  ]
+}
+
 export default function ExcelAutomationPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Excel Automation","description":"Expert Excel automation for UK businesses. Turn hours of manual reporting into a one-click process. Fixed price, free scoping call.","url":"https://www.lexalytic.com/services/excel-automation","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />

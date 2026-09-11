@@ -34,9 +34,41 @@ const structuredData = {
   ],
 }
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What certificates does an HMO need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gas safety annually, an electrical installation condition report every five years, fire alarm and emergency lighting testing annually, a fire risk assessment reviewed annually, an EPC every ten years, PAT testing for supplied appliances, and the HMO licence itself which runs for up to five years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which one is a criminal offence to let lapse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gas safety. Letting a property without a valid gas safety certificate is a criminal offence rather than a licence breach, and it is the date most commonly missed because it renews annually while most of the others run on longer cycles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my portfolio data stored anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything stays in your browser using local storage. Nothing is uploaded and we cannot see it. Clearing your browser data will erase it, which is the trade for nothing being held on a server."
+      }
+    }
+  ]
+}
+
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <HmoTracker />
     </>

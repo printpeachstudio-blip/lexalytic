@@ -17,11 +17,43 @@ export const metadata: Metadata = {
   },
 }
 
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as a platform rather than a tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A platform has an audience beyond your own team. Clients log in, customers book, suppliers submit. That changes the work considerably, because anything outside your organisation needs to be reliable, presentable and secure in a way an internal tool does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a platform cost to build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically nine thousand upwards. The cost is driven by how many distinct types of user there are, since each needs its own interface plus the permissions logic behind it, and by how many external systems it has to connect to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we own it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The code, the domain, the hosting account and the documentation. Nothing sits behind a licence you have to keep paying for, and nothing depends on us being reachable in two years."
+      }
+    }
+  ]
+}
+
 export default function PlatformDevelopmentPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Platform & SaaS Development","description":"Full web applications, SaaS products, booking systems, and member platforms for UK businesses.","url":"https://www.lexalytic.com/services/platform-development","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Platform Development"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <ServiceNav />
