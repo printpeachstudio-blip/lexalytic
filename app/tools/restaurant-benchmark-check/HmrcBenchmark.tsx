@@ -1,6 +1,14 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect, useCallback } from 'react'
+
+// Stripe Payment Link for the position report.
+// Success URL must be: https://www.lexalytic.com/tools/restaurant-benchmark-check?ref=bpr-6q3wz8
+const STRIPE_LINK = 'https://buy.stripe.com/YOUR_REPORT_LINK'
+const REPORT_PRICE = '£49'
+const UNLOCK_PARAM = 'bpr-6q3wz8'
+const PAID_KEY = 'lexalytic.benchmark.paid'
+const BUSINESS_KEY = 'lexalytic.benchmark.business'
 
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
@@ -134,6 +142,37 @@ export default function HmrcBenchmark() {
     delivery: '22', discount: '15', waste: '4', staffmeals: '2', tied: '0',
   })
 
+  // Prior year, optional, used to show whether the gap is widening
+  const [priorTurnover, setPriorTurnover] = useState('')
+  const [priorCogs, setPriorCogs] = useState('')
+  const [showPrior, setShowPrior] = useState(false)
+
+  const [paid, setPaid] = useState(false)
+  const [business, setBusiness] = useState({ name: '', trading: '', yearEnd: '', preparedBy: '' })
+  const [editingBusiness, setEditingBusiness] = useState(false)
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem(PAID_KEY) === '1') setPaid(true)
+      const b = localStorage.getItem(BUSINESS_KEY)
+      if (b) setBusiness(JSON.parse(b))
+    } catch { /* storage unavailable */ }
+    try {
+      const params = new URLSearchParams(window.location.search)
+      if (params.get('ref') === UNLOCK_PARAM) {
+        localStorage.setItem(PAID_KEY, '1')
+        setPaid(true)
+        window.history.replaceState({}, '', window.location.pathname)
+      }
+    } catch { /* ignore */ }
+  }, [])
+
+  useEffect(() => {
+    try { localStorage.setItem(BUSINESS_KEY, JSON.stringify(business)) } catch { /* ignore */ }
+  }, [business])
+
+  const businessReady = business.name.trim().length >= 2 && business.yearEnd.trim().length > 0
+
   const c = CONCEPTS.find(x => x.key === concept)!
 
   const result = useMemo(() => {
@@ -218,13 +257,166 @@ export default function HmrcBenchmark() {
     const gpRemaining = Math.max(0, gpGap - gpExplained)
     const netRemaining = Math.max(0, netGap - netExplained)
 
+    // Prior year, if given
+    const pt = parseFloat(priorTurnover) || 0
+    const pc = parseFloat(priorCogs) || 0
+    const priorGp = pt > 0 ? ((pt - pc) / pt) * 100 : null
+    const gpTrend = priorGp !== null ? gp - priorGp : null
+
     return {
       t, cg, w, o, gp, net, prime, gpGap, netGap,
       gpExplained, netExplained, gpRemaining, netRemaining,
-      applied, flags, cashPct,
+      applied, flags, cashPct, priorGp, gpTrend,
       gpOk: gpGap <= 0, netOk: netGap <= 0,
     }
-  }, [turnover, cogs, wages, otherCosts, cash, factors, c])
+  }, [turnover, cogs, wages, otherCosts, cash, factors, c, priorTurnover, priorCogs])
+
+
+  // The paid report. A dated record of the position with the working shown,
+  // which is worth having on file regardless of whether anyone ever asks.
+  const openReport = useCallback(() => {
+    if (!result) return
+    const today = new Date().toLocaleDateString('en-GB',
+      { day: 'numeric', month: 'long', year: 'numeric' })
+
+    const factorRows = result.applied.map(a => `
+      <tr>
+        <td>${a.factor.label}</td>
+        <td class="r">${a.value}${a.factor.unit}</td>
+        <td class="r">${a.gp > 0 ? a.gp.toFixed(1) + ' pts' : '—'}</td>
+        <td class="r">${a.net > 0 ? a.net.toFixed(1) + ' pts' : '—'}</td>
+      </tr>`).join('')
+
+    const evidenceBlocks = result.applied.map(a => `
+      <div class="ev">
+        <h4>${a.factor.label}</h4>
+        <p class="small">Stated at ${a.value}${a.factor.unit}, accounting for approximately
+        ${a.gp > 0 ? a.gp.toFixed(1) + ' points of gross profit' : ''}${a.gp > 0 && a.net > 0 ? ' and ' : ''}${a.net > 0 ? a.net.toFixed(1) + ' points of net margin' : ''}.</p>
+        <ul>${a.factor.evidence.map(e => `<li>${e}</li>`).join('')}</ul>
+      </div>`).join('')
+
+    const flagRows = result.flags.map(f => `
+      <div class="flag ${f.level}">
+        <strong>${f.title}</strong>
+        <p>${f.detail}</p>
+      </div>`).join('')
+
+    const trendLine = result.gpTrend !== null
+      ? `<p><strong>Trend.</strong> Gross profit ${result.gpTrend >= 0 ? 'rose' : 'fell'} by
+         ${Math.abs(result.gpTrend).toFixed(1)} points against the prior year, from
+         ${result.priorGp!.toFixed(1)}% to ${result.gp.toFixed(1)}%.
+         ${result.gpTrend < -2
+           ? 'A fall of more than two points in a year is itself worth explaining, since a sudden movement draws more attention than a consistently low figure.'
+           : result.gpTrend > 2
+           ? 'An improvement of that size is worth being able to account for as well, since large movements in either direction get noticed.'
+           : 'A movement of that size is within normal year to year variation.'}</p>`
+      : ''
+
+    const html = `<!doctype html>
+<html><head><meta charset="utf-8"><title>Gross profit position</title>
+<style>
+  @page { margin: 20mm; }
+  body { font-family: Georgia,'Times New Roman',serif; color:#111; line-height:1.6; max-width:760px; margin:0 auto; padding:28px; font-size:13.5px; }
+  h1 { font-size:23px; margin:0 0 4px; }
+  h2 { font-size:17px; margin:30px 0 10px; }
+  h3 { font-size:15px; margin:22px 0 8px; }
+  h4 { font-size:14px; margin:0 0 5px; }
+  .sub { color:#666; font-size:13px; margin:0 0 26px; }
+  .headline { border:2px solid #111; padding:20px 24px; margin-bottom:22px; }
+  .big { font-size:32px; line-height:1.1; }
+  .biglabel { color:#555; font-size:13px; margin-top:6px; }
+  .stats { display:flex; gap:32px; flex-wrap:wrap; margin:18px 0 24px; }
+  .stat b { display:block; font-size:20px; font-weight:normal; }
+  .stat span { font-size:12px; color:#666; }
+  table { width:100%; border-collapse:collapse; margin:12px 0 18px; font-size:12.5px; }
+  th,td { text-align:left; padding:7px 6px; border-bottom:1px solid #ddd; }
+  th { border-bottom:2px solid #333; font-weight:600; }
+  .r { text-align:right; }
+  .flag { border-left:3px solid #999; padding:10px 14px; margin:12px 0; background:#fafafa; }
+  .flag.high { border-color:#A13B2A; background:#faf4f3; }
+  .flag.medium { border-color:#B07A1E; background:#fdf9f2; }
+  .flag p { margin:5px 0 0; font-size:12.5px; color:#444; }
+  .ev { margin-bottom:16px; }
+  .ev ul { margin:6px 0 0; padding-left:20px; font-size:12.5px; }
+  .small { font-size:12.5px; color:#555; margin:0; }
+  .note { font-size:11.5px; color:#666; border-top:1px solid #ddd; padding-top:13px; margin-top:28px; }
+  ul.check { padding-left:20px; }
+  ul.check li { margin-bottom:7px; }
+  @media print { .noprint { display:none; } }
+</style></head>
+<body>
+  <div class="noprint" style="background:#1A1815;color:#fff;padding:13px 17px;border-radius:8px;margin-bottom:24px;font-family:-apple-system,sans-serif;font-size:13px;">
+    Use your browser print dialogue and choose Save as PDF. Keep a copy on file with the year it relates to.
+  </div>
+
+  <h1>Gross profit position</h1>
+  <p class="sub">${business.name}${business.trading ? ', trading as ' + business.trading : ''}<br/>
+  Year ended ${business.yearEnd} &middot; Prepared ${today}${business.preparedBy ? ' by ' + business.preparedBy : ''}</p>
+
+  <div class="headline">
+    <div class="big">${result.gp.toFixed(1)}% gross, ${result.net.toFixed(1)}% net</div>
+    <div class="biglabel">Against a published range of ${c.gpLow} to ${c.gpHigh}% gross and
+    ${c.netLow} to ${c.netHigh}% net for ${c.label.toLowerCase()}</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>${money(result.t)}</b><span>Turnover, ex VAT</span></div>
+    <div class="stat"><b>${money(result.cg)}</b><span>Cost of sales</span></div>
+    <div class="stat"><b>${result.prime.toFixed(1)}%</b><span>Prime cost</span></div>
+    <div class="stat"><b>${result.cashPct}%</b><span>Cash takings</span></div>
+  </div>
+
+  <h2>Summary</h2>
+  <p>${result.gpOk && result.netOk
+    ? 'Both gross profit and net margin fall inside the published range for this format. Nothing in the figures below would appear unusual against sector benchmarks.'
+    : `Gross profit is ${result.gpGap > 0 ? result.gpGap.toFixed(1) + ' points below' : 'inside'} the published range and net margin is ${result.netGap > 0 ? result.netGap.toFixed(1) + ' points below' : 'inside'} it. The factors set out below account for approximately ${Math.min(result.gpExplained, Math.max(result.gpGap, 0)).toFixed(1)} points of the gross variance.`}</p>
+  ${trendLine}
+
+  <h2>Factors affecting margin</h2>
+  <p class="small">Each of the following legitimately reduces gross profit or net margin and is not
+  visible as a separate line in a set of accounts.</p>
+  <table>
+    <thead><tr><th>Factor</th><th class="r">Stated level</th><th class="r">Gross effect</th><th class="r">Net effect</th></tr></thead>
+    <tbody>${factorRows || '<tr><td colspan="4">None stated.</td></tr>'}</tbody>
+  </table>
+  ${result.gpRemaining > 1
+    ? `<p><strong>Unaccounted variance.</strong> Approximately ${result.gpRemaining.toFixed(1)} points of
+       gross profit are not explained by the factors above. That is worth investigating on its own
+       account, since an unexplained gap between expected and actual margin usually indicates stock
+       leaving without being recorded, portioning that has drifted, or supplier price increases that
+       were not passed through.</p>`
+    : ''}
+
+  <h2>What would draw attention</h2>
+  ${flagRows || '<p class="small">Nothing in the figures is outside normal parameters.</p>'}
+
+  <h2>Supporting records</h2>
+  <p class="small">The records below evidence the factors stated. They are considerably easier to keep
+  as events occur than to reconstruct afterwards, and a contemporaneous record carries far more weight
+  than a figure estimated later.</p>
+  ${evidenceBlocks || '<p class="small">No factors stated, so no supporting records are identified.</p>'}
+
+  <h2>Suggested record keeping</h2>
+  <ul class="check">
+    <li>Waste log completed daily, dated, with supervisor sign-off on anything significant</li>
+    <li>Till reports retained by period showing discounts and comps applied</li>
+    <li>Platform statements filed monthly, reconciled against till and bank</li>
+    <li>Written staff meal policy, with meals taken recorded or a consistent allowance applied</li>
+    <li>Stocktake performed at consistent intervals with variance recorded and investigated</li>
+    <li>Supplier price changes noted when they occur, with menu recosting dated</li>
+    <li>Daily reconciliation between till, banking and declared takings</li>
+  </ul>
+
+  <p class="note">Prepared using the Lexalytic benchmark check from figures entered by the business.
+  Benchmark ranges are drawn from commonly published UK hospitality figures for 2026 and are indicative
+  rather than an HMRC publication. The effect attributed to each factor is a model rather than a
+  calculation of actual impact. This document is a management record and is not tax advice. If a
+  compliance check has been opened, take advice from an accountant or a tax investigation specialist.</p>
+</body></html>`
+
+    const w = window.open('', '_blank')
+    if (w) { w.document.write(html); w.document.close() }
+  }, [result, business, c])
 
   const Num = ({ label, value, onChange, hint }:
     { label: string; value: string; onChange: (v: string) => void; hint?: string }) => (
@@ -252,6 +444,11 @@ export default function HmrcBenchmark() {
           background: #fff; border: 1px solid #DDD6CC; color: #4A453F; }
         .hb-opt[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
         .hb-opt:focus-visible, .hb-btn:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
+        .hb-dark { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
+          background: rgba(255,255,255,0.06); color: #fff;
+          border: 1px solid rgba(255,255,255,0.15); width: 100%; }
+        .hb-dark::placeholder { color: rgba(255,255,255,0.35); }
+        .hb-dark:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .hb-g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .hb-g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
         @media (max-width: 760px) { .hb-g2, .hb-g4 { grid-template-columns: 1fr 1fr; } }
@@ -312,6 +509,29 @@ export default function HmrcBenchmark() {
           </div>
           <div style={{ maxWidth: 200 }}>
             <Num label="Cash takings" value={cash} onChange={setCash} hint="As a % of turnover" />
+          </div>
+
+          <div style={{ marginTop: 18, paddingTop: 16, borderTop: '1px solid #F0EBE2' }}>
+            {!showPrior ? (
+              <button className="hb-opt" style={{ fontSize: 13.5 }} onClick={() => setShowPrior(true)}>
+                Add the prior year as well
+              </button>
+            ) : (
+              <>
+                <div style={{ fontSize: 13.5, color: '#8A8279', marginBottom: 12, maxWidth: 600, lineHeight: 1.6 }}>
+                  Optional, but a sudden movement in either direction draws more attention than a
+                  consistently low figure, so it is worth knowing which you have.
+                </div>
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                  <div style={{ width: 180 }}>
+                    <Num label="Prior year turnover" value={priorTurnover} onChange={setPriorTurnover} />
+                  </div>
+                  <div style={{ width: 180 }}>
+                    <Num label="Prior year cost of sales" value={priorCogs} onChange={setPriorCogs} />
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -378,6 +598,21 @@ export default function HmrcBenchmark() {
                   </div>
                 </div>
               </div>
+
+              {result.gpTrend !== null && (
+                <div style={{ marginBottom: 16, padding: '13px 16px', borderRadius: 6,
+                  background: '#FDFCFA', border: '1px solid #EDE7DD',
+                  fontSize: 14.5, color: '#57514A', lineHeight: 1.7 }}>
+                  Gross profit {result.gpTrend >= 0 ? 'rose' : 'fell'} by{' '}
+                  {Math.abs(result.gpTrend).toFixed(1)} points against last year, from{' '}
+                  {result.priorGp!.toFixed(1)}% to {result.gp.toFixed(1)}%.
+                  {result.gpTrend < -2
+                    ? ' A fall of more than two points in a year is worth explaining in itself, because a sudden movement draws more attention than a figure that has always been low.'
+                    : result.gpTrend > 2
+                    ? ' A rise that size gets noticed too, so it is worth being able to say what changed.'
+                    : ' That is within normal year to year variation.'}
+                </div>
+              )}
 
               {result.gpOk && result.netOk ? (
                 <div style={{ fontSize: 16, lineHeight: 1.75, color: '#3F6B4C' }}>
@@ -486,26 +721,87 @@ export default function HmrcBenchmark() {
               </div>
             )}
 
-            {/* CTA */}
-            <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
+            {/* Paid report */}
+            <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff', marginBottom: 20 }}>
               <div className="hb-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
-                The records are the hard part, not the maths
+                Put it on the record, dated
               </div>
-              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 570 }}>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 600 }}>
+                The screen tells you where you stand today. The report is a dated document setting out
+                the position with the working shown: the figures, what accounts for the variance, what is
+                left unexplained, and which records evidence each factor.
+              </p>
+              <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 600 }}>
+                Two reasons that matters. It is the thing to hand an accountant rather than describing it
+                over the phone. And a file note made while the year is fresh is worth considerably more
+                than the same explanation offered eighteen months later, because it shows the position was
+                reviewed rather than reconstructed.
+              </p>
+
+              {paid ? (
+                (!businessReady || editingBusiness) ? (
+                  <div style={{ padding: '20px 22px', borderRadius: 8, background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', marginBottom: 14 }}>
+                      A few details for the front of the report.
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
+                      gap: 12, marginBottom: 14 }}>
+                      <input className="hb-dark" placeholder="Business name" value={business.name}
+                        onChange={e => setBusiness({ ...business, name: e.target.value })} />
+                      <input className="hb-dark" placeholder="Trading as (optional)" value={business.trading}
+                        onChange={e => setBusiness({ ...business, trading: e.target.value })} />
+                      <input className="hb-dark" placeholder="Year ended, e.g. 31 March 2026" value={business.yearEnd}
+                        onChange={e => setBusiness({ ...business, yearEnd: e.target.value })} />
+                      <input className="hb-dark" placeholder="Prepared by (optional)" value={business.preparedBy}
+                        onChange={e => setBusiness({ ...business, preparedBy: e.target.value })} />
+                    </div>
+                    <button className="hb-btn" disabled={!businessReady}
+                      style={{ opacity: businessReady ? 1 : 0.5 }}
+                      onClick={() => { setEditingBusiness(false); if (businessReady) openReport() }}>
+                      Generate the report
+                    </button>
+                  </div>
+                ) : (
+                  <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                    <button className="hb-btn" onClick={openReport}>Generate the report</button>
+                    <button onClick={() => setEditingBusiness(true)}
+                      style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
+                        color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}>
+                      Change the details
+                    </button>
+                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+                      Opens in a new tab. Print or save as PDF.
+                    </span>
+                  </div>
+                )
+              ) : (
+                <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <a href={STRIPE_LINK} className="hb-btn"
+                    style={{ textDecoration: 'none', display: 'inline-block' }}>
+                    Get the report, {REPORT_PRICE}
+                  </a>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+                    One payment. Regenerate whenever the figures change.
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* What is coming */}
+            <div className="hb-card" style={{ padding: '24px 30px' }}>
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+                Keeping the records is the hard part, not the maths
+              </div>
+              <p style={{ fontSize: 15, lineHeight: 1.75, color: '#57514A', margin: '0 0 16px', maxWidth: 620 }}>
                 You cannot reconstruct last year's waste log once a letter arrives. We are building
-                something that keeps the operational side and the evidence side in the same place, so the
+                something that keeps the operational side and the evidence side in one place, so the
                 wastage record you keep to protect your margin is also the record that answers the
                 question if it is ever asked.
               </p>
-              <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/industries/hospitality" className="hb-btn"
-                  style={{ textDecoration: 'none', display: 'inline-block' }}>
-                  See what else is coming
-                </a>
-                <a href="/tools" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>
-                  Or the other free tools
-                </a>
-              </div>
+              <a href="/industries/hospitality" style={{ fontSize: 15, color: AMBER }}>
+                See what else is coming for hospitality
+              </a>
             </div>
           </>
         )}
