@@ -149,5 +149,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/retention-manager', lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
     { url: 'https://www.lexalytic.com/terms', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://www.lexalytic.com/tools/reporting-cost', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/products', lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
   ]
 }
