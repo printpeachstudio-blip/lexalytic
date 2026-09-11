@@ -119,7 +119,8 @@ export const INDUSTRIES: Industry[] = [
     ],
     product: {
       name: 'HMO Portfolio Manager',
-      status: 'building',
+      status: 'live',
+      href: '/margin-manager',
       does: [
         'Every certificate date across the whole portfolio, with email reminders',
         'Room by room rent, arrears and voids',
