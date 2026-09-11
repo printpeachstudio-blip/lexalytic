@@ -94,7 +94,7 @@ export default function ExcelAutomationPage() {
               <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Excel Automation Consultant UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-              Your Excel reports should run<br /><em style={{ color: 'var(--amber)' }}>without your team running them.</em>
+              Excel automation for reports<br /><em style={{ color: 'var(--amber)' }}>that run without anyone opening them.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
               If someone on your team spends hours every week copying data, reformatting spreadsheets, or compiling reports - that's time and money leaving your business. We automate the process so the output is there when they need it, without the manual work.

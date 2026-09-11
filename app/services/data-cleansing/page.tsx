@@ -86,7 +86,7 @@ export default function DataCleansingPage() {
               <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Data Cleansing Service UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-              Bad data is costing you more<br /><em style={{ color: 'var(--amber)' }}>than you realise.</em>
+              Data cleansing that fixes<br /><em style={{ color: 'var(--amber)' }}>what is actually broken.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
               Duplicate records. Inconsistent formats. Figures that do not reconcile. Bad data breaks reports, undermines automation, and costs UK businesses an average of 20% of their annual revenue. We fix it - fast, properly, and with a process to keep it clean.

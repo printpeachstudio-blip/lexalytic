@@ -94,7 +94,7 @@ export default function PowerBIPage() {
               <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Power BI Consultant UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
-              Power BI dashboards that show you<br /><em style={{ color: 'var(--amber)' }}>what is actually happening.</em>
+              Power BI dashboards, built<br /><em style={{ color: 'var(--amber)' }}>around what you actually need to see.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
               Most businesses are making decisions from data that is days old, manually compiled, and nobody fully trusts. We build live Power BI dashboards connected to your real data - so you see what is happening now, not what happened last Tuesday.
