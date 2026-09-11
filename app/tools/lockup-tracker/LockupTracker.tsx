@@ -307,6 +307,8 @@ export default function LockupTracker() {
     ${worstWip && (worstWip.wipAge ?? 0) > 30 ? `<li><strong>${worstWip.job.ref} has been unbilled for ${worstWip.wipAge} days</strong> at ${money2(worstWip.wip)}. Work that old is harder to bill without a conversation, and harder still to defend if queried.</li>` : ''}
     ${worstDebt ? `<li><strong>${worstDebt.job.ref} is ${worstDebt.overdueBy} days past terms</strong> at ${money2(worstDebt.debt)}. Recovery rates fall steadily the longer an invoice ages.</li>` : ''}
     ${topClientShare >= 35 ? `<li><strong>${topClients[0][0]} accounts for ${topClientShare}% of everything locked up.</strong> That is concentration risk as well as a cash issue. One client dispute would affect a third of the position.</li>` : ''}
+    ${aged.beyond90 > 0 ? `<li><strong>${money2(aged.beyond90)} has been outstanding more than ninety days past terms.</strong> That is ${aged.total > 0 ? Math.round((aged.beyond90 / aged.total) * 100) : 0}% of everything owed. Recovery rates fall sharply beyond this point, so each of these needs a decision rather than another reminder: escalate it, agree a payment plan, or write it off and stop carrying it as an asset.</li>` : ''}
+    ${aged.noDate > 0 ? `<li>${aged.noDate} ${aged.noDate === 1 ? 'job has' : 'jobs have'} no invoice date recorded, so that debt cannot be aged. Worth filling in, since the age is what decides how you chase it.</li>` : ''}
     <li>At ${money(totals.dailyRevenue)} of fee income a day, cutting lock-up by ten days would release ${money(totals.dailyRevenue * 10)} of cash on a permanent basis.</li>
   </ul>
 
