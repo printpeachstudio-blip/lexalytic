@@ -9,6 +9,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'restaurant-below-benchmark-gross-profit',
+    title: 'Your Gross Profit Is Below Benchmark. That Is Not The Same As Being Wrong.',
+    excerpt: 'HMRC compares filed restaurant returns against expected profit benchmarks automatically. Delivery commission, discounting and waste all depress margin legitimately.',
+    date: 'November 2026',
+    readTime: '8 min read',
+    tag: 'Hospitality',
+  },
+  {
+    slug: 'what-deliveroo-commission-really-costs',
+    title: 'What Deliveroo Actually Costs You Per Dish',
+    excerpt: 'A twelve pound dish returns around eight pounds forty after commission, before VAT and packaging. Most kitchens price delivery identically to dine-in.',
+    date: 'October 2026',
+    readTime: '7 min read',
+    tag: 'Hospitality',
+  },
+  {
     slug: 'recruitment-rebate-liability-nobody-measures',
     title: 'The Recruitment Liability Almost Nobody Measures',
     excerpt: 'Every permanent placement inside its rebate window is money you have billed and could still be asked to return. Most agencies have never put a number on it.',

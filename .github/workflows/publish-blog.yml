@@ -143,7 +143,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "13" ]; then
-            echo "slug=power-bi-small-business-uk-worth-it" >> $GITHUB_OUTPUT
+            echo "slug=what-deliveroo-commission-really-costs" >> $GITHUB_OUTPUT
             echo "title=How to Build a Sales Pipeline Dashboard in Power BI or Excel" >> $GITHUB_OUTPUT
             echo "excerpt=A sales pipeline dashboard shows you what is coming in, when it is expected, and where deals are getting stuck. Here is how to build one that updates automatically." >> $GITHUB_OUTPUT
             echo "tag=Power BI" >> $GITHUB_OUTPUT
@@ -209,7 +209,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "19" ]; then
-            echo "slug=what-is-power-query-uk-business" >> $GITHUB_OUTPUT
+            echo "slug=restaurant-below-benchmark-gross-profit" >> $GITHUB_OUTPUT
             echo "title=How to Build a Budget vs Actuals Report That Updates Automatically" >> $GITHUB_OUTPUT
             echo "excerpt=A budget vs actuals report is one of the most useful financial tools a business can have. It is also one of the most time-consuming to maintain manually. Here is how to automate it." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT

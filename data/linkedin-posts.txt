@@ -914,3 +914,33 @@ A replacement clause means you fill the role again and the cost is resourcing ti
 Agencies concede these interchangeably to win a client, and they are priced completely differently. An agency with a replacement right and a decent candidate pool carries a fraction of the real exposure that the headline number suggests. An agency that agreed a straight refund to get on the PSL carries all of it.
 
 Worth knowing which one you actually signed before you find out the hard way.
+
+2026-10-28
+A twelve pound dish on Deliveroo returns about eight pounds forty.
+
+That is before the VAT comes off, before the box, and before anyone has cooked it.
+
+Most independents price the delivery menu identically to the restaurant menu, which means the whole commission comes out of margin that was already thin.
+
+The bit that catches people is the order the maths happens in. The customer pays twelve pounds including VAT, so two of those were never yours. You are working from ten. The platform then takes thirty per cent of that, so you see seven. Food cost and packaging come out of the seven.
+
+Work it the other way round and you will convince yourself you are making nearly double what you actually are.
+
+Delivery menus generally need eight to twelve points more margin than dine-in to end up in the same place. Every platform allows it and the chains all do it.
+
+The dishes to worry about are the cheap popular ones, because the volume is concentrated exactly where the margin is thinnest. Selling more of those is not growth.
+
+2026-11-11
+An accountant posted about a client whose restaurant filed accounts at fifty six per cent gross profit.
+
+The inspector said it should be at least sixty, based on other restaurants.
+
+The client was not doing anything wrong. Explaining that, after the year had closed and without the records to hand, was the hard part.
+
+HMRC compares filed returns against expected profit figures automatically through Connect. Sitting below the band for your format is one of the most common triggers for a compliance check, because from the outside it looks the same as sales that were not recorded.
+
+The things that legitimately pull a restaurant below benchmark are delivery commission, discounting, waste, staff meals and a tie if you are a pub tenant. None of them appear anywhere obvious in a set of accounts.
+
+Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
+
+That difference is decided entirely by what you kept at the time, and a waste log written eighteen months later is worth almost nothing however honest it is.
