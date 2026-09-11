@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useCallback } from 'react'
 
 // Stripe Payment Link for the position report.
 // Success URL must be: https://www.lexalytic.com/tools/restaurant-benchmark-check?ref=bpr-6q3wz8
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_REPORT_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/5kQ7sEdkZ2Ma37u6JK3AY0a'
 const REPORT_PRICE = '£49'
 const UNLOCK_PARAM = 'bpr-6q3wz8'
 const PAID_KEY = 'lexalytic.benchmark.paid'

@@ -1021,7 +1021,7 @@ export default function DataHealthChecker() {
                     you find out which of your customers are dissolved or in liquidation.
                   </p>
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <a href="https://buy.stripe.com/YOUR_FIX_LINK" style={{
+                    <a href="https://buy.stripe.com/14A7sE4Ot72qeQc4BC3AY0b" style={{
                       font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6,
                       padding: '12px 22px', background: '#C17D2E', color: '#fff',
                       textDecoration: 'none', display: 'inline-block'

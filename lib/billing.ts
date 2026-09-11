@@ -16,6 +16,7 @@ export function getStripe(): Stripe {
 export const PLANS = {
   solo: {
     key: 'solo' as const,
+    product: 'retention' as const,
     name: 'Solo',
     price: 19,
     priceId: 'price_1UE5B04DeIIW1weWf8W40wgF',
@@ -33,6 +34,7 @@ export const PLANS = {
   },
   team: {
     key: 'team' as const,
+    product: 'retention' as const,
     name: 'Team',
     price: 39,
     priceId: 'price_1UE5Bc4DeIIW1weWy2LLKAg6',
@@ -45,14 +47,60 @@ export const PLANS = {
       'Useful when the person doing the work is not the person chasing the money',
     ],
   },
+  margin_solo: {
+    key: 'margin_solo' as const,
+    product: 'margin' as const,
+    name: 'Solo',
+    price: 49,
+    priceId: 'price_1UEV3q4DeIIW1weWzGMKCDTs',
+    seats: 1,
+    blurb: 'One site, everything in it.',
+    features: [
+      'Photograph an invoice and the prices update themselves',
+      'Recipe costing that cascades through every dish using a component',
+      'Margin per dish on each delivery platform, after VAT and commission',
+      'Stock variance tracked over time rather than counted and forgotten',
+      'Menu engineering, sorting dishes into what earns and what does not',
+      'Labour contribution by trading session at true employment cost',
+      'A dated waste and comp log that doubles as evidence',
+      'Platform income reconciled against what the platforms report to HMRC',
+    ],
+  },
+  margin_multi: {
+    key: 'margin_multi' as const,
+    product: 'margin' as const,
+    name: 'Multi-site',
+    price: 89,
+    priceId: 'price_1UEV5T4DeIIW1weWC5hgB61K',
+    seats: 10,
+    blurb: 'Everything in Solo, across as many sites as you run.',
+    features: [
+      'Everything in Solo',
+      'Unlimited sites under one login',
+      'Compare margin, labour and waste between them',
+      'Useful when the same dish costs different money in different kitchens',
+    ],
+  }
 }
 
 export type PlanKey = keyof typeof PLANS
+
+
+export type ProductKey = 'retention' | 'margin'
+
+/** The plans belonging to one product, in price order. */
+export function plansFor(product: ProductKey) {
+  return Object.values(PLANS)
+    .filter(p => p.product === product)
+    .sort((a, b) => a.price - b.price)
+}
+
 
 export const TRIAL_DAYS = 14
 
 export interface SubscriptionRow {
   org_id: string
+  product?: ProductKey
   stripe_customer_id: string | null
   stripe_subscription_id: string | null
   plan: PlanKey | null
@@ -73,7 +121,16 @@ export interface AccessState {
   plan: PlanKey | null
 }
 
-export function accessFor(sub: SubscriptionRow | null, orgCreatedAt: string): AccessState {
+export function accessFor(
+  sub: SubscriptionRow | null,
+  orgCreatedAt: string,
+  product: ProductKey = 'retention'
+): AccessState {
+  // A subscription to one product says nothing about the other
+  if (sub && (sub as any).product && (sub as any).product !== product) {
+    sub = null
+  }
+
   const created = new Date(orgCreatedAt)
   const trialEnd = new Date(created)
   trialEnd.setDate(trialEnd.getDate() + TRIAL_DAYS)
