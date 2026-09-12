@@ -4,8 +4,8 @@ import ServiceCharge from './ServiceCharge'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/service-charge-check' },
   title: 'Service Charge and Section 20 Checker | Free UK Leasehold Tool | Lexalytic',
-  description: 'Check whether your landlord consulted properly before major works. Where consultation was defective, recovery can be capped at £250 per leaseholder whatever the work cost. Free, nothing uploaded.',
-  keywords: 'section 20 consultation, challenge service charge, major works bill leasehold, service charge too high, section 20 notice not received, leasehold service charge tribunal, section 20B 18 month rule',
+  description: 'The whole service charge challenge in one place. Checks the eighteen month rule from your dates, whether each consultation stage gave the full thirty days, and what you can demand under sections 21 and 22. Then the letter, the timeline, the evidence log and a page for your neighbours. Nothing uploaded.',
+  keywords: 'section 20B 18 month rule check, service charge demand too late, section 20 notice period too short, service charge challenge letter and timeline, section 20 consultation, challenge service charge, major works bill leasehold, service charge too high, section 20 notice not received, leasehold service charge tribunal, section 20B 18 month rule',
   openGraph: {
     title: 'A big service charge bill is not automatically a bill you owe',
     description: 'Where consultation was defective, recovery can be capped at £250 per leaseholder whatever the work cost.',
@@ -31,6 +31,14 @@ const faqData = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What does this do that a Section 20 calculator or a template letter does not?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A trigger calculator tells you whether consultation was required. A template letter gives you words to send. This takes the dates you actually have and checks them: whether the demand came more than eighteen months after the cost, whether each consultation stage gave you the full thirty days from service rather than from the date on the letter, and which grounds turn on a hard rule rather than an argument. Then it keeps the record as the challenge runs over months, tracks the charge year on year, and produces a page for your neighbours, because a block acting together carries far more weight than one flat.',
+      },
+    },
     {
       '@type': 'Question',
       name: 'What happens if my landlord did not follow Section 20?',

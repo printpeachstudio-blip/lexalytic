@@ -4,8 +4,8 @@ import RetentionTracker from './RetentionTracker'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/retention-tracker' },
   title: 'Construction Retention Tracker | Free Tool for UK Subcontractors | Lexalytic',
-  description: 'Track retention across every job. Works out what is held, whether deduction has passed the cap, and when each half falls due. Flags overdue releases with the statutory interest owed, and exports the dates to your calendar. Free, nothing uploaded.',
-  keywords: 'construction retention tracker, retention release dates, retention calculator UK, subcontractor retention, defects liability period tracker, retention not released, chase retention payment, construction retention cap',
+  description: 'Free retention tracker built around JCT contracts. Tiered retention where the rate steps down, the cap on deduction, both release dates, and statutory interest on anything late. Plus the application letters, written from your figures. Nothing uploaded.',
+  keywords: 'construction retention tracker UK, JCT retention release dates, stepped retention calculator, retention over-deduction cap, statutory interest late retention, retention application letter template, construction retention tracker, retention release dates, retention calculator UK, subcontractor retention, defects liability period tracker, retention not released, chase retention payment, construction retention cap',
   openGraph: {
     title: 'Construction Retention Tracker for UK Subcontractors',
     description: 'Retention is rarely disputed. It is forgotten. Track what is held across every job and when each half falls due.',
