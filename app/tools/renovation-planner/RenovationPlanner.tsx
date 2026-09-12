@@ -7,7 +7,7 @@ import {
 } from '@/lib/renovation'
 import { stagesFor, snagsFor, paperworkFor } from '@/lib/renovation-extras'
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_RENO_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/28EbIUft72MafUg0lm3AY0d'
 const UNLOCK_PARAM = 'rnv-5t8bk2'
 const PAID_KEY = 'lexalytic.reno.paid.v1'
 const STATE_KEY = 'lexalytic.reno.v1'
