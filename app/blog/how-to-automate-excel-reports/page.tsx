@@ -16,11 +16,37 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Automate Excel Reports in the UK (2026): Tools, Methods & When to Get Help",
+      "item": "https://www.lexalytic.com/blog/how-to-automate-excel-reports"
+    }
+  ]
+}
+
 export default function BlogPost2() {
     const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Automate Excel Reports in the UK (2026): Tools, Methods & When to Get Help","description":"How to automate Excel reports for UK businesses in 2026. Power Query, VBA macros, Python and when to hire an Excel automation consultant.","datePublished":"2026-04-01","dateModified":"2026-04-01","url":"https://www.lexalytic.com/blog/how-to-automate-excel-reports","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
 return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

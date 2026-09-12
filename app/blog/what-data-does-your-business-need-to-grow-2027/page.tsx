@@ -15,10 +15,36 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What Data Does Your Business Need to Grow in 2027?",
+      "item": "https://www.lexalytic.com/blog/what-data-does-your-business-need-to-grow-2027"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Data Does Your Business Need to Grow in 2027?","description":"Growth without data is possible - many businesses have done it. But growth with data is faster, more efficient, and more","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://www.lexalytic.com/blog/what-data-does-your-business-need-to-grow-2027","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

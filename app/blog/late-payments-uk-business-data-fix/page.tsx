@@ -16,11 +16,37 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Why UK Businesses Lose £17,000 a Year to Late Payments - And How Better Data Fixes It",
+      "item": "https://www.lexalytic.com/blog/late-payments-uk-business-data-fix"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"Why UK Businesses Lose £17,000 a Year to Late Payments - And How Better Data Fixes It","description":"Late payments cost UK businesses £26bn annually. Here is how automated cash flow dashboards and invoice tracking give you the visibility to get paid faster.","datePublished":"2026-08-14","dateModified":"2026-08-14","url":"https://www.lexalytic.com/blog/late-payments-uk-business-data-fix","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

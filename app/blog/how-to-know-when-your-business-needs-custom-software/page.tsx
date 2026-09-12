@@ -16,10 +16,36 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Know When Your Business Needs Custom Software Instead of a SaaS Tool",
+      "item": "https://www.lexalytic.com/blog/how-to-know-when-your-business-needs-custom-software"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Know When Your Business Needs Custom Software Instead of a SaaS Tool","description":"Most UK businesses default to SaaS tools. But there is a point where generic software costs more than building something custom. Here is the framework for knowing when you have reached it.","datePublished":"2026-11-03","dateModified":"2026-11-03","url":"https://www.lexalytic.com/blog/how-to-know-when-your-business-needs-custom-software","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

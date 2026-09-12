@@ -15,10 +15,36 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What Makes a Good Brief for a Developer? (UK Business Guide)",
+      "item": "https://www.lexalytic.com/blog/what-makes-a-good-brief-for-a-developer"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Makes a Good Brief for a Developer? (UK Business Guide)","description":"A good brief gets you a better product at a lower cost. Here is exactly what to include when briefing a developer for a UK business project.","datePublished":"2027-01-28","dateModified":"2027-01-28","url":"https://www.lexalytic.com/blog/what-makes-a-good-brief-for-a-developer","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

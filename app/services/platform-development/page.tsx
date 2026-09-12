@@ -48,11 +48,37 @@ const faqData = {
   ]
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Platform & SaaS Development UK",
+      "item": "https://www.lexalytic.com/services/platform-development"
+    }
+  ]
+}
+
 export default function PlatformDevelopmentPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Platform & SaaS Development","description":"Full web applications, SaaS products, booking systems, and member platforms for UK businesses.","url":"https://www.lexalytic.com/services/platform-development","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Platform Development"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>

@@ -74,11 +74,37 @@ const faqData = {
   ]
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Power BI Dashboard Consultant UK",
+      "item": "https://www.lexalytic.com/services/power-bi"
+    }
+  ]
+}
+
 export default function PowerBIPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power BI Dashboard Development","description":"Expert Power BI dashboard development for UK businesses. Live KPI tracking, automated reporting, and real-time business intelligence.","url":"https://www.lexalytic.com/services/power-bi","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>

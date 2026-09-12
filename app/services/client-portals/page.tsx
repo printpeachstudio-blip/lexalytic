@@ -43,6 +43,31 @@ const faqs = [
   { q: 'How do clients access the portal?', a: 'Clients access the portal via a web browser - no app to download, no software to install. They log in with a secure link sent by email or with credentials you set up for them. The interface is designed to be straightforward enough that clients of any technical level can use it without support from your team.' },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Client Portal Development UK",
+      "item": "https://www.lexalytic.com/services/client-portals"
+    }
+  ]
+}
+
 export default function ClientPortalsPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Client Portal Development UK","description":"Bespoke client portals for UK professional services firms. Document collection, e-signatures, invoicing and secure messaging - under your brand.","url":"https://www.lexalytic.com/services/client-portals","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Custom Software"}
 
@@ -50,6 +75,7 @@ export default function ClientPortalsPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructured) }} />
       <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>

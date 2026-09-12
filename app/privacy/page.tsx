@@ -10,6 +10,25 @@ export const metadata: Metadata = {
 
 const UPDATED = '10 September 2026'
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy",
+      "item": "https://www.lexalytic.com/privacy"
+    }
+  ]
+}
+
 export default function PrivacyPage() {
   const H = ({ children }: { children: React.ReactNode }) => (
     <h2 style={{ fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)', marginBottom: '16px', marginTop: '40px' }}>
@@ -24,6 +43,7 @@ export default function PrivacyPage() {
 
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
         background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)',
         borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

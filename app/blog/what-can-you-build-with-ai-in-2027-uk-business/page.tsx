@@ -16,10 +16,36 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What Can You Actually Build With AI in 2027 - A UK Business Guide",
+      "item": "https://www.lexalytic.com/blog/what-can-you-build-with-ai-in-2027-uk-business"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Can You Actually Build With AI in 2027 - A UK Business Guide","description":"AI capabilities have expanded significantly. Here is a practical guide to what UK businesses can actually build with AI in 2027 - and what is still hype.","datePublished":"2026-12-29","dateModified":"2026-12-29","url":"https://www.lexalytic.com/blog/what-can-you-build-with-ai-in-2027-uk-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>

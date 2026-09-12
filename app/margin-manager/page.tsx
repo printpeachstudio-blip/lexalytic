@@ -64,9 +64,29 @@ const faqData = {
   ],
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Margin Manager",
+      "item": "https://www.lexalytic.com/margin-manager"
+    }
+  ]
+}
+
 export default function MarginManagerPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <div style={{ background: 'var(--bg)' }}>
         <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,

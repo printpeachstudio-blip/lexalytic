@@ -17,11 +17,37 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI-Powered Business Tools UK",
+      "item": "https://www.lexalytic.com/services/ai-tools"
+    }
+  ]
+}
+
 export default function AIToolsPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"AI-Powered Business Tools","description":"We build business tools with AI built in - proposal generators, document processors, intelligent workflows, and internal assistants.","url":"https://www.lexalytic.com/services/ai-tools","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"AI Tool Development"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What kinds of tasks can an AI-powered business tool automate?","acceptedAnswer":{"@type":"Answer","text":"Tasks that are repetitive, involve processing text or structured data, and currently require human time for each instance. Examples include proposal generation, document processing, CV rewriting, customer communication drafting, and data classification."}},{"@type":"Question","name":"Do we need technical knowledge to commission an AI tool?","acceptedAnswer":{"@type":"Answer","text":"No. You just need to be able to describe the task clearly - what goes in, what you want to come out, and how often it happens. We handle all the technical work."}},{"@type":"Question","name":"Is CVCraft AI an example of an AI tool you built?","acceptedAnswer":{"@type":"Answer","text":"Yes. CVCraft AI is an AI-powered CV rewriting service we built and operate ourselves. A customer submits their CV and target role, Claude rewrites it, Stripe handles payment, and the document is delivered automatically within 24 hours."}}]}' }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>

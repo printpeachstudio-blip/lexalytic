@@ -16,11 +16,37 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "5 Signs Manual Reporting Is Costing Your Business (2026)",
+      "item": "https://www.lexalytic.com/blog/5-signs-manual-reporting-is-costing-your-business"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context": "https://schema.org", "@type": "Article", "headline": "5 Signs Manual Reporting Is Costing Your Business Money", "description": "Most businesses know their reporting process is painful. Here are 5 signs it is costing them more than they realise.", "datePublished": "2026-04-30", "dateModified": "2026-04-30", "url": "https://www.lexalytic.com/blog/5-signs-manual-reporting-is-costing-your-business", "author": {"@type": "Person", "name": "Mihir Hindocha", "url": "https://www.lexalytic.com/about"}, "publisher": {"@type": "Organization", "name": "Lexalytic", "url": "https://www.lexalytic.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.lexalytic.com/blog/5-signs-manual-reporting-is-costing-your-business"}}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

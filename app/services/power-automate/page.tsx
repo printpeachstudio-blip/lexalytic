@@ -58,11 +58,37 @@ const faqData = {
   ]
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Power Automate Consultant UK",
+      "item": "https://www.lexalytic.com/services/power-automate"
+    }
+  ]
+}
+
 export default function PowerAutomatePage() {
     const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Power Automate Consultancy","description":"Expert Power Automate development for UK businesses. Automate approvals, notifications, and data workflows across Microsoft 365.","url":"https://www.lexalytic.com/services/power-automate","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"};
 
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <ServiceNav />
 

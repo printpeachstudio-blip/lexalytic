@@ -16,11 +16,37 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.lexalytic.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How Much Does Excel Automation Cost in the UK? (2026 Guide)",
+      "item": "https://www.lexalytic.com/blog/excel-automation-cost-uk"
+    }
+  ]
+}
+
 export default function BlogPost() {
   const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How Much Does Excel Automation Cost in the UK? (2026 Guide)","description":"Honest UK pricing for Excel automation projects in 2026. What affects the cost, what you get for your money, and how quickly it pays for itself.","datePublished":"2026-05-05","dateModified":"2026-05-05","url":"https://www.lexalytic.com/blog/excel-automation-cost-uk","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lexalytic.com/blog/excel-automation-cost-uk"}}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -37,11 +37,37 @@ const faqs = [
   { q: 'Can the tool connect to our existing systems?', a: 'In most cases yes. Custom tools can connect to your accounting software, CRM, existing spreadsheets, or other business systems via APIs. We confirm integration possibilities during the scoping call so there are no surprises.' },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://www.lexalytic.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom Business Tools UK",
+      "item": "https://www.lexalytic.com/services/custom-business-tools"
+    }
+  ]
+}
+
 export default function CustomBusinessToolsPage() {
   const structuredData = {"@context":"https://schema.org","@type":"Service","name":"Custom Business Tools","description":"Bespoke business tools built around your exact processes. Custom CRMs, staff rotas, job trackers, client portals and more. Built once, owned by you.","url":"https://www.lexalytic.com/services/custom-business-tools","provider":{"@type":"LocalBusiness","name":"Lexalytic","url":"https://www.lexalytic.com","address":{"@type":"PostalAddress","addressLocality":"Bushey","addressRegion":"Hertfordshire","addressCountry":"GB"}},"areaServed":"GB","serviceType":"Data Automation"}
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What kind of businesses do you build custom tools for?","acceptedAnswer":{"@type":"Answer","text":"Any UK business that has outgrown generic software or is managing critical processes in spreadsheets. We have built tools for businesses in healthcare, recruitment, construction, professional services, hospitality, and retail."}},{"@type":"Question","name":"How is this different from buying off-the-shelf software?","acceptedAnswer":{"@type":"Answer","text":"Off-the-shelf software is built for every business in your sector. A custom tool is built around exactly how your business works, costs once, and you own it outright with no monthly licence fees."}},{"@type":"Question","name":"How long does a custom business tool take to build?","acceptedAnswer":{"@type":"Answer","text":"A straightforward single-process tool can be delivered in 2-4 weeks. More complex multi-process applications take longer. Every project is scoped individually with a clear timeline and fixed price before any work begins."}},{"@type":"Question","name":"Can you build a custom CRM instead of using Salesforce or HubSpot?","acceptedAnswer":{"@type":"Answer","text":"Yes. A custom CRM built around your exact sales process typically costs less over three years than a Salesforce or HubSpot subscription, and works better from day one because it fits your workflow exactly."}}]}' }} />
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>

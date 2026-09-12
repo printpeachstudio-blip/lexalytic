@@ -70,9 +70,35 @@ const faqData = {
   ]
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lexalytic",
+      "item": "https://www.lexalytic.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free Tools",
+      "item": "https://www.lexalytic.com/tools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Free UK Data Health Check - Scan a Spreadsheet for Errors",
+      "item": "https://www.lexalytic.com/tools/data-health-check"
+    }
+  ]
+}
+
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script
         type="application/ld+json"
