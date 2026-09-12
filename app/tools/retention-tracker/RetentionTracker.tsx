@@ -526,7 +526,7 @@ export default function RetentionTracker() {
       <div className="tool-wrap" style={{ paddingTop: 44 }}>
         <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 620 }}>
-          Retention is rarely disputed. It is forgotten.
+          The second half of your retention has a date on it. Nobody is watching it.
         </h1>
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 620, margin: '0 0 8px' }}>
           The second half falls due twelve months after practical completion, long after everyone has

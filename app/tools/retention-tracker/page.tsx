@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Free retention tracker built around JCT contracts. Tiered retention where the rate steps down, the cap on deduction, both release dates, and statutory interest on anything late. Plus the application letters, written from your figures. Nothing uploaded.',
   keywords: 'construction retention tracker UK, JCT retention release dates, stepped retention calculator, retention over-deduction cap, statutory interest late retention, retention application letter template, construction retention tracker, retention release dates, retention calculator UK, subcontractor retention, defects liability period tracker, retention not released, chase retention payment, construction retention cap',
   openGraph: {
-    title: 'Construction Retention Tracker for UK Subcontractors',
+    title: 'The second half of your retention has a date on it',
     description: 'Retention is rarely disputed. It is forgotten. Track what is held across every job and when each half falls due.',
     url: 'https://www.lexalytic.com/tools/retention-tracker',
     siteName: 'Lexalytic',
