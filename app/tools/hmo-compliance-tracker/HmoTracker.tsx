@@ -264,46 +264,23 @@ export default function HmoTracker() {
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
     }}>
       <style>{`
-        .t-wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
-        .t-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .t-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; transition: background .15s ease; }
-        .t-primary { background: ${AMBER}; color: #fff; }
-        .t-primary:hover { background: #A96C25; }
-        .t-primary:disabled { opacity: .5; cursor: default; }
-        .t-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .t-quiet:hover { border-color: #B9AF9F; }
-        .t-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
         .t-link-quiet { color: #8A8279; }
-        .t-in { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; }
-        .t-dark-in { font: inherit; font-size: 15px; padding: 11px 14px; border-radius: 6px;
-          background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 100%; }
-        .t-dark-in::placeholder { color: rgba(255,255,255,0.35); }
-        .t-btn:focus-visible, .t-link:focus-visible, .t-in:focus-visible, .t-dark-in:focus-visible {
-          outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .t-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
         .t-certrow { display: grid; grid-template-columns: 1fr 150px 130px; gap: 14px;
           align-items: center; padding: 13px 0; border-bottom: 1px solid #F4F0E8; }
         .t-certrow:last-child { border-bottom: 0; }
-        @media (max-width: 620px) {
-          .t-certrow { grid-template-columns: 1fr; gap: 6px; }
-          .t-duerow { grid-template-columns: 1fr !important; gap: 4px !important; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 620px) { .t-certrow { grid-template-columns: 1fr; gap: 6px; } .t-duerow { grid-template-columns: 1fr !important; gap: 4px !important; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="t-wrap" style={{ padding: 20 }}>
-          <a href="/" className="t-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="t-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="t-serif" style={{
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{
           fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15, letterSpacing: '-0.025em',
           fontWeight: 400, margin: '0 0 16px', maxWidth: 560,
         }}>
@@ -338,18 +315,18 @@ export default function HmoTracker() {
               ['Tracked in total', allDue.length, '#57514A'],
             ] as [string, number, string][]).map(([label, n, c]) => (
               <div key={label}>
-                <div className="t-serif" style={{ fontSize: 30, lineHeight: 1, color: n > 0 ? c : '#C4BDB2' }}>{n}</div>
+                <div className="tool-serif" style={{ fontSize: 30, lineHeight: 1, color: n > 0 ? c : '#C4BDB2' }}>{n}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>{label}</div>
               </div>
             ))}
-            <button className="t-btn t-quiet" style={{ marginLeft: 'auto' }} onClick={downloadIcs}>
+            <button className="tool-btn tool-btn-quiet" style={{ marginLeft: 'auto' }} onClick={downloadIcs}>
               Export to calendar
             </button>
           </div>
         )}
 
         {loaded && allDue.length > 0 && (
-          <div className="t-card" style={{ padding: '6px 24px', marginBottom: 32 }}>
+          <div className="tool-card" style={{ padding: '6px 24px', marginBottom: 32 }}>
             {allDue.slice(0, 12).map((item, i) => {
               const st = statusOf(item.days)
               return (
@@ -380,34 +357,34 @@ export default function HmoTracker() {
         )}
 
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 16, flexWrap: 'wrap' }}>
-          <h2 className="t-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
+          <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
             {properties.length ? `Your properties (${properties.length})` : 'Add your first property'}
           </h2>
           {!adding && properties.length > 0 && (
-            <button className="t-link" onClick={() => setAdding(true)}>Add another</button>
+            <button className="tool-link" onClick={() => setAdding(true)}>Add another</button>
           )}
         </div>
 
         {(adding || properties.length === 0) && (
-          <div className="t-card" style={{ padding: 22, marginBottom: 20 }}>
+          <div className="tool-card" style={{ padding: 22, marginBottom: 20 }}>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 14 }}>
               <input
-                className="t-in" style={{ flex: '2 1 220px' }} placeholder="Property name or address"
+                className="tool-in" style={{ flex: '2 1 220px' }} placeholder="Property name or address"
                 value={newName} onChange={e => setNewName(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter') addProperty() }}
               />
               <input
-                className="t-in" style={{ flex: '1 1 130px' }} placeholder="Postcode"
+                className="tool-in" style={{ flex: '1 1 130px' }} placeholder="Postcode"
                 value={newPostcode} onChange={e => setNewPostcode(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter') addProperty() }}
               />
             </div>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-              <button className="t-btn t-primary" onClick={addProperty} disabled={!newName.trim()}>
+              <button className="tool-btn" onClick={addProperty} disabled={!newName.trim()}>
                 Add property
               </button>
               {properties.length > 0 && (
-                <button className="t-link t-link-quiet" onClick={() => { setAdding(false); setNewName(''); setNewPostcode('') }}>
+                <button className="tool-link t-link-quiet" onClick={() => { setAdding(false); setNewName(''); setNewPostcode('') }}>
                   Cancel
                 </button>
               )}
@@ -421,7 +398,7 @@ export default function HmoTracker() {
           const worst = propDue.length ? Math.min(...propDue.map(d => d.days)) : null
           const st = worst !== null ? statusOf(worst) : null
           return (
-            <div key={p.id} className="t-card" style={{ marginBottom: 14, overflow: 'hidden' }}>
+            <div key={p.id} className="tool-card" style={{ marginBottom: 14, overflow: 'hidden' }}>
               <button
                 onClick={() => setExpanded(open ? null : p.id)}
                 aria-expanded={open}
@@ -476,7 +453,7 @@ export default function HmoTracker() {
                         </div>
                         <div>
                           <input
-                            className="t-in" type="date" style={{ width: '100%' }}
+                            className="tool-in" type="date" style={{ width: '100%' }}
                             max={todayStr()}
                             value={cert?.lastDone || ''}
                             onChange={e => {
@@ -499,7 +476,7 @@ export default function HmoTracker() {
                     )
                   })}
                   <button
-                    className="t-link t-link-quiet" style={{ marginTop: 16 }}
+                    className="tool-link t-link-quiet" style={{ marginTop: 16 }}
                     onClick={() => { if (confirm(`Remove ${p.name} and all its dates?`)) removeProperty(p.id) }}
                   >
                     Remove this property
@@ -513,7 +490,7 @@ export default function HmoTracker() {
         <div style={{ marginTop: 36, padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
           {sent ? (
             <>
-              <div className="t-serif" style={{ fontSize: 20, marginBottom: 10 }}>
+              <div className="tool-serif" style={{ fontSize: 20, marginBottom: 10 }}>
                 {enquiryType === 'portfolio' ? 'Thanks, we will be in touch.' : 'You are on the list.'}
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 520 }}>
@@ -524,7 +501,7 @@ export default function HmoTracker() {
             </>
           ) : properties.length >= 5 ? (
             <>
-              <div className="t-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 {properties.length} properties is past what a browser tab should be holding.
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
@@ -538,7 +515,7 @@ export default function HmoTracker() {
               </p>
               {!showForm ? (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <button className="t-btn t-primary" onClick={() => { setEnquiryType('portfolio'); setShowForm(true) }}>
+                  <button className="tool-btn" onClick={() => { setEnquiryType('portfolio'); setShowForm(true) }}>
                     Talk about a portfolio system
                   </button>
                   <button
@@ -553,14 +530,14 @@ export default function HmoTracker() {
                 <div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
                     <input
-                      className="t-dark-in" type="email" placeholder="Email address" autoComplete="email"
+                      className="tool-in-dark" type="email" placeholder="Email address" autoComplete="email"
                       value={email} onChange={e => setEmail(e.target.value)}
                       onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
                     />
                   </div>
                   {enquiryType === 'portfolio' && (
                     <textarea
-                      className="t-dark-in" rows={3} placeholder="What is the most painful part right now? (optional)"
+                      className="tool-in-dark" rows={3} placeholder="What is the most painful part right now? (optional)"
                       style={{ marginBottom: 12, resize: 'vertical' }}
                       value={notes} onChange={e => setNotes(e.target.value)}
                     />
@@ -570,7 +547,7 @@ export default function HmoTracker() {
                       borderRadius: 6, background: 'rgba(161,59,42,0.2)', maxWidth: 420 }}>{sendError}</div>
                   )}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="t-btn t-primary" onClick={submitInterest} disabled={sending}>
+                    <button className="tool-btn" onClick={submitInterest} disabled={sending}>
                       {sending ? 'Sending…' : 'Send'}
                     </button>
                     <button
@@ -584,7 +561,7 @@ export default function HmoTracker() {
             </>
           ) : (
             <>
-              <div className="t-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Want these dates somewhere safer?
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 540 }}>
@@ -594,7 +571,7 @@ export default function HmoTracker() {
               </p>
               {!showForm ? (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <button className="t-btn t-primary" onClick={() => { setEnquiryType('sync'); setShowForm(true) }}>
+                  <button className="tool-btn" onClick={() => { setEnquiryType('sync'); setShowForm(true) }}>
                     Tell me when that is ready
                   </button>
                   <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
@@ -604,7 +581,7 @@ export default function HmoTracker() {
               ) : (
                 <div>
                   <input
-                    className="t-dark-in" type="email" placeholder="Email address" autoComplete="email"
+                    className="tool-in-dark" type="email" placeholder="Email address" autoComplete="email"
                     style={{ maxWidth: 320, marginBottom: 14 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
@@ -614,7 +591,7 @@ export default function HmoTracker() {
                       borderRadius: 6, background: 'rgba(161,59,42,0.2)', maxWidth: 420 }}>{sendError}</div>
                   )}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="t-btn t-primary" onClick={submitInterest} disabled={sending}>
+                    <button className="tool-btn" onClick={submitInterest} disabled={sending}>
                       {sending ? 'Sending…' : 'Register interest'}
                     </button>
                     <button

@@ -492,47 +492,23 @@ export default function RetentionTracker() {
   }
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .r-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
-        .r-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .r-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .r-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; transition: background .15s ease; }
-        .r-primary { background: ${AMBER}; color: #fff; }
-        .r-primary:hover { background: #A96C25; }
-        .r-primary:disabled { opacity: .5; cursor: default; }
-        .r-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .r-quiet:hover { border-color: #B9AF9F; }
-        .r-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .r-in { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .r-dark-in { font: inherit; font-size: 15px; padding: 11px 14px; border-radius: 6px;
-          background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 100%; }
-        .r-dark-in::placeholder { color: rgba(255,255,255,0.35); }
-        .r-btn:focus-visible, .r-link:focus-visible, .r-in:focus-visible, .r-dark-in:focus-visible {
-          outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .r-field { margin-bottom: 14px; }
-        .r-label { display: block; font-size: 13px; color: #57514A; margin-bottom: 5px; }
-        .r-hint { font-size: 12px; color: #8A8279; margin-top: 4px; line-height: 1.5; }
         .r-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .r-grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
         @media (max-width: 620px) { .r-grid2, .r-grid3 { grid-template-columns: 1fr; } }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="r-wrap" style={{ padding: 20 }}>
-          <a href="/" className="r-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="r-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="r-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 620 }}>
           Retention is rarely disputed. It is forgotten.
         </h1>
@@ -547,7 +523,7 @@ export default function RetentionTracker() {
         </p>
 
         {loaded && jobs.length > 0 && (
-          <div className="r-card" style={{ padding: '22px 26px', marginBottom: 22,
+          <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 22,
             background: totals.overdue > 0 ? 'rgba(161,59,42,0.05)' : '#fff',
             borderColor: totals.overdue > 0 ? 'rgba(161,59,42,0.22)' : '#E8E2D8' }}>
             <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end' }}>
@@ -558,11 +534,11 @@ export default function RetentionTracker() {
                 ['Overdue', money(totals.overdue), totals.overdue > 0 ? '#A13B2A' : '#C4BDB2'],
               ] as [string, string, string][]).map(([l, v, c]) => (
                 <div key={l}>
-                  <div className="r-serif" style={{ fontSize: 24, lineHeight: 1.1, color: c }}>{v}</div>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: c }}>{v}</div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>{l}</div>
                 </div>
               ))}
-              <button className="r-btn r-quiet" style={{ marginLeft: 'auto' }} onClick={downloadIcs}>
+              <button className="tool-btn tool-btn-quiet" style={{ marginLeft: 'auto' }} onClick={downloadIcs}>
                 Export to calendar
               </button>
             </div>
@@ -577,50 +553,50 @@ export default function RetentionTracker() {
         )}
 
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 16, flexWrap: 'wrap' }}>
-          <h2 className="r-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
+          <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
             {jobs.length ? `Jobs (${jobs.length})` : 'Add your first job'}
           </h2>
-          {!adding && jobs.length > 0 && <button className="r-link" onClick={() => setAdding(true)}>Add another</button>}
+          {!adding && jobs.length > 0 && <button className="tool-link" onClick={() => setAdding(true)}>Add another</button>}
         </div>
 
         {(adding || jobs.length === 0) && (
-          <div className="r-card" style={{ padding: 24, marginBottom: 20 }}>
+          <div className="tool-card" style={{ padding: 24, marginBottom: 20 }}>
             <div className="r-grid2">
-              <div className="r-field">
-                <label className="r-label">Job reference or site</label>
-                <input className="r-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Riverside Phase 2" />
+              <div className="tool-field">
+                <label className="tool-label">Job reference or site</label>
+                <input className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Riverside Phase 2" />
               </div>
-              <div className="r-field">
-                <label className="r-label">Main contractor</label>
-                <input className="r-in" value={draft.contractor || ''} onChange={e => setDraft({ ...draft, contractor: e.target.value })} placeholder="Who is holding the money" />
+              <div className="tool-field">
+                <label className="tool-label">Main contractor</label>
+                <input className="tool-in" value={draft.contractor || ''} onChange={e => setDraft({ ...draft, contractor: e.target.value })} placeholder="Who is holding the money" />
               </div>
             </div>
             <div className="r-grid2">
-              <div className="r-field">
-                <label className="r-label">Contract value</label>
-                <input className="r-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
+              <div className="tool-field">
+                <label className="tool-label">Contract value</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
               </div>
-              <div className="r-field">
-                <label className="r-label">Value certified to date</label>
-                <input className="r-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
-                <div className="r-hint">Gross value certified across all interim applications.</div>
+              <div className="tool-field">
+                <label className="tool-label">Value certified to date</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
+                <div className="tool-hint">Gross value certified across all interim applications.</div>
               </div>
             </div>
             <div className="r-grid3">
-              <div className="r-field">
-                <label className="r-label">Retention rate</label>
-                <input className="r-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
-                <div className="r-hint">Usually 5%.</div>
+              <div className="tool-field">
+                <label className="tool-label">Retention rate</label>
+                <input className="tool-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
+                <div className="tool-hint">Usually 5%.</div>
               </div>
-              <div className="r-field">
-                <label className="r-label">Cap on retention</label>
-                <input className="r-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
-                <div className="r-hint">% of contract value. Deduction should stop here.</div>
+              <div className="tool-field">
+                <label className="tool-label">Cap on retention</label>
+                <input className="tool-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
+                <div className="tool-hint">% of contract value. Deduction should stop here.</div>
               </div>
-              <div className="r-field">
-                <label className="r-label">Defects period</label>
-                <input className="r-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
-                <div className="r-hint">Months. Usually 12.</div>
+              <div className="tool-field">
+                <label className="tool-label">Defects period</label>
+                <input className="tool-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
+                <div className="tool-hint">Months. Usually 12.</div>
               </div>
             </div>
             <div style={{ marginTop: 4, marginBottom: 16, padding: '16px 18px',
@@ -633,7 +609,7 @@ export default function RetentionTracker() {
                     and the flat rate above applies.
                   </div>
                 </div>
-                <button className="r-link"
+                <button className="tool-link"
                   onClick={() => setDraft({ ...draft,
                     tiers: [...(draft.tiers || []), { upTo: '', pct: '' }] })}>
                   Add a tier
@@ -644,9 +620,9 @@ export default function RetentionTracker() {
                 <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-end',
                   flexWrap: 'wrap', marginTop: 12, paddingTop: 12,
                   borderTop: '1px solid #F0EBE2' }}>
-                  <div className="r-field" style={{ width: 150 }}>
-                    <label className="r-label">Up to</label>
-                    <input className="r-in" type="number" min={0} inputMode="decimal"
+                  <div className="tool-field" style={{ width: 150 }}>
+                    <label className="tool-label">Up to</label>
+                    <input className="tool-in" type="number" min={0} inputMode="decimal"
                       value={t.upTo} placeholder="No limit"
                       onChange={e => {
                         const next = [...(draft.tiers || [])]
@@ -654,9 +630,9 @@ export default function RetentionTracker() {
                         setDraft({ ...draft, tiers: next })
                       }} />
                   </div>
-                  <div className="r-field" style={{ width: 110 }}>
-                    <label className="r-label">At</label>
-                    <input className="r-in" type="number" min={0} step="0.1"
+                  <div className="tool-field" style={{ width: 110 }}>
+                    <label className="tool-label">At</label>
+                    <input className="tool-in" type="number" min={0} step="0.1"
                       value={t.pct} placeholder="%"
                       onChange={e => {
                         const next = [...(draft.tiers || [])]
@@ -664,7 +640,7 @@ export default function RetentionTracker() {
                         setDraft({ ...draft, tiers: next })
                       }} />
                   </div>
-                  <button className="r-link" style={{ color: '#8A8279', paddingBottom: 12 }}
+                  <button className="tool-link" style={{ color: '#8A8279', paddingBottom: 12 }}
                     onClick={() => setDraft({ ...draft,
                       tiers: (draft.tiers || []).filter((_: any, j: number) => j !== i) })}>
                     Remove
@@ -701,15 +677,15 @@ export default function RetentionTracker() {
               )}
             </div>
 
-            <div className="r-field" style={{ maxWidth: 260 }}>
-              <label className="r-label">Practical completion date</label>
-              <input className="r-in" type="date" max={todayStr()} value={draft.pcDate || ''}
+            <div className="tool-field" style={{ maxWidth: 260 }}>
+              <label className="tool-label">Practical completion date</label>
+              <input className="tool-in" type="date" max={todayStr()} value={draft.pcDate || ''}
                 onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, pcDate: v }) }} />
-              <div className="r-hint">The date works were actually completed, not a future target. Leave blank if the job is still live. Both release dates run from this.</div>
+              <div className="tool-hint">The date works were actually completed, not a future target. Leave blank if the job is still live. Both release dates run from this.</div>
             </div>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginTop: 8 }}>
-              <button className="r-btn r-primary" onClick={addJob} disabled={!draft.ref?.trim() || !draft.contractValue}>Add job</button>
-              {jobs.length > 0 && <button className="r-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
+              <button className="tool-btn" onClick={addJob} disabled={!draft.ref?.trim() || !draft.contractValue}>Add job</button>
+              {jobs.length > 0 && <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
             </div>
           </div>
         )}
@@ -719,7 +695,7 @@ export default function RetentionTracker() {
           const anyOverdue = (!c.job.firstReleased && c.firstDays !== null && c.firstDays < 0) ||
                              (!c.job.finalReleased && c.finalDays !== null && c.finalDays < 0)
           return (
-            <div key={c.job.id} className="r-card" style={{ marginBottom: 14, overflow: 'hidden',
+            <div key={c.job.id} className="tool-card" style={{ marginBottom: 14, overflow: 'hidden',
               borderColor: anyOverdue ? 'rgba(161,59,42,0.25)' : '#E8E2D8' }}>
               <button onClick={() => setExpanded(open ? null : c.job.id)} aria-expanded={open}
                 style={{ width: '100%', textAlign: 'left', background: 'none', border: 0, font: 'inherit',
@@ -793,7 +769,7 @@ export default function RetentionTracker() {
                         onChange={e => updateJob(c.job.id, { finalReleased: e.target.checked })} />
                       Final half received
                     </label>
-                    <button className="r-link" style={{ color: '#8A8279', marginLeft: 'auto' }}
+                    <button className="tool-link" style={{ color: '#8A8279', marginLeft: 'auto' }}
                       onClick={() => { if (confirm(`Remove ${c.job.ref}?`)) removeJob(c.job.id) }}>
                       Remove job
                     </button>
@@ -807,7 +783,7 @@ export default function RetentionTracker() {
         {/* Recovery pack */}
         {overdueItems.length > 0 && (
           <div style={{ marginTop: 32, padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-            <div className="r-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+            <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
               {money(totals.overdue)} is past its release date.
             </div>
             <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 18px', maxWidth: 560 }}>
@@ -833,20 +809,20 @@ export default function RetentionTracker() {
                       to send payment. Saved on this device for next time.
                     </p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                      <input className="r-dark-in" placeholder="Your company name" value={sender.company}
+                      <input className="tool-in-dark" placeholder="Your company name" value={sender.company}
                         onChange={e => setSender({ ...sender, company: e.target.value })} />
-                      <input className="r-dark-in" placeholder="Your name" value={sender.contact}
+                      <input className="tool-in-dark" placeholder="Your name" value={sender.contact}
                         onChange={e => setSender({ ...sender, contact: e.target.value })} />
                     </div>
-                    <textarea className="r-dark-in" rows={3} placeholder="Your address" style={{ marginBottom: 12, resize: 'vertical' }}
+                    <textarea className="tool-in-dark" rows={3} placeholder="Your address" style={{ marginBottom: 12, resize: 'vertical' }}
                       value={sender.address} onChange={e => setSender({ ...sender, address: e.target.value })} />
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 16 }}>
-                      <input className="r-dark-in" placeholder="Email" value={sender.email}
+                      <input className="tool-in-dark" placeholder="Email" value={sender.email}
                         onChange={e => setSender({ ...sender, email: e.target.value })} />
-                      <input className="r-dark-in" placeholder="Phone" value={sender.phone}
+                      <input className="tool-in-dark" placeholder="Phone" value={sender.phone}
                         onChange={e => setSender({ ...sender, phone: e.target.value })} />
                     </div>
-                    <button className="r-btn r-primary" disabled={!senderComplete}
+                    <button className="tool-btn" disabled={!senderComplete}
                       onClick={() => { setEditingSender(false); if (senderComplete) openPack() }}>
                       Save and generate pack
                     </button>
@@ -858,7 +834,7 @@ export default function RetentionTracker() {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="r-btn r-primary" onClick={openPack}>Generate recovery pack</button>
+                    <button className="tool-btn" onClick={openPack}>Generate recovery pack</button>
                     <button onClick={() => setEditingSender(true)}
                       style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
                         color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}>
@@ -872,7 +848,7 @@ export default function RetentionTracker() {
               </>
             ) : (
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href={STRIPE_LINK} className="r-btn r-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+                <a href={STRIPE_LINK} className="tool-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>
                   Unlock the recovery pack, {PACK_PRICE}
                 </a>
                 <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
@@ -885,7 +861,7 @@ export default function RetentionTracker() {
 
         {/* Portfolio / sync */}
         <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
-          <div className="r-serif" style={{ fontSize: 19, marginBottom: 10 }}>
+          <div className="tool-serif" style={{ fontSize: 19, marginBottom: 10 }}>
             Want it to remember for you?
           </div>
           <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: '0 0 8px', maxWidth: 570 }}>
@@ -898,7 +874,7 @@ export default function RetentionTracker() {
             From £19 a month. Fourteen days free and no card needed.
           </p>
           <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-            <a href="/retention-manager" className="r-btn r-primary"
+            <a href="/retention-manager" className="tool-btn"
               style={{ textDecoration: 'none', display: 'inline-block' }}>
               See what it does
             </a>
@@ -909,14 +885,14 @@ export default function RetentionTracker() {
         <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
           {sent ? (
             <>
-              <div className="r-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: 0, maxWidth: 520 }}>
                 We will come back within a working day.
               </p>
             </>
           ) : (
             <>
-              <div className="r-serif" style={{ fontSize: 19, marginBottom: 10 }}>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 10 }}>
                 {jobs.length >= 8
                   ? `${jobs.length} jobs is more than a browser tab should be holding.`
                   : 'Want the dates somewhere safer?'}
@@ -927,22 +903,22 @@ export default function RetentionTracker() {
                   : 'We are building a version with a login, so the dates sync across devices and you get an email before each release falls due rather than relying on a calendar you might not check.'}
               </p>
               {!showForm ? (
-                <button className="r-btn r-primary" onClick={() => setShowForm(true)}>
+                <button className="tool-btn" onClick={() => setShowForm(true)}>
                   {jobs.length >= 8 ? 'Talk about a proper system' : 'Tell me when that is ready'}
                 </button>
               ) : (
                 <div>
-                  <input className="r-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && (
                     <div style={{ fontSize: 13, color: '#A13B2A', marginBottom: 12 }}>{sendError}</div>
                   )}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="r-btn r-primary" onClick={submitInterest} disabled={sending}>
+                    <button className="tool-btn" onClick={submitInterest} disabled={sending}>
                       {sending ? 'Sending…' : 'Send'}
                     </button>
-                    <button className="r-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
+                    <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
                   </div>
                 </div>
               )}

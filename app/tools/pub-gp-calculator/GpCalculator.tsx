@@ -141,20 +141,8 @@ export default function GpCalculator() {
   }, [rows])
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .gp-wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .gp-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .gp-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .gp-in, .gp-sel { font: inherit; font-size: 14.5px; padding: 9px 11px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .gp-in:focus-visible, .gp-sel:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .gp-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .gp-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 0; background: ${AMBER}; color: #fff; }
-        .gp-link:focus-visible, .gp-btn:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .gp-row { display: grid; grid-template-columns: 1.3fr 1.2fr 0.8fr 0.8fr 0.8fr 0.7fr 44px;
           gap: 10px; align-items: end; padding: 13px 0; border-bottom: 1px solid #F4F0E8; }
         .gp-head { display: grid; grid-template-columns: 1.3fr 1.2fr 0.8fr 0.8fr 0.8fr 0.7fr 44px;
@@ -162,25 +150,20 @@ export default function GpCalculator() {
           font-size: 12px; color: #8A8279; }
         .gp-res { display: grid; grid-template-columns: 1.4fr 90px 90px 100px 1fr;
           gap: 14px; padding: 13px 0; border-bottom: 1px solid #F7F4EF; align-items: baseline; }
-        @media (max-width: 900px) {
-          .gp-row { grid-template-columns: 1fr 1fr; }
-          .gp-head { display: none; }
-          .gp-res { grid-template-columns: 1fr 1fr; gap: 6px; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 900px) { .gp-row { grid-template-columns: 1fr 1fr; } .gp-head { display: none; } .gp-res { grid-template-columns: 1fr 1fr; gap: 6px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="gp-wrap" style={{ padding: 20 }}>
-          <a href="/" className="gp-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="gp-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="gp-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 680 }}>
           Gross profit across the whole range, with wastage in it
         </h1>
@@ -193,7 +176,7 @@ export default function GpCalculator() {
           Put your range in below. Nothing is uploaded and this runs entirely in your browser.
         </p>
 
-        <div className="gp-card" style={{ padding: '18px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '18px 26px', marginBottom: 18 }}>
           <label style={{ fontSize: 15, display: 'flex', gap: 10, alignItems: 'center', cursor: 'pointer' }}>
             <input type="checkbox" checked={vat} onChange={e => setVat(e.target.checked)} />
             <span>
@@ -207,7 +190,7 @@ export default function GpCalculator() {
         </div>
 
         {/* Lines */}
-        <div className="gp-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
+        <div className="tool-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
           <div className="gp-head">
             <div>Product</div><div>Category</div><div>Unit cost</div>
             <div>Selling price</div><div>Sold a week</div><div>Wastage %</div><div></div>
@@ -219,39 +202,39 @@ export default function GpCalculator() {
               <div key={l.id} className="gp-row">
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Product</label>
-                  <input className="gp-in" value={l.name} placeholder="Name"
+                  <input className="tool-in" value={l.name} placeholder="Name"
                     onChange={e => update(l.id, { name: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Category</label>
-                  <select className="gp-sel" value={l.category}
+                  <select className="tool-sel" value={l.category}
                     onChange={e => update(l.id, { category: e.target.value })}>
                     {CATEGORIES.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
                   </select>
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Cost</label>
-                  <input className="gp-in" type="number" min={0} step="0.01" value={l.cost}
+                  <input className="tool-in" type="number" min={0} step="0.01" value={l.cost}
                     onChange={e => update(l.id, { cost: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Price</label>
-                  <input className="gp-in" type="number" min={0} step="0.01" value={l.price}
+                  <input className="tool-in" type="number" min={0} step="0.01" value={l.price}
                     onChange={e => update(l.id, { price: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Weekly</label>
-                  <input className="gp-in" type="number" min={0} value={l.volume}
+                  <input className="tool-in" type="number" min={0} value={l.volume}
                     onChange={e => update(l.id, { volume: e.target.value })} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Waste %</label>
-                  <input className="gp-in" type="number" min={0} step="0.5" value={l.wastage}
+                  <input className="tool-in" type="number" min={0} step="0.5" value={l.wastage}
                     onChange={e => update(l.id, { wastage: e.target.value })} />
                 </div>
                 <div style={{ paddingBottom: 10 }}>
                   {lines.length > 1 && (
-                    <button className="gp-link" style={{ color: '#8A8279', fontSize: 13 }}
+                    <button className="tool-link" style={{ color: '#8A8279', fontSize: 13 }}
                       onClick={() => remove(l.id)} aria-label={`Remove row ${i + 1}`}>Remove</button>
                   )}
                 </div>
@@ -260,7 +243,7 @@ export default function GpCalculator() {
           })}
 
           <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', marginTop: 16 }}>
-            <button className="gp-link" onClick={add}>Add another product</button>
+            <button className="tool-link" onClick={add}>Add another product</button>
             <span style={{ fontSize: 13, color: '#8A8279' }}>
               Wastage defaults to the typical figure for each category. Change it if you know yours.
             </span>
@@ -270,11 +253,11 @@ export default function GpCalculator() {
         {/* Results */}
         {totals.count > 0 && (
           <>
-            <div className="gp-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
               <div style={{ display: 'flex', gap: 38, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 22, borderBottom: '2px solid ' + INK, marginBottom: 20 }}>
                 <div>
-                  <div className="gp-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
                     color: totals.blended >= 65 ? '#3F6B4C' : totals.blended >= 58 ? '#8F6318' : '#A13B2A' }}>
                     {totals.blended.toFixed(1)}%
                   </div>
@@ -283,19 +266,19 @@ export default function GpCalculator() {
                   </div>
                 </div>
                 <div>
-                  <div className="gp-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
                     {money0(totals.gp)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Gross profit a week</div>
                 </div>
                 <div>
-                  <div className="gp-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#A13B2A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#A13B2A' }}>
                     {money0(totals.wastageCost)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Lost to wastage a week</div>
                 </div>
                 <div>
-                  <div className="gp-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#A13B2A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#A13B2A' }}>
                     {money0(totals.annualWastage)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>A year</div>
@@ -325,7 +308,7 @@ export default function GpCalculator() {
             </div>
 
             {/* Per line */}
-            <div className="gp-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>Line by line</div>
               <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 16, maxWidth: 660, lineHeight: 1.6 }}>
                 The GP without wastage column is what a normal calculator would have told you. The
@@ -370,7 +353,7 @@ export default function GpCalculator() {
             </div>
 
             {/* Category notes */}
-            <div className="gp-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>Why the wastage figures differ</div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '18px' }}>
                 {CATEGORIES.filter(c => lines.some(l => l.category === c.key)).map(c => (
@@ -386,7 +369,7 @@ export default function GpCalculator() {
 
             {/* CTA */}
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-              <div className="gp-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Duty went up 3.66 per cent in February
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
@@ -395,7 +378,7 @@ export default function GpCalculator() {
                 given away margin. That happens every year and most sites recost weeks late.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/margin-manager" className="gp-btn"
+                <a href="/margin-manager" className="tool-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
                   See Margin Manager
                 </a>

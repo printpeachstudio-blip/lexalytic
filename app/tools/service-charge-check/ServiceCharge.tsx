@@ -169,38 +169,20 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
   }, [me, demandDate, analysis])
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
-      <style>{`
-        .sc-wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-        .sc-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .sc-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .sc-in { font: inherit; font-size: 14.5px; padding: 9px 11px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .sc-in:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .sc-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; background: ${AMBER}; color: #fff; }
-        .sc-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .sc-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .sc-ans { font: inherit; font-size: 13.5px; padding: 7px 15px; border-radius: 6px;
-          cursor: pointer; background: #fff; border: 1px solid #DDD6CC; color: #4A453F; }
-        .sc-ans[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
-        .sc-label { display: block; font-size: 12px; color: #8A8279; margin-bottom: 4px; }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-      `}</style>
+    <div className="tool-page">
+      
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="sc-wrap" style={{ padding: 20 }}>
-          <a href="/" className="sc-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="sc-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="sc-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 700 }}>
           A big service charge bill is not automatically a bill you owe
         </h1>
@@ -216,31 +198,31 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
         </p>
 
         {/* The bill */}
-        <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>The demand</div>
           <div style={{ display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: 16 }}>
             <div>
-              <label className="sc-label">Total cost of the works</label>
-              <input className="sc-in" type="number" min={0} value={bill}
+              <label className="tool-label">Total cost of the works</label>
+              <input className="tool-in" type="number" min={0} value={bill}
                 onChange={e => setBill(e.target.value)} placeholder="£" />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 For the whole block, not just your share
               </div>
             </div>
             <div>
-              <label className="sc-label">How many flats share it</label>
-              <input className="sc-in" type="number" min={1} value={leaseholders}
+              <label className="tool-label">How many flats share it</label>
+              <input className="tool-in" type="number" min={1} value={leaseholders}
                 onChange={e => setLeaseholders(e.target.value)} />
             </div>
             <div>
-              <label className="sc-label">Date of the demand</label>
-              <input className="sc-in" type="date" max={todayStr()} value={demandDate}
+              <label className="tool-label">Date of the demand</label>
+              <input className="tool-in" type="date" max={todayStr()} value={demandDate}
                 onChange={e => setDemandDate(e.target.value)} />
             </div>
             <div>
-              <label className="sc-label">When the work was done</label>
-              <input className="sc-in" type="date" max={todayStr()} value={workDate}
+              <label className="tool-label">When the work was done</label>
+              <input className="tool-in" type="date" max={todayStr()} value={workDate}
                 onChange={e => setWorkDate(e.target.value)} />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 Or when the cost was incurred
@@ -265,7 +247,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
 
         {/* The 18 month rule */}
         {analysis.monthsLate !== null && (
-          <div className="sc-card" style={{ padding: '22px 26px', marginBottom: 18,
+          <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 18,
             background: analysis.tooLate ? 'rgba(63,107,76,0.05)' : '#fff',
             borderColor: analysis.tooLate ? 'rgba(63,107,76,0.25)' : '#E8E2D8' }}>
             <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
@@ -292,7 +274,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
         )}
 
         {/* Questions */}
-        <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>What happened</div>
           <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 20, maxWidth: 640, lineHeight: 1.6 }}>
             Answer what you can. Unsure is a useful answer, because it tells you what to go and look for
@@ -311,7 +293,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
               </div>
               <div style={{ display: 'flex', gap: 7, marginBottom: 10 }}>
                 {(['yes', 'no', 'unsure'] as const).map(v => (
-                  <button key={v} className="sc-ans" aria-pressed={answers[g.id] === v}
+                  <button key={v} className="tool-chip" aria-pressed={answers[g.id] === v}
                     style={{ textTransform: 'capitalize' }}
                     onClick={() => setAnswer(g.id, v)}>{v}</button>
                 ))}
@@ -329,14 +311,14 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
 
         {/* Where you stand */}
         {(analysis.liveGrounds.length > 0 || analysis.answered > 2) && (
-          <div className="sc-card" style={{ padding: '28px 30px', marginBottom: 20,
+          <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20,
             background: analysis.strong.length ? 'rgba(63,107,76,0.04)' : '#fff',
             borderColor: analysis.strong.length ? 'rgba(63,107,76,0.25)' : '#E8E2D8' }}>
             <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 12 }}>Where you stand</div>
 
             {analysis.capped && analysis.saving > 0 ? (
               <>
-                <div className="sc-serif" style={{ fontSize: 'clamp(1.6rem, 3.4vw, 2.1rem)',
+                <div className="tool-serif" style={{ fontSize: 'clamp(1.6rem, 3.4vw, 2.1rem)',
                   lineHeight: 1.1, color: '#3F6B4C', marginBottom: 10 }}>
                   {money(analysis.saving)} may not be recoverable from you
                 </div>
@@ -390,7 +372,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
         )}
 
         {/* Rights */}
-        <div className="sc-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+        <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
           <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
             What you can ask for, whatever happened
           </div>
@@ -414,9 +396,9 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
 
         {/* PAID SECTION */}
         {!paid ? (
-          <div className="sc-card" style={{ padding: '28px 30px', marginBottom: 20,
+          <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20,
             background: INK, color: '#fff', borderColor: INK }}>
-            <div className="sc-serif" style={{ fontSize: 21, marginBottom: 12 }}>
+            <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12 }}>
               Then actually do something about it
             </div>
             <p style={{ fontSize: 15, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)',
@@ -452,7 +434,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             </div>
 
             <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-              <a href={STRIPE_LINK} className="sc-btn"
+              <a href={STRIPE_LINK} className="tool-btn"
                 style={{ textDecoration: 'none', display: 'inline-block' }}>
                 Unlock for £29
               </a>
@@ -464,36 +446,36 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
         ) : (
           <>
             {/* Your details */}
-            <div className="sc-card sc-me" style={{ padding: '24px 26px', marginBottom: 18 }}>
+            <div className="tool-card sc-me" style={{ padding: '24px 26px', marginBottom: 18 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>Your details</div>
               <div style={{ display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 14 }}>
                 <div>
-                  <label className="sc-label">Your name</label>
-                  <input className="sc-in" value={me.name}
+                  <label className="tool-label">Your name</label>
+                  <input className="tool-in" value={me.name}
                     onChange={e => setMe({ ...me, name: e.target.value })} />
                 </div>
                 <div>
-                  <label className="sc-label">Your address</label>
-                  <input className="sc-in" value={me.address}
+                  <label className="tool-label">Your address</label>
+                  <input className="tool-in" value={me.address}
                     onChange={e => setMe({ ...me, address: e.target.value })}
                     placeholder="Flat 4, 12 Example Road, London" />
                 </div>
                 <div>
-                  <label className="sc-label">Landlord or freeholder</label>
-                  <input className="sc-in" value={me.landlord}
+                  <label className="tool-label">Landlord or freeholder</label>
+                  <input className="tool-in" value={me.landlord}
                     onChange={e => setMe({ ...me, landlord: e.target.value })} />
                 </div>
                 <div>
-                  <label className="sc-label">Managing agent, if any</label>
-                  <input className="sc-in" value={me.agent}
+                  <label className="tool-label">Managing agent, if any</label>
+                  <input className="tool-in" value={me.agent}
                     onChange={e => setMe({ ...me, agent: e.target.value })} />
                 </div>
               </div>
             </div>
 
             {/* Consultation timeline */}
-            <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
                 The consultation timeline
               </div>
@@ -522,16 +504,16 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                   </div>
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <div style={{ width: 170 }}>
-                      <label className="sc-label">Date you received it</label>
-                      <input className="sc-in" type="date" max={todayStr()}
+                      <label className="tool-label">Date you received it</label>
+                      <input className="tool-in" type="date" max={todayStr()}
                         value={stageDates[st.id]?.served || ''}
                         onChange={e => setStageDates(d => ({ ...d,
                           [st.id]: { ...(d[st.id] || { served: '', deadline: '' }), served: e.target.value } }))} />
                     </div>
                     {st.days > 0 && (
                       <div style={{ width: 170 }}>
-                        <label className="sc-label">Deadline it gave you</label>
-                        <input className="sc-in" type="date"
+                        <label className="tool-label">Deadline it gave you</label>
+                        <input className="tool-in" type="date"
                           value={stageDates[st.id]?.deadline || ''}
                           onChange={e => setStageDates(d => ({ ...d,
                             [st.id]: { ...(d[st.id] || { served: '', deadline: '' }), deadline: e.target.value } }))} />
@@ -572,7 +554,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             </div>
 
             {/* Evidence log */}
-            <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>Keep a record</div>
               <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
                 margin: '0 0 18px', maxWidth: 650 }}>
@@ -585,22 +567,22 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 140px), 1fr))',
                 gap: 12, marginBottom: 12 }}>
                 <div>
-                  <label className="sc-label">Date</label>
-                  <input className="sc-in" name="date" type="date" max={todayStr()}
+                  <label className="tool-label">Date</label>
+                  <input className="tool-in" name="date" type="date" max={todayStr()}
                     defaultValue={todayStr()} />
                 </div>
                 <div style={{ gridColumn: 'span 2' }}>
-                  <label className="sc-label">What happened</label>
-                  <input className="sc-in" name="what"
+                  <label className="tool-label">What happened</label>
+                  <input className="tool-in" name="what"
                     placeholder="Phoned the agent, asked for the invoices, told they would call back" />
                 </div>
                 <div>
-                  <label className="sc-label">Who with</label>
-                  <input className="sc-in" name="who" placeholder="Name" />
+                  <label className="tool-label">Who with</label>
+                  <input className="tool-in" name="who" placeholder="Name" />
                 </div>
               </div>
-              <button className="sc-btn sc-quiet" onClick={e => {
-                const wrap = e.currentTarget.closest('.sc-card')!.querySelector('.sc-log') as HTMLElement
+              <button className="tool-btn tool-btn-quiet" onClick={e => {
+                const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.sc-log') as HTMLElement
                 const get = (n: string) =>
                   (wrap.querySelector(`[name=${n}]`) as HTMLInputElement)?.value || ''
                 const what = get('what').trim()
@@ -620,12 +602,12 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                       <div>{e2.what}</div>
                       <div style={{ fontSize: 13, color: '#8A8279' }}>{e2.who || ''}</div>
                       <div style={{ textAlign: 'right' }}>
-                        <button className="sc-link" style={{ fontSize: 13, color: '#8A8279' }}
+                        <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
                           onClick={() => setLog(l => l.filter(x => x.id !== e2.id))}>Remove</button>
                       </div>
                     </div>
                   ))}
-                  <button className="sc-link" style={{ marginTop: 14 }} onClick={() => {
+                  <button className="tool-link" style={{ marginTop: 14 }} onClick={() => {
                     const rows = log.map(e2 =>
                       `<tr><td>${fmt(e2.date)}</td><td>${e2.what}</td><td>${e2.who || ''}</td></tr>`).join('')
                     const w = window.open('', '_blank')
@@ -639,7 +621,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             </div>
 
             {/* Year on year */}
-            <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
                 What you have paid over the years
               </div>
@@ -653,18 +635,18 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
               <div className="sc-yr" style={{ display: 'flex', gap: 12, flexWrap: 'wrap',
                 alignItems: 'flex-end', marginBottom: 12 }}>
                 <div style={{ width: 110 }}>
-                  <label className="sc-label">Year</label>
-                  <input className="sc-in" name="year" placeholder="2024" />
+                  <label className="tool-label">Year</label>
+                  <input className="tool-in" name="year" placeholder="2024" />
                 </div>
                 <div style={{ width: 140 }}>
-                  <label className="sc-label">Total for the year</label>
-                  <input className="sc-in" name="amount" type="number" min={0} />
+                  <label className="tool-label">Total for the year</label>
+                  <input className="tool-in" name="amount" type="number" min={0} />
                 </div>
                 <div style={{ flex: '1 1 200px' }}>
-                  <label className="sc-label">Anything notable</label>
-                  <input className="sc-in" name="note" placeholder="New managing agent took over" />
+                  <label className="tool-label">Anything notable</label>
+                  <input className="tool-in" name="note" placeholder="New managing agent took over" />
                 </div>
-                <button className="sc-btn sc-quiet" onClick={e => {
+                <button className="tool-btn tool-btn-quiet" onClick={e => {
                   const wrap = e.currentTarget.closest('.sc-yr') as HTMLElement
                   const get = (n: string) =>
                     (wrap.querySelector(`[name=${n}]`) as HTMLInputElement)?.value || ''
@@ -694,7 +676,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                         </div>
                         <div style={{ fontSize: 13, color: '#8A8279' }}>{y.note}</div>
                         <div style={{ textAlign: 'right' }}>
-                          <button className="sc-link" style={{ fontSize: 13, color: '#8A8279' }}
+                          <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
                             onClick={() => setYears(l => l.filter(x => x.id !== y.id))}>Remove</button>
                         </div>
                       </div>
@@ -719,11 +701,11 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             </div>
 
             {/* Documents */}
-            <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>Documents to send</div>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 16 }}>
-                <button className="sc-btn" onClick={openLetter}>The opening letter</button>
-                <button className="sc-btn sc-quiet" onClick={() => {
+                <button className="tool-btn" onClick={openLetter}>The opening letter</button>
+                <button className="tool-btn tool-btn-quiet" onClick={() => {
                   const rows = analysis.liveGrounds.map((g: any) =>
                     `<li><strong>${g.label}</strong> (${g.section}). ${g.detail}</li>`).join('')
                   const w = window.open('', '_blank')
@@ -751,7 +733,7 @@ ${rows ? `<p>On what I have been able to check, these look worth asking about:</
             </div>
 
             {/* Tribunal */}
-            <div className="sc-card" style={{ padding: '24px 26px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
                 If it gets to the tribunal
               </div>

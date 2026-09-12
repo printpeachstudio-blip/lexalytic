@@ -118,20 +118,8 @@ export default function LabourDaypart() {
   const exampleRate = parseFloat(sessions[0]?.avgRate || '13.20') || 13.2
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .ld-wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-        .ld-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .ld-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .ld-in, .ld-sel { font: inherit; font-size: 14.5px; padding: 9px 11px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .ld-in:focus-visible, .ld-sel:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .ld-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .ld-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 0; background: ${AMBER}; color: #fff; }
-        .ld-link:focus-visible, .ld-btn:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .ld-row { display: grid; grid-template-columns: 0.7fr 1fr 0.9fr 0.7fr 0.9fr 0.7fr 44px;
           gap: 10px; align-items: end; padding: 13px 0; border-bottom: 1px solid #F4F0E8; }
         .ld-head { display: grid; grid-template-columns: 0.7fr 1fr 0.9fr 0.7fr 0.9fr 0.7fr 44px;
@@ -139,25 +127,20 @@ export default function LabourDaypart() {
           font-size: 12px; color: #8A8279; }
         .ld-res { display: grid; grid-template-columns: 1.2fr 100px 90px 110px 1fr;
           gap: 14px; padding: 13px 0; border-bottom: 1px solid #F7F4EF; align-items: baseline; }
-        @media (max-width: 900px) {
-          .ld-row { grid-template-columns: 1fr 1fr; }
-          .ld-head { display: none; }
-          .ld-res { grid-template-columns: 1fr 1fr; gap: 6px; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 900px) { .ld-row { grid-template-columns: 1fr 1fr; } .ld-head { display: none; } .ld-res { grid-template-columns: 1fr 1fr; gap: 6px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="ld-wrap" style={{ padding: 20 }}>
-          <a href="/" className="ld-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="ld-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="ld-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           Which sessions actually make you money?
         </h1>
@@ -172,14 +155,14 @@ export default function LabourDaypart() {
         </p>
 
         {/* Setup */}
-        <div className="ld-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
           <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap', alignItems: 'flex-end' }}>
             <div>
               <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                 Your gross profit
               </label>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <input className="ld-in" type="number" min={0} style={{ width: 90 }} value={gp}
+                <input className="tool-in" type="number" min={0} style={{ width: 90 }} value={gp}
                   onChange={e => setGp(e.target.value)} />
                 <span style={{ fontSize: 14, color: '#8A8279' }}>%</span>
               </div>
@@ -191,7 +174,7 @@ export default function LabourDaypart() {
               <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                 Fixed costs a week
               </label>
-              <input className="ld-in" type="number" min={0} style={{ width: 130 }} value={fixedWeekly}
+              <input className="tool-in" type="number" min={0} style={{ width: 130 }} value={fixedWeekly}
                 onChange={e => setFixedWeekly(e.target.value)} />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 Rent, rates, utilities, salaried staff
@@ -210,7 +193,7 @@ export default function LabourDaypart() {
         </div>
 
         {/* Sessions */}
-        <div className="ld-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
+        <div className="tool-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
           <div className="ld-head">
             <div>Day</div><div>Session</div><div>Sales</div>
             <div>Staff hours</div><div>Average rate</div><div>Covers</div><div></div>
@@ -220,38 +203,38 @@ export default function LabourDaypart() {
             <div key={s.id} className="ld-row">
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Day</label>
-                <select className="ld-sel" value={s.day} onChange={e => update(s.id, { day: e.target.value })}>
+                <select className="tool-sel" value={s.day} onChange={e => update(s.id, { day: e.target.value })}>
                   {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
                 </select>
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Session</label>
-                <input className="ld-in" value={s.name} placeholder="Lunch, evening"
+                <input className="tool-in" value={s.name} placeholder="Lunch, evening"
                   onChange={e => update(s.id, { name: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Sales</label>
-                <input className="ld-in" type="number" min={0} value={s.sales}
+                <input className="tool-in" type="number" min={0} value={s.sales}
                   onChange={e => update(s.id, { sales: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Hours</label>
-                <input className="ld-in" type="number" min={0} step="0.5" value={s.hours}
+                <input className="tool-in" type="number" min={0} step="0.5" value={s.hours}
                   onChange={e => update(s.id, { hours: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Rate</label>
-                <input className="ld-in" type="number" min={0} step="0.01" value={s.avgRate}
+                <input className="tool-in" type="number" min={0} step="0.01" value={s.avgRate}
                   onChange={e => update(s.id, { avgRate: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Covers</label>
-                <input className="ld-in" type="number" min={0} value={s.covers}
+                <input className="tool-in" type="number" min={0} value={s.covers}
                   onChange={e => update(s.id, { covers: e.target.value })} />
               </div>
               <div style={{ paddingBottom: 10 }}>
                 {sessions.length > 1 && (
-                  <button className="ld-link" style={{ color: '#8A8279', fontSize: 13 }}
+                  <button className="tool-link" style={{ color: '#8A8279', fontSize: 13 }}
                     onClick={() => remove(s.id)} aria-label={`Remove row ${i + 1}`}>Remove</button>
                 )}
               </div>
@@ -259,7 +242,7 @@ export default function LabourDaypart() {
           ))}
 
           <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', marginTop: 16 }}>
-            <button className="ld-link" onClick={add}>Add another session</button>
+            <button className="tool-link" onClick={add}>Add another session</button>
             <span style={{ fontSize: 13, color: '#8A8279' }}>
               A typical week is enough. You do not need every session.
             </span>
@@ -269,13 +252,13 @@ export default function LabourDaypart() {
         {/* Results */}
         {totals.count > 0 && (
           <>
-            <div className="ld-card" style={{ padding: '28px 30px', marginBottom: 20,
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20,
               background: totals.negative.length > 0 ? 'rgba(161,59,42,0.04)' : '#fff',
               borderColor: totals.negative.length > 0 ? 'rgba(161,59,42,0.22)' : '#E8E2D8' }}>
               <div style={{ display: 'flex', gap: 38, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 22, borderBottom: '2px solid ' + INK, marginBottom: 20 }}>
                 <div>
-                  <div className="ld-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
                     color: totals.afterFixed >= 0 ? '#3F6B4C' : '#A13B2A' }}>
                     {money(totals.afterFixed)}
                   </div>
@@ -284,7 +267,7 @@ export default function LabourDaypart() {
                   </div>
                 </div>
                 <div>
-                  <div className="ld-serif" style={{ fontSize: 24, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1,
                     color: totals.labourPct > 35 ? '#A13B2A' : totals.labourPct > 30 ? '#8F6318' : '#3F6B4C' }}>
                     {totals.labourPct.toFixed(1)}%
                   </div>
@@ -293,7 +276,7 @@ export default function LabourDaypart() {
                   </div>
                 </div>
                 <div>
-                  <div className="ld-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
                     {money(totals.cost)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>
@@ -301,7 +284,7 @@ export default function LabourDaypart() {
                   </div>
                 </div>
                 <div>
-                  <div className="ld-serif" style={{ fontSize: 24, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1,
                     color: totals.negative.length > 0 ? '#A13B2A' : '#C4BDB2' }}>
                     {totals.negative.length}
                   </div>
@@ -341,7 +324,7 @@ export default function LabourDaypart() {
             </div>
 
             {/* Per session */}
-            <div className="ld-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>Session by session</div>
               <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 16, maxWidth: 660, lineHeight: 1.6 }}>
                 Contribution is gross profit on the sales less the real cost of the labour. It is what
@@ -390,7 +373,7 @@ export default function LabourDaypart() {
             </div>
 
             {/* What to do */}
-            <div className="ld-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>Before you cut anything</div>
               <ul style={{ fontSize: 15, color: '#57514A', lineHeight: 1.9, paddingLeft: 20, margin: 0, maxWidth: 700 }}>
                 <li><strong>A quiet session can still be worth running.</strong> Closing Tuesday lunch
@@ -410,7 +393,7 @@ export default function LabourDaypart() {
 
             {/* CTA */}
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-              <div className="ld-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 This is worth knowing before the rota goes up
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
@@ -419,7 +402,7 @@ export default function LabourDaypart() {
                 the second one.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/margin-manager" className="ld-btn"
+                <a href="/margin-manager" className="tool-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
                   See Margin Manager
                 </a>

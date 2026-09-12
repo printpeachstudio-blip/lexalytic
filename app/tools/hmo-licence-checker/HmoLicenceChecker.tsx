@@ -139,11 +139,8 @@ export default function HmoLicenceChecker() {
   }
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .hmo-wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-        .hmo-serif { font-family: Georgia, 'Times New Roman', serif; }
         .hmo-q { padding: 26px 0; border-bottom: 1px solid #EDE7DD; }
         .hmo-q:last-of-type { border-bottom: 0; }
         .hmo-qlabel { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
@@ -154,7 +151,7 @@ export default function HmoLicenceChecker() {
           background: #fff; border: 1px solid #DDD6CC; color: #4A453F; transition: all .12s ease;
         }
         .hmo-opt:hover { border-color: #B9AF9F; }
-        .hmo-opt[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
+        .hmo-opt[aria-pressed=true] { background: ${INK}; border-color: ${INK}; color: #fff; }
         .hmo-num {
           font: inherit; font-size: 15px; padding: 10px 14px; border-radius: 6px;
           border: 1px solid #DDD6CC; background: #fff; width: 110px;
@@ -165,19 +162,7 @@ export default function HmoLicenceChecker() {
           border: 1px solid rgba(255,255,255,0.15); width: 100%;
         }
         .hmo-input::placeholder { color: rgba(255,255,255,0.35); }
-        .hmo-btn {
-          font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 12px 22px; border: 1px solid transparent; transition: background .15s ease;
-        }
-        .hmo-primary { background: ${AMBER}; color: #fff; }
-        .hmo-primary:hover { background: #A96C25; }
-        .hmo-primary:disabled { opacity: .55; cursor: default; }
-        .hmo-quiet { background: transparent; color: #55504A; border-color: #DDD6CC; }
-        .hmo-link {
-          background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px;
-        }
-        .hmo-opt:focus-visible, .hmo-btn:focus-visible, .hmo-link:focus-visible,
+        .hmo-opt:focus-visible, .tool-btn:focus-visible, .tool-link:focus-visible,
         .hmo-num:focus-visible, .hmo-input:focus-visible {
           outline: 2px solid ${AMBER}; outline-offset: 2px;
         }
@@ -185,22 +170,19 @@ export default function HmoLicenceChecker() {
           border-bottom: 1px solid #F0EBE2; font-size: 14px; line-height: 1.65; }
         .hmo-fact:last-child { border-bottom: 0; }
         .hmo-factkey { color: #8A8279; }
-        @media (max-width: 560px) {
-          .hmo-fact { grid-template-columns: 1fr; gap: 4px; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 560px) { .hmo-fact { grid-template-columns: 1fr; gap: 4px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="hmo-wrap" style={{ padding: '20px' }}>
-          <a href="/" className="hmo-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: '20px' }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="hmo-wrap" style={{ paddingTop: 48 }}>
-        <h1 className="hmo-serif" style={{
+      <div className="tool-wrap" style={{ paddingTop: 48 }}>
+        <h1 className="tool-serif" style={{
           fontSize: 'clamp(1.9rem, 4.5vw, 2.7rem)', lineHeight: 1.15, letterSpacing: '-0.025em',
           fontWeight: 400, margin: '0 0 16px', maxWidth: 560,
         }}>
@@ -266,7 +248,7 @@ export default function HmoLicenceChecker() {
               background: verdict.tone === 'required' ? 'rgba(161,59,42,0.06)' : verdict.tone === 'check' ? 'rgba(176,122,30,0.07)' : 'rgba(74,124,89,0.06)',
               border: `1px solid ${verdict.tone === 'required' ? 'rgba(161,59,42,0.25)' : verdict.tone === 'check' ? 'rgba(176,122,30,0.25)' : 'rgba(74,124,89,0.22)'}`,
             }}>
-              <div className="hmo-serif" style={{
+              <div className="tool-serif" style={{
                 fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', lineHeight: 1.2, marginBottom: 14,
                 color: verdict.tone === 'required' ? '#A13B2A' : verdict.tone === 'check' ? '#8F6318' : '#3F6B4C',
               }}>
@@ -282,7 +264,7 @@ export default function HmoLicenceChecker() {
 
             {verdict.needed && (
               <div style={{ marginTop: 36 }}>
-                <h2 className="hmo-serif" style={{ fontSize: 20, fontWeight: 400, margin: '0 0 4px' }}>What that means in practice</h2>
+                <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: '0 0 4px' }}>What that means in practice</h2>
                 <p style={{ fontSize: 14, color: '#8A8279', margin: '0 0 18px' }}>
                   Figures vary by council. These are the typical ranges across England.
                 </p>
@@ -321,11 +303,11 @@ export default function HmoLicenceChecker() {
 
             <div style={{ marginTop: 36 }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap', marginBottom: 6 }}>
-                <h2 className="hmo-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
+                <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
                   Check your room sizes
                 </h2>
                 {!showRooms && (
-                  <button className="hmo-link" onClick={() => setShowRooms(true)}>Open the calculator</button>
+                  <button className="tool-link" onClick={() => setShowRooms(true)}>Open the calculator</button>
                 )}
               </div>
               <p style={{ fontSize: 14, color: '#8A8279', margin: '0 0 18px', maxWidth: 580, lineHeight: 1.65 }}>
@@ -361,19 +343,19 @@ export default function HmoLicenceChecker() {
                           </span>
                         )}
                         {rooms.length > 1 && (
-                          <button className="hmo-link" onClick={() => removeRoom(r.id)} aria-label={`Remove room ${i + 1}`}>Remove</button>
+                          <button className="tool-link" onClick={() => removeRoom(r.id)} aria-label={`Remove room ${i + 1}`}>Remove</button>
                         )}
                       </div>
                     )
                   })}
-                  <button className="hmo-link" style={{ marginTop: 14 }} onClick={addRoom}>Add another room</button>
+                  <button className="tool-link" style={{ marginTop: 14 }} onClick={addRoom}>Add another room</button>
 
                   {roomAnalysis && roomAnalysis.lawfulMax > 0 && (
                     <div style={{
                       marginTop: 20, paddingTop: 18, borderTop: '2px solid ' + INK,
                     }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
-                        <span className="hmo-serif" style={{ fontSize: 30, color: AMBER, lineHeight: 1 }}>
+                        <span className="tool-serif" style={{ fontSize: 30, color: AMBER, lineHeight: 1 }}>
                           {roomAnalysis.lawfulMax}
                         </span>
                         <span style={{ fontSize: 15, color: '#3E3934' }}>
@@ -408,7 +390,7 @@ export default function HmoLicenceChecker() {
             </div>
 
             <div style={{ marginTop: 36, padding: 32, borderRadius: 10, background: INK, color: '#fff' }}>
-              <div className="hmo-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Knowing this looks like it needs a licence is the easy part.
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 540 }}>
@@ -424,7 +406,7 @@ export default function HmoLicenceChecker() {
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
                 <a
                   href="/tools/hmo-compliance-tracker"
-                  className="hmo-btn hmo-primary"
+                  className="tool-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}
                 >
                   Open the compliance tracker
@@ -436,7 +418,7 @@ export default function HmoLicenceChecker() {
             </div>
 
             <div style={{ marginTop: 28, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-              <button className="hmo-btn hmo-quiet" onClick={reset}>Check another property</button>
+              <button className="tool-btn tool-btn-quiet" onClick={reset}>Check another property</button>
             </div>
 
             <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 30, maxWidth: 620 }}>

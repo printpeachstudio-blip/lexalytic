@@ -426,51 +426,39 @@ export default function HmrcBenchmark() {
     { label: string; value: string; onChange: (v: string) => void; hint?: string }) => (
     <div>
       <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>{label}</label>
-      <input className="hb-in" type="number" min={0} value={value} onChange={e => onChange(e.target.value)} />
+      <input className="tool-in" type="number" min={0} value={value} onChange={e => onChange(e.target.value)} />
       {hint && <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4, lineHeight: 1.5 }}>{hint}</div>}
     </div>
   )
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .hb-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .hb-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .hb-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .hb-in { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .hb-in:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .hb-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; background: ${AMBER}; color: #fff; }
-        .hb-btn:hover { background: #A96C25; }
         .hb-opt { font: inherit; font-size: 14px; padding: 9px 15px; border-radius: 6px; cursor: pointer;
           background: #fff; border: 1px solid #DDD6CC; color: #4A453F; }
-        .hb-opt[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
-        .hb-opt:focus-visible, .hb-btn:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
+        .hb-opt[aria-pressed=true] { background: ${INK}; border-color: ${INK}; color: #fff; }
+        .hb-opt:focus-visible, .tool-btn:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .hb-dark { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
           background: rgba(255,255,255,0.06); color: #fff;
           border: 1px solid rgba(255,255,255,0.15); width: 100%; }
         .hb-dark::placeholder { color: rgba(255,255,255,0.35); }
         .hb-dark:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .hb-g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .hb-g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-        @media (max-width: 760px) { .hb-g2, .hb-g4 { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 480px) { .hb-g2, .hb-g4 { grid-template-columns: 1fr; } }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 760px) { .tool-g2, .hb-g4 { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .tool-g2, .hb-g4 { grid-template-columns: 1fr; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="hb-wrap" style={{ padding: 20 }}>
-          <a href="/" className="hb-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="hb-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="hb-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           How do your numbers look from the outside?
         </h1>
@@ -486,7 +474,7 @@ export default function HmrcBenchmark() {
         </p>
 
         {/* Concept */}
-        <div className="hb-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>What kind of site is it?</div>
           <div style={{ fontSize: 13.5, color: '#8A8279', marginBottom: 14 }}>
             The expected range differs by format, so this changes everything below.
@@ -503,7 +491,7 @@ export default function HmrcBenchmark() {
         </div>
 
         {/* Figures */}
-        <div className="hb-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 18 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>Last full year</div>
           <div className="hb-g4" style={{ marginBottom: 16 }}>
             <Num label="Turnover, ex VAT" value={turnover} onChange={setTurnover} />
@@ -540,20 +528,20 @@ export default function HmrcBenchmark() {
         </div>
 
         {/* Factors */}
-        <div className="hb-card" style={{ padding: '22px 26px', marginBottom: 26 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 26 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>What is pulling your margin down?</div>
           <div style={{ fontSize: 13.5, color: '#8A8279', marginBottom: 18, maxWidth: 620, lineHeight: 1.6 }}>
             These are the legitimate reasons a well run site sits below benchmark. Being able to point at
             them, with records behind them, is the difference between a short conversation and a long one.
           </div>
-          <div className="hb-g2" style={{ gap: 18 }}>
+          <div className="tool-g2" style={{ gap: 18 }}>
             {FACTORS.map(f => (
               <div key={f.key}>
                 <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                   {f.label}
                 </label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <input className="hb-in" type="number" min={0} max={f.max} style={{ width: 90 }}
+                  <input className="tool-in" type="number" min={0} max={f.max} style={{ width: 90 }}
                     value={factors[f.key] || '0'}
                     onChange={e => setFactors({ ...factors, [f.key]: e.target.value })} />
                   <span style={{ fontSize: 14, color: '#8A8279' }}>{f.unit}</span>
@@ -569,13 +557,13 @@ export default function HmrcBenchmark() {
         {/* Result */}
         {result && (
           <>
-            <div className="hb-card" style={{ padding: '28px 30px', marginBottom: 20,
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20,
               background: result.gpOk && result.netOk ? '#fff' : 'rgba(176,122,30,0.04)',
               borderColor: result.gpOk && result.netOk ? '#E8E2D8' : 'rgba(176,122,30,0.22)' }}>
               <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 22, borderBottom: '2px solid ' + INK, marginBottom: 22 }}>
                 <div>
-                  <div className="hb-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
                     color: result.gpOk ? '#3F6B4C' : '#8F6318' }}>
                     {pct(result.gp)}
                   </div>
@@ -584,7 +572,7 @@ export default function HmrcBenchmark() {
                   </div>
                 </div>
                 <div>
-                  <div className="hb-serif" style={{ fontSize: 26, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1,
                     color: result.netOk ? '#3F6B4C' : '#8F6318' }}>
                     {pct(result.net)}
                   </div>
@@ -593,7 +581,7 @@ export default function HmrcBenchmark() {
                   </div>
                 </div>
                 <div>
-                  <div className="hb-serif" style={{ fontSize: 26, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1,
                     color: result.prime > 70 ? '#8F6318' : '#57514A' }}>
                     {pct(result.prime)}
                   </div>
@@ -704,7 +692,7 @@ export default function HmrcBenchmark() {
 
             {/* Evidence */}
             {result.applied.length > 0 && (
-              <div className="hb-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
+              <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
                 <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
                   What would evidence it
                 </div>
@@ -728,7 +716,7 @@ export default function HmrcBenchmark() {
             {/* Paid report, currently off */}
             {REPORT_ENABLED && (
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff', marginBottom: 20 }}>
-              <div className="hb-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Put it on the record, dated
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 8px', maxWidth: 600 }}>
@@ -761,7 +749,7 @@ export default function HmrcBenchmark() {
                       <input className="hb-dark" placeholder="Prepared by (optional)" value={business.preparedBy}
                         onChange={e => setBusiness({ ...business, preparedBy: e.target.value })} />
                     </div>
-                    <button className="hb-btn" disabled={!businessReady}
+                    <button className="tool-btn" disabled={!businessReady}
                       style={{ opacity: businessReady ? 1 : 0.5 }}
                       onClick={() => { setEditingBusiness(false); if (businessReady) openReport() }}>
                       Generate the report
@@ -769,7 +757,7 @@ export default function HmrcBenchmark() {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="hb-btn" onClick={openReport}>Generate the report</button>
+                    <button className="tool-btn" onClick={openReport}>Generate the report</button>
                     <button onClick={() => setEditingBusiness(true)}
                       style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
                         color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}>
@@ -782,7 +770,7 @@ export default function HmrcBenchmark() {
                 )
               ) : (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <a href={STRIPE_LINK} className="hb-btn"
+                  <a href={STRIPE_LINK} className="tool-btn"
                     style={{ textDecoration: 'none', display: 'inline-block' }}>
                     Get the report, {REPORT_PRICE}
                   </a>
@@ -796,7 +784,7 @@ export default function HmrcBenchmark() {
             )}
 
             {/* What is coming */}
-            <div className="hb-card" style={{ padding: '24px 30px' }}>
+            <div className="tool-card" style={{ padding: '24px 30px' }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
                 Keeping the records is the hard part, not the maths
               </div>

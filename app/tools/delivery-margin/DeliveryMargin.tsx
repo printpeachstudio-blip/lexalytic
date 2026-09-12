@@ -131,23 +131,12 @@ export default function DeliveryMargin() {
     parseFloat(r.dish.deliveryPrice) === parseFloat(r.dish.dineInPrice))
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .dm-wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-        .dm-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .dm-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .dm-in { font: inherit; font-size: 15px; padding: 9px 12px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .dm-in:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
         .dm-opt { font: inherit; font-size: 14px; padding: 9px 15px; border-radius: 6px; cursor: pointer;
           background: #fff; border: 1px solid #DDD6CC; color: #4A453F; }
-        .dm-opt[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
-        .dm-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .dm-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 0; background: ${AMBER}; color: #fff; }
-        .dm-opt:focus-visible, .dm-btn:focus-visible, .dm-link:focus-visible {
+        .dm-opt[aria-pressed=true] { background: ${INK}; border-color: ${INK}; color: #fff; }
+        .dm-opt:focus-visible, .tool-btn:focus-visible, .tool-link:focus-visible {
           outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .dm-row { display: grid; grid-template-columns: 1.5fr 0.9fr 0.9fr 0.9fr 0.8fr 44px;
           gap: 10px; align-items: end; padding: 14px 0; border-bottom: 1px solid #F4F0E8; }
@@ -156,25 +145,20 @@ export default function DeliveryMargin() {
           font-size: 12px; color: #8A8279; }
         .dm-res { display: grid; grid-template-columns: 1.4fr 100px 100px 110px 1fr;
           gap: 14px; padding: 13px 0; border-bottom: 1px solid #F7F4EF; align-items: baseline; }
-        @media (max-width: 860px) {
-          .dm-row { grid-template-columns: 1fr 1fr; }
-          .dm-head { display: none; }
-          .dm-res { grid-template-columns: 1fr 1fr; gap: 6px; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 860px) { .dm-row { grid-template-columns: 1fr 1fr; } .dm-head { display: none; } .dm-res { grid-template-columns: 1fr 1fr; gap: 6px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="dm-wrap" style={{ padding: 20 }}>
-          <a href="/" className="dm-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="dm-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="dm-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           Which dishes lose you money on delivery?
         </h1>
@@ -188,7 +172,7 @@ export default function DeliveryMargin() {
         </p>
 
         {/* Setup */}
-        <div className="dm-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>Which channel?</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
             {PLATFORMS.map(x => (
@@ -203,7 +187,7 @@ export default function DeliveryMargin() {
                 Commission
               </label>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <input className="dm-in" type="number" min={0} style={{ width: 90 }}
+                <input className="tool-in" type="number" min={0} style={{ width: 90 }}
                   value={platform === 'custom' ? customRate : String(p.commission)}
                   onChange={e => { setPlatform('custom'); setCustomRate(e.target.value) }} />
                 <span style={{ fontSize: 14, color: '#8A8279' }}>%</span>
@@ -213,7 +197,7 @@ export default function DeliveryMargin() {
               <label style={{ display: 'block', fontSize: 13, color: '#57514A', marginBottom: 5 }}>
                 Packaging per order
               </label>
-              <input className="dm-in" type="number" min={0} step="0.01" style={{ width: 110 }}
+              <input className="tool-in" type="number" min={0} step="0.01" style={{ width: 110 }}
                 value={packaging} onChange={e => setPackaging(e.target.value)} />
             </div>
             <label style={{ fontSize: 14, display: 'flex', gap: 8, alignItems: 'center',
@@ -230,7 +214,7 @@ export default function DeliveryMargin() {
         </div>
 
         {/* Dishes */}
-        <div className="dm-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
+        <div className="tool-card" style={{ padding: '20px 26px', marginBottom: 22 }}>
           <div className="dm-head">
             <div>Dish</div><div>Dine-in price</div><div>Food cost</div>
             <div>Delivery price</div><div>Orders a week</div><div></div>
@@ -240,52 +224,52 @@ export default function DeliveryMargin() {
             <div key={d.id} className="dm-row">
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Dish</label>
-                <input className="dm-in" value={d.name} placeholder="Name"
+                <input className="tool-in" value={d.name} placeholder="Name"
                   onChange={e => update(d.id, { name: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Dine-in</label>
-                <input className="dm-in" type="number" min={0} step="0.01" value={d.dineInPrice}
+                <input className="tool-in" type="number" min={0} step="0.01" value={d.dineInPrice}
                   onChange={e => update(d.id, { dineInPrice: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Food cost</label>
-                <input className="dm-in" type="number" min={0} step="0.01" value={d.foodCost}
+                <input className="tool-in" type="number" min={0} step="0.01" value={d.foodCost}
                   onChange={e => update(d.id, { foodCost: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Delivery</label>
-                <input className="dm-in" type="number" min={0} step="0.01" value={d.deliveryPrice}
+                <input className="tool-in" type="number" min={0} step="0.01" value={d.deliveryPrice}
                   placeholder={d.dineInPrice || ''}
                   onChange={e => update(d.id, { deliveryPrice: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Orders</label>
-                <input className="dm-in" type="number" min={0} value={d.weeklyOrders}
+                <input className="tool-in" type="number" min={0} value={d.weeklyOrders}
                   onChange={e => update(d.id, { weeklyOrders: e.target.value })} />
               </div>
               <div style={{ paddingBottom: 10 }}>
                 {dishes.length > 1 && (
-                  <button className="dm-link" style={{ color: '#8A8279', fontSize: 13 }}
+                  <button className="tool-link" style={{ color: '#8A8279', fontSize: 13 }}
                     onClick={() => remove(d.id)} aria-label={`Remove row ${i + 1}`}>Remove</button>
                 )}
               </div>
             </div>
           ))}
 
-          <button className="dm-link" style={{ marginTop: 16 }} onClick={add}>Add another dish</button>
+          <button className="tool-link" style={{ marginTop: 16 }} onClick={add}>Add another dish</button>
         </div>
 
         {/* Results */}
         {totals.count > 0 && (
           <>
-            <div className="dm-card" style={{ padding: '28px 30px', marginBottom: 20,
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20,
               background: totals.losing.length > 0 ? 'rgba(161,59,42,0.04)' : '#fff',
               borderColor: totals.losing.length > 0 ? 'rgba(161,59,42,0.22)' : '#E8E2D8' }}>
               <div style={{ display: 'flex', gap: 38, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 22, borderBottom: '2px solid ' + INK, marginBottom: 22 }}>
                 <div>
-                  <div className="dm-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.5rem)', lineHeight: 1,
                     color: totals.weekly >= 0 ? '#3F6B4C' : '#A13B2A' }}>
                     {signed(totals.weekly)}
                   </div>
@@ -294,7 +278,7 @@ export default function DeliveryMargin() {
                   </div>
                 </div>
                 <div>
-                  <div className="dm-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
                     {totals.avgPct.toFixed(1)}%
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>
@@ -302,7 +286,7 @@ export default function DeliveryMargin() {
                   </div>
                 </div>
                 <div>
-                  <div className="dm-serif" style={{ fontSize: 24, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1,
                     color: totals.losing.length > 0 ? '#A13B2A' : '#C4BDB2' }}>
                     {totals.losing.length}
                   </div>
@@ -311,7 +295,7 @@ export default function DeliveryMargin() {
                   </div>
                 </div>
                 <div>
-                  <div className="dm-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
                     {signed(totals.annual)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>A year at this rate</div>
@@ -346,7 +330,7 @@ export default function DeliveryMargin() {
             </div>
 
             {/* Per dish */}
-            <div className="dm-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>Dish by dish</div>
               <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 16 }}>
                 Break even is what you would need to charge to stop losing money. Match dine-in is what
@@ -393,7 +377,7 @@ export default function DeliveryMargin() {
             </div>
 
             {/* What to do */}
-            <div className="dm-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>What people actually do</div>
               <ul style={{ fontSize: 15, color: '#57514A', lineHeight: 1.9, paddingLeft: 20, margin: 0, maxWidth: 680 }}>
                 <li><strong>Price the delivery menu separately.</strong> Fifteen to twenty five per cent
@@ -412,7 +396,7 @@ export default function DeliveryMargin() {
 
             {/* CTA */}
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-              <div className="dm-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 This changes every time a price moves
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 570 }}>
@@ -421,7 +405,7 @@ export default function DeliveryMargin() {
                 this current rather than making you redo it.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/margin-manager" className="dm-btn"
+                <a href="/margin-manager" className="tool-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
                   See Margin Manager
                 </a>

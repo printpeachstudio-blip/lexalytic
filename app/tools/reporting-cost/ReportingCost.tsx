@@ -106,45 +106,28 @@ export default function ReportingCost() {
   }, [results])
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .rc-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .rc-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .rc-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .rc-in { font: inherit; font-size: 15px; padding: 9px 12px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; }
-        .rc-in:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .rc-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; }
-        .rc-primary { background: ${AMBER}; color: #fff; }
-        .rc-primary:hover { background: #A96C25; }
-        .rc-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
         .rc-role { display: grid; grid-template-columns: 1.5fr 1fr 0.7fr 0.7fr 0.8fr 40px;
           gap: 12px; align-items: end; padding: 16px 0; border-bottom: 1px solid #F4F0E8; }
         .rc-role:last-of-type { border-bottom: 0; }
         .rc-head { display: grid; grid-template-columns: 1.5fr 1fr 0.7fr 0.7fr 0.8fr 40px;
           gap: 12px; padding-bottom: 10px; border-bottom: 2px solid #EDE7DD;
           font-size: 12px; color: #8A8279; }
-        @media (max-width: 820px) {
-          .rc-role { grid-template-columns: 1fr 1fr; }
-          .rc-head { display: none; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 820px) { .rc-role { grid-template-columns: 1fr 1fr; } .rc-head { display: none; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="rc-wrap" style={{ padding: 20 }}>
-          <a href="/" className="rc-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="rc-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="rc-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 640 }}>
           What is manual reporting actually costing you?
         </h1>
@@ -159,7 +142,7 @@ export default function ReportingCost() {
         </p>
 
         {/* Roles */}
-        <div className="rc-card" style={{ padding: '20px 24px', marginBottom: 22 }}>
+        <div className="tool-card" style={{ padding: '20px 24px', marginBottom: 22 }}>
           <div className="rc-head">
             <div>Role</div><div>Salary</div><div>People</div><div>Hours each</div><div>Per month</div><div></div>
           </div>
@@ -168,68 +151,68 @@ export default function ReportingCost() {
             <div key={r.id} className="rc-role">
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Role</label>
-                <input className="rc-in" style={{ width: '100%' }} value={r.title}
+                <input className="tool-in" style={{ width: '100%' }} value={r.title}
                   placeholder="Who does it" onChange={e => update(r.id, { title: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Salary</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} value={r.salary}
+                <input className="tool-in" style={{ width: '100%' }} type="number" min={0} value={r.salary}
                   onChange={e => update(r.id, { salary: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>People</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} value={r.people}
+                <input className="tool-in" style={{ width: '100%' }} type="number" min={0} value={r.people}
                   onChange={e => update(r.id, { people: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Hours</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.hours}
+                <input className="tool-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.hours}
                   onChange={e => update(r.id, { hours: e.target.value })} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>Per month</label>
-                <input className="rc-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.perMonth}
+                <input className="tool-in" style={{ width: '100%' }} type="number" min={0} step="0.5" value={r.perMonth}
                   onChange={e => update(r.id, { perMonth: e.target.value })} />
               </div>
               <div>
                 {roles.length > 1 && (
-                  <button className="rc-link" style={{ color: '#8A8279', fontSize: 13, paddingBottom: 10 }}
+                  <button className="tool-link" style={{ color: '#8A8279', fontSize: 13, paddingBottom: 10 }}
                     onClick={() => removeRole(r.id)} aria-label={`Remove row ${i + 1}`}>Remove</button>
                 )}
               </div>
             </div>
           ))}
 
-          <button className="rc-link" style={{ marginTop: 16 }} onClick={addRole}>Add another role</button>
+          <button className="tool-link" style={{ marginTop: 16 }} onClick={addRole}>Add another role</button>
         </div>
 
         {/* Results */}
         {totals.cost > 0 && (
           <>
-            <div className="rc-card" style={{ padding: '28px 30px', marginBottom: 22 }}>
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 22 }}>
               <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 24, borderBottom: '2px solid ' + INK, marginBottom: 22 }}>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 'clamp(2rem, 4vw, 2.7rem)',
+                  <div className="tool-serif" style={{ fontSize: 'clamp(2rem, 4vw, 2.7rem)',
                     lineHeight: 1, color: '#A13B2A' }}>
                     {money(totals.cost)}
                   </div>
                   <div style={{ fontSize: 13, color: '#8A8279', marginTop: 8 }}>A year, on manual reporting</div>
                 </div>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
                     {Math.round(totals.hours).toLocaleString()}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Hours</div>
                 </div>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
                     {totals.weeks.toFixed(1)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Working weeks</div>
                 </div>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>
                     {money(totals.threeYear)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Over three years</div>
@@ -259,7 +242,7 @@ export default function ReportingCost() {
 
             {/* What it says */}
             {(worst || cheapest) && (
-              <div className="rc-card" style={{ padding: '24px 30px', marginBottom: 22 }}>
+              <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 22 }}>
                 <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>What that tells you</div>
                 <ul style={{ fontSize: 15, color: '#57514A', lineHeight: 1.85, paddingLeft: 20, margin: 0 }}>
                   {worst && (
@@ -288,7 +271,7 @@ export default function ReportingCost() {
             )}
 
             {/* Automation */}
-            <div className="rc-card" style={{ padding: '24px 30px', marginBottom: 22 }}>
+            <div className="tool-card" style={{ padding: '24px 30px', marginBottom: 22 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>If it were automated</div>
               <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.65, margin: '0 0 18px', maxWidth: 600 }}>
                 Automation rarely removes all of it. Extraction, joining and formatting go; review,
@@ -302,7 +285,7 @@ export default function ReportingCost() {
                     Time removed
                   </label>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <input className="rc-in" type="number" min={0} max={95} value={reduction}
+                    <input className="tool-in" type="number" min={0} max={95} value={reduction}
                       onChange={e => setReduction(e.target.value)} style={{ width: 80 }} />
                     <span style={{ fontSize: 14, color: '#8A8279' }}>%</span>
                   </div>
@@ -311,7 +294,7 @@ export default function ReportingCost() {
                   <label style={{ display: 'block', fontSize: 12, color: '#8A8279', marginBottom: 4 }}>
                     Cost to build it
                   </label>
-                  <input className="rc-in" type="number" min={0} value={buildCost}
+                  <input className="tool-in" type="number" min={0} value={buildCost}
                     onChange={e => setBuildCost(e.target.value)} style={{ width: 130 }} />
                 </div>
               </div>
@@ -319,20 +302,20 @@ export default function ReportingCost() {
               <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingTop: 20, borderTop: '1px solid #F0EBE2' }}>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 30, lineHeight: 1, color: '#3F6B4C' }}>
+                  <div className="tool-serif" style={{ fontSize: 30, lineHeight: 1, color: '#3F6B4C' }}>
                     {money(totals.saved)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 6 }}>Saved a year</div>
                 </div>
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>
                     {Math.round(totals.savedHours).toLocaleString()}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Hours back</div>
                 </div>
                 {totals.paybackMonths !== null && isFinite(totals.paybackMonths) && (
                   <div>
-                    <div className="rc-serif" style={{ fontSize: 24, lineHeight: 1.1,
+                    <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1,
                       color: totals.paybackMonths <= 12 ? '#3F6B4C' : '#57514A' }}>
                       {totals.paybackMonths < 1
                         ? 'Under a month'
@@ -342,7 +325,7 @@ export default function ReportingCost() {
                   </div>
                 )}
                 <div>
-                  <div className="rc-serif" style={{ fontSize: 24, lineHeight: 1.1,
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1,
                     color: totals.threeYearSaved > 0 ? '#3F6B4C' : '#A13B2A' }}>
                     {money(totals.threeYearSaved)}
                   </div>
@@ -363,7 +346,7 @@ export default function ReportingCost() {
 
             {/* CTA */}
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-              <div className="rc-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 {totals.paybackMonths !== null && totals.paybackMonths <= 18
                   ? 'That is a build worth doing'
                   : 'Worth finding out what it would actually cost'}
@@ -374,7 +357,7 @@ export default function ReportingCost() {
                 with a reason against every line, plus a written brief you can take anywhere.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/tools/build-estimator" className="rc-btn rc-primary"
+                <a href="/tools/build-estimator" className="tool-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
                   Price it properly
                 </a>

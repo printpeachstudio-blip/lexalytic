@@ -151,42 +151,28 @@ export default function SpreadsheetAudit() {
   const g = result ? grade(result.score) : null
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .xa-wrap { max-width: 940px; margin: 0 auto; padding: 0 20px; }
-        .xa-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .xa-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .xa-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
-        .xa-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; background: ${AMBER}; color: #fff; }
-        .xa-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .xa-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
         .xa-drop { border: 2px dashed #DDD6CC; border-radius: 12px; padding: 44px 32px;
           text-align: center; cursor: pointer; background: #fff; }
-        .xa-drop:hover, .xa-drop[data-drag="true"] { border-color: ${AMBER}; background: #FFFDF9; }
-        .xa-chip { display: inline-block; font-family: ui-monospace, monospace; font-size: 12px;
-          background: #F4F0E8; border: 1px solid #E8E2D8; border-radius: 4px;
-          padding: 2px 7px; margin: 0 5px 5px 0; }
-        .xa-btn:focus-visible, .xa-link:focus-visible, .xa-drop:focus-visible {
+        .xa-drop:hover, .xa-drop[data-drag=true] { border-color: ${AMBER}; background: #FFFDF9; }
+        .tool-btn:focus-visible, .tool-link:focus-visible, .xa-drop:focus-visible {
           outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="xa-wrap" style={{ padding: 20 }}>
-          <a href="/" className="xa-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="xa-wrap" style={{ paddingTop: 44 }}>
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
         {state === 'idle' && (
           <>
-            <h1 className="xa-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+            <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
               letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 680 }}>
               The spreadsheet works. That is not the same as being right.
             </h1>
@@ -250,7 +236,7 @@ export default function SpreadsheetAudit() {
           <div style={{ padding: '60px 0' }}>
             <div style={{ fontSize: 17, color: '#A13B2A', marginBottom: 16, maxWidth: 600,
               lineHeight: 1.7 }}>{errorMsg}</div>
-            <button className="xa-btn" onClick={() => { setState('idle'); setErrorMsg('') }}>
+            <button className="tool-btn" onClick={() => { setState('idle'); setErrorMsg('') }}>
               Try another file
             </button>
           </div>
@@ -259,7 +245,7 @@ export default function SpreadsheetAudit() {
         {state === 'done' && result && g && counts && (
           <>
             <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 10 }}>
-              <span className="xa-mono">{fileName}</span> · {result.totals.sheets} sheet
+              <span className="tool-mono">{fileName}</span> · {result.totals.sheets} sheet
               {result.totals.sheets === 1 ? '' : 's'} · {result.totals.cells.toLocaleString('en-GB')} cells
               · {result.totals.formulas.toLocaleString('en-GB')} formulas
             </div>
@@ -267,13 +253,13 @@ export default function SpreadsheetAudit() {
             {/* Score */}
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: 36, flexWrap: 'wrap',
               paddingBottom: 26, borderBottom: '2px solid ' + INK, marginBottom: 28 }}>
-              <div className="xa-serif" style={{ fontSize: 72, lineHeight: 0.9,
+              <div className="tool-serif" style={{ fontSize: 72, lineHeight: 0.9,
                 letterSpacing: '-0.04em',
                 color: result.score >= 70 ? '#4A7C59' : result.score >= 40 ? '#B07A1E' : '#A13B2A' }}>
                 {g.letter}
               </div>
               <div style={{ flex: 1, minWidth: 240 }}>
-                <div className="xa-serif" style={{ fontSize: 23, marginBottom: 10 }}>{g.words}</div>
+                <div className="tool-serif" style={{ fontSize: 23, marginBottom: 10 }}>{g.words}</div>
                 <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap', fontSize: 14,
                   color: '#57514A' }}>
                   {counts.critical > 0 && (
@@ -288,13 +274,13 @@ export default function SpreadsheetAudit() {
                   {result.findings.length === 0 && <span>Nothing flagged</span>}
                 </div>
               </div>
-              <button className="xa-link" onClick={() => { setState('idle'); setResult(null) }}>
+              <button className="tool-link" onClick={() => { setState('idle'); setResult(null) }}>
                 Check another file
               </button>
             </div>
 
             {result.findings.length === 0 && (
-              <div className="xa-card" style={{ padding: '28px 30px', fontSize: 16,
+              <div className="tool-card" style={{ padding: '28px 30px', fontSize: 16,
                 color: '#3F6B4C', lineHeight: 1.8 }}>
                 Nothing came back. No overwritten formulas, no external links, no circular references and
                 nothing showing an error. That is unusual and worth being slightly pleased about.
@@ -334,7 +320,7 @@ export default function SpreadsheetAudit() {
                       </p>
                       {f.cells.length > 0 && (
                         <div style={{ marginBottom: 10 }}>
-                          {f.cells.map(c => <span key={c} className="xa-chip">{c}</span>)}
+                          {f.cells.map(c => <span key={c} className="tool-chip">{c}</span>)}
                           {f.count > f.cells.length && (
                             <span style={{ fontSize: 12.5, color: '#8A8279' }}>
                               and {f.count - f.cells.length} more
@@ -353,7 +339,7 @@ export default function SpreadsheetAudit() {
             ))}
 
             {/* Sheets */}
-            <div className="xa-card" style={{ padding: '22px 26px', marginBottom: 26 }}>
+            <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 26 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>The sheets</div>
               {result.sheets.map(sh => (
                 <div key={sh.name} style={{ display: 'grid',
@@ -377,7 +363,7 @@ export default function SpreadsheetAudit() {
             {/* Paid */}
             {!paid ? (
               <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-                <div className="xa-serif" style={{ fontSize: 21, marginBottom: 12,
+                <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12,
                   letterSpacing: '-0.01em' }}>
                   The bigger problem is usually that only one person understands it
                 </div>
@@ -393,7 +379,7 @@ export default function SpreadsheetAudit() {
                   built on, and writes the handover document that should have existed from the start.
                 </p>
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <a href={STRIPE_LINK} className="xa-btn"
+                  <a href={STRIPE_LINK} className="tool-btn"
                     style={{ textDecoration: 'none', display: 'inline-block' }}>
                     Unlock for £29
                   </a>
@@ -404,7 +390,7 @@ export default function SpreadsheetAudit() {
               </div>
             ) : (
               <>
-                <div className="xa-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
                     What everything else depends on
                   </div>
@@ -427,7 +413,7 @@ export default function SpreadsheetAudit() {
                       fontSize: 14, alignItems: 'baseline' }}>
                       <div style={{ color: '#C4BDB2' }}>{i + 1}</div>
                       <div>
-                        <span className="xa-mono">{d.sheet}!{d.ref}</span>
+                        <span className="tool-mono">{d.sheet}!{d.ref}</span>
                       </div>
                       <div style={{ fontSize: 13, color: '#57514A' }}>
                         {d.isInput ? (
@@ -435,7 +421,7 @@ export default function SpreadsheetAudit() {
                             A typed value, not a formula
                           </span>
                         ) : (
-                          <span className="xa-mono" style={{ color: '#8A8279' }}>
+                          <span className="tool-mono" style={{ color: '#8A8279' }}>
                             {(d.formula || '').slice(0, 46)}{(d.formula || '').length > 46 ? '…' : ''}
                           </span>
                         )}
@@ -460,7 +446,7 @@ export default function SpreadsheetAudit() {
                 </div>
 
                 <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-                  <div className="xa-serif" style={{ fontSize: 20, marginBottom: 12 }}>
+                  <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12 }}>
                     The handover document
                   </div>
                   <p style={{ fontSize: 15, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)',
@@ -469,7 +455,7 @@ export default function SpreadsheetAudit() {
                     depends on, what is wrong with it and what to do. The thing to hand somebody when
                     you go on holiday, or when you leave.
                   </p>
-                  <button className="xa-btn" onClick={() => {
+                  <button className="tool-btn" onClick={() => {
                     const rows = result.findings.map(f =>
                       `<tr><td>${SEV[f.severity].label}</td><td>${f.title}</td><td class="m">${f.cells.join(', ')}</td><td>${f.advice}</td></tr>`).join('')
                     const shRows = result.sheets.map(sh =>

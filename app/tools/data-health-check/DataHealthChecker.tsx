@@ -613,19 +613,11 @@ export default function DataHealthChecker() {
     }}>
       <style>{`
         * { box-sizing: border-box; }
-        .dhc-wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-        .dhc-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .dhc-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-        .dhc-btn {
-          font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;
-          border-radius: 6px; padding: 12px 22px; border: 1px solid transparent;
-          transition: background .15s ease, border-color .15s ease;
-        }
         .dhc-btn-primary { background: #C17D2E; color: #fff; }
         .dhc-btn-primary:hover { background: #A96C25; }
         .dhc-btn-quiet { background: transparent; color: #55504A; border-color: #DDD6CC; }
         .dhc-btn-quiet:hover { border-color: #B9AF9F; }
-        .dhc-btn:focus-visible, .dhc-drop:focus-visible, .dhc-grouphead:focus-visible {
+        .tool-btn:focus-visible, .dhc-drop:focus-visible, .dhc-grouphead:focus-visible {
           outline: 2px solid #C17D2E; outline-offset: 2px;
         }
         .dhc-drop {
@@ -642,10 +634,6 @@ export default function DataHealthChecker() {
         }
         .dhc-finding { padding: 20px 0; border-bottom: 1px solid #EFEAE1; }
         .dhc-finding:last-child { border-bottom: 0; }
-        .dhc-chip {
-          display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .04em;
-          padding: 3px 9px; border-radius: 3px; border: 1px solid;
-        }
         .dhc-rows { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
         .dhc-rowchip {
           font-size: 12px; padding: 3px 8px; border-radius: 3px;
@@ -660,29 +648,24 @@ export default function DataHealthChecker() {
         }
         .dhc-input::placeholder { color: rgba(255,255,255,0.35); }
         .dhc-input:focus { outline: 2px solid #C17D2E; outline-offset: 1px; border-color: transparent; }
-        .dhc-btn:disabled { opacity: .55; cursor: default; }
-        @media (max-width: 620px) {
-          .dhc-scorerow { flex-direction: column; align-items: flex-start !important; gap: 24px !important; }
-          .dhc-cols { grid-template-columns: 1fr !important; }
-        }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+        @media (max-width: 620px) { .dhc-scorerow { flex-direction: column; align-items: flex-start !important; gap: 24px !important; } .dhc-cols { grid-template-columns: 1fr !important; } }
       `}</style>
 
       {/* Header */}
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="dhc-wrap" style={{ padding: '20px' }}>
-          <div className="dhc-serif" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
+        <div className="tool-wrap" style={{ padding: '20px' }}>
+          <div className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em' }}>
             Lex<span style={{ color: '#C17D2E' }}>alytic</span>
           </div>
         </div>
       </div>
 
-      <div className="dhc-wrap" style={{ paddingTop: 48 }}>
+      <div className="tool-wrap" style={{ paddingTop: 48 }}>
 
         {/* Intro — only on idle/error */}
         {(state === 'idle' || state === 'error') && (
           <>
-            <h1 className="dhc-serif" style={{
+            <h1 className="tool-serif" style={{
               fontSize: 'clamp(1.9rem, 4.5vw, 2.9rem)', lineHeight: 1.14,
               letterSpacing: '-0.025em', margin: '0 0 18px', maxWidth: 620, fontWeight: 400
             }}>
@@ -708,7 +691,7 @@ export default function DataHealthChecker() {
               onDragLeave={() => setDragging(false)}
               onDrop={e => { e.preventDefault(); setDragging(false); handleFile(e.dataTransfer.files?.[0]); }}
             >
-              <div className="dhc-serif" style={{ fontSize: 19, marginBottom: 8 }}>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 8 }}>
                 Drop a CSV here
               </div>
               <div style={{ fontSize: 14, color: '#8A8279' }}>
@@ -744,7 +727,7 @@ export default function DataHealthChecker() {
             </div>
 
             <div style={{ marginTop: 56, paddingTop: 32, borderTop: '1px solid #E8E2D8' }}>
-              <h2 className="dhc-serif" style={{ fontSize: 17, fontWeight: 400, margin: '0 0 20px' }}>
+              <h2 className="tool-serif" style={{ fontSize: 17, fontWeight: 400, margin: '0 0 20px' }}>
                 What gets checked
               </h2>
               <div className="dhc-cols" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px 40px' }}>
@@ -776,7 +759,7 @@ export default function DataHealthChecker() {
           <>
             {/* Report header */}
             <div style={{ marginBottom: 8, fontSize: 13, color: '#8A8279' }}>
-              <span className="dhc-mono">{fileName}</span> · {result.rowCount} rows · {result.colProfiles.length} columns
+              <span className="tool-mono">{fileName}</span> · {result.rowCount} rows · {result.colProfiles.length} columns
             </div>
 
             <div className="dhc-scorerow" style={{
@@ -784,7 +767,7 @@ export default function DataHealthChecker() {
               paddingBottom: 28, borderBottom: '2px solid #1A1815', marginBottom: 4
             }}>
               <div>
-                <div className="dhc-serif" style={{
+                <div className="tool-serif" style={{
                   fontSize: 76, lineHeight: 0.9, letterSpacing: '-0.04em',
                   color: result.score >= 75 ? '#4A7C59' : result.score >= 45 ? '#B07A1E' : '#A13B2A'
                 }}>
@@ -792,7 +775,7 @@ export default function DataHealthChecker() {
                 </div>
               </div>
               <div style={{ flex: 1, paddingBottom: 4 }}>
-                <div className="dhc-serif" style={{ fontSize: 24, marginBottom: 10, letterSpacing: '-0.01em' }}>
+                <div className="tool-serif" style={{ fontSize: 24, marginBottom: 10, letterSpacing: '-0.01em' }}>
                   {g!.words}
                 </div>
                 <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap', fontSize: 14, color: '#57514A' }}>
@@ -830,7 +813,7 @@ export default function DataHealthChecker() {
                 padding: 28, borderRadius: 10, background: 'rgba(74,124,89,0.06)',
                 border: '1px solid rgba(74,124,89,0.2)', marginBottom: 40
               }}>
-                <div className="dhc-serif" style={{ fontSize: 18, marginBottom: 8 }}>Nothing to fix.</div>
+                <div className="tool-serif" style={{ fontSize: 18, marginBottom: 8 }}>Nothing to fix.</div>
                 <div style={{ fontSize: 15, lineHeight: 1.7, color: '#57514A' }}>
                   Every check passed. This file is ready to import.
                 </div>
@@ -848,7 +831,7 @@ export default function DataHealthChecker() {
                     onClick={() => setOpenGroups(p => ({ ...p, [groupName]: !p[groupName] }))}
                     aria-expanded={open}
                   >
-                    <span className="dhc-serif" style={{ fontSize: 19 }}>{groupName}</span>
+                    <span className="tool-serif" style={{ fontSize: 19 }}>{groupName}</span>
                     <span style={{ fontSize: 13, color: '#8A8279' }}>
                       {items.length} finding{items.length > 1 ? 's' : ''}
                     </span>
@@ -862,7 +845,7 @@ export default function DataHealthChecker() {
                     return (
                       <div key={i} className="dhc-finding">
                         <div style={{ display: 'flex', gap: 12, alignItems: 'baseline', marginBottom: 8, flexWrap: 'wrap' }}>
-                          <span className="dhc-chip" style={{ color: s.color, background: s.bg, borderColor: s.border }}>
+                          <span className="tool-chip" style={{ color: s.color, background: s.bg, borderColor: s.border }}>
                             {s.label}
                           </span>
                           <span style={{ fontSize: 16, fontWeight: 600 }}>{f.title}</span>
@@ -875,7 +858,7 @@ export default function DataHealthChecker() {
                             <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 5 }}>Examples found</div>
                             <div className="dhc-rows">
                               {f.samples.map((v: any, j: number) => (
-                                <span key={j} className="dhc-rowchip dhc-mono" style={{ background: '#fff' }}>
+                                <span key={j} className="dhc-rowchip tool-mono" style={{ background: '#fff' }}>
                                   {String(v).slice(0, 40) || '(blank)'}
                                 </span>
                               ))}
@@ -889,7 +872,7 @@ export default function DataHealthChecker() {
                               {f.count > f.rows.length ? ` (first ${f.rows.length} of ${f.count})` : ''}
                             </div>
                             <div className="dhc-rows">
-                              {f.rows.map((r: number) => <span key={r} className="dhc-rowchip dhc-mono">{r}</span>)}
+                              {f.rows.map((r: number) => <span key={r} className="dhc-rowchip tool-mono">{r}</span>)}
                             </div>
                           </div>
                         )}
@@ -908,7 +891,7 @@ export default function DataHealthChecker() {
 
             {/* Column map */}
             <div style={{ marginTop: 44, paddingTop: 28, borderTop: '1px solid #E8E2D8' }}>
-              <h2 className="dhc-serif" style={{ fontSize: 19, fontWeight: 400, margin: '0 0 4px' }}>
+              <h2 className="tool-serif" style={{ fontSize: 19, fontWeight: 400, margin: '0 0 4px' }}>
                 Columns read
               </h2>
               <p style={{ fontSize: 14, color: '#8A8279', margin: '0 0 20px' }}>
@@ -941,7 +924,7 @@ export default function DataHealthChecker() {
 
             {/* Actions */}
             <div style={{ display: 'flex', gap: 12, marginTop: 36, flexWrap: 'wrap' }}>
-              <button className="dhc-btn dhc-btn-quiet" onClick={reset}>Check another file</button>
+              <button className="tool-btn dhc-btn-quiet" onClick={reset}>Check another file</button>
             </div>
 
             <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
@@ -982,7 +965,7 @@ export default function DataHealthChecker() {
 
             {/* What this cannot check */}
             <div style={{ marginTop: 44, paddingTop: 28, borderTop: '1px solid #E8E2D8' }}>
-              <h2 className="dhc-serif" style={{ fontSize: 19, fontWeight: 400, margin: '0 0 4px' }}>
+              <h2 className="tool-serif" style={{ fontSize: 19, fontWeight: 400, margin: '0 0 4px' }}>
                 What this scan cannot tell you
               </h2>
               <p style={{ fontSize: 14, color: '#8A8279', margin: '0 0 20px', maxWidth: 560 }}>
@@ -1027,7 +1010,7 @@ export default function DataHealthChecker() {
               marginTop: 40, padding: '30px 32px', borderRadius: 12,
               background: '#fff', border: '1px solid #E8E2D8'
             }}>
-              <div className="dhc-serif" style={{ fontSize: 22, marginBottom: 8, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 22, marginBottom: 8, letterSpacing: '-0.01em' }}>
                 Fix it rather than just knowing about it
               </div>
               <p style={{ fontSize: 15, color: '#57514A', lineHeight: 1.75, margin: '0 0 6px', maxWidth: 620 }}>
@@ -1042,7 +1025,7 @@ export default function DataHealthChecker() {
 
               {!paid ? (
                 <div style={{ padding: '22px 24px', borderRadius: 10, background: '#1A1815' }}>
-                  <div className="dhc-serif" style={{ fontSize: 18, color: '#fff', marginBottom: 10 }}>
+                  <div className="tool-serif" style={{ fontSize: 18, color: '#fff', marginBottom: 10 }}>
                     Clean the file and download it
                   </div>
                   <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7,
@@ -1200,14 +1183,14 @@ export default function DataHealthChecker() {
                         <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap',
                           marginBottom: chResult.summary.concerns ? 18 : 0 }}>
                           <div>
-                            <div className="dhc-serif" style={{ fontSize: 24, color: '#3F6B4C' }}>
+                            <div className="tool-serif" style={{ fontSize: 24, color: '#3F6B4C' }}>
                               {chResult.summary.active}
                             </div>
                             <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Active</div>
                           </div>
                           {chResult.summary.dissolved > 0 && (
                             <div>
-                              <div className="dhc-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
+                              <div className="tool-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
                                 {chResult.summary.dissolved}
                               </div>
                               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Dissolved</div>
@@ -1215,7 +1198,7 @@ export default function DataHealthChecker() {
                           )}
                           {chResult.summary.liquidation > 0 && (
                             <div>
-                              <div className="dhc-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
+                              <div className="tool-serif" style={{ fontSize: 24, color: '#A13B2A' }}>
                                 {chResult.summary.liquidation}
                               </div>
                               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>In liquidation</div>
@@ -1223,7 +1206,7 @@ export default function DataHealthChecker() {
                           )}
                           {chResult.summary.strikeOff > 0 && (
                             <div>
-                              <div className="dhc-serif" style={{ fontSize: 24, color: '#8F6318' }}>
+                              <div className="tool-serif" style={{ fontSize: 24, color: '#8F6318' }}>
                                 {chResult.summary.strikeOff}
                               </div>
                               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Strike off proposed</div>
@@ -1231,7 +1214,7 @@ export default function DataHealthChecker() {
                           )}
                           {chResult.summary.notFound > 0 && (
                             <div>
-                              <div className="dhc-serif" style={{ fontSize: 24, color: '#8F6318' }}>
+                              <div className="tool-serif" style={{ fontSize: 24, color: '#8F6318' }}>
                                 {chResult.summary.notFound}
                               </div>
                               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 3 }}>Not on the register</div>
@@ -1248,7 +1231,7 @@ export default function DataHealthChecker() {
                                 display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 140px 150px',
                                 gap: 14, fontSize: 14, alignItems: 'baseline' }}>
                                 <div>{r.name || 'Not found'}</div>
-                                <div className="dhc-mono" style={{ fontSize: 13, color: '#8A8279' }}>
+                                <div className="tool-mono" style={{ fontSize: 13, color: '#8A8279' }}>
                                   {r.number}
                                 </div>
                                 <div style={{ color: '#A13B2A', fontWeight: 500 }}>
@@ -1284,7 +1267,7 @@ export default function DataHealthChecker() {
               marginTop: 32, padding: 32, borderRadius: 10,
               background: '#1A1815', color: '#fff', scrollMarginTop: 24
             }}>
-              <div className="dhc-serif" style={{ fontSize: 22, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 22, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 {result.findings.length > 0
                   ? 'Or have somebody else do it'
                   : 'The formatting is fine. The records may not be.'}
@@ -1303,7 +1286,7 @@ export default function DataHealthChecker() {
               }}>
                 {([['Up to 1,000 rows', '\u00a329'], ['Up to 10,000 rows', '\u00a369'], ['Up to 50,000 rows', '\u00a3129']] as [string, string][]).map(([label, price]) => (
                   <div key={label}>
-                    <div className="dhc-serif" style={{ fontSize: 22, color: '#C17D2E', lineHeight: 1.2 }}>{price}</div>
+                    <div className="tool-serif" style={{ fontSize: 22, color: '#C17D2E', lineHeight: 1.2 }}>{price}</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>{label}</div>
                   </div>
                 ))}
@@ -1313,19 +1296,19 @@ export default function DataHealthChecker() {
                   padding: '20px 22px', borderRadius: 8,
                   background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)'
                 }}>
-                  <div className="dhc-serif" style={{ fontSize: 18, marginBottom: 8 }}>
+                  <div className="tool-serif" style={{ fontSize: 18, marginBottom: 8 }}>
                     Got it. Now send us the file.
                   </div>
                   <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.6)', margin: 0 }}>
                     Email <strong style={{ color: '#C17D2E' }}>hello@lexalytic.com</strong> with{' '}
-                    <span className="dhc-mono" style={{ color: 'rgba(255,255,255,0.8)' }}>{fileName}</span>{' '}
+                    <span className="tool-mono" style={{ color: 'rgba(255,255,255,0.8)' }}>{fileName}</span>{' '}
                     attached. We have the scan results already, so we will come back with a fixed price
                     and a turnaround the same working day.
                   </p>
                 </div>
               ) : !showForm ? (
                 <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-                  <button className="dhc-btn dhc-btn-primary" onClick={() => setShowForm(true)}>
+                  <button className="tool-btn dhc-btn-primary" onClick={() => setShowForm(true)}>
                     Get a fixed price for this file
                   </button>
                   <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
@@ -1368,7 +1351,7 @@ export default function DataHealthChecker() {
                     </div>
                   )}
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-                    <button className="dhc-btn dhc-btn-primary" type="button" onClick={submitEnquiry} disabled={sending}>
+                    <button className="tool-btn dhc-btn-primary" type="button" onClick={submitEnquiry} disabled={sending}>
                       {sending ? 'Sending…' : 'Send enquiry'}
                     </button>
                     <button

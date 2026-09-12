@@ -207,40 +207,20 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
   }, [result, reg, ageInfo])
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
-      <style>{`
-        .rv-wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-        .rv-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .rv-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .rv-in, .rv-sel { font: inherit; font-size: 14.5px; padding: 9px 11px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .rv-in:focus-visible, .rv-sel:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 1px; }
-        .rv-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; background: ${AMBER}; color: #fff; }
-        .rv-btn:hover { background: #A96C25; }
-        .rv-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .rv-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .rv-btn:focus-visible, .rv-link:focus-visible { outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .rv-chip { font: inherit; font-size: 13.5px; padding: 9px 14px; border-radius: 6px;
-          cursor: pointer; background: #fff; border: 1px solid #DDD6CC; color: #4A453F; text-align: left; }
-        .rv-chip[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
-        .rv-label { display: block; font-size: 12px; color: #8A8279; margin-bottom: 4px; }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-      `}</style>
+    <div className="tool-page">
+      
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="rv-wrap" style={{ padding: 20 }}>
-          <a href="/" className="rv-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em',
             color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="rv-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="rv-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 700 }}>
           The costs nobody puts in the quote
         </h1>
@@ -256,7 +236,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
         </p>
 
         {/* Pick the work */}
-        <div className="rv-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+        <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
           <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 4 }}>What are you doing?</div>
           <div style={{ fontSize: 13, color: '#8A8279', marginBottom: 18 }}>
             Pick everything that applies. Some of these trigger costs you may not have thought about.
@@ -269,7 +249,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
               <div style={{ display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 230px), 1fr))', gap: 8 }}>
                 {ELEMENTS.filter(e => e.group === g).map(e => (
-                  <button key={e.id} className="rv-chip" aria-pressed={picked.has(e.id)}
+                  <button key={e.id} className="tool-chip" aria-pressed={picked.has(e.id)}
                     onClick={() => toggle(e.id)}>{e.label}</button>
                 ))}
               </div>
@@ -278,12 +258,12 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
         </div>
 
         {/* Context */}
-        <div className="rv-card" style={{ padding: '22px 26px', marginBottom: 22 }}>
+        <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 22 }}>
           <div style={{ display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 16 }}>
             <div>
-              <label className="rv-label">Where is it</label>
-              <select className="rv-sel" value={region} onChange={e => setRegion(e.target.value)}>
+              <label className="tool-label">Where is it</label>
+              <select className="tool-sel" value={region} onChange={e => setRegion(e.target.value)}>
                 {REGIONS.map(r => <option key={r.id} value={r.id}>{r.label}</option>)}
               </select>
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5, lineHeight: 1.5 }}>
@@ -291,8 +271,8 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
               </div>
             </div>
             <div>
-              <label className="rv-label">When was it built</label>
-              <select className="rv-sel" value={age} onChange={e => setAge(e.target.value)}>
+              <label className="tool-label">When was it built</label>
+              <select className="tool-sel" value={age} onChange={e => setAge(e.target.value)}>
                 {AGES.map(a => <option key={a.id} value={a.id}>{a.label}</option>)}
               </select>
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5, lineHeight: 1.5 }}>
@@ -300,10 +280,10 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
               </div>
             </div>
             <div>
-              <label className="rv-label">Specification</label>
+              <label className="tool-label">Specification</label>
               <div style={{ display: 'flex', gap: 6 }}>
                 {(['budget', 'mid', 'premium'] as Spec[]).map(s => (
-                  <button key={s} className="rv-chip" aria-pressed={spec === s}
+                  <button key={s} className="tool-chip" aria-pressed={spec === s}
                     style={{ flex: 1, textAlign: 'center', textTransform: 'capitalize' }}
                     onClick={() => setSpec(s)}>{s}</button>
                 ))}
@@ -318,11 +298,11 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
         {result && (
           <>
             {/* Headline */}
-            <div className="rv-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
               <div style={{ display: 'flex', gap: 38, flexWrap: 'wrap', alignItems: 'flex-end',
                 paddingBottom: 22, borderBottom: '2px solid ' + INK, marginBottom: 20 }}>
                 <div>
-                  <div className="rv-serif" style={{ fontSize: 'clamp(1.7rem, 3.6vw, 2.2rem)', lineHeight: 1 }}>
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.7rem, 3.6vw, 2.2rem)', lineHeight: 1 }}>
                     {money(result.allLow)} to {money(result.allHigh)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 7, maxWidth: 260 }}>
@@ -330,7 +310,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                   </div>
                 </div>
                 <div>
-                  <div className="rv-serif" style={{ fontSize: 22, lineHeight: 1.1, color: '#57514A' }}>
+                  <div className="tool-serif" style={{ fontSize: 22, lineHeight: 1.1, color: '#57514A' }}>
                     {money(result.low)} to {money(result.high)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>
@@ -338,7 +318,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                   </div>
                 </div>
                 <div>
-                  <div className="rv-serif" style={{ fontSize: 22, lineHeight: 1.1, color: '#8F6318' }}>
+                  <div className="tool-serif" style={{ fontSize: 22, lineHeight: 1.1, color: '#8F6318' }}>
                     {money(result.hLow)} to {money(result.hHigh)}
                   </div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>
@@ -356,7 +336,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             </div>
 
             {/* The work */}
-            <div className="rv-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 14 }}>The work itself</div>
               {result.lines.map(l => (
                 <div key={l.element.id} style={{ display: 'grid',
@@ -376,7 +356,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             </div>
 
             {/* Hidden costs, the heart of it */}
-            <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20,
+            <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20,
               background: 'rgba(176,122,30,0.03)', borderColor: 'rgba(176,122,30,0.22)' }}>
               <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
                 What is not in the builder's quote
@@ -409,7 +389,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             </div>
 
             {/* Contingency */}
-            <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+            <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
                 Your contingency should be {result.contingencyPct} per cent
               </div>
@@ -428,7 +408,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
 
             {/* Brief */}
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff', marginBottom: 20 }}>
-              <div className="rv-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+              <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 Send the same document to every builder
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)',
@@ -438,13 +418,13 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                 the same questions for everybody, including whether VAT is in the number and what
                 happens if the scaffold stays up longer than planned.
               </p>
-              <button className="rv-btn" onClick={openBrief}>Open the scope document</button>
+              <button className="tool-btn" onClick={openBrief}>Open the scope document</button>
             </div>
 
             {/* PAID SECTION */}
             {!paid ? (
-              <div className="rv-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
-                <div className="rv-serif" style={{ fontSize: 21, marginBottom: 12 }}>
+              <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
+                <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12 }}>
                   Then keep hold of it once the work starts
                 </div>
                 <p style={{ fontSize: 15, color: '#57514A', lineHeight: 1.8,
@@ -476,7 +456,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                 </div>
 
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <a href={STRIPE_LINK} className="rv-btn"
+                  <a href={STRIPE_LINK} className="tool-btn"
                     style={{ textDecoration: 'none', display: 'inline-block' }}>
                     Unlock for £29
                   </a>
@@ -488,7 +468,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             ) : (
               <>
                 {/* Variation log */}
-                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Variation log</div>
                   <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
                     margin: '0 0 18px', maxWidth: 660 }}>
@@ -501,26 +481,26 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))',
                     gap: 12, marginBottom: 14 }}>
                     <div>
-                      <label className="rv-label">Date</label>
-                      <input className="rv-in" name="date" type="date" max={todayStr()}
+                      <label className="tool-label">Date</label>
+                      <input className="tool-in" name="date" type="date" max={todayStr()}
                         defaultValue={todayStr()} />
                     </div>
                     <div style={{ gridColumn: 'span 2' }}>
-                      <label className="rv-label">What changed</label>
-                      <input className="rv-in" name="what"
+                      <label className="tool-label">What changed</label>
+                      <input className="tool-in" name="what"
                         placeholder="Moved the soil pipe to allow the shower position" />
                     </div>
                     <div>
-                      <label className="rv-label">Agreed cost</label>
-                      <input className="rv-in" name="cost" type="number" min={0} step="0.01" />
+                      <label className="tool-label">Agreed cost</label>
+                      <input className="tool-in" name="cost" type="number" min={0} step="0.01" />
                     </div>
                     <div>
-                      <label className="rv-label">Agreed with</label>
-                      <input className="rv-in" name="agreedBy" placeholder="Name" />
+                      <label className="tool-label">Agreed with</label>
+                      <input className="tool-in" name="agreedBy" placeholder="Name" />
                     </div>
                   </div>
-                  <button className="rv-btn rv-quiet" onClick={e => {
-                    const wrap = e.currentTarget.closest('.rv-card')!.querySelector('.vr-form') as HTMLElement
+                  <button className="tool-btn tool-btn-quiet" onClick={e => {
+                    const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.vr-form') as HTMLElement
                     const get = (n: string) =>
                       (wrap.querySelector(`[name=${n}]`) as HTMLInputElement)?.value || ''
                     const what = get('what').trim()
@@ -545,7 +525,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                           <div style={{ fontWeight: 500 }}>{money(parseFloat(v.cost) || 0)}</div>
                           <div style={{ fontSize: 13, color: '#8A8279' }}>{v.agreedBy || 'not noted'}</div>
                           <div style={{ textAlign: 'right' }}>
-                            <button className="rv-link" style={{ fontSize: 13, color: '#8A8279' }}
+                            <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
                               onClick={() => setVariations(list => list.filter(x => x.id !== v.id))}>
                               Remove
                             </button>
@@ -565,7 +545,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                               / Math.max(result.contingency, 1)) * 100)}% of your contingency
                           </span>
                         )}
-                        <button className="rv-link" style={{ marginLeft: 'auto' }}
+                        <button className="tool-link" style={{ marginLeft: 'auto' }}
                           onClick={() => {
                             const rows = variations.map(v => `<tr><td>${v.date}</td><td>${v.what}</td><td class="r">${money(parseFloat(v.cost) || 0)}</td><td>${v.agreedBy || ''}</td></tr>`).join('')
                             const total = variations.reduce((a, v) => a + (parseFloat(v.cost) || 0), 0)
@@ -582,7 +562,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
 
 
                 {/* PAYMENT SCHEDULE */}
-                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
                     When to pay, and how much
                   </div>
@@ -646,7 +626,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                 </div>
 
                 {/* SNAGGING */}
-                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
                     Walk round before the last payment
                   </div>
@@ -672,7 +652,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                     </div>
                   ))}
 
-                  <button className="rv-btn rv-quiet" style={{ marginTop: 8 }} onClick={() => {
+                  <button className="tool-btn tool-btn-quiet" style={{ marginTop: 8 }} onClick={() => {
                     const list = snagsFor(Array.from(picked))
                     const html = list.map((s2: any) =>
                       `<h2>${s2.area}</h2><ul>${s2.checks.map((c: string) =>
@@ -686,7 +666,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                 </div>
 
                 {/* PAPERWORK */}
-                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
                     The paperwork to collect before they leave
                   </div>
@@ -723,7 +703,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                 </div>
 
                 {/* Quote comparison */}
-                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
                   <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Compare the quotes</div>
                   <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
                     margin: '0 0 18px', maxWidth: 660 }}>
@@ -732,7 +712,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                   </p>
 
                   {quotes.length < 4 && (
-                    <button className="rv-link" style={{ marginBottom: 16 }}
+                    <button className="tool-link" style={{ marginBottom: 16 }}
                       onClick={() => setQuotes(q => [...q, {
                         id: uid(), builder: '', total: '', includes: {}, vatIncluded: false, notes: '',
                       }])}>Add a quote</button>
@@ -748,14 +728,14 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap',
                           alignItems: 'flex-end', marginBottom: 14 }}>
                           <div style={{ flex: '1 1 180px' }}>
-                            <label className="rv-label">Builder</label>
-                            <input className="rv-in" value={q.builder}
+                            <label className="tool-label">Builder</label>
+                            <input className="tool-in" value={q.builder}
                               onChange={e => setQuotes(list => list.map(x =>
                                 x.id === q.id ? { ...x, builder: e.target.value } : x))} />
                           </div>
                           <div style={{ width: 140 }}>
-                            <label className="rv-label">Their total</label>
-                            <input className="rv-in" type="number" min={0} value={q.total}
+                            <label className="tool-label">Their total</label>
+                            <input className="tool-in" type="number" min={0} value={q.total}
                               onChange={e => setQuotes(list => list.map(x =>
                                 x.id === q.id ? { ...x, total: e.target.value } : x))} />
                           </div>
@@ -766,7 +746,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                                 x.id === q.id ? { ...x, vatIncluded: e.target.checked } : x))} />
                             VAT included
                           </label>
-                          <button className="rv-link" style={{ color: '#8A8279', paddingBottom: 12 }}
+                          <button className="tool-link" style={{ color: '#8A8279', paddingBottom: 12 }}
                             onClick={() => setQuotes(list => list.filter(x => x.id !== q.id))}>
                             Remove
                           </button>

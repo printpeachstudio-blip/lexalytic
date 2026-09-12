@@ -393,48 +393,22 @@ export default function RebateExposure() {
   const selectedScale = SCALES.find(s => s.key === (draft.scale as ScaleKey)) || SCALES[0]
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .e-wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-        .e-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .e-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .e-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; transition: background .15s ease; }
-        .e-primary { background: ${AMBER}; color: #fff; }
-        .e-primary:hover { background: #A96C25; }
-        .e-primary:disabled { opacity: .5; cursor: default; }
-        .e-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .e-quiet:hover { border-color: #B9AF9F; }
-        .e-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .e-in, .e-sel { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .e-dark-in { font: inherit; font-size: 15px; padding: 11px 14px; border-radius: 6px;
-          background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 100%; }
-        .e-dark-in::placeholder { color: rgba(255,255,255,0.35); }
-        .e-btn:focus-visible, .e-link:focus-visible, .e-in:focus-visible, .e-sel:focus-visible, .e-dark-in:focus-visible {
-          outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .e-label { display: block; font-size: 13px; color: #57514A; margin-bottom: 5px; }
-        .e-hint { font-size: 12px; color: #8A8279; margin-top: 4px; line-height: 1.5; }
-        .e-field { margin-bottom: 14px; }
-        .e-g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .e-g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
         .e-prow { display: grid; grid-template-columns: 1fr 110px 120px 130px 90px; gap: 14px; align-items: center; }
-        @media (max-width: 700px) { .e-g2, .e-g3, .e-prow { grid-template-columns: 1fr; gap: 8px; } }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 700px) { .tool-g2, .tool-g3, .e-prow { grid-template-columns: 1fr; gap: 8px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="e-wrap" style={{ padding: 20 }}>
-          <a href="/" className="e-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="e-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="e-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 640 }}>
           How much of your billed revenue could you still be asked to give back?
         </h1>
@@ -448,10 +422,10 @@ export default function RebateExposure() {
         </p>
 
         {loaded && placements.length > 0 && (
-          <div className="e-card" style={{ padding: '24px 26px', marginBottom: 22 }}>
+          <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 22 }}>
             <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap', alignItems: 'flex-end' }}>
               <div>
-                <div className="e-serif" style={{ fontSize: 34, lineHeight: 1, color: totals.atRisk > 0 ? '#A13B2A' : '#3F6B4C' }}>
+                <div className="tool-serif" style={{ fontSize: 34, lineHeight: 1, color: totals.atRisk > 0 ? '#A13B2A' : '#3F6B4C' }}>
                   {money(totals.atRisk)}
                 </div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 6, maxWidth: 200 }}>
@@ -459,15 +433,15 @@ export default function RebateExposure() {
                 </div>
               </div>
               <div>
-                <div className="e-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{money(totals.feeTotal)}</div>
+                <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{money(totals.feeTotal)}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Fees billed</div>
               </div>
               <div>
-                <div className="e-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{totals.live}</div>
+                <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{totals.live}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Still in window</div>
               </div>
               <div>
-                <div className="e-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#3F6B4C' }}>{totals.safe}</div>
+                <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#3F6B4C' }}>{totals.safe}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Now safe</div>
               </div>
             </div>
@@ -497,45 +471,45 @@ export default function RebateExposure() {
         )}
 
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 16, flexWrap: 'wrap' }}>
-          <h2 className="e-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
+          <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
             {placements.length ? `Placements (${placements.length})` : 'Add your first placement'}
           </h2>
-          {!adding && placements.length > 0 && <button className="e-link" onClick={() => setAdding(true)}>Add another</button>}
+          {!adding && placements.length > 0 && <button className="tool-link" onClick={() => setAdding(true)}>Add another</button>}
         </div>
 
         {(adding || placements.length === 0) && (
-          <div className="e-card" style={{ padding: 24, marginBottom: 20 }}>
-            <div className="e-g2">
-              <div className="e-field">
-                <label className="e-label">Candidate</label>
-                <input className="e-in" value={draft.candidate || ''} onChange={e => setDraft({ ...draft, candidate: e.target.value })} placeholder="Name or reference" />
+          <div className="tool-card" style={{ padding: 24, marginBottom: 20 }}>
+            <div className="tool-g2">
+              <div className="tool-field">
+                <label className="tool-label">Candidate</label>
+                <input className="tool-in" value={draft.candidate || ''} onChange={e => setDraft({ ...draft, candidate: e.target.value })} placeholder="Name or reference" />
               </div>
-              <div className="e-field">
-                <label className="e-label">Client</label>
-                <input className="e-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Hiring company" />
+              <div className="tool-field">
+                <label className="tool-label">Client</label>
+                <input className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Hiring company" />
               </div>
             </div>
-            <div className="e-g3">
-              <div className="e-field">
-                <label className="e-label">Salary</label>
-                <input className="e-in" type="number" min={0} inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
+            <div className="tool-g3">
+              <div className="tool-field">
+                <label className="tool-label">Salary</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
               </div>
-              <div className="e-field">
-                <label className="e-label">Fee</label>
-                <input className="e-in" type="number" min={0} step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
-                <div className="e-hint">% of first year base.</div>
+              <div className="tool-field">
+                <label className="tool-label">Fee</label>
+                <input className="tool-in" type="number" min={0} step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
+                <div className="tool-hint">% of first year base.</div>
               </div>
-              <div className="e-field">
-                <label className="e-label">Start date</label>
-                <input className="e-in" type="date" max={todayStr()} value={draft.startDate || ''}
+              <div className="tool-field">
+                <label className="tool-label">Start date</label>
+                <input className="tool-in" type="date" max={todayStr()} value={draft.startDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, startDate: v }) }} />
-                <div className="e-hint">When they actually started.</div>
+                <div className="tool-hint">When they actually started.</div>
               </div>
             </div>
-            <div className="e-g2">
-              <div className="e-field">
-                <label className="e-label">Rebate structure</label>
-                <select className="e-sel" value={draft.scale || 'taper'}
+            <div className="tool-g2">
+              <div className="tool-field">
+                <label className="tool-label">Rebate structure</label>
+                <select className="tool-sel" value={draft.scale || 'taper'}
                   onChange={e => {
                     const k = e.target.value as ScaleKey
                     const def = SCALES.find(s => s.key === k)!
@@ -543,12 +517,12 @@ export default function RebateExposure() {
                   }}>
                   {SCALES.map(s => <option key={s.key} value={s.key}>{s.label}</option>)}
                 </select>
-                <div className="e-hint">{selectedScale.note}</div>
+                <div className="tool-hint">{selectedScale.note}</div>
               </div>
-              <div className="e-field">
-                <label className="e-label">Window length</label>
-                <input className="e-in" type="number" min={0} value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
-                <div className="e-hint">Weeks. Check your terms of business.</div>
+              <div className="tool-field">
+                <label className="tool-label">Window length</label>
+                <input className="tool-in" type="number" min={0} value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
+                <div className="tool-hint">Weeks. Check your terms of business.</div>
               </div>
             </div>
             <label style={{ fontSize: 14, display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer', marginBottom: 16 }}>
@@ -557,14 +531,14 @@ export default function RebateExposure() {
               Invoice settled within terms
             </label>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-              <button className="e-btn e-primary" onClick={addPlacement} disabled={!draft.candidate?.trim() || !draft.salary}>Add placement</button>
-              {placements.length > 0 && <button className="e-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
+              <button className="tool-btn" onClick={addPlacement} disabled={!draft.candidate?.trim() || !draft.salary}>Add placement</button>
+              {placements.length > 0 && <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
             </div>
           </div>
         )}
 
         {rows.length > 0 && (
-          <div className="e-card" style={{ padding: '8px 24px', marginBottom: 22 }}>
+          <div className="tool-card" style={{ padding: '8px 24px', marginBottom: 22 }}>
             {rows.map((r, i) => {
               const open = expanded === r.p.id
               return (
@@ -589,7 +563,7 @@ export default function RebateExposure() {
                       color: r.status === 'safe' ? '#3F6B4C' : r.atRisk > 0 ? '#A13B2A' : '#8A8279' }}>
                       {r.status === 'safe' ? 'Safe' : r.atRisk > 0 ? money(r.atRisk) + ' at risk' : '—'}
                     </div>
-                    <button className="e-link" style={{ fontSize: 13, textAlign: 'right' }}
+                    <button className="tool-link" style={{ fontSize: 13, textAlign: 'right' }}
                       onClick={() => setExpanded(open ? null : r.p.id)}>
                       {open ? 'Close' : 'Detail'}
                     </button>
@@ -620,11 +594,11 @@ export default function RebateExposure() {
                         </label>
                         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                           <span style={{ fontSize: 14 }}>Left on</span>
-                          <input className="e-in" type="date" max={todayStr()} style={{ width: 160 }}
+                          <input className="tool-in" type="date" max={todayStr()} style={{ width: 160 }}
                             value={r.p.leftDate}
                             onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; update(r.p.id, { leftDate: v }) }} />
                         </div>
-                        <button className="e-link" style={{ color: '#8A8279', marginLeft: 'auto' }}
+                        <button className="tool-link" style={{ color: '#8A8279', marginLeft: 'auto' }}
                           onClick={() => { if (confirm(`Remove ${r.p.candidate}?`)) remove(r.p.id) }}>Remove</button>
                       </div>
                     </div>
@@ -638,7 +612,7 @@ export default function RebateExposure() {
         {/* Paid report */}
         {placements.length > 0 && (
           <div style={{ marginTop: 26, padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-            <div className="e-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
+            <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
               A number your funder will ask for
             </div>
             <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 18px', maxWidth: 560 }}>
@@ -654,19 +628,19 @@ export default function RebateExposure() {
                   border: '1px solid rgba(255,255,255,0.12)' }}>
                   <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>Your details</div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 14 }}>
-                    <input className="e-dark-in" placeholder="Agency name" value={agency.name}
+                    <input className="tool-in-dark" placeholder="Agency name" value={agency.name}
                       onChange={e => setAgency({ ...agency, name: e.target.value })} />
-                    <input className="e-dark-in" placeholder="Prepared by (optional)" value={agency.contact}
+                    <input className="tool-in-dark" placeholder="Prepared by (optional)" value={agency.contact}
                       onChange={e => setAgency({ ...agency, contact: e.target.value })} />
                   </div>
-                  <button className="e-btn e-primary" disabled={!agencyComplete}
+                  <button className="tool-btn" disabled={!agencyComplete}
                     onClick={() => { setEditingAgency(false); if (agencyComplete) openReport() }}>
                     Save and generate report
                   </button>
                 </div>
               ) : (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <button className="e-btn e-primary" onClick={openReport}>Generate exposure report</button>
+                  <button className="tool-btn" onClick={openReport}>Generate exposure report</button>
                   <button onClick={() => setEditingAgency(true)}
                     style={{ background: 'none', border: 0, padding: 0, font: 'inherit', fontSize: 14,
                       color: 'rgba(255,255,255,0.45)', cursor: 'pointer', textDecoration: 'underline' }}>
@@ -676,7 +650,7 @@ export default function RebateExposure() {
               )
             ) : (
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href={STRIPE_LINK} className="e-btn e-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+                <a href={STRIPE_LINK} className="tool-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>
                   Unlock the report, {REPORT_PRICE}
                 </a>
                 <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
@@ -691,14 +665,14 @@ export default function RebateExposure() {
         <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
           {sent ? (
             <>
-              <div className="e-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: 0, maxWidth: 520 }}>
                 We will come back within a working day.
               </p>
             </>
           ) : (
             <>
-              <div className="e-serif" style={{ fontSize: 19, marginBottom: 10 }}>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 10 }}>
                 {placements.length >= 10
                   ? 'This should be coming out of your CRM, not typed in twice.'
                   : 'Typing placements in twice is the wrong answer'}
@@ -710,18 +684,18 @@ export default function RebateExposure() {
                 owned by you, no per seat licence.
               </p>
               {!showForm ? (
-                <button className="e-btn e-primary" onClick={() => setShowForm(true)}>Talk about reporting on your CRM</button>
+                <button className="tool-btn" onClick={() => setShowForm(true)}>Talk about reporting on your CRM</button>
               ) : (
                 <div>
-                  <input className="e-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && <div style={{ fontSize: 13, color: '#A13B2A', marginBottom: 12 }}>{sendError}</div>}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="e-btn e-primary" onClick={submitInterest} disabled={sending}>
+                    <button className="tool-btn" onClick={submitInterest} disabled={sending}>
                       {sending ? 'Sending…' : 'Send'}
                     </button>
-                    <button className="e-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
+                    <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
                   </div>
                 </div>
               )}

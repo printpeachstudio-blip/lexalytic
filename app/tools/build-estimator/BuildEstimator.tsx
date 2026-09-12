@@ -210,59 +210,39 @@ export default function BuildEstimator() {
   }
 
   const Chip = ({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) => (
-    <button className="b-chip" aria-pressed={on} onClick={onClick}>{children}</button>
+    <button className="tool-chip" aria-pressed={on} onClick={onClick}>{children}</button>
   )
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .b-wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-        .b-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .b-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
         .b-q { padding: 26px 0; border-bottom: 1px solid #EDE7DD; }
         .b-q:last-child { border-bottom: 0; }
         .b-qlabel { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
         .b-qhelp { font-size: 14px; color: #8A8279; margin-bottom: 14px; line-height: 1.6; }
-        .b-chip { font: inherit; font-size: 14px; padding: 9px 15px; border-radius: 6px; cursor: pointer;
-          background: #fff; border: 1px solid #DDD6CC; color: #4A453F; transition: all .12s ease; }
-        .b-chip:hover { border-color: #B9AF9F; }
-        .b-chip[aria-pressed="true"] { background: ${INK}; border-color: ${INK}; color: #fff; }
         .b-chips { display: flex; gap: 8px; flex-wrap: wrap; }
         .b-shape { text-align: left; width: 100%; background: #fff; border: 1px solid #DDD6CC;
           border-radius: 8px; padding: 18px 20px; cursor: pointer; font: inherit; margin-bottom: 10px;
           transition: all .12s ease; }
         .b-shape:hover { border-color: #B9AF9F; }
-        .b-shape[aria-pressed="true"] { border-color: ${AMBER}; background: #FFFDF9; border-width: 2px; padding: 17px 19px; }
-        .b-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 12px 22px; border: 1px solid transparent; }
-        .b-primary { background: ${AMBER}; color: #fff; }
-        .b-primary:hover { background: #A96C25; }
-        .b-primary:disabled { opacity: .5; cursor: default; }
-        .b-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .b-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .b-in { font: inherit; font-size: 15px; padding: 11px 14px; border-radius: 6px;
-          background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 100%; }
-        .b-in::placeholder { color: rgba(255,255,255,0.35); }
-        .b-chip:focus-visible, .b-shape:focus-visible, .b-btn:focus-visible, .b-link:focus-visible, .b-in:focus-visible {
+        .b-shape[aria-pressed=true] { border-color: ${AMBER}; background: #FFFDF9; border-width: 2px; padding: 17px 19px; }
+        .tool-chip:focus-visible, .b-shape:focus-visible, .tool-btn:focus-visible, .tool-link:focus-visible, .tool-in:focus-visible {
           outline: 2px solid ${AMBER}; outline-offset: 2px; }
         .b-line { display: grid; grid-template-columns: 1fr 90px; gap: 14px; padding: 14px 0;
           border-bottom: 1px solid #F4F0E8; align-items: baseline; }
         .b-line:last-child { border-bottom: 0; }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="b-wrap" style={{ padding: 20 }}>
-          <a href="/" className="b-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="b-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="b-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 620 }}>
           What would it actually cost to build?
         </h1>
@@ -276,7 +256,7 @@ export default function BuildEstimator() {
           developer will ask you.
         </p>
 
-        <div className="b-card" style={{ padding: '4px 28px', marginBottom: 26 }}>
+        <div className="tool-card" style={{ padding: '4px 28px', marginBottom: 26 }}>
           <div className="b-q">
             <div className="b-qlabel">What shape is it?</div>
             <div className="b-qhelp">The single biggest driver. Pick the closest, not the perfect fit.</div>
@@ -342,11 +322,11 @@ export default function BuildEstimator() {
 
         {result && (
           <>
-            <div className="b-card" style={{ padding: '28px 30px', marginBottom: 22 }}>
+            <div className="tool-card" style={{ padding: '28px 30px', marginBottom: 22 }}>
               <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap', alignItems: 'flex-end', marginBottom: 24,
                 paddingBottom: 22, borderBottom: '2px solid ' + INK }}>
                 <div>
-                  <div className="b-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.6rem)', lineHeight: 1, color: AMBER }}>
+                  <div className="tool-serif" style={{ fontSize: 'clamp(1.9rem, 4vw, 2.6rem)', lineHeight: 1, color: AMBER }}>
                     {money(result.low)} to {money(result.high)}
                   </div>
                   <div style={{ fontSize: 13, color: '#8A8279', marginTop: 8 }}>
@@ -354,11 +334,11 @@ export default function BuildEstimator() {
                   </div>
                 </div>
                 <div>
-                  <div className="b-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>~{result.weeks} weeks</div>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>~{result.weeks} weeks</div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>From brief to live</div>
                 </div>
                 <div>
-                  <div className="b-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{result.hosting}</div>
+                  <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>{result.hosting}</div>
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Hosting per month</div>
                 </div>
               </div>
@@ -387,7 +367,7 @@ export default function BuildEstimator() {
               </div>
             </div>
 
-            <div className="b-card" style={{ padding: '24px 28px', marginBottom: 22 }}>
+            <div className="tool-card" style={{ padding: '24px 28px', marginBottom: 22 }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>What is not in the number</div>
               <ul style={{ fontSize: 14, color: '#57514A', lineHeight: 1.85, paddingLeft: 20, margin: 0 }}>
                 <li>Content and copy. If the thing needs writing, that is yours or a separate cost.</li>
@@ -400,7 +380,7 @@ export default function BuildEstimator() {
             <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
               {sent ? (
                 <>
-                  <div className="b-serif" style={{ fontSize: 20, marginBottom: 10 }}>Got it.</div>
+                  <div className="tool-serif" style={{ fontSize: 20, marginBottom: 10 }}>Got it.</div>
                   <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: 0, maxWidth: 520 }}>
                     Your brief came through with the enquiry. We will come back within a working day, usually
                     with a couple of questions before quoting rather than a price pulled out of the air.
@@ -408,28 +388,28 @@ export default function BuildEstimator() {
                 </>
               ) : (
                 <>
-                  <div className="b-serif" style={{ fontSize: 20, marginBottom: 12 }}>Take the brief anywhere</div>
+                  <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12 }}>Take the brief anywhere</div>
                   <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 560 }}>
                     Download it and send it to three developers if you want. It covers what any of them will
                     ask, and a written brief gets you better quotes than a conversation about roughly what you
                     are after. If you would rather we quoted it, send it over.
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                    <input className="b-in" placeholder="Your organisation" value={org} onChange={e => setOrg(e.target.value)} />
-                    <input className="b-in" type="email" placeholder="Email address" value={email}
+                    <input className="tool-in" placeholder="Your organisation" value={org} onChange={e => setOrg(e.target.value)} />
+                    <input className="tool-in" type="email" placeholder="Email address" value={email}
                       onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') submit() }} />
                   </div>
-                  <textarea className="b-in" rows={3} placeholder="Anything the questions above did not cover (optional)"
+                  <textarea className="tool-in" rows={3} placeholder="Anything the questions above did not cover (optional)"
                     style={{ marginBottom: 14, resize: 'vertical' }} value={notes} onChange={e => setNotes(e.target.value)} />
                   {sendError && (
                     <div style={{ fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',
                       borderRadius: 6, background: 'rgba(161,59,42,0.2)' }}>{sendError}</div>
                   )}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="b-btn b-primary" onClick={submit} disabled={sending}>
+                    <button className="tool-btn" onClick={submit} disabled={sending}>
                       {sending ? 'Sending…' : 'Send it to us for a fixed quote'}
                     </button>
-                    <button className="b-btn b-quiet" onClick={downloadBrief}>Download the brief</button>
+                    <button className="tool-btn tool-btn-quiet" onClick={downloadBrief}>Download the brief</button>
                   </div>
                 </>
               )}

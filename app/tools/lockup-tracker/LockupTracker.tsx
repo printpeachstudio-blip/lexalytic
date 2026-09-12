@@ -363,47 +363,22 @@ export default function LockupTracker() {
   }
 
   return (
-    <div style={{ background: '#FDFCFA', color: INK, minHeight: '100vh', paddingBottom: 72,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' }}>
+    <div className="tool-page">
       <style>{`
-        .l-wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .l-serif { font-family: Georgia, 'Times New Roman', serif; }
-        .l-card { background: #fff; border: 1px solid #E8E2D8; border-radius: 10px; }
-        .l-btn { font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 6px;
-          padding: 11px 20px; border: 1px solid transparent; transition: background .15s ease; }
-        .l-primary { background: ${AMBER}; color: #fff; }
-        .l-primary:hover { background: #A96C25; }
-        .l-primary:disabled { opacity: .5; cursor: default; }
-        .l-quiet { background: #fff; color: #4A453F; border-color: #DDD6CC; }
-        .l-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px;
-          color: ${AMBER}; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .l-in { font: inherit; font-size: 15px; padding: 10px 13px; border-radius: 6px;
-          border: 1px solid #DDD6CC; background: #fff; width: 100%; }
-        .l-dark-in { font: inherit; font-size: 15px; padding: 11px 14px; border-radius: 6px;
-          background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.15); width: 100%; }
-        .l-dark-in::placeholder { color: rgba(255,255,255,0.35); }
-        .l-btn:focus-visible, .l-link:focus-visible, .l-in:focus-visible, .l-dark-in:focus-visible {
-          outline: 2px solid ${AMBER}; outline-offset: 2px; }
-        .l-label { display: block; font-size: 13px; color: #57514A; margin-bottom: 5px; }
-        .l-hint { font-size: 12px; color: #8A8279; margin-top: 4px; line-height: 1.5; }
-        .l-field { margin-bottom: 14px; }
-        .l-g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .l-g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
         .l-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 90px; gap: 12px; align-items: center; }
-        @media (max-width: 760px) { .l-g2, .l-g3, .l-row { grid-template-columns: 1fr; gap: 8px; } }
-        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        @media (max-width: 760px) { .tool-g2, .tool-g3, .l-row { grid-template-columns: 1fr; gap: 8px; } }
       `}</style>
 
       <div style={{ borderBottom: '1px solid #E8E2D8', background: '#fff' }}>
-        <div className="l-wrap" style={{ padding: 20 }}>
-          <a href="/" className="l-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
+        <div className="tool-wrap" style={{ padding: 20 }}>
+          <a href="/" className="tool-serif" style={{ fontSize: 20, letterSpacing: '-0.02em', color: INK, textDecoration: 'none' }}>
             Lex<span style={{ color: AMBER }}>alytic</span>
           </a>
         </div>
       </div>
 
-      <div className="l-wrap" style={{ paddingTop: 44 }}>
-        <h1 className="l-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
+      <div className="tool-wrap" style={{ paddingTop: 44 }}>
+        <h1 className="tool-serif" style={{ fontSize: 'clamp(1.8rem, 4.2vw, 2.5rem)', lineHeight: 1.15,
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           How much cash could you release this month without winning any new work?
         </h1>
@@ -417,26 +392,26 @@ export default function LockupTracker() {
         </p>
 
         {/* Firm details */}
-        <div className="l-card" style={{ padding: 22, marginBottom: 22 }}>
-          <div className="l-g2">
-            <div className="l-field" style={{ margin: 0 }}>
-              <label className="l-label">Firm name</label>
-              <input className="l-in" value={firm.name} onChange={e => setFirm({ ...firm, name: e.target.value })} placeholder="For the report header" />
+        <div className="tool-card" style={{ padding: 22, marginBottom: 22 }}>
+          <div className="tool-g2">
+            <div className="tool-field" style={{ margin: 0 }}>
+              <label className="tool-label">Firm name</label>
+              <input className="tool-in" value={firm.name} onChange={e => setFirm({ ...firm, name: e.target.value })} placeholder="For the report header" />
             </div>
-            <div className="l-field" style={{ margin: 0 }}>
-              <label className="l-label">Annual fee income</label>
-              <input className="l-in" type="number" min={0} inputMode="decimal" value={firm.revenue}
+            <div className="tool-field" style={{ margin: 0 }}>
+              <label className="tool-label">Annual fee income</label>
+              <input className="tool-in" type="number" min={0} inputMode="decimal" value={firm.revenue}
                 onChange={e => setFirm({ ...firm, revenue: e.target.value })} placeholder="£" />
-              <div className="l-hint">Last twelve months. Needed to convert amounts into days.</div>
+              <div className="tool-hint">Last twelve months. Needed to convert amounts into days.</div>
             </div>
           </div>
         </div>
 
         {loaded && rows.length > 0 && totals.revenue > 0 && (
-          <div className="l-card" style={{ padding: '24px 26px', marginBottom: 22 }}>
+          <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 22 }}>
             <div style={{ display: 'flex', gap: 36, flexWrap: 'wrap', alignItems: 'flex-end', marginBottom: 18 }}>
               <div>
-                <div className="l-serif" style={{ fontSize: 34, lineHeight: 1, color: AMBER }}>
+                <div className="tool-serif" style={{ fontSize: 34, lineHeight: 1, color: AMBER }}>
                   {money(quickWins.total)}
                 </div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 6, maxWidth: 230 }}>
@@ -444,18 +419,18 @@ export default function LockupTracker() {
                 </div>
               </div>
               <div>
-                <div className="l-serif" style={{ fontSize: 26, lineHeight: 1.1,
+                <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1,
                   color: totals.lockup > 65 ? '#A13B2A' : totals.lockup < 45 ? '#3F6B4C' : '#57514A' }}>
                   {totals.lockup.toFixed(0)} days
                 </div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Total lock-up</div>
               </div>
               <div>
-                <div className="l-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>{totals.wipDays.toFixed(0)}</div>
+                <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>{totals.wipDays.toFixed(0)}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Unbilled days</div>
               </div>
               <div>
-                <div className="l-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>{totals.debtDays.toFixed(0)}</div>
+                <div className="tool-serif" style={{ fontSize: 26, lineHeight: 1.1, color: '#57514A' }}>{totals.debtDays.toFixed(0)}</div>
                 <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>Debtor days</div>
               </div>
             </div>
@@ -482,65 +457,65 @@ export default function LockupTracker() {
         )}
 
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 16, flexWrap: 'wrap' }}>
-          <h2 className="l-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
+          <h2 className="tool-serif" style={{ fontSize: 20, fontWeight: 400, margin: 0 }}>
             {jobs.length ? `Live jobs (${jobs.length})` : 'Add your first job'}
           </h2>
-          {!adding && jobs.length > 0 && <button className="l-link" onClick={() => setAdding(true)}>Add another</button>}
+          {!adding && jobs.length > 0 && <button className="tool-link" onClick={() => setAdding(true)}>Add another</button>}
         </div>
 
         {(adding || jobs.length === 0) && (
-          <div className="l-card" style={{ padding: 24, marginBottom: 20 }}>
-            <div className="l-g2">
-              <div className="l-field">
-                <label className="l-label">Job or matter reference</label>
-                <input className="l-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Project name" />
+          <div className="tool-card" style={{ padding: 24, marginBottom: 20 }}>
+            <div className="tool-g2">
+              <div className="tool-field">
+                <label className="tool-label">Job or matter reference</label>
+                <input className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Project name" />
               </div>
-              <div className="l-field">
-                <label className="l-label">Client</label>
-                <input className="l-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Client name" />
-              </div>
-            </div>
-            <div className="l-g3">
-              <div className="l-field">
-                <label className="l-label">Work delivered to date</label>
-                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
-                <div className="l-hint">Value of work done, whether billed or not.</div>
-              </div>
-              <div className="l-field">
-                <label className="l-label">Invoiced to date</label>
-                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
-              </div>
-              <div className="l-field">
-                <label className="l-label">Collected to date</label>
-                <input className="l-in" type="number" min={0} inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
+              <div className="tool-field">
+                <label className="tool-label">Client</label>
+                <input className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Client name" />
               </div>
             </div>
-            <div className="l-g3">
-              <div className="l-field">
-                <label className="l-label">Work last delivered</label>
-                <input className="l-in" type="date" max={todayStr()} value={draft.lastWorkDate || ''}
+            <div className="tool-g3">
+              <div className="tool-field">
+                <label className="tool-label">Work delivered to date</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
+                <div className="tool-hint">Value of work done, whether billed or not.</div>
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Invoiced to date</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Collected to date</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
+              </div>
+            </div>
+            <div className="tool-g3">
+              <div className="tool-field">
+                <label className="tool-label">Work last delivered</label>
+                <input className="tool-in" type="date" max={todayStr()} value={draft.lastWorkDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, lastWorkDate: v }) }} />
               </div>
-              <div className="l-field">
-                <label className="l-label">Last invoice raised</label>
-                <input className="l-in" type="date" max={todayStr()} value={draft.lastInvoiceDate || ''}
+              <div className="tool-field">
+                <label className="tool-label">Last invoice raised</label>
+                <input className="tool-in" type="date" max={todayStr()} value={draft.lastInvoiceDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, lastInvoiceDate: v }) }} />
               </div>
-              <div className="l-field">
-                <label className="l-label">Payment terms</label>
-                <input className="l-in" type="number" min={0} value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
-                <div className="l-hint">Days.</div>
+              <div className="tool-field">
+                <label className="tool-label">Payment terms</label>
+                <input className="tool-in" type="number" min={0} value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
+                <div className="tool-hint">Days.</div>
               </div>
             </div>
             <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-              <button className="l-btn l-primary" onClick={addJob} disabled={!draft.ref?.trim() || !draft.workDone}>Add job</button>
-              {jobs.length > 0 && <button className="l-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
+              <button className="tool-btn" onClick={addJob} disabled={!draft.ref?.trim() || !draft.workDone}>Add job</button>
+              {jobs.length > 0 && <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
             </div>
           </div>
         )}
 
         {rows.length > 0 && (
-          <div className="l-card" style={{ padding: '8px 24px', marginBottom: 22 }}>
+          <div className="tool-card" style={{ padding: '8px 24px', marginBottom: 22 }}>
             <div className="l-row" style={{ padding: '12px 0', borderBottom: '2px solid #EDE7DD', fontSize: 12, color: '#8A8279' }}>
               <div>Job</div><div>Unbilled</div><div>Uncollected</div><div>Status</div><div></div>
             </div>
@@ -569,26 +544,26 @@ export default function LockupTracker() {
                       color: r.flag === 'overdue' ? '#A13B2A' : r.flag === 'bill' ? '#8F6318' : r.flag === 'chase' ? '#57514A' : '#3F6B4C' }}>
                       {r.flag === 'overdue' ? 'Chase' : r.flag === 'bill' ? 'Bill now' : r.flag === 'chase' ? 'Awaiting payment' : 'Clean'}
                     </div>
-                    <button className="l-link" style={{ fontSize: 13, textAlign: 'right' }}
+                    <button className="tool-link" style={{ fontSize: 13, textAlign: 'right' }}
                       onClick={() => setExpanded(open ? null : r.job.id)}>{open ? 'Close' : 'Edit'}</button>
                   </div>
                   {open && (
                     <div style={{ padding: '4px 0 18px' }}>
-                      <div className="l-g3">
-                        <div className="l-field">
-                          <label className="l-label">Work delivered</label>
-                          <input className="l-in" type="number" min={0} value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
+                      <div className="tool-g3">
+                        <div className="tool-field">
+                          <label className="tool-label">Work delivered</label>
+                          <input className="tool-in" type="number" min={0} value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
                         </div>
-                        <div className="l-field">
-                          <label className="l-label">Invoiced</label>
-                          <input className="l-in" type="number" min={0} value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
+                        <div className="tool-field">
+                          <label className="tool-label">Invoiced</label>
+                          <input className="tool-in" type="number" min={0} value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
                         </div>
-                        <div className="l-field">
-                          <label className="l-label">Collected</label>
-                          <input className="l-in" type="number" min={0} value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
+                        <div className="tool-field">
+                          <label className="tool-label">Collected</label>
+                          <input className="tool-in" type="number" min={0} value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
                         </div>
                       </div>
-                      <button className="l-link" style={{ color: '#8A8279' }}
+                      <button className="tool-link" style={{ color: '#8A8279' }}
                         onClick={() => { if (confirm(`Remove ${r.job.ref}?`)) remove(r.job.id) }}>Remove job</button>
                     </div>
                   )}
@@ -601,7 +576,7 @@ export default function LockupTracker() {
         {/* Paid plan */}
         {rows.length > 0 && totals.revenue > 0 && (
           <div style={{ marginTop: 26, padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
-            <div className="l-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
+            <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12, letterSpacing: '-0.01em' }}>
               The plan, not just the number
             </div>
             <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 18px', maxWidth: 570 }}>
@@ -618,14 +593,14 @@ export default function LockupTracker() {
                   <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', margin: '0 0 12px' }}>
                     Add your firm name and annual fee income above to generate the plan.
                   </p>
-                  <button className="l-btn l-primary" disabled={!firmComplete}
+                  <button className="tool-btn" disabled={!firmComplete}
                     onClick={() => { setEditingFirm(false); if (firmComplete) openPlan() }}>
                     Generate plan
                   </button>
                 </div>
               ) : (
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                  <button className="l-btn l-primary" onClick={openPlan}>Generate cash release plan</button>
+                  <button className="tool-btn" onClick={openPlan}>Generate cash release plan</button>
                   <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
                     Opens in a new tab. Print or save as PDF.
                   </span>
@@ -633,7 +608,7 @@ export default function LockupTracker() {
               )
             ) : (
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href={STRIPE_LINK} className="l-btn l-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+                <a href={STRIPE_LINK} className="tool-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>
                   Unlock the plan, {PLAN_PRICE}
                 </a>
                 <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
@@ -648,14 +623,14 @@ export default function LockupTracker() {
         <div style={{ marginTop: 22, padding: 30, borderRadius: 10, background: '#fff', border: '1px solid #E8E2D8' }}>
           {sent ? (
             <>
-              <div className="l-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 8 }}>Thanks, we will be in touch.</div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: 0, maxWidth: 520 }}>
                 We will come back within a working day.
               </p>
             </>
           ) : (
             <>
-              <div className="l-serif" style={{ fontSize: 19, marginBottom: 10 }}>
+              <div className="tool-serif" style={{ fontSize: 19, marginBottom: 10 }}>
                 {jobs.length >= 10
                   ? 'This should update itself every morning'
                   : 'Typing this in monthly is not the answer'}
@@ -667,18 +642,18 @@ export default function LockupTracker() {
                 rebuilds before each partner meeting.
               </p>
               {!showForm ? (
-                <button className="l-btn l-primary" onClick={() => setShowForm(true)}>Talk about automating this</button>
+                <button className="tool-btn" onClick={() => setShowForm(true)}>Talk about automating this</button>
               ) : (
                 <div>
-                  <input className="l-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && <div style={{ fontSize: 13, color: '#A13B2A', marginBottom: 12 }}>{sendError}</div>}
                   <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                    <button className="l-btn l-primary" onClick={submitInterest} disabled={sending}>
+                    <button className="tool-btn" onClick={submitInterest} disabled={sending}>
                       {sending ? 'Sending…' : 'Send'}
                     </button>
-                    <button className="l-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
+                    <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setShowForm(false)}>Cancel</button>
                   </div>
                 </div>
               )}
