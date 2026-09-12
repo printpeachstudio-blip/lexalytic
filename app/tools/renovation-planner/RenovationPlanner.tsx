@@ -5,6 +5,7 @@ import {
   ELEMENTS, HIDDEN, REGIONS, AGES, money,
   type Spec, type Element,
 } from '@/lib/renovation'
+import { stagesFor, snagsFor, paperworkFor } from '@/lib/renovation-extras'
 
 const STRIPE_LINK = 'https://buy.stripe.com/YOUR_RENO_LINK'
 const UNLOCK_PARAM = 'rnv-5t8bk2'
@@ -577,6 +578,148 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                       </div>
                     </div>
                   )}
+                </div>
+
+
+                {/* PAYMENT SCHEDULE */}
+                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
+                    When to pay, and how much
+                  </div>
+                  <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8,
+                    margin: '0 0 8px', maxWidth: 670 }}>
+                    Pay for work that has been done, not for time that has passed. Tie every payment to
+                    something you can walk in and look at, and agree the whole schedule in writing
+                    before anyone starts.
+                  </p>
+                  <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75,
+                    margin: '0 0 20px', maxWidth: 670 }}>
+                    Based on a job of {money((result.low + result.high) / 2)}. Adjust the stages to
+                    suit what you have actually agreed.
+                  </p>
+
+                  {stagesFor(result.structural).map((st: any) => {
+                    const amount = ((result.low + result.high) / 2) * (st.pct / 100)
+                    return (
+                      <div key={st.id} style={{ display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) 110px', gap: 16,
+                        padding: '14px 0', borderBottom: '1px solid #F7F4EF' }}>
+                        <div>
+                          <div style={{ fontSize: 15, fontWeight: 500 }}>{st.label}</div>
+                          <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 2 }}>{st.when}</div>
+                          <div style={{ fontSize: 13.5, color: '#57514A', marginTop: 6, lineHeight: 1.7 }}>
+                            {st.note}
+                          </div>
+                        </div>
+                        <div style={{ textAlign: 'right' }}>
+                          <div style={{ fontSize: 16, fontWeight: 600 }}>{money(amount)}</div>
+                          <div style={{ fontSize: 12, color: '#8A8279' }}>{st.pct}%</div>
+                        </div>
+                      </div>
+                    )
+                  })}
+
+                  {/* Retention, explained plainly */}
+                  <div style={{ marginTop: 20, padding: '18px 20px', borderRadius: 8,
+                    background: 'rgba(176,122,30,0.06)', border: '1px solid rgba(176,122,30,0.22)' }}>
+                    <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+                      Hold back five per cent for six months
+                    </div>
+                    <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8, margin: '0 0 10px' }}>
+                      This is normal on building work and it is called retention. You keep five per cent
+                      of the final bill, which on this job is about{' '}
+                      <strong>{money(((result.low + result.high) / 2) * 0.05)}</strong>, for six months
+                      after the work finishes.
+                    </p>
+                    <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8, margin: '0 0 10px' }}>
+                      If something goes wrong in that time, a crack appears, a tap drips, a door drops,
+                      the builder comes back and sorts it. If they do not, you have the money to pay
+                      somebody else. Once the six months are up and everything is fine, you pay it over.
+                    </p>
+                    <p style={{ fontSize: 13.5, color: '#8A8279', lineHeight: 1.75, margin: 0 }}>
+                      Agree it before work starts, not at the end. A builder who has already quoted
+                      expecting full payment will reasonably object to it being introduced afterwards,
+                      and most will accept it without argument if it is in the deal from the beginning.
+                      Commercial building work does this as standard.
+                    </p>
+                  </div>
+                </div>
+
+                {/* SNAGGING */}
+                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
+                    Walk round before the last payment
+                  </div>
+                  <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8,
+                    margin: '0 0 20px', maxWidth: 670 }}>
+                    This is called snagging. Go round with this list before you hand over the final
+                    money, because your position is considerably stronger while you still owe some.
+                    Do it in daylight, then again at night with the lights on. Write down everything,
+                    even the small things.
+                  </p>
+
+                  {snagsFor(Array.from(picked)).map((s2: any) => (
+                    <div key={s2.area} style={{ marginBottom: 18 }}>
+                      <div style={{ fontSize: 14.5, fontWeight: 600, marginBottom: 8 }}>{s2.area}</div>
+                      {s2.checks.map((c: string) => (
+                        <label key={c} style={{ display: 'flex', gap: 10, alignItems: 'flex-start',
+                          fontSize: 14, color: '#57514A', lineHeight: 1.7, padding: '4px 0',
+                          cursor: 'pointer' }}>
+                          <input type="checkbox" style={{ marginTop: 4 }} />
+                          <span>{c}</span>
+                        </label>
+                      ))}
+                    </div>
+                  ))}
+
+                  <button className="rv-btn rv-quiet" style={{ marginTop: 8 }} onClick={() => {
+                    const list = snagsFor(Array.from(picked))
+                    const html = list.map((s2: any) =>
+                      `<h2>${s2.area}</h2><ul>${s2.checks.map((c: string) =>
+                        `<li style="margin-bottom:10px">&#9744; ${c}</li>`).join('')}</ul>`).join('')
+                    const w = window.open('', '_blank')
+                    if (w) {
+                      w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Snagging list</title><style>body{font-family:Georgia,serif;max-width:700px;margin:0 auto;padding:28px;font-size:14px;line-height:1.7}h1{font-size:22px}h2{font-size:16px;margin-top:24px}ul{list-style:none;padding:0}</style></head><body><h1>Snagging list</h1><p>Walk round before the final payment. Tick what is right, write down what is not.</p>${html}<h2>Anything else</h2><p style="border-bottom:1px solid #ccc;height:28px"></p><p style="border-bottom:1px solid #ccc;height:28px"></p><p style="border-bottom:1px solid #ccc;height:28px"></p><p style="border-bottom:1px solid #ccc;height:28px"></p></body></html>`)
+                      w.document.close()
+                    }
+                  }}>Print the list to take round</button>
+                </div>
+
+                {/* PAPERWORK */}
+                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
+                    The paperwork to collect before they leave
+                  </div>
+                  <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8,
+                    margin: '0 0 8px', maxWidth: 670 }}>
+                    This is the part almost everybody forgets, and it matters years later rather than
+                    now. When you come to sell, the buyer&#39;s solicitor asks for these. A missing
+                    certificate can hold up a sale or cost you an indemnity policy to paper over.
+                  </p>
+                  <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75,
+                    margin: '0 0 20px', maxWidth: 670 }}>
+                    Chase them while the builder still wants the last payment. It is considerably harder
+                    eighteen months later.
+                  </p>
+
+                  {paperworkFor(Array.from(picked)).map((p2: any) => (
+                    <div key={p2.id} style={{ marginBottom: 16, paddingBottom: 16,
+                      borderBottom: '1px solid #F7F4EF' }}>
+                      <label style={{ display: 'flex', gap: 10, alignItems: 'flex-start',
+                        cursor: 'pointer' }}>
+                        <input type="checkbox" style={{ marginTop: 5 }} />
+                        <span>
+                          <span style={{ display: 'block', fontSize: 15, fontWeight: 600 }}>
+                            {p2.label}
+                          </span>
+                          <span style={{ display: 'block', fontSize: 12.5, color: '#8A8279',
+                            marginTop: 2 }}>From {p2.who}</span>
+                          <span style={{ display: 'block', fontSize: 14, color: '#57514A',
+                            lineHeight: 1.75, marginTop: 6 }}>{p2.why}</span>
+                        </span>
+                      </label>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Quote comparison */}
