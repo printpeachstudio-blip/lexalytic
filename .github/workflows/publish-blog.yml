@@ -239,7 +239,7 @@ jobs:
             echo "tag=Business Intelligence" >> $GITHUB_OUTPUT
             echo "date=December 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "12" ] && [ "$DAY" = "8" ]; then
-            echo "slug=how-to-know-when-your-business-needs-custom-software" >> $GITHUB_OUTPUT
+            echo "slug=find-duplicate-records-spreadsheet" >> $GITHUB_OUTPUT
             echo "title=How to Automate Your Weekly Management Report" >> $GITHUB_OUTPUT
             echo "excerpt=A weekly management report that builds itself — pulling from your live data, formatted and ready every Monday morning without anyone compiling it. Here is how to build one for your UK business." >> $GITHUB_OUTPUT
             echo "tag=Data Automation" >> $GITHUB_OUTPUT

@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'find-duplicate-records-spreadsheet',
+    title: 'How to Find Duplicate Records When They Are Spelled Differently',
+    excerpt: 'Excel finds exact duplicates. It will not find that Smith and Sons Ltd, Smith & Sons Limited and SMITH AND SONS are one customer on three rows.',
+    date: 'December 2026',
+    readTime: '8 min read',
+    tag: 'Data',
+  },
+  {
     slug: 'hidden-costs-of-a-renovation-uk',
     title: 'The Renovation Costs That Are Not in the Builder Quote',
     excerpt: 'VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live. Together they add thirty to fifty per cent.',

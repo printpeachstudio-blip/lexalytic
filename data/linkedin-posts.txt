@@ -971,6 +971,27 @@ The diagnostic - pulling 100 records and reviewing them manually - takes an afte
 
 That afternoon is almost always worth it before commissioning any cleansing work.
 
+2027-02-10
+Remove Duplicates in Excel works on exact matches.
+
+Which means it will happily leave you with three rows for the same customer because one has an ampersand, one spells Limited out, and one is in capitals.
+
+Those are the duplicates that cost you money. They survive every clean up, because sorting the column puts them nowhere near each other. S-M-I-T-H space ampersand and S-M-I-T-H space A-N-D are different strings.
+
+The obvious fix is to measure how many characters differ. That fails badly on names.
+
+Smith Ltd and Smith Solutions Ltd share a long run of characters, so they score highly. They are two different businesses.
+
+John Smith and Jane Smith share a surname. Also score highly. Also two different people.
+
+What works is comparing word against word, and judging the pair by the weakest match rather than the average. A typo in one word gets forgiven. A genuinely different word does not, because the distinguishing word is exactly the one that matters.
+
+And one thing worth being careful about. A duplicate left in your list is an annoyance. Two real customers merged into one is data loss, and you find out when somebody asks why their order went to another company.
+
+Lean toward leaving things alone.
+
+lexalytic.com/tools/data-health-check
+
 2027-02-11
 What does a KPI dashboard actually need to do?
 
