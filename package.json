@@ -17,7 +17,8 @@
     "papaparse": "^5.7.0",
     "react": "^18",
     "react-dom": "^18",
-    "stripe": "^22.6.2"
+    "stripe": "^22.6.2",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20",
