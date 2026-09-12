@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "PT Business Tools UK - What You Actually Need vs What Gets Marketed at You",
   "description": "A direct guide for UK personal trainers on which business tools are worth paying for and which are unnecessary expenses dressed up as professional requirements.",
-  "datePublished": "2027-05-15",
-  "dateModified": "2027-05-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

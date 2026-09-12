@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "How to Get Your Xero Data Into Excel Automatically Without Exporting Every Week",
   "description": "A practical guide to connecting Xero directly to Excel so your reports update automatically, without manual exports or copy-pasting.",
-  "datePublished": "2027-03-15",
-  "dateModified": "2027-03-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

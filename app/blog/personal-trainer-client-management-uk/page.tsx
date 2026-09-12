@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Personal Trainer Client Management Software UK - What Actually Works in 2027",
   "description": "The honest guide to client management software for UK personal trainers. What the tools do well, where they fall short, and when a bespoke solution makes more sense.",
-  "datePublished": "2027-04-15",
-  "dateModified": "2027-04-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

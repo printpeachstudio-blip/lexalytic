@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Rent Repayment Orders Doubled in May 2026. What Landlords Need to Know",
   "description": "The Renters Rights Act doubled the maximum rent repayment order from 12 to 24 months for offences committed on or after 1 May 2026, and gave tenants two years to bring a claim. Here is what changed and who is exposed.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -106,7 +106,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Property</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 6 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>August 2026 · 6 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Rent Repayment Orders Doubled in May 2026. What Landlords Need to Know</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

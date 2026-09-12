@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "The Week Is Profitable. Two Sessions Are Carrying It.",
   "description": "An hour at £13.20 costs the business £16.68 once holiday, National Insurance and pension are in. Almost nobody uses that number when writing a rota.",
-  "datePublished": "2027-02-23",
-  "dateModified": "2027-02-23",
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-09-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -62,7 +62,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Hospitality</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>February 2027 · 7 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 7 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>The Week Is Profitable. Two Sessions Are Carrying It.</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

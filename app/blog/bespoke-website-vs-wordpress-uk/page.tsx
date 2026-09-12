@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Bespoke Website vs WordPress for UK Businesses in 2027 - The Honest Comparison",
   "description": "An honest comparison of bespoke website development versus WordPress for UK businesses in 2027. Which is right for your situation and why.",
-  "datePublished": "2027-04-15",
-  "dateModified": "2027-04-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -106,7 +106,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Website Development</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2027 · 5 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>July 2026 · 5 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Bespoke Website vs WordPress for UK Businesses in 2027 - The Honest Comparison</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

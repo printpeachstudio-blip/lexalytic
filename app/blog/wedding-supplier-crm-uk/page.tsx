@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Wedding Supplier CRM UK - What Small Businesses Actually Need to Track",
   "description": "Client management for UK wedding suppliers. What to track, what tools exist, and when a simple custom solution beats an off-the-shelf CRM.",
-  "datePublished": "2027-06-15",
-  "dateModified": "2027-06-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -106,7 +106,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Wedding Business</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>June 2027 · 5 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>August 2026 · 5 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Wedding Supplier CRM UK - What Small Businesses Actually Need to Track</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

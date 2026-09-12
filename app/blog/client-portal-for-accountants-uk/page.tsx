@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Client Portal for Accountants UK - What to Look For and What It Should Cost",
   "description": "A practical guide for UK accountants and bookkeepers on choosing or building a client portal. What the platforms cost, where they fall short, and when a bespoke portal makes more sense.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

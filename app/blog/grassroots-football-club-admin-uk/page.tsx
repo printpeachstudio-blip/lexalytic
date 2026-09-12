@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "How to Run a Grassroots Football Club Without the Admin Chaos",
   "description": "Practical guide to football club administration for UK grassroots clubs. Registrations, match fees, kit, and communication without the usual chaos.",
-  "datePublished": "2027-06-15",
-  "dateModified": "2027-06-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

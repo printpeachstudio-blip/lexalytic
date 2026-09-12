@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Secure Client Portal for UK Small Businesses - Do You Need One and What Should It Do",
   "description": "A practical guide for UK small businesses on whether a client portal is worth building, what it should include, and what the alternatives cost over time.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

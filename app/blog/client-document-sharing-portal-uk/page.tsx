@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Client Document Sharing Portal UK - Moving Beyond Email and Shared Folders",
   "description": "Why UK professional services firms are replacing email and Dropbox with proper client document portals. What changes, what it costs, and how to make the switch without disrupting client relationships.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

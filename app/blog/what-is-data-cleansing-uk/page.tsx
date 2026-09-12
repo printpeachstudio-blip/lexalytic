@@ -73,7 +73,7 @@ export default function BlogPost() {
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Quality</span>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Cleansing</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>May 2026 · 15 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2026 · 15 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
             What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?

@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "How Wedding Photographers Can Automate Client Communication Without Losing the Personal Touch",
   "description": "A practical guide for UK wedding photographers on automating the repetitive parts of client communication while keeping what makes clients feel valued.",
-  "datePublished": "2027-07-15",
-  "dateModified": "2027-07-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

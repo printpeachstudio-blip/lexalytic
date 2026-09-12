@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Your GP Is Not What The Calculator Told You",
   "description": "A pint costing £1.42 does not cost £1.42. Line cleaning, ullage and over-pouring mean you buy more than you sell, and almost every GP calculator ignores it.",
-  "datePublished": "2027-03-09",
-  "dateModified": "2027-03-09",
+  "datePublished": "2026-09-15",
+  "dateModified": "2026-09-15",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -62,7 +62,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Hospitality</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>March 2027 · 7 min read</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 7 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Your GP Is Not What The Calculator Told You</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
