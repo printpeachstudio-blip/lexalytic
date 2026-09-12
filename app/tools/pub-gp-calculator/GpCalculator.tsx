@@ -2,6 +2,21 @@
 
 import React, { useState, useMemo } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_LINES = [
+    { id: 'ex1', name: 'House lager', category: 'draught', cost: '1.42', price: '5.40', volume: '380', wastage: '' },
+    { id: 'ex2', name: 'Cask bitter', category: 'draught', cost: '1.18', price: '4.60', volume: '210', wastage: '' },
+    { id: 'ex3', name: 'Craft IPA', category: 'draught', cost: '2.05', price: '6.80', volume: '140', wastage: '' },
+    { id: 'ex4', name: 'Bottled lager', category: 'bottled', cost: '1.30', price: '4.50', volume: '95', wastage: '' },
+    { id: 'ex5', name: 'House gin measure', category: 'spirits', cost: '0.62', price: '4.20', volume: '160', wastage: '' },
+    { id: 'ex6', name: 'Premium gin measure', category: 'spirits', cost: '1.10', price: '5.80', volume: '85', wastage: '' },
+    { id: 'ex7', name: 'House red 175ml', category: 'wine', cost: '1.65', price: '6.20', volume: '120', wastage: '' },
+    { id: 'ex8', name: 'Prosecco 125ml', category: 'wine', cost: '1.40', price: '6.50', volume: '70', wastage: '' },
+    { id: 'ex9', name: 'Post mix cola', category: 'softs', cost: '0.18', price: '2.80', volume: '240', wastage: '' },
+    { id: 'ex10', name: 'Bottled water', category: 'softs', cost: '0.45', price: '2.20', volume: '60', wastage: '' },
+  ]
+
+
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
 
@@ -75,6 +90,7 @@ interface Row {
 export default function GpCalculator() {
   const [vat, setVat] = useState(true)
   const [lines, setLines] = useState<Line[]>([
+
     { id: uid(), name: 'House lager', category: 'draught', cost: '1.42', price: '5.60', volume: '420', wastage: '5.5' },
     { id: uid(), name: 'House gin, 25ml', category: 'spirits', cost: '0.62', price: '4.20', volume: '110', wastage: '3' },
     { id: uid(), name: 'House red, 175ml', category: 'wineglass', cost: '1.35', price: '6.50', volume: '85', wastage: '4' },
@@ -140,6 +156,11 @@ export default function GpCalculator() {
       annualWastage: wastageCost * 52, annualGp: gp * 52 }
   }, [rows])
 
+  const loadSample = () => {
+    setLines(SAMPLE_LINES)
+  setVat(true)
+  }
+
   return (
     <div className="tool-page">
       <style>{`
@@ -167,6 +188,15 @@ export default function GpCalculator() {
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 680 }}>
           Gross profit across the whole range, with wastage in it
         </h1>
+        {lines.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A wet led pub with ten lines across draught, bottles, spirits, wine and softs. The blended figure is what matters, and the mix is doing more than any single line.</span>
+          </div>
+        )}
+
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 660, margin: '0 0 8px' }}>
           Most GP calculators do one product at a time and ignore wastage, which makes every number
           flattering. Line cleaning, ullage and over-pouring mean you buy more than you sell, so the real

@@ -2,6 +2,16 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_JOBS = [
+    { id: 'ex1', ref: 'HP-2261', client: 'Ashcombe Developments', workDone: '48500', invoiced: '31000', paid: '31000', lastWorkDate: '2026-08-31', lastInvoiceDate: '2026-08-09', terms: '30' },
+    { id: 'ex2', ref: 'HP-2274', client: 'Meridian Care Ltd', workDone: '22800', invoiced: '22800', paid: '9200', lastWorkDate: '2026-07-16', lastInvoiceDate: '2026-07-13', terms: '30' },
+    { id: 'ex3', ref: 'HP-2280', client: 'Fairweather and Sons', workDone: '67200', invoiced: '41000', paid: '41000', lastWorkDate: '2026-09-04', lastInvoiceDate: '2026-07-27', terms: '45' },
+    { id: 'ex4', ref: 'HP-2288', client: 'Northgate Logistics', workDone: '15400', invoiced: '0', paid: '0', lastWorkDate: '2026-08-17', lastInvoiceDate: '', terms: '30' },
+    { id: 'ex5', ref: 'HP-2291', client: 'Calder Estates', workDone: '38900', invoiced: '38900', paid: '38900', lastWorkDate: '2026-08-24', lastInvoiceDate: '2026-07-02', terms: '30' },
+  ]
+
+
 // Stripe Payment Link for the cash release plan.
 // Success URL: https://www.lexalytic.com/tools/lockup-tracker?ref=crp-9j4tn6
 const STRIPE_LINK = 'https://buy.stripe.com/9B66oA5Sx1I65fCfgg3AY09'
@@ -109,6 +119,7 @@ function build(job: Job): Row {
 
 export default function LockupTracker() {
   const [jobs, setJobs] = useState<Job[]>([])
+
   const [firm, setFirm] = useState<Firm>({ name: '', revenue: '' })
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
@@ -287,6 +298,7 @@ export default function LockupTracker() {
     Use your browser print dialogue and choose Save as PDF.
   </div>
   <h1>Cash release plan</h1>
+
   <p class="sub">${firm.name} · Prepared ${today}</p>
 
   <div class="headline">
@@ -339,6 +351,11 @@ export default function LockupTracker() {
     if (w) { w.document.write(html); w.document.close() }
   }, [rows, totals, quickWins, aged, firm])
 
+  const loadSample = () => {
+    setJobs(SAMPLE_JOBS)
+  setFirm({ name: 'Harwood Partners', revenue: '1850000' })
+  }
+
   const submitInterest = async () => {
     if (!EMAIL_RE.test(email.trim())) { setSendError('Enter an email address we can reach you on.'); return }
     setSending(true); setSendError('')
@@ -390,6 +407,15 @@ export default function LockupTracker() {
         <p style={{ fontSize: 14, lineHeight: 1.7, color: '#8A8279', maxWidth: 640, margin: '0 0 32px' }}>
           Saved in this browser only. No client or financial data is uploaded anywhere.
         </p>
+        {jobs.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A five partner consultancy with five live jobs. One has work delivered and nothing billed for a month, one has been invoiced and not paid for two, and one is clean.</span>
+          </div>
+        )}
+
 
         {/* Firm details */}
         <div className="tool-card" style={{ padding: 22, marginBottom: 22 }}>

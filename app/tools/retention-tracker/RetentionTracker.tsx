@@ -2,6 +2,15 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_JOBS = [
+    { id: 'ex1', ref: 'BE-0417', contractor: 'Kier Construction', contractValue: '184000', certified: '184000', retentionPct: '5', capPct: '', pcDate: '2025-07-29', defectsMonths: '12', firstReleased: true, finalReleased: false },
+    { id: 'ex2', ref: 'BE-0432', contractor: 'Morgan Sindall', contractValue: '96500', certified: '82000', retentionPct: '3', capPct: '', pcDate: '', defectsMonths: '12', firstReleased: false, finalReleased: false },
+    { id: 'ex3', ref: 'BE-0398', contractor: 'Willmott Dixon', contractValue: '142000', certified: '142000', retentionPct: '5', capPct: '', pcDate: '2026-06-09', defectsMonths: '6', firstReleased: false, finalReleased: false },
+    { id: 'ex4', ref: 'BE-0441', contractor: 'Galliford Try', contractValue: '58200', certified: '58200', retentionPct: '5', capPct: '', pcDate: '2025-04-10', defectsMonths: '12', firstReleased: true, finalReleased: true },
+  ]
+
+
 // Stripe Payment Link. Its success URL must match UNLOCK_PARAM below:
 // https://www.lexalytic.com/tools/retention-tracker?ref=rrp-8k2vq9
 const STRIPE_LINK = 'https://buy.stripe.com/7sY28k4OtfyW37u7NO3AY07'
@@ -181,6 +190,7 @@ function interestOn(amount: number, daysOverdue: number): number {
 
 export default function RetentionTracker() {
   const [jobs, setJobs] = useState<Job[]>([])
+
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
@@ -458,6 +468,7 @@ export default function RetentionTracker() {
     Use your browser print dialogue and choose Save as PDF. Check the figures and the contractor details before sending.
   </div>
   <h1>Retention recovery pack</h1>
+
   <p class="sub">${sender.company} · Prepared ${today}</p>
   ${analysisHtml}
   ${sections}
@@ -467,6 +478,11 @@ export default function RetentionTracker() {
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }
   }, [overdueItems])
+
+  const loadSample = () => {
+    setJobs(SAMPLE_JOBS)
+  setSender({ company: 'Brindley Electrical Ltd', address: '14 Foundry Lane, Walsall WS2 8QT', contact: 'Dave Brindley', email: 'dave@brindleyelectrical.co.uk', phone: '01922 445 118' })
+  }
 
   const submitInterest = async () => {
     if (!EMAIL_RE.test(email.trim())) { setSendError('Enter an email address we can reach you on.'); return }
@@ -521,6 +537,15 @@ export default function RetentionTracker() {
           Saved in this browser only. Nothing is uploaded, which also means clearing your browser data
           erases it. Export to your calendar to keep the dates somewhere permanent.
         </p>
+        {jobs.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>An electrical subcontractor with four jobs. One finished over a year ago with the second half of retention still unclaimed, one where practical completion has not been certified, and one fully released.</span>
+          </div>
+        )}
+
 
         {loaded && jobs.length > 0 && (
           <div className="tool-card" style={{ padding: '22px 26px', marginBottom: 22,

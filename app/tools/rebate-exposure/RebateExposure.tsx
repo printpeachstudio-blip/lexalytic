@@ -2,6 +2,17 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_PLACEMENTS: Placement[] = [
+    { id: 'ex1', candidate: 'J Okafor', client: 'Tandem Logistics', salary: '48000', feePct: '20', startDate: '2026-08-20', scale: 'taper', windowWeeks: '12', invoicePaid: true, leftDate: '' },
+    { id: 'ex2', candidate: 'M Patel', client: 'Brightside Care', salary: '34500', feePct: '18', startDate: '2026-07-23', scale: 'taper', windowWeeks: '8', invoicePaid: true, leftDate: '' },
+    { id: 'ex3', candidate: 'R Kowalski', client: 'Ashworth Engineering', salary: '62000', feePct: '22', startDate: '2026-09-03', scale: 'flat', windowWeeks: '12', invoicePaid: false, leftDate: '' },
+    { id: 'ex4', candidate: 'L Chen', client: 'Tandem Logistics', salary: '41000', feePct: '20', startDate: '2026-08-05', scale: 'taper', windowWeeks: '12', invoicePaid: true, leftDate: '2026-09-06' },
+    { id: 'ex5', candidate: 'A Hussain', client: 'Meadowbank Solicitors', salary: '55000', feePct: '25', startDate: '2026-06-30', scale: 'taper', windowWeeks: '12', invoicePaid: true, leftDate: '' },
+    { id: 'ex6', candidate: 'T Morrison', client: 'Brightside Care', salary: '29800', feePct: '15', startDate: '2026-05-23', scale: 'flat', windowWeeks: '4', invoicePaid: true, leftDate: '' },
+  ]
+
+
 // Stripe Payment Link for the desk exposure report.
 // Success URL must be: https://www.lexalytic.com/tools/rebate-exposure?ref=der-4m7xp2
 const STRIPE_LINK = 'https://buy.stripe.com/5kQ5kwep3aeC5fCgkk3AY08'
@@ -146,6 +157,7 @@ function build(p: Placement): Row {
 
 export default function RebateExposure() {
   const [placements, setPlacements] = useState<Placement[]>([])
+
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
@@ -329,6 +341,7 @@ export default function RebateExposure() {
     Use your browser print dialogue and choose Save as PDF.
   </div>
   <h1>Desk exposure report</h1>
+
   <p class="sub">${agency.name}${agency.contact ? ' · ' + agency.contact : ''} · Prepared ${today}</p>
 
   <div class="headline">
@@ -366,6 +379,11 @@ export default function RebateExposure() {
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }
   }, [rows, runoff, totals, agency])
+
+  const loadSample = () => {
+    setPlacements(SAMPLE_PLACEMENTS)
+  setAgency({ name: 'Fenwick Recruitment', contact: 'Sarah Fenwick' })
+  }
 
   const submitInterest = async () => {
     if (!EMAIL_RE.test(email.trim())) { setSendError('Enter an email address we can reach you on.'); return }
@@ -420,6 +438,15 @@ export default function RebateExposure() {
         <p style={{ fontSize: 14, lineHeight: 1.7, color: '#8A8279', maxWidth: 620, margin: '0 0 32px' }}>
           Saved in this browser only. Nothing is uploaded and no candidate or client data leaves your machine.
         </p>
+        {placements.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A six placement desk. One candidate has just left inside the rebate window, one started last week and is fully exposed, and two are safely past the window.</span>
+          </div>
+        )}
+
 
         {loaded && placements.length > 0 && (
           <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 22 }}>

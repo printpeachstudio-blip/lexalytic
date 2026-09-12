@@ -2,6 +2,23 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_PROPERTIES = [
+    { id: 'ex1', name: '14 Ashby Road', postcode: 'LE11 3AA', certs: [
+      { type: 'gas', lastDone: '2025-10-07' }, { type: 'eicr', lastDone: '2022-08-04' },
+      { type: 'fire_alarm', lastDone: '2026-03-16' }, { type: 'licence', lastDone: '2023-05-31' },
+    ]},
+    { id: 'ex2', name: '7 Storer Road', postcode: 'LE11 5EQ', certs: [
+      { type: 'gas', lastDone: '2026-07-24' }, { type: 'eicr', lastDone: '2025-08-08' },
+      { type: 'fire_alarm', lastDone: '2026-06-14' }, { type: 'licence', lastDone: '2025-01-20' },
+    ]},
+    { id: 'ex3', name: '22 Burleigh Road', postcode: 'LE11 3BE', certs: [
+      { type: 'gas', lastDone: '2025-09-05' }, { type: 'eicr', lastDone: '2021-06-30' },
+      { type: 'fire_alarm', lastDone: '' }, { type: 'licence', lastDone: '2022-01-16' },
+    ]},
+  ]
+
+
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwjppa'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const STORAGE_KEY = 'lexalytic.hmo.tracker.v1'
@@ -85,6 +102,7 @@ function icsDate(d: Date): string {
 
 export default function HmoTracker() {
   const [properties, setProperties] = useState<Property[]>([])
+
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
   const [newName, setNewName] = useState('')
@@ -226,6 +244,10 @@ export default function HmoTracker() {
     URL.revokeObjectURL(url)
   }, [allDue])
 
+  const loadSample = () => {
+    setProperties(SAMPLE_PROPERTIES)
+  }
+
   const submitInterest = async () => {
     if (!EMAIL_RE.test(email.trim())) {
       setSendError('Enter an email address we can reach you on.')
@@ -286,6 +308,15 @@ export default function HmoTracker() {
         }}>
           HMO compliance dates, in one place.
         </h1>
+        {properties.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>Three student HMOs in Loughborough. One gas certificate is a month overdue, one EICR is past five years, and one property has no fire alarm test on record at all.</span>
+          </div>
+        )}
+
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 590, margin: '0 0 8px' }}>
           Add your properties and the date each certificate was last done. This works out every
           renewal date and shows you what is overdue, what is due within 30 days, and what is

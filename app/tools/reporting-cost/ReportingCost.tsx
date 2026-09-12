@@ -2,6 +2,15 @@
 
 import React, { useState, useMemo, useCallback } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_ROLES = [
+    { id: 'ex1', title: 'Finance manager', salary: '52000', people: '1', hours: '6', perMonth: '4' },
+    { id: 'ex2', title: 'Operations lead', salary: '44000', people: '1', hours: '3', perMonth: '4' },
+    { id: 'ex3', title: 'Account managers', salary: '36000', people: '3', hours: '2', perMonth: '4' },
+    { id: 'ex4', title: 'Managing director', salary: '85000', people: '1', hours: '1.5', perMonth: '4' },
+  ]
+
+
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
 
@@ -47,6 +56,7 @@ interface RoleResult {
 
 export default function ReportingCost() {
   const [roles, setRoles] = useState<Role[]>([
+
     { id: uid(), title: 'Finance manager', salary: '52000', people: '1', hours: '6', perMonth: '1' },
     { id: uid(), title: 'Analyst', salary: '34000', people: '2', hours: '4', perMonth: '4' },
   ])
@@ -105,6 +115,12 @@ export default function ReportingCost() {
     return { low, high, diff: (high.hourly - low.hourly) * high.hoursYear }
   }, [results])
 
+  const loadSample = () => {
+    setRoles(SAMPLE_ROLES)
+  setReduction('75')
+  setBuildCost('4500')
+  }
+
   return (
     <div className="tool-page">
       <style>{`
@@ -131,6 +147,15 @@ export default function ReportingCost() {
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 640 }}>
           What is manual reporting actually costing you?
         </h1>
+        {roles.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A twenty person business where four roles touch the weekly report. The finance manager spends most of a day a week on it, and the MD spends an hour and a half re-checking what the finance manager did.</span>
+          </div>
+        )}
+
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 640, margin: '0 0 8px' }}>
           Most calculators multiply hours by salary, which understates it by roughly a third. An hour of
           someone's time costs the business their salary plus employer National Insurance plus pension,

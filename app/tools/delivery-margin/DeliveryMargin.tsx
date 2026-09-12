@@ -2,6 +2,16 @@
 
 import React, { useState, useMemo } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_DISHES = [
+    { id: 'ex1', name: 'Margherita pizza', dineInPrice: '11.50', foodCost: '2.40', deliveryPrice: '12.50', weeklyOrders: '85' },
+    { id: 'ex2', name: 'Chicken katsu curry', dineInPrice: '13.95', foodCost: '4.10', deliveryPrice: '14.95', weeklyOrders: '62' },
+    { id: 'ex3', name: 'Beef burger and fries', dineInPrice: '14.50', foodCost: '5.20', deliveryPrice: '15.50', weeklyOrders: '110' },
+    { id: 'ex4', name: 'Caesar salad', dineInPrice: '9.95', foodCost: '3.60', deliveryPrice: '9.95', weeklyOrders: '28' },
+    { id: 'ex5', name: 'Sticky toffee pudding', dineInPrice: '6.50', foodCost: '1.35', deliveryPrice: '6.50', weeklyOrders: '44' },
+  ]
+
+
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
 
@@ -65,6 +75,7 @@ export default function DeliveryMargin() {
   const [packaging, setPackaging] = useState('0.45')
 
   const [dishes, setDishes] = useState<Dish[]>([
+
     { id: uid(), name: 'Chicken burger', dineInPrice: '14.50', foodCost: '4.20', deliveryPrice: '14.50', weeklyOrders: '40' },
     { id: uid(), name: 'Margherita pizza', dineInPrice: '11.00', foodCost: '2.10', deliveryPrice: '11.00', weeklyOrders: '65' },
     { id: uid(), name: 'Steak frites', dineInPrice: '24.00', foodCost: '9.80', deliveryPrice: '24.00', weeklyOrders: '12' },
@@ -126,6 +137,13 @@ export default function DeliveryMargin() {
       dineInEquivalent, avgPct, avgDineIn, gap: avgDineIn - avgPct, count: withOrders.length }
   }, [rows])
 
+  const loadSample = () => {
+    setDishes(SAMPLE_DISHES)
+  setPlatform('deliveroo')
+  setVatRegistered(true)
+  setPackaging('0.85')
+  }
+
   const samePricing = rows.some(r =>
     r.dish.deliveryPrice && r.dish.dineInPrice &&
     parseFloat(r.dish.deliveryPrice) === parseFloat(r.dish.dineInPrice))
@@ -162,6 +180,15 @@ export default function DeliveryMargin() {
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           Which dishes lose you money on delivery?
         </h1>
+        {dishes.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A neighbourhood restaurant on Deloveroo at standard commission. Five dishes, two of which are priced the same for delivery as dine in, which is where the problem usually is.</span>
+          </div>
+        )}
+
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 650, margin: '0 0 8px' }}>
           A £12 dish on Deliveroo returns about £8.40 after commission, before you have taken the VAT off
           or paid for the box it went in. Most kitchens price delivery identically to dine-in, which means

@@ -2,6 +2,23 @@
 
 import React, { useState, useMemo } from 'react'
 
+/** A realistic example, so somebody can see what this does before trusting it with real figures. */
+const SAMPLE_SESSIONS = [
+    { id: 'ex1', day: 'Tuesday', name: 'Lunch', sales: '410', hours: '14', avgRate: '13.20', covers: '32' },
+    { id: 'ex2', day: 'Tuesday', name: 'Evening', sales: '980', hours: '22', avgRate: '13.40', covers: '71' },
+    { id: 'ex3', day: 'Wednesday', name: 'Lunch', sales: '385', hours: '14', avgRate: '13.20', covers: '29' },
+    { id: 'ex4', day: 'Wednesday', name: 'Evening', sales: '1240', hours: '24', avgRate: '13.40', covers: '88' },
+    { id: 'ex5', day: 'Thursday', name: 'Lunch', sales: '520', hours: '15', avgRate: '13.20', covers: '41' },
+    { id: 'ex6', day: 'Thursday', name: 'Evening', sales: '1680', hours: '28', avgRate: '13.60', covers: '116' },
+    { id: 'ex7', day: 'Friday', name: 'Lunch', sales: '740', hours: '18', avgRate: '13.20', covers: '58' },
+    { id: 'ex8', day: 'Friday', name: 'Evening', sales: '2890', hours: '38', avgRate: '13.80', covers: '184' },
+    { id: 'ex9', day: 'Saturday', name: 'Lunch', sales: '1120', hours: '22', avgRate: '13.40', covers: '82' },
+    { id: 'ex10', day: 'Saturday', name: 'Evening', sales: '3240', hours: '42', avgRate: '13.80', covers: '206' },
+    { id: 'ex11', day: 'Sunday', name: 'Lunch', sales: '2410', hours: '34', avgRate: '13.60', covers: '158' },
+    { id: 'ex12', day: 'Sunday', name: 'Evening', sales: '620', hours: '18', avgRate: '13.40', covers: '44' },
+  ]
+
+
 const AMBER = '#C17D2E'
 const INK = '#1A1815'
 
@@ -59,6 +76,7 @@ export default function LabourDaypart() {
   const [gp, setGp] = useState('68')
   const [fixedWeekly, setFixedWeekly] = useState('3200')
   const [sessions, setSessions] = useState<Session[]>([
+
     { id: uid(), day: 'Tue', name: 'Lunch', sales: '340', hours: '14', avgRate: '13.20', covers: '22' },
     { id: uid(), day: 'Tue', name: 'Evening', sales: '890', hours: '22', avgRate: '13.20', covers: '48' },
     { id: uid(), day: 'Fri', name: 'Evening', sales: '2650', hours: '38', avgRate: '13.80', covers: '135' },
@@ -115,6 +133,12 @@ export default function LabourDaypart() {
       annualNegative: negative.reduce((s, r) => s + r.contribution, 0) * 52 }
   }, [rows, fixed])
 
+  const loadSample = () => {
+    setSessions(SAMPLE_SESSIONS)
+  setGp('68')
+  setFixedWeekly('1850')
+  }
+
   const exampleRate = parseFloat(sessions[0]?.avgRate || '13.20') || 13.2
 
   return (
@@ -144,6 +168,15 @@ export default function LabourDaypart() {
           letterSpacing: '-0.025em', fontWeight: 400, margin: '0 0 16px', maxWidth: 660 }}>
           Which sessions actually make you money?
         </h1>
+        {sessions.length === 0 && (
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap',
+            marginBottom: 28, padding: '14px 18px', borderRadius: 8,
+            background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.2)' }}>
+            <button className="tool-link" onClick={loadSample}>Try it with an example</button>
+            <span style={{ fontSize: 13, color: '#8A8279' }}>A gastropub week, twelve sessions. Friday and Saturday evening carry it, Tuesday and Wednesday lunch cost money to open, and Sunday evening is the one worth looking at.</span>
+          </div>
+        )}
+
         <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 660, margin: '0 0 8px' }}>
           A publican worked out after six months that his afternoon shift covered its costs and
           contributed nothing, because nobody had put labour spend next to till sales for that
