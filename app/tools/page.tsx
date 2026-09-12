@@ -5,9 +5,9 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools' },
-  title: 'Free Tools for UK Businesses | Data, Construction, Hospitality, Property | Lexalytic',
+  title: 'Free Tools for UK Businesses and Homeowners | Lexalytic',
   description: 'Free browser based tools for UK businesses. Check a spreadsheet for the errors that break UK systems, track construction retention across every job, see how much placement revenue is still refundable, and work out whether a property needs an HMO licence. No signup, nothing uploaded.',
-  keywords: 'free business tools UK, custom software cost UK, bespoke software price, free data quality checker, spreadsheet error checker UK, construction retention tracker, pub GP calculator, delivery margin calculator, restaurant profit benchmark, lock-up days calculator, WIP days, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
+  keywords: 'free business tools UK, custom software cost UK, bespoke software price, free data quality checker, spreadsheet error checker UK, construction retention tracker, pub GP calculator, delivery margin calculator, restaurant profit benchmark, renovation cost calculator UK, hidden renovation costs, lock-up days calculator, WIP days, recruitment rebate calculator, rebate exposure tracker, HMO licence checker, HMO compliance tracker, free landlord tools UK, UK compliance tools',
   openGraph: {
     title: 'Free Tools for UK Businesses | Lexalytic',
     description: 'Spreadsheet data quality, construction retention, recruitment rebate exposure, HMO licensing and certificates. Free, no signup, nothing uploaded.',
@@ -32,6 +32,23 @@ const groups = [
           'Answer five questions about the shape of what you need and get an indicative price and timeline, with every line itemised and explained. Not a headline figure that grows once you are talking to someone. It shows what a second user group actually adds and why, what a Xero connection costs, and why migrating four inconsistent spreadsheets costs more than starting fresh.',
         detail:
           'It produces a written brief you can download and take to any developer. It covers what any of them will ask you.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+    ],
+  },
+  {
+    heading: 'Homeowners',
+    intro:
+      'Not a business tool, but the same problem: money leaving in ways nobody wrote down at the start.',
+    tools: [
+      {
+        href: '/tools/renovation-planner',
+        name: 'Renovation cost planner',
+        forWho: 'Anyone having building work done',
+        summary:
+          'Cost overrun is what homeowners regret most, and the commonest cause of a fight with a builder is not late payment but work nobody agreed to in writing. A builder quotes the building work. VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live while it happens are all yours, and together they add thirty to fifty per cent.',
+        detail:
+          'It also produces a scope document to send to three builders, so the quotes come back answering the same questions rather than three different ones.',
         related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
       },
     ],

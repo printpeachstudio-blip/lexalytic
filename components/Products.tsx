@@ -101,7 +101,7 @@ export default function Products() {
           lineHeight: '1.8', maxWidth: '620px', marginTop: '32px',
         }}>
           Both have a free version that does the calculation once, in your browser, with nothing
-          uploaded. <Link href="/tools" style={{ color: 'var(--amber)' }}>All eleven free tools</Link> are
+          uploaded. <Link href="/tools" style={{ color: 'var(--amber)' }}>All thirteen free tools</Link> are
           worth a look whether or not you ever pay us anything.
         </p>
       </div>
