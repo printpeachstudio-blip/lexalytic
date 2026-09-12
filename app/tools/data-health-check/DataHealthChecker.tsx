@@ -1294,11 +1294,14 @@ export default function DataHealthChecker() {
                   ? 'You send the file, we send it back done. Everything the tool does, plus the judgement calls it deliberately refuses to make: which of two plausible duplicates is really the same customer, what an ambiguous date column actually means, whether a name is McDonald or Mcdonald. Back within 24 hours.'
                   : 'Nothing here needs fixing. What we would still do is verify each company against Companies House and check the email domains still resolve, which a formatting scan cannot see.'}
               </p>
+              <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75, margin: '12px 0 0', maxWidth: 620 }}>
+                A small file costs the same as the tool that does it automatically, which is deliberate. If you would rather not sit and review forty groups of near duplicates, that is a reasonable thing to want and the price should not be the reason you do it yourself. Larger files cost more because they genuinely take longer.
+              </p>
               <div style={{
                 display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 24,
                 paddingBottom: 20, borderBottom: '1px solid rgba(255,255,255,0.12)'
               }}>
-                {([['Up to 1,000 rows', '\u00a349'], ['Up to 10,000 rows', '\u00a399'], ['Up to 50,000 rows', '\u00a3149']] as [string, string][]).map(([label, price]) => (
+                {([['Up to 1,000 rows', '\u00a329'], ['Up to 10,000 rows', '\u00a369'], ['Up to 50,000 rows', '\u00a3129']] as [string, string][]).map(([label, price]) => (
                   <div key={label}>
                     <div className="dhc-serif" style={{ fontSize: 22, color: '#C17D2E', lineHeight: 1.2 }}>{price}</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>{label}</div>
