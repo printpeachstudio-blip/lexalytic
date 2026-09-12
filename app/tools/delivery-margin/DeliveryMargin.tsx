@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
+
+const STATE_KEY = 'lexalytic.dm.v1'
 
 /** A realistic example, so somebody can see what this does before trusting it with real figures. */
 const SAMPLE_DISHES = [
@@ -136,6 +138,27 @@ export default function DeliveryMargin() {
     return { weekly, annual: weekly * 52, losing, losingWeekly, revenue,
       dineInEquivalent, avgPct, avgDineIn, gap: avgDineIn - avgPct, count: withOrders.length }
   }, [rows])
+
+  // Restore on load, save on change. Same pattern as the other tools.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STATE_KEY)
+      if (raw) {
+        const v = JSON.parse(raw)
+        if (v.platform !== undefined) setPlatform(v.platform)
+        if (v.customRate !== undefined) setCustomRate(v.customRate)
+        if (v.vatRegistered !== undefined) setVatRegistered(v.vatRegistered)
+        if (v.packaging !== undefined) setPackaging(v.packaging)
+        if (v.dishes !== undefined) setDishes(v.dishes)
+      }
+    } catch { /* storage unavailable */ }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ platform, customRate, vatRegistered, packaging, dishes }))
+    } catch { /* ignore */ }
+  }, [platform, customRate, vatRegistered, packaging, dishes])
 
   const loadSample = () => {
     setDishes(SAMPLE_DISHES)

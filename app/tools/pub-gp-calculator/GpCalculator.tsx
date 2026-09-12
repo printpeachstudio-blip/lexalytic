@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
+
+const STATE_KEY = 'lexalytic.gp.v1'
 
 /** A realistic example, so somebody can see what this does before trusting it with real figures. */
 const SAMPLE_LINES = [
@@ -155,6 +157,24 @@ export default function GpCalculator() {
     return { revenue, gp, blended, wastageCost, below, worst, count: active.length,
       annualWastage: wastageCost * 52, annualGp: gp * 52 }
   }, [rows])
+
+  // Restore on load, save on change. Same pattern as the other tools.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STATE_KEY)
+      if (raw) {
+        const v = JSON.parse(raw)
+        if (v.vat !== undefined) setVat(v.vat)
+        if (v.lines !== undefined) setLines(v.lines)
+      }
+    } catch { /* storage unavailable */ }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ vat, lines }))
+    } catch { /* ignore */ }
+  }, [vat, lines])
 
   const loadSample = () => {
     setLines(SAMPLE_LINES)

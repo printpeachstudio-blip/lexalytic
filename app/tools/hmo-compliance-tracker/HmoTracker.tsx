@@ -483,7 +483,7 @@ export default function HmoTracker() {
                           <div style={{ fontSize: 13, color: '#8A8279', marginTop: 3, lineHeight: 1.55 }}>{ct.note}</div>
                         </div>
                         <div>
-                          <input aria-label="Date last done"
+                          <input
                             className="tool-in" type="date" style={{ width: '100%' }}
                             max={todayStr()}
                             value={cert?.lastDone || ''}

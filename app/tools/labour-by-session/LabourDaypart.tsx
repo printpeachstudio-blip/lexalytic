@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
+
+const STATE_KEY = 'lexalytic.ld.v1'
 
 /** A realistic example, so somebody can see what this does before trusting it with real figures. */
 const SAMPLE_SESSIONS = [
@@ -132,6 +134,25 @@ export default function LabourDaypart() {
       afterFixed, worst, best, count: active.length,
       annualNegative: negative.reduce((s, r) => s + r.contribution, 0) * 52 }
   }, [rows, fixed])
+
+  // Restore on load, save on change. Same pattern as the other tools.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STATE_KEY)
+      if (raw) {
+        const v = JSON.parse(raw)
+        if (v.gp !== undefined) setGp(v.gp)
+        if (v.fixedWeekly !== undefined) setFixedWeekly(v.fixedWeekly)
+        if (v.sessions !== undefined) setSessions(v.sessions)
+      }
+    } catch { /* storage unavailable */ }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ gp, fixedWeekly, sessions }))
+    } catch { /* ignore */ }
+  }, [gp, fixedWeekly, sessions])
 
   const loadSample = () => {
     setSessions(SAMPLE_SESSIONS)

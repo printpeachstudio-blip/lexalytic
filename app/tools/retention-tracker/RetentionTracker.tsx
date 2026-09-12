@@ -585,6 +585,134 @@ export default function RetentionTracker() {
         </div>
 
         {(adding || jobs.length === 0) && (
+          <div className="tool-card" style={{ padding: 24, marginBottom: 20 }}>
+            <div className="r-grid2">
+              <div className="tool-field">
+                <label className="tool-label">Job reference or site</label>
+                <input className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Riverside Phase 2" />
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Main contractor</label>
+                <input className="tool-in" value={draft.contractor || ''} onChange={e => setDraft({ ...draft, contractor: e.target.value })} placeholder="Who is holding the money" />
+              </div>
+            </div>
+            <div className="r-grid2">
+              <div className="tool-field">
+                <label className="tool-label">Contract value</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Value certified to date</label>
+                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
+                <div className="tool-hint">Gross value certified across all interim applications.</div>
+              </div>
+            </div>
+            <div className="r-grid3">
+              <div className="tool-field">
+                <label className="tool-label">Retention rate</label>
+                <input className="tool-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
+                <div className="tool-hint">Usually 5%.</div>
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Cap on retention</label>
+                <input className="tool-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
+                <div className="tool-hint">% of contract value. Deduction should stop here.</div>
+              </div>
+              <div className="tool-field">
+                <label className="tool-label">Defects period</label>
+                <input className="tool-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
+                <div className="tool-hint">Months. Usually 12.</div>
+              </div>
+            </div>
+            <div style={{ marginTop: 4, marginBottom: 16, padding: '16px 18px',
+              borderRadius: 8, border: '1px solid #E8E2D8', background: '#FDFCFA' }}>
+              <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                <div style={{ flex: '1 1 320px' }}>
+                  <div style={{ fontSize: 14, fontWeight: 600 }}>Stepped retention</div>
+                  <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 3, lineHeight: 1.6 }}>
+                    Only if your contract steps the rate down as certified value rises. Leave it empty
+                    and the flat rate above applies.
+                  </div>
+                </div>
+                <button className="tool-link"
+                  onClick={() => setDraft({ ...draft,
+                    tiers: [...(draft.tiers || []), { upTo: '', pct: '' }] })}>
+                  Add a tier
+                </button>
+              </div>
+
+              {(draft.tiers || []).map((t: any, i: number) => (
+                <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-end',
+                  flexWrap: 'wrap', marginTop: 12, paddingTop: 12,
+                  borderTop: '1px solid #F0EBE2' }}>
+                  <div className="tool-field" style={{ width: 150 }}>
+                    <label className="tool-label">Up to</label>
+                    <input className="tool-in" type="number" min={0} inputMode="decimal"
+                      value={t.upTo} placeholder="No limit"
+                      onChange={e => {
+                        const next = [...(draft.tiers || [])]
+                        next[i] = { ...next[i], upTo: e.target.value }
+                        setDraft({ ...draft, tiers: next })
+                      }} />
+                  </div>
+                  <div className="tool-field" style={{ width: 110 }}>
+                    <label className="tool-label">At</label>
+                    <input className="tool-in" type="number" min={0} step="0.1"
+                      value={t.pct} placeholder="%"
+                      onChange={e => {
+                        const next = [...(draft.tiers || [])]
+                        next[i] = { ...next[i], pct: e.target.value }
+                        setDraft({ ...draft, tiers: next })
+                      }} />
+                  </div>
+                  <button className="tool-link" style={{ color: '#8A8279', paddingBottom: 12 }}
+                    onClick={() => setDraft({ ...draft,
+                      tiers: (draft.tiers || []).filter((_: any, j: number) => j !== i) })}>
+                    Remove
+                  </button>
+                </div>
+              ))}
+
+              {(draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '').length > 0 &&
+                parseFloat(draft.certified || '0') > 0 && (
+                <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid #F0EBE2' }}>
+                  <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 6 }}>
+                    On {money(parseFloat(draft.certified || '0'))} certified, that holds
+                  </div>
+                  {tieredRetention(
+                    parseFloat(draft.certified || '0'),
+                    (draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '')
+                  ).breakdown.map((b: any, i: number) => (
+                    <div key={i} style={{ fontSize: 13, color: '#57514A', padding: '2px 0' }}>
+                      {money(b.from)} to {money(b.to)} at {b.pct}% is {money(b.amount)}
+                    </div>
+                  ))}
+                  <div style={{ fontSize: 14, fontWeight: 600, marginTop: 8, paddingTop: 8,
+                    borderTop: '1px solid #F0EBE2' }}>
+                    {money(tieredRetention(
+                      parseFloat(draft.certified || '0'),
+                      (draft.tiers || []).filter((t: any) => String(t.pct).trim() !== '')
+                    ).held)} in total
+                  </div>
+                  <div style={{ fontSize: 12.5, color: '#8A8279', marginTop: 8, lineHeight: 1.6 }}>
+                    Each rate applies only to the slice inside its tier, the way tax bands work. Leave
+                    the last threshold blank so it runs to the top.
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="tool-field" style={{ maxWidth: 260 }}>
+              <label className="tool-label">Practical completion date</label>
+              <input className="tool-in" type="date" max={todayStr()} value={draft.pcDate || ''}
+                onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, pcDate: v }) }} />
+              <div className="tool-hint">The date works were actually completed, not a future target. Leave blank if the job is still live. Both release dates run from this.</div>
+            </div>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginTop: 8 }}>
+              <button className="tool-btn" onClick={addJob} disabled={!draft.ref?.trim() || !draft.contractValue}>Add job</button>
+              {jobs.length > 0 && <button className="tool-link" style={{ color: '#8A8279' }} onClick={() => setAdding(false)}>Cancel</button>}
+            </div>
+          </div>
         )}
 
         {computed.map(c => {
@@ -792,16 +920,16 @@ export default function RetentionTracker() {
               <div className="tool-serif" style={{ fontSize: 19, marginBottom: 10 }}>
                 {jobs.length >= 8
                   ? `${jobs.length} jobs is more than a browser tab should be holding.`
-                  : 'Want the dates somewhere safer?'}
+                  : 'Rather it did the remembering?'}
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: '#57514A', margin: '0 0 18px', maxWidth: 560 }}>
                 {jobs.length >= 8
                   ? 'At this size retention is one line in a bigger problem. Applications for payment, CIS deductions, job costing against estimate and a cash flow forecast that accounts for money you have earned but cannot access yet. We build that as one system, priced once and owned by you.'
-                  : 'We are building a version with a login, so the dates sync across devices and you get an email before each release falls due rather than relying on a calendar you might not check.'}
+                  : 'Retention Manager is this with an account behind it: reminders before each release, application letters generated from your data, and everything on any device. Or if retention is one line in a bigger problem, we can talk about that instead.'}
               </p>
               {!showForm ? (
                 <button className="tool-btn" onClick={() => setShowForm(true)}>
-                  {jobs.length >= 8 ? 'Talk about a proper system' : 'Tell me when that is ready'}
+                  {jobs.length >= 8 ? 'Talk about a proper system' : 'Talk to us'}
                 </button>
               ) : (
                 <div>

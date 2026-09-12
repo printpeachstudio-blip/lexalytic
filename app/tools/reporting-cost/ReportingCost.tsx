@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useState, useMemo, useCallback, useEffect } from 'react'
+
+const STATE_KEY = 'lexalytic.rc.v1'
 
 /** A realistic example, so somebody can see what this does before trusting it with real figures. */
 const SAMPLE_ROLES = [
@@ -114,6 +116,25 @@ export default function ReportingCost() {
     if (high.hourly / low.hourly < 1.4) return null
     return { low, high, diff: (high.hourly - low.hourly) * high.hoursYear }
   }, [results])
+
+  // Restore on load, save on change. Same pattern as the other tools.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STATE_KEY)
+      if (raw) {
+        const v = JSON.parse(raw)
+        if (v.roles !== undefined) setRoles(v.roles)
+        if (v.reduction !== undefined) setReduction(v.reduction)
+        if (v.buildCost !== undefined) setBuildCost(v.buildCost)
+      }
+    } catch { /* storage unavailable */ }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ roles, reduction, buildCost }))
+    } catch { /* ignore */ }
+  }, [roles, reduction, buildCost])
 
   const loadSample = () => {
     setRoles(SAMPLE_ROLES)
