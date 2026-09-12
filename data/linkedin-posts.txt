@@ -838,6 +838,25 @@ We built it in a few weeks. It ranks on Google. It helps real people.
 
 The gap between what exists and what people actually need is usually obvious once you look for it. The technology to fill it is almost never as complicated as people assume.
 
+2027-01-20
+A service charge demand landed for major works done two years earlier.
+
+Nothing in between. No mention of it at the time. Then a five figure sum with a payment date on it.
+
+Most people assume they have no choice.
+
+Section 20B of the Landlord and Tenant Act 1985 says costs incurred more than eighteen months before the demand are not recoverable, unless within that eighteen months the leaseholder was told in writing that the costs had been incurred and a demand was coming.
+
+Two conditions. The clock runs from when the money left the freeholder, not from when the work finished. And the notification has to actually say costs have been incurred and will be demanded. A newsletter mentioning that works are planned does not count.
+
+It happens more than you would think. Major works get paid by the freeholder and recharged later, the accounts take a while, the managing agent changes partway through, and a year disappears without anyone intending it.
+
+The leaseholder has no idea when the money actually left. And nobody volunteers it.
+
+You can require the invoices under section 22. They carry dates. That is how you find out.
+
+lexalytic.com/tools/service-charge-check
+
 2027-01-21
 Something I have noticed about the best software projects I have worked on:
 
@@ -860,6 +879,27 @@ The landlords managing HMOs well are either using a combination of tools and spr
 
 If you manage HMO properties and the admin is taking more time than it should, the problem is almost certainly the tools, not you.
 
+2027-01-27
+Where major works cost any leaseholder more than £250, the landlord has to consult properly before starting.
+
+Three stages, thirty days each for the first two.
+
+If they did not, and the tribunal does not excuse it, they can recover £250 from each leaseholder and no more.
+
+Whatever the work actually cost.
+
+Major works bills at tribunal regularly exceed £20,000 per flat in London blocks. So on a defective consultation that is a £19,750 difference per flat, decided by whether three letters went out properly.
+
+The failures are usually mundane rather than sinister. The thirty days counted from the date printed on the letter rather than from service. Observations received at stage one and filed rather than answered at stage two. Two estimates from companies in the same group.
+
+Two other things worth knowing, because almost nobody does.
+
+Paying does not mean accepting. Having paid a service charge is not the same as having agreed it was payable.
+
+And a clause in your lease trying to stop you going to the tribunal is void. It does not matter what it says.
+
+lexalytic.com/tools/service-charge-check
+
 2027-01-28
 The reason most proposals take too long to write is not that the work is hard.
 
@@ -881,6 +921,31 @@ The moment it stops working is usually the same: a client disputes a session, or
 The tools built for PTs range from genuinely useful to unnecessarily complex and expensive. The right one depends on whether your priority is programme delivery, payment automation, or client communication.
 
 What is the one thing in your PT business that takes the most time that it should not?
+
+2027-02-03
+A £12,000 surprise on a £60,000 renovation.
+
+VAT.
+
+A quote from a VAT registered builder may be presented excluding it, particularly if it is itemised like a trade document. Finding out at the invoice stage is a bad way to find out.
+
+It is not the only one. The builder quotes the building work. The rest is yours:
+
+Structural engineer, five hundred to fifteen hundred, and Building Control want the calculations before work starts rather than after.
+
+Building Control itself, another five hundred to twelve hundred, and separate from planning permission despite being constantly confused with it.
+
+Party wall surveyor, one to three thousand. If your neighbour dissents you pay for theirs as well, so budget for two.
+
+Asbestos survey on anything pre-2000. Scaffold quoted for a fixed period that keeps charging when the programme slips. Skip permits. Somewhere to live if it is not habitable.
+
+Then everything that goes in afterwards. Blinds, curtains, lights, furniture, white goods. The build ends and the spending does not.
+
+Together, thirty to fifty per cent on top of the figure you were quoted.
+
+And contingency is not optional spending. It is spending you have not identified yet.
+
+lexalytic.com/tools/renovation-planner
 
 2027-02-04
 HMO rent tracking is one of those things that sounds simple and is not.
