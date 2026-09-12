@@ -9,6 +9,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'spreadsheet-errors-you-cannot-see',
+    title: 'The Spreadsheet Errors You Cannot See',
+    excerpt: 'A formula overwritten with a typed number still shows a number. A link to a missing file still shows the last value it saw. The dangerous errors look perfectly reasonable.',
+    date: 'January 2027',
+    readTime: '8 min read',
+    tag: 'Data',
+  },
+  {
     slug: 'find-duplicate-records-spreadsheet',
     title: 'How to Find Duplicate Records When They Are Spelled Differently',
     excerpt: 'Excel finds exact duplicates. It will not find that Smith and Sons Ltd, Smith & Sons Limited and SMITH AND SONS are one customer on three rows.',

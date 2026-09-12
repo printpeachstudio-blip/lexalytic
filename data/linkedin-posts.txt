@@ -1016,6 +1016,29 @@ The landlords who stay compliant without stress have one thing in common: a trac
 
 A spreadsheet with conditional formatting does this. A purpose-built tool does it automatically. Either way, the cost of the system is trivially small compared to the cost of getting it wrong.
 
+2027-02-17
+The spreadsheet errors people find are the ones Excel shows them.
+
+A cell with a hash error gets noticed. Someone fixes it.
+
+The ones that cost money look completely normal. They are numbers, they are in the right place, and they are simply not what anybody thinks they are.
+
+Four that turn up constantly:
+
+A formula overwritten with a typed number. Somebody checked a figure, disagreed, and typed what they thought it should be. That row has stopped calculating. The total below still updates. Nothing on screen says so, and every review since has looked straight past it.
+
+A link to another workbook. Works perfectly for the person who built it. Open it anywhere else and it does not fail, which would at least be useful. It keeps showing the last value it saw, quietly, for as long as anyone uses the file.
+
+A VAT rate typed inside a formula rather than held in a cell. Harmless once. Across four hundred formulas it means that when the rate changes, somebody has to find every instance, and six months later you have some calculations on the new rate and some on the old.
+
+Numbers stored as text. SUM ignores them. Sorting puts 100 before 20.
+
+None of this shows up in a review, because reviewing a spreadsheet means looking at the numbers, and the numbers are fine.
+
+Finding them means reading the formulas. Nobody does that on a file with four thousand of them.
+
+lexalytic.com/tools/spreadsheet-audit
+
 2027-02-18
 Something that comes up in almost every first conversation with a new client:
 
