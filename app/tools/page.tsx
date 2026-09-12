@@ -79,6 +79,16 @@ const groups = [
         related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
       },
       {
+        href: '/tools/spreadsheet-audit',
+        name: 'Spreadsheet audit',
+        forWho: 'Anyone with a spreadsheet that matters',
+        summary:
+          'A formula overwritten with a typed number still shows a number. A link to a file on somebody else\u2019s drive still shows the last value it saw. A column where one cell was edited by hand looks exactly like a column where none was. This reads the formulas rather than the values, which is the only way to see any of it.',
+        detail:
+          'The paid version traces what depends on what, names the cells everything else is built on, and writes the handover document that should have existed from the start.',
+        related: { label: 'Excel automation', href: '/services/excel-automation' },
+      },
+      {
         href: '/tools/data-health-check',
         name: 'Data health check',
         forWho: 'Anyone importing a customer or supplier list',

@@ -271,7 +271,9 @@ export default function ExcelAutomationPage() {
       <section style={{ padding: 'clamp(60px, 8vw, 100px) 0', background: 'var(--bg-dark)' }}>
         <div className="container" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
           <h2 style={{ color: 'var(--white)', marginBottom: '20px' }}>Stop doing manually what<br /><em style={{ color: 'var(--amber)' }}>Excel can do for you.</em></h2>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>Book a free 30-minute call. Show us the process that's eating your team's time and we'll tell you exactly what automation would cost - and how long it would take.</p>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '17px', marginBottom: '40px', lineHeight: '1.7' }}>
+            Before any of that, our <Link href="/tools/spreadsheet-audit" style={{ color: 'var(--amber)' }}>free spreadsheet audit</Link> will tell you what is actually wrong with the file you have, which is usually a shorter list than people expect and occasionally a longer one. Book a free 30-minute call. Show us the process that's eating your team's time and we'll tell you exactly what automation would cost - and how long it would take.
+          </p>
           <Link href="/#contact" className="btn-amber" style={{ fontSize: '16px', padding: '16px 36px' }}>Book your free scoping call →</Link>
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', marginTop: '16px' }}>Fixed price  · Delivered in 3–5 days · Full documentation included</p>
         </div>
