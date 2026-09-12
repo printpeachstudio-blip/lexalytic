@@ -9,6 +9,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'pub-gp-wastage-calculator',
+    title: 'Your GP Is Not What The Calculator Told You',
+    excerpt: 'A pint costing £1.42 does not cost £1.42. Line cleaning, ullage and over-pouring mean you buy more than you sell, and almost every GP calculator ignores it.',
+    date: 'March 2027',
+    readTime: '7 min read',
+    tag: 'Hospitality',
+  },
+  {
+    slug: 'which-sessions-make-money-hospitality',
+    title: 'The Week Is Profitable. Two Sessions Are Carrying It.',
+    excerpt: 'An hour at £13.20 costs the business £16.68 once holiday, National Insurance and pension are in. Almost nobody uses that number when writing a rota.',
+    date: 'February 2027',
+    readTime: '7 min read',
+    tag: 'Hospitality',
+  },
+  {
+    slug: 'lock-up-days-professional-services',
+    title: 'The Cash Flow Number Most Firms Cannot Produce',
+    excerpt: 'Lock-up is work in progress plus debtors divided by daily fee income. Debtor days get managed because they are visible. WIP does not, so half the problem never gets looked at.',
+    date: 'February 2027',
+    readTime: '7 min read',
+    tag: 'Professional Services',
+  },
+  {
     slug: 'spreadsheet-errors-you-cannot-see',
     title: 'The Spreadsheet Errors You Cannot See',
     excerpt: 'A formula overwritten with a typed number still shows a number. A link to a missing file still shows the last value it saw. The dangerous errors look perfectly reasonable.',

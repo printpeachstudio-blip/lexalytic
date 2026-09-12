@@ -170,5 +170,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/find-duplicate-records-spreadsheet', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/tools/spreadsheet-audit', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/blog/spreadsheet-errors-you-cannot-see', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/lock-up-days-professional-services', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/which-sessions-make-money-hospitality', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/blog/pub-gp-wastage-calculator', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
