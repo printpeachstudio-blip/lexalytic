@@ -115,7 +115,7 @@ export default function BlogPost() {
           <div style={{ padding: '40px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '16px' }}>Want to fix this in your business?</h3>
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.7', maxWidth: '500px', margin: '0 auto 28px' }}>
-            This is the kind of thing our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link> is usually about. Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.
+            This comes up most often in <Link href="/industries/construction" style={{ color: 'var(--amber)' }}>construction</Link>, where a job that looked profitable at tender rarely is by the end. This is the kind of thing our <Link href="/services/power-bi" style={{ color: 'var(--amber)' }}>Power BI work</Link> is usually about. Book a free 30-minute call and we will tell you exactly what automation would look like for your business - fixed price, no commitment.
           </p>
             <Link href="/#contact" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Book a free scoping call →</Link>
           </div>

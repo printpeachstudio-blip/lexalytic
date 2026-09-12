@@ -124,7 +124,7 @@ export default function BlogPost() {
             Data cleansing - also called data cleaning or data scrubbing - is the process of identifying and correcting problems in a dataset so it can be used reliably. This includes fixing errors, resolving inconsistencies, removing duplicates, filling gaps, and standardising formats so that the data behaves predictably when used in reports, automation, or analysis.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
-            It is not glamorous work. But it is foundational. Every automated report, every Power BI dashboard, every data pipeline is only as reliable as the data feeding into it. Garbage in, garbage out - as the saying goes - is not a cliché. It is a description of what actually happens when businesses try to build on top of unclean data.
+            It is not glamorous work. But it is foundational. Every automated report, every data cleansing work, every data pipeline is only as reliable as the data feeding into it. Garbage in, garbage out - as the saying goes - is not a cliché. It is a description of what actually happens when businesses try to build on top of unclean data.
           </p>
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How much does bad data actually cost?</h2>
@@ -269,7 +269,7 @@ export default function BlogPost() {
             One of the most important things to understand about data cleansing is that it is not separate from automation - it is a prerequisite for it.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
-            When businesses come to us wanting to <Link href="/blog/how-to-automate-excel-reports" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>automate their Excel reports</Link> or build a <Link href="/services/power-bi" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link>, the first thing we do is assess the quality of the underlying data. In around half of all projects, data cleansing is required before any automation can be built reliably.
+            When businesses come to us wanting to <Link href="/blog/how-to-automate-excel-reports" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>automate their Excel reports</Link> or build a <Link href="/services/data-cleansing" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>Power BI dashboard</Link>, the first thing we do is assess the quality of the underlying data. In around half of all projects, data cleansing is required before any automation can be built reliably.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>
             This is not a problem - it is just part of the process. And in most cases, the cleansing work itself delivers immediate value. Once the data is clean and structured, the automation is faster to build, more reliable in operation, and far less likely to produce outputs that people do not trust.

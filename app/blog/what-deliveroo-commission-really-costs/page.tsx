@@ -123,7 +123,9 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '36px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', marginTop: '56px' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', marginBottom: '14px' }}>Which of your dishes lose money on delivery?</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.75', maxWidth: '520px', marginBottom: '26px' }}>Free calculator that handles the VAT and commission in the right order, and tells you what to charge instead. Nothing is uploaded.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.75', maxWidth: '520px', marginBottom: '26px' }}>
+            There is more on what we build for <Link href="/industries/hospitality" style={{ color: 'var(--amber)' }}>hospitality businesses</Link>. Free calculator that handles the VAT and commission in the right order, and tells you what to charge instead. Nothing is uploaded.
+          </p>
             <Link href="/tools/delivery-margin" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Work out your delivery margin</Link>
           </div>
         </div>

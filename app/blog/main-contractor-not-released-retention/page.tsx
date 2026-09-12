@@ -141,7 +141,9 @@ export default function BlogPost() {
           </div>
           <div style={{ padding: '36px', background: 'var(--ink)', borderRadius: 'var(--radius-lg)', marginTop: '56px' }}>
             <h3 style={{ color: 'var(--white)', fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', marginBottom: '14px' }}>Know what is outstanding before you chase it</h3>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.75', maxWidth: '520px', marginBottom: '26px' }}>Add your jobs and the tracker works out what is held, whether deduction passed the cap, and when each half fell due. Free, and nothing is uploaded.</p>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '15px', lineHeight: '1.75', maxWidth: '520px', marginBottom: '26px' }}>
+            There is more on what we build for <Link href="/industries/construction" style={{ color: 'var(--amber)' }}>construction businesses</Link>. Add your jobs and the tracker works out what is held, whether deduction passed the cap, and when each half fell due. Free, and nothing is uploaded.
+          </p>
             <Link href="/tools/retention-tracker" className="btn-amber" style={{ fontSize: '15px', padding: '14px 28px' }}>Open the retention tracker</Link>
           </div>
         </div>
