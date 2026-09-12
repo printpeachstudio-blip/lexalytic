@@ -439,6 +439,271 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
               </p>
               <button className="rv-btn" onClick={openBrief}>Open the scope document</button>
             </div>
+
+            {/* PAID SECTION */}
+            {!paid ? (
+              <div className="rv-card" style={{ padding: '28px 30px', marginBottom: 20 }}>
+                <div className="rv-serif" style={{ fontSize: 21, marginBottom: 12 }}>
+                  Then keep hold of it once the work starts
+                </div>
+                <p style={{ fontSize: 15, color: '#57514A', lineHeight: 1.8,
+                  margin: '0 0 8px', maxWidth: 660 }}>
+                  The commonest cause of a dispute with a builder is not late payment. It is work that
+                  changed partway through and was never written down. Forty eight per cent of
+                  contractors who have payment disputes name unforeseen cost and scope change as the
+                  trigger, ahead of clients who will not pay.
+                </p>
+                <p style={{ fontSize: 15, color: '#57514A', lineHeight: 1.8,
+                  margin: '0 0 20px', maxWidth: 660 }}>
+                  Both sides remember the conversation differently six weeks later. Whoever wrote it
+                  down at the time is the one who is right.
+                </p>
+
+                <div style={{ display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
+                  gap: 18, marginBottom: 24 }}>
+                  {[
+                    ['A variation log', 'Every change recorded with the date, what it is, what it costs and who agreed it. Printable at the end as a single document.'],
+                    ['Quote comparison', 'Put three quotes side by side on what each includes rather than what each totals. The cheapest number is rarely the cheapest job.'],
+                    ['Budget tracking', 'Planned against actual by line, with the contingency drawn down separately so you can see how much of it is left.'],
+                  ].map(([h, p2]) => (
+                    <div key={h}>
+                      <div style={{ fontSize: 14.5, fontWeight: 600, marginBottom: 5 }}>{h}</div>
+                      <div style={{ fontSize: 13.5, color: '#57514A', lineHeight: 1.7 }}>{p2}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <a href={STRIPE_LINK} className="rv-btn"
+                    style={{ textDecoration: 'none', display: 'inline-block' }}>
+                    Unlock for £29
+                  </a>
+                  <span style={{ fontSize: 13, color: '#8A8279' }}>
+                    One payment, for the whole project. Refundable within fourteen days.
+                  </span>
+                </div>
+              </div>
+            ) : (
+              <>
+                {/* Variation log */}
+                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Variation log</div>
+                  <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
+                    margin: '0 0 18px', maxWidth: 660 }}>
+                    Every change to the original scope, written down when it happens. Record it before
+                    the work is done rather than after, and note who agreed it. This is the document
+                    that settles an argument six weeks later.
+                  </p>
+
+                  <div className="vr-form" style={{ display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))',
+                    gap: 12, marginBottom: 14 }}>
+                    <div>
+                      <label className="rv-label">Date</label>
+                      <input className="rv-in" name="date" type="date" max={todayStr()}
+                        defaultValue={todayStr()} />
+                    </div>
+                    <div style={{ gridColumn: 'span 2' }}>
+                      <label className="rv-label">What changed</label>
+                      <input className="rv-in" name="what"
+                        placeholder="Moved the soil pipe to allow the shower position" />
+                    </div>
+                    <div>
+                      <label className="rv-label">Agreed cost</label>
+                      <input className="rv-in" name="cost" type="number" min={0} step="0.01" />
+                    </div>
+                    <div>
+                      <label className="rv-label">Agreed with</label>
+                      <input className="rv-in" name="agreedBy" placeholder="Name" />
+                    </div>
+                  </div>
+                  <button className="rv-btn rv-quiet" onClick={e => {
+                    const wrap = e.currentTarget.closest('.rv-card')!.querySelector('.vr-form') as HTMLElement
+                    const get = (n: string) =>
+                      (wrap.querySelector(`[name=${n}]`) as HTMLInputElement)?.value || ''
+                    const what = get('what').trim()
+                    if (!what) return
+                    setVariations(v => [...v, {
+                      id: uid(), date: get('date') || todayStr(), what,
+                      cost: get('cost') || '0', agreedBy: get('agreedBy'),
+                    }])
+                    ;(wrap.querySelector('[name=what]') as HTMLInputElement).value = ''
+                    ;(wrap.querySelector('[name=cost]') as HTMLInputElement).value = ''
+                  }}>Add to the log</button>
+
+                  {variations.length > 0 && (
+                    <div style={{ marginTop: 20 }}>
+                      {variations.map(v => (
+                        <div key={v.id} style={{ display: 'grid',
+                          gridTemplateColumns: '110px minmax(0, 1fr) 110px 120px 70px', gap: 12,
+                          padding: '10px 0', borderBottom: '1px solid #F7F4EF',
+                          fontSize: 14, alignItems: 'baseline' }}>
+                          <div style={{ color: '#8A8279' }}>{v.date}</div>
+                          <div>{v.what}</div>
+                          <div style={{ fontWeight: 500 }}>{money(parseFloat(v.cost) || 0)}</div>
+                          <div style={{ fontSize: 13, color: '#8A8279' }}>{v.agreedBy || 'not noted'}</div>
+                          <div style={{ textAlign: 'right' }}>
+                            <button className="rv-link" style={{ fontSize: 13, color: '#8A8279' }}
+                              onClick={() => setVariations(list => list.filter(x => x.id !== v.id))}>
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                      <div style={{ marginTop: 14, paddingTop: 12, borderTop: '2px solid ' + INK,
+                        display: 'flex', gap: 16, alignItems: 'baseline', flexWrap: 'wrap' }}>
+                        <span style={{ fontSize: 15, fontWeight: 600 }}>
+                          {money(variations.reduce((a, v) => a + (parseFloat(v.cost) || 0), 0))} in
+                          variations across {variations.length}{' '}
+                          {variations.length === 1 ? 'change' : 'changes'}
+                        </span>
+                        {result && (
+                          <span style={{ fontSize: 13.5, color: '#8A8279' }}>
+                            That is {Math.round((variations.reduce((a, v) => a + (parseFloat(v.cost) || 0), 0)
+                              / Math.max(result.contingency, 1)) * 100)}% of your contingency
+                          </span>
+                        )}
+                        <button className="rv-link" style={{ marginLeft: 'auto' }}
+                          onClick={() => {
+                            const rows = variations.map(v => `<tr><td>${v.date}</td><td>${v.what}</td><td class="r">${money(parseFloat(v.cost) || 0)}</td><td>${v.agreedBy || ''}</td></tr>`).join('')
+                            const total = variations.reduce((a, v) => a + (parseFloat(v.cost) || 0), 0)
+                            const w = window.open('', '_blank')
+                            if (w) {
+                              w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Variation log</title><style>body{font-family:Georgia,serif;max-width:760px;margin:0 auto;padding:28px;font-size:13.5px;line-height:1.65}table{width:100%;border-collapse:collapse;margin:14px 0}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #ddd}th{border-bottom:2px solid #333}.r{text-align:right}</style></head><body><h1>Variation log</h1><p>Changes to the agreed scope, recorded as they happened.</p><table><thead><tr><th>Date</th><th>What changed</th><th class="r">Agreed cost</th><th>Agreed with</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><th colspan="2">Total</th><th class="r">${money(total)}</th><th></th></tr></tfoot></table></body></html>`)
+                              w.document.close()
+                            }
+                          }}>Print the log</button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Quote comparison */}
+                <div className="rv-card" style={{ padding: '24px 28px', marginBottom: 20 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Compare the quotes</div>
+                  <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7,
+                    margin: '0 0 18px', maxWidth: 660 }}>
+                    Tick what each builder has actually included. A lower total that leaves out scaffold,
+                    making good and VAT is not a lower total.
+                  </p>
+
+                  {quotes.length < 4 && (
+                    <button className="rv-link" style={{ marginBottom: 16 }}
+                      onClick={() => setQuotes(q => [...q, {
+                        id: uid(), builder: '', total: '', includes: {}, vatIncluded: false, notes: '',
+                      }])}>Add a quote</button>
+                  )}
+
+                  {quotes.map(q => {
+                    const inc = Object.values(q.includes).filter(Boolean).length
+                    const total = parseFloat(q.total) || 0
+                    const trueTotal = q.vatIncluded ? total : total * 1.2
+                    return (
+                      <div key={q.id} style={{ border: '1px solid #EDE7DD', borderRadius: 8,
+                        padding: '18px 20px', marginBottom: 14 }}>
+                        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap',
+                          alignItems: 'flex-end', marginBottom: 14 }}>
+                          <div style={{ flex: '1 1 180px' }}>
+                            <label className="rv-label">Builder</label>
+                            <input className="rv-in" value={q.builder}
+                              onChange={e => setQuotes(list => list.map(x =>
+                                x.id === q.id ? { ...x, builder: e.target.value } : x))} />
+                          </div>
+                          <div style={{ width: 140 }}>
+                            <label className="rv-label">Their total</label>
+                            <input className="rv-in" type="number" min={0} value={q.total}
+                              onChange={e => setQuotes(list => list.map(x =>
+                                x.id === q.id ? { ...x, total: e.target.value } : x))} />
+                          </div>
+                          <label style={{ fontSize: 14, display: 'flex', gap: 8,
+                            alignItems: 'center', cursor: 'pointer', paddingBottom: 10 }}>
+                            <input type="checkbox" checked={q.vatIncluded}
+                              onChange={e => setQuotes(list => list.map(x =>
+                                x.id === q.id ? { ...x, vatIncluded: e.target.checked } : x))} />
+                            VAT included
+                          </label>
+                          <button className="rv-link" style={{ color: '#8A8279', paddingBottom: 12 }}
+                            onClick={() => setQuotes(list => list.filter(x => x.id !== q.id))}>
+                            Remove
+                          </button>
+                        </div>
+
+                        <div style={{ fontSize: 12, color: '#8A8279', marginBottom: 8 }}>
+                          What have they included?
+                        </div>
+                        <div style={{ display: 'grid',
+                          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 200px), 1fr))',
+                          gap: 6, marginBottom: 12 }}>
+                          {result && [...result.lines.map(l => l.element.label),
+                            ...result.hidden.map(h => h.hidden.label)].map(label => (
+                            <label key={label} style={{ fontSize: 13, display: 'flex', gap: 7,
+                              alignItems: 'flex-start', cursor: 'pointer' }}>
+                              <input type="checkbox" checked={!!q.includes[label]}
+                                style={{ marginTop: 2 }}
+                                onChange={e => setQuotes(list => list.map(x =>
+                                  x.id === q.id
+                                    ? { ...x, includes: { ...x.includes, [label]: e.target.checked } }
+                                    : x))} />
+                              <span>{label}</span>
+                            </label>
+                          ))}
+                        </div>
+
+                        {total > 0 && (
+                          <div style={{ fontSize: 14, color: '#57514A', paddingTop: 12,
+                            borderTop: '1px solid #F4F0E8', lineHeight: 1.7 }}>
+                            {!q.vatIncluded && (
+                              <strong style={{ color: '#A13B2A' }}>
+                                {money(trueTotal)} once VAT is added.{' '}
+                              </strong>
+                            )}
+                            Covers {inc} of the items you listed.
+                            {result && inc > 0 && (
+                              <> Against your range of {money(result.allLow)} to {money(result.allHigh)},
+                              that is {trueTotal < result.allLow
+                                ? 'below the bottom of it, which is worth understanding rather than celebrating'
+                                : trueTotal > result.allHigh
+                                ? 'above the top of it'
+                                : 'inside it'}.</>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+
+                  {quotes.filter(q => parseFloat(q.total) > 0).length >= 2 && result && (
+                    <div style={{ marginTop: 16, padding: '16px 18px', borderRadius: 8,
+                      background: 'rgba(176,122,30,0.05)', border: '1px solid rgba(176,122,30,0.22)',
+                      fontSize: 14, color: '#57514A', lineHeight: 1.75 }}>
+                      {(() => {
+                        const withTotals = quotes.filter(q => parseFloat(q.total) > 0)
+                          .map(q => ({
+                            q,
+                            t: q.vatIncluded ? parseFloat(q.total) : parseFloat(q.total) * 1.2,
+                            inc: Object.values(q.includes).filter(Boolean).length,
+                          }))
+                        const cheapest = [...withTotals].sort((a, b) => a.t - b.t)[0]
+                        const most = [...withTotals].sort((a, b) => b.inc - a.inc)[0]
+                        if (cheapest.q.id === most.q.id) {
+                          return <>The lowest quote also covers the most, which is unusual and worth a
+                            second look at what they have understood the job to be.</>
+                        }
+                        return <>
+                          <strong>{cheapest.q.builder || 'One quote'}</strong> is the cheapest at{' '}
+                          {money(cheapest.t)} but covers {cheapest.inc} items, while{' '}
+                          <strong>{most.q.builder || 'another'}</strong> covers {most.inc} at{' '}
+                          {money(most.t)}. The gap between them is {money(most.t - cheapest.t)}, and
+                          the question is whether the {most.inc - cheapest.inc} extra items would cost
+                          you more than that if you had to sort them out yourself later.
+                        </>
+                      })()}
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
           </>
         )}
 
