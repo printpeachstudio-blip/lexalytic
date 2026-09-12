@@ -669,7 +669,7 @@ export default function DataHealthChecker() {
               fontSize: 'clamp(1.9rem, 4.5vw, 2.9rem)', lineHeight: 1.14,
               letterSpacing: '-0.025em', margin: '0 0 18px', maxWidth: 620, fontWeight: 400
             }}>
-              Check a spreadsheet before it becomes a problem.
+              Check a UK business list against the things that actually break.
             </h1>
             <p style={{ fontSize: 17, lineHeight: 1.72, color: '#57514A', maxWidth: 600, margin: '0 0 8px' }}>
               Upload a customer, supplier or contact list and this checks it against the things
