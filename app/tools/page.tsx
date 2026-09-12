@@ -47,23 +47,6 @@ const groups = [
     ],
   },
   {
-    heading: 'Homeowners',
-    intro:
-      'Not business tools, but the same problem: money leaving in ways nobody wrote down at the start. There are more of these at /homeowners.',
-    tools: [
-      {
-        href: '/tools/renovation-planner',
-        name: 'Renovation cost planner',
-        forWho: 'Anyone having building work done',
-        summary:
-          'Cost overrun is what homeowners regret most, and the commonest cause of a fight with a builder is not late payment but work nobody agreed to in writing. A builder quotes the building work. VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live while it happens are all yours, and together they add thirty to fifty per cent.',
-        detail:
-          'It also produces a scope document to send to three builders, so the quotes come back answering the same questions rather than three different ones.',
-        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
-      },
-    ],
-  },
-  {
     heading: 'Spreadsheets and data',
     intro:
       'Most business data problems are invisible until something downstream fails. These find them first.',
@@ -222,6 +205,23 @@ const groups = [
       },
     ],
   },
+  {
+    heading: 'Homeowners',
+    intro:
+      'Not business tools, but the same problem: money leaving in ways nobody wrote down at the start. There are more of these at /homeowners.',
+    tools: [
+      {
+        href: '/tools/renovation-planner',
+        name: 'Renovation cost planner',
+        forWho: 'Anyone having building work done',
+        summary:
+          'Cost overrun is what homeowners regret most, and the commonest cause of a fight with a builder is not late payment but work nobody agreed to in writing. A builder quotes the building work. VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live while it happens are all yours, and together they add thirty to fifty per cent.',
+        detail:
+          'It also produces a scope document to send to three builders, so the quotes come back answering the same questions rather than three different ones.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+    ],
+  },
 ]
 
 const allTools = groups.flatMap(g => g.tools)
@@ -351,9 +351,6 @@ export default function ToolsPage() {
                     </h3>
                     <p style={{ fontSize: '17px', lineHeight: '1.8', color: 'var(--ink-2)', marginBottom: '14px', maxWidth: '700px' }}>
                       {t.summary}
-                    </p>
-                    <p style={{ fontSize: '15px', lineHeight: '1.7', color: 'var(--ink-3)', marginBottom: '22px', maxWidth: '700px' }}>
-                      {t.detail}
                     </p>
                     <div style={{ display: 'flex', gap: '22px', alignItems: 'center', flexWrap: 'wrap' }}>
                       <Link href={t.href} className="btn-primary" style={{ fontSize: '15px' }}>
