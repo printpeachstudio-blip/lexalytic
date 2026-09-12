@@ -1286,19 +1286,19 @@ export default function DataHealthChecker() {
             }}>
               <div className="dhc-serif" style={{ fontSize: 22, marginBottom: 12, letterSpacing: '-0.01em' }}>
                 {result.findings.length > 0
-                  ? 'Send it over and get it back clean.'
+                  ? 'Or have somebody else do it'
                   : 'The formatting is fine. The records may not be.'}
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 540 }}>
                 {result.findings.length > 0
-                  ? 'We fix every issue listed above, verify each company against Companies House, check the email domains still resolve, merge the near duplicates, and send the corrected file back within 24 hours.'
+                  ? 'You send the file, we send it back done. Everything the tool does, plus the judgement calls it deliberately refuses to make: which of two plausible duplicates is really the same customer, what an ambiguous date column actually means, whether a name is McDonald or Mcdonald. Back within 24 hours.'
                   : 'Nothing here needs fixing. What we would still do is verify each company against Companies House and check the email domains still resolve, which a formatting scan cannot see.'}
               </p>
               <div style={{
                 display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 24,
                 paddingBottom: 20, borderBottom: '1px solid rgba(255,255,255,0.12)'
               }}>
-                {([['Up to 1,000 rows', '\u00a399'], ['Up to 10,000 rows', '\u00a3199'], ['Up to 50,000 rows', '\u00a3299']] as [string, string][]).map(([label, price]) => (
+                {([['Up to 1,000 rows', '\u00a349'], ['Up to 10,000 rows', '\u00a399'], ['Up to 50,000 rows', '\u00a3149']] as [string, string][]).map(([label, price]) => (
                   <div key={label}>
                     <div className="dhc-serif" style={{ fontSize: 22, color: '#C17D2E', lineHeight: 1.2 }}>{price}</div>
                     <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>{label}</div>
