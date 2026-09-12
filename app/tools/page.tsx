@@ -34,6 +34,16 @@ const groups = [
           'It produces a written brief you can download and take to any developer. It covers what any of them will ask you.',
         related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
       },
+      {
+        href: '/tools/service-charge-check',
+        name: 'Service charge and Section 20 checker',
+        forWho: 'Leaseholders',
+        summary:
+          'Where major works cost any leaseholder more than £250, the landlord has to consult properly first. If they did not, and the tribunal does not excuse it, recovery is capped at £250 each whatever the work cost. On a £20,000 bill that is most of the argument in one question.',
+        detail:
+          'It also checks the eighteen month rule under section 20B, which is the one almost nobody knows about and the one that does not require anybody to agree about what the work should have cost.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
     ],
   },
   {

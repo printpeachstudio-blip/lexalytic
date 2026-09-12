@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/homeowners' },
   title: 'Free Tools for UK Homeowners | Renovation, Moving and Running Costs | Lexalytic',
-  description: 'Free tools for people who own a home. Work out what a renovation really costs including everything outside the builder quote, compare quotes properly, and keep the records that settle a dispute.',
+  description: 'Free tools for people who own a home. What a renovation really costs beyond the builder quote, and whether a leasehold service charge bill is one you actually owe.',
   keywords: 'free tools for homeowners UK, renovation cost calculator, hidden costs of building work, home improvement budget UK, builder quote comparison',
   openGraph: {
     title: 'Free tools for UK homeowners',
@@ -23,6 +23,12 @@ const live = [
     name: 'Renovation cost planner',
     line: 'A builder quotes the building work. VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live while it happens are all yours, and together they add thirty to fifty per cent.',
     detail: 'Produces a scope document to send to three builders so the quotes come back answering the same questions.',
+  },
+  {
+    href: '/tools/service-charge-check',
+    name: 'Service charge and Section 20 checker',
+    line: 'If you own a leasehold flat and a major works bill has arrived, the landlord had to consult properly before starting. Where they did not, and the tribunal does not excuse it, they can recover £250 from each leaseholder and no more, whatever the work cost.',
+    detail: 'Checks the consultation stages, the eighteen month demand deadline, and what you are entitled to demand from them.',
   },
 ]
 
