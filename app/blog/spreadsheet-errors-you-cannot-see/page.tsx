@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "The Spreadsheet Errors You Cannot See",
   "description": "A formula overwritten with a typed number still shows a number. A link to a missing file still shows the last value it saw. The dangerous errors are the ones that look perfectly reasonable.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

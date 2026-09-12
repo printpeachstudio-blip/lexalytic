@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "Your GP Is Not What The Calculator Told You",
   "description": "A pint costing £1.42 does not cost £1.42. Line cleaning, ullage and over-pouring mean you buy more than you sell, and almost every GP calculator ignores it.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

@@ -42,7 +42,7 @@ const breadcrumbSchema = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Is Power Query - and How Can It Save Your Business Time?","description":"Power Query is built into Excel and Power BI. Most UK businesses have never used it. Here is what it does and why it matters.","datePublished":"2026-09-15","dateModified":"2026-09-15","url":"https://www.lexalytic.com/blog/what-is-power-query-uk-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"What Is Power Query - and How Can It Save Your Business Time?","description":"Power Query is built into Excel and Power BI. Most UK businesses have never used it. Here is what it does and why it matters.","datePublished":"2026-09-08","dateModified":"2026-09-08","url":"https://www.lexalytic.com/blog/what-is-power-query-uk-business","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>

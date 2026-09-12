@@ -41,7 +41,7 @@ const breadcrumbSchema = {
 }
 
 export default function BlogPost() {
-  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Get Live Reports from Xero Sage or QuickBooks Automatically","description":"A practical guide for UK businesses.","datePublished":"2026-10-15","dateModified":"2026-10-15","url":"https://www.lexalytic.com/blog/live-reports-from-xero-sage-quickbooks","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
+  const structuredData = {"@context":"https://schema.org","@type":"Article","headline":"How to Get Live Reports from Xero Sage or QuickBooks Automatically","description":"A practical guide for UK businesses.","datePublished":"2026-09-08","dateModified":"2026-09-08","url":"https://www.lexalytic.com/blog/live-reports-from-xero-sage-quickbooks","author":{"@type":"Person","name":"Mihir Hindocha","url":"https://www.lexalytic.com/about"},"publisher":{"@type":"Organization","name":"Lexalytic","url":"https://www.lexalytic.com"}}
 
   return (
     <>

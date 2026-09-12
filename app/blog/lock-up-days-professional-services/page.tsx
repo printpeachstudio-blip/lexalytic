@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "The Cash Flow Number Most Firms Cannot Produce",
   "description": "Lock-up is work in progress plus debtors divided by daily fee income. Debtor days get managed because they are visible. WIP does not, so half the problem never gets looked at.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",

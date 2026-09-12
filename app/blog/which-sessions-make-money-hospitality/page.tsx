@@ -20,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "The Week Is Profitable. Two Sessions Are Carrying It.",
   "description": "An hour at £13.20 costs the business £16.68 once holiday, National Insurance and pension are in. Almost nobody uses that number when writing a rota.",
-  "datePublished": "2026-09-15",
-  "dateModified": "2026-09-15",
+  "datePublished": "2026-09-08",
+  "dateModified": "2026-09-08",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
