@@ -686,6 +686,36 @@ export default function LockupTracker() {
           )}
         </div>
 
+        <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
+
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+            This is the part of cash flow nobody measures
+
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
+
+            Debtor days are visible so they get managed. Work in progress is not, so the half of lock-up that sits before the invoice goes out never gets looked at. There is more on what we build for professional services firms, including reporting that surfaces this monthly rather than when somebody happens to ask.
+
+          </p>
+
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+            <a href="/industries/professional-services" style={{ font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6, padding: '12px 22px', background: '#C17D2E', color: '#fff', textDecoration: 'none', display: 'inline-block' }}>
+
+              What we do for professional services
+
+            </a>
+
+            <a href="/tools/build-estimator" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>Or price up a build</a>
+
+          </div>
+
+        </div>
+
+        
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 640 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>, a UK studio that builds websites,
           custom software and data systems for small businesses. See our other{' '}

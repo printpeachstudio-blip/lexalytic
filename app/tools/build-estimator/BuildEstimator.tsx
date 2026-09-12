@@ -443,6 +443,36 @@ export default function BuildEstimator() {
           </p>
         )}
 
+        <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
+
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+            That figure is the starting point for a conversation, not a quote
+
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
+
+            The brief you can download says what you want built and why. Send it to three developers if you like. If you would rather talk it through, a half hour call costs nothing and we will tell you honestly whether it is worth building at all, which is sometimes no.
+
+          </p>
+
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+            <a href="/#contact" style={{ font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6, padding: '12px 22px', background: '#C17D2E', color: '#fff', textDecoration: 'none', display: 'inline-block' }}>
+
+              Book a free call
+
+            </a>
+
+            <a href="/about" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>Or read how we work</a>
+
+          </div>
+
+        </div>
+
+        
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 30, maxWidth: 640 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>. See our{' '}
           <a href="/tools" style={{ color: AMBER }}>other free tools</a>, several of which started as
