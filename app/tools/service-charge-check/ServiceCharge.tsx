@@ -777,6 +777,36 @@ ${rows ? `<p>On what I have been able to check, these look worth asking about:</
           </>
         )}
 
+        <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
+
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+            Before you do anything else, speak to LEASE
+
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
+
+            The Leasehold Advisory Service is funded by government and advises leaseholders free of charge at lease-advice.org. They will tell you whether an application is worth making, which is worth knowing before you pay anybody, including us. There are more free tools for homeowners here.
+
+          </p>
+
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+            <a href="/homeowners" style={{ font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6, padding: '12px 22px', background: '#C17D2E', color: '#fff', textDecoration: 'none', display: 'inline-block' }}>
+
+              More for homeowners
+
+            </a>
+
+            <a href="/tools" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>Or the business tools</a>
+
+          </div>
+
+        </div>
+
+        
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 670 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>. See our other{' '}
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.

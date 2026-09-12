@@ -850,6 +850,36 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
           </>
         )}
 
+        <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
+
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+            This is what we do for businesses, pointed at a house
+
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
+
+            Most of our work is tracking money that leaves in ways nobody wrote down at the start. A renovation turns out to be the same problem in a different costume. There are more free tools for homeowners, and rather more for businesses.
+
+          </p>
+
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+            <a href="/homeowners" style={{ font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6, padding: '12px 22px', background: '#C17D2E', color: '#fff', textDecoration: 'none', display: 'inline-block' }}>
+
+              More for homeowners
+
+            </a>
+
+            <a href="/tools" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>Or the business tools</a>
+
+          </div>
+
+        </div>
+
+        
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 670 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>. See our other{' '}
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.

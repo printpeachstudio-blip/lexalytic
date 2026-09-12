@@ -14,16 +14,16 @@ const tools = [
     who: 'Every business',
   },
   {
+    href: '/tools/spreadsheet-audit',
+    name: 'Spreadsheet audit',
+    line: 'Reads the formulas rather than the values, and finds the ones that were quietly overwritten with a typed number.',
+    who: 'Anyone with a spreadsheet that matters',
+  },
+  {
     href: '/tools/delivery-margin',
     name: 'Delivery margin calculator',
     line: 'Which dishes lose money once the platform has taken its third, and what you would need to charge to stop that.',
     who: 'Hospitality',
-  },
-  {
-    href: '/tools/retention-tracker',
-    name: 'Retention tracker',
-    line: 'What is held across every job, whether deduction has passed the cap, and when each half falls due.',
-    who: 'Construction',
   },
 ]
 
@@ -58,7 +58,7 @@ export default function Tools() {
             margin: 0,
             maxWidth: '460px',
           }}>
-            Thirteen tools we needed and could not find a decent UK version of, so we built them. No signup,
+            Fifteen tools we needed and could not find a decent UK version of, so we built them. No signup,
             no email wall, and nothing you enter is sent anywhere. They are also a fair test of whether
             we know what we are doing.
           </p>
@@ -117,7 +117,7 @@ export default function Tools() {
 
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <Link href="/tools" className="btn-primary" style={{ fontSize: '15px' }}>
-            See all thirteen tools
+            See all fifteen tools
           </Link>
           <span style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7' }}>
             One of them grew into a product.{' '}

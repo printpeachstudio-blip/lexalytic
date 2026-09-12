@@ -517,6 +517,36 @@ Print and choose Save as PDF. Keep it with the workbook.</div>
           </>
         )}
 
+        <div style={{ padding: 30, borderRadius: 10, background: '#1A1815', color: '#fff', marginTop: 8 }}>
+
+          <div style={{ fontFamily: 'Georgia, serif', fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+            When the answer is that the spreadsheet should not be a spreadsheet
+
+          </div>
+
+          <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 580 }}>
+
+            Most files are fine and want tidying rather than replacing. Some have outgrown what a spreadsheet can safely do, usually when several people need it at once or when one mistake is expensive. That is what our Excel automation work is about, and the honest answer is often that fixing what you have is cheaper.
+
+          </p>
+
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+            <a href="/services/excel-automation" style={{ font: 'inherit', fontSize: 15, fontWeight: 500, borderRadius: 6, padding: '12px 22px', background: '#C17D2E', color: '#fff', textDecoration: 'none', display: 'inline-block' }}>
+
+              Our Excel automation work
+
+            </a>
+
+            <a href="/tools/build-estimator" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>Or price up a rebuild</a>
+
+          </div>
+
+        </div>
+
+        
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 24, maxWidth: 660 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>. See our other{' '}
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
