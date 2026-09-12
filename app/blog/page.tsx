@@ -9,6 +9,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'hidden-costs-of-a-renovation-uk',
+    title: 'The Renovation Costs That Are Not in the Builder Quote',
+    excerpt: 'VAT, contingency, the structural engineer, Building Control, the party wall surveyor and somewhere to live. Together they add thirty to fifty per cent.',
+    date: 'November 2026',
+    readTime: '8 min read',
+    tag: 'Homeowners',
+  },
+  {
+    slug: 'service-charge-18-month-rule',
+    title: 'The Service Charge Rule Almost No Leaseholder Knows About',
+    excerpt: 'Costs incurred more than eighteen months before the demand arrives are generally not recoverable. A bill for work done two years ago is frequently unenforceable in full.',
+    date: 'October 2026',
+    readTime: '7 min read',
+    tag: 'Leasehold',
+  },
+  {
     slug: 'restaurant-below-benchmark-gross-profit',
     title: 'Your Gross Profit Is Below Benchmark. That Is Not The Same As Being Wrong.',
     excerpt: 'HMRC compares filed restaurant returns against expected profit benchmarks automatically. Delivery commission, discounting and waste all depress margin legitimately.',

@@ -155,7 +155,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=October 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "10" ] && [ "$DAY" = "20" ]; then
-            echo "slug=automate-invoice-tracking-excel-uk" >> $GITHUB_OUTPUT
+            echo "slug=service-charge-18-month-rule" >> $GITHUB_OUTPUT
             echo "title=How to Automate Payroll Reporting in Excel (UK Guide 2026)" >> $GITHUB_OUTPUT
             echo "excerpt=Payroll reporting does not have to be rebuilt every month. Here is how UK businesses are automating their payroll summaries, headcount reports, and cost breakdowns in Excel." >> $GITHUB_OUTPUT
             echo "tag=Excel Automation" >> $GITHUB_OUTPUT
@@ -215,7 +215,7 @@ jobs:
             echo "tag=Finance" >> $GITHUB_OUTPUT
             echo "date=November 2026" >> $GITHUB_OUTPUT
           elif [ "$MONTH" = "11" ] && [ "$DAY" = "24" ]; then
-            echo "slug=data-automation-professional-services-uk" >> $GITHUB_OUTPUT
+            echo "slug=hidden-costs-of-a-renovation-uk" >> $GITHUB_OUTPUT
             echo "title=Year-End Reporting for UK Small Businesses — How to Make It Less Painful" >> $GITHUB_OUTPUT
             echo "excerpt=Year-end reporting is one of the most stressful periods for UK small business owners. Here is how to make it significantly less painful by keeping your data organised and automated throughout the year." >> $GITHUB_OUTPUT
             echo "tag=Finance" >> $GITHUB_OUTPUT
