@@ -22,6 +22,12 @@ export default function WhoWeWorkWith() {
   return (
     <section style={{ padding: 'clamp(32px, 4vw, 48px) 0', background: 'var(--bg-2)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
       <div className="container">
+        <p style={{ fontSize: '14.5px', color: 'var(--ink-3)', lineHeight: '1.75',
+          maxWidth: '680px', margin: '0 0 28px' }}>
+          Fifteen years of data and systems work before this, at Shell, Citi Private Bank, the NHS,
+          Warner Bros Discovery, Foster and Partners and Crown Commercial Service. The same problems,
+          at a scale where getting them wrong was expensive.
+        </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
           <span style={{ fontSize: '12px', color: 'var(--ink-4)', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '1px', flexShrink: 0 }}>
             We work with
