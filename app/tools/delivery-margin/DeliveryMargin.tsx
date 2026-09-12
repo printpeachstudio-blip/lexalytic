@@ -421,9 +421,9 @@ export default function DeliveryMargin() {
                 this current rather than making you redo it.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/industries/hospitality" className="dm-btn"
+                <a href="/margin-manager" className="dm-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
-                  See what else is coming
+                  See Margin Manager
                 </a>
                 <a href="/tools/restaurant-benchmark-check" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>
                   Or check your margin against the benchmarks

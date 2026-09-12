@@ -806,8 +806,8 @@ export default function HmrcBenchmark() {
                 wastage record you keep to protect your margin is also the record that answers the
                 question if it is ever asked.
               </p>
-              <a href="/industries/hospitality" style={{ fontSize: 15, color: AMBER }}>
-                See what else is coming for hospitality
+              <a href="/margin-manager" style={{ fontSize: 15, color: AMBER }}>
+                See Margin Manager for hospitality
               </a>
             </div>
           </>

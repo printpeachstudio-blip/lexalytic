@@ -395,9 +395,9 @@ export default function GpCalculator() {
                 given away margin. That happens every year and most sites recost weeks late.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/industries/hospitality" className="gp-btn"
+                <a href="/margin-manager" className="gp-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
-                  See what else is coming
+                  See Margin Manager
                 </a>
                 <a href="/tools/delivery-margin" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>
                   Or check your delivery margin

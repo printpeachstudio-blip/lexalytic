@@ -419,9 +419,9 @@ export default function LabourDaypart() {
                 the second one.
               </p>
               <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href="/industries/hospitality" className="ld-btn"
+                <a href="/margin-manager" className="ld-btn"
                   style={{ textDecoration: 'none', display: 'inline-block' }}>
-                  See what else is coming
+                  See Margin Manager
                 </a>
                 <a href="/tools/pub-gp-calculator" style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)' }}>
                   Or check your GP across the range
