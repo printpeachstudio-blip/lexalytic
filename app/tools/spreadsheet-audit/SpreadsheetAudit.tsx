@@ -365,18 +365,20 @@ export default function SpreadsheetAudit() {
               <div style={{ padding: 30, borderRadius: 10, background: INK, color: '#fff' }}>
                 <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12,
                   letterSpacing: '-0.01em' }}>
-                  The bigger problem is usually that only one person understands it
+                  The checks above are free everywhere now. This is not.
                 </div>
                 <p style={{ fontSize: 15, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)',
                   margin: '0 0 8px', maxWidth: 600 }}>
-                  Every business has a spreadsheet that somebody built, that runs something important,
-                  and that nobody dares change. Usually the person who built it has moved on. The errors
-                  above are worth fixing, but the risk is that the file is unreadable to anyone else.
+                  Several free tools scan for the errors above, and you should use whichever you like. What
+                  none of them do in a browser is trace what depends on what across the whole workbook.
+                  That has meant a desktop add in at several hundred pounds a year, installed with IT
+                  permission, for a question every business has: if this one number changes, what breaks.
                 </p>
                 <p style={{ fontSize: 15, lineHeight: 1.75, color: 'rgba(255,255,255,0.6)',
                   margin: '0 0 22px', maxWidth: 600 }}>
-                  The paid version traces what depends on what, names the cells everything else is
-                  built on, and writes the handover document that should have existed from the start.
+                  This answers it for twenty nine pounds, names the cells the whole workbook rests on,
+                  and writes it up as the handover document that should have existed from the start,
+                  because the spreadsheet nobody dares change is usually the one nobody else understands.
                 </p>
                 <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
                   <a href={STRIPE_LINK} className="tool-btn"

@@ -3,9 +3,9 @@ import SpreadsheetAudit from './SpreadsheetAudit'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/spreadsheet-audit' },
-  title: 'Free Spreadsheet Audit Tool | Find Excel Formula Errors | Lexalytic',
-  description: 'Upload an Excel workbook and find the formulas that were overwritten with typed values, links to files that no longer exist, numbers hardcoded into calculations, and circular references. Reads formulas, not values. Nothing uploaded.',
-  keywords: 'excel formula errors, spreadsheet audit tool, check excel for errors, find broken formulas excel, spreadsheet error checker UK, excel audit free',
+  title: 'Spreadsheet Dependency Map and Audit | What Depends on What | Lexalytic',
+  description: 'Find which cells everything else depends on, without installing PerfectXL or paying for OAK. Plus the standard checks: overwritten formulas, external links, hardcoded numbers, circular references. Reads the formulas, not the values. Nothing uploaded.',
+  keywords: 'spreadsheet dependency map, excel precedents dependents whole workbook, what depends on this cell, spreadsheet handover document, excel audit browser, excel formula errors, PerfectXL alternative free',
   openGraph: {
     title: 'The spreadsheet works. That is not the same as being right.',
     description: 'Finds overwritten formulas, external links and hardcoded numbers by reading the formulas rather than the values.',
@@ -53,6 +53,14 @@ const faqData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'No. The file is opened and read in your browser and never sent to a server. Macros are not executed. This matters because a business spreadsheet usually contains exactly the information you would not want to email to a website.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is this different from other free spreadsheet checkers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Several free browser tools now scan for formula errors, external links, hardcoded values and circular references, and this one does too. What the free tools do not do is trace what depends on what across the whole workbook. That has until now meant a desktop add in at two hundred and fifty to two thousand pounds a year. The paid version here does it in the browser for twenty nine pounds, and writes it up as a handover document, because the question that matters is not what is in the spreadsheet but what breaks if one number changes.',
       },
     },
     {
