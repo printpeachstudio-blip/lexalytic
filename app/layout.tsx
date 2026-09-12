@@ -100,7 +100,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-              <Analytics />
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
