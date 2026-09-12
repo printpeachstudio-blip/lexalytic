@@ -3,9 +3,9 @@ import DataHealthChecker from './DataHealthChecker'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/data-health-check' },
-  title: 'Free UK Data Health Check - Scan a Spreadsheet for Errors | Lexalytic',
-  description: 'Free browser based tool that checks a customer or supplier spreadsheet for UK specific data problems: invalid postcodes, VAT numbers that fail the HMRC checksum, company numbers missing their leading zero, mixed date formats and duplicates. Nothing is uploaded.',
-  keywords: 'data quality checker UK, CSV data checker, spreadsheet error checker UK, data cleansing tool UK, VAT number checker, company number validator, UK postcode validator, free data quality tool',
+  title: 'Free Data Cleansing Tool UK | Find Duplicates and Fix Errors | Lexalytic',
+  description: 'Free data cleansing tool for UK businesses. Finds duplicate records that are spelled differently, checks VAT numbers against the HMRC checksum, catches company numbers that have lost their leading zero, and returns a clean CSV. Runs in your browser.',
+  keywords: 'free data cleansing tool, find duplicate records CSV, deduplication tool UK, fuzzy duplicate matching, merge duplicate customers, data quality checker UK, CSV data checker, spreadsheet error checker UK, data cleansing tool UK, VAT number checker, company number validator, UK postcode validator, free data quality tool',
   openGraph: {
     title: 'Free UK Data Health Check | Lexalytic',
     description: 'Check a spreadsheet for the errors that break UK business systems. Free, runs in your browser, nothing uploaded.',

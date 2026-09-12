@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react'
 import Papa from 'papaparse'
 import { FIXES, applyFixes, toCsv, extractCompanyNumbers, type FixId } from '@/lib/data-fixes'
+import DedupPanel from '@/components/DedupPanel'
 
 // ---------- UK validation rules ----------
 
@@ -1272,6 +1273,9 @@ export default function DataHealthChecker() {
                       </div>
                     )}
                   </div>
+
+                  <DedupPanel rows={rows} headers={headers} />
+
                 </>
               )}
             </div>
