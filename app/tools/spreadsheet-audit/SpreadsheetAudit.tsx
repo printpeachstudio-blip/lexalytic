@@ -7,7 +7,7 @@ import {
   type AuditResult, type Finding, type Severity,
 } from '@/lib/spreadsheet-audit'
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_XL_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/00w4gsbcRfyWgYk7NO3AY0f'
 const UNLOCK_PARAM = 'xla-2p6mv9'
 const PAID_KEY = 'lexalytic.xlaudit.paid.v1'
 
