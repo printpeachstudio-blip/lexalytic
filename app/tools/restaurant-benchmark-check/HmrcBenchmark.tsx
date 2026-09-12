@@ -783,17 +783,13 @@ export default function HmrcBenchmark() {
 
             )}
 
-            {/* What is coming */}
+            {/* Margin Manager */}
             <div className="tool-card" style={{ padding: '24px 30px' }}>
               <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
                 Keeping the records is the hard part, not the maths
               </div>
               <p style={{ fontSize: 15, lineHeight: 1.75, color: '#57514A', margin: '0 0 16px', maxWidth: 620 }}>
-                You cannot reconstruct last year's waste log once a letter arrives. We are building
-                something that keeps the operational side and the evidence side in one place, so the
-                wastage record you keep to protect your margin is also the record that answers the
-                question if it is ever asked.
-              </p>
+                You cannot reconstruct last year’s waste log once a letter arrives. Margin Manager keeps the operational side and the evidence side in one place, so the wastage record you keep to protect your margin is also the record that answers the question if it is ever asked.</p>
               <a href="/margin-manager" style={{ fontSize: 15, color: AMBER }}>
                 See Margin Manager for hospitality
               </a>
