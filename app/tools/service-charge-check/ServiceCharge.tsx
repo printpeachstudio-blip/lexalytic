@@ -6,7 +6,7 @@ import {
   DEMAND_DEADLINE_MONTHS, money, monthsBetween, daysBetween,
 } from '@/lib/service-charge'
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_SC_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/6oUdR22Gl0E2gYk1pq3AY0e'
 const UNLOCK_PARAM = 'scp-3w9hd7'
 const PAID_KEY = 'lexalytic.sc.paid.v1'
 const STATE_KEY = 'lexalytic.sc.v1'
