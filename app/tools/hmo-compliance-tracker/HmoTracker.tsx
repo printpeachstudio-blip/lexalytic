@@ -399,12 +399,12 @@ export default function HmoTracker() {
         {(adding || properties.length === 0) && (
           <div className="tool-card" style={{ padding: 22, marginBottom: 20 }}>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 14 }}>
-              <input
+              <input aria-label="Property name or address"
                 className="tool-in" style={{ flex: '2 1 220px' }} placeholder="Property name or address"
                 value={newName} onChange={e => setNewName(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter') addProperty() }}
               />
-              <input
+              <input aria-label="Postcode"
                 className="tool-in" style={{ flex: '1 1 130px' }} placeholder="Postcode"
                 value={newPostcode} onChange={e => setNewPostcode(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter') addProperty() }}
@@ -483,7 +483,7 @@ export default function HmoTracker() {
                           <div style={{ fontSize: 13, color: '#8A8279', marginTop: 3, lineHeight: 1.55 }}>{ct.note}</div>
                         </div>
                         <div>
-                          <input
+                          <input aria-label="Date last done"
                             className="tool-in" type="date" style={{ width: '100%' }}
                             max={todayStr()}
                             value={cert?.lastDone || ''}
@@ -560,14 +560,14 @@ export default function HmoTracker() {
               ) : (
                 <div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                    <input
+                    <input aria-label="Email address"
                       className="tool-in-dark" type="email" placeholder="Email address" autoComplete="email"
                       value={email} onChange={e => setEmail(e.target.value)}
                       onKeyDown={e => { if (e.key === 'Enter') submitInterest() }}
                     />
                   </div>
                   {enquiryType === 'portfolio' && (
-                    <textarea
+                    <textarea aria-label="What is the most painful part right now? (optional)"
                       className="tool-in-dark" rows={3} placeholder="What is the most painful part right now? (optional)"
                       style={{ marginBottom: 12, resize: 'vertical' }}
                       value={notes} onChange={e => setNotes(e.target.value)}
@@ -611,7 +611,7 @@ export default function HmoTracker() {
                 </div>
               ) : (
                 <div>
-                  <input
+                  <input aria-label="Email address"
                     className="tool-in-dark" type="email" placeholder="Email address" autoComplete="email"
                     style={{ maxWidth: 320, marginBottom: 14 }}
                     value={email} onChange={e => setEmail(e.target.value)}

@@ -1322,22 +1322,22 @@ export default function DataHealthChecker() {
                     Your file stays on your machine until you choose to send it.
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                    <input
+                    <input aria-label="Your name"
                       className="dhc-input" type="text" placeholder="Your name" autoComplete="name"
                       value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
                     />
-                    <input
+                    <input aria-label="Email address"
                       className="dhc-input" type="email" placeholder="Email address" autoComplete="email"
                       value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                       onKeyDown={e => { if (e.key === 'Enter') submitEnquiry(); }}
                     />
                   </div>
-                  <input
+                  <input aria-label="Company (optional)"
                     className="dhc-input" type="text" placeholder="Company (optional)" autoComplete="organization"
                     style={{ width: '100%', marginBottom: 12 }}
                     value={form.company} onChange={e => setForm({ ...form, company: e.target.value })}
                   />
-                  <textarea
+                  <textarea aria-label="Anything we should know? (optional)"
                     className="dhc-input" rows={3} placeholder="Anything we should know? (optional)"
                     style={{ width: '100%', marginBottom: 14, resize: 'vertical' }}
                     value={form.notes} onChange={e => setForm({ ...form, notes: e.target.value })}

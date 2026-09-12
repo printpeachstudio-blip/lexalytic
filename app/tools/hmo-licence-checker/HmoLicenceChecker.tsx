@@ -213,7 +213,7 @@ export default function HmoLicenceChecker() {
           <div className="hmo-q">
             <div className="hmo-qlabel">How many people live there in total?</div>
             <div className="hmo-qhelp">Count everyone who occupies the property as their main residence, including children.</div>
-            <input
+            <input aria-label="Number of occupants"
               className="hmo-num" type="number" min={1} max={30} inputMode="numeric"
               value={occupants} onChange={e => setOccupants(e.target.value)} placeholder="e.g. 5"
             />
@@ -225,7 +225,7 @@ export default function HmoLicenceChecker() {
               A household is one person, or a group related by blood, marriage or civil partnership.
               Five unrelated sharers are five households. A couple plus three friends is four.
             </div>
-            <input
+            <input aria-label="Number of households"
               className="hmo-num" type="number" min={1} max={30} inputMode="numeric"
               value={households} onChange={e => setHouseholds(e.target.value)} placeholder="e.g. 5"
             />
@@ -329,7 +329,7 @@ export default function HmoLicenceChecker() {
                         padding: '10px 0', borderBottom: i < rooms.length - 1 ? '1px solid #F4F0E8' : 'none',
                       }}>
                         <span style={{ fontSize: 14, color: '#8A8279', width: 60 }}>Room {i + 1}</span>
-                        <input
+                        <input aria-label="m²"
                           className="hmo-num" type="number" step="0.01" min={0} inputMode="decimal"
                           style={{ width: 100 }} placeholder="m²"
                           value={r.size} onChange={e => updateRoom(r.id, e.target.value)}

@@ -671,7 +671,7 @@ export default function LockupTracker() {
                 <button className="tool-btn" onClick={() => setShowForm(true)}>Talk about automating this</button>
               ) : (
                 <div>
-                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input aria-label="Email address" className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && <div style={{ fontSize: 13, color: '#A13B2A', marginBottom: 12 }}>{sendError}</div>}

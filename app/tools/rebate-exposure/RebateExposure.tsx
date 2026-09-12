@@ -621,7 +621,7 @@ export default function RebateExposure() {
                         </label>
                         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                           <span style={{ fontSize: 14 }}>Left on</span>
-                          <input className="tool-in" type="date" max={todayStr()} style={{ width: 160 }}
+                          <input aria-label="Date the candidate left" className="tool-in" type="date" max={todayStr()} style={{ width: 160 }}
                             value={r.p.leftDate}
                             onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; update(r.p.id, { leftDate: v }) }} />
                         </div>
@@ -655,9 +655,9 @@ export default function RebateExposure() {
                   border: '1px solid rgba(255,255,255,0.12)' }}>
                   <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 12 }}>Your details</div>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 14 }}>
-                    <input className="tool-in-dark" placeholder="Agency name" value={agency.name}
+                    <input aria-label="Agency name" className="tool-in-dark" placeholder="Agency name" value={agency.name}
                       onChange={e => setAgency({ ...agency, name: e.target.value })} />
-                    <input className="tool-in-dark" placeholder="Prepared by (optional)" value={agency.contact}
+                    <input aria-label="Prepared by (optional)" className="tool-in-dark" placeholder="Prepared by (optional)" value={agency.contact}
                       onChange={e => setAgency({ ...agency, contact: e.target.value })} />
                   </div>
                   <button className="tool-btn" disabled={!agencyComplete}
@@ -714,7 +714,7 @@ export default function RebateExposure() {
                 <button className="tool-btn" onClick={() => setShowForm(true)}>Talk about reporting on your CRM</button>
               ) : (
                 <div>
-                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input aria-label="Email address" className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && <div style={{ fontSize: 13, color: '#A13B2A', marginBottom: 12 }}>{sendError}</div>}

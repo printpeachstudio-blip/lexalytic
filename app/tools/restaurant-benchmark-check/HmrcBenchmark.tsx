@@ -740,13 +740,13 @@ export default function HmrcBenchmark() {
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
                       gap: 12, marginBottom: 14 }}>
-                      <input className="hb-dark" placeholder="Business name" value={business.name}
+                      <input aria-label="Business name" className="hb-dark" placeholder="Business name" value={business.name}
                         onChange={e => setBusiness({ ...business, name: e.target.value })} />
-                      <input className="hb-dark" placeholder="Trading as (optional)" value={business.trading}
+                      <input aria-label="Trading as (optional)" className="hb-dark" placeholder="Trading as (optional)" value={business.trading}
                         onChange={e => setBusiness({ ...business, trading: e.target.value })} />
-                      <input className="hb-dark" placeholder="Year ended, e.g. 31 March 2026" value={business.yearEnd}
+                      <input aria-label="Year ended, e.g. 31 March 2026" className="hb-dark" placeholder="Year ended, e.g. 31 March 2026" value={business.yearEnd}
                         onChange={e => setBusiness({ ...business, yearEnd: e.target.value })} />
-                      <input className="hb-dark" placeholder="Prepared by (optional)" value={business.preparedBy}
+                      <input aria-label="Prepared by (optional)" className="hb-dark" placeholder="Prepared by (optional)" value={business.preparedBy}
                         onChange={e => setBusiness({ ...business, preparedBy: e.target.value })} />
                     </div>
                     <button className="tool-btn" disabled={!businessReady}

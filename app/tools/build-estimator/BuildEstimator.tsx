@@ -395,11 +395,11 @@ export default function BuildEstimator() {
                     are after. If you would rather we quoted it, send it over.
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                    <input className="tool-in" placeholder="Your organisation" value={org} onChange={e => setOrg(e.target.value)} />
-                    <input className="tool-in" type="email" placeholder="Email address" value={email}
+                    <input aria-label="Your organisation" className="tool-in" placeholder="Your organisation" value={org} onChange={e => setOrg(e.target.value)} />
+                    <input aria-label="Email address" className="tool-in" type="email" placeholder="Email address" value={email}
                       onChange={e => setEmail(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') submit() }} />
                   </div>
-                  <textarea className="tool-in" rows={3} placeholder="Anything the questions above did not cover (optional)"
+                  <textarea aria-label="Anything the questions above did not cover (optional)" className="tool-in" rows={3} placeholder="Anything the questions above did not cover (optional)"
                     style={{ marginBottom: 14, resize: 'vertical' }} value={notes} onChange={e => setNotes(e.target.value)} />
                   {sendError && (
                     <div style={{ fontSize: 13, color: '#E8A08F', marginBottom: 12, padding: '10px 14px',

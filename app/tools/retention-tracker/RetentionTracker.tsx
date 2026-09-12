@@ -706,17 +706,17 @@ export default function RetentionTracker() {
                       to send payment. Saved on this device for next time.
                     </p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
-                      <input className="tool-in-dark" placeholder="Your company name" value={sender.company}
+                      <input aria-label="Your company name" className="tool-in-dark" placeholder="Your company name" value={sender.company}
                         onChange={e => setSender({ ...sender, company: e.target.value })} />
-                      <input className="tool-in-dark" placeholder="Your name" value={sender.contact}
+                      <input aria-label="Your name" className="tool-in-dark" placeholder="Your name" value={sender.contact}
                         onChange={e => setSender({ ...sender, contact: e.target.value })} />
                     </div>
-                    <textarea className="tool-in-dark" rows={3} placeholder="Your address" style={{ marginBottom: 12, resize: 'vertical' }}
+                    <textarea aria-label="Your address" className="tool-in-dark" rows={3} placeholder="Your address" style={{ marginBottom: 12, resize: 'vertical' }}
                       value={sender.address} onChange={e => setSender({ ...sender, address: e.target.value })} />
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 16 }}>
-                      <input className="tool-in-dark" placeholder="Email" value={sender.email}
+                      <input aria-label="Email" className="tool-in-dark" placeholder="Email" value={sender.email}
                         onChange={e => setSender({ ...sender, email: e.target.value })} />
-                      <input className="tool-in-dark" placeholder="Phone" value={sender.phone}
+                      <input aria-label="Phone" className="tool-in-dark" placeholder="Phone" value={sender.phone}
                         onChange={e => setSender({ ...sender, phone: e.target.value })} />
                     </div>
                     <button className="tool-btn" disabled={!senderComplete}
@@ -805,7 +805,7 @@ export default function RetentionTracker() {
                 </button>
               ) : (
                 <div>
-                  <input className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
+                  <input aria-label="Email address" className="tool-in" type="email" placeholder="Email address" style={{ maxWidth: 320, marginBottom: 12 }}
                     value={email} onChange={e => setEmail(e.target.value)}
                     onKeyDown={e => { if (e.key === 'Enter') submitInterest() }} />
                   {sendError && (
