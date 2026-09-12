@@ -163,5 +163,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/margin-manager', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/tools/renovation-planner', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/homeowners', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: 'https://www.lexalytic.com/startups', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
   ]
 }
