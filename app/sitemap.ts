@@ -161,5 +161,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/privacy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: 'https://www.lexalytic.com/blog/what-is-power-query-uk-business', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/margin-manager', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/tools/renovation-planner', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   ]
 }
