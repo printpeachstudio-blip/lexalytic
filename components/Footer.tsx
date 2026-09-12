@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           <div>
             <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Products</div>
-            {[['Retention Manager', '/retention-manager'], ['Margin Manager', '/margin-manager'], ['Free tools', '/tools']].map(([label, href]) => (
+            {[['Retention Manager', '/retention-manager'], ['Margin Manager', '/margin-manager'], ['Free tools', '/tools'], ['For homeowners', '/homeowners']].map(([label, href]) => (
               <a key={href} href={href} style={{ display: 'block', fontSize: '12px', color: 'rgba(255,255,255,0.35)', marginBottom: '6px', textDecoration: 'none' }}>{label}</a>
             ))}
           </div>

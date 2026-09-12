@@ -39,7 +39,7 @@ const groups = [
   {
     heading: 'Homeowners',
     intro:
-      'Not a business tool, but the same problem: money leaving in ways nobody wrote down at the start.',
+      'Not business tools, but the same problem: money leaving in ways nobody wrote down at the start. There are more of these at /homeowners.',
     tools: [
       {
         href: '/tools/renovation-planner',
