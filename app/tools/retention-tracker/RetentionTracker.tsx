@@ -761,7 +761,7 @@ export default function RetentionTracker() {
                     { key: 'final' as const, label: 'Final release', sub: `End of ${c.job.defectsMonths} month defects period`,
                       amount: c.finalAmount, due: c.finalDue, days: c.finalDays, released: c.job.finalReleased },
                   ].map(r => (
-                    <div key={r.key} style={{ display: 'grid', gridTemplateColumns: '1fr 130px 150px 110px',
+                    <div className="tool-scroll"><div key={r.key} style={{ display: 'grid', minWidth: 560, gridTemplateColumns: '1fr 130px 150px 110px',
                       gap: 14, alignItems: 'center', padding: '14px 0', borderBottom: '1px solid #F4F0E8' }}>
                       <div>
                         <div style={{ fontSize: 15, fontWeight: 500 }}>{r.label}</div>
@@ -780,7 +780,7 @@ export default function RetentionTracker() {
                           <span style={{ color: '#8A8279' }}>{r.days} days</span>
                         ) : <span style={{ color: '#C4BDB2' }}>—</span>}
                       </div>
-                    </div>
+                    </div></div>
                   ))}
 
                   <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap', marginTop: 16, alignItems: 'center' }}>

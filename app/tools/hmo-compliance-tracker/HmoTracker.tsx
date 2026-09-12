@@ -361,8 +361,8 @@ export default function HmoTracker() {
             {allDue.slice(0, 12).map((item, i) => {
               const st = statusOf(item.days)
               return (
-                <div key={`${item.propId}-${item.cert.key}`} className="t-duerow" style={{
-                  display: 'grid', gridTemplateColumns: '1fr 170px 120px', gap: 14,
+                <div className="tool-scroll"><div key={`${item.propId}-${item.cert.key}`} className="t-duerow" style={{
+                  display: 'grid', minWidth: 560, gridTemplateColumns: '1fr 170px 120px', gap: 14,
                   alignItems: 'center', padding: '14px 0',
                   borderBottom: i < Math.min(allDue.length, 12) - 1 ? '1px solid #F4F0E8' : 'none',
                 }}>
@@ -376,7 +376,7 @@ export default function HmoTracker() {
                   <div style={{ fontSize: 13, fontWeight: 600, color: st.color }}>
                     {item.days < 0 ? `${Math.abs(item.days)} days overdue` : `${item.days} days`}
                   </div>
-                </div>
+                </div></div>
               )
             })}
             {allDue.length > 12 && (

@@ -473,6 +473,12 @@ export default function LabourDaypart() {
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
         </p>
 
+        <p className="tool-disclaimer">
+
+          Employment costs use the current National Living Wage, employer National Insurance and minimum pension contribution. Your actual cost depends on age bands, thresholds and any enhanced pension, so your payroll figure will differ a little. The contribution figure is an estimate built on the gross profit you entered.
+
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 660 }}>
           True hourly cost adds holiday accrual at 12.07 per cent, employer National Insurance at 15 per
           cent above the threshold, and pension at 3 per cent. It is simplified, and does not account for

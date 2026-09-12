@@ -445,6 +445,12 @@ export default function GpCalculator() {
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
         </p>
 
+        <p className="tool-disclaimer">
+
+          Wastage rates are the typical range for each category rather than yours. If you measure it, use your own. The benchmarks are indicative for a UK wet led site and vary with the tie, the area and the offer. This is a way of comparing lines, not a substitute for a stocktake.
+
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 660 }}>
           Wastage defaults and GP ranges are typical UK figures for 2026 rather than yours. Wastage is
           applied by inflating cost, which assumes you buy more than you sell rather than discounting the

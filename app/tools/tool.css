@@ -141,3 +141,6 @@
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* Tables with fixed columns scroll sideways on a phone rather than collapse */
+.tool-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }

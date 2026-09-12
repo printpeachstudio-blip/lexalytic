@@ -766,6 +766,18 @@ export default function RebateExposure() {
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
         </p>
 
+        
+
+        <p className="tool-disclaimer">
+
+        
+
+          Rebate terms depend entirely on what your terms of business say. The scales here are common patterns, not a description of your contract. Where the client disputes a rebate, the contract wording decides it, so check yours before relying on any figure here.
+
+        
+
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 640 }}>
           Rebate terms vary between agencies and between clients. Many agreements offer a replacement
           candidate before any refund is due, which changes the commercial effect considerably. Check your

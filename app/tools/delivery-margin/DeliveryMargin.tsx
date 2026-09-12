@@ -472,6 +472,12 @@ export default function DeliveryMargin() {
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
         </p>
 
+        <p className="tool-disclaimer">
+
+          Commission rates are the published standard tiers. Your agreement may differ, and platforms change their terms, so treat the platform rate as a starting point and check it against your own statement. VAT treatment assumes a registered business selling standard rated food.
+
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 650 }}>
           Commission rates are typical rather than yours, and vary by tier, by contract and by whether the
           platform provides the rider. Check your own statements. This covers food cost and packaging

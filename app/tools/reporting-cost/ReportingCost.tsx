@@ -420,6 +420,12 @@ export default function ReportingCost() {
           <a href="/tools" style={{ color: AMBER }}>free tools</a>.
         </p>
 
+        <p className="tool-disclaimer">
+
+          This is the cost of the time as entered, at the salaries entered, with the on-costs assumed. It does not include the cost of decisions made late or wrongly on a report that was out of date, which is usually larger and impossible to put a number on.
+
+        </p>
+
         <p style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 18, maxWidth: 640 }}>
           Employer National Insurance and pension rates are those applying in England for 2026/27 and are
           simplified. Pension is calculated on full salary rather than qualifying earnings, which slightly
