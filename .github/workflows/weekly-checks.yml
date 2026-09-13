@@ -1,0 +1,56 @@
+name: Weekly checks
+
+on:
+  schedule:
+    # Monday morning, so anything broken is found before the week starts
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Rates
+        id: rates
+        continue-on-error: true
+        run: node scripts/rates-check.mjs
+
+      - name: Security
+        id: security
+        continue-on-error: true
+        run: node scripts/security-check.mjs
+
+      - name: Accessibility and contrast
+        id: a11y
+        continue-on-error: true
+        run: |
+          npx playwright install --with-deps chromium
+          node scripts/a11y-check.mjs --live
+
+      - name: Open an issue if anything failed
+        if: steps.rates.outcome == 'failure' || steps.security.outcome == 'failure' || steps.a11y.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const failed = []
+            if ('${{ steps.rates.outcome }}' === 'failure') failed.push('Rates have drifted from the official figures')
+            if ('${{ steps.security.outcome }}' === 'failure') failed.push('Security check found something')
+            if ('${{ steps.a11y.outcome }}' === 'failure') failed.push('Contrast failure, some text cannot be read')
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Weekly check failed: ${failed.length} thing${failed.length > 1 ? 's' : ''}`,
+              body: [
+                failed.map(f => `- ${f}`).join('\n'),
+                '',
+                `[Full output](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+              ].join('\n'),
+            })
