@@ -90,7 +90,7 @@ export default function Contact() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }} className="form-row">
                   <div>
                     <label style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Name *</label>
-                    <input required style={inputStyle} placeholder="Your name" value={form.name}
+                    <input required aria-label="Your name" style={inputStyle} placeholder="Your name" value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
                       onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--amber)'}
                       onBlur={e => (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'}
@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Email *</label>
-                    <input required type="email" style={inputStyle} placeholder="you@company.com" value={form.email}
+                    <input required aria-label="Your email address" type="email" style={inputStyle} placeholder="you@company.com" value={form.email}
                       onChange={e => setForm({ ...form, email: e.target.value })}
                       onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--amber)'}
                       onBlur={e => (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'}
@@ -107,7 +107,7 @@ export default function Contact() {
                 </div>
                 <div style={{ marginBottom: '16px' }}>
                   <label style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Company</label>
-                  <input style={inputStyle} placeholder="Your company name" value={form.company}
+                  <input aria-label="Your company name" style={inputStyle} placeholder="Your company name" value={form.company}
                     onChange={e => setForm({ ...form, company: e.target.value })}
                     onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--amber)'}
                     onBlur={e => (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)'}
@@ -115,7 +115,7 @@ export default function Contact() {
                 </div>
                 <div style={{ marginBottom: '28px' }}>
                   <label style={{ display: 'block', fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '1px' }}>Tell us about your problem *</label>
-                  <textarea required rows={4} style={{ ...inputStyle, resize: 'vertical' as const }}
+                  <textarea required aria-label="Tell us about your problem" rows={4} style={{ ...inputStyle, resize: 'vertical' as const }}
                     placeholder="Describe the process that's taking too long, or what you're trying to build..."
                     value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                     onFocus={e => (e.target as HTMLElement).style.borderColor = 'var(--amber)'}
