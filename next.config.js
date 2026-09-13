@@ -31,6 +31,11 @@ const securityHeaders = [
 ]
 
 const nextConfig = {
+  // The image optimizer is not used anywhere on this site and its endpoint
+  // has carried remote code execution advisories. Disabling it removes the
+  // surface entirely.
+  images: { unoptimized: true },
+
   staticPageGenerationTimeout: 300,
   trailingSlash: false,
   async headers() {
