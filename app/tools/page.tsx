@@ -52,6 +52,14 @@ const groups = [
       'Most business data problems are invisible until something downstream fails. These find them first.',
     tools: [
       {
+        href: '/tools/employer-duties',
+        name: 'Employer duty dates',
+        forWho: 'Anyone who employs somebody',
+        summary:
+          'Auto enrolment was not a one-off. Re-enrolment comes back every three years, and the re-declaration is due even when you have nobody to put back in. That plus P60, P11D, Class 1A, the holiday year and employers liability, worked out from your dates and exported to a calendar with a reminder a month before each one.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+      {
         href: '/tools/reporting-cost',
         name: 'Manual reporting cost calculator',
         forWho: 'Anyone rebuilding the same report every month',
