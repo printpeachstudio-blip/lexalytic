@@ -7,7 +7,7 @@ import {
   type Tenancy, type Severity,
 } from '@/lib/deposit-protection'
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_DEP_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/6oUdR25Sx5YmcI4c443AY0g'
 const UNLOCK_PARAM = 'tdp-6h2nc4'
 const PAID_KEY = 'lexalytic.tdp.paid.v1'
 const STATE_KEY = 'lexalytic.tdp.v1'
