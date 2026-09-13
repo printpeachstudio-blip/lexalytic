@@ -159,5 +159,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/blog/which-sessions-make-money-hospitality', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/blog/pub-gp-wastage-calculator', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/tools/deposit-protection-check', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/blog/prescribed-information-deposit-deadline', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ]
 }
