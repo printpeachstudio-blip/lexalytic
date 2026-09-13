@@ -31,7 +31,7 @@ export default function NotFound() {
 
       <section style={{ padding: 'clamp(60px, 10vw, 110px) 0' }}>
         <div className="container">
-          <div style={{ fontSize: '13px', color: 'var(--amber)', fontWeight: 500,
+          <div style={{ fontSize: '13px', color: 'var(--amber-text)', fontWeight: 500,
             letterSpacing: '0.04em', marginBottom: '18px' }}>
             404
           </div>

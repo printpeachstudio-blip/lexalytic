@@ -59,8 +59,8 @@ export default function BlogPost() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Cash Flow</span>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Automation</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Cash Flow</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Data Automation</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2026 · 13 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
@@ -83,7 +83,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The situation in 2026</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The situation in 2026</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
               UK businesses are currently owed around £26bn in unpaid invoices. The average affected SME is sitting on £17,000 in overdue payments at any given time. New government legislation introduced in March 2026 caps large-firm payment terms at 60 days - but enforcement depends on businesses actually knowing what they are owed and when. Most do not have that visibility.
             </p>
@@ -205,7 +205,7 @@ export default function BlogPost() {
                 <h3 style={{ fontSize: '15px', fontWeight: '600', color: 'var(--amber)', marginBottom: '10px' }}>{item.option}</h3>
                 <p style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.7', marginBottom: '12px' }}>{item.desc}</p>
                 <p style={{ fontSize: '12px', color: 'var(--ink-4)', fontStyle: 'italic', marginBottom: '12px' }}>{item.best}</p>
-                <Link href={item.link} style={{ fontSize: '13px', color: 'var(--amber)', textDecoration: 'none', fontWeight: '500' }}>
+                <Link href={item.link} style={{ fontSize: '13px', color: 'var(--amber-text)', textDecoration: 'none', fontWeight: '500' }}>
                   {item.linkText} →
                 </Link>
               </div>
@@ -300,7 +300,7 @@ export default function BlogPost() {
                 background: 'var(--bg-2)', border: '1px solid var(--border)',
                 borderRadius: 'var(--radius-lg)', textDecoration: 'none',
               }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
+                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
                 <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
               </Link>
             ))}

@@ -4,13 +4,16 @@
   --ink: #0f0f0f;
   --ink-2: #3a3a3a;
   --ink-3: #6b6b6b;
-  --ink-4: #9a9a9a;
+  --ink-4: #6f6f6f;   /* was #9a9a9a, which measured 2.69:1 and failed WCAG AA */
   --bg: #fafaf8;
   --bg-2: #f2f1ee;
   --bg-dark: #111110;
   --bg-dark-2: #1c1c1a;
   --bg-dark-3: #252523;
   --amber: #c17d2e;
+  /* For small text on a light background. The brand amber measures 3.22:1,
+     which is fine for headings and fails for 11 and 12 pixel labels. */
+  --amber-text: #9c631f;
   --amber-light: #e8a84a;
   --amber-bg: #fdf3e3;
   --white: #ffffff;
@@ -76,7 +79,7 @@ img { max-width: 100%; }
 
 .section-label {
   font-size: 11px; font-weight: 500; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--amber);
+  text-transform: uppercase; color: var(--amber-text);
   margin-bottom: 12px; display: block;
 }
 

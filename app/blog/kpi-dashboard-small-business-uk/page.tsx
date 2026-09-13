@@ -59,8 +59,8 @@ export default function BlogPost() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Power BI</span>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Intelligence</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Power BI</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Intelligence</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>May 2026 · 13 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
@@ -83,7 +83,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
               A KPI dashboard for a small business does not need to be complicated. It needs to show the five to ten numbers that tell you whether the business is healthy right now - revenue, margin, cash position, outstanding invoices, and whatever operational metric matters most in your sector. Built in Power BI or Excel, connected to your existing systems, it can be ready in days.
             </p>
@@ -145,10 +145,10 @@ export default function BlogPost() {
                 },
               ].map((item, i) => (
                 <div key={i} style={{ padding: '22px 24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px' }}>{item.type}</div>
+                  <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px' }}>{item.type}</div>
                   {item.kpis.map((kpi, j) => (
                     <div key={j} style={{ display: 'flex', gap: '10px', marginBottom: j < item.kpis.length - 1 ? '8px' : '0', alignItems: 'flex-start' }}>
-                      <span style={{ color: 'var(--amber)', flexShrink: 0, fontSize: '12px', marginTop: '3px' }}>→</span>
+                      <span style={{ color: 'var(--amber-text)', flexShrink: 0, fontSize: '12px', marginTop: '3px' }}>→</span>
                       <span style={{ fontSize: '13px', color: 'var(--ink-2)', lineHeight: '1.5' }}>{kpi}</span>
                     </div>
                   ))}
@@ -225,12 +225,12 @@ export default function BlogPost() {
                 padding: '24px', background: item.highlight ? 'var(--ink)' : 'var(--bg-2)',
                 borderRadius: 'var(--radius-lg)', border: item.highlight ? '2px solid var(--amber)' : '1px solid var(--border)',
               }}>
-                <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.tool}</div>
+                <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.tool}</div>
                 <div style={{ fontSize: '12px', color: item.highlight ? 'rgba(255,255,255,0.4)' : 'var(--ink-4)', marginBottom: '12px', fontStyle: 'italic' }}>{item.cost}</div>
                 <div style={{ fontSize: '12px', color: item.highlight ? 'rgba(255,255,255,0.5)' : 'var(--ink-3)', marginBottom: '16px' }}>{item.best}</div>
                 {item.pros.map((pro, j) => (
                   <div key={j} style={{ display: 'flex', gap: '8px', marginBottom: '6px', alignItems: 'flex-start' }}>
-                    <span style={{ color: 'var(--amber)', flexShrink: 0, fontSize: '12px' }}>✓</span>
+                    <span style={{ color: 'var(--amber-text)', flexShrink: 0, fontSize: '12px' }}>✓</span>
                     <span style={{ fontSize: '13px', color: item.highlight ? 'rgba(255,255,255,0.7)' : 'var(--ink-2)', lineHeight: '1.5' }}>{pro}</span>
                   </div>
                 ))}
@@ -292,7 +292,7 @@ export default function BlogPost() {
             <div key={i} style={{ padding: '24px 28px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginBottom: '16px' }}>
               <div style={{ fontSize: '13px', fontWeight: '600', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>Common mistake</div>
               <div style={{ fontSize: '15px', fontWeight: '600', color: 'var(--ink)', marginBottom: '12px' }}>{item.mistake}</div>
-              <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>The fix</div>
+              <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>The fix</div>
               <div style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7' }}>{item.fix}</div>
             </div>
           ))}
@@ -369,7 +369,7 @@ export default function BlogPost() {
                 background: 'var(--bg-2)', border: '1px solid var(--border)',
                 borderRadius: 'var(--radius-lg)', textDecoration: 'none',
               }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
+                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
                 <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
               </Link>
             ))}

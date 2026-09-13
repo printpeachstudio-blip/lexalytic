@@ -89,7 +89,7 @@ export default function CaseStudiesPage() {
               <Link key={i} href={`/case-studies/${c.slug}`} style={{ display: 'block', textDecoration: 'none', background: 'var(--white)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', transition: 'all 0.2s' }}>
                 <div style={{ padding: '24px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div>
-                    <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px', display: 'inline-block', marginBottom: '8px' }}>{c.tag}</span>
+                    <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px', display: 'inline-block', marginBottom: '8px' }}>{c.tag}</span>
                     <div style={{ fontSize: '13px', color: 'var(--ink-4)' }}>{c.industry}</div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
@@ -100,7 +100,7 @@ export default function CaseStudiesPage() {
                 <div style={{ padding: '24px' }}>
                   <h2 style={{ fontSize: '1.15rem', fontFamily: 'var(--serif)', marginBottom: '12px', color: 'var(--ink)', letterSpacing: '-0.01em', lineHeight: '1.4' }}>{c.title}</h2>
                   <p style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.7', marginBottom: '20px' }}>{c.summary}</p>
-                  <div style={{ fontSize: '13px', color: 'var(--amber)', fontWeight: '500' }}>Read case study →</div>
+                  <div style={{ fontSize: '13px', color: 'var(--amber-text)', fontWeight: '500' }}>Read case study →</div>
                 </div>
               </Link>
             ))}

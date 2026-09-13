@@ -343,7 +343,7 @@ export default function ToolsPage() {
                       borderBottom: i < g.tools.length - 1 ? '1px solid var(--border)' : 'none',
                     }}
                   >
-                    <div style={{ fontSize: '12px', color: 'var(--amber)', marginBottom: '10px', fontWeight: '500' }}>
+                    <div style={{ fontSize: '12px', color: 'var(--amber-text)', marginBottom: '10px', fontWeight: '500' }}>
                       {t.forWho}
                     </div>
                     <h3 style={{ fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', marginBottom: '14px', fontFamily: 'var(--serif)', fontWeight: '400' }}>

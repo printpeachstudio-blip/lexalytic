@@ -80,7 +80,7 @@ export default function CustomBusinessToolsPage() {
           <div style={{ maxWidth: '760px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(193,125,46,0.12)', border: '1px solid rgba(193,125,46,0.25)', borderRadius: '100px', padding: '6px 16px', marginBottom: '28px' }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
-              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Custom Business Tools UK</span>
+              <span style={{ fontSize: '12px', color: 'var(--amber-text)', fontWeight: '500', letterSpacing: '0.5px' }}>Custom Business Tools UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
               Generic software does not fit your business.<br /><em style={{ color: 'var(--amber)' }}>A custom tool does.</em>

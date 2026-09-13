@@ -87,7 +87,7 @@ export default function StartupsPage() {
         {/* Hero */}
         <section style={{ paddingTop: '150px', paddingBottom: '70px', background: 'var(--bg-dark)' }}>
           <div className="container">
-            <div style={{ fontSize: '13px', color: 'var(--amber)', fontWeight: 500,
+            <div style={{ fontSize: '13px', color: 'var(--amber-text)', fontWeight: 500,
               letterSpacing: '0.04em', marginBottom: '20px' }}>
               FOR NEW BUSINESSES
             </div>

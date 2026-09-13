@@ -55,7 +55,7 @@ return (
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2026 · 10 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
@@ -78,7 +78,7 @@ return (
         <div className="container" style={{ maxWidth: '780px' }}>
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
               Most Excel reports can be automated using Power Query (built into Excel, no coding needed), VBA macros, or Python scripts - depending on complexity. The right choice depends on what your data looks like and how technical your team is. For most UK SMEs, <strong>Power Query handles 80% of cases</strong> and requires no coding at all.
             </p>

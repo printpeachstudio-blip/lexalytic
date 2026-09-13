@@ -59,8 +59,8 @@ export default function BlogPost() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Growth</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Business Growth</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>April 2026 · 13 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>
@@ -83,7 +83,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
               You have not outgrown Excel. You have outgrown the way you are using it. The answer is almost never to replace Excel entirely - it is to stop using it for things it was not designed for, and automate the parts that are slowing you down.
             </p>
@@ -208,9 +208,9 @@ export default function BlogPost() {
               <div key={i} style={{ padding: '24px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
                 <div style={{ fontSize: '11px', fontWeight: '600', color: '#ef4444', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>The problem</div>
                 <div style={{ fontSize: '14px', fontWeight: '600', color: 'var(--ink)', marginBottom: '12px' }}>{item.problem}</div>
-                <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>The fix</div>
+                <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>The fix</div>
                 <div style={{ fontSize: '14px', color: 'var(--ink-2)', lineHeight: '1.6', marginBottom: '12px' }}>{item.fix}</div>
-                <Link href={item.href} style={{ fontSize: '12px', color: 'var(--amber)', textDecoration: 'none', fontWeight: '500' }}>
+                <Link href={item.href} style={{ fontSize: '12px', color: 'var(--amber-text)', textDecoration: 'none', fontWeight: '500' }}>
                   {item.tool} →
                 </Link>
               </div>
@@ -328,7 +328,7 @@ export default function BlogPost() {
                 background: 'var(--bg-2)', border: '1px solid var(--border)',
                 borderRadius: 'var(--radius-lg)', textDecoration: 'none',
               }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
+                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
                 <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
               </Link>
             ))}

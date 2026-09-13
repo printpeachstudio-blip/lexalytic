@@ -55,8 +55,8 @@ export default function BlogPost() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Construction</span>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Construction</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Excel Automation</span>
             <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>May 2026 · 7 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>Excel Automation for Construction Companies</h1>
@@ -77,7 +77,7 @@ export default function BlogPost() {
         <div className="container" style={{ maxWidth: '780px' }}>
 
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
-            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
+            <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
               The most time-consuming Excel work in construction businesses - job cost tracking, labour allocation, subcontractor payment calculations, project profitability reporting - can almost always be automated. The data already exists in your systems. The manual work is in moving it, formatting it, and rebuilding the same views every week.
             </p>
@@ -161,7 +161,7 @@ export default function BlogPost() {
               { title: 'What Is Data Cleansing - and Why Does Bad Data Cost UK Businesses So Much?', href: '/blog/what-is-data-cleansing-uk', tag: 'Data Quality' },
             ].map((post, i) => (
               <Link key={i} href={post.href} style={{ display: 'block', padding: '20px 24px', background: 'var(--bg-2)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)', textDecoration: 'none' }}>
-                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
+                <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.tag}</span>
                 <p style={{ fontSize: '15px', color: 'var(--ink)', marginTop: '8px', marginBottom: 0, lineHeight: '1.5', fontWeight: '500' }}>{post.title}</p>
               </Link>
             ))}

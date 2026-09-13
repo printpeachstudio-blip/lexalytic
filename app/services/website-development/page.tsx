@@ -59,7 +59,7 @@ export default function WebsiteDevelopmentPage() {
           <div style={{ maxWidth: '760px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(193,125,46,0.12)', border: '1px solid rgba(193,125,46,0.25)', borderRadius: '100px', padding: '6px 16px', marginBottom: '28px' }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
-              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Bespoke Website Development UK</span>
+              <span style={{ fontSize: '12px', color: 'var(--amber-text)', fontWeight: '500', letterSpacing: '0.5px' }}>Bespoke Website Development UK</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
               A website that actually<br /><em style={{ color: 'var(--amber)' }}>works hard for your business.</em>
@@ -118,7 +118,7 @@ export default function WebsiteDevelopmentPage() {
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
                     <h3 style={{ fontSize: '16px', fontWeight: '600', color: 'var(--ink)', margin: 0 }}>{site.name}</h3>
-                    <span style={{ fontSize: '13px', color: 'var(--amber)' }}>View live site →</span>
+                    <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>View live site →</span>
                   </div>
                   <p style={{ fontSize: '14px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>{site.desc}</p>
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>

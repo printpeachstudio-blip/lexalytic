@@ -655,7 +655,7 @@ export default function BlogIndex() {
             <Link key={i} href={`/blog/${post.slug}`} style={{ display: 'block', textDecoration: 'none', marginBottom: '20px' }}>
               <div style={{ padding: '32px', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)' }}>
                 <div style={{ display: 'flex', gap: '12px', marginBottom: '14px', alignItems: 'center' }}>
-                  <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
+                  <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px' }}>{post.tag}</span>
                   <span style={{ fontSize: '13px', color: 'var(--ink-4)' }}>{post.date} · {post.readTime}</span>
                 </div>
                 <h2 style={{ fontSize: '1.25rem', marginBottom: '10px', color: 'var(--ink)' }}>{post.title}</h2>

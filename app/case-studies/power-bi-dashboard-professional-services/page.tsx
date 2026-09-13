@@ -41,7 +41,7 @@ export default function CaseStudy() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-dark)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="container" style={{ maxWidth: '860px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Power BI</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Power BI</span>
             <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)' }}>Professional Services</span>
           </div>
           <h1 style={{ color: 'var(--white)', fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', lineHeight: '1.15', marginBottom: '20px', letterSpacing: '-0.02em' }}>Live P&L Dashboard for a Professional Services Firm</h1>
@@ -61,17 +61,17 @@ export default function CaseStudy() {
       <article style={{ padding: 'clamp(60px, 8vw, 100px) 0' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ marginBottom: '64px' }}>
-            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>The situation</div>
+            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>The situation</div>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>A professional services firm had no central view of project profitability. Revenue was in the accounting system, time in a project management tool, costs scattered across expense records and payroll. Nobody had connected these three data sources. Directors were making resourcing decisions without knowing which of their current projects were actually profitable.</p>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85' }}>The management pack was produced manually each month - pulling data from multiple exports, reconciling figures that did not quite match, and formatting everything into a presentation. It took the best part of a day to compile. By the time it was ready, the data was already two to three weeks old. The team was making decisions based on last month&#x27;s picture of a business that had moved on.</p>
           </div>
           <div style={{ marginBottom: '64px', padding: '40px', background: 'var(--bg-2)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
-            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>What we built</div>
+            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>What we built</div>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>A Power BI dashboard connected directly to their project management system and accounting software. Live P&L by project, by client, and by team member - updated automatically as time is logged and invoices are raised. No manual input. No exports. No reconciliation.</p>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85' }}>The build took one week. We started with a clear brief: what are the three questions the MD needs answered every week? From that brief we scoped the data connections, agreed the dashboard structure, and built it to exactly that specification. The first week after launch, the MD opened the dashboard rather than waiting for the pack. The management pack process was discontinued.</p>
           </div>
           <div style={{ marginBottom: '64px' }}>
-            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>The outcome</div>
+            <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '16px' }}>The outcome</div>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '24px' }}>Full visibility within 48 hours of the build completing. The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report. Resourcing decisions are made on current data. The finance team member who previously spent a day each month on the management pack now does something more valuable with that time.</p>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85' }}>Six months after launch the firm identified two client relationships that were significantly less profitable than assumed - a discovery that led directly to a repricing conversation and a meaningful improvement in overall margin. That insight was not visible before the dashboard existed.</p>
           </div>

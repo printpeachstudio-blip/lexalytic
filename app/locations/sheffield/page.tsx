@@ -56,7 +56,7 @@ export default function SheffieldPage() {
           <div style={{ maxWidth: '760px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(193,125,46,0.12)', border: '1px solid rgba(193,125,46,0.25)', borderRadius: '100px', padding: '6px 16px', marginBottom: '28px' }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--amber)', display: 'inline-block' }} />
-              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>Digital Studio serving Sheffield businesses</span>
+              <span style={{ fontSize: '12px', color: 'var(--amber-text)', fontWeight: '500', letterSpacing: '0.5px' }}>Digital Studio serving Sheffield businesses</span>
             </div>
             <h1 style={{ color: 'var(--white)', marginBottom: '24px', lineHeight: '1.08', letterSpacing: '-0.03em' }}>
               Digital studio for<br /><em style={{ color: 'var(--amber)' }}>Sheffield businesses.</em>
@@ -94,37 +94,37 @@ export default function SheffieldPage() {
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>🌐</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Website Development</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Fast, bespoke Next.js websites. No WordPress, no templates, no monthly platform fees. Built to rank on Google.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
             <Link href="/services/custom-business-tools" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>🛠️</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Custom Business Tools</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Bespoke web apps built around your exact processes - custom CRMs, staff rotas, job trackers, client portals.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
             <Link href="/services/ai-tools" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>🤖</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>AI-Powered Tools</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Business tools with Claude AI built in - proposal generators, document processors, intelligent workflows.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
             <Link href="/services/power-bi" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>📊</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Power BI Dashboards</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Live, interactive dashboards connected to your data. KPIs updated automatically, no manual reporting.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
             <Link href="/services/excel-automation" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>⚡</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Excel and Data Automation</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Turn hours of manual reporting into a one-click process. Power Query, VBA, Python.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
             <Link href="/services/platform-development" style={{ padding: '24px', background: 'var(--bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', textDecoration: 'none', display: 'block' }}>
               <div style={{ fontSize: '24px', marginBottom: '12px' }}>🚀</div>
               <h3 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>Platform Development</h3>
               <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: '1.6', marginBottom: '12px' }}>Full web applications, SaaS products, booking systems, and member platforms. From idea to live product.</p>
-              <span style={{ fontSize: '13px', color: 'var(--amber)' }}>Find out more →</span>
+              <span style={{ fontSize: '13px', color: 'var(--amber-text)' }}>Find out more →</span>
             </Link>
           </div>
         </div>

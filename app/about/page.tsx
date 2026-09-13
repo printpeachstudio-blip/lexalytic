@@ -160,7 +160,7 @@ export default function AboutPage() {
               gap: '2px', background: 'var(--border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
               {built.map(b => (
                 <div key={b.name} style={{ background: 'var(--bg)', padding: '30px 32px' }}>
-                  <div style={{ fontSize: '11px', color: 'var(--amber)', fontWeight: '600',
+                  <div style={{ fontSize: '11px', color: 'var(--amber-text)', fontWeight: '600',
                     letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '10px' }}>
                     {b.tag}
                   </div>
@@ -331,7 +331,7 @@ export default function AboutPage() {
               ].map(([quote, name, role]) => (
                 <div key={name} style={{ background: 'var(--white)', border: '1px solid var(--border)',
                   borderRadius: 'var(--radius-lg)', padding: '28px 30px' }}>
-                  <div style={{ color: 'var(--amber)', fontSize: '13px', marginBottom: '14px' }}>★★★★★</div>
+                  <div style={{ color: 'var(--amber-text)', fontSize: '13px', marginBottom: '14px' }}>★★★★★</div>
                   <p style={{ fontSize: '15px', color: 'var(--ink-2)', lineHeight: '1.8', marginBottom: '20px' }}>
                     {quote}
                   </p>

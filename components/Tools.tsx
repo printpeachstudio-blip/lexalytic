@@ -87,7 +87,7 @@ export default function Tools() {
             >
               <div style={{
                 fontSize: '11px',
-                color: 'var(--amber)',
+                color: 'var(--amber-text)',
                 fontWeight: '600',
                 letterSpacing: '0.06em',
                 textTransform: 'uppercase',

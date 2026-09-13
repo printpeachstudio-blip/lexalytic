@@ -47,7 +47,7 @@ export default function WhoWeWorkWith() {
             )
           })}
             <span style={{
-              fontSize: '13px', color: 'var(--amber)',
+              fontSize: '13px', color: 'var(--amber-text)',
               padding: '5px 14px',
             }}>and any UK business with a problem to solve →</span>
           </div>
