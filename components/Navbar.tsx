@@ -70,7 +70,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <button onClick={() => setOpen(!open)} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }} className="hamburger">
+        <button onClick={() => setOpen(!open)} aria-label={open ? 'Close the menu' : 'Open the menu'} aria-expanded={open} style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }} className="hamburger">
           <div style={{ width: '22px', height: '2px', background: solid ? 'var(--ink)' : 'var(--white)', marginBottom: '5px', transition: 'all 0.3s' }} />
           <div style={{ width: '22px', height: '2px', background: solid ? 'var(--ink)' : 'var(--white)', marginBottom: '5px', transition: 'all 0.3s' }} />
           <div style={{ width: '22px', height: '2px', background: solid ? 'var(--ink)' : 'var(--white)', transition: 'all 0.3s' }} />

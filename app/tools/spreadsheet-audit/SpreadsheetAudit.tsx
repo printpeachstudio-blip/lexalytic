@@ -192,7 +192,7 @@ export default function SpreadsheetAudit() {
               onDragOver={e => { e.preventDefault(); setDragging(true) }}
               onDragLeave={() => setDragging(false)}
               onDrop={e => { e.preventDefault(); setDragging(false); handleFile(e.dataTransfer.files?.[0]) }}>
-              <input ref={inputRef} type="file" accept=".xlsx,.xlsm,.xlsb"
+              <input ref={inputRef} aria-label="Choose a spreadsheet" type="file" accept=".xlsx,.xlsm,.xlsb"
                 style={{ display: 'none' }}
                 onChange={e => handleFile(e.target.files?.[0] ?? undefined)} />
               <div style={{ fontSize: 17, fontWeight: 500, marginBottom: 8 }}>

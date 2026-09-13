@@ -327,7 +327,7 @@ export default function DedupPanel({
                         style={{ gridTemplateColumns: `28px repeat(${cols.length}, minmax(0, 1fr)) 80px`,
                           border: '1px solid ' + (keepId === id ? AMBER : 'transparent'),
                           background: keepId === id ? 'rgba(193,125,46,0.05)' : 'transparent' }}>
-                        <input type="radio" name={`keep-${i}`} checked={keepId === id}
+                        <input type="radio" aria-label="Keep this record" name={`keep-${i}`} checked={keepId === id}
                           onChange={() => setKeep(k => ({ ...k, [i]: id }))}
                           style={{ marginTop: 3 }} />
                         {cols.map(col => (

@@ -86,11 +86,11 @@ export default function ProductInterest({
         <div style={{ maxWidth: '520px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '12px', marginBottom: '12px' }}>
-            <input className="pi-in" type="email" placeholder="Email address" value={email}
+            <input aria-label="Email address" className="pi-in" type="email" placeholder="Email address" value={email}
               onChange={e => setEmail(e.target.value)}
               onKeyDown={e => { if (e.key === 'Enter') submit() }} />
           </div>
-          <textarea className="pi-in" rows={2} style={{ resize: 'vertical', marginBottom: '12px' }}
+          <textarea aria-label="Anything you want to tell us" className="pi-in" rows={2} style={{ resize: 'vertical', marginBottom: '12px' }}
             placeholder="What would you most want it to do? (optional)"
             value={note} onChange={e => setNote(e.target.value)} />
           {error && (
