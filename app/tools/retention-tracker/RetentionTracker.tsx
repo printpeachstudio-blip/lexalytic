@@ -188,6 +188,30 @@ function interestOn(amount: number, daysOverdue: number): number {
   return amount * (STAT_RATE / 100) * (daysOverdue / 365)
 }
 
+
+/**
+ * A retention claim runs for months. The letter is the opening move rather
+ * than the product, and what decides whether you are paid is whether you
+ * kept chasing and can show it.
+ */
+interface ChaseEntry {
+  id: string
+  jobId: string
+  date: string
+  who: string
+  how: string
+  said: string
+  promised: string
+}
+
+const CHASE_HOW = [
+  { key: 'email', label: 'Email' },
+  { key: 'call', label: 'Phone call' },
+  { key: 'letter', label: 'Letter' },
+  { key: 'site', label: 'In person on site' },
+  { key: 'portal', label: 'Their payment portal' },
+]
+
 export default function RetentionTracker() {
   const [jobs, setJobs] = useState<Job[]>([])
 
@@ -196,6 +220,7 @@ export default function RetentionTracker() {
   const [expanded, setExpanded] = useState<string | null>(null)
   const [paid, setPaid] = useState(false)
   const [sender, setSender] = useState<Sender>({ company: '', address: '', contact: '', email: '', phone: '' })
+  const [chases, setChases] = useState<ChaseEntry[]>([])
   const [editingSender, setEditingSender] = useState(false)
 
   const [draft, setDraft] = useState<Partial<Job>>({
@@ -468,6 +493,7 @@ export default function RetentionTracker() {
     Use your browser print dialogue and choose Save as PDF. Check the figures and the contractor details before sending.
   </div>
   <h1>Retention recovery pack</h1>
+${chases.length ? `<h2>Previous contact</h2><table><thead><tr><th>Date</th><th>Who</th><th>How</th><th>What was said</th></tr></thead><tbody>${chases.slice().sort((a,b) => a.date.localeCompare(b.date)).map(c => { const h = CHASE_HOW.find(x => x.key === c.how); return `<tr><td>${c.date}</td><td>${c.who}</td><td>${h ? h.label : ''}</td><td>${c.said}${c.promised ? ' (promised ' + c.promised + ')' : ''}</td></tr>` }).join('')}</tbody></table>` : ''}
 
   <p class="sub">${sender.company} · Prepared ${today}</p>
   ${analysisHtml}
@@ -950,6 +976,197 @@ export default function RetentionTracker() {
             </>
           )}
         </div>
+
+        {paid && (
+
+          <div className="tool-card" style={{ padding: '24px 26px', marginTop: 20, marginBottom: 18 }}>
+
+            <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
+
+              Who you chased, and what they said
+
+            </div>
+
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 660 }}>
+
+              A retention claim is rarely settled by the first letter. It is settled by the fourth, and by
+
+              being able to say exactly when you wrote and what you were told. Six months on nobody
+
+              remembers whether it was the QS or the commercial manager, or which of them promised what.
+
+            </p>
+
+
+            <div className="ret-chase" style={{ display: 'grid',
+
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))',
+
+              gap: 12, marginBottom: 12 }}>
+
+              <div>
+
+                <label className="tool-label">Which job</label>
+
+                <select aria-label="Which job" className="tool-sel" name="jobId">
+
+                  {jobs.map(j2 => (
+
+                    <option key={j2.id} value={j2.id}>{j2.ref || j2.contractor || 'Job'}</option>
+
+                  ))}
+
+                </select>
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">When</label>
+
+                <input aria-label="Date" className="tool-in" name="date" type="date" defaultValue={todayStr()} max={todayStr()} />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Who</label>
+
+                <input aria-label="Who you spoke to" className="tool-in" name="who" placeholder="Name and role" />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">How</label>
+
+                <select aria-label="How you contacted them" className="tool-sel" name="how">
+
+                  {CHASE_HOW.map(h => <option key={h.key} value={h.key}>{h.label}</option>)}
+
+                </select>
+
+              </div>
+
+              <div style={{ gridColumn: 'span 2' }}>
+
+                <label className="tool-label">What they said</label>
+
+                <input aria-label="What they said" className="tool-in" name="said" placeholder="Going in the next valuation" />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Promised for</label>
+
+                <input aria-label="Date they promised payment" className="tool-in" name="promised" type="date" />
+
+              </div>
+
+            </div>
+
+            <button className="tool-btn tool-btn-quiet" onClick={e => {
+
+              const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.ret-chase') as HTMLElement
+
+              const get = (n: string) => (wrap.querySelector('[name=' + n + ']') as HTMLInputElement)?.value || ''
+
+              if (!get('said').trim() && !get('who').trim()) return
+
+              setChases(c => [...c, { id: Math.random().toString(36).slice(2, 9), jobId: get('jobId'),
+
+                date: get('date') || todayStr(), who: get('who'), how: get('how'),
+
+                said: get('said'), promised: get('promised') }])
+
+              ;(wrap.querySelector('[name=who]') as HTMLInputElement).value = ''
+
+              ;(wrap.querySelector('[name=said]') as HTMLInputElement).value = ''
+
+              ;(wrap.querySelector('[name=promised]') as HTMLInputElement).value = ''
+
+            }}>Add to the log</button>
+
+
+            {chases.length > 0 && (
+
+              <div style={{ marginTop: 20 }}>
+
+                {chases.slice().sort((a, b) => b.date.localeCompare(a.date)).map(c => {
+
+                  const job = jobs.find(x => x.id === c.jobId)
+
+                  const how = CHASE_HOW.find(h => h.key === c.how)
+
+                  const broken = c.promised !== '' && c.promised < todayStr()
+
+                  return (
+
+                    <div key={c.id} style={{ padding: '11px 0', borderBottom: '1px solid #F7F4EF' }}>
+
+                      <div style={{ display: 'grid', gridTemplateColumns: '110px minmax(0, 1fr) 140px 70px',
+
+                        gap: 12, fontSize: 14, alignItems: 'baseline' }}>
+
+                        <div style={{ color: '#8A8279' }}>{c.date}</div>
+
+                        <div>{c.said || 'No note'}{c.who ? ' · ' + c.who : ''}</div>
+
+                        <div style={{ fontSize: 13, color: '#8A8279' }}>
+
+                          {how ? how.label : ''}{job ? ' · ' + (job.ref || job.contractor) : ''}
+
+                        </div>
+
+                        <div style={{ textAlign: 'right' }}>
+
+                          <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
+
+                            onClick={() => setChases(l => l.filter(x => x.id !== c.id))}>Remove</button>
+
+                        </div>
+
+                      </div>
+
+                      {c.promised !== '' && (
+
+                        <div style={{ fontSize: 13, marginTop: 4, color: broken ? '#A13B2A' : '#8A8279' }}>
+
+                          {broken
+
+                            ? 'Promised for ' + c.promised + ', which has passed. A broken promise in writing carries more weight than a first request.'
+
+                            : 'Promised for ' + c.promised + '.'}
+
+                        </div>
+
+                      )}
+
+                    </div>
+
+                  )
+
+                })}
+
+                <div style={{ marginTop: 14, fontSize: 13.5, color: '#8A8279', lineHeight: 1.7 }}>
+
+                  {chases.length} contact{chases.length === 1 ? '' : 's'} logged. These go into the
+
+                  recovery pack, because a letter that lists four previous attempts and a missed promise
+
+                  reads differently from a first request.
+
+                </div>
+
+              </div>
+
+            )}
+
+          </div>
+
+        )}
+
 
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 640 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>, a UK studio that builds websites,
