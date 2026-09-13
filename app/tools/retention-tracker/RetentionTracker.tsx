@@ -589,38 +589,38 @@ export default function RetentionTracker() {
             <div className="r-grid2">
               <div className="tool-field">
                 <label className="tool-label">Job reference or site</label>
-                <input className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Riverside Phase 2" />
+                <input aria-label="Job reference or site" className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Riverside Phase 2" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Main contractor</label>
-                <input className="tool-in" value={draft.contractor || ''} onChange={e => setDraft({ ...draft, contractor: e.target.value })} placeholder="Who is holding the money" />
+                <input aria-label="Main contractor" className="tool-in" value={draft.contractor || ''} onChange={e => setDraft({ ...draft, contractor: e.target.value })} placeholder="Who is holding the money" />
               </div>
             </div>
             <div className="r-grid2">
               <div className="tool-field">
                 <label className="tool-label">Contract value</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
+                <input aria-label="Contract value" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.contractValue || ''} onChange={e => setDraft({ ...draft, contractValue: e.target.value })} placeholder="£" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Value certified to date</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
+                <input aria-label="Value certified to date" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.certified || ''} onChange={e => setDraft({ ...draft, certified: e.target.value })} placeholder="£" />
                 <div className="tool-hint">Gross value certified across all interim applications.</div>
               </div>
             </div>
             <div className="r-grid3">
               <div className="tool-field">
                 <label className="tool-label">Retention rate</label>
-                <input className="tool-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
+                <input aria-label="Retention rate" className="tool-in" type="number" min={0} step="0.1" value={draft.retentionPct || ''} onChange={e => setDraft({ ...draft, retentionPct: e.target.value })} placeholder="5" />
                 <div className="tool-hint">Usually 5%.</div>
               </div>
               <div className="tool-field">
                 <label className="tool-label">Cap on retention</label>
-                <input className="tool-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
+                <input aria-label="Cap on retention" className="tool-in" type="number" min={0} step="0.1" value={draft.capPct || ''} onChange={e => setDraft({ ...draft, capPct: e.target.value })} placeholder="5" />
                 <div className="tool-hint">% of contract value. Deduction should stop here.</div>
               </div>
               <div className="tool-field">
                 <label className="tool-label">Defects period</label>
-                <input className="tool-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
+                <input aria-label="Defects period" className="tool-in" type="number" min={0} value={draft.defectsMonths || ''} onChange={e => setDraft({ ...draft, defectsMonths: e.target.value })} placeholder="12" />
                 <div className="tool-hint">Months. Usually 12.</div>
               </div>
             </div>
@@ -647,7 +647,7 @@ export default function RetentionTracker() {
                   borderTop: '1px solid #F0EBE2' }}>
                   <div className="tool-field" style={{ width: 150 }}>
                     <label className="tool-label">Up to</label>
-                    <input className="tool-in" type="number" min={0} inputMode="decimal"
+                    <input aria-label="Up to" className="tool-in" type="number" min={0} inputMode="decimal"
                       value={t.upTo} placeholder="No limit"
                       onChange={e => {
                         const next = [...(draft.tiers || [])]
@@ -657,7 +657,7 @@ export default function RetentionTracker() {
                   </div>
                   <div className="tool-field" style={{ width: 110 }}>
                     <label className="tool-label">At</label>
-                    <input className="tool-in" type="number" min={0} step="0.1"
+                    <input aria-label="At" className="tool-in" type="number" min={0} step="0.1"
                       value={t.pct} placeholder="%"
                       onChange={e => {
                         const next = [...(draft.tiers || [])]
@@ -704,7 +704,7 @@ export default function RetentionTracker() {
 
             <div className="tool-field" style={{ maxWidth: 260 }}>
               <label className="tool-label">Practical completion date</label>
-              <input className="tool-in" type="date" max={todayStr()} value={draft.pcDate || ''}
+              <input aria-label="Practical completion date" className="tool-in" type="date" max={todayStr()} value={draft.pcDate || ''}
                 onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, pcDate: v }) }} />
               <div className="tool-hint">The date works were actually completed, not a future target. Leave blank if the job is still live. Both release dates run from this.</div>
             </div>

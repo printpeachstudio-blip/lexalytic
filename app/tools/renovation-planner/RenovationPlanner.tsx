@@ -263,7 +263,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 16 }}>
             <div>
               <label className="tool-label">Where is it</label>
-              <select className="tool-sel" value={region} onChange={e => setRegion(e.target.value)}>
+              <select aria-label="Where is it" className="tool-sel" value={region} onChange={e => setRegion(e.target.value)}>
                 {REGIONS.map(r => <option key={r.id} value={r.id}>{r.label}</option>)}
               </select>
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5, lineHeight: 1.5 }}>
@@ -272,7 +272,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
             </div>
             <div>
               <label className="tool-label">When was it built</label>
-              <select className="tool-sel" value={age} onChange={e => setAge(e.target.value)}>
+              <select aria-label="When was it built" className="tool-sel" value={age} onChange={e => setAge(e.target.value)}>
                 {AGES.map(a => <option key={a.id} value={a.id}>{a.label}</option>)}
               </select>
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5, lineHeight: 1.5 }}>
@@ -482,21 +482,21 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                     gap: 12, marginBottom: 14 }}>
                     <div>
                       <label className="tool-label">Date</label>
-                      <input className="tool-in" name="date" type="date" max={todayStr()}
+                      <input aria-label="Date" className="tool-in" name="date" type="date" max={todayStr()}
                         defaultValue={todayStr()} />
                     </div>
                     <div style={{ gridColumn: 'span 2' }}>
                       <label className="tool-label">What changed</label>
-                      <input className="tool-in" name="what"
+                      <input aria-label="What changed" className="tool-in" name="what"
                         placeholder="Moved the soil pipe to allow the shower position" />
                     </div>
                     <div>
                       <label className="tool-label">Agreed cost</label>
-                      <input className="tool-in" name="cost" type="number" min={0} step="0.01" />
+                      <input aria-label="Agreed cost" className="tool-in" name="cost" type="number" min={0} step="0.01" />
                     </div>
                     <div>
                       <label className="tool-label">Agreed with</label>
-                      <input className="tool-in" name="agreedBy" placeholder="Name" />
+                      <input aria-label="Agreed with" className="tool-in" name="agreedBy" placeholder="Name" />
                     </div>
                   </div>
                   <button className="tool-btn tool-btn-quiet" onClick={e => {
@@ -729,13 +729,13 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
                           alignItems: 'flex-end', marginBottom: 14 }}>
                           <div style={{ flex: '1 1 180px' }}>
                             <label className="tool-label">Builder</label>
-                            <input className="tool-in" value={q.builder}
+                            <input aria-label="Builder" className="tool-in" value={q.builder}
                               onChange={e => setQuotes(list => list.map(x =>
                                 x.id === q.id ? { ...x, builder: e.target.value } : x))} />
                           </div>
                           <div style={{ width: 140 }}>
                             <label className="tool-label">Their total</label>
-                            <input className="tool-in" type="number" min={0} value={q.total}
+                            <input aria-label="Their total" className="tool-in" type="number" min={0} value={q.total}
                               onChange={e => setQuotes(list => list.map(x =>
                                 x.id === q.id ? { ...x, total: e.target.value } : x))} />
                           </div>

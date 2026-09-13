@@ -422,11 +422,11 @@ export default function LockupTracker() {
           <div className="tool-g2">
             <div className="tool-field" style={{ margin: 0 }}>
               <label className="tool-label">Firm name</label>
-              <input className="tool-in" value={firm.name} onChange={e => setFirm({ ...firm, name: e.target.value })} placeholder="For the report header" />
+              <input aria-label="Firm name" className="tool-in" value={firm.name} onChange={e => setFirm({ ...firm, name: e.target.value })} placeholder="For the report header" />
             </div>
             <div className="tool-field" style={{ margin: 0 }}>
               <label className="tool-label">Annual fee income</label>
-              <input className="tool-in" type="number" min={0} inputMode="decimal" value={firm.revenue}
+              <input aria-label="Annual fee income" className="tool-in" type="number" min={0} inputMode="decimal" value={firm.revenue}
                 onChange={e => setFirm({ ...firm, revenue: e.target.value })} placeholder="£" />
               <div className="tool-hint">Last twelve months. Needed to convert amounts into days.</div>
             </div>
@@ -494,42 +494,42 @@ export default function LockupTracker() {
             <div className="tool-g2">
               <div className="tool-field">
                 <label className="tool-label">Job or matter reference</label>
-                <input className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Project name" />
+                <input aria-label="Job or matter reference" className="tool-in" value={draft.ref || ''} onChange={e => setDraft({ ...draft, ref: e.target.value })} placeholder="Project name" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Client</label>
-                <input className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Client name" />
+                <input aria-label="Client" className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Client name" />
               </div>
             </div>
             <div className="tool-g3">
               <div className="tool-field">
                 <label className="tool-label">Work delivered to date</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
+                <input aria-label="Work delivered to date" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.workDone || ''} onChange={e => setDraft({ ...draft, workDone: e.target.value })} placeholder="£" />
                 <div className="tool-hint">Value of work done, whether billed or not.</div>
               </div>
               <div className="tool-field">
                 <label className="tool-label">Invoiced to date</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
+                <input aria-label="Invoiced to date" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.invoiced || ''} onChange={e => setDraft({ ...draft, invoiced: e.target.value })} placeholder="£" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Collected to date</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
+                <input aria-label="Collected to date" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.paid || ''} onChange={e => setDraft({ ...draft, paid: e.target.value })} placeholder="£" />
               </div>
             </div>
             <div className="tool-g3">
               <div className="tool-field">
                 <label className="tool-label">Work last delivered</label>
-                <input className="tool-in" type="date" max={todayStr()} value={draft.lastWorkDate || ''}
+                <input aria-label="Work last delivered" className="tool-in" type="date" max={todayStr()} value={draft.lastWorkDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, lastWorkDate: v }) }} />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Last invoice raised</label>
-                <input className="tool-in" type="date" max={todayStr()} value={draft.lastInvoiceDate || ''}
+                <input aria-label="Last invoice raised" className="tool-in" type="date" max={todayStr()} value={draft.lastInvoiceDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, lastInvoiceDate: v }) }} />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Payment terms</label>
-                <input className="tool-in" type="number" min={0} value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
+                <input aria-label="Payment terms" className="tool-in" type="number" min={0} value={draft.terms || ''} onChange={e => setDraft({ ...draft, terms: e.target.value })} placeholder="30" />
                 <div className="tool-hint">Days.</div>
               </div>
             </div>
@@ -578,15 +578,15 @@ export default function LockupTracker() {
                       <div className="tool-g3">
                         <div className="tool-field">
                           <label className="tool-label">Work delivered</label>
-                          <input className="tool-in" type="number" min={0} value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
+                          <input aria-label="Work delivered" className="tool-in" type="number" min={0} value={r.job.workDone} onChange={e => update(r.job.id, { workDone: e.target.value })} />
                         </div>
                         <div className="tool-field">
                           <label className="tool-label">Invoiced</label>
-                          <input className="tool-in" type="number" min={0} value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
+                          <input aria-label="Invoiced" className="tool-in" type="number" min={0} value={r.job.invoiced} onChange={e => update(r.job.id, { invoiced: e.target.value })} />
                         </div>
                         <div className="tool-field">
                           <label className="tool-label">Collected</label>
-                          <input className="tool-in" type="number" min={0} value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
+                          <input aria-label="Collected" className="tool-in" type="number" min={0} value={r.job.paid} onChange={e => update(r.job.id, { paid: e.target.value })} />
                         </div>
                       </div>
                       <button className="tool-link" style={{ color: '#8A8279' }}

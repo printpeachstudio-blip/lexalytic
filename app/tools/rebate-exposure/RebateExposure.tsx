@@ -509,26 +509,26 @@ export default function RebateExposure() {
             <div className="tool-g2">
               <div className="tool-field">
                 <label className="tool-label">Candidate</label>
-                <input className="tool-in" value={draft.candidate || ''} onChange={e => setDraft({ ...draft, candidate: e.target.value })} placeholder="Name or reference" />
+                <input aria-label="Candidate" className="tool-in" value={draft.candidate || ''} onChange={e => setDraft({ ...draft, candidate: e.target.value })} placeholder="Name or reference" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Client</label>
-                <input className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Hiring company" />
+                <input aria-label="Client" className="tool-in" value={draft.client || ''} onChange={e => setDraft({ ...draft, client: e.target.value })} placeholder="Hiring company" />
               </div>
             </div>
             <div className="tool-g3">
               <div className="tool-field">
                 <label className="tool-label">Salary</label>
-                <input className="tool-in" type="number" min={0} inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
+                <input aria-label="Salary" className="tool-in" type="number" min={0} inputMode="decimal" value={draft.salary || ''} onChange={e => setDraft({ ...draft, salary: e.target.value })} placeholder="£" />
               </div>
               <div className="tool-field">
                 <label className="tool-label">Fee</label>
-                <input className="tool-in" type="number" min={0} step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
+                <input aria-label="Fee" className="tool-in" type="number" min={0} step="0.5" value={draft.feePct || ''} onChange={e => setDraft({ ...draft, feePct: e.target.value })} placeholder="20" />
                 <div className="tool-hint">% of first year base.</div>
               </div>
               <div className="tool-field">
                 <label className="tool-label">Start date</label>
-                <input className="tool-in" type="date" max={todayStr()} value={draft.startDate || ''}
+                <input aria-label="Start date" className="tool-in" type="date" max={todayStr()} value={draft.startDate || ''}
                   onChange={e => { const v = e.target.value; if (v && v > todayStr()) return; setDraft({ ...draft, startDate: v }) }} />
                 <div className="tool-hint">When they actually started.</div>
               </div>
@@ -536,7 +536,7 @@ export default function RebateExposure() {
             <div className="tool-g2">
               <div className="tool-field">
                 <label className="tool-label">Rebate structure</label>
-                <select className="tool-sel" value={draft.scale || 'taper'}
+                <select aria-label="Rebate structure" className="tool-sel" value={draft.scale || 'taper'}
                   onChange={e => {
                     const k = e.target.value as ScaleKey
                     const def = SCALES.find(s => s.key === k)!
@@ -548,7 +548,7 @@ export default function RebateExposure() {
               </div>
               <div className="tool-field">
                 <label className="tool-label">Window length</label>
-                <input className="tool-in" type="number" min={0} value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
+                <input aria-label="Window length" className="tool-in" type="number" min={0} value={draft.windowWeeks || ''} onChange={e => setDraft({ ...draft, windowWeeks: e.target.value })} placeholder="12" />
                 <div className="tool-hint">Weeks. Check your terms of business.</div>
               </div>
             </div>

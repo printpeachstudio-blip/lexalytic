@@ -204,7 +204,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: 16 }}>
             <div>
               <label className="tool-label">Total cost of the works</label>
-              <input className="tool-in" type="number" min={0} value={bill}
+              <input aria-label="Total cost of the works" className="tool-in" type="number" min={0} value={bill}
                 onChange={e => setBill(e.target.value)} placeholder="£" />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 For the whole block, not just your share
@@ -212,17 +212,17 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
             </div>
             <div>
               <label className="tool-label">How many flats share it</label>
-              <input className="tool-in" type="number" min={1} value={leaseholders}
+              <input aria-label="How many flats share it" className="tool-in" type="number" min={1} value={leaseholders}
                 onChange={e => setLeaseholders(e.target.value)} />
             </div>
             <div>
               <label className="tool-label">Date of the demand</label>
-              <input className="tool-in" type="date" max={todayStr()} value={demandDate}
+              <input aria-label="Date of the demand" className="tool-in" type="date" max={todayStr()} value={demandDate}
                 onChange={e => setDemandDate(e.target.value)} />
             </div>
             <div>
               <label className="tool-label">When the work was done</label>
-              <input className="tool-in" type="date" max={todayStr()} value={workDate}
+              <input aria-label="When the work was done" className="tool-in" type="date" max={todayStr()} value={workDate}
                 onChange={e => setWorkDate(e.target.value)} />
               <div style={{ fontSize: 12, color: '#8A8279', marginTop: 4 }}>
                 Or when the cost was incurred
@@ -452,23 +452,23 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                 gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: 14 }}>
                 <div>
                   <label className="tool-label">Your name</label>
-                  <input className="tool-in" value={me.name}
+                  <input aria-label="Your name" className="tool-in" value={me.name}
                     onChange={e => setMe({ ...me, name: e.target.value })} />
                 </div>
                 <div>
                   <label className="tool-label">Your address</label>
-                  <input className="tool-in" value={me.address}
+                  <input aria-label="Your address" className="tool-in" value={me.address}
                     onChange={e => setMe({ ...me, address: e.target.value })}
                     placeholder="Flat 4, 12 Example Road, London" />
                 </div>
                 <div>
                   <label className="tool-label">Landlord or freeholder</label>
-                  <input className="tool-in" value={me.landlord}
+                  <input aria-label="Landlord or freeholder" className="tool-in" value={me.landlord}
                     onChange={e => setMe({ ...me, landlord: e.target.value })} />
                 </div>
                 <div>
                   <label className="tool-label">Managing agent, if any</label>
-                  <input className="tool-in" value={me.agent}
+                  <input aria-label="Managing agent, if any" className="tool-in" value={me.agent}
                     onChange={e => setMe({ ...me, agent: e.target.value })} />
                 </div>
               </div>
@@ -505,7 +505,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                   <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                     <div style={{ width: 170 }}>
                       <label className="tool-label">Date you received it</label>
-                      <input className="tool-in" type="date" max={todayStr()}
+                      <input aria-label="Date you received it" className="tool-in" type="date" max={todayStr()}
                         value={stageDates[st.id]?.served || ''}
                         onChange={e => setStageDates(d => ({ ...d,
                           [st.id]: { ...(d[st.id] || { served: '', deadline: '' }), served: e.target.value } }))} />
@@ -513,7 +513,7 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                     {st.days > 0 && (
                       <div style={{ width: 170 }}>
                         <label className="tool-label">Deadline it gave you</label>
-                        <input className="tool-in" type="date"
+                        <input aria-label="Deadline it gave you" className="tool-in" type="date"
                           value={stageDates[st.id]?.deadline || ''}
                           onChange={e => setStageDates(d => ({ ...d,
                             [st.id]: { ...(d[st.id] || { served: '', deadline: '' }), deadline: e.target.value } }))} />
@@ -568,17 +568,17 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                 gap: 12, marginBottom: 12 }}>
                 <div>
                   <label className="tool-label">Date</label>
-                  <input className="tool-in" name="date" type="date" max={todayStr()}
+                  <input aria-label="Date" className="tool-in" name="date" type="date" max={todayStr()}
                     defaultValue={todayStr()} />
                 </div>
                 <div style={{ gridColumn: 'span 2' }}>
                   <label className="tool-label">What happened</label>
-                  <input className="tool-in" name="what"
+                  <input aria-label="What happened" className="tool-in" name="what"
                     placeholder="Phoned the agent, asked for the invoices, told they would call back" />
                 </div>
                 <div>
                   <label className="tool-label">Who with</label>
-                  <input className="tool-in" name="who" placeholder="Name" />
+                  <input aria-label="Who with" className="tool-in" name="who" placeholder="Name" />
                 </div>
               </div>
               <button className="tool-btn tool-btn-quiet" onClick={e => {
@@ -636,15 +636,15 @@ ${analysis.liveGrounds.length ? `<p><strong>3. Matters I would like addressed.</
                 alignItems: 'flex-end', marginBottom: 12 }}>
                 <div style={{ width: 110 }}>
                   <label className="tool-label">Year</label>
-                  <input className="tool-in" name="year" placeholder="2024" />
+                  <input aria-label="Year" className="tool-in" name="year" placeholder="2024" />
                 </div>
                 <div style={{ width: 140 }}>
                   <label className="tool-label">Total for the year</label>
-                  <input className="tool-in" name="amount" type="number" min={0} />
+                  <input aria-label="Total for the year" className="tool-in" name="amount" type="number" min={0} />
                 </div>
                 <div style={{ flex: '1 1 200px' }}>
                   <label className="tool-label">Anything notable</label>
-                  <input className="tool-in" name="note" placeholder="New managing agent took over" />
+                  <input aria-label="Anything notable" className="tool-in" name="note" placeholder="New managing agent took over" />
                 </div>
                 <button className="tool-btn tool-btn-quiet" onClick={e => {
                   const wrap = e.currentTarget.closest('.sc-yr') as HTMLElement
