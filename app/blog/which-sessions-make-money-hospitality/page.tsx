@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/which-sessions-make-money-hospitality' },
@@ -21,8 +20,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": "The Week Is Profitable. Two Sessions Are Carrying It.",
   "description": "An hour at £13.20 costs the business £16.68 once holiday, National Insurance and pension are in. Almost nobody uses that number when writing a rota.",
-  "datePublished": "2026-09-08",
-  "dateModified": "2026-09-08",
+  "datePublished": "2027-02-23",
+  "dateModified": "2027-02-23",
   "author": {
     "@type": "Person",
     "name": "Mihir Hindocha",
@@ -49,12 +48,21 @@ export default function BlogPost() {
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Navbar />
+      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000, background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '68px' }}>
+          <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '22px', color: 'var(--ink)', letterSpacing: '-0.03em' }}>Lex<span style={{ color: 'var(--amber)' }}>alytic</span></Link>
+          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }} className="desktop-nav">
+            <Link href="/tools" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>Free Tools</Link>
+            <Link href="/blog" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>Blog</Link>
+            <Link href="/#contact" className="btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>Book free call</Link>
+          </div>
+        </div>
+      </nav>
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <div style={{ display: 'flex', gap: '12px', marginBottom: '20px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Hospitality</span>
-            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>September 2026 · 7 min read</span>
+            <span style={{ fontSize: '12px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '4px 12px', borderRadius: '100px' }}>Hospitality</span>
+            <span style={{ fontSize: '12px', color: 'var(--ink-4)' }}>February 2027 · 7 min read</span>
           </div>
           <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', lineHeight: '1.15', marginBottom: '24px', letterSpacing: '-0.02em' }}>The Week Is Profitable. Two Sessions Are Carrying It.</h1>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '20px', background: 'var(--bg)', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>

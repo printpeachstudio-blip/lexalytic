@@ -195,6 +195,14 @@ const groups = [
         related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
       },
       {
+        href: '/tools/deposit-protection-check',
+        name: 'Deposit protection checker',
+        forWho: 'Any landlord holding a deposit',
+        summary:
+          'Two duties with the same thirty day deadline and the same penalty of one to three times the deposit: protect the money, and serve the prescribed information. Protecting it and never serving the information is a breach, and it is the commonest one there is. This checks every tenancy, including the renewals that quietly restart the clock.',
+        related: { label: 'Custom business tools', href: '/services/custom-business-tools' },
+      },
+      {
         href: '/tools/hmo-compliance-tracker',
         name: 'HMO compliance tracker',
         forWho: 'Landlords with certificates to keep on top of',
