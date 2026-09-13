@@ -66,36 +66,44 @@ Fixed price. Senior experience. Direct access.
 That is the point.
 
 2026-09-15
-We built CVCraft AI in a few weeks.
+Auto enrolment was not a one-off.
 
-The idea: most people know their CV is not good enough but professional rewrites cost £200 and take days.
+Most small employers did it once in 2017 or 2018, filed the declaration, and moved on. It comes back every three years.
 
-So we built an automated service.
+You have to put eligible staff who opted out back into the scheme. They can opt out again the same week, and most do, but the duty is to enrol them first.
 
-CV submitted. Claude rewrites it for the target role. Stripe takes payment. Document delivered within 24 hours.
+And then there is the bit that catches people who did everything else right.
 
-No human involved between submission and delivery.
+The re-declaration of compliance is due within five months of the three-year anniversary. Not of the date you chose for re-enrolment, of the anniversary. And it is due even if you had nobody to put back in.
 
-That is what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific workflow, doing a specific job, reliably, at scale.
+So an employer who correctly worked out they had no one to re-enrol, and therefore did nothing, gets fined for not saying so.
 
-The businesses getting the most from AI in 2026 are not the most technically sophisticated. They are the most specific about which problem they are solving.
+Four hundred pounds fixed, then fifty a day for the smallest employers, rising with headcount.
 
-If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
+The other thing worth checking while you are in there: the written statement of employment particulars is due on or before day one. It used to be two months. That changed in April 2020 and a lot of onboarding checklists still say the old rule.
+
+Built a free tool that works your dates out from your staging date and puts them in a calendar. Link in the comments.
 
 2026-09-16
-A UK company registration number is eight digits.
+A landlord I know keeps every current certificate in a folder. Gas, EICR, fire alarm, the lot. All in date.
 
-Open a supplier list in Excel and a good number of them will be seven.
+Then a tenant applied for a rent repayment order and the question was whether the gas certificate was valid in March last year.
 
-Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
+He had no idea. This year's certificate arrived, last year's went in the bin.
 
-Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
+That is the thing about compliance folders. They prove today. Nobody ever asks about today.
 
-The same thing happens to sort codes, which matters considerably more when you are building a payment file.
+A council serving an improvement notice asks about the date of the inspection. A tenant applying for an RRO asks about the period they are claiming for, which can be up to twenty four months. An insurer after a fire asks about the date of the fire.
 
-What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
+All three are asking backwards, and a folder of current certificates cannot answer any of them.
 
-We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
+Two things worth doing, neither of which costs anything:
+
+Keep the expired ones. They are the only evidence that the period was covered.
+
+And write down who did it and their registration number. A gas certificate from somebody not on the Gas Safe register is worth nothing, and that is the first thing anyone checks.
+
+Free HMO compliance tracker in the comments. The paid version keeps the history and lets you pick a date to see what was valid on it.
 
 2026-09-17
 Three things we have built and operate ourselves:
@@ -1072,6 +1080,38 @@ Renewals can restart both clocks. A deposit protected perfectly in 2022 can be n
 And a tenant has six years from the end of the tenancy to claim. The burden of proving you complied is yours, six years after the confirmation email left your inbox.
 
 Free checker in the comments.
+
+2027-02-24
+We built CVCraft AI in a few weeks.
+
+The idea: most people know their CV is not good enough but professional rewrites cost £200 and take days.
+
+So we built an automated service.
+
+CV submitted. Claude rewrites it for the target role. Stripe takes payment. Document delivered within 24 hours.
+
+No human involved between submission and delivery.
+
+That is what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific workflow, doing a specific job, reliably, at scale.
+
+The businesses getting the most from AI in 2026 are not the most technically sophisticated. They are the most specific about which problem they are solving.
+
+If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
+
+2027-02-25
+A UK company registration number is eight digits.
+
+Open a supplier list in Excel and a good number of them will be seven.
+
+Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
+
+Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
+
+The same thing happens to sort codes, which matters considerably more when you are building a payment file.
+
+What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
+
+We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
 
 2027-03-02
 Personal trainers lose more time to payment chasing than almost any other business I speak to.
