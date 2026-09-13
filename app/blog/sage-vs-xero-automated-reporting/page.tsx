@@ -230,7 +230,7 @@ export default function BlogPost() {
               <div key={i} style={{ marginBottom: i < 4 ? '20px' : '0', paddingBottom: i < 4 ? '20px' : '0', borderBottom: i < 4 ? '1px solid var(--border)' : 'none' }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>If you are...</div>
                 <div style={{ fontSize: '14px', color: 'var(--ink)', marginBottom: '8px', fontWeight: '500' }}>{item.situation}</div>
-                <div style={{ fontSize: '14px', color: 'var(--amber)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <div style={{ fontSize: '14px', color: 'var(--amber-text)', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                   <span style={{ flexShrink: 0 }}>→</span>
                   {item.recommendation}
                 </div>

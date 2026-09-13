@@ -67,7 +67,7 @@ export default function Results() {
             }}>
               <div style={{ padding: '20px 24px', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <div>
-                  <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber-text)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px', display: 'inline-block', marginBottom: '8px' }}>{r.tag}</span>
+                  <span style={{ fontSize: '11px', fontWeight: '500', color: 'var(--amber)', background: 'rgba(193,125,46,0.1)', padding: '3px 10px', borderRadius: '100px', display: 'inline-block', marginBottom: '8px' }}>{r.tag}</span>
                   <div style={{ fontSize: '13px', fontWeight: '500', color: 'var(--ink)' }}>{r.client}</div>
                   <div style={{ fontSize: '12px', color: 'var(--ink-4)' }}>{r.industry}</div>
                 </div>
@@ -89,7 +89,7 @@ export default function Results() {
                   background: 'var(--amber-bg)', border: '1px solid rgba(193,125,46,0.15)',
                   borderRadius: 'var(--radius)', padding: '14px 16px',
                 }}>
-                  <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber-text)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>Outcome</div>
+                  <div style={{ fontSize: '11px', fontWeight: '600', color: 'var(--amber)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>Outcome</div>
                   <p style={{ fontSize: '14px', color: 'var(--ink)', fontWeight: '400', lineHeight: '1.6' }}>{r.outcome}</p>
                 </div>
               </div>

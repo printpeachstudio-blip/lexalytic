@@ -18,7 +18,7 @@ const projects = [
     desc: 'A UK government entitlements calculator for families. Complex eligibility logic across 8+ benefit schemes, fully client-side with no data stored, and a content strategy targeting high-value financial keywords.',
     tags: ['Calculator tool', 'SEO content', 'Privacy-first'],
     stat: { num: '£4,700', label: 'Avg family finding' },
-    color: '#10b981',
+    color: '#0b7a5a',
     image: '/work-familyentitled.jpg',
   },
   {

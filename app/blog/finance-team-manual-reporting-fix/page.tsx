@@ -184,7 +184,7 @@ export default function BlogPost() {
                 <h3 style={{ fontSize: '17px', marginBottom: '12px', color: 'var(--ink)', fontWeight: '600' }}>{item.title}</h3>
                 <p style={{ fontSize: '15px', color: 'var(--ink-3)', lineHeight: '1.75', marginBottom: item.link ? '12px' : '0' }}>{item.body}</p>
                 {item.link && (
-                  <Link href={item.link.href} style={{ fontSize: '14px', color: 'var(--amber)', textDecoration: 'none', fontWeight: '500' }}>
+                  <Link href={item.link.href} style={{ fontSize: '14px', color: 'var(--amber-text)', textDecoration: 'none', fontWeight: '500' }}>
                     {item.link.text} →
                   </Link>
                 )}

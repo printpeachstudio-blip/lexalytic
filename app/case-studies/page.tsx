@@ -17,7 +17,7 @@ const cases = [
     summary: 'A pharmacy managing 20+ locum pharmacists across spreadsheets had persistent payment errors and scheduling clashes. We built a custom management tool. Zero missed payments since launch.',
     metric: '0',
     metricLabel: 'Missed payments since launch',
-    color: '#10b981',
+    color: '#0b7a5a',
   },
   {
     slug: 'power-bi-dashboard-professional-services',

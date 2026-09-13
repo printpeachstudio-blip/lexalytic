@@ -63,7 +63,7 @@ export default function Products() {
                   color: 'var(--ink)', letterSpacing: '-0.01em',
                 }}>{p.name}</span>
                 <span style={{
-                  fontSize: '12px', fontWeight: 600, color: 'var(--amber-text)',
+                  fontSize: '12px', fontWeight: 600, color: 'var(--amber)',
                   background: 'rgba(193,125,46,0.1)',
                   border: '1px solid rgba(193,125,46,0.2)',
                   borderRadius: '100px', padding: '3px 11px',

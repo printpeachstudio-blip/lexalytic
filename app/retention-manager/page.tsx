@@ -113,7 +113,7 @@ export default function RetentionManagerPage() {
               borderRadius: '100px', padding: '6px 16px', marginBottom: '28px' }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%',
                 background: 'var(--amber)', display: 'inline-block' }} />
-              <span style={{ fontSize: '12px', color: 'var(--amber-text)', fontWeight: '500', letterSpacing: '0.5px' }}>
+              <span style={{ fontSize: '12px', color: 'var(--amber)', fontWeight: '500', letterSpacing: '0.5px' }}>
                 Retention Manager · From £19 a month
               </span>
             </div>
@@ -221,7 +221,7 @@ export default function RetentionManagerPage() {
                 background: 'var(--bg-2)', borderBottom: '2px solid var(--ink)' }} className="rm-row">
                 <div style={{ padding: '14px 20px', fontSize: '13px', fontWeight: '600' }}></div>
                 <div style={{ padding: '14px 20px', fontSize: '13px', fontWeight: '600' }}>Free tool</div>
-                <div style={{ padding: '14px 20px', fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)' }}>Retention Manager</div>
+                <div style={{ padding: '14px 20px', fontSize: '13px', fontWeight: '600', color: 'var(--amber)' }}>Retention Manager</div>
               </div>
               {[
                 ['Release dates worked out', 'Yes', 'Yes'],
