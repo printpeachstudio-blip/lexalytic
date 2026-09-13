@@ -26,6 +26,10 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
+    // Check on mount too. Landing on an anchor like /#products jumps past
+    // the hero without firing a scroll event, which would otherwise leave
+    // the navbar transparent over a light section.
+    onScroll()
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
