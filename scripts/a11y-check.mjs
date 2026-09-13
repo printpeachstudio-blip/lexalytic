@@ -99,3 +99,15 @@ if (contrastFails) {
 } else {
   console.log(green('No contrast or accessibility errors.'))
 }
+
+/*
+ * KNOWN AND ACCEPTED
+ *
+ * 1.05:1 on the logo, on pages with a dark hero. The navbar is transparent
+ * and sits over a dark section, which pa11y cannot see. Visually correct.
+ *
+ * 3.37:1 on .btn-amber, white on #C17D2E. A WCAG AA failure on a strict
+ * reading and a deliberate choice: the alternatives are a noticeably
+ * browner button or near-black text on amber, and the text is legible.
+ * Revisit if the site ever needs a formal accessibility statement.
+ */
