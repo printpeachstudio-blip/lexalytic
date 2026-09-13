@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'Lexalytic',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: 'https://www.lexalytic.com/og-image.jpg', width: 400, height: 120 }],
+    images: [{ url: 'https://www.lexalytic.com/og-image-1200.jpg', width: 1200, height: 633 }],
   },
 }
 
