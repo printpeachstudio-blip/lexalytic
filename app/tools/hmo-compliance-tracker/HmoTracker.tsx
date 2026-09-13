@@ -19,7 +19,7 @@ const SAMPLE_PROPERTIES = [
   ]
 
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_HMO_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/fZudR26WB86u4byecc3AY0h'
 const UNLOCK_PARAM = 'hmr-7v3qd8'
 const PAID_KEY = 'lexalytic.hmo.paid.v1'
 

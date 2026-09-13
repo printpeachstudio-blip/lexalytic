@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react'
 import { assess, toIcs, fmt, type EmployerInput, type DueItem } from '@/lib/employer-duties'
 
-const STRIPE_LINK = 'https://buy.stripe.com/YOUR_EMP_LINK'
+const STRIPE_LINK = 'https://buy.stripe.com/cNidR2ft772qfUg7NO3AY0i'
 const UNLOCK_PARAM = 'edr-4k9tm2'
 const PAID_KEY = 'lexalytic.emp.paid.v1'
 const STATE_KEY = 'lexalytic.emp.v1'
