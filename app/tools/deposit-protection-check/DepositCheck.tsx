@@ -40,6 +40,44 @@ const SAMPLE: Tenancy[] = [
     piServed: '2025-11-10', renewedOn: '', reprotectedOn: '', piReserved: '', ended: '' },
 ]
 
+/**
+ * How the prescribed information was actually served.
+ *
+ * This is what the argument turns on. The scheme record proves the deposit
+ * was protected. Nothing proves the information reached the tenant unless
+ * somebody wrote down how it was sent, and six years later the landlord is
+ * the one who has to show it.
+ */
+interface ServiceRecord {
+  id: string
+  tenancyId: string
+  what: string      // prescribed information, deposit certificate, both
+  method: string    // handed over, email, post, recorded delivery
+  sentOn: string
+  sentTo: string
+  proof: string     // what evidence exists
+}
+
+const SERVED_WHAT = [
+  'Prescribed information',
+  'Scheme certificate',
+  'Both together',
+  'Re-served after renewal',
+]
+
+const SERVED_HOW = [
+  { key: 'hand', label: 'Handed over in person', strength: 'weak',
+    note: 'Fine at the time and hard to prove later unless the tenant signed for it.' },
+  { key: 'email', label: 'Email', strength: 'ok',
+    note: 'Keep the sent item. A read receipt is better but rarely available.' },
+  { key: 'post', label: 'Ordinary post', strength: 'weak',
+    note: 'No proof of receipt. A certificate of posting from the Post Office costs nothing and helps.' },
+  { key: 'recorded', label: 'Recorded or signed for', strength: 'strong',
+    note: 'The strongest of the four. Keep the tracking number.' },
+  { key: 'portal', label: 'Through the scheme or an agent portal', strength: 'strong',
+    note: 'The scheme logs it, which means somebody other than you has the record.' },
+]
+
 function uid() { return Math.random().toString(36).slice(2, 9) }
 function today() { return new Date().toISOString().slice(0, 10) }
 
@@ -50,6 +88,7 @@ export default function DepositCheck() {
   const [expanded, setExpanded] = useState<string | null>(null)
   const [paid, setPaid] = useState(false)
   const [landlord, setLandlord] = useState({ name: '', agent: '' })
+  const [serviceLog, setServiceLog] = useState<ServiceRecord[]>([])
 
   useEffect(() => {
     try {
@@ -59,6 +98,7 @@ export default function DepositCheck() {
         const v = JSON.parse(raw)
         if (v.tenancies) setTenancies(v.tenancies)
         if (v.landlord) setLandlord(v.landlord)
+        if (v.serviceLog) setServiceLog(v.serviceLog)
       }
       const p = new URLSearchParams(window.location.search)
       if (p.get('ref') === UNLOCK_PARAM) {
@@ -69,9 +109,9 @@ export default function DepositCheck() {
   }, [])
 
   useEffect(() => {
-    try { localStorage.setItem(STATE_KEY, JSON.stringify({ tenancies, landlord })) }
+    try { localStorage.setItem(STATE_KEY, JSON.stringify({ tenancies, landlord, serviceLog })) }
     catch { /* ignore */ }
-  }, [tenancies, landlord])
+  }, [tenancies, landlord, serviceLog])
 
   const results = useMemo(() => tenancies.map(t => assess(t)), [tenancies])
 
@@ -133,13 +173,21 @@ Print and choose Save as PDF. Keep it with the scheme certificates. A claim can 
 <p class="sub">${landlord.name || ''}${landlord.agent ? ' &middot; managed by ' + landlord.agent : ''}${landlord.name || landlord.agent ? ' &middot; ' : ''}Prepared ${now} &middot; ${results.length} tenanc${results.length === 1 ? 'y' : 'ies'}</p>
 <table><thead><tr><th>Property</th><th class="r">Deposit</th><th>Received</th><th>Protected</th><th>Information served</th><th>Days taken</th><th>Position</th></tr></thead>
 <tbody>${rows}</tbody></table>
+${serviceLog.length ? `<h2>How each one was served</h2>
+<table><thead><tr><th>Tenancy</th><th>What</th><th>How</th><th>When</th><th>To</th><th>Proof</th></tr></thead><tbody>${
+  serviceLog.map(r => {
+    const t = tenancies.find(x => x.id === r.tenancyId)
+    const how = SERVED_HOW.find(h => h.key === r.method)
+    return `<tr><td>${t ? t.property : ''}</td><td>${r.what}</td><td>${how ? how.label : r.method}</td><td>${fmt(r.sentOn)}</td><td>${r.sentTo}</td><td>${r.proof}</td></tr>`
+  }).join('')
+}</tbody></table>` : ''}
 <h2>What this is for</h2>
 <p>The burden of showing a deposit was protected in time, and that the prescribed information was served in time, sits with the landlord. A tenant has ${CLAIM_WINDOW_YEARS} years from the end of the tenancy to bring a claim, by which point the scheme emails and the covering letter are usually long gone. This is the dated record of what happened, made while the detail is still available.</p>
 <p class="note">Produced with the free deposit protection checker at lexalytic.com. It applies the ${PROTECT_DAYS} day deadline in sections 213 to 215 of the Housing Act 2004 to the dates entered, and the deposit cap in the Tenant Fees Act 2019. It is a way of checking your own records, not legal advice, and whether a particular renewal restarted the clock depends on how that renewal was documented. Shelter and Citizens Advice both advise on this free of charge, and a housing solicitor should look at anything with real money behind it.</p>
 </body></html>`
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }
-  }, [results, landlord])
+  }, [results, landlord, serviceLog, tenancies])
 
   return (
     <div className="tool-page">
@@ -460,8 +508,10 @@ Print and choose Save as PDF. Keep it with the scheme certificates. A claim can 
               say they never received anything.
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.75, margin: '0 0 22px', maxWidth: 610 }}>
-              The paid version writes the portfolio up as a dated record: every tenancy, every date, how
-              long each one took, and where each stands. Made now, while you can still find the emails.
+              The paid version keeps a service record alongside the dates: what was sent, how, when,
+              to whom, and what proof exists. It flags anything served in a way that leaves no trail,
+              because that is the gap a tenant aims at. Then it writes the whole portfolio up as one
+              document, made now while you can still find the emails.
             </p>
             <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
               <a href={STRIPE_LINK} className="tool-btn"
@@ -487,6 +537,125 @@ Print and choose Save as PDF. Keep it with the scheme certificates. A claim can 
                     onChange={e => setLandlord({ ...landlord, agent: e.target.value })} />
                 </div>
               </div>
+            </div>
+
+            <div className="tool-card" style={{ padding: '24px 26px', marginBottom: 18 }}>
+              <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>
+                How each one was served
+              </div>
+              <p style={{ fontSize: 14, color: 'var(--tool-ink-3)', lineHeight: 1.7,
+                margin: '0 0 18px', maxWidth: 660 }}>
+                A tenant rarely argues the deposit was unprotected, because the scheme record settles
+                that. What they say is that they never received the prescribed information, and the
+                burden of showing otherwise is yours. Record how it went out while you can still
+                remember.
+              </p>
+
+              <div className="dep-serve" style={{ display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 160px), 1fr))',
+                gap: 12, marginBottom: 12 }}>
+                <div>
+                  <label className="tool-label">Which tenancy</label>
+                  <select aria-label="Which tenancy" className="tool-sel" name="tenancyId">
+                    {tenancies.map(t => (
+                      <option key={t.id} value={t.id}>{t.property}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="tool-label">What was sent</label>
+                  <select aria-label="What was sent" className="tool-sel" name="what">
+                    {SERVED_WHAT.map(w => <option key={w} value={w}>{w}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="tool-label">How</label>
+                  <select aria-label="How it was sent" className="tool-sel" name="method">
+                    {SERVED_HOW.map(h => <option key={h.key} value={h.key}>{h.label}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="tool-label">When</label>
+                  <input aria-label="Date sent" className="tool-in" name="sentOn" type="date" max={today()} />
+                </div>
+                <div>
+                  <label className="tool-label">To whom</label>
+                  <input aria-label="Sent to" className="tool-in" name="sentTo" placeholder="Name or address" />
+                </div>
+                <div>
+                  <label className="tool-label">What proof exists</label>
+                  <input aria-label="What proof exists" className="tool-in" name="proof"
+                    placeholder="Tracking number, sent folder, signature" />
+                </div>
+              </div>
+              <button className="tool-btn tool-btn-quiet" onClick={e => {
+                const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.dep-serve') as HTMLElement
+                const get = (n: string) =>
+                  (wrap.querySelector(`[name=${n}]`) as HTMLInputElement | HTMLSelectElement)?.value || ''
+                if (!get('sentOn')) return
+                setServiceLog(l => [...l, {
+                  id: uid(), tenancyId: get('tenancyId'), what: get('what'),
+                  method: get('method'), sentOn: get('sentOn'),
+                  sentTo: get('sentTo'), proof: get('proof'),
+                }])
+                ;(wrap.querySelector('[name=sentTo]') as HTMLInputElement).value = ''
+                ;(wrap.querySelector('[name=proof]') as HTMLInputElement).value = ''
+              }}>Add to the record</button>
+
+              {serviceLog.length > 0 && (
+                <div style={{ marginTop: 20 }}>
+                  {serviceLog.map(r => {
+                    const t = tenancies.find(x => x.id === r.tenancyId)
+                    const how = SERVED_HOW.find(h => h.key === r.method)
+                    return (
+                      <div key={r.id} style={{ padding: '12px 0',
+                        borderBottom: '1px solid var(--tool-hairline)' }}>
+                        <div style={{ display: 'grid',
+                          gridTemplateColumns: 'minmax(0, 1fr) 150px 150px 70px', gap: 12,
+                          fontSize: 14, alignItems: 'baseline' }}>
+                          <div>
+                            <strong>{r.what}</strong>
+                            {t && <span style={{ color: 'var(--tool-ink-3)' }}> · {t.property}</span>}
+                          </div>
+                          <div style={{ fontSize: 13.5 }}>{how?.label}</div>
+                          <div style={{ fontSize: 13.5, color: 'var(--tool-ink-3)' }}>{fmt(r.sentOn)}</div>
+                          <div style={{ textAlign: 'right' }}>
+                            <button className="tool-link" style={{ fontSize: 13, color: 'var(--tool-ink-3)' }}
+                              onClick={() => setServiceLog(l => l.filter(x => x.id !== r.id))}>
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                        {how && how.strength !== 'strong' && (
+                          <div style={{ fontSize: 12.5, color: '#8F6318', marginTop: 5, lineHeight: 1.6 }}>
+                            {how.note}
+                          </div>
+                        )}
+                        {r.proof && (
+                          <div style={{ fontSize: 12.5, color: 'var(--tool-ink-3)', marginTop: 4 }}>
+                            Proof: {r.proof}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                  {(() => {
+                    const weak = serviceLog.filter(r =>
+                      SERVED_HOW.find(h => h.key === r.method)?.strength === 'weak')
+                    if (!weak.length) return null
+                    return (
+                      <div style={{ marginTop: 16, padding: '13px 16px', borderRadius: 6,
+                        background: SEV.risk.bg, border: `1px solid ${SEV.risk.border}`,
+                        fontSize: 14, color: SEV.risk.color, lineHeight: 1.7 }}>
+                        {weak.length} {weak.length === 1 ? 'was' : 'were'} served in a way that leaves
+                        no proof of receipt. That is not a breach, and it is the gap a tenant would aim
+                        at. Where the tenancy is still running, re-serving by a method that leaves a
+                        trail costs nothing and closes it.
+                      </div>
+                    )
+                  })()}
+                </div>
+              )}
             </div>
 
             <div className="tool-dark">
