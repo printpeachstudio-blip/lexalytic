@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/homeowners' },
@@ -66,24 +67,7 @@ export default function HomeownersPage() {
   return (
     <div style={{ background: 'var(--bg)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-        background: 'rgba(250,250,248,0.95)', backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(15,15,15,0.08)' }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center',
-          justifyContent: 'space-between', height: '68px' }}>
-          <Link href="/" style={{ fontFamily: 'var(--serif)', fontSize: '22px',
-            color: 'var(--ink)', letterSpacing: '-0.03em' }}>
-            Lex<span style={{ color: 'var(--amber)' }}>alytic</span>
-          </Link>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }} className="desktop-nav">
-            <Link href="/tools" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>All Tools</Link>
-            <Link href="/blog" style={{ fontSize: '14px', color: 'var(--ink-3)' }}>Blog</Link>
-            <Link href="/#contact" className="btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>
-              Book free call
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero */}
       <section style={{ paddingTop: '150px', paddingBottom: '70px', background: 'var(--bg-dark)' }}>
