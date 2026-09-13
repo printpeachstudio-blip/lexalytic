@@ -4,7 +4,7 @@
   --ink: #0f0f0f;
   --ink-2: #3a3a3a;
   --ink-3: #6b6b6b;
-  --ink-4: #6f6f6f;   /* was #9a9a9a, which measured 2.69:1 and failed WCAG AA */
+  --ink-4: #676767;   /* was #9a9a9a, which measured 2.69:1 and failed WCAG AA */
   --bg: #fafaf8;
   --bg-2: #f2f1ee;
   --bg-dark: #111110;

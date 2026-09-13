@@ -308,7 +308,7 @@ export default function AboutPage() {
               ))}
             </div>
             <div style={{ marginTop: '28px' }}>
-              <Link href="/case-studies" style={{ fontSize: '15px', color: 'var(--amber)' }}>
+              <Link href="/case-studies" style={{ fontSize: '15px', color: 'var(--amber-text)' }}>
                 Read the case studies →
               </Link>
             </div>

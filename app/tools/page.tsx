@@ -400,7 +400,7 @@ export default function ToolsPage() {
               check you keep doing by hand and think other UK businesses probably do too, tell us and
               we will look at it. No promises, but the last three came from exactly that.
             </p>
-            <Link href="/#contact" style={{ fontSize: '15px', color: 'var(--amber)' }}>
+            <Link href="/#contact" style={{ fontSize: '15px', color: 'var(--amber-text)' }}>
               Suggest a tool
             </Link>
           </div>
