@@ -117,6 +117,15 @@ function build(job: Job): Row {
   return { job, wip, debt, locked: wip + debt, wipAge, debtAge, overdueBy, flag }
 }
 
+
+interface WeekEntry {
+  id: string
+  date: string
+  billed: string
+  collected: string
+  note: string
+}
+
 export default function LockupTracker() {
   const [jobs, setJobs] = useState<Job[]>([])
 
@@ -124,6 +133,7 @@ export default function LockupTracker() {
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
   const [paid, setPaid] = useState(false)
+  const [weeks, setWeeks] = useState<WeekEntry[]>([])
   const [editingFirm, setEditingFirm] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
 
@@ -714,6 +724,223 @@ export default function LockupTracker() {
           </div>
 
         </div>
+
+        
+
+        {paid && (
+
+        
+
+          <div className="tool-card" style={{ padding: '24px 26px', marginTop: 20, marginBottom: 18 }}>
+
+        
+
+            <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Where it was each week</div>
+
+        
+
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 660 }}>
+
+        
+
+              Lock-up is a number that moves. A report tells you where it sits today, which is worth knowing once. What changes behaviour is watching it come down, or noticing in week four that it has not.
+
+        
+
+            </p>
+
+        
+
+            <div className="loc-log" style={{ display: 'grid',
+
+        
+
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: 12, marginBottom: 12 }}>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Week ending</label>
+
+        
+
+                <input aria-label="Week ending" className="tool-in" name="date" type="date" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Billed that week</label>
+
+        
+
+                <input aria-label="Billed that week" className="tool-in" name="billed" type="number" min={0} placeholder="£" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Collected that week</label>
+
+        
+
+                <input aria-label="Collected that week" className="tool-in" name="collected" type="number" min={0} placeholder="£" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Anything notable</label>
+
+        
+
+                <input aria-label="Anything notable" className="tool-in" name="note"  placeholder="Two partners on holiday" />
+
+        
+
+              </div>
+
+        
+
+            </div>
+
+        
+
+            <button className="tool-btn tool-btn-quiet" onClick={e => {
+
+        
+
+              const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.loc-log') as HTMLElement
+
+        
+
+              const get = (n: string) => (wrap.querySelector('[name=' + n + ']') as HTMLInputElement)?.value || ''
+
+        
+
+              if (!get('date')) return
+
+        
+
+              setWeeks(l => [...l, { id: Math.random().toString(36).slice(2, 9), date: get('date'), billed: get('billed'), collected: get('collected'), note: get('note') }])
+
+        
+
+              wrap.querySelectorAll('input').forEach((x: any) => { if (x.type !== 'date') x.value = '' })
+
+        
+
+            }}>Add</button>
+
+        
+
+            {weeks.length > 0 && (
+
+        
+
+              <div style={{ marginTop: 20 }}>
+
+        
+
+                {weeks.map(r => (
+
+        
+
+                  <div key={r.id} style={{ display: 'grid',
+
+        
+
+                    gridTemplateColumns: '120px repeat(2, minmax(0, 1fr)) 70px', gap: 12,
+
+        
+
+                    padding: '10px 0', borderBottom: '1px solid #F7F4EF', fontSize: 14, alignItems: 'baseline' }}>
+
+        
+
+                    <div style={{ color: '#8A8279' }}>{r.date}</div>
+
+        
+
+                    <div>{r.billed ? money(parseFloat(r.billed)) : ""}</div>
+
+        
+
+                    <div style={{ fontSize: 13, color: '#8A8279' }}>{r.note}</div>
+
+        
+
+                    <div style={{ textAlign: 'right' }}>
+
+        
+
+                      <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
+
+        
+
+                        onClick={() => setWeeks(l => l.filter(x => x.id !== r.id))}>Remove</button>
+
+        
+
+                    </div>
+
+        
+
+                  </div>
+
+        
+
+                ))}
+
+        
+
+                <div style={{ marginTop: 14, fontSize: 13.5, color: '#8A8279', lineHeight: 1.7 }}>
+
+        
+
+                  {weeks.length + ' week' + (weeks.length === 1 ? '' : 's') + ' logged. A trend is worth more than a snapshot, and four weeks is enough to see one.'}
+
+        
+
+                </div>
+
+        
+
+              </div>
+
+        
+
+            )}
+
+        
+
+          </div>
+
+        
+
+        )}
+
 
         
 

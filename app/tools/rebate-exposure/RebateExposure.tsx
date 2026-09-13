@@ -155,6 +155,16 @@ function build(p: Placement): Row {
   return { p, fee, weeks, windowWeeks, scale, factor, atRisk, safeOn, daysToSafe, status }
 }
 
+
+interface Outcome {
+  id: string
+  placementId: string
+  what: string
+  date: string
+  clawed: string
+  why: string
+}
+
 export default function RebateExposure() {
   const [placements, setPlacements] = useState<Placement[]>([])
 
@@ -162,6 +172,7 @@ export default function RebateExposure() {
   const [adding, setAdding] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
   const [paid, setPaid] = useState(false)
+  const [outcomes, setOutcomes] = useState<Outcome[]>([])
   const [agency, setAgency] = useState<Agency>({ name: '', contact: '' })
   const [editingAgency, setEditingAgency] = useState(false)
 
@@ -757,6 +768,223 @@ export default function RebateExposure() {
           </div>
 
         </div>
+
+        
+
+        {paid && (
+
+        
+
+          <div className="tool-card" style={{ padding: '24px 26px', marginTop: 20, marginBottom: 18 }}>
+
+        
+
+            <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>What actually happened</div>
+
+        
+
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 660 }}>
+
+        
+
+              Exposure tells you what is at risk now. What was clawed back last year tells you which clients keep losing people, which is the more useful question and the one nobody tracks.
+
+        
+
+            </p>
+
+        
+
+            <div className="reb-log" style={{ display: 'grid',
+
+        
+
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: 12, marginBottom: 12 }}>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">When</label>
+
+        
+
+                <input aria-label="When" className="tool-in" name="date" type="date" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">What happened</label>
+
+        
+
+                <input aria-label="What happened" className="tool-in" name="what"  placeholder="Left in week 9" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Clawed back</label>
+
+        
+
+                <input aria-label="Clawed back" className="tool-in" name="clawed" type="number" min={0} placeholder="£" />
+
+        
+
+              </div>
+
+        
+
+              <div>
+
+        
+
+                <label className="tool-label">Reason given</label>
+
+        
+
+                <input aria-label="Reason given" className="tool-in" name="why"  placeholder="Counter offer from previous employer" />
+
+        
+
+              </div>
+
+        
+
+            </div>
+
+        
+
+            <button className="tool-btn tool-btn-quiet" onClick={e => {
+
+        
+
+              const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.reb-log') as HTMLElement
+
+        
+
+              const get = (n: string) => (wrap.querySelector('[name=' + n + ']') as HTMLInputElement)?.value || ''
+
+        
+
+              if (!get('what')) return
+
+        
+
+              setOutcomes(l => [...l, { id: Math.random().toString(36).slice(2, 9), date: get('date'), what: get('what'), clawed: get('clawed'), why: get('why'), placementId: '' }])
+
+        
+
+              wrap.querySelectorAll('input').forEach((x: any) => { if (x.type !== 'date') x.value = '' })
+
+        
+
+            }}>Add</button>
+
+        
+
+            {outcomes.length > 0 && (
+
+        
+
+              <div style={{ marginTop: 20 }}>
+
+        
+
+                {outcomes.map(r => (
+
+        
+
+                  <div key={r.id} style={{ display: 'grid',
+
+        
+
+                    gridTemplateColumns: '120px repeat(2, minmax(0, 1fr)) 70px', gap: 12,
+
+        
+
+                    padding: '10px 0', borderBottom: '1px solid #F7F4EF', fontSize: 14, alignItems: 'baseline' }}>
+
+        
+
+                    <div style={{ color: '#8A8279' }}>{r.date}</div>
+
+        
+
+                    <div>{r.what}</div>
+
+        
+
+                    <div style={{ fontSize: 13, color: '#8A8279' }}>{r.why}</div>
+
+        
+
+                    <div style={{ textAlign: 'right' }}>
+
+        
+
+                      <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
+
+        
+
+                        onClick={() => setOutcomes(l => l.filter(x => x.id !== r.id))}>Remove</button>
+
+        
+
+                    </div>
+
+        
+
+                  </div>
+
+        
+
+                ))}
+
+        
+
+                <div style={{ marginTop: 14, fontSize: 13.5, color: '#8A8279', lineHeight: 1.7 }}>
+
+        
+
+                  {outcomes.length + ' logged, ' + money(outcomes.reduce((n, o) => n + (parseFloat(o.clawed) || 0), 0)) + ' clawed back in total. Worth looking at by client rather than in aggregate.'}
+
+        
+
+                </div>
+
+        
+
+              </div>
+
+        
+
+            )}
+
+        
+
+          </div>
+
+        
+
+        )}
+
 
         
 
