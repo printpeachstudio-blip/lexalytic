@@ -19,6 +19,26 @@ const SAMPLE_PROPERTIES = [
   ]
 
 
+const STRIPE_LINK = 'https://buy.stripe.com/YOUR_HMO_LINK'
+const UNLOCK_PARAM = 'hmr-7v3qd8'
+const PAID_KEY = 'lexalytic.hmo.paid.v1'
+
+/**
+ * A certificate proves today. A history proves the period, which is what a
+ * council, a tenant or an insurer actually asks about, and what almost no
+ * landlord can produce because last year's was binned when this year's
+ * arrived.
+ */
+interface CertRecord {
+  id: string
+  propertyId: string
+  certType: string
+  doneOn: string
+  who: string
+  regNumber: string
+  cost: string
+}
+
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvwjppa'
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 const STORAGE_KEY = 'lexalytic.hmo.tracker.v1'
@@ -102,6 +122,9 @@ function icsDate(d: Date): string {
 
 export default function HmoTracker() {
   const [properties, setProperties] = useState<Property[]>([])
+  const [paid, setPaid] = useState(false)
+  const [history, setHistory] = useState<CertRecord[]>([])
+  const [asAt, setAsAt] = useState('')
 
   const [loaded, setLoaded] = useState(false)
   const [adding, setAdding] = useState(false)
@@ -119,6 +142,12 @@ export default function HmoTracker() {
 
   useEffect(() => {
     try {
+      if (localStorage.getItem(PAID_KEY) === '1') setPaid(true)
+      const p = new URLSearchParams(window.location.search)
+      if (p.get('ref') === UNLOCK_PARAM) {
+        localStorage.setItem(PAID_KEY, '1'); setPaid(true)
+        window.history.replaceState({}, '', window.location.pathname)
+      }
       const raw = localStorage.getItem(STORAGE_KEY)
       if (raw) setProperties(JSON.parse(raw))
     } catch {
@@ -636,6 +665,309 @@ export default function HmoTracker() {
             </>
           )}
         </div>
+
+        {!paid ? (
+
+          <div className="tool-dark" style={{ marginTop: 24 }}>
+
+            <div className="tool-serif" style={{ fontSize: 21, marginBottom: 12, letterSpacing: '-0.01em' }}>
+
+              The certificate proves today. Nobody ever asks about today.
+
+            </div>
+
+            <p style={{ fontSize: 15, lineHeight: 1.75, margin: '0 0 8px', maxWidth: 610 }}>
+
+              A council serving a notice, a tenant applying for a rent repayment order, an insurer after a
+
+              fire: all three ask whether it was valid on a date in the past. Usually a date eighteen months
+
+              ago. A folder of current certificates cannot answer that, because last year&#39;s went in the bin
+
+              when this year&#39;s arrived.
+
+            </p>
+
+            <p style={{ fontSize: 15, lineHeight: 1.75, margin: '0 0 22px', maxWidth: 610 }}>
+
+              The paid version keeps the history: every certificate, who did it, their registration number
+
+              and what it cost. Then it answers the question backwards. Pick any date and see what was
+
+              valid across the whole portfolio on that day.
+
+            </p>
+
+            <div style={{ display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }}>
+
+              <a href={STRIPE_LINK} className="tool-btn" style={{ textDecoration: 'none', display: 'inline-block' }}>
+
+                Unlock for £29
+
+              </a>
+
+              <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
+
+                One payment, any number of properties. Refundable within fourteen days.
+
+              </span>
+
+            </div>
+
+          </div>
+
+        ) : (
+
+          <div className="tool-card" style={{ padding: '24px 26px', marginTop: 24, marginBottom: 18 }}>
+
+            <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 6 }}>Certificate history</div>
+
+            <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, margin: '0 0 18px', maxWidth: 660 }}>
+
+              Add each certificate as it is done, including the ones that have since expired. The registration
+
+              number matters: a gas certificate from somebody not on the Gas Safe register is worth nothing,
+
+              and it is the first thing checked.
+
+            </p>
+
+
+            <div className="hmo-hist" style={{ display: 'grid',
+
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: 12, marginBottom: 12 }}>
+
+              <div>
+
+                <label className="tool-label">Property</label>
+
+                <select aria-label="Property" className="tool-sel" name="propertyId">
+
+                  {properties.map(p2 => <option key={p2.id} value={p2.id}>{p2.name}</option>)}
+
+                </select>
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Certificate</label>
+
+                <select aria-label="Certificate type" className="tool-sel" name="certType">
+
+                  {CERT_TYPES.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
+
+                </select>
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Date done</label>
+
+                <input aria-label="Date done" className="tool-in" name="doneOn" type="date" max={todayStr()} />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Who did it</label>
+
+                <input aria-label="Who did it" className="tool-in" name="who" placeholder="Firm or engineer" />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Registration number</label>
+
+                <input aria-label="Registration number" className="tool-in" name="regNumber" placeholder="Gas Safe, NICEIC" />
+
+              </div>
+
+              <div>
+
+                <label className="tool-label">Cost</label>
+
+                <input aria-label="Cost" className="tool-in" name="cost" type="number" min={0} placeholder="£" />
+
+              </div>
+
+            </div>
+
+            <button className="tool-btn tool-btn-quiet" onClick={e => {
+
+              const wrap = e.currentTarget.closest('.tool-card')!.querySelector('.hmo-hist') as HTMLElement
+
+              const get = (n: string) => (wrap.querySelector('[name=' + n + ']') as HTMLInputElement)?.value || ''
+
+              if (!get('doneOn')) return
+
+              setHistory(h => [...h, { id: Math.random().toString(36).slice(2, 9),
+
+                propertyId: get('propertyId'), certType: get('certType'), doneOn: get('doneOn'),
+
+                who: get('who'), regNumber: get('regNumber'), cost: get('cost') }])
+
+              wrap.querySelectorAll('input').forEach((x: any) => { x.value = '' })
+
+            }}>Add to the history</button>
+
+
+            <div style={{ marginTop: 22, paddingTop: 18, borderTop: '1px solid #F0EBE2' }}>
+
+              <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>What was valid on a given day</div>
+
+              <p style={{ fontSize: 13.5, color: '#8A8279', lineHeight: 1.7, margin: '0 0 12px', maxWidth: 620 }}>
+
+                Pick the date somebody is asking about. This shows what was in force across every property
+
+                on that day, based on the history above.
+
+              </p>
+
+              <input aria-label="Date to check" className="tool-in" type="date" style={{ maxWidth: 220 }}
+
+                value={asAt} onChange={e => setAsAt(e.target.value)} max={todayStr()} />
+
+
+              {asAt !== '' && (
+
+                <div style={{ marginTop: 16 }}>
+
+                  {properties.map(p2 => (
+
+                    <div key={p2.id} style={{ marginBottom: 14 }}>
+
+                      <div style={{ fontSize: 14.5, fontWeight: 600, marginBottom: 6 }}>{p2.name}</div>
+
+                      {CERT_TYPES.map(ct => {
+
+                        const recs = history
+
+                          .filter(r => r.propertyId === p2.id && r.certType === ct.key && r.doneOn <= asAt)
+
+                          .sort((a, b) => b.doneOn.localeCompare(a.doneOn))
+
+                        const latest = recs[0]
+
+                        let valid = false
+
+                        let expiresOn = ''
+
+                        if (latest) {
+
+                          const d = new Date(latest.doneOn + 'T00:00:00')
+
+                          d.setMonth(d.getMonth() + ct.months)
+
+                          expiresOn = d.toISOString().slice(0, 10)
+
+                          valid = expiresOn >= asAt
+
+                        }
+
+                        return (
+
+                          <div key={ct.key} style={{ display: 'grid',
+
+                            gridTemplateColumns: 'minmax(0, 1fr) 110px minmax(0, 1fr)', gap: 12,
+
+                            fontSize: 13.5, padding: '4px 0' }}>
+
+                            <div style={{ color: '#57514A' }}>{ct.label}</div>
+
+                            <div style={{ color: valid ? '#3F6B4C' : '#A13B2A', fontWeight: 500 }}>
+
+                              {latest ? (valid ? 'Valid' : 'Expired') : 'No record'}
+
+                            </div>
+
+                            <div style={{ color: '#8A8279' }}>
+
+                              {latest ? 'done ' + latest.doneOn + (latest.who ? ' by ' + latest.who : '') : ''}
+
+                            </div>
+
+                          </div>
+
+                        )
+
+                      })}
+
+                    </div>
+
+                  ))}
+
+                  <div style={{ fontSize: 13, color: '#8A8279', lineHeight: 1.7, marginTop: 10 }}>
+
+                    No record means nothing was entered for that certificate before this date, which is not
+
+                    the same as nothing having been done. It is worth finding out which.
+
+                  </div>
+
+                </div>
+
+              )}
+
+            </div>
+
+
+            {history.length > 0 && (
+
+              <div style={{ marginTop: 22, paddingTop: 18, borderTop: '1px solid #F0EBE2' }}>
+
+                <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 10 }}>
+
+                  {history.length} certificate{history.length === 1 ? '' : 's'} on record
+
+                </div>
+
+                {history.slice().sort((a, b) => b.doneOn.localeCompare(a.doneOn)).map(r => {
+
+                  const p2 = properties.find(x => x.id === r.propertyId)
+
+                  const ct = CERT_TYPES.find(x => x.key === r.certType)
+
+                  return (
+
+                    <div key={r.id} style={{ display: 'grid',
+
+                      gridTemplateColumns: '110px minmax(0, 1fr) minmax(0, 1fr) 90px 70px', gap: 12,
+
+                      padding: '9px 0', borderBottom: '1px solid #F7F4EF', fontSize: 13.5, alignItems: 'baseline' }}>
+
+                      <div style={{ color: '#8A8279' }}>{r.doneOn}</div>
+
+                      <div>{ct ? ct.label : r.certType}{p2 ? ' · ' + p2.name : ''}</div>
+
+                      <div style={{ color: '#8A8279' }}>{r.who}{r.regNumber ? ' · ' + r.regNumber : ''}</div>
+
+                      <div style={{ textAlign: 'right' }}>{r.cost ? '£' + r.cost : ''}</div>
+
+                      <div style={{ textAlign: 'right' }}>
+
+                        <button className="tool-link" style={{ fontSize: 13, color: '#8A8279' }}
+
+                          onClick={() => setHistory(l => l.filter(x => x.id !== r.id))}>Remove</button>
+
+                      </div>
+
+                    </div>
+
+                  )
+
+                })}
+
+              </div>
+
+            )}
+
+          </div>
+
+        )}
+
 
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 620 }}>
           Built by <a href="/" style={{ color: '#C17D2E' }}>Lexalytic</a>, a UK studio that builds
