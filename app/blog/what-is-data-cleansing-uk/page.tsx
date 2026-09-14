@@ -5,11 +5,11 @@ import Navbar from '@/components/Navbar'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk' },
   title: 'What Is Data Cleansing? UK Guide to Fixing Bad Data (2026) | Lexalytic',
-  description: 'Bad data costs UK businesses an average of 20% of annual revenue. Here is what data cleansing actually involves, what it costs, and how to know if your data needs it.',
+  description: 'Bad data costs UK businesses an average of 15 to 25 per cent of revenue, on MIT Sloan Management Review figures. Here is what data cleansing actually involves, what it costs, and how to know if your data needs it.',
   keywords: 'data cleansing UK, uk data cleansing, what is data cleansing, data cleanse UK, data cleaning UK business, bad data cost UK, data quality UK, cleansing data UK',
   openGraph: {
     title: 'What Is Data Cleansing? UK Guide to Fixing Bad Data (2026)',
-    description: 'Bad data costs UK businesses an average of 20% of annual revenue. What data cleansing involves, what it costs, and how to know if your data needs it.',
+    description: 'Bad data costs UK businesses an average of 15 to 25 per cent of revenue, on MIT Sloan Management Review figures. What data cleansing involves, what it costs, and how to know if your data needs it.',
     url: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -89,7 +89,7 @@ export default function BlogPost() {
           <div style={{ padding: '24px 28px', background: 'rgba(193,125,46,0.06)', border: '1px solid rgba(193,125,46,0.2)', borderRadius: 'var(--radius-lg)', marginBottom: '48px' }}>
             <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--amber-text)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>The short answer</p>
             <p style={{ color: 'var(--ink-2)', lineHeight: '1.75', margin: 0 }}>
-              Data cleansing is the process of identifying and fixing errors, inconsistencies and gaps in your business data. Bad data costs UK businesses an estimated <strong>20% of their annual revenue</strong> in wasted time, poor decisions and failed automation. Most businesses can fix the majority of their data quality problems without expensive software - but it requires a structured approach.
+              Data cleansing is the process of identifying and fixing errors, inconsistencies and gaps in your business data. Bad data costs UK businesses an estimated <strong>15 to 25 per cent of revenue, according to research published in MIT Sloan Management Review</strong> in wasted time, poor decisions and failed automation. Most businesses can fix the majority of their data quality problems without expensive software - but it requires a structured approach.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function BlogPost() {
 
           <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', marginBottom: '20px', letterSpacing: '-0.02em' }}>How much does bad data actually cost?</h2>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            The numbers are sobering. Research from The Software Bureau estimates that dirty data costs the UK economy <a href="https://www.thesoftwarebureau.com/cost-of-dirty-data-the-900-billion-annual-burden-on-uk-business/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>£900 billion annually</a> - representing around 20% of revenue for affected organisations. Experian's research found that <a href="https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>30% of UK businesses suspect their customer data is inaccurate</a>. And Gartner predicts that through 2026, organisations will abandon 60% of AI and automation projects due to data that is not ready to support them.
+            The numbers are sobering. Research from The Software Bureau estimates that dirty data costs the UK economy <a href="https://www.thesoftwarebureau.com/cost-of-dirty-data-the-900-billion-annual-burden-on-uk-business/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>£900 billion annually</a> - representing around 15 to 25 per cent of revenue on MIT Sloan Management Review figures. Experian's research found that <a href="https://www.experian.co.uk/blogs/latest-thinking/data-quality/data-cleansing-3-easy-steps-to-maximise-your-roi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--amber)', textDecoration: 'underline' }}>30% of UK businesses suspect their customer data is inaccurate</a>. And Gartner predicts that through 2026, organisations will abandon 60% of AI and automation projects due to data that is not ready to support them.
           </p>
 
           {/* Stats box */}

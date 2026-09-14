@@ -90,7 +90,7 @@ export default function BlogPost() {
           </div>
 
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '32px' }}>
-            Research from multiple sources consistently finds that manual data entry costs businesses between five and ten hours per week in staff time - and that is before accounting for the time spent finding and fixing the errors it creates. A study cited by the University of Hawaii found that 88% of spreadsheets contain at least one error. Most of those errors come from manual entry.
+            Research from multiple sources consistently finds that manual data entry costs businesses between five and ten hours per week in staff time - and that is before accounting for the time spent finding and fixing the errors it creates. A study cited by the University of Hawaii found that research by Raymond Panko found errors in the large majority of spreadsheets audited. Most of those errors come from manual entry.
           </p>
           <p style={{ fontSize: '17px', color: 'var(--ink-2)', lineHeight: '1.85', marginBottom: '48px' }}>
             The businesses I work with are not careless. Their people are not making mistakes because they are bad at their jobs. They are making mistakes because copying data between systems, reformatting exports, and re-entering figures from one place to another is exactly the kind of repetitive task that humans do poorly at volume. The solution is not to ask people to be more careful - it is to remove the manual step entirely.

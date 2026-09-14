@@ -115,7 +115,7 @@ export default function DataCleansingPage() {
               Data cleansing that fixes<br /><em style={{ color: 'var(--amber)' }}>what is actually broken.</em>
             </h1>
             <p style={{ fontSize: 'clamp(16px, 2vw, 19px)', color: 'rgba(255,255,255,0.55)', maxWidth: '600px', marginBottom: '40px', fontWeight: '300', lineHeight: '1.75' }}>
-              Duplicate records. Inconsistent formats. Figures that do not reconcile. Bad data breaks reports, undermines automation, and costs UK businesses an average of 20% of their annual revenue. We fix it - fast, properly, and with a process to keep it clean.
+              Duplicate records. Inconsistent formats. Figures that do not reconcile. Bad data breaks reports, undermines automation, and costs UK businesses an average of 15 to 25 per cent of revenue, according to research published in MIT Sloan Management Review. We fix it - fast, properly, and with a process to keep it clean.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link href="/#contact" className="btn-amber">Book a free scoping call →</Link>
