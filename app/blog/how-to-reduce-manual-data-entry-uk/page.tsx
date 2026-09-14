@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/how-to-reduce-manual-data-entry-uk' },
-  title: 'Reduce Manual Data Entry: Start With the Four Hours Nobody Counts | Lexalytic',
-  description: 'Most advice starts with software. The larger saving is usually in work nobody has measured, because it is spread across four people and nobody owns it. How to find it first, then what to automate, using tools you probably already pay for.',
+  title: 'Reduce Manual Data Entry: Find It Before You Automate It | Lexalytic',
+  description: 'Most advice starts with software. The larger saving is usually in work nobody has measured, because it is spread across several people and nobody owns it. How to find where the time actually goes first, then what to automate, using tools you probably already pay for.',
   keywords: 'reduce manual data entry UK, eliminate manual data entry UK, how to reduce manual data entry errors, manual data entry problems business UK, automate data entry UK, reducing and automating data entry, how can a business eliminate manual data entry',
   openGraph: {
     title: 'How to Reduce Manual Data Entry in Your Business (UK Guide 2026)',
