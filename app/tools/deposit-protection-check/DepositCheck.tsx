@@ -207,8 +207,10 @@ ${serviceLog.length ? `<h2>How each one was served</h2>
           breach, and it is the commonest one there is. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.
         </p>
         <p className="tool-sub">
-          Since Section 21 was abolished in May 2026, a deposit failure blocks Section 8 as well, which
-          is now the only route to possession. Enter what you have for each tenancy and this checks
+          Since Section 21 was abolished in May 2026, an unprotected deposit prevents a court making a
+          possession order under almost every Section 8 ground, and Section 8 is now the only route.
+          Whether a missing prescribed information does the same is less settled, so it is worth
+          taking advice rather than assuming either way. Enter what you have for each tenancy and this checks
           the dates against the deadline, including the renewals that quietly restart the clock. A tenant has {CLAIM_WINDOW_YEARS} years to claim,
           so tenancies that ended a while ago still count. Nothing is uploaded.
         </p>
