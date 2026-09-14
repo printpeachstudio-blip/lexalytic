@@ -33,6 +33,38 @@ const faqData = {
   mainEntity: [
     {
       '@type': 'Question',
+      name: 'What if I do not know exactly what I want yet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'That is the normal starting point rather than a problem. Most people know what is taking too long or what keeps going wrong, and not what the software should look like. The questions here are deliberately about the shape of the thing rather than the features, because the shape is what decides the cost. If you are unsure on any of them, pick the closest and say so when you send the brief over.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does the price change once you start building?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. The price is agreed in writing before anything starts and it does not move, which means getting the scope right is our problem rather than your invoice. If we underestimate something, that is a cost we carry. The only thing that changes the price is you asking for something that was not in the brief, and we would agree that separately before doing it rather than adding it to the bill.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I do not like what you build?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You will have seen it before paying for it. When the build is finished we go through it with you on a video call, with your own data in it, and you use it. Changes get made at that point. Only when you are happy does any money change hands, so if it does not do what you asked for you have lost nothing but the time on two calls. There is no deposit and nothing up front.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I have to use you to get a price?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. The brief this produces is yours and it covers what any developer will ask: who uses it, what it connects to, what it has to do and where the data is now. Take it to three of them if you like. A written brief gets better quotes than a conversation about roughly what you are after, whoever ends up building it.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'How much does a custom CRM cost in the UK?',
       acceptedAnswer: {
         '@type': 'Answer',
