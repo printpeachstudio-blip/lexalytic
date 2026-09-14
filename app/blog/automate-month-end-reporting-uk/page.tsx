@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/automate-month-end-reporting-uk' },
-  title: 'How to Automate Your Month-End Reporting (UK Guide 2026) | Lexalytic',
-  description: 'Month-end reporting does not have to take days. Here is how UK finance teams are cutting their reporting time by 80% using automation - without changing their accounting software.',
+  title: 'Automate Month-End Reporting: The Bottleneck Is Rarely the Report | Lexalytic',
+  description: 'Finance teams automate the building and the close still takes a week, because the delay sits in waiting for figures from people who have no deadline. Where the time actually goes, what to fix in which order, and what UK teams cut it to.',
   keywords: 'automate month end reporting UK, month end close automation UK, reduce month end reporting time, finance reporting automation UK, automated month end close UK',
   openGraph: {
     title: 'How to Automate Your Month-End Reporting (UK Guide 2026)',

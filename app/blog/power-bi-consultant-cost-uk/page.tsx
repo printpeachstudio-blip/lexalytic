@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/power-bi-consultant-cost-uk' },
-  title: 'Power BI Consultant Hourly Rate & Cost UK (2026 Guide) | Lexalytic',
-  description: 'Power BI consultant hourly rates, day rates and contractor rates in the UK for 2026. Real pricing, what affects cost, and how to avoid overpaying. From a UK Power BI consultant.',
+  title: 'Power BI Consultant Cost UK: What Six Real Projects Came To | Lexalytic',
+  description: 'Day rates are the easy part and the least useful. Here is what six actual Power BI projects cost end to end in 2026, why two of them came in at half the quoted rate, and the one thing that doubles a bill more often than anything else.',
   keywords: 'Power BI consultant hourly rate UK, Power BI contractor day rate UK, Power BI consultant cost UK 2026, how much does Power BI consulting cost per hour, Power BI consulting rates UK',
   openGraph: {
     title: 'Power BI Consultant Hourly Rate & Cost UK (2026 Guide)',

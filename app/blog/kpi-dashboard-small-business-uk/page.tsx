@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/kpi-dashboard-small-business-uk' },
-  title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026) | Lexalytic',
-  description: 'What KPIs should your small business track? Which tool should you use? How much does it cost? A practical UK guide with sector-specific metrics and real examples.',
+  title: 'KPI Dashboard for a Small Business: Most Track the Wrong Five | Lexalytic',
+  description: 'The metrics everyone starts with are the ones that change nothing. What to track instead by sector, what it costs to build in 2026, and why the dashboard nobody opens after week three failed at the design stage rather than the build.',
   keywords: 'KPI dashboard small business UK, business KPI dashboard UK, how to build KPI dashboard, small business dashboard UK, business performance dashboard UK, KPI tracking small business',
   openGraph: {
     title: 'How to Build a KPI Dashboard for Your Small Business (UK Guide 2026)',

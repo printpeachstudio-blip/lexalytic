@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/excel-automation-cost-uk' },
-  title: 'How Much Does Excel Automation Cost in the UK? (2026 Guide) | Lexalytic',
-  description: 'Honest UK pricing for Excel automation projects in 2026. What affects the cost, what you get for your money, and how quickly it pays for itself. From a UK-based Excel automation consultant.',
+  title: 'Excel Automation Cost UK: Why the First Quote Is Usually Wrong | Lexalytic',
+  description: 'A number is easy to give and usually wrong, because the cost sits in the state of your spreadsheet rather than the automation. What actually drives the price in 2026, with real project figures and the questions to ask before accepting any quote.',
   keywords: 'Excel automation cost UK, Excel automation price UK, how much does Excel automation cost, hire Excel automation consultant UK, VBA automation cost UK, Excel consultant cost UK',
   openGraph: {
     title: 'How Much Does Excel Automation Cost in the UK? (2026 Guide)',
