@@ -63,7 +63,7 @@ export default function ReportingCost() {
     { id: uid(), title: 'Analyst', salary: '34000', people: '2', hours: '4', perMonth: '4' },
   ])
   const [reduction, setReduction] = useState('80')
-  const [buildCost, setBuildCost] = useState('5000')
+  const [buildCost, setBuildCost] = useState('900')
 
   const addRole = () => setRoles(r => [...r,
     { id: uid(), title: '', salary: '35000', people: '1', hours: '3', perMonth: '4' }])

@@ -197,12 +197,12 @@ export default function StartupsPage() {
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '20px',
               marginBottom: '32px' }}>
               {[
-                ['A website that works', '£2,000 to £5,000',
+                ['A website that works', 'From £450',
                  'Fast, findable, yours. Add bookings or payments and it moves up.'],
-                ['One thing that does one job', '£2,000 to £6,000',
+                ['One thing that does one job', 'From £750',
                  'A quoting tool, a booking system, a portal. Narrow and finished rather than broad and ongoing.'],
-                ['Something to run the operation', '£6,000 to £12,000',
-                 'Where several parts of the business meet. Usually the second build rather than the first.'],
+                ['Two or three things joined up', 'From £1,000',
+                 'Where a couple of parts of the business meet. Usually the second build rather than the first.'],
               ].map(([name, price, line]) => (
                 <div key={name} style={{ padding: '26px 28px', borderRadius: 'var(--radius-lg)',
                   background: 'var(--bg-2)', border: '1px solid var(--border)' }}>

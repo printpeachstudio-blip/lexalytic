@@ -43,33 +43,33 @@ interface Option {
 
 const USER_TYPES: Option[] = [
   { key: 'u1', label: 'One group of people', cost: 0, weeks: 0, why: 'Everyone sees the same thing, so there is one interface to design and build.' },
-  { key: 'u2', label: 'Two groups, different views', cost: 1200, weeks: 1, why: 'A second interface, plus the permissions logic that decides who sees what. That logic is where most of the cost sits, not the screens.' },
-  { key: 'u3', label: 'Three or more groups', cost: 2600, weeks: 2, why: 'Permissions stop being a rule and become a model. Every new feature after this has to be checked against every role.' },
+  { key: 'u2', label: 'Two groups, different views', cost: 130, weeks: 1, why: 'A second interface, plus the permissions logic that decides who sees what. That logic is where most of the cost sits, not the screens.' },
+  { key: 'u3', label: 'Three or more groups', cost: 290, weeks: 2, why: 'Permissions become a model rather than a rule, and every new feature has to be checked against every role.' },
 ]
 
 const INTEGRATIONS: Option[] = [
-  { key: 'xero', label: 'Xero or QuickBooks', cost: 1200, weeks: 1, why: 'Well documented APIs, but the mapping between your data and theirs always needs deciding rather than assuming.' },
-  { key: 'sage', label: 'Sage', cost: 1600, weeks: 1, why: 'More variable than Xero. Which Sage product you run changes the work considerably.' },
-  { key: 'email', label: 'Automated email or SMS', cost: 700, weeks: 1, why: 'Sending is easy. Deliverability, opt outs and making sure a bug cannot send four hundred messages is the real work.' },
-  { key: 'pay', label: 'Take payments', cost: 1400, weeks: 1, why: 'Stripe or GoCardless, plus reconciliation, failed payment handling and refunds. The unhappy paths are most of it.' },
-  { key: 'esign', label: 'Electronic signatures', cost: 1100, weeks: 1, why: 'Usually a third party service with an audit trail requirement attached.' },
-  { key: 'other', label: 'Something you already run', cost: 1800, weeks: 2, why: 'Existing systems vary enormously. If it has a modern API this is at the low end. If it does not, it is not.' },
+  { key: 'xero', label: 'Xero or QuickBooks', cost: 130, weeks: 1, why: 'Well documented APIs, but the mapping between your data and theirs always needs deciding rather than assuming.' },
+  { key: 'sage', label: 'Sage', cost: 180, weeks: 1, why: 'More variable than Xero. Which Sage product you run changes the work considerably.' },
+  { key: 'email', label: 'Automated email or SMS', cost: 80, weeks: 1, why: 'Sending is easy. Deliverability, opt outs and making sure a bug cannot send four hundred messages is the real work.' },
+  { key: 'pay', label: 'Take payments', cost: 160, weeks: 1, why: 'Stripe or GoCardless, plus reconciliation, failed payment handling and refunds. The unhappy paths are most of it.' },
+  { key: 'esign', label: 'Electronic signatures', cost: 120, weeks: 1, why: 'Usually a third party service with an audit trail requirement attached.' },
+  { key: 'other', label: 'Something you already run', cost: 200, weeks: 2, why: 'Existing systems vary enormously. If it has a modern API this is at the low end. If it does not, it is not.' },
 ]
 
 const FEATURES: Option[] = [
-  { key: 'docs', label: 'Upload and store documents', cost: 800, weeks: 1, why: 'Storage, access control and making sure one client cannot reach another client files.' },
-  { key: 'gen', label: 'Generate documents', cost: 1000, weeks: 1, why: 'Contracts, certificates, statements. Templating plus the layout work to make the output look like it came from you.' },
-  { key: 'dash', label: 'Reporting dashboard', cost: 1600, weeks: 1, why: 'The build is quick. Agreeing what the numbers mean and where they come from is what takes the time.' },
-  { key: 'alerts', label: 'Deadline and renewal alerts', cost: 700, weeks: 1, why: 'Scheduled jobs, plus a rule for what happens when someone ignores three reminders.' },
-  { key: 'search', label: 'Search across everything', cost: 900, weeks: 1, why: 'Cheap on hundreds of records. Different work entirely on hundreds of thousands.' },
-  { key: 'audit', label: 'Full audit trail', cost: 1100, weeks: 1, why: 'Who changed what and when. Regulated sectors usually need this and it is far cheaper designed in than added later.' },
+  { key: 'docs', label: 'Upload and store documents', cost: 90, weeks: 1, why: 'Storage, access control and making sure one client cannot reach another client files.' },
+  { key: 'gen', label: 'Generate documents', cost: 110, weeks: 1, why: 'Contracts, certificates, statements. Templating plus the layout work to make the output look like it came from you.' },
+  { key: 'dash', label: 'Reporting dashboard', cost: 180, weeks: 1, why: 'The build is quick. Agreeing what the numbers mean and where they come from is what takes the time.' },
+  { key: 'alerts', label: 'Deadline and renewal alerts', cost: 80, weeks: 1, why: 'Scheduled jobs, plus a rule for what happens when someone ignores three reminders.' },
+  { key: 'search', label: 'Search across everything', cost: 100, weeks: 1, why: 'Cheap on hundreds of records. Different work entirely on hundreds of thousands.' },
+  { key: 'audit', label: 'Full audit trail', cost: 120, weeks: 1, why: 'Who changed what and when. Regulated sectors usually need this and it is far cheaper designed in than added later.' },
 ]
 
 const MIGRATION = [
   { key: 'none', label: 'Starting fresh', cost: 0, weeks: 0, why: 'Nothing to move.' },
-  { key: 'clean', label: 'One tidy spreadsheet', cost: 700, weeks: 0, why: 'A single consistent source maps across quickly.' },
-  { key: 'messy', label: 'Several spreadsheets, inconsistent', cost: 2200, weeks: 2, why: 'The cleaning is the job, not the loading. Duplicates, formats and gaps all have to be resolved before anything can be imported.' },
-  { key: 'system', label: 'Out of an existing system', cost: 2800, weeks: 2, why: 'Export, map, reconcile, then prove the totals match. The reconciliation is what clients care about and it is not quick.' },
+  { key: 'clean', label: 'One tidy spreadsheet', cost: 80, weeks: 0, why: 'A single consistent source maps across quickly.' },
+  { key: 'messy', label: 'Several spreadsheets, inconsistent', cost: 240, weeks: 2, why: 'The cleaning is the job rather than the loading. Duplicates, formats and gaps get resolved before anything imports.' },
+  { key: 'system', label: 'Out of an existing system', cost: 310, weeks: 2, why: 'Export, map, reconcile, then prove the totals match. The reconciliation is the part that matters.' },
 ]
 
 interface Answers {
