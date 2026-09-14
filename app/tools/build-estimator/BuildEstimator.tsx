@@ -20,15 +20,15 @@ interface ShapeDef {
 
 const SHAPES: ShapeDef[] = [
   {
-    key: 'tool', label: 'One process, done properly', base: 2000, weeks: 2,
+    key: 'tool', label: 'One process, done properly', base: 300, weeks: 2,
     desc: 'A single job the business does repeatedly. A rota, a quote builder, a tracker replacing one spreadsheet. One group of people use it, it does one thing well.',
   },
   {
-    key: 'system', label: 'Several processes joined up', base: 4500, weeks: 5,
+    key: 'system', label: 'Several processes joined up', base: 550, weeks: 5,
     desc: 'A custom CRM, a job management system, a portfolio tracker. Multiple linked processes, more than one kind of user, and reporting across the lot.',
   },
   {
-    key: 'platform', label: 'Something your clients use too', base: 9000, weeks: 10,
+    key: 'platform', label: 'Something your clients use too', base: 850, weeks: 10,
     desc: 'A platform with an outside audience. Client portals, booking systems, anything where people beyond your team log in and expect it to be reliable and presentable.',
   },
 ]
