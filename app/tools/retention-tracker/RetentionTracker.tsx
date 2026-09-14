@@ -1168,6 +1168,70 @@ ${chases.length ? `<h2>Previous contact</h2><table><thead><tr><th>Date</th><th>W
         )}
 
 
+        <div className="tool-card" style={{ padding: '22px 26px', marginTop: 24, marginBottom: 8 }}>
+
+
+          <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 8 }}>
+
+
+            Retentions are being banned, and it will not help with these
+
+
+          </div>
+
+
+          <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8, margin: '0 0 10px', maxWidth: 680 }}>
+
+
+            The government announced on 24 March 2026 that it intends to ban the withholding of retention
+
+
+            under construction contracts, and the Commercial Payments Bill introduced in May amends the
+
+
+            Construction Act to do it. It is the biggest change to payment in the sector in twenty five years.
+
+
+          </p>
+
+
+          <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8, margin: '0 0 10px', maxWidth: 680 }}>
+
+
+            It is also prospective. The amendments apply to contracts made after they come into force, so
+
+
+            nothing currently held is affected. A job finishing this year still has its second release
+
+
+            falling due at the end of the defects period, under the terms already agreed, and the Bill does
+
+
+            nothing for it.
+
+
+          </p>
+
+
+          <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75, margin: 0, maxWidth: 680 }}>
+
+
+            With a transition period of a year or two expected on top of that, retention held under existing
+
+
+            contracts will keep falling due for the rest of the decade. Which is the reason this still
+
+
+            matters, and the reason it is worth knowing what you are owed and when.
+
+
+          </p>
+
+
+        </div>
+
+
+
         <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.7, marginTop: 28, maxWidth: 640 }}>
           Built by <a href="/" style={{ color: AMBER }}>Lexalytic</a>, a UK studio that builds websites,
           custom software and data systems for small businesses. See our other{' '}
