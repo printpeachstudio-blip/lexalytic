@@ -335,6 +335,22 @@ export default function BuildEstimator() {
                 </div>
                 <div>
                   <div className="tool-serif" style={{ fontSize: 24, lineHeight: 1.1, color: '#57514A' }}>~{result.weeks} weeks</div>
+                  <div style={{ padding: '22px 26px', borderRadius: 10, marginTop: 20,
+                    background: 'rgba(193,125,46,0.05)', border: '1px solid rgba(193,125,46,0.22)' }}>
+                    <div style={{ fontSize: 15.5, fontWeight: 600, marginBottom: 8 }}>
+                      You would not pay any of this until you had seen it working
+                    </div>
+                    <p style={{ fontSize: 14.5, color: '#57514A', lineHeight: 1.8, margin: '0 0 10px', maxWidth: 640 }}>
+                      A call, then a fixed price in writing, then we build it. When it is done we go through it with
+                      you on a video call, with your data in it, and you use it. Only when you are happy does any
+                      money change hands. No deposit, nothing up front, no staged payments.
+                    </p>
+                    <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75, margin: 0, maxWidth: 640 }}>
+                      Then you own it. The code, the hosting account and the documentation, rather than a licence you
+                      keep paying for.
+                    </p>
+                  </div>
+
                   <div style={{ fontSize: 12, color: '#8A8279', marginTop: 5 }}>From brief to live</div>
                 </div>
                 <div>
