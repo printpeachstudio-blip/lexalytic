@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog' },
-  title: 'Blog | Data Automation & Power BI Insights | Lexalytic',
-  description: 'Practical guides on Power BI, Excel automation, Python, and business reporting - written from 15 years of real project experience.',
+  title: 'Blog | Where Small Businesses Lose Money | Lexalytic',
+  description: 'Retention that goes unclaimed, service charges nobody questioned, spreadsheets nobody can read, and dishes that lose money once a platform takes its cut. Written from fifteen years of building reporting systems across construction, hospitality, professional services and property.',
 }
 
 const posts = [
@@ -652,8 +652,8 @@ export default function BlogIndex() {
       <section style={{ paddingTop: '120px', paddingBottom: '60px', background: 'var(--bg-2)', borderBottom: '1px solid var(--border)' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <span className="section-label">Blog</span>
-          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '16px', letterSpacing: '-0.02em' }}>Data automation insights</h1>
-          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Practical guides on Power BI, Excel automation, Python, and business reporting - written from 15 years of real project experience.</p>
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '16px', letterSpacing: '-0.02em' }}>Things that cost money quietly</h1>
+          <p style={{ fontSize: '18px', color: 'var(--ink-3)', fontWeight: '300' }}>Written from fifteen years of building reporting systems and finding the same problems in different industries. Construction, hospitality, professional services, property, and the spreadsheets underneath all of them.</p>
         </div>
       </section>
 
