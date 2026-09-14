@@ -12,7 +12,7 @@ const posts = [
   {
     slug: 'prescribed-information-deposit-deadline',
     title: 'You Protected The Deposit. That Is Only Half The Duty.',
-    excerpt: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Around two in five landlords are caught by it.',
+    excerpt: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.',
     date: 'September 2026',
     readTime: '7 min read',
     tag: 'Property',

@@ -204,11 +204,12 @@ ${serviceLog.length ? `<h2>How each one was served</h2>
         <p className="tool-lede">
           Two duties, both with the same thirty day deadline, both carrying the same penalty of one
           to three times the deposit. Protecting the money and never serving the information is a
-          breach, and it is the commonest one there is. Around two in five landlords are caught by it.
+          breach, and it is the commonest one there is. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.
         </p>
         <p className="tool-sub">
-          Enter what you have for each tenancy and this checks the dates against the deadline, including
-          the renewals that quietly restart the clock. A tenant has {CLAIM_WINDOW_YEARS} years to claim,
+          Since Section 21 was abolished in May 2026, a deposit failure blocks Section 8 as well, which
+          is now the only route to possession. Enter what you have for each tenancy and this checks
+          the dates against the deadline, including the renewals that quietly restart the clock. A tenant has {CLAIM_WINDOW_YEARS} years to claim,
           so tenancies that ended a while ago still count. Nothing is uploaded.
         </p>
 

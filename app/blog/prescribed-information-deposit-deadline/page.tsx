@@ -5,10 +5,10 @@ import Navbar from '@/components/Navbar'
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/prescribed-information-deposit-deadline' },
   title: 'You Protected The Deposit. That Is Only Half The Duty. | Lexalytic',
-  description: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Around two in five landlords are caught by it.',
+  description: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.',
   openGraph: {
     title: 'You Protected The Deposit. That Is Only Half The Duty.',
-    description: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Around two in five landlords are caught by it.',
+    description: 'Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.',
     url: 'https://www.lexalytic.com/blog/prescribed-information-deposit-deadline',
     siteName: 'Lexalytic',
     locale: 'en_GB',
@@ -20,7 +20,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "You Protected The Deposit. That Is Only Half The Duty.",
-  "description": "Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Around two in five landlords are caught by it.",
+  "description": "Protecting the deposit and never serving the prescribed information is a breach carrying the same penalty as never protecting it at all. Solicitors and the deposit schemes both describe it as one of the commonest failures there is.",
   "datePublished": "2026-09-08",
   "dateModified": "2026-09-08",
   "author": {

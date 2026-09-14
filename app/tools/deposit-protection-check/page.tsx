@@ -36,7 +36,7 @@ const faqData = {
       name: 'What is the prescribed information and why does it matter so much?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'It is a set of details about the scheme holding the deposit that must be given to the tenant within the same thirty days as the protection itself. It is a separate duty under section 213(6), and failing it carries the same penalty as never protecting the money at all. Protecting a deposit properly and never serving the information is the commonest breach there is, and around two in five landlords are caught by it.',
+        text: 'It is a set of details about the scheme holding the deposit that must be given to the tenant within the same thirty days as the protection itself. It is a separate duty under section 213(6), and failing it carries the same penalty as never protecting the money at all. Protecting a deposit properly and never serving the information is the commonest breach there is, and it is one of the commonest failures there is.',
       },
     },
     {
