@@ -404,11 +404,21 @@ export default function BuildEstimator() {
                 </>
               ) : (
                 <>
-                  <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12 }}>Take the brief anywhere</div>
+                  <div className="tool-serif" style={{ fontSize: 20, marginBottom: 12 }}>Send it over and we will quote it</div>
                   <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 560 }}>
-                    Download it and send it to three developers if you want. It covers what any of them will
-                    ask, and a written brief gets you better quotes than a conversation about roughly what you
-                    are after. If you would rather we quoted it, send it over.
+                    Two fields and it comes to us with the brief attached. We come back within a working day,
+                    usually with a couple of questions first rather than a number pulled out of the air.
+                  </p>
+                  <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 16px', maxWidth: 560 }}>
+                    <strong style={{ color: '#fff' }}>You would not pay any of it until you had seen it working.</strong>{' '}
+                    A call, a fixed price in writing, then we build it. When it is done we go through it with
+                    you on a video call with your own data in it. Only when you are happy does any money change
+                    hands. No deposit, nothing up front.
+                  </p>
+                  <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,0.45)', margin: '0 0 20px', maxWidth: 560 }}>
+                    Or download the brief and take it to three other developers. It covers what any of them will
+                    ask, and a written brief gets better quotes than a conversation about roughly what you are
+                    after. That is a fine outcome too.
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 12 }}>
                     <input aria-label="Your organisation" className="tool-in" placeholder="Your organisation" value={org} onChange={e => setOrg(e.target.value)} />
@@ -425,7 +435,7 @@ export default function BuildEstimator() {
                     <button className="tool-btn" onClick={submit} disabled={sending}>
                       {sending ? 'Sending…' : 'Send it to us for a fixed quote'}
                     </button>
-                    <button className="tool-btn tool-btn-quiet" onClick={downloadBrief}>Download the brief</button>
+                    <button className="tool-link" style={{ color: 'rgba(255,255,255,0.6)' }} onClick={downloadBrief}>Or just download the brief</button>
                   </div>
                 </>
               )}
