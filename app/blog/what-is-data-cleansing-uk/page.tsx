@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/blog/what-is-data-cleansing-uk' },
-  title: 'What Is Data Cleansing? The Expensive Part Is Not the Cleaning | Lexalytic',
-  description: 'Deduplication, standardisation and validation are the easy half. The cost sits in deciding which of two records is right, and in stopping it happening again. What data cleansing actually involves for a UK business, and what it costs when it is done once versus every quarter.',
+  title: 'What Is Data Cleansing? What It Involves and What It Costs | Lexalytic',
+  description: 'Deduplication, standardisation, validation and enrichment are four different jobs with four different prices, and most businesses need two of them. What each one actually does to your data, and what it costs for a UK business in 2026.',
   keywords: 'data cleansing UK, uk data cleansing, what is data cleansing, data cleanse UK, data cleaning UK business, bad data cost UK, data quality UK, cleansing data UK',
   openGraph: {
     title: 'What Is Data Cleansing? UK Guide to Fixing Bad Data (2026)',
