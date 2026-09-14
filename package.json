@@ -11,7 +11,8 @@
     "check:security": "node scripts/security-check.mjs",
     "check:a11y": "node scripts/a11y-check.mjs",
     "shots": "node scripts/shots.mjs",
-    "check": "npm run check:rates && npm run check:security"
+    "check": "npm run check:rates && npm run check:security && npm run check:content",
+    "check:content": "node scripts/content-check.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

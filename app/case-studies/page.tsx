@@ -112,6 +112,49 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+    <section style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--border)', padding: 'clamp(50px, 7vw, 80px) 0' }}>
+      <div className="container" style={{ maxWidth: 760 }}>
+        <h2 style={{ marginBottom: 18 }}>What these had in common</h2>
+
+        <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.85, marginBottom: 18 }}>
+          None of them started as a software project. Each one started as somebody spending several hours
+          a week on something a computer should have been doing, or a spreadsheet that one person
+          understood and everybody else was frightened of. The software was the answer rather than the
+          ambition.
+        </p>
+
+        <h3 style={{ fontSize: 17, marginTop: 30, marginBottom: 10 }}>How long they took</h3>
+        <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.85, marginBottom: 18 }}>
+          Most of these were live inside a fortnight from the first call. The build is rarely the slow
+          part. What takes the time is agreeing what the thing actually needs to do, which is why we ask
+          the awkward questions early rather than halfway through.
+        </p>
+
+        <h3 style={{ fontSize: 17, marginTop: 30, marginBottom: 10 }}>What they cost</h3>
+        <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.85, marginBottom: 18 }}>
+          Less than people expect, and always a fixed price agreed before anything starts rather than a
+          day rate that grows. If you want a figure without speaking to anybody, the 
+          <Link href="/tools/build-estimator" style={{ color: 'var(--amber)' }}>free estimator</Link> 
+          prices up an idea in a couple of minutes and produces a brief you can take to three other
+          developers if you would rather.
+        </p>
+
+        <h3 style={{ fontSize: 17, marginTop: 30, marginBottom: 10 }}>Nobody paid before they saw it working</h3>
+        <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.85, marginBottom: 18 }}>
+          Every one of these was built, demonstrated on a video call with the client&#39;s own data in it,
+          and used by them before any money changed hands. No deposit, nothing up front, no staged
+          payments. If it had not done what they asked for, they would have lost nothing.
+        </p>
+
+        <h3 style={{ fontSize: 17, marginTop: 30, marginBottom: 10 }}>And they own them</h3>
+        <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.85, marginBottom: 0 }}>
+          The code, the hosting account, the documentation. Not a licence that stops working if we stop
+          answering the phone. Every one of these could be handed to another developer tomorrow, which is
+          worth more to a small business than it sounds until the day it matters.
+        </p>
+      </div>
+    </section>
+
     </div>
   )
 }
