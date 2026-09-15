@@ -96,6 +96,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <link rel="alternate" type="application/rss+xml" title="Lexalytic" href="/feed.xml" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>

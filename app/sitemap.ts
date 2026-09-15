@@ -161,5 +161,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.lexalytic.com/tools/deposit-protection-check', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: 'https://www.lexalytic.com/blog/prescribed-information-deposit-deadline', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.lexalytic.com/tools/employer-duties', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: 'https://www.lexalytic.com/feed.xml', lastModified: new Date(), changeFrequency: 'daily', priority: 0.5 },
   ]
 }

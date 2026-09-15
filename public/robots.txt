@@ -22,3 +22,5 @@ Allow: /
 Host: https://www.lexalytic.com
 
 Sitemap: https://www.lexalytic.com/sitemap.xml
+
+Sitemap: https://www.lexalytic.com/feed.xml

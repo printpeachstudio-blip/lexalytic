@@ -1,0 +1,20 @@
+name: Tell IndexNow what changed
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**/page.tsx'
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2      # needs the previous commit to diff against
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/indexnow.mjs
