@@ -151,6 +151,31 @@ export default function WebsiteDevelopmentPage() {
         </div>
       </footer>
     </div>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/why-we-build-websites-in-nextjs-not-wordpress" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Why We Build Websites in Next.js Not WordPress (And Why It Matters)
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/what-to-look-for-in-a-uk-website-developer" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              What to Look for in a UK Website Developer (And the Red Flags to Avoid)
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/how-we-built-cvcraft-ai-from-scratch" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How We Built CVCraft AI - An AI Product From Idea to Launch
+            </Link>
+          </li>
+          </ul>
+        </div>
+      </section>
     </>
   )
 }

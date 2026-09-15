@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import DataHealthChecker from './DataHealthChecker'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/data-health-check' },
@@ -119,6 +120,31 @@ export default function Page() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/excel-strips-leading-zeros-company-numbers" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Why Excel Deletes the First Digit of Your Company Numbers
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/how-to-reduce-manual-data-entry-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How to Reduce Manual Data Entry in Your Business (UK Guide 2026)
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/find-duplicate-records-spreadsheet" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How to Find Duplicate Records When They Are Spelled Differently
+            </Link>
+          </li>
+          </ul>
         </div>
       </section>
     </>

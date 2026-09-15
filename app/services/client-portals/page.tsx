@@ -192,6 +192,31 @@ export default function ClientPortalsPage() {
           </div>
         </section>
       </div>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/client-portal-for-accountants-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Client Portal for Accountants UK - What to Look For and What It Should Cost
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/client-document-sharing-portal-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Client Document Sharing Portal UK - Moving Beyond Email and Shared Folders
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/secure-client-portal-small-business-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Secure Client Portal for UK Small Businesses - Do You Need One and What Should It Do
+            </Link>
+          </li>
+          </ul>
+        </div>
+      </section>
     </>
   )
 }

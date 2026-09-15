@@ -291,6 +291,31 @@ export default function ExcelAutomationPage() {
         </div>
       </footer>
     </div>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/excel-automation-construction-companies-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Excel Automation for Construction Companies UK
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/connect-xero-to-excel-automate-reports" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How to Connect Xero to Excel and Automate Your Reports (UK Guide 2026)
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/5-signs-manual-reporting-is-costing-your-business" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              5 Signs Manual Reporting Is Costing Your Business Money
+            </Link>
+          </li>
+          </ul>
+        </div>
+      </section>
     </>
   )
 }

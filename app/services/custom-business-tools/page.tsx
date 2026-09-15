@@ -256,6 +256,31 @@ export default function CustomBusinessToolsPage() {
         </div>
       </footer>
     </div>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/custom-software-cost-uk-small-business" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              What Does Custom Software Actually Cost for a UK Small Business?
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/custom-crm-vs-salesforce-hubspot-uk-small-business" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Custom CRM vs Salesforce vs HubSpot - Which Is Right for a Small UK Business?
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/bespoke-software-vs-off-the-shelf-uk-small-business" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              Bespoke Software vs Off-the-Shelf - The Honest UK Small Business Guide
+            </Link>
+          </li>
+          </ul>
+        </div>
+      </section>
     </>
   )
 }

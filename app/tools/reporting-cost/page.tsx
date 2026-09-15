@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ReportingCost from './ReportingCost'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/reporting-cost' },
@@ -104,6 +105,31 @@ export default function Page() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/automate-month-end-reporting-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How to Automate Your Month-End Reporting (UK Guide 2026)
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/finance-team-manual-reporting-fix" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              My Finance Team Is Spending Hours on Manual Reporting - How Do I Fix It?
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/excel-automation-cost-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How Much Does Excel Automation Cost in the UK? (2026 Guide)
+            </Link>
+          </li>
+          </ul>
         </div>
       </section>
     </>

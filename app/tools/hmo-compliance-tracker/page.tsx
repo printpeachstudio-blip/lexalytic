@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import HmoTracker from './HmoTracker'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/hmo-compliance-tracker' },
@@ -111,6 +112,31 @@ export default function Page() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="related-reading" style={{ background: 'var(--bg)', borderTop: '1px solid var(--border)', padding: 'clamp(40px, 6vw, 60px) 0' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem, 2.4vw, 1.5rem)', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: 22 }}>
+            Worth reading alongside this
+          </h2>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/hmo-licence-compliance-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              HMO Licence Compliance for UK Landlords - What You Need to Track and When
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/hmo-licence-inspection-what-to-expect" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              What Actually Happens at an HMO Licence Inspection
+            </Link>
+          </li>
+          <li style={{ marginBottom: 14 }}>
+            <Link href="/blog/hmo-rent-tracking-uk" style={{ fontSize: 16, color: 'var(--ink)', textDecoration: 'none', fontWeight: 500 }}>
+              How to Track Room-by-Room Rent for HMO Properties Without Losing Your Mind
+            </Link>
+          </li>
+          </ul>
         </div>
       </section>
     </>
