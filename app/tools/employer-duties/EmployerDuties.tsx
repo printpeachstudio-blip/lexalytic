@@ -139,6 +139,7 @@ ${staff.length ? `<h2>Pension position by person</h2>
 <table><thead><tr><th>Name</th><th>Started</th><th>Enrolled</th><th>Opted out</th><th>At next re-enrolment</th></tr></thead><tbody>${staffRows}</tbody></table>
 <p>Anyone who opted out more than twelve months before the re-enrolment date has to be put back in, whether or not they intend to stay. They can opt out again immediately, and most do, but the duty is to enrol them first.</p>` : ''}
 <p class="note">Produced with the free employer duties checker at lexalytic.com. It applies published deadlines to the dates entered. It does not decide whether a particular duty applies to your circumstances, and it is not advice. The Pensions Regulator, ACAS and gov.uk all publish the underlying guidance free of charge, and payroll or employment advice on anything unusual is worth taking.</p>
+<p class="note" style="margin-top:10px">If you are the accountant or payroll provider reading this, the checker is free and works across as many clients as you like.</p>
 </body></html>`
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }

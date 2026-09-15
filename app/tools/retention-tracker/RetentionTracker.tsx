@@ -499,6 +499,7 @@ ${chases.length ? `<h2>Previous contact</h2><table><thead><tr><th>Date</th><th>W
   ${analysisHtml}
   ${sections}
   <p class="note">Prepared using the Lexalytic retention tracker. Figures are calculated from the contract values, certified sums and dates you entered. This is a template application based on the statutory framework and is not legal advice. Check your contract particulars, which may vary the release mechanism, before sending.</p>
+<p class="note" style="margin-top:10px">If you are reading this on the contractor side, the same tracker works from the other direction for retention you hold, and it is free.</p>
 </body></html>`
 
     const w = window.open('', '_blank')

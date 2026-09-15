@@ -488,6 +488,7 @@ Print and choose Save as PDF. Keep it with the workbook.</div>
 <h2>What is wrong with it</h2>
 <table><thead><tr><th>Severity</th><th>Finding</th><th>Where</th><th>What to do</th></tr></thead><tbody>${rows || '<tr><td colspan="4">Nothing flagged.</td></tr>'}</tbody></table>
 <p class="note">Produced by the free spreadsheet audit at lexalytic.com. It reads formulas and structure, not meaning: it cannot tell whether the calculation is the right calculation, only whether it is built in a way that will hold up. A workbook that scores well can still be answering the wrong question.</p>
+<p class="note" style="margin-top:10px">If this file has just become yours, the audit that produced this is free and takes about a minute on your own workbooks.</p>
 </body></html>`)
                       w.document.close()
                     }

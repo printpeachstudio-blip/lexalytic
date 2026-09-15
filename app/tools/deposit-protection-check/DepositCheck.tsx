@@ -184,6 +184,7 @@ ${serviceLog.length ? `<h2>How each one was served</h2>
 <h2>What this is for</h2>
 <p>The burden of showing a deposit was protected in time, and that the prescribed information was served in time, sits with the landlord. A tenant has ${CLAIM_WINDOW_YEARS} years from the end of the tenancy to bring a claim, by which point the scheme emails and the covering letter are usually long gone. This is the dated record of what happened, made while the detail is still available.</p>
 <p class="note">Produced with the free deposit protection checker at lexalytic.com. It applies the ${PROTECT_DAYS} day deadline in sections 213 to 215 of the Housing Act 2004 to the dates entered, and the deposit cap in the Tenant Fees Act 2019. It is a way of checking your own records, not legal advice, and whether a particular renewal restarted the clock depends on how that renewal was documented. Shelter and Citizens Advice both advise on this free of charge, and a housing solicitor should look at anything with real money behind it.</p>
+<p class="note" style="margin-top:10px">If you are advising on this rather than holding the deposits, the checker is free and works through a whole portfolio at once.</p>
 </body></html>`
     const w = window.open('', '_blank')
     if (w) { w.document.write(html); w.document.close() }

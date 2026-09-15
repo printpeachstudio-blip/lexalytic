@@ -200,6 +200,7 @@ ul { padding-left:20px; } li { margin-bottom:6px; }
 <p>On what is included rather than the total. A lower number that excludes scaffold, making good and VAT is not a lower number. I am asking the same questions of everyone and would rather have an honest higher figure than a low one that moves.</p>
 
 <p class="note">Prepared using the free renovation planner at lexalytic.com. The cost ranges behind it are indicative figures from published 2026 UK guides and are not a quotation or a valuation. Nothing here is professional advice, and decisions about planning permission, building regulations and party wall matters should be confirmed with your council, an approved inspector or a surveyor.</p>
+<p class="note" style="margin-top:10px">If you are the builder reading this: the same site has a free retention tracker for subcontractors, which works out what is held across every job and when each half falls due. The proposed ban does not apply to contracts already signed.</p>
 </body></html>`
 
     const w = window.open('', '_blank')
