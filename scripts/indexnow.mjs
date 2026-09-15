@@ -65,7 +65,7 @@ if (process.argv.includes('--all')) {
 const body = {
   host: HOST,
   key,
-  keyLocation: `https://${HOST}/indexnow-key.txt`,
+  keyLocation: `https://${HOST}/${key}.txt`,
   urlList: urls.slice(0, 10000),
 }
 
