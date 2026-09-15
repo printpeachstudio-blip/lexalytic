@@ -3,7 +3,7 @@ name: Weekly checks
 on:
   schedule:
     # Monday morning, so anything broken is found before the week starts
-    - cron: '0 7 * * 1'
+    - cron: '37 6 * * 1'
   workflow_dispatch:
 
 jobs:

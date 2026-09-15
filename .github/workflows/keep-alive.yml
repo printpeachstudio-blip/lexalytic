@@ -2,7 +2,7 @@ name: Keep Alive
 
 on:
   schedule:
-    - cron: '0 8 * * 1'  # Every Monday 8am UTC
+    - cron: '41 7 * * 1'  # Every Monday 8am UTC
   workflow_dispatch:
 
 jobs:
