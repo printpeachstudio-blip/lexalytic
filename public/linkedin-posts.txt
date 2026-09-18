@@ -1,0 +1,1223 @@
+# LinkedIn Posts Schedule
+# Date on its own line (YYYY-MM-DD), post text below it
+# Publishes Tue/Wed/Thu at 10am UTC (11am UK summer time)
+# IMPORTANT: After each post goes live, add a comment with the Lexalytic URL
+# DO NOT put links in the post body - they suppress reach
+# Carousel schedule (upload manually via LinkedIn):
+#   Week of Sep 8:  signs-you-need-custom-software.pdf
+#   Week of Sep 15: what-we-actually-build.pdf
+#   Week of Sep 22: true-cost-of-manual-reporting.pdf
+#   Week of Sep 29: custom-crm-vs-saas.pdf
+# TOKEN RENEWAL REMINDER: Renew LINKEDIN_ACCESS_TOKEN before 2nd November 2026
+
+2026-09-03
+A business owner I spoke to last month was paying £340/month for a CRM.
+
+They used 4 of its 60+ features.
+
+The 5 features they actually needed were not in it.
+
+So they had built workarounds. Spreadsheets that fed into the CRM. Manual exports. One person who knew how everything connected.
+
+We built them a custom tool for their exact process. Fixed price. No monthly fees. No workarounds.
+
+It paid for itself in 8 months.
+
+The calculation most businesses never do: what does the friction of the wrong tool actually cost per year?
+
+Almost always more than building the right one.
+
+What does that calculation look like for your business?
+
+2026-09-08
+Most business websites do one thing well.
+
+They confirm you exist.
+
+That is not enough.
+
+A website that actually works for your business loads in under 2 seconds, ranks for the terms your clients are searching for, has a clear next step on every page, and gets updated regularly enough that Google keeps coming back.
+
+Most WordPress sites fail on all four. They were fast when they launched, then slowed down as plugins accumulated. They looked good at sign-off and have not been touched since. They rank for the business name and nothing else.
+
+This site - the one you are on right now - scores 100 on Google SEO. No WordPress. No templates. No monthly platform fees. Built in Next.js, deployed on Vercel, blog publishing automated via GitHub Actions.
+
+It generates more inbound enquiries than any other channel we use.
+
+A website is not a brochure. It is either working for your business or it is not.
+
+2026-09-10
+When someone books a call with Lexalytic, here is what happens.
+
+I am on the call. I do the scoping. I write the proposal. I do the build. I handle the handover.
+
+No account manager between us. No briefing process where your requirements get filtered through someone who was not on the original call. No junior developer picking up the work after the senior made the pitch.
+
+You talk to me. I build it.
+
+That sounds obvious. It is not how most agencies work.
+
+At a 20-person agency, the person who wins your business is almost never the person who builds it. The pitch is polished. The delivery is variable. The gap between what was promised and what was delivered is where most bad experiences live.
+
+15 years across Shell, NHS, Warner Bros, Citi and Foster and Partners. Applied directly to your project. Not filtered through a team structure that adds cost without adding value.
+
+Fixed price. Senior experience. Direct access.
+
+That is the point.
+
+2026-09-15
+Auto enrolment was not a one-off.
+
+Most small employers did it once in 2017 or 2018, filed the declaration, and moved on. It comes back every three years.
+
+You have to put eligible staff who opted out back into the scheme. They can opt out again the same week, and most do, but the duty is to enrol them first.
+
+And then there is the bit that catches people who did everything else right.
+
+The re-declaration of compliance is due within five months of the three-year anniversary. Not of the date you chose for re-enrolment, of the anniversary. And it is due even if you had nobody to put back in.
+
+So an employer who correctly worked out they had no one to re-enrol, and therefore did nothing, gets fined for not saying so.
+
+Four hundred pounds fixed, then fifty a day for the smallest employers, rising with headcount.
+
+The other thing worth checking while you are in there: the written statement of employment particulars is due on or before day one. It used to be two months. That changed in April 2020 and a lot of onboarding checklists still say the old rule.
+
+Built a free tool that works your dates out from your staging date and puts them in a calendar. Link in the comments.
+
+2026-09-16
+A landlord I know keeps every current certificate in a folder. Gas, EICR, fire alarm, the lot. All in date.
+
+Then a tenant applied for a rent repayment order and the question was whether the gas certificate was valid in March last year.
+
+He had no idea. This year's certificate arrived, last year's went in the bin.
+
+That is the thing about compliance folders. They prove today. Nobody ever asks about today.
+
+A council serving an improvement notice asks about the date of the inspection. A tenant applying for an RRO asks about the period they are claiming for, which can be up to twenty four months. An insurer after a fire asks about the date of the fire.
+
+All three are asking backwards, and a folder of current certificates cannot answer any of them.
+
+Two things worth doing, neither of which costs anything:
+
+Keep the expired ones. They are the only evidence that the period was covered.
+
+And write down who did it and their registration number. A gas certificate from somebody not on the Gas Safe register is worth nothing, and that is the first thing anyone checks.
+
+Free HMO compliance tracker in the comments. The paid version keeps the history and lets you pick a date to see what was valid on it.
+
+2026-09-17
+Three things we have built and operate ourselves:
+
+CVCraft AI - a fully automated CV rewriting service. Customer submits their CV and target role. Claude rewrites it. Stripe takes payment. Document delivered in 24 hours. No human in the loop between submission and delivery.
+
+FamilyEntitled - a UK government entitlements calculator. Tells families exactly what benefits they are eligible for across 8 schemes. No data stored. No account required. The average family using it finds £4,700 in entitlements they did not know about.
+
+Kismet - a UK wedding planning platform. Guest management, seating planner with conflict detection, budget tracker, vendor tools, AI vow and speech generator. Waitlist live. Platform in active development.
+
+We build these alongside client work. Not as side projects we will get to eventually. As live products we are building properly and shipping.
+
+When we say we can build your idea, we are not guessing. We have done it for ourselves. Three times.
+
+What would you build if you had the technical capability to do it properly?
+
+2026-09-22
+There is a specific type of website that ranks on Google and converts visitors into clients.
+
+And there is a type that looks fine but does neither.
+
+The difference is not design. It is how it was built.
+
+WordPress sites with page builders load slowly, score poorly on Core Web Vitals, and require constant plugin maintenance. The SEO ceiling is low.
+
+This site is built in Next.js. No WordPress. No templates. No monthly platform fees. It scores 100 on Google SEO. It has 97 pages, structured data on every page, and a blog that publishes automatically twice a week.
+
+A website built properly is a business asset that compounds over time.
+
+A website built quickly is an expense that needs replacing in 18 months.
+
+If your current site is not generating enquiries consistently, the problem is almost certainly structural - not the content on it.
+
+2026-09-23
+For offences committed on or after 1 May 2026, the maximum rent repayment order is two years of rent rather than one.
+
+The window for bringing a claim doubled too, from twelve months to two years. Six new offences were added to the list that triggers one.
+
+For a landlord letting five rooms at 700 a month, the theoretical maximum went from around 42,000 to around 84,000. That sits alongside a council civil penalty of up to 30,000, not instead of it.
+
+The change that catches most people is the extension to superior landlords. Before the Act, following Rakusen v Jepsen, an order could only be made against the immediate landlord. In a rent-to-rent arrangement the operating company was liable and the property owner was not. That is now reversed.
+
+The licensing rules themselves have not changed. Five or more people from two or more households sharing facilities, no minimum number of storeys since 2018.
+
+What changed is the cost of not realising you were caught by them.
+
+2026-09-24
+A question worth asking before signing another SaaS contract:
+
+What are we actually paying for?
+
+Most businesses use around 20% of the features in their software stack. The other 80% are configured, paid for, and ignored. Or worse - the business has adapted its processes to fit the software rather than the other way round.
+
+The five signs you have outgrown your current software:
+
+Your team has built workarounds everyone accepts as normal.
+You pay for features you never use while missing ones you need.
+New starters need training on the workarounds, not just the software.
+Data lives in multiple places and nobody is sure which is current.
+The monthly cost keeps rising but the value does not.
+
+If three or more of those are true, the 3-year cost calculation is worth doing before the next renewal.
+
+2026-09-29
+FamilyEntitled took a few weeks to build.
+
+It tells UK families exactly what benefits and entitlements they are eligible for - across 8 government schemes - based on their specific situation. No data stored. No account required. Entirely private.
+
+The average family that uses it finds £4,700 in annual entitlements they did not know they were owed.
+
+It ranks on Google. It helps real people. It cost a fraction of what an agency would have charged.
+
+We built it because the gap was obvious: government entitlement information is scattered, confusing, and presented in a way that serves bureaucracy rather than families.
+
+A well-built tool does one thing well for the person using it. It does not try to be everything. It solves one specific, real problem.
+
+That principle applies whether you are building a public calculator or a private internal business tool.
+
+2026-09-30
+Most councils inspect an HMO within six weeks of a licence application.
+
+The officer measures the rooms. Not estimates, measures.
+
+Any room slept in by one adult must be at least 6.51 square metres. Two adults sharing needs 10.22. Below 4.64 and it cannot be used for sleeping at all. Space under a ceiling lower than 1.5 metres does not count toward the total, which is what catches out attic rooms that look fine on a floor plan.
+
+If a room fails, it does not count toward your licensed occupancy. The licence gets issued for fewer people than you are currently housing, and the rent the property can lawfully produce drops accordingly.
+
+The other reliable failure is fire doors. Self-closers that have been wedged open or unscrewed, and intumescent strips buried under enough coats of paint that they will not do anything.
+
+Neither of these is difficult to fix. Both are considerably cheaper to fix before the inspection than after it.
+
+2026-10-01
+Fixed price is not a gimmick.
+
+It is a statement about who carries the risk.
+
+Day rates put the risk entirely on the client. If scoping is poor, if requirements expand, if the build takes longer - the client pays more. Every time.
+
+Fixed price means we scope carefully before quoting. We ask enough questions to understand exactly what needs building. We write down what is included and what is not. We agree the price before any work begins.
+
+If the scope changes, we have a conversation before any additional work starts. Nothing hidden. Nothing assumed. No invoice at the end that does not match the quote.
+
+The discipline of fixed price makes us better at scoping. It has to.
+
+Clients who have worked with day rate developers before consistently say the same thing: they never knew what the final cost would be until it was too late to change course.
+
+That is not how it should work.
+
+2026-10-06
+Most HMO landlords I speak to are managing their properties across a combination of things that were never designed to work together.
+
+A spreadsheet for rent. A different spreadsheet for compliance certificates. A WhatsApp group for maintenance. Emails as the record of any agreements with tenants.
+
+It works until something goes wrong. A missed gas safety certificate renewal. A deposit dispute where the payment history lives across three sources. A licensing inspection where the documentation is not in one place.
+
+The software built for landlords was almost entirely designed for single-let properties. The HMO features were added as an afterthought.
+
+The landlords managing HMOs well either have a system they built themselves out of several tools stitched together, or they commissioned something built around how an HMO actually works.
+
+If you manage HMO properties and the admin is absorbing more time than it should, the problem is almost certainly the tools.
+
+2026-10-07
+Retention is the one construction debt nobody argues about.
+
+The main contractor is not saying the work was defective. They are not disputing the valuation. The date passed, nobody applied for it, and the money stayed where it was.
+
+The second half falls due twelve months after practical completion. By then the job is closed, the file is archived, and the person who would have chased it has moved on to three other sites.
+
+Two things most subcontractors do not know.
+
+The first is that pay when paid does not apply. Section 113 of the Construction Act makes those clauses ineffective unless a third party has actually gone insolvent. "The client has not released it to us yet" is not a defence.
+
+The second is that you can charge interest at eight points over base, currently 11.75%, on retention that has passed its release date. On five thousand pounds held a year late that is around five hundred and eighty quid.
+
+Almost nobody claims it. Which is exactly why releasing retention late costs a main contractor nothing.
+
+2026-10-08
+What does a website that actually works look like?
+
+Not beautiful. Not impressive. Working.
+
+It loads in under 2 seconds. It scores 90+ on Google Core Web Vitals. Every page has a clear purpose and a clear next step. The blog publishes regularly and ranks for the questions your clients are already asking.
+
+Most business websites fail on all four.
+
+They were built in WordPress with a page builder, load slowly, have no structured data, and have not been updated since they went live.
+
+The result: they look fine when someone already knows your name and types it into Google. They do not exist for anyone who does not already know you.
+
+A website built properly brings in people who have never heard of you.
+
+That is the difference between a brochure and a business asset.
+
+2026-10-13
+Knowing when to build custom software and when to buy off-the-shelf is one of the most important decisions a growing business makes.
+
+Buy when: your process is standard. Your needs match what the software was built for. You want to be up and running in days, not weeks. The monthly cost is justified by the value.
+
+Build when: your process is specific enough that generic tools require significant compromise. You have tried two or more off-the-shelf options and neither fits properly. The monthly licence cost over 3 years exceeds a custom build. You need something that integrates with systems the generic tools do not support.
+
+The test is not "can we configure this tool to work?" Most tools can be configured to almost work.
+
+The test is: "after configuration, are we still working around the tool or is the tool working for us?"
+
+If the answer is still working around it - that is the signal.
+
+2026-10-14
+Most contracts cap total retention at five percent of the contract price.
+
+Deductions come off each interim certificate and accumulate until they hit that ceiling. At which point no more should be taken.
+
+In practice deduction often carries on past the cap, because it is a running total against a limit and nobody is checking it.
+
+That money was never contractually due. It is recoverable now, not at practical completion, and not at the end of the defects period.
+
+Worth adding up every deduction across all your certificates on your current jobs and comparing the total against the cap in your contract.
+
+It takes twenty minutes and on a decent sized job it is not a small number.
+
+2026-10-15
+Kismet is a wedding planning platform we are building.
+
+Guest management with dietary and seating conflict detection. Budget tracker connected to real vendor quotes. Vendor coordination tools. AI vow and speech generator trained on the couple's relationship story.
+
+The waitlist is live. The platform is in active development.
+
+The question we get most often: why build it rather than adapt an existing tool?
+
+Because every existing tool is built for wedding planners, not couples. The planners get the features. The couples get a read-only view and a PDF.
+
+We flipped that. Couples own their planning. Every decision, every vendor, every penny tracked in one place they control.
+
+The gap between what existed and what couples actually needed was obvious. The technology to fill it was not complicated.
+
+That is usually the answer to why build anything.
+
+2026-10-20
+Personal trainers lose more revenue to payment friction than almost any other small business I speak to.
+
+Not because clients do not want to pay. Because the current system requires them to remember to do something, and life gets in the way.
+
+Bank transfer on request has a collection rate of around 70-80% on time. The other 20-30% requires a follow-up message, an awkward conversation, or both.
+
+Direct debit via GoCardless collects on the agreed date automatically. The PT does not have to ask. The client does not have to remember. Collection rate goes to close to 100%.
+
+The setup cost is 1% per transaction capped at £2. For a monthly retainer of £150 that is £1.50.
+
+The time saved on payment chasing in the first month alone pays for years of transaction fees.
+
+If you are a PT spending any meaningful time chasing payments, this is the one change that has the highest return for the least effort.
+
+2026-10-21
+Construction adjudication gets a decision in 28 days.
+
+Adjudicator appointed within seven days of the notice. Decision within twenty eight, extendable by fourteen with your consent. Binding on an interim basis, so it has to be complied with while anything further runs.
+
+For an unpaid notified sum, where no payment notice and no pay less notice were served, that is a strong position to be in.
+
+The barrier is almost never the merits of the claim. It is that most subcontractors do not know the route exists, or assume it means solicitors and months of cost.
+
+Often the referral itself is enough. Payment arrives before the adjudicator reaches a view.
+
+2026-10-22
+Agencies with 20 people have 20 people worth of overhead.
+
+That overhead is in your price.
+
+Account managers who attend every call but build nothing. Project managers who create tickets but write no code. Senior partners who appear at the pitch and hand off to juniors.
+
+The person who scopes your project at Lexalytic is on it through to handover.
+
+No relay between the person you spoke to and the person doing the work. No requirements filtered through someone who was not in the room. Where a project genuinely needs a specialist we bring one in, but the thread never gets dropped.
+
+15 years across Shell, NHS, Warner Bros, Citi and Foster and Partners, applied directly rather than through a structure that adds cost without adding value.
+
+Senior experience. Studio prices. That is the point.
+
+2026-10-27
+The volunteer treasurer of a grassroots sports club has one of the harder admin jobs in small organisations.
+
+Collecting membership fees from families who pay in dribs and drabs. Chasing match fees from players who forgot their wallet. Tracking kit that leaves the storage and does not come back. Preparing end of year accounts from a spreadsheet that three different people have edited over the past four years.
+
+And doing all of it in their spare time, for free, because they care about the club.
+
+The tools that exist for sports clubs - Pitchero, Spond, ClubSpark - are not complicated. The barrier to adoption is almost never the software. It is the data. Clubs with clean, complete member records migrate well. Clubs with years of partial records in different formats struggle.
+
+The clubs that run smoothly are the ones that set up properly once and then maintain it consistently. Not the ones with the most sophisticated tools.
+
+If you run or volunteer for a grassroots sports club and the admin feels heavier than it should, the answer is almost always a one-time cleanup and a single platform, consistently used.
+
+2026-10-28
+A twelve pound dish on Deliveroo returns about eight pounds forty.
+
+That is before the VAT comes off, before the box, and before anyone has cooked it.
+
+Most independents price the delivery menu identically to the restaurant menu, which means the whole commission comes out of margin that was already thin.
+
+The bit that catches people is the order the maths happens in. The customer pays twelve pounds including VAT, so two of those were never yours. You are working from ten. The platform then takes thirty per cent of that, so you see seven. Food cost and packaging come out of the seven.
+
+Work it the other way round and you will convince yourself you are making nearly double what you actually are.
+
+Delivery menus generally need eight to twelve points more margin than dine-in to end up in the same place. Every platform allows it and the chains all do it.
+
+The dishes to worry about are the cheap popular ones, because the volume is concentrated exactly where the margin is thinnest. Selling more of those is not growth.
+
+2026-10-29
+Most professional services firms manage client document exchange the same way.
+
+An email goes out requesting three documents. The client replies with one of them. A week later you send another email. They attach the second. The third arrives two weeks later in a different thread that nobody can find.
+
+Meanwhile someone on your team is maintaining a spreadsheet tracking which clients have sent what, because the email system has no concept of outstanding.
+
+A client portal solves this cleanly. Every document request has a status. Clients log in and see exactly what you need from them. They upload it directly. You get notified. The spreadsheet disappears.
+
+The businesses that resist building one usually say the same thing: our clients prefer email.
+
+What they usually mean is: our clients are used to email. Those are different things.
+
+2026-11-03
+A pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
+
+Shifts booked in one place. Pay rates in another. Hours tracked in a third. Payments calculated manually each month.
+
+Payments were consistently late or wrong. Scheduling clashes went unnoticed until someone did not show up. The admin overhead was absorbing hours every week.
+
+We built a custom locum management tool. Single input form. Pay calculated automatically from hours and agreed rates. Payment due dates flagged before they pass. Scheduling conflicts caught at the point of booking.
+
+Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
+
+That is what custom software looks like when it is built around a specific problem rather than adapted from a generic one.
+
+2026-11-04
+Ask a recruitment agency owner what they billed last month and you get an answer straight away.
+
+Ask how much of it is still refundable and you usually get a pause.
+
+Every perm placement inside its rebate window is money you have invoiced and could still be asked to give back. Individually nobody worries about it. A desk carrying twelve live placements at an average nine thousand pound fee, spread through their windows, is sitting on something like forty three thousand pounds of billed revenue that a client could still claim against.
+
+The bit that makes it worth modelling is that it clusters. A strong month produces a batch of start dates, and that batch moves through the window together. Six placements into the same client, placed the same fortnight, reach week four on the same day.
+
+One candidate leaving is absorbed. Six is a month.
+
+2026-11-05
+Wedding suppliers manage client relationships over longer timelines than almost any other small business.
+
+A couple books a florist or photographer 12 to 18 months before the wedding. Over that time there are consultations, design decisions, payment milestones, final confirmations, and day-of logistics. All of it needs to be accurate and accessible on the day that matters most.
+
+The tool most wedding suppliers use to track all of this is email.
+
+Email is fine for communication. It is a poor system for tracking the state of a relationship across 18 months and multiple conversations. Things get buried. Earlier decisions get forgotten. The answer to what colour scheme was agreed is somewhere in a thread from eleven months ago.
+
+A simple client record that captures every key decision and every payment milestone, in one place, does not need to be complicated. A well-structured Airtable base costs £10 a month and does most of what a wedding business needs.
+
+For suppliers doing 40 or more events a year, something built around your specific workflow - your consultation questions, your payment stages, your automated reminders - is worth the investment. The alternative is discovering on the day that something important was missed.
+
+2026-11-10
+The businesses getting the most from AI right now are not the ones with the biggest budgets.
+
+They are the ones that identified one specific, high-volume, well-defined task - and automated exactly that.
+
+A CV rewriting service that delivers in 24 hours with no human in the loop.
+A proposal generator that produces a first draft from a client brief in minutes.
+A document processor that extracts and classifies data from PDFs automatically.
+
+None of these required a large AI budget. All of them required clarity about which problem was worth solving.
+
+The question is not "how do we use AI in our business?"
+
+The question is "which task, done at volume, would most benefit from being automated?"
+
+Start there. Build that one thing properly. The ROI is almost always immediate.
+
+2026-11-11
+Something a lot of agencies do not use, and it is in their own terms of business.
+
+Rebate clauses are almost always conditional on the placement invoice being settled within the agreed payment terms.
+
+A client who paid sixty days late on thirty day terms may have no contractual entitlement to a rebate at all.
+
+Most agencies process the refund without ever checking the payment date against the terms. It is not deliberate, it is just that the person handling the rebate claim is not the person who chased the invoice, and nobody joins the two up.
+
+Worth checking before you agree the next one.
+
+2026-11-12
+The most valuable person in most operations teams is the one who knows how everything connects.
+
+They are also the single point of failure.
+
+When they go on holiday, things slow down. When they leave, institutional knowledge walks out with them. Processes that worked reliably for years suddenly require someone to reconstruct how they actually functioned.
+
+Documenting and automating the processes that person owns is not just an efficiency project. It is a risk management project.
+
+The businesses that handle transitions, growth, and absence best are the ones where the processes are written down and, where possible, automated. Not because they anticipated every scenario. Because they built systems that did not depend on any one person to function.
+
+2026-11-17
+A professional services firm had no central view of project profitability.
+
+Directors were making resourcing decisions without reliable data. Guessing which clients were profitable and which were quietly draining margin. Discovering problems at month end, when it was already too late to act on them.
+
+We built a Power BI dashboard connected to their project management and finance systems.
+
+Live P&L by project, client, and team member. Margin visible in real time, not reconstructed at month end. Updated automatically as time is logged and invoices are raised.
+
+Full visibility within 48 hours of the build completing.
+
+The MD now opens one dashboard for the weekly leadership meeting instead of waiting for someone to compile a report.
+
+The decisions they make now look different to the ones they were making six months ago.
+
+2026-11-18
+The question I get asked about client portals:
+
+Is it worth building something bespoke or should we just use TaxDome or Karbon?
+
+The honest answer depends on one number: how many clients do you have and what do you pay per user per month on the platform.
+
+A five-person accountancy firm on a mid-tier TaxDome plan pays roughly £1,800 to £2,400 per year. Over three years that is between £5,400 and £7,200. A bespoke portal built to do exactly what the firm needs - document collection, e-signatures, invoicing, outstanding items tracker - typically costs £4,000 to £8,000 once, with no ongoing fee.
+
+The crossover point is usually somewhere between 18 and 30 months.
+
+After that the bespoke option is cheaper every year, fits the firm better because it was built around how they actually work, and carries the firm branding rather than the platform name.
+
+Worth doing the maths before signing another annual contract.
+
+2026-11-19
+I got asked recently how we decide what to build next at Lexalytic.
+
+The honest answer: we look for the gap between what exists and what people actually need.
+
+FamilyEntitled exists because government entitlement information is scattered across dozens of pages and presented in a way that serves the system, not families. The average family using it finds £4,700 they were owed but did not know about.
+
+CVCraft AI exists because professional CV rewrites cost £200 and take days, while most job seekers need something faster and more affordable.
+
+Kismet exists because every wedding planning tool is built for wedding planners. Not for the couple trying to manage guests, budget, seating, and vendors in one place.
+
+The gap is usually obvious once you look for it. The technology to fill it is rarely the hard part.
+
+What gap have you noticed in your industry that nobody has filled properly yet?
+
+2026-11-24
+The hardest part of most software projects is not the code.
+
+It is the requirements.
+
+Specifically: the difference between what the client says they need and what they actually need once they start using it.
+
+The businesses that get the best results from custom software are the ones that spend significant time on the brief before the build starts. Not because they need to solve every edge case upfront, but because the discipline of writing down exactly what the system needs to do surfaces assumptions that would otherwise only become visible when they cause problems.
+
+We ask clients to brief us as if we know nothing about their business. Not because we are lazy. Because the exercise of writing it down for someone who knows nothing is how you discover what you actually need.
+
+2026-11-25
+Two clauses that look similar in a terms of business negotiation and are not.
+
+A refund clause means cash goes back out of the door.
+
+A replacement clause means you fill the role again and the cost is resourcing time.
+
+Agencies concede these interchangeably to win a client, and they are priced completely differently. An agency with a replacement right and a decent candidate pool carries a fraction of the real exposure that the headline number suggests. An agency that agreed a straight refund to get on the PSL carries all of it.
+
+Worth knowing which one you actually signed before you find out the hard way.
+
+2026-11-26
+A client came to us last year with a specific problem.
+
+Their hairdressing group had financials scattered across multiple spreadsheets. Inherited macros from a previous consultant that either failed entirely or took so long to run that nobody used them. No clear picture of how the business was actually performing.
+
+We did three things. Cleansed the data - restructuring everything so it was consistent and connected. Rebuilt all the macros from scratch, faster and properly documented. And created a single file where the owner could see accurate figures across the whole business for the first time.
+
+Macros that used to take minutes - or fail entirely - now run in seconds.
+
+The work was not glamorous. It was not AI. It was methodical, unglamorous data work. The kind that gets overlooked in favour of the shiny stuff but makes an immediate, tangible difference to how a business operates.
+
+2026-12-01
+A question I hear often from business owners considering a website rebuild:
+
+"Will it actually make a difference?"
+
+The honest answer: it depends entirely on what is currently stopping it from performing.
+
+If the site loads slowly - and most WordPress sites do - that is costing you search rankings and visitor patience. Google's Core Web Vitals are a direct ranking factor.
+
+If the site is not mobile optimised, you are losing half your visitors immediately.
+
+If there is no clear call to action on the main pages, visitors who might have become clients are leaving without doing anything.
+
+If the site has not been updated in two years and the content does not reflect what you actually do, you are losing the trust of anyone who looks you up before deciding to contact you.
+
+A website rebuild done properly addresses all of these. One done poorly addresses none of them and costs the same.
+
+2026-12-02
+An accountant posted about a client whose restaurant filed accounts at fifty six per cent gross profit.
+
+The inspector said it should be at least sixty, based on other restaurants.
+
+The client was not doing anything wrong. Explaining that, after the year had closed and without the records to hand, was the hard part.
+
+HMRC compares filed returns against expected profit figures automatically through Connect. Sitting below the band for your format is one of the most common triggers for a compliance check, because from the outside it looks the same as sales that were not recorded.
+
+The things that legitimately pull a restaurant below benchmark are delivery commission, discounting, waste, staff meals and a tie if you are a pub tenant. None of them appear anywhere obvious in a set of accounts.
+
+Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
+
+That difference is decided entirely by what you kept at the time, and a waste log written eighteen months later is worth almost nothing however honest it is.
+
+2026-12-03
+The businesses I admire most are the ones that have built systems around how they actually work rather than adapting how they work to fit generic tools.
+
+It sounds obvious. Most businesses do the opposite.
+
+They buy software because it is what the industry uses. They configure it until it almost fits. They train their team on the workarounds. They accept the friction as the cost of doing business.
+
+The alternative - building something specific - feels expensive and risky. Until you do the maths on what the friction is actually costing.
+
+Most businesses that have switched from generic to custom tools say the same thing: they wish they had done it sooner. Not because the custom tool is more impressive. Because it just works the way the business works. And that turns out to be worth a lot.
+
+2026-12-08
+End of year is when most businesses finally look at the numbers properly.
+
+The annual accounts arrive. The MD reviews the year. And sometimes the picture is different to what everyone thought was happening.
+
+The businesses with the fewest surprises at year end are not the ones that got lucky. They are the ones that were looking at the right numbers consistently throughout the year.
+
+Revenue versus target. Gross margin. Cash position. Debtor days. Which clients are profitable and which are not.
+
+Not once a year. Every week.
+
+The technology to make this happen automatically is not expensive. A Power BI dashboard connected to your accounting software typically costs less than one month of accountancy fees and runs itself from that point forward.
+
+The businesses making the best decisions in 2027 will be the ones that built this visibility in 2026.
+
+2026-12-09
+There is a GDPR issue most professional services firms are quietly ignoring.
+
+Sending sensitive personal and financial documents by unencrypted email is not technically compliant with UK data protection requirements. Most firms do it because the alternative - encrypted email, secure file transfer tools - is inconvenient for both sides.
+
+A client portal solves it properly. Documents are uploaded and downloaded through an encrypted connection. Access is controlled by login. There is an audit log of every action. Each client only sees their own files.
+
+For firms in regulated sectors - financial advice, legal, accountancy - having a documented and auditable channel for sensitive client data is increasingly an expectation from the FCA, SRA, and ICAEW, not just a best practice.
+
+The firms that move to a proper portal almost always say the same thing: they wish they had done it sooner. Not because it changed their relationship with clients. Because it made a daily operational headache disappear.
+
+2026-12-10
+We are building Kismet.
+
+A UK wedding planning platform that gives couples one place to manage everything - guests, seating with conflict detection, budget tracked against real quotes, vendor coordination, and an AI generator for vows and speeches trained on their relationship story.
+
+The waitlist is live. The platform is in active development.
+
+We build it alongside client work. Not as a side project we will get to eventually - as a live product we are building properly and shipping.
+
+Building your own products alongside client work is one of the best things a studio can do. It keeps you current, gives you live examples of your work, and creates assets that generate value independently.
+
+Kismet is our fourth live product. CVCraft AI, FamilyEntitled, and Lexalytic itself are the others.
+
+2026-12-15
+Most businesses do not have a clear answer to this question:
+
+What would it cost to replace the person who knows how everything works?
+
+Not their salary. The cost of the knowledge walking out the door.
+
+The processes that only exist in their head. The system connections only they understand. The institutional knowledge that took years to build and would take years to rebuild.
+
+Every business has at least one person like this. Usually in finance or operations. Often the person who has been there longest.
+
+Automating and documenting the processes they own is not a threat to their role. It is a protection of the business. And it frees them to do the work that actually requires their judgement rather than their memory.
+
+2026-12-16
+The question every agency answers with "it depends".
+
+Which is true, and useless.
+
+What it actually depends on is: how many separate groups of people need to see different things, what it has to connect to, and where your data is now. That is most of it.
+
+The first one is the big driver and the least obvious. A second type of user is not a second set of screens. It is the permissions logic that decides who sees what, and every feature you add afterwards has to be checked against both. That is where the cost sits.
+
+The second is where estimates go wrong. A modern API with decent documentation is a day. A system with no API where you are scraping an export is a fortnight, and you often do not know which you have until you look.
+
+The third is the one nobody budgets for. Moving four inconsistent spreadsheets costs more than starting from scratch, because the cleaning is the job and the loading takes an afternoon.
+
+We built a calculator that asks those questions and shows an itemised range with a reason against every line. It also produces a written brief you can take to three other developers if you want. Most people will not, but it seemed a strange thing to be precious about.
+
+lexalytic.com/tools/build-estimator
+
+2026-12-17
+2026 in a sentence for Lexalytic:
+
+Rebuilt the consultancy as a proper digital studio. Launched CVCraft AI. Built FamilyEntitled. Started Kismet. Ranked the site on Google. Automated the blog. Set up this LinkedIn. Delivered custom software, Power BI dashboards, websites, and data systems for clients across the UK.
+
+Not a bad year.
+
+2027 plan: more of the same, better. More client projects. More products. More content. More reach.
+
+If your business needs a website, custom software, AI tools, or data systems built properly in 2027 - book a call. Fixed price. Fast delivery. You talk directly to the person doing the work.
+
+2026-12-22
+A thing I have noticed about the businesses that make the best use of technology:
+
+They are not the most technically sophisticated.
+
+They are the most specific about the problem they are trying to solve.
+
+The business that says "we need to use AI" rarely gets much from it. The business that says "we receive 200 identical customer enquiries a month and we want to automate the first response" gets an immediate and measurable return.
+
+The technology is always less important than the clarity about the problem.
+
+Start with the problem. Be specific. The solution almost always follows.
+
+2026-12-23
+An hour of someone on £13.20 costs the business £16.68.
+
+Holiday accrual at 12.07 per cent, employer National Insurance at 15 above the threshold, pension at 3. Roughly 26 per cent on top of the rate, before anyone has done anything.
+
+Which matters because almost every calculation about manual work uses the wrong number.
+
+Take two people spending five hours a month each on a report. At the hourly rate that looks like about £1,600 a year. At what it actually costs the business it is closer to £2,000, and that is before you count that they are salaried so the real figure divides across 46 working weeks rather than 52.
+
+The other half nobody does is asking who is doing it. A partner on £60,000 rebuilding a spreadsheet costs three times what the same work costs further down the office. Most firms have the wrong person doing the reporting and have never calculated it, because the time is not billed to anything.
+
+Our reporting cost calculator does both. True employment cost, broken down by role, and how quickly automating it would pay back.
+
+The number that usually changes the conversation is not the annual cost. It is the working weeks.
+
+lexalytic.com/tools/reporting-cost
+
+2026-12-24
+Every lock-up calculator asks for your work in progress figure.
+
+Which is the one number a small firm cannot produce.
+
+It exists as unbilled hours in a time recording system, not as a balance you can look up. So the calculation that would tell you how much cash is tied up needs an input that only exists if you already did the work.
+
+That is why most firms measure debtor days and stop there. Debtors are visible. WIP is not, so it gets left out, and the half of lock-up that sits before the invoice goes out never gets managed at all.
+
+The consequence is that firms reach for credit control when the problem is billing. Chasing clients harder does nothing if the work has not been invoiced yet.
+
+We built it the other way round. Enter your live jobs, work delivered, invoiced, collected. It derives WIP, debtors and lock-up days from that, so you get the number without needing the number.
+
+Then it tells you which jobs to bill this week and which invoices to chase, ranked by what each releases. Because the useful output is not how many days your lock-up is. It is which three things to do on Monday.
+
+lexalytic.com/tools/lockup-tracker
+
+2026-12-29
+Case study: an independent pharmacy was managing 20+ locum pharmacists across separate spreadsheets.
+
+Payments were frequently late or wrong. Scheduling clashes went unnoticed until someone did not show up. The admin overhead was several hours every week.
+
+We built a custom locum management tool. Single input form. Pay calculated automatically. Payment due dates flagged before they pass. Scheduling conflicts caught at the point of booking.
+
+Zero missed payments since launch. The team now spends minutes on locum admin instead of hours.
+
+The full case study is on the Lexalytic website - link in the comments.
+
+2026-12-30
+A pint costing £1.42 does not cost £1.42.
+
+Line cleaning, ullage, the first pull of the session, the one that went over the bar. Five to six per cent of draught never gets sold, which means you are buying more than you are selling and the real cost per pint is closer to £1.50.
+
+Every GP calculator I could find ignores that. They take the price, take the cost, give you a percentage that looks fine.
+
+Do it properly and a line you thought was running at 71 per cent is at 67. Across a range that is the difference between a good month and a flat one.
+
+The other thing most of them get wrong is VAT. If you are registered, a £5.60 pint is £4.67 to you. Using the till price inflates the reported margin by about 17 per cent, which makes a business that is struggling look healthy on paper.
+
+So we built one that does the whole range at once, applies wastage by product type, and shows both figures side by side. The gap between them is the point.
+
+Duty went up 3.66 per cent on 1 February. Most sites recost weeks late, if at all.
+
+lexalytic.com/tools/pub-gp-calculator
+
+2026-12-31
+Case study: a professional services firm had no central view of project profitability.
+
+Directors were making resourcing decisions without reliable data. Guessing which clients were profitable and which were quietly draining margin. The management pack took a full day to compile each month and was already out of date by the time it was ready.
+
+We built a Power BI dashboard connected to their project management and finance systems. Live P&L by project, client, and team member. Updated automatically.
+
+Full visibility within 48 hours of launch. The monthly management pack was discontinued the first week. Six months later the firm identified two client relationships significantly less profitable than assumed - a discovery that changed their pricing.
+
+Full case study on the site - link in comments.
+
+2027-01-05
+A question I get asked a lot: how do you know when a website is actually working?
+
+Not loading. Not looking professional. Working.
+
+The answer is surprisingly simple. A website that works brings in people who have never heard of you before. They searched for something, found you, read enough to be interested, and got in touch.
+
+A website that does not work only gets visited by people who already know your name and typed it directly.
+
+Most business websites fall into the second category. They are confirmation tools, not discovery tools.
+
+The difference between the two is almost never design. It is technical performance, search optimisation, and whether the content answers the questions people are actually asking.
+
+What is your website doing for people who have never heard of you?
+
+2027-01-06
+A publican worked out, six months in, that his afternoon shift covered its costs and contributed nothing.
+
+He had never put labour spend next to till sales for that one session. The week was profitable, so nobody looked.
+
+That is the normal state of things. You know the month made money. You do not know that Friday night is carrying Tuesday lunch and Sunday is carrying both.
+
+The arithmetic is not hard, it is just never done at the right level. Take the session's sales, apply your gross profit, subtract what the labour actually cost. What is left is what that session contributed toward rent and everything else.
+
+Two things people get wrong when they do it.
+
+They use the hourly rate rather than the real cost, which understates labour by about 26 per cent once holiday accrual, employer National Insurance and pension are in.
+
+And they conclude they should close the session. Usually wrong. Rent runs whether you open or not, so a session making any contribution beats being shut. Most weak sessions are overstaffed at the edges rather than fundamentally unviable, and starting one person an hour later is worth more than it sounds.
+
+lexalytic.com/tools/labour-by-session
+
+2027-01-07
+Most businesses that have outgrown their website know it.
+
+The signs are usually the same. The site was built three or four years ago. It loads slowly on mobile. The content does not reflect what the business actually does anymore. Nobody is sure who has access to update it or how.
+
+The conversation about rebuilding it keeps getting pushed back because it feels like a big project.
+
+The rebuild itself is usually less disruptive than expected. A well-scoped project has a fixed price, a clear timeline, and a defined handover. The disruption is the decision to start, not the build itself.
+
+If your website is holding your business back, the cost of that is probably larger than the cost of fixing it.
+
+2027-01-12
+A lot of businesses are using AI in 2027.
+
+Very few of them are using it well.
+
+The ones using it well did not ask: how can we use AI? They asked: which specific task, done at volume, is costing us the most time and producing the most inconsistent results?
+
+Then they built a tool that handles exactly that task. One task. Built properly. Running reliably.
+
+CVCraft AI rewrites CVs and delivers them in 24 hours with no human involvement. One task. Built properly.
+
+That is what AI in business actually looks like. Not a subscription to a general-purpose tool. A specific solution to a specific problem.
+
+What is the one task in your business that fits that description?
+
+2027-01-13
+An accountant posted about a client whose restaurant filed at 56 per cent gross profit.
+
+The inspector said it should be at least 60, based on other restaurants.
+
+The client was not doing anything wrong. Proving that, after the year had closed and without the records to hand, turned out to be the hard part.
+
+HMRC compares filed returns against expected profit figures automatically. It is not an inspector deciding to look, it is a system flagging a number that sits outside the band for your format.
+
+The things that legitimately pull a restaurant below benchmark are almost all invisible in a set of accounts. Delivery commission at 25 to 35 per cent does not appear in cost of sales at all. Discounting, waste, staff meals, a tie if you are a pub tenant. Each one takes points off and none of them shows up as a line.
+
+Here is the part that decides how the conversation goes.
+
+Saying delivery cost you three points is an assertion. The same claim with platform statements attached is a fact.
+
+That difference is determined entirely by what you kept at the time. A waste log written as it happened is worth a great deal. The same figures estimated eighteen months later are worth very little, however honest they are, because there is no way to tell them apart from numbers chosen to fit.
+
+lexalytic.com/tools/restaurant-benchmark-check
+
+2027-01-14
+The businesses that get the best results from a website rebuild are almost always the ones that did the most preparation before the build started.
+
+Not design preparation. Content preparation.
+
+They had all their copy written before the developer started. They knew what they wanted to say on every page. They had images ready. They had a clear brief about what the site needed to do for the business.
+
+The developer started building on day one and finished on time.
+
+The businesses that take longest and pay the most are the ones that start the build and then spend six weeks gathering content. Every delay in content delivery delays the launch and costs money.
+
+If you are planning a website, write your content before you brief a developer.
+
+2027-01-19
+We built FamilyEntitled because the gap was obvious.
+
+UK government entitlement information is scattered across dozens of pages, written in language designed for administrators rather than families, and almost impossible to navigate without knowing what you are looking for.
+
+The average family that uses FamilyEntitled finds £4,700 in annual entitlements they did not know they were owed. Child benefit, council tax reduction, free school meals, energy grants. All based on their specific situation. No data stored. No account required.
+
+We built it in a few weeks. It ranks on Google. It helps real people.
+
+The gap between what exists and what people actually need is usually obvious once you look for it. The technology to fill it is almost never as complicated as people assume.
+
+2027-01-20
+A service charge demand landed for major works done two years earlier.
+
+Nothing in between. No mention of it at the time. Then a five figure sum with a payment date on it.
+
+Most people assume they have no choice.
+
+Section 20B of the Landlord and Tenant Act 1985 says costs incurred more than eighteen months before the demand are not recoverable, unless within that eighteen months the leaseholder was told in writing that the costs had been incurred and a demand was coming.
+
+Two conditions. The clock runs from when the money left the freeholder, not from when the work finished. And the notification has to actually say costs have been incurred and will be demanded. A newsletter mentioning that works are planned does not count.
+
+It happens more than you would think. Major works get paid by the freeholder and recharged later, the accounts take a while, the managing agent changes partway through, and a year disappears without anyone intending it.
+
+The leaseholder has no idea when the money actually left. And nobody volunteers it.
+
+You can require the invoices under section 22. They carry dates. That is how you find out.
+
+lexalytic.com/tools/service-charge-check
+
+2027-01-21
+Something I have noticed about the best software projects I have worked on:
+
+The client always knew exactly what problem they were trying to solve.
+
+Not what feature they wanted. Not what the software should look like. What problem they were trying to solve.
+
+The clients who came with a problem got better software than the clients who came with a specification. Because the specification was usually a solution to the problem as they understood it in month one. By month three, when you understood the problem properly, the specification was wrong.
+
+Start with the problem. Be specific. The solution follows.
+
+2027-01-26
+HMO landlords manage more complexity per property than almost any other landlord type.
+
+Multiple tenancies per property. Room-by-room rent tracking. Shared utility splitting. Licence conditions with specific compliance obligations. A maintenance history that needs attributing to the right room and the right tenant.
+
+Most property management software was built for single-let properties. The HMO features were added as an afterthought and it shows.
+
+The landlords managing HMOs well are either using a combination of tools and spreadsheets that they have stitched together themselves, or they have invested in something built around how an HMO actually works.
+
+If you manage HMO properties and the admin is taking more time than it should, the problem is almost certainly the tools, not you.
+
+2027-01-27
+Where major works cost any leaseholder more than £250, the landlord has to consult properly before starting.
+
+Three stages, thirty days each for the first two.
+
+If they did not, and the tribunal does not excuse it, they can recover £250 from each leaseholder and no more.
+
+Whatever the work actually cost.
+
+Major works bills at tribunal regularly exceed £20,000 per flat in London blocks. So on a defective consultation that is a £19,750 difference per flat, decided by whether three letters went out properly.
+
+The failures are usually mundane rather than sinister. The thirty days counted from the date printed on the letter rather than from service. Observations received at stage one and filed rather than answered at stage two. Two estimates from companies in the same group.
+
+Two other things worth knowing, because almost nobody does.
+
+Paying does not mean accepting. Having paid a service charge is not the same as having agreed it was payable.
+
+And a clause in your lease trying to stop you going to the tribunal is void. It does not matter what it says.
+
+lexalytic.com/tools/service-charge-check
+
+2027-01-28
+The reason most proposals take too long to write is not that the work is hard.
+
+It is that the same structural problem gets solved from scratch every time.
+
+Every proposal has an executive summary, a situation summary, a proposed approach, credentials, timeline, and commercial terms. The structure is identical. Only the content changes.
+
+An AI tool given a proper brief - client name, situation, proposed approach, team, timeline, fee - produces a first draft of the structural sections in minutes. The account manager edits and adds the specific observations that show you were listening. The result goes out the same day as the discovery call instead of three days later.
+
+Speed of proposal is one of the most underrated competitive advantages in professional services.
+
+2027-02-02
+Most personal trainers in the UK are running their businesses on a combination of WhatsApp, a notes app, and a spreadsheet.
+
+It works until it does not.
+
+The moment it stops working is usually the same: a client disputes a session, or asks about their payment history, or you take on two more clients and realise you cannot keep track of where everyone is in their programme without checking four different places.
+
+The tools built for PTs range from genuinely useful to unnecessarily complex and expensive. The right one depends on whether your priority is programme delivery, payment automation, or client communication.
+
+What is the one thing in your PT business that takes the most time that it should not?
+
+2027-02-03
+A £12,000 surprise on a £60,000 renovation.
+
+VAT.
+
+A quote from a VAT registered builder may be presented excluding it, particularly if it is itemised like a trade document. Finding out at the invoice stage is a bad way to find out.
+
+It is not the only one. The builder quotes the building work. The rest is yours:
+
+Structural engineer, five hundred to fifteen hundred, and Building Control want the calculations before work starts rather than after.
+
+Building Control itself, another five hundred to twelve hundred, and separate from planning permission despite being constantly confused with it.
+
+Party wall surveyor, one to three thousand. If your neighbour dissents you pay for theirs as well, so budget for two.
+
+Asbestos survey on anything pre-2000. Scaffold quoted for a fixed period that keeps charging when the programme slips. Skip permits. Somewhere to live if it is not habitable.
+
+Then everything that goes in afterwards. Blinds, curtains, lights, furniture, white goods. The build ends and the spending does not.
+
+Together, thirty to fifty per cent on top of the figure you were quoted.
+
+And contingency is not optional spending. It is spending you have not identified yet.
+
+lexalytic.com/tools/renovation-planner
+
+2027-02-04
+HMO rent tracking is one of those things that sounds simple and is not.
+
+Six rooms. Six tenants. Six rent amounts. Six payment dates.
+
+Then someone moves in mid-month and needs a pro-rata calculation. Then a room sits empty for three weeks. Then one tenant pays weekly and another monthly. Then housing benefit pays directly to you on a different schedule to the tenant contribution.
+
+Most landlord tools track rent at property level. For a single-let property that is fine. For an HMO you need to know which room is in arrears, not that the property total is short by a certain amount.
+
+The tracking model that works for HMOs is per payment row, not per tenant. One row per expected payment. Match it when the money arrives. Everything overdue stays visible.
+
+Simple in principle. Almost nobody sets it up this way from the start.
+
+2027-02-09
+The data cleansing work nobody talks about:
+
+Most businesses know their data is not clean. What they do not know is what clean actually looks like for their specific dataset.
+
+A contact database might have duplicate records for the same company under slightly different names. Date formats that changed when someone exported from a different system. Phone numbers in four different formats. Email addresses that have not been validated since the contact was added two years ago.
+
+The diagnostic - pulling 100 records and reviewing them manually - takes an afternoon and tells you more about the state of your data than any automated tool.
+
+That afternoon is almost always worth it before commissioning any cleansing work.
+
+2027-02-10
+Remove Duplicates in Excel works on exact matches.
+
+Which means it will happily leave you with three rows for the same customer because one has an ampersand, one spells Limited out, and one is in capitals.
+
+Those are the duplicates that cost you money. They survive every clean up, because sorting the column puts them nowhere near each other. S-M-I-T-H space ampersand and S-M-I-T-H space A-N-D are different strings.
+
+The obvious fix is to measure how many characters differ. That fails badly on names.
+
+Smith Ltd and Smith Solutions Ltd share a long run of characters, so they score highly. They are two different businesses.
+
+John Smith and Jane Smith share a surname. Also score highly. Also two different people.
+
+What works is comparing word against word, and judging the pair by the weakest match rather than the average. A typo in one word gets forgiven. A genuinely different word does not, because the distinguishing word is exactly the one that matters.
+
+And one thing worth being careful about. A duplicate left in your list is an annoyance. Two real customers merged into one is data loss, and you find out when somebody asks why their order went to another company.
+
+Lean toward leaving things alone.
+
+lexalytic.com/tools/data-health-check
+
+2027-02-11
+What does a KPI dashboard actually need to do?
+
+Not impress people. Not show everything that is available. Answer the three or four questions that drive decisions in your business, automatically, every week.
+
+Revenue versus target. Gross margin. Cash position. Debtor days. For most small businesses, these four answer 80% of the questions that matter.
+
+The dashboard that gets checked weekly is the one that answers those questions at a glance, updates itself, and takes thirty seconds to interpret.
+
+The dashboard with 40 metrics gets opened once a month if people remember.
+
+What are the three questions you wish you could answer automatically every Monday morning?
+
+2027-02-16
+HMO licence compliance is not complicated. It is just easy to lose track of.
+
+Annual gas safety certificate. Five-year electrical inspection. Annual fire alarm service. Monthly emergency lighting tests. Specific conditions in your licence schedule that are unique to your property.
+
+Each has a different expiry date and a different consequence for missing it. A lapsed gas safety certificate is a criminal offence. A breach of a licence condition can result in a penalty of up to £30,000.
+
+The landlords who stay compliant without stress have one thing in common: a tracker that shows everything due in the next 90 days and sends reminders before things expire, not after.
+
+A spreadsheet with conditional formatting does this. A purpose-built tool does it automatically. Either way, the cost of the system is trivially small compared to the cost of getting it wrong.
+
+2027-02-17
+The spreadsheet errors people find are the ones Excel shows them.
+
+A cell with a hash error gets noticed. Someone fixes it.
+
+The ones that cost money look completely normal. They are numbers, they are in the right place, and they are simply not what anybody thinks they are.
+
+Four that turn up constantly:
+
+A formula overwritten with a typed number. Somebody checked a figure, disagreed, and typed what they thought it should be. That row has stopped calculating. The total below still updates. Nothing on screen says so, and every review since has looked straight past it.
+
+A link to another workbook. Works perfectly for the person who built it. Open it anywhere else and it does not fail, which would at least be useful. It keeps showing the last value it saw, quietly, for as long as anyone uses the file.
+
+A VAT rate typed inside a formula rather than held in a cell. Harmless once. Across four hundred formulas it means that when the rate changes, somebody has to find every instance, and six months later you have some calculations on the new rate and some on the old.
+
+Numbers stored as text. SUM ignores them. Sorting puts 100 before 20.
+
+None of this shows up in a review, because reviewing a spreadsheet means looking at the numbers, and the numbers are fine.
+
+Finding them means reading the formulas. Nobody does that on a file with four thousand of them.
+
+lexalytic.com/tools/spreadsheet-audit
+
+2027-02-18
+Something that comes up in almost every first conversation with a new client:
+
+They have tried to fix the problem before.
+
+Usually they bought software that almost fitted. Configured it until it sort of fitted. Built workarounds for the bits that did not. Hired someone to manage the workarounds.
+
+The process never changed. The software added a layer on top of the problem.
+
+The businesses that get the best results from custom software are the ones that fix the process first, then automate it. Not the other way around.
+
+2027-02-23
+Most landlords know about the thirty days.
+
+Money arrives, it goes into a scheme, the certificate comes back. Job done.
+
+Except that is one of two duties, and the second one has the same deadline and the same penalty.
+
+Section 213 says protect the deposit within thirty days. Section 213(6) says separately serve the prescribed information within the same thirty days.
+
+Protecting the money produces a certificate and a confirmation email, so it feels complete. Serving the information produces nothing unless you keep a copy yourself, so it feels optional.
+
+A landlord who did the first and not the second is in the same position as one who did neither. One to three times the deposit, at the court's discretion.
+
+Three other things worth knowing:
+
+The clock runs from when the money arrived. Not the tenancy start, not the move-in date. Where a holding deposit converted into a tenancy deposit, it started weeks before anyone was thinking about it.
+
+Renewals can restart both clocks. A deposit protected perfectly in 2022 can be non-compliant because of a 2024 renewal nobody did anything about.
+
+And a tenant has six years from the end of the tenancy to claim. The burden of proving you complied is yours, six years after the confirmation email left your inbox.
+
+Free checker in the comments.
+
+2027-02-24
+We built CVCraft AI in a few weeks.
+
+The idea: most people know their CV is not good enough but professional rewrites cost £200 and take days.
+
+So we built an automated service.
+
+CV submitted. Claude rewrites it for the target role. Stripe takes payment. Document delivered within 24 hours.
+
+No human involved between submission and delivery.
+
+That is what an AI-powered business tool actually looks like. Not ChatGPT in a tab. AI embedded in a specific workflow, doing a specific job, reliably, at scale.
+
+The businesses getting the most from AI in 2026 are not the most technically sophisticated. They are the most specific about which problem they are solving.
+
+If you have a process that is repetitive, well-defined, and currently costs someone time for every single instance - that is the one to automate first.
+
+2027-02-25
+A UK company registration number is eight digits.
+
+Open a supplier list in Excel and a good number of them will be seven.
+
+Nobody deleted anything. Excel read 01234567, decided it was a number, and dropped the leading zero because numbers do not start with zero. The value is now 1234567 and every Companies House lookup you run against it comes back empty.
+
+Roughly a tenth of active UK companies have a number starting with zero, so it is not a rare edge case.
+
+The same thing happens to sort codes, which matters considerably more when you are building a payment file.
+
+What makes it expensive is that it fails quietly. The lookup returns nothing rather than an error. The credit check comes back as a company with no filed accounts. Weeks later it surfaces as an unexplained data quality problem rather than as something that happened the moment a file was opened.
+
+We built a free tool that reads a CSV in your browser and flags this, along with VAT numbers that fail the HMRC checksum and columns holding two different date formats. Link in the comments.
+
+2027-03-02
+Personal trainers lose more time to payment chasing than almost any other business I speak to.
+
+The problem is not that clients do not want to pay. It is that the payment requires them to remember to do something, and life gets in the way.
+
+Direct debit via GoCardless eliminates the problem entirely. Payment goes out automatically on the agreed date. The trainer does not have to ask. The client does not have to remember.
+
+The setup cost is 1% per transaction capped at £2. For a monthly retainer of £150 that is £1.50.
+
+Almost certainly less than the time spent on a single late payment conversation.
+
+2027-03-04
+Connecting Xero to Excel automatically is one of those things that sounds technical and is not.
+
+Power Query in Excel has a Xero connector. You authenticate once, choose the data you want to pull - trial balance, invoices, bank transactions - and it retrieves it. Every time you click Refresh, it pulls the latest data from Xero. No export. No copy-paste. No reformatting.
+
+Your weekly management report goes from an hour of manual work to one click.
+
+Most finance teams that do this say the same thing: they wish they had done it three years ago.
+
+2027-03-09
+The AI proposal generator is not a replacement for thinking.
+
+It is a replacement for the mechanical first-draft work that does not require thinking.
+
+You know the structure of every proposal you write. Executive summary. Situation. Approach. Credentials. Timeline. Commercial terms. You have written that structure fifty times.
+
+Given a proper brief - client name, their situation, your proposed approach, the team, the timeline, the fee - an AI tool drafts those sections in minutes. You add the specific observations that show you were listening. The proposal goes out the same day.
+
+The competitive advantage is not the AI. It is the speed and consistency.
+
+2027-03-11
+One thing that comes up with almost every custom software project:
+
+The requirements change between the first conversation and the point when you understand the problem properly.
+
+This is normal. It happens on every project. The businesses that handle it well are the ones that expected it and built a process around it.
+
+Agree the scope clearly before any work begins. Agree what happens when scope changes before it happens. Build in a structured review point midway through where both sides check whether the original requirements still reflect what is needed.
+
+The projects that go wrong are the ones where scope changes happen informally, without agreement, and the cost and timeline implications are never discussed until the invoice arrives.
+
+2027-04-01
+Most sports clubs in the UK manage their membership the same way they did fifteen years ago.
+
+Excel spreadsheet. Cash at the gate. One person who knows where everything is.
+
+The person changes every few years. The spreadsheet gets harder to trust each time. By season five, nobody is quite sure whether the member count is right.
+
+The tools that exist - Pitchero, Spond, ClubSpark - are not complicated. The barrier is almost never the software. It is the data. Clubs with clean, complete member records that migrate well. Clubs with four years of partial records in three different formats that do not.
+
+The migration is worth doing once. After that the admin is genuinely easier.
+
+2027-04-06
+The custom CRM question I get asked most often:
+
+How do you know when to build instead of buy?
+
+The answer is usually in the workarounds. If your team has built significant workarounds to make the existing CRM fit your workflow - custom spreadsheets running alongside it, manual steps that exist because the CRM cannot handle them, data that lives outside the CRM because it does not fit the data model - you are already paying for a custom solution. You are just paying for it in time rather than money.
+
+At that point the comparison is not off-the-shelf versus bespoke. It is bespoke done properly versus bespoke done badly.
+
+2027-04-08
+A grassroots football club committee member asked me recently how to get match fees collected reliably.
+
+The answer is not a better reminder system. It is a different mental model.
+
+Match fees collected in cash on the day, or requested via bank transfer after the match, are optional in the mind of the payer. They can be forgotten. They can be deprioritised. They often are.
+
+Match fees confirmed via bank transfer before the match, as a condition of being in the squad, have a collection rate close to 100%. Not because people are more committed. Because the social pressure of not being selected is real.
+
+The system is not the solution. The framing is.
+
+2027-05-04
+Wedding suppliers manage one of the more complex client relationships in any small business.
+
+The couple books 12 to 18 months in advance. Over that time there are multiple consultations, design decisions, final confirmations, payment milestones, and day-of logistics. All of it needs to be accessible and accurate on the day when it matters most.
+
+The tool most small wedding suppliers use for this is email.
+
+Email is fine for communication. It is a terrible system for tracking the state of a relationship over 18 months. Things get lost. Versions get confused. The answer to what was agreed for the centerpiece colour is somewhere in a thread from eleven months ago.
+
+A simple client record that captures every decision and every payment milestone, in one place, accessible on the day, is not a luxury. For a business where the day-of execution determines whether you get referred or reviewed badly, it is infrastructure.
+
+2027-05-06
+Wedding photographers ask the same questions of every client at the same points in the timeline.
+
+What happens if it rains? How many photos will we receive? When will the gallery be ready? Can we have a pre-wedding shoot?
+
+These are not bad questions. They are completely understandable. The problem is answering them individually for every client, every year, takes hours that compound across a full booking calendar.
+
+An email sequence tied to the event date handles the predictable questions automatically. Booking confirmation with the contract. Gallery information six months out. Day-of logistics one week out. Gallery delivery instructions and review request two weeks after.
+
+Every email written once. Sent automatically. The photographer is available for the questions that actually require a personal response.
+
+2027-06-01
+The businesses that find most value in data cleansing are rarely the ones with the worst data.
+
+They are the ones that understand what clean data would enable them to do that they cannot do now.
+
+Accurate client profitability reporting. Reliable marketing segmentation. Trustworthy management accounts. A CRM that reflects the actual state of client relationships rather than the state of data entry three years ago.
+
+The cleanse is the means. The capability it unlocks is the point.
+
+If you know what you would do with clean data, the investment in getting there is straightforward to justify. If you are not sure what clean data would change, the investment is harder to scope and harder to commit to.
+
+Start with the use case. The data work follows from it.
+
