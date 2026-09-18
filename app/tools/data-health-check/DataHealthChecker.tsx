@@ -1178,6 +1178,17 @@ export default function DataHealthChecker() {
                       <div style={{ fontSize: 14, color: '#A13B2A', marginTop: 12 }}>{chError}</div>
                     )}
 
+                    {chResult?.unavailable && (
+                      <div style={{ padding: '14px 18px', borderRadius: 8, marginBottom: 16,
+                        background: 'rgba(176,122,30,0.06)', border: '1px solid rgba(176,122,30,0.22)',
+                        fontSize: 14.5, color: '#8F6318', lineHeight: 1.75 }}>
+                        The Companies House register is not responding at the moment, so these
+                        numbers have not been checked against it. The format and checksum validation
+                        still applies and everything else on this page is unaffected. Worth trying
+                        again later, and if you have paid for the fix and verify pack, email
+                        hello@lexalytic.com and we will run the check by hand.
+                      </div>
+                    )}
                     {chResult && (
                       <div style={{ marginTop: 18 }}>
                         <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap',

@@ -103,7 +103,8 @@ export async function POST(request: Request) {
         }
         if (!res.ok) {
           return { number: num, found: false, concern: null,
-            statusDetail: `Lookup failed (${res.status})` }
+            statusDetail: res.status === 401 || res.status === 403
+              ? 'Lookup unavailable' : `Lookup failed (${res.status})` }
         }
 
         const data = await res.json()
@@ -140,9 +141,14 @@ export async function POST(request: Request) {
   }
 
   const concerns = results.filter(r => r.concern)
+  // Set when the register could not be reached at all, as opposed to a
+  // company simply not being found. The two look identical to a reader
+  // otherwise, and one of them is our problem rather than their data.
+  const unavailable = results.some(r => r.statusDetail === 'Lookup unavailable')
   return NextResponse.json({
     checked: results.length,
     results,
+    unavailable,
     summary: {
       active: results.filter(r => r.found && !r.concern).length,
       dissolved: results.filter(r => r.concern === 'dissolved').length,
