@@ -84,7 +84,7 @@ const groups = [
         name: 'Data health check',
         forWho: 'Anyone importing a customer or supplier list',
         summary:
-          'Drop in a CSV and it checks the things that quietly break UK business systems. VAT numbers are run through the HMRC mod-97 checksum rather than just a length test, so it catches a transposed digit that looks perfectly valid. Company numbers are checked for the leading zero Excel strips off, which is the single most common reason a Companies House lookup fails. It also finds mixed date formats, invalid postcodes, duplicate records and the same email address sitting on two different rows.',
+          'Drop in a CSV and it checks the things that quietly break UK business systems. VAT numbers are run through the HMRC mod-97 checksum rather than just a length test, so it catches a transposed digit that looks perfectly valid. It also finds mixed date formats, invalid postcodes, duplicate records and the same email address sitting on two different rows.',
         detail: 'Nothing is uploaded. The file is read in your browser and never leaves it.',
         related: { label: 'Data cleansing', href: '/services/data-cleansing' },
       },

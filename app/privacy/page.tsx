@@ -193,7 +193,7 @@ export default function PrivacyPage() {
           comfortable emailing.
         </P>
         <P>
-          Two things are different and worth naming plainly. The Companies House check in the data
+          One thing is different and worth naming plainly. The invoice reading in the data
           health tool sends only the company numbers to our server and on to the Companies House
           public API. Names, emails, addresses and phone numbers stay in your browser and are never
           transmitted. A company number is public register data rather than personal data.

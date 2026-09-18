@@ -7,6 +7,11 @@ import DedupPanel from '@/components/DedupPanel'
 
 // ---------- UK validation rules ----------
 
+// The Companies House REST key returns 403 and the application needs
+// re-registering. Hidden until that is sorted rather than showing a
+// lookup that fails on every number.
+const CH_ENABLED = false
+
 const UK_POSTCODE = /^[A-Z]{1,2}[0-9][A-Z0-9]?\s?[0-9][A-Z]{2}$/i;
 const UK_VAT = /^(GB)?\s?([0-9]{9}|[0-9]{12}|(GD|HA)[0-9]{3})$/i;
 const UK_PHONE = /^(\+?44\s?|0)(\d\s?){9,10}$/;
@@ -977,7 +982,7 @@ export default function DataHealthChecker() {
                     result.companyNumberCount > 0
                       ? `Whether those ${result.companyNumberCount} companies still exist`
                       : 'Whether the companies still exist',
-                    'A company number can be perfectly formatted and belong to a business dissolved four years ago. We check every number against Companies House and report the current status.'
+                    'A company number can be perfectly formatted and still be wrong in ways a checksum cannot see. We check every number against Companies House and report the current status.'
                   ],
                   [
                     'Whether the email addresses still work',
@@ -1151,6 +1156,7 @@ export default function DataHealthChecker() {
                   )}
 
                   {/* Companies House */}
+                  {CH_ENABLED && (
                   <div style={{ marginTop: 26, paddingTop: 22, borderTop: '1px solid #F0EBE2' }}>
                     <div style={{ fontSize: 15, fontWeight: 600, marginBottom: 6 }}>
                       Check the companies are still trading
@@ -1178,7 +1184,7 @@ export default function DataHealthChecker() {
                       <div style={{ fontSize: 14, color: '#A13B2A', marginTop: 12 }}>{chError}</div>
                     )}
 
-                    {chResult?.unavailable && (
+                    {CH_ENABLED && chResult?.unavailable && (
                       <div style={{ padding: '14px 18px', borderRadius: 8, marginBottom: 16,
                         background: 'rgba(176,122,30,0.06)', border: '1px solid rgba(176,122,30,0.22)',
                         fontSize: 14.5, color: '#8F6318', lineHeight: 1.75 }}>
@@ -1189,7 +1195,7 @@ export default function DataHealthChecker() {
                         hello@lexalytic.com and we will run the check by hand.
                       </div>
                     )}
-                    {chResult && (
+                    {CH_ENABLED && chResult && (
                       <div style={{ marginTop: 18 }}>
                         <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap',
                           marginBottom: chResult.summary.concerns ? 18 : 0 }}>
@@ -1267,6 +1273,7 @@ export default function DataHealthChecker() {
                       </div>
                     )}
                   </div>
+                  )}
 
                   <DedupPanel rows={rows} headers={headers} />
 
@@ -1286,7 +1293,7 @@ export default function DataHealthChecker() {
               <p style={{ fontSize: 15, lineHeight: 1.72, color: 'rgba(255,255,255,0.6)', margin: '0 0 20px', maxWidth: 540 }}>
                 {result.findings.length > 0
                   ? 'You send the file, we send it back done. Everything the tool does, plus the judgement calls it deliberately refuses to make: which of two plausible duplicates is really the same customer, what an ambiguous date column actually means, whether a name is McDonald or Mcdonald. Back within 24 hours.'
-                  : 'Nothing here needs fixing. What we would still do is verify each company against Companies House and check the email domains still resolve, which a formatting scan cannot see.'}
+                  : 'Nothing here needs fixing. What we would still do is check each record by hand and check the email domains still resolve, which a formatting scan cannot see.'}
               </p>
               <p style={{ fontSize: 14, color: '#8A8279', lineHeight: 1.75, margin: '12px 0 0', maxWidth: 620 }}>
                 A small file costs the same as the tool that does it automatically, which is deliberate. If you would rather not sit and review forty groups of near duplicates, that is a reasonable thing to want and the price should not be the reason you do it yourself. Larger files cost more because they genuinely take longer.

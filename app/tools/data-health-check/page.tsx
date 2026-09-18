@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lexalytic.com/tools/data-health-check' },
-  title: 'UK Business Data Checker | VAT, Company Numbers, Companies House | Lexalytic',
-  description: 'Check a customer or supplier list against the things that break UK systems. VAT numbers against the HMRC checksum, company numbers that lost their leading zero, and which companies have dissolved, straight from the Companies House register. Plus fuzzy duplicates and a clean file back. Nothing uploaded except company numbers.',
-  keywords: 'check VAT numbers bulk, validate company numbers UK, companies house bulk check dissolved, UK customer data validation, check supplier list companies house, VAT checksum validator, free data cleansing tool UK, find duplicate customers',
+  title: 'UK Business Data Checker | VAT Numbers, Company Numbers, Duplicates | Lexalytic',
+  description: 'Check a customer or supplier list against the things that break UK systems. VAT numbers against the HMRC checksum, company numbers that lost their leading zero, and which companies have dissolved, Plus fuzzy duplicates and a clean file back. Nothing uploaded except company numbers.',
+  keywords: 'check VAT numbers bulk, validate company numbers UK, check dissolved companies, UK customer data validation, VAT checksum validator, free data cleansing tool UK, find duplicate customers',
   openGraph: {
     title: 'Free UK Data Health Check | Lexalytic',
     description: 'Check a spreadsheet for the errors that break UK business systems. Free, runs in your browser, nothing uploaded.',

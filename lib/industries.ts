@@ -169,7 +169,7 @@ export const INDUSTRIES: Industry[] = [
       { name: 'Reporting cost calculator', href: '/tools/reporting-cost',
         line: 'What rebuilding those reports by hand actually costs, by role.' },
       { name: 'Data health check', href: '/tools/data-health-check',
-        line: 'Check a candidate or client list before importing it. Finds dissolved companies, invalid emails and duplicates.' },
+        line: 'Check a candidate or client list before importing it. Finds invalid emails and duplicates.' },
     ],
     product: {
       name: 'Desk Exposure Manager',
@@ -221,7 +221,7 @@ export const INDUSTRIES: Industry[] = [
       { name: 'Reporting cost calculator', href: '/tools/reporting-cost',
         line: 'What manual reporting costs by role, using true employment cost, and how fast automating it would pay back.' },
       { name: 'Data health check', href: '/tools/data-health-check',
-        line: 'Check a client list for dissolved companies, invalid VAT numbers and duplicates.' },
+        line: 'Check a client list for invalid VAT numbers, broken company numbers and duplicates.' },
     ],
     product: {
       name: 'Practice Cash Manager',
